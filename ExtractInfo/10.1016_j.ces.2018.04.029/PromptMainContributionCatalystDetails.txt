@@ -1,0 +1,211 @@
+<DOCUMENT>
+Hexagonal boron nitride catalyst in a fixed-bed reactor for exothermic propane oxidation dehydrogenation
+Highlights
+•
+h-BN is an effective catalyst for exothermic propane ODH in a fixed-bed reactor.
+•
+Temperature profile in catalyst bed for propane ODH was studied using CFD.
+•
+Nearly isothermal operation can be maintained using h-BN for industrial propane ODH.
+Abstract
+Hexagonal boron nitride (h-BN) with high thermal conductivity is potentially an effective catalyst for highly exothermic propane oxidative dehydrogenation (ODH) reaction. Here, we report our experimental and theoretic studies of such a catalyst for propane ODH in a fixed-bed reactor. Based on the computational fluid dynamics calculation (CFD) results, the catalyst bed temperature increases by less than 1 °C in the h-BN catalyst bed which is much smaller than that (8 °C) in the VOx/γ-Al2O3 catalyst bed at a similar propane conversion (25%) using a micro-tubular reactor with a diameter of 6 mm. Even in an industrially relevant reactor with an inner diameter of 60 mm, a uniform temperature profile can still be maintained using the h-BN catalyst bed due to its excellent thermal conductivity as opposed to a temperature gradient of 47 °C in the VOx/γ-Al2O3 catalyst bed. The results reported here provide useful information for potential application of h-BN catalyst in propane ODH.
+Graphical abstract
+Download : Download high-res image (144KB)
+Download : Download full-size image
+1. Introduction
+Non-oxidative propane dehydrogenation process has been extensively practiced in the chemical industry (Otroshchenko et al., 2015, Liu et al., 2016). However, this reaction is limited by thermodynamic equilibrium and is favored at high temperature due to its endothermic nature (Ayandiran et al., 2016). Propane oxidative dehydrogenation (ODH) reaction, on the other hand, offers remarkable advantages, including no thermodynamic constraint, alleviating the coking of catalysts and readily providing heat owing to its exothermic nature (Shylesh and Singh, 2004, Wu and Lin, 2008). However, the hotspots are unavoidably present in the catalyst bed due to the highly exothermic nature of propane ODH, which can significantly accelerate the undesired over-oxidation of propene, leading to decreased propene selectivity and catalyst deactivation (Schwarz et al., 2009, Steinfeldt et al., 2001). Therefore, it is highly desired to efficiently remove the reaction heat in ODH of propane (Frank et al., 2007). The heat of reaction in the ODH of propane and associated reactions is shown as follows:
+(1)
+(2)
+(3)
+To prevent the formation of hotspots in the catalyst bed, efforts have been made by either diluting the feed with an inert gas or catalyst bed with thermally conducting materials. In addition, microchannel reactors (Schwarz et al., 2009, Cao et al., 2009, Baier and Kolb, 2007), structured catalysts (metal foam or fiber), etc. (Li et al., 2015, Zhao et al., 2011, Palma et al., 2018), and fluidized-bed reactors (Lu et al., 2004, Elbadawi et al., 2016) have also been attempted. Thermal conductivity of the catalysts is a key to removing the heat of the exothermic ODH reaction. Unfortunately, traditional refractory metal oxide-supported catalysts, such as VOx/γ-Al2O3, have poor thermal conductivity (less than 0.5 W/K m), which inevitably causes the hotspots in the catalyst bed (Li et al., 2015), resulting in undesired over-oxidation of propene to COx (CO and CO2) (Löfberg et al., 2011) and catalyst deactivation.
+Hexagonal boron nitride (h-BN), a highly promising material with its unique physicochemical properties (Wu et al., 2016, Wu et al., 2016), especially high thermal conductivity (33 W/K m) (Li et al., 2016, Zhi, 2009), has been recently reported with unique and hitherto unanticipated catalytic performances for ODH reaction (Shi et al., 2017, Grant et al., 2016). For example, Hermans’s group reported that h-BN exhibits high selectivity to propylene (79%) and ethylene (12%) at 14% propane conversion (Grant et al., 2016). Besides, Lu’s group also found that the hydroxylated edge of h-BN can efficiently catalyze propane ODH to propene with a superior selectivity (80.2%) but with only negligible CO2 formation (0.5%) at a given propane conversion of 20.6% (Shi et al., 2017). Based on the above results, h-BN is expected to effectively suppress the over-oxidation of propene to COx in the ODH reactions, which is a key benefit for ODH of alkanes to olefins. To evaluate the potential application of h-BN in a fixed-bed reactor for industrial ODH process, the heat transfer and the temperature profile in the fixed-bed reactor using h-BN as catalyst were studied in this work, which is crucial to the commercial application of h-BN (Zaynali and Alaviamleshi, 2017).
+In this article, the temperature profiles in the h-BN catalyst bed for propane ODH were studied using the computational fluid dynamics calculation (CFD), which shows visual temperature profile in the catalyst bed (Li et al., 2015, Tran et al., 2017). The temperature profile was simulated along the axis and radial directions in the h-BN catalyst bed for propane ODH. A comparison was also made with using VOx/γ-Al2O3 catalyst in a micro-tubular reactor with an inner diameter of 6 mm. An industrial-scale fixed-bed reactor with an inner diameter of 60 mm was further simulated and the results generated can offer useful information for the potential commercialization of propane ODH process using h-BN as a catalyst in a fixed-bed reactor.
+2. Experimental section
+2.1. Preparation of the catalysts
+h-BN was commercially obtained from Qinhuangdao Eno High-Tech Material Development CO., LTD with the purity >99%, which is named as h-BN-C. The sample was used as provided without further chemical or thermal treatment. The h-BN-C catalyst before the reaction is named as h-BN-C fresh and the h-BN-C after the reaction is named as h-BN-C spent.
+As a comparison, 5 wt%VOx/γ-Al2O3 catalyst was prepared by wet impregnation (Frank et al., 2007). 1 g γ-Al2O3 support was impregnated with 5.7 mL 0.1 M NH4VO3 solution and the resultant slurry was stirred at room temperature for 12 h. After the impregnation, the catalyst was dried at 90 °C overnight and then calcined at 600 °C for 4 h. 5 wt% VOx/γ-Al2O3 was denoted as VOx/γ-Al2O3.
+2.2. Characterizations
+X-ray powder diffraction (XRD) patterns were recorded on a Rigaku Ultima IV diffractometer (Rigaku, Japan). Cu Kα radiation (40 kV and 30 mA) was used as the X-ray source. For each sample, Bragg’s angles (2θ) between 10° and 60° were scanned at a rate of 10°/min. Specific surface areas of catalysts were measured by the Brunauer-Emmett-Teller (BET) method, using a Micromeritics Tristar 3020 surface area and porosimetry analyzer. Prior to the measurement, all samples were degassed at 150 °C for 6 h. Thermal gravimetric analyzer (TGA; TG 209F1 Netzsch Germany) was used to investigate the carbon deposition of the spent catalysts. The samples were preheated at 80 °C and then heated to 970 °C at a rate of 10 °C/min in air (20 mL/min). Fourier transform infrared (FT-IR) spectra were obtained on a Nicolet 6700 spectrometer (Thermo Fischer Scientific). The FT-IR spectra of the samples were recorded in the range of 650–4000 cm−1.
+2.3. Catalytic test
+The VOx/γ-Al2O3 and h-BN-C (80–100 mesh) were tested without dilution to provide a direct comparison with the CFD results. Propane (99.9%) and a gas mixture (O2:N2:He = 1:8:1) were individually controlled using two mass flow controllers (Sevenstar) to provide a reaction gas feed of C3H8:O2:N2:He = 1:1:8:1. The reactor wall temperatures were set from 510 °C to 590 °C. The reaction products were analyzed by using a gas chromatography (GC2060, Shanghai Ruimin GC Instruments, Inc) which has a flame ionization detector (equipped with KB-Al2O3/Na2SO4 column) for hydrocarbon (CxHy) analysis and a thermal conductivity detector (equipped with TDX-01 column) for CO and CO2 analysis. Control experiments with quartz show that there is negligible propane conversion without the catalyst. In all tests, carbon mass balances exceed 95%. The C3H8 conversion (X) and product selectivity (S) were calculated using standard normalization method based on the carbon atom balance and defined as follows.
+where s or p represents the reactant or product; i represent random gas in this reaction system; Ai and fi are the chromatographic peak area and the calibration factor of species i; Vcat = volume of catalyst loaded in reactor (mL); Ftot = total flow of all inlet gas (mL/min); N = the number of carbon atoms of component; GHSV = gas hourly space velocity (h−1).
+For the calculation of activation energy (Ea), catalyst activities were measured in an isothermal, tubular, one-pass fixed-bed quartz reactor with 6 mm inner diameter at ambient pressure. During the experiment, we kept the total flow gas (standard conditions of temperature and pressure (STP), i.e., 293.15 K and 101.325 kPa) and GHSV constant at different reactor wall temperatures. The VOx/γ-Al2O3 (80–100 mesh) catalyst was diluted with inert quartz particles (1:10) to eliminate the temperature gradients in the catalyst bed. The conversion of C3H8 was maintained at less than 10% for the calculation of Ea. A classic method was used for calculation of Ea, which is described in detail as below. First, the reaction rate equation of propane ODH was approximated as Eq. (4), where Ci is the concentration (i = C3H8 and O2), m and n are the reaction order of C3H8 and O2, respectively. Second, Eq. (5) can be obtained when taking logarithm of Eq. (4). When the conversion of C3H8 was maintained at less than 10%, the concentration of C3H8 and O2 can be approximately constant. Therefore, ln(−rC3H8) can be plotted as a function of 1/T and the slope is −Ea/R. Thus, we can obtain Ea, which equals to the slope multiplied by −R (8.314 J/mol K).
+(4)
+(5)
+2.4. Computational fluid dynamics calculation (CFD)
+The numerical simulation of the temperature profile at steady state inside the fixed-bed quartz tubular reactor was performed using the commercial CFD code FLUENT 6.3.26. All the simulations were carried out in a three-dimensional physical system. The tubular reactor was divided into three parts and the wall temperature of middle part where the catalyst was loaded was set isothermal (Li et al., 2015) Fig. 1). The catalyst bed in contact with the isothermal wall (Z2) was initially set at a uniform temperature. In the simulation of propane ODH, 0.31 mL catalysts (voidage: 0.35; height of catalytic bed: 11 mm; tube diameter: 6 mm) were packed in the reactor. A gas mixture of propane (3 mL(STP) min−1) and O2/N2/He = 1:8:1 (30 mL(STP) min−1) was controlled by the calibrated mass flow controllers and fed into the reaction tube at a GHSV of 6300 h−1. For the simulation of the reactor with different tube diameters, we ensure the same ratio of bed height to tube diameter (11/6) with the constant GHSV (6300 h−1). We assume that all the thermophysical properties of the materials (solids and gases) are functions of the local temperature and composition. The simulation results of C3H8 conversion with different temperatures were calculated through the difference between inlet and outlet of propane mole fraction. Equations for conservation of mass, heat and momentum can be found elsewhere (Zhao et al., 2014, Chen et al., 2012a, Chen et al., 2012b). The finite-rate volumetric reaction model was used to determine the reaction heat, and the reaction rate was approximated as:
+where the Ci is the concentration (i = C3H8 and O2), m and n are the reaction order of C3H8 and O2, respectively (Grant et al., 2016, Chen et al., 1999), Ea represents activation energy, rC3H8 is C3H8 consumption rate (mmol/gcat s) and A is pre-exponential factor.
+Download : Download high-res image (107KB)
+Download : Download full-size image
+Fig. 1. Schematic diagram of the system modeled by “FLUENT”
+Boundary conditions:
+At z = 0, Tf = Tinlet;
+From z = Z1 to Z3: Twall = set temperature
+where z is the axis, Tf is the temperature of the fluid.
+3. Results and discussion
+3.1. Catalytic performances of the catalysts
+Fig. 2 shows the product selectivities over VOx/γ-Al2O3 and h-BN-C catalysts for propane ODH at a similar propane conversion (9%). COx selectivity reached 26.4% on VOx/γ-Al2O3 catalyst at 9.1% propane conversion. Compared to VOx/γ-Al2O3 catalyst, h-BN-C exhibited a very low COx selectivity (3.7%) while achieving 93% olefin (propene and ethylene) selectivity at 8.3% propane conversion. Therefore, h-BN-C catalyst is much more selective for the propane ODH compared with the VOx/γ-Al2O3 catalyst.
+Download : Download high-res image (92KB)
+Download : Download full-size image
+Fig. 2. Product selectivities of propane ODH over VOx/γ-Al2O3 (X = 9.1%) and h-BN-C (X = 8.3%) at 550 °C.
+The reaction temperature is a crucial factor for propane ODH process. The influence of reaction temperature on propane conversion and product selectivities was thus studied in detail and results are shown in Fig. 3. The conversion of propane continuously increased with increasing reaction temperature for both catalysts. However, as the reaction temperature increased from 510 °C to 590 °C, propene selectivity over the VOx/γ-Al2O3 catalyst dropped dramatically from 78.5% to 47.7% with concurrent increase of COx selectivity (Fig. 3a). It is typical for the VOx/γ-Al2O3 catalyst to exhibit such a trade-off between propane conversion and propene selectivity (Chen et al., 2000). However, over the h-BN-C catalyst, olefin selectivity reached a maximum of 93.3% at 510 °C and still maintained at more than 80.0% with further increasing temperature even up to 590 °C at 45.0% C3H8 conversion (Fig. 3b). Over the VOx/γ-Al2O3 catalyst, the main by-products are COx. Conversely, over the h-BN-C catalyst, the main by-product is ethylene, a highly valuable olefin itself, rather than COx. Therefore, h-BN is a potentially promising catalyst for propane ODH reaction.
+Download : Download high-res image (362KB)
+Download : Download full-size image
+Fig. 3. Influence of reaction temperature on the catalytic performances of propane ODH reaction over (a): VOx /γ-Al2O3; (b): h-BN-C.
+3.2. Characterizations of the fresh and spent h-BN-C catalysts
+To better understand the structure stability of the h-BN-C catalyst, XRD, N2 adsorption–desorption isotherms, FT-IR and TGA measurements were carried out to characterize the h-BN-C before and after the ODH reaction. As shown in Fig. 4(a), the diffraction peaks at 2θ of 26.9 and 41.6 ° correspond to the (0 0 2) and (1 0 0) plane of h-BN crystalline phase (PDF#34-0421), respectively. All the h-BN-C samples exhibited similar diffraction patterns, indicating that crystalline structure of h-BN-C catalyst was maintained after the reaction. N2 adsorption-desorption isotherms of the fresh and spent h-BN-C catalysts are displayed in Fig. 4 (b). The specific surface areas of the fresh and spent h-BN-C catalysts have the similar values of 24 m2/g and 20 m2/g, respectively, suggesting the texture properties of h-BN-C catalysts being maintained after the reaction.
+Download : Download high-res image (570KB)
+Download : Download full-size image
+Fig. 4. (a) XRD patterns of the fresh and spent h-BN-C catalysts with the structure model of h-BN; (b) N2 adsorption–desorption isotherms of the fresh and spent h-BN-C catalysts; (c) FT-IR spectra of the fresh and spent h-BN-C catalysts; (d) TG curves of the fresh and spent h-BN-C catalysts in a flow of air.
+FT-IR spectra of the fresh and spent h-BN-C catalysts were further obtained to determine the structures of the samples as shown in Fig. 4(c). Based on the previous reports (Grant et al., 2016, Hermans et al., 2017); the peaks at 1381 and 813 cm−1 are assigned to the B–N stretching vibration and B–N–B bending vibration of h-BN, respectively. The two peaks are similar before and after the reaction, suggesting that the original B–N and B–N–B structures were maintained. However, the peaks at 3232 cm−1 and 1190 cm−1, which are assigned to OH stretching vibration and B–O stretching vibration, respectively, are simultaneously present after reaction, indicating that B–O and B–OH may be related to the active sites for the ODH reaction (Shi et al., 2017). The amount of coke-deposition was measured by TGA in a flow of air at up to 970 °C. The results shown in Fig. 4(d) suggest that the coke-deposition is not present over the spent h-BN-C catalyst.
+Based on the characterizations mentioned above, the chemical structure of the h-BN-C catalyst is maintained after ODH reaction.
+3.3. CFD simulations
+The above results clearly indicate that the h-BN-C catalyst exhibits the superior performances for ODH reaction. However, the heat transfer and temperature profile in the catalyst bed are also vital to the highly exothermic propane ODH reaction and need to be studied.
+The thermal conductivity of the catalysts is a key factor in removing the heat of the exothermic reaction (Li et al., 2015). The h-BN-C catalyst has an excellent thermal conductivity of 33 W/m K, which is much higher than that of VOx/γ-Al2O3 (0.5 W/m K), as listed in Table 1. The commercial CFD software ANSYS FLUENT 14.5 has been successfully used in other systems (Lu et al., 2004, Li et al., 2015). Here it was also used to simulate and compare the temperature profiles in both the h-BN-C catalyst and the VOx/γ-Al2O3 catalyst beds. Propane ODH kinetic studies were carried out under the kinetic-limiting region over the h-BN-C and VOx/γ-Al2O3 catalysts (VOx/γ-Al2O3 was diluted using quartz with a catalyst: quartz weight (0.5 g) ratio of 1:10) to obtain the Ea. Based on the Arrhenius equation (Fig. 5), an Ea of 192.3 kJ mol−1 was obtained on h-BN-C catalyst, which is higher than that on VOx/γ-Al2O3 catalyst (124.4 kJ mol−1). These results were similar to those previously reported (Frank et al., 2007, Shi et al., 2017, Grant et al., 2016).
+Table 1. Parameters (voidage and thermal conductivity) of the materials and Ea used in CFD calculation.
+Samples Voidage Ke (W/m K)a Ea (kJ/mol)
+h-BN-C 0.35 21.5 192.3
+VOx/γ-Al2O3 0.35 0.3 124.4
+a
+Ke is the effective thermal conductivity in the porous medium, which is calculated by Ke = εKfluid + (1 − ε)Ksolid, and ε is the voidage (Li et al., 2015).
+Download : Download high-res image (224KB)
+Download : Download full-size image
+Fig. 5. Logarithms of the reaction rate of propane ODH over different catalysts plotted as a function of 1/T: (a) h-BN-C; (b) VOx/γ-Al2O3.
+The CFD simulation and approach were shown in Fig. 1. To further confirm the reliability of the simulation results, we integrated the kinetic equation and the Ke into the CFD software, and made a comparison of the simulation conversions under the kinetic-limiting region over the two catalysts with the experimental results shown in Fig. 6(a) and (c). Simulated results are very close to the experimental data, confirming the reliability of the simulations used in this study. The temperature profile in the catalyst bed was also simulated. The results shown in Fig. 6(b) and (d) confirm the uniform temperature in both cases for accurate kinetic data measurement.
+Download : Download high-res image (797KB)
+Download : Download full-size image
+Fig. 6. (a) C3H8 conversion from both the experimental and simulation results over h-BN-C catalyst without dilution; (b) 3D temperature profile of the fixed-bed reactor with h-BN-C catalyst (wall temperature at 550 °C); (c) C3H8 conversion from both the experimental and simulation results over the VOx/γ-Al2O3 catalyst (with 1:10 dilution using quartz); (d) 3D temperature profile of the fixed-bed reactor with VOx/γ-Al2O3 catalyst (wall temperature at 550 °C). The unit of temperature is °C.
+CFD was thus used to analyze the temperature profile in the catalyst bed for propane ODH. The h-BN-C or VOx/γ-Al2O3 catalyst was packed in the quartz tubular reactor (i.d. 6 mm) without dilution and subsequently simulated by CFD calculations using the above kinetic equation and the results are shown in Fig. 7. The 3D reaction rate profiles in catalyst bed over these two catalysts are also shown in Fig. 8. For the highly exothermic propane ODH reaction, a higher temperature rise in the catalyst bed (8 °C) is inevitable for the VOx/γ-Al2O3 catalyst due to the low thermal conductivity of VOx/γ-Al2O3 (0.5 W/m K) (Schwarz et al., 2009, Steinfeldt et al., 2001). Whereas an equivalent amount of reaction heat is released from the catalyst bed at an equal propane conversion (25%) in both catalyst beds, less than 1 °C hotspot temperature (0.7 °C) is found in the h-BN-C catalyst bed, which is far less than that (8 °C) in VOx/γ-Al2O3 catalyst bed. This is attributed to the high thermal conductivity of h-BN, which enables more efficient removal of the reaction heat. Comparing the reaction rate of the two catalysts in Fig. 8(a) and (b), it is found that the position of the most intensive reaction is different. The reaction rate is the highest at the inlet and gradually decreases along the fixed-bed reactor length over the h-BN-C catalyst, but for the VOx/γ-Al2O3 catalyst, the highest reaction rate is near the inlet. It is not surprising that the position of the highest reaction rate is different over the two catalysts, because the reaction rate for propane OHD is the function of reactant concentration and reaction temperature. Over the VOx/γ-Al2O3, the combination of hotspots in the middle of catalyst bed and high reactant concentration near the inlet led to the highest reaction rate near the inlet while the catalyst bed temperature over the h-BN-C catalyst is relatively uniform and reaction rate is expected to be the highest at the inlet where the reactant concentration is the highest.
+Download : Download high-res image (339KB)
+Download : Download full-size image
+Fig. 7. (a) 3D temperature profile of VOx/γ-Al2O3 catalyst (without diluent) in the inner catalyst bed; (b) 3D temperature profile of h-BN-C catalyst in the inner catalyst bed. Note: the C3H8 conversions are 25% over the two catalysts with the same gas flow rate of 33 mL/min, which aimed to maintain the equal heat release. The unit of temperature is °C.
+Download : Download high-res image (313KB)
+Download : Download full-size image
+Fig. 8. (a) 3D reaction rate profile of VOx/γ-Al2O3 catalyst (without diluent) in the inner catalyst bed; (b) 3D reaction rate profile of h-BN-C catalyst in the inner catalyst bed. The unit of reaction rate is kmol/m3 s.
+Fig. 9 shows the temperature profiles along the radial direction and centerline axial direction of the catalyst bed, respectively. It is obvious that the temperature peaks symmetrically along the radial direction in Fig. 9(a) over the VOx/γ-Al2O3 catalyst but is relatively flat in Fig. 9(c) over the h-BN-C catalyst. The different temperature profiles along the radial direction can be attributed to the different thermal conductivity of two catalysts. Due to the poorer thermal conductivity of the VOx/γ-Al2O3 catalyst, a larger temperature gradient is present. The temperature profiles along centerline axial direction of catalytic bed over the two catalysts were also simulated and the results are shown in Fig. 9(b) and (d). Over the VOx/γ-Al2O3 catalyst, temperature is similar to the wall temperature (550 °C) near the inlet and gradually increases to about 558 °C at the position of z = 5 mm (distance from the inlet of the catalyst bed). However, there is almost no temperature gradient along the centerline axial direction of the h-BN-C catalyst bed. The above results demonstrate that the catalyst bed temperature is uniform in such a fixed-bed reactor configuration along both radial and centerline axial direction of the h-BN-C catalyst bed.
+Download : Download high-res image (508KB)
+Download : Download full-size image
+Fig. 9. (a) The temperature profiles along the radial direction over VOx/γ-Al2O3 catalyst bed at the position of z = 5 mm (distance from the inlet of the reactor); (b) The temperature profiles along centerline axial direction over VOx/γ-Al2O3 catalyst bed at the position of r = 0 mm; (c) The temperature profiles along the radial direction over h-BN-C catalyst bed at z = 1 mm; (d) The temperature profiles along centerline axial direction over h-BN catalyst bed at r = 0 mm. Note: the illustrations represent temperature profile along the radial and centerline axis directions by CFD simulation.
+When the temperature of reactor wall is further increased to 590 °C with a higher propane conversion of 45% over the h-BN-C catalyst, a uniform temperature profile can still be maintained as shown in Fig. 10(a). In addition, the C3H8 mole fraction and reaction rate profiles shown in Fig. 10(b) and (c) are very similar over the h-BN-C catalyst. Therefore, reaction rate is just a function of propane concentration (not temperature since it’s uniform), and therefore the temperature is isothermal even at a higher propane conversion (45%). The propane partial pressure will greatly affect the space time yield of propene due to the second-order dependence of propane in propane ODH over h-BN-C. Therefore, the isothermal condition maintained at a high propane conversion (45%) in propane ODH over h-BN-C suggests that propane ODH can also be operated under an even higher propane partial pressure, leading to increased space time yield of propene which is desired for an industrial practice.
+Download : Download high-res image (399KB)
+Download : Download full-size image
+Fig. 10. (a) 3D temperature profile of h-BN-C catalyst bed; (b) C3H8 mole fraction profile; (c) reaction rate profile. Note: The C3H8 conversion is 45% at the mixture feed gas flow rate of 33 mL/min at 590 °C. The unit of temperature and reaction rate is °C and kmol/m3 s, respectively.
+We further simulated the hotspots temperature in the catalyst bed over the two catalysts ranging from 520 °C to 590 °C and the results are shown in Fig. 11. The hotspot is gradually developed over the VOx/γ-Al2O3 catalyst bed as the wall temperature increases (Steinfeldt et al., 2001). However, uniform temperature profiles can be maintained in h-BN-C catalyst bed even at high temperature which is attributed to the superior heat transfer ability. The results mentioned above indicate that the h-BN-C catalyst bed indeed can maintain a uniform temperature even at high conversion (45%) and the reaction temperature of 590 °C. However, it is inevitable to generate the hotspot (5 °C) in the VOx/γ-Al2O3 catalyst bed even at a lower temperature of 520 °C.
+Download : Download high-res image (170KB)
+Download : Download full-size image
+Fig. 11. The simulated hotspots temperature plotted against wall temperature for both the VOx/γ-Al2O3 and h-BN-C catalysts. GHSV: 6300 h−1 at different temperatures.
+In summary, high thermal conductivity of the h-BN-C catalyst can effectively dissipate the heat from a micro-tubular reactor with 6 mm diameter for propane ODH. The h-BN-C catalyst bed can be maintained under much more isothermal conditions compared to that using VOx/γ-Al2O3 catalyst. Therefore, h-BN-C catalyst can potentially be used in a fixed-bed reactor for industrial practice of propane ODH (Shi et al., 2017, Grant et al., 2016).
+The inner diameter of a typical fixed-bed reactor for the industrial application is much larger than 6 mm. Therefore, the temperature profiles with different inner diameters (6–60 mm) of catalyst beds were further simulated. Fig. 12 shows that the temperature gradient in the catalyst bed gradually increases with increasing inner diameter over the VOx/γ-Al2O3 catalyst. When the inner diameter increases to 60 mm, the temperature gradient can reach up to 47 °C. As shown in Fig. 3(a), the selectivity is very sensitive to the reaction temperature over the VOx/γ-Al2O3 catalyst. Therefore, a 47 °C temperature gradient generated in the catalyst bed will significantly decrease the olefin selectivity. A fluidized-bed reactor has to be considered in the industrial practice to solve this “hotspot” problem of the highly exothermic reaction (Lu et al., 2004, Zaynali and Alaviamleshi, 2017, Liu and Ji, 2013). However, a fluidized-bed reactor is more difficult to operate than a fixed-bed reactor, and has additional requirements of catalyst physical properties such as attrition resistance. On the other hand, the temperature profile in the h-BN-C catalyst bed is fairly uniform in the fixed-bed reactor (1.5 °C temperature gradient) even with an inner diameter of 60 mm as shown in Fig. 13. Compared with the VOx/γ-Al2O3 catalyst in a fixed-bed reactor, a much lower temperature gradient (1.5 °C) in the h-BN-C catalyst bed vs that in the VOx/γ-Al2O3 catalyst bed (47 °C) in a fixed-bed reactor of 60 mm diameter suggests that the h-BN-C catalyst can indeed be commercially practiced in a fixed-bed reactor without sacrificing the product selectivity.
+Download : Download high-res image (755KB)
+Download : Download full-size image
+Fig. 12. The temperature profiles of VOx/γ-Al2O3 catalyst bed with different reactor diameters (simulation condition: the same ratio of bed height and tube diameter with consistent GHSV of 6300 h−1 at 550 °C): (a) 6 mm; (b) 12 mm; (c) 30 mm; (d) 60 mm. The unit of temperature is °C.
+Download : Download high-res image (191KB)
+Download : Download full-size image
+Fig. 13. The temperature gradients of VOx/γ-Al2O3 and h-BN-C catalyst beds with different tube diameters at the same GHSV.
+4. Conclusions
+CFD simulation of a fixed-bed reactor was used to analyze the temperature profiles of the h-BN-C catalyst and VOx/γ-Al2O3 catalysts for highly exothermic ODH process. The hotspot generated in h-BN-C catalyst bed (less than 1 °C) is much less than that (8 °C) of VOx/γ-Al2O3 catalyst bed at a propane conversion of 25% in a micro-tubular reactor with an inner diameter of 6 mm. The high thermal conductivity of h-BN-C catalyst could maintain isothermal operation in such a micro-tubular reactor at even up to 590 °C with a higher propane conversion of 45%. However, a hotspot of >5 °C temperature gradient is inevitable in the VOx/γ-Al2O3 catalyst bed even at relatively low temperature of 520 °C. Using a fixed-bed reactor with an inner diameter of up to 60 mm, which is close to the scale of an industrial practice, a uniform temperature profile can be maintained over the h-BN-C catalyst (1.5 °C) as opposed to that in VOx/γ-Al2O3 catalyst bed (47 °C). The significantly improved temperature control in the h-BN-C catalyst bed can lead to high selectivity towards olefin while minimizing COx formation. Therefore, the superior thermal conductivity the h-BN-C catalyst is attractive for its industrial practice of alkane ODH for olefin production in a fixed-bed reactor.
+Acknowledgement
+This work was supported by the National Natural Science Foundation of China (No. 21576227, No. 21673189, No. 91545114), the National Thousand Talents Program of PR of China, and the Fundamental Research Funds for the Central Universities (No. 20720160032).
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

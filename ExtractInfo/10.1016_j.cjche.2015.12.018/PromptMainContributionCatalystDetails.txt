@@ -1,0 +1,313 @@
+<DOCUMENT>
+Catalysis, Kinetics and Reaction Engineering
+Modeling-based optimization of a fixed-bed industrial reactor for oxidative dehydrogenation of propane
+Abstract
+An industrial scale propylene production via oxidative dehydrogenation of propane (ODHP) in multi-tubular reactors was modeled. Multi-tubular fixed-bed reactor used for ODHP process, employing 10000 of small diameter tubes immersed in a shell through a proper coolant flows. Herein, a theory-based pseudo-homogeneous model to describe the operation of a fixed bed reactor for the ODHP to correspondence olefin over V2O5/γ-Al2O3 catalyst was presented. Steady state one dimensional model has been developed to identify the operation parameters and to describe the propane and oxygen conversions, gas process and coolant temperatures, as well as other parameters affecting the reactor performance such as pressure. Furthermore, the applied model showed that a double-bed multitubular reactor with intermediate air injection scheme was superior to a single-bed design due to the increasing of propylene selectivity while operating under lower oxygen partial pressures resulting in propane conversion of about 37.3%. The optimized length of the reactor needed to reach 100% conversion of the oxygen was theoretically determined. For the single-bed reactor the optimized length of 11.96 m including 0.5 m of inert section at the entrance region and for the double-bed reactor design the optimized lengths of 5.72 m for the first and 7.32 m for the second reactor were calculated. Ultimately, the use of a distributed oxygen feed with limited number of injection points indicated a significant improvement on the reactor performance in terms of propane conversion and propylene selectivity. Besides, this concept could overcome the reactor runaway temperature problem and enabled operations at the wider range of conditions to obtain enhanced propylene production in an industrial scale reactor.
+Graphical abstract
+Download : Download full-size image
+1. Introduction
+Light olefins are obtained by processes such as steam cracking, fluid catalytic cracking of light oil fractions [1] and catalytic dehydrogenation of light alkanes. These processes are endothermic and operate under very severe conditions (high temperature and low contact time) with subsequent high energy consumption. The demand for ethylene and propylene is growing at different rates where the demand of propylene is foreseen to overtake that of ethylene [2]. Catalytic dehydrogenation of paraffins is an alternative for thermal steam cracking, and has for a long time been a commercialized process [3]. Thermodynamic equilibrium restriction on conversion, irreversible catalyst deactivation and rapid coke formation are major limitations [4]. The severity of the reaction condition increases with decreasing carbon chain length, and therefore dehydrogenation of propane is by far the least thermodynamically favored reaction [5]. An alternative process for propylene production is the ODHP that has been recognized as a potentially attractive process [6]. Propane dehydrogenation process is an equilibrium-limited, endothermic process that requires external heat sources. The presence of oxygen in the exothermic oxidative dehydrogenation (ODH) process offers thermodynamic advantages and lowers the energy requirements. However, it increases the tendency of the produced propylene towards further oxidation to COx. The COx is produced via consecutive (propylene oxidation) and parallel (propane oxidation) reactions. Although the ODH of paraffins for the production of light olefins (ethylene, propylene or butenes) continues to be of interest at laboratory research level, industrial applications are still hindered by unsatisfactory yields (due to the formation of carbon oxides) and technical conditions (flammability of the reaction mixture and reactor choice) [5]. The catalysts employed are generally based on vanadium [7], [8], [9]. There are several investigations reported in the open literature that deal with the determination of the kinetic parameters of the reactions involved in the ODH process as well as reaction mechanism and pathways [10], [11], [12], [13], [14], [15], [16], [17], [18], [19], [20].
+In spite of its significant economic potential as an alternate route to alkenes and in spite of extensive scientific studies, the ODH of alkanes to alkenes is not currently practiced because the secondary combustion of primary alkene products limits alkene yields to about 30% for propane and higher alkanes [21]. Alkene selectivities decrease markedly as conversion increases [21], [22]. One important reason for these yield limitations is the typically higher energies of the C–H bonds in alkane reactants compared with those in the desired alkene products [23], which lead to rapid alkene combustion at the temperatures required for C–H bond activation in alkanes. A literature survey of product yields in oxidation reactions [23] suggested that low yields are obtained when the energy of the weakest bond in the products is 30–40 kJ·mol− 1 lower than that of the weakest bond in the reactants. Alkenes are primary ODH products while CO and CO2 (COx) can form either from secondary combustion of alkenes or direct combustion of alkanes.
+The reaction of propane with gaseous oxygen is favored to form carbon oxides, thus lowering the propylene selectivity at a given propane conversion. In order to increase the propylene selectivity at a given conversion, lattice oxygen can be used to replace gaseous oxygen for the ODHP to propylene. Dense oxygen-permeable membrane reactors can continuously supply lattice oxygen for ODHP to propylene and higher propylene selectivity could be obtained in such a membrane reactor. A recent investigation, the performance of a fixed-bed reactor and a dense tubular membrane reactor over Ba0.5Sr0.5Co0.8Fe0.2O3 -δ (BSCF) at 700 °C and 750 °C reported that the propylene selectivity in the membrane reactor (44.2%) was much higher than that in the fixed-bed reactor (15%) at similar propane conversions (23%–27%) [24]. Propane reacts directly from the gas phase with the adsorbed oxygen on the catalyst. Chen et al. [25] showed that propane is dehydrogenated to propylene, and the total oxidation of propane to carbon dioxide occurs in parallel. Carbon monoxide is exclusively formed by oxidation of propylene while CO2 is generated by oxidation of both propane and propylene.
+The systems of main and undesired reactions of combustion are represented by the equations below:
+(1)
+C3H8 + 0.5O2 → C3H6 + H2O
+(2)
+C3H8 + 3.5O2 → 3CO + 4H2O
+(3)
+C3H8 + 5O2 → 3CO2 + 4H2O
+(4)
+C3H6 + 3O2 → 3CO + 3H2O
+(5)
+C3H6 + 4.5O2 → 3CO2 + 3H2O
+(6)
+CO + 0.5O2 → CO2
+(7)
+C3H8 + 1.5O2 → C2H4 + CO + 2H2O
+(8)
+C3H8 + 2O2 → C2H4 + CO2 + 2H2O
+(9)
+C3H6 + O2 → C2H4 + CO + H2O
+(10)
+C3H6 + 1.5O2 → C2H4 + CO2 + H2O.
+In the ODHP process, the yield of propane is limited by the total oxidation reactions, namely, the parallel propane combustion and the in-series propylene combustion, both forming COx. At present, intensive research is being carried out to develop both adequate reactor technologies for an effective and safe plant operation [26] as well as active and selective catalyst formulations. For exothermic processes, the control of the reaction temperature appears as a key factor to maintain a good selectivity level. The reactor choice and design therefore become outstandingly important. Industry makes extensive use of multi-tubular reactors to conduct these exothermic processes, with the aim of efficiently removing the generated heat from the catalyst bed. Thousands of tubes of small diameter are employed in order to minimize thermal radial gradients and enhance the ratio between heat exchange area and reaction volume. Lopez et al. [27] reported simulation studies of a multitubular ethane-to-ethylene ODH reactor. Results suggested that the reactor operation would be feasible, provided that high heat transfer area per unit volume and low oxygen concentrations along the tube are maintained. This last consideration proved to be a key factor to achieve adequate selectivity levels leading to high ethylene productions. An attractive alternative to fixed-bed reactors when a distributed feed is required is the use of a membrane reactor. The catalyst and reactor design must improve the yield and productivity of the desired intermediate products together with accomplishing an economical process that uses effectively all the active catalyst sites. Cavani and Trifirò [28] in a review on state-of-the-art selective oxidations, suggest paying particular attention to the inorganic membrane reactor. Different arrangements of the inorganic membrane reactor were studied theoretically and applied to partial oxidation processes with a valuable intermediate product [29], [30], [31], [32], [33], [34], [35], [36], [37], [38]. The membrane can be used as a porous wall containing a catalytic packed bed and the resulting configuration is called inorganic membrane packed bed reactor (IMPBR). The advantages of the application of membrane reactors on ODH at lab scale have been reported for propane [39], [40].
+In this work, a theoretical study of a fixed-bed reactor for the ODHP to propylene over V2O5/γ-Al2O3 catalyst is presented. The performance of the ODHP reactor is analyzed by means of a mathematical model of the catalytic unit. The influence of several operational and design variables, such as pressure and temperature was discussed. The bed was considered with the 0.5 m inert zone in the entrance section. The conversion of propane and 100% oxygen conversion were taken as the performance criteria for the system. An alternative design with two and more catalytic beds in series with distributed oxygen injection and the optimum length was presented to investigate the effect of the oxygen feed schemes.
+2. Mathematical Modeling
+The following assumptions for modeling of multi-tubular fixed-bed reactor for ODHP were considered:
+•
+One-dimensional,
+•
+Pseudo-homogeneous model,
+•
+Steady-state condition,
+•
+The coolant was flowed in the shell co-currently with the gas process,
+•
+Mass and energy dispersions were assumed to be negligible,
+•
+Plug flow regime,
+•
+Internal and external mass as well as energy transport limitations were not considered,
+•
+The reactor shell assumed to be adiabatic,
+•
+A first section of the tubes was considered filled with inert particles, with the rest of the tubes filled with the V2O5/γ-Al2O3 ODH catalyst.
+The balances used to represent the steady-state reactor behavior, along with the corresponding initial conditions, are presented below:
+Mass balance:
+(11)
+Energy balance of gas:
+(12)
+Energy balance of coolant:
+(13)
+Initial conditions:
+(14)
+It should be reiterated that the pressure drop along the reactor length is very small due to the standard model of non-isothermal plug flow reactor. Based upon the modeling equation systems and reaction rate expressions the pressure drop was calculated which is below the 0.0002 MPa. Moreover, the amount of CO2 formation from propylene (Eq. 5) in comparison with Eq. 4 is lower than that in this research the Eq. 4 only considered as the nominee of the propylene oxidation to carbon oxides.
+A V2O5/γ-Al2O3 catalyst was used for the ODHP to propylene [41]. The ideal gas assumption considered to calculate the partial pressures from the correspondent molar flows. The rates of three reactions (Eqs. (1), (3), (4)) that evolved are taken from [41] that:
+(15)
+(16)
+(17)
+The k and K are presented in Arrhenius type. Kinetic parameters of the reactions by fitting and optimizing the experimental data were obtained from [41]. Table 1 reports the corresponding parameters for reaction rate constants of Ri.
+Table 1. Kinetic parameters for reaction rate expressions from [41]
+Constant Parameters Value Unit
+k1 k1,0 6.90 mol·kg− 1·s− 1·Pa− 1
+EA,1 104.68 kJ·mol− 1
+k2 k2,0 5.70 mol·kg− 1·s− 1·Pa− 1
+EA,2 83.70 kJ·mol− 1
+k3 k3,0 8.66 mol·kg− 1·s− 1·Pa− 1
+EA,3 79.65 kJ·mol− 1
+4.02 Pa− 1.5
+49.71 kJ·mol− 1
+n, m – 1.5 –
+The main operation conditions and design parameters for single-bed and two-bed reactors are reported in Table 2.
+Table 2. The operative parameters of modeling for single and two fixed-bed reactor designs
+Single bed
+0.1 f0 833.3 mol·s− 1 dt 2.66 cm
+0.4 T0 373.15 K n 10,000
+0.5 P0 0.5 MPa
+0.0 TC,0 640.65 K
+0.0 mC 300 kg·s− 1
+0.0 ρb 50 kg·m− 3
+
+Two bed Bed #1 Bed #2
+0.0545 f0 572.9 mol·s− 1 fair 260.4 mol·s− 1
+0.2182 T0 373.15 K Tair 373.15 K
+0.7273 P0 0.5 MPa P0 0.5 MPa
+0.0000 TC,0 648.15 K dt 2.66 cm
+0.0000 mC 300 kg·s− 1 n 10,000
+0.0000
+The catalyst particles were assumed to be 0.3 mm in diameter in sphere forms. The value of the overall heat-transfer coefficient (U) for the process as side was calculated by means of the equation reported in Ref. [30] which the value of 0.002 kJ·s− 1·m− 2·K− 1 was used. Molten salts were selected as coolant (properties taken from [31]), based on their stability at the operating temperature level of ~ 560 °C. The CP values of species were taken from Perry's Chemical Engineers' handbook [32]. Co-current flow operation was assumed for the molten salts to avoid steady-state multiplicity. In the present study, the feed is comprised of a large excess of ethane with a small amount of oxygen. This appears to be the simplest case as no air separation is required to feed pure oxygen to the reactor, which would result at first glance in higher investment costs. Unconverted propane, after separation from the other educts from the reactor, has to be recycled to the reactor inlet. Fig. 1 shows schematic representations of the proposed designs. The coolant is assumed to flow in series in the shells of the two beds, with the same mass flowrate as in the Design A. The total catalyst mass is maintained constant. The results presented in the present contribution correspond to optimized situation where both beds have the variable length and are fed with the same amount of oxygen per unit catalyst mass and a total oxygen amount equal to the single-bed case. In Fig. 1 the optimized reactor length was obtained.
+Download : Download full-size image
+Fig. 1. Schematic scenario of the modeled fixed-bed reactor (a) single-bed (Design A) and (b) two-bed (Design B).
+A two-bed design with the possibility of splitting the oxygen fed between the reactor mouth and an intermediate position was also analyzed, proving a performance enhancement due to the selectivity increase. When applied to the ODHP, oxygen can be axially injected in the reaction media leading to lower oxygen partial pressures in the catalyst bed and higher selectivity. The oxygen distribution also allows better heat management, as it leads to a diminution of the local reaction rates and, consequently, of the rate of heat generation.
+3. Results and Discussion
+To solve the resulting ordinary differential equations simultaneously, a code developed in MATLAB software 2010a environment via a Runge–Kutta algorithm [33] by step size of 1 mm over the length of the reactor was used.
+3.1. Single-bed reactor design
+The target case was the minimum length of the bed necessary for 100% conversion of oxygen. Fig. 2 indicates the conversion of the propane and oxygen over the length of reactor. Because of high excess of propane, conversion of propane was limited to about 37.32% that, this might cause some problems for the separation units. Due to the low propylene/propane ratios, the separation units located downstream of the reactor. In addition, high propane recycle flowrates would be required.
+Download : Download full-size image
+Fig. 2. Propane and oxygen conversions along the reactor.
+The maximum oxygen inlet content for this system was 10% mole fraction. Higher oxygen amounts would have led to a selectivity drop and generation of a pronounced hot spot. Fig. 3 shows the corresponding axial temperature profiles for process gas (T) and coolant (TC), respectively. The first 0.5 m of the reactor (inert zone) acted as a pre-heater which increased the gas temperature from 100 °C to the reaction temperature.
+Download : Download full-size image
+Fig. 3. The (a) process gas and (b) coolant temperatures along the reactor for P0 = 0.5 MPa.
+A steep axial temperature profile could be seen in the inert zone (Fig. 3(a)). In other words, due to the relatively high flow of the coolant, the inert zone increased process gas temperature to that of the coolant. As it could be seen in Fig. 3(b), the coolant temperature decreased in the inert zone by a steady decrease in the catalyst bed. A low coolant mass flow rate relative to the heat evolved in the reaction was used in the simulations so that causes descend in the maximum temperature of the process gas (“co-current effect”). It was also observed that the reactor performance strongly depended on the value of the overall heat-transfer coefficient (U) and the coolant flowrate. By changing the coolant flowrate from 0.03, 3 and 300 kg·s− 1, the coolant temperature variations of 10, 0.1 and 0.001 °C were obtained, respectively. As a potentially new industrial process, using water as the coolant thereby utilizing the potential evaporation heat of water, might be an attractive plan not only for removing the reaction heat, but also for energy saving by generating pressure steam.
+In Fig. 4, axial profiles for the molar fractions of oxygen, propane, propylene and carbon dioxide are shown. An excess design criterion for the ODH-reactor was to obtain complete oxygen conversion at an axial coordinate near the reactor end. Early oxygen depletion was previously reported to favor deactivation of most catalytic systems [10]. The achievement of a non-complete oxygen conversion scenario, nonetheless, might be problematic due to difficulties encountered in the separation units downstream from the reactor as well as, the co-existence of oxygen and propane in the recycle stream. Moreover, the nominal total amount of propylene production was 5133.54 kg·s− 1 for this design.
+Download : Download full-size image
+Fig. 4. Mole fractions of propane, propylene, O2 and CO2 along the reactor for P0 = 0.5 MPa.
+The activation energies for different reactions pointed to a mediocre temperature level of about 100 °C to favor the desired ODHP reaction. Lower temperatures worsened the selectivity by increasing the complete combustion of propane, while higher temperatures beloved the propylene complete combustion. Towards the end of the catalytic bed, the oxygen depletion would lead to enhancements in selectivities.
+On the other hand, operation at higher pressures was not recommended as propylene selectivity worsened [29]. At any oxygen partial pressure lower than the maximum considered for this working assumption, safe operation out of the combustibility limits was assured. A possible barrier of this scenario might be the not-straightforward separation of the produced propylene and the over sizing of the equipment caused to the nitrogen injected with the reaction air. The selected operating conditions always led to complete oxygen conversion in the catalytic bed. Simulation of the ODHP in a single-bed reactor was also performed at higher inlet pressures than the one reported (P0 = 0.5 MPa). Higher operation pressures accelerated the reaction rates as a consequence of the Enhanced reactants partial pressures. Lower inlet coolant temperatures (TC,0 = 367 °C) was, hence required to intermediate the heat generation rate and achieve smooth temperature profiles resulting in a length of 11.96 m to achieve complete oxygen conversion for an inlet pressure of P0 = 0.5 MPa. The origin of the reduction in propylene selectivity at higher operating pressures might be predicted back to the kinetic parameters of the reaction rate phrases. The primary oxidation of propane to CO2 has a much higher reaction order with respect to oxygen (1.5) than the other two reactions that cause to more consumption of oxygen as well as lowered the total optimal reactor length. Reaction orders with respect to propane, on the other hand, were comparable for all three reactions. Thus, the pressure enhancement benefits the total oxidation reaction and led to the observed increasing in the CO2 selectivity at consumption of the propylene.
+The oxygen and propane conversions for the optimized length are presented in Fig. 5 for an inlet pressure of 1.0 MPa. Propane conversion of 37.55% demonstrated a reduction in the propylene efficiency. Pressure had a negative influence on propylene productivity , while the optimized reactor length for the pressure of 0.5 MPa was a 11.96 m. In this type of process high thermal effects are contributed and the operation of the reactor is greatly influenced by the ability to eliminate the produced heat and control of reaction temperature. This phenomena indicated the key variable of utmost importance is temperature.
+Download : Download full-size image
+Fig. 5. Oxygen and propane conversions along the reactor for P0 = 1.0 MPa.
+3.2. Two-bed reactor design
+Considerable progress was obtained when a design consisting of two catalyst beds in series with additional intermediate air injection was considered. To obtain a complete consumption of oxygen, a total length of 14.64 m was required for both reactors. As was the case for the prior design, the first 0.5 m of the bed was considered as an inert zone with the remaining reactor length divided into two parts. A length of 5.72 m was required for the first reactor and an additional 7.32 m for the second reactor to guarantee that all the oxygen reservation was completely consumed. Fig. 6 presents propane and oxygen conversions along the two beds for Design B. The total active length was 13.04.
+Download : Download full-size image
+Fig. 6. Propane and oxygen conversions along the reactor for Design B.
+Fig. 7 indicates the propane and propylene mole fractions along the two beds for Design B where the step variations occurred according to the air injection. Fig. 8 shows the process gas and coolant temperatures along axial direction in two-bed reactor design (Design B). The propylene generations in the first and second reactors were calculated to be 3624.65 and 156.18 kg·s− 1, respectively, for a total generation of 5186.49 kg·s− 1. The process gas temperature profile indicates two considerable features containing: (1) a useful cold-shot effect at the mixing point with the colder intermediate air and (2) a more prominent temperature excursion in the second bed according to the renewal oxygen partial pressure. Complete oxygen consumption was obtained at the end of each bed. In this two-bed scenario, it was especially important to ensure that total oxygen conversion was achieved after the first bed.
+Download : Download full-size image
+Fig. 7. Propane and propylene mole fractions along the reactor for Design B.
+Download : Download full-size image
+Fig. 8. Variations of the (a) process gas and (b) coolant temperatures along the reactor for Design B.
+3.3. Oxygen feed distribution scenario
+The overall, in the co-current flow, the reaction temperature along the reactor increased according to the exothermic reactions even if the coolant was used to decrease the reaction medium temperature. For the case under studied in this paper, the coolant flow rate was chosen such that, a rather slight coolant temperature changes to draw similarities with the counter-current flow patterns occurred. In this investigation, a plan is proposed to minimize the oxygen amount entering the reactor by the oxygen injection along the reactor. Proposed plan is presented schematically in Fig. 9. An alternative way to overcome the adverse reactions presented in this study. The purpose of air distribution is to guide the chemical kinetics towards the main reaction for propylene production by maintaining the propane feed composition at a high level. To accomplish this, the air injection to the reactor was distributed along the reactor. The injection was performed between each two consecutive fixed beds placed in series. The economics of the process, however, would be the decisive factor. As the number of injections increases, the reactor configuration would become more costly and more complicated from the construction point of view. On the other hand, as the number of injection points is increased, the configuration is nearly to a membrane reactor.
+Download : Download full-size image
+Fig. 9. The schematic scenario for intermittent air injection.
+This approach via air distribution was studied using different numbers of injections (e.g.; 2, 3, 4, and 5 points) for a total reactor length of 20 m. In order to evaluate different scenarios of air injection, the total feed rate for air was set to its corresponding value for a single fixed bed reactor (i.e.; 416.65 mol·s− 1). The propane conversion and efficient reactor length for each number of injection points, together with the one of injection point for comparison purposes, are presented in Fig. 10(a), (b) indicating that air distribution improved the reactor performance considerably in comparison with the one of injection point. Fig. 10 also shows that the required reactor length to obtain 100% conversion of oxygen increased with increasing the number of injection points.
+Download : Download full-size image
+Fig. 10. (a) Propane conversion and (b) efficient reactor length for different injection frequencies through a reactor of 20 m length.
+These results emphasized that air distribution not only positively impacted the reaction yield and productivity, but also overcame the explosion limit constraint through maintaining the gas mixture temperature always outside such envelopes. Trends propane conversion reactor 20 m in length with a 5-point injection is provided in Fig. 11. Mole fraction of carbon dioxide in different the air injection is shown in Fig. 12.
+Download : Download full-size image
+Fig. 11. Propane conversion along the reactor length of 20 m with 5 injection points.
+Download : Download full-size image
+Fig. 12. CO2 mole fractions for different number of injections along a reactor of 20 m length.
+It was observed that increasing the number of injection points had a considerably effect on propane conversion. On the other hand, propylene mole fraction is only slightly affected by increasing the number of injection points. When the air mole fraction at any injection point increased, the propylene oxidation to carbon dioxide has increased leading to reduction propylene selectivity. The variations in process gas temperature along the reactor of 20 m length with 5 air injection points locations is shown in Fig. 13.
+Download : Download full-size image
+Fig. 13. Process gas temperature for five injection points along a reactor of 20 m length.
+It was observed that the maximum temperature was reduced considerably compared with the case of one injection points. As the number of injection points enhanced, the maximum temperature decreases. Temperature decreased at each injection point followed by a local maximum to the next injection point. The reaction temperature, although, would not overshoot as much as it would in a single air injection case due to the limited exothermic heat generations. The maximum temperature peak would move towards the reactor inlet temperature due to the quick oxygen depletion short cutting the phenomena of hotspot development.
+The oxidation reactions of paraffins are highly exothermic and might be difficult to control because of the deep oxidation of the paraffins or intermediate olefins into carbon oxides. In the current simulations, a small increase in the conversion of propylene to carbon monoxide and carbon dioxide resulted in a large enhancement in the released heat of reaction. The heat released from propylene oxidation to carbon monoxide and carbon dioxide was 1076.679 and 2043.234 kJ·mol− 1 of propylene reacted, respectively, while that for the Oxidative dehydrogenation of propane to propylene was only 117.424 kJ·mol− 1 of propane reacted. Control of the reaction temperature was consequently necessary in order to reduce the formation of COx species. This was a controlling criterion for the reactor temperature and performance towards propylene production. The present mode of air distribution controlled the reaction runaway phenomena as the temperature profile became flat without any hot point or considerable temperature increases (i.e., performing near-isothermal behavior) for all reaction circumstances that would have otherwise resulted in temperature runaway under similar conditions with no periodic air injection. In addition, the influence of the air distribution upon the reactor performance when length of the reactor became 25 m was regarded. Oxygen mole fraction variations through a 25 m long reactor with 6 injection points were shown in Fig. 14.
+Download : Download full-size image
+Fig. 14. Mole fraction of oxygen along the reactor length of 25 m with 6 injection points.
+The existing model was shown that, when the reactor length increased to 40 m with 8 injection points however; the 100% conversion of oxygen was not obtained. This emphasized that, there was an optimum point for obtaining this objective being at the number of injection points of 5 and the reactor length of 20 m. It should be noted that, when the reactor length doubled up to 40 m from this optimum length, the injection frequencies were neither correspondingly nor sensibly raised as before according to reduction propane amounts. This in turn, presented the reduction the propane-to-oxygen molar ratio necessary to improve the selectivity towards propylene formation. It is asserted that, the results achieved in this study were consistent with experimental conclusions reached by other researchers [42]. Moreover, the use of a membrane reactor for the ODHP to propylene was examined and it was suggested that the selectivity towards propylene does not benefit a conducive kinetic effect when lower partial pressures of oxygen were employed. The higher thermal stability of the membrane reactor allowed operation at a higher propane conversion for a given feed rate decreasing the formation of hot spots [42]. Therefore, higher selectivities than traditional reactors might have been obtained at high conversion levels, not according to chemical kinetic effects, rather because of a better heat management policy. In addition, the results of the present study shown that a distributed air feed could eliminate the runaway temperature conditions and improve the reactor performance. In an overall picture, a two-bed design with the possibility of splitting the oxygen fed between the entrance to the first reactor and an intermediate position between the two reactors was examined. This led to an improved operation according to the selectivity enhancement. Therefore, an appealing alternative to traditional fixed-bed reactors might very well be fixed-bed reactors with distributed air scenario as presented in this paper. When such plan is applied to the ODHP, oxygen could be axially injected into the reaction media leading to lower oxygen partial pressures through the catalyst bed thus consequence in higher selectivity towards propylene formation. The oxygen distribution plan also allowed a better heat management that would avoid runaway temperature circumstances.
+4. Conclusions
+The conceivability of carrying out the catalytic oxidative dehydrogenation of propane to propylene in a large-scale multi-tubular reactor was analyzed. The results proposed that the reactor operation would be conceivable provided that high heat transfer areas per unit reactor volume and low to moderate oxygen partial pressures were retained. Low operation pressures should be selected as an accord between an increased gas density at higher pressures (satisfying the productivity restriction) and the reduction of selectivity cause to the increased pressure. It was more showed that the oxygen distribution along the reactor axial coordinate had a positive influence on the reactor efficiency cause to an improved selectivity based on operation with lower oxygen partial pressures. Because of the high heat capacity of the molten salts and good shell side heat transfer coefficients, the multi-tubular plan was shown to be very efficient to remove the heat from the reaction tubes, provided that low reaction rates per unit volume were maintained. Yet, feeding all the oxygen at the reactor inlet did not help to keep high selectivity towards propylene and low heat generation rates. Conversely, the multi-tubular reactor with periodic air injection has been shown to achieve high selectivity and propylene production because of the lower oxygen partial pressures along the tubes. The reaction rate could be controlled by means of the air flow through the injection points. This scenario appears to point out towards a powerful mean to meliorate the propylene selectivity and temperature control, whether or not a coolant medium such as a molten stream is employed on the shell side.
+Nomenclature
+A
+reaction order with respect to hydrocarbon
+AT
+tube cross-section area, m2
+B
+reaction order with respect to oxygen
+Cp
+specific heat, kJ·mol− 1·K− 1
+dp
+particle equivalent diameter, m
+dt
+internal tube diameter, m
+E
+activation energy, J·mol− 1
+F
+molar flowrate, kmol·s− 1
+ΔH
+heat of reaction, kJ·mol− 1
+kR
+reaction rate constant at reference conditions (TR = 543 K), kmol·(cat kg)− 1·s− 1·Pa−(a + b)
+L
+tube length, m
+M
+mass flowrate, kg · s− 1
+nBF
+number of baffles
+nt
+number of tubes
+P
+pressure, MPa
+R
+universal gas constant, J·mol− 1·K− 1
+Ri
+reaction rate, mol · (cat kg)− 1 · s− 1
+T
+temperature, K
+U
+overall heat transfer coefficient, kJ·s− 1·m− 2·K− 1
+uS
+superficial velocity, m·s− 1
+X
+conversion
+y
+mole fraction of component
+ν
+stoichiometric coefficient
+ρB
+bed density, (kg active cat)·m− 3 bed
+Subscript
+C
+coolant
+G
+gas
+i
+reaction number
+Inert
+inert component
+j
+component number
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

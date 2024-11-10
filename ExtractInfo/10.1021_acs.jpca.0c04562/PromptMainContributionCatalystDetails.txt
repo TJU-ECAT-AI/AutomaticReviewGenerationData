@@ -1,0 +1,573 @@
+<DOCUMENT>
+Chemical Reaction Rates for Systems with Spin–Orbit Coupling and an Odd Number of Electrons: Does Berry’s Phase Lead to Meaningful Spin-Dependent Nuclear Dynamics for a Two State Crossing?
+Abstract
+Within the context of a simple avoided crossing, we investigate the effect of a complex-valued diabatic coupling in determining spin-dependent rate constants and scattering states. We find that, if the molecular geometry is not linear and the Berry force is not zero, one can find significant spin polarization of the products. This study emphasizes that, when analyzing nonadiabatic reactions with spin orbit coupling (and a complex-valued Hamiltonian), one must consider how Berry force affects nuclear motion—at least in the context of gas phase reactions. Work is currently ongoing as far as extrapolating these conclusions to the condensed phase, where interesting spin selection has been observed in recent years.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+ SPECIAL ISSUE
+Published as part of The Journal of Physical Chemistry virtual special issue “Peter J. Rossky Festschrift”.
+1. Introduction
+Jump To
+Electronic spin is one of the most fundamental observables in quantum mechanics, and manipulating spin (so-called “spintronics”) is regarded as one of the most promising research fields. (1−10) Over the past few decades, a plethora of techniques have shown how electronic spin can be altered and polarized through many mechanisms, including giant and tunnel magnetoresistance, (11,12) spin–orbital torques, (13−15) spin-transfer torques, (16−18) spin Hall effects, (19,20) and most recently (and discussed in detail below) chiral-induced spin selectivity (CISS). (21−33) One of the hopes of modern electronics is that, someday in the future, one will be able to produce electronic devices with low energy cost that use electronic spin for random access memories, (34,35) sensors, (1,36) or even quantum computers. (6,37,38)
+Now, when discussing electronic spin, there has historically been a disconnect between the chemistry and physics communities. On the one hand, within the spintronics community in physics departments, one usually supposes that the nuclei are fixed, and one investigates only how collective electronic, magnetic, and otherwise static material effects can manipulate electronic spin states. On the other hand, within the realm of chemical dynamics, spin is usually regarded as a fixed quantum number and nuclear dynamics occur along a potential energy surface of fixed spin character (singlets or triplets, etc.). For the most part, chemists (who deal with nuclear dynamics and chemical reactions) and physicists (who deal with magnetic fields and electronic dynamics) have not worked on overlapping problems with synergy—and in particular, from our point of view, the coupling between nuclear dynamics and electronic spin has not been fully explored.
+Of course, there are exceptions to the statement above. First and most obviously, the electronic paramagnetic resonance (EPR) community does span both the chemistry and physics communities, and it has long allowed for explicit coupling between nuclear degrees of freedom and electron spin. (39) Second, within the chemistry community, there has been a push as of late (40,41) to study photoinduced intersystem crossing (ISC), whereby nuclei switch between states of different spin character, as allowed by spin–orbit coupling (SOC). The usual picture here is that, within the realm of photochemistry, the lowest triplet state (T1) is almost always lower in energy than the first excited singlet state (S1), (42) and so ISC is a very interesting dynamical (as opposed to thermodynamic) process that can precede equilibration. As such, largely led by the work of Gonzalez et al., (43−49) there is now a growing desire to model the coupled nuclear-electronic-spin dynamics underlying ISC for realistic systems using variants of Tully’s fewest switch surface hopping model (FSSH). (50) To date, the question of how to model ISC with Tully’s FSSH remains not fully solved, as recent work in our group has pointed out two subtleties regarding the nature of ISC in the context of molecules with an odd number of electrons:
+When the number of electrons is odd and SOC is present, the electronic Hamiltonian becomes complex-valued (with complex-valued derivative couplings d (51)). Such a complex-valued derivative coupling presents obvious difficulties for the surface hopping algorithm: how should we choose the direction to rescale nuclear momenta after a hop? (52) Usually, the rescaling direction is d, but if d is complex-valued, what does this imply? Note that, if the number of electron is even and there is no magnetic field (so that there is time-reversal symmetry), the Hamiltonian and d will always be real. (51)
+In the presence of a complex-valued electronic Hamiltonian, it is known that nuclei will experience a Lorentz-like “magnetic” force arising from Berry’s phase. (53−61)
+Given that the complex-valued nature of the Hamiltonian arises from the electronic spin, both of these effects represent spin-dependent nuclear phenomena.
+Third, within the condensed matter physics discipline, there has also been a recent push to study spin-dependent nuclear dynamics insofar as it relates to ferromagnetic materials with strong SOC. (13−15,62) Here, the basic premise is that, when one runs current through a material, the spins of the transmitted electrons will interact with the built-in magnetic field of the material (which is dictated by the nuclear positions, i.e., the “lattice”). This interaction can lead both to changes in the spin of the transmitting electrons, as well as changes in the magnetic moment of the material (i.e., magnetic domain walls can move as nuclei relax). A recent review of this so-called “current-induced spin–orbit torques” (as relevant to ferromagnetic and antiferromagnetic systems) appeared recently in Reviews of Modern Physics. (15) Overall, the question of how one couples nuclear dynamics and electronic spin appears to be in the zeitgeist nowadays.
+With this background in mind, the goal of this paper is quite limited, and yet we feel prescient. In this paper, we will address a very simple question that, to our knowledge, has not yet been studied. Namely, for a simple, nonadiabatic, activated (as opposed to photoinduced) chemical reaction, how are the reaction rates and scattering cross sections affected by the presence of electronic spin (and a complex-valued Hamiltonian)? We emphasize that our focus here will be on systems with two spatially distinct electronic states (or potentially two spin states plus two spatially distinct electronic states) with unbound nuclear states; as we will show in a future publication, the dynamics become even more interesting in systems with three or more spatially distinct electronic states or systems with bound nuclear states and electric current (which are closer to CISS models). Nevertheless, even within a limited framework of two electronic states, we will show that Berry’s magnetic force can indeed have a significant influence on the nuclear dynamics and lead to an observable spin polarization.
+This paper is structured as follows: In section 2, we discuss some apriori well-known conditions for observing Berry’s force as induced by spin-polarization. These conditions will guide our understanding of the results below. In section 3, we present our model Hamiltonian with two spatial electronic states. In section 4, we present results and highlight the practical consequences of Berry’s phase as far as inducing spin polarization. In section 5, we hypothesize about the potential connections between our results and exciting modern experiments that fall under the title CISS.
+2. Background
+Jump To
+In all that follows, unless stated otherwise, we will use a, b to represent diabatic spin-free (e.g., spatial) states, j, k to represent adiabatic spin-free states, σ, σ′ to represent spins, and m, n to represent adiabatic electronic states that include spin.
+Consider a general two-site Hamiltonian with SOC and time-reversal symmetry (TRS):
+(1)
+Here, is the nuclear kinetic operator, a, b = 1, 2 and σ, σ′ = ↑, ↓, M is the nuclear mass, R = (x, y) is the nuclear position operator, and caσ is the electronic annihilation operator at site a and spin σ. We allow the on-site energy Ea(R), the diabatic coupling tab(R), and the spin–orbit coupling saσbσ′(R) to vary as functions of nuclear position. By TRS, tab(R) is real and sa↑b↑(R) = sa↓b↓*(R) and sa↑b↓(R) = −sa↓b↑*(R). As shown in Figure 1, we consider the case where there is a curve crossing between the two states, which results in an energy barrier in the middle. We assume the potential surfaces are unbound in the reaction coordinate, corresponding to a reaction associated with a binary collision. Both the adiabatic energy surfaces and diabatic energy surfaces are doubly degenerate because of Kramer’s rule.
+Figure 1
+Figure 1. Schematic representation of the energy surface of our model. Note that the nuclear coordinates R are two-dimensional, and here, we only show the reaction coordinate.
+Mathematically, within the diabatic electronic basis |1↑⟩, |1↓⟩, |2↑⟩, and |2↓⟩, the overall nuclear-electronic Hamiltonian (eq 1) can be written as follows:
+(2)
+Here, operator V̂ includes all terms except the nuclear kinetic operator. The matrix element Vaσ,bσ′ (a, b = 1, 2, σ, σ′ = ↑, ↓) should be understood as ⟨aσ|V̂|bσ′⟩, so by comparing with eq 1, one finds that Vt = t + s1↑2↑ and Vs = s1↑2↓. Note that the adiabatic ground state energy (doubly degenerate) of Hamiltonian (2) is simply (58)
+(3)
+which can be analytically derived via matrix diagonalization.
+2.1. Berry Curvature of Complex Hamiltonians
+Though we will perform quantum scattering simulations, it is helpful to consider the Berry force effect within a classical picture of the nuclear dynamics. When an electronic Hamiltonian is not real (i.e., Im H ≠ 0, as in Hamiltonian (2)), classical dynamics along the ground state does not follow the usual (conservative) Newton’s laws: The forces that nuclei feel are not just the simple energy gradient −∇Eg (where Eg is defined in eq 3). In particular, for an arbitrary system (with or without TRS) moving along adiabatic surface m, nuclei feel an effective “Berry magnetic force”, defined by (53,61,63)
+(4)
+Here, dmn is the derivative coupling between surface m and n:
+(5)
+In 2D and 3D systems, this Berry force is equivalent to the Lorentz force produced by a magnetic field of the following form:
+(6)
+If a general Hamiltonian does not obey TRS, FmB can be different for each of the adiabats, such that nuclei can in principle experience completely different magnetic forces on different surfaces. That being said, when a system does have TRS and an odd number of electrons, from Kramer’s rule, each adiabatic surface will be doubly degenerate with a time reversal state (“Kramer doublets”), and the Berry forces on the two surfaces are related to each other. To prove this statement, suppose states m′, n′ are the time-reversal states of m, n; i.e., |m′⟩ = Θ |m⟩ and |n′⟩ = Θ |n⟩, where Θ is the time-reversal operator. The derivative coupling shown in eq 5 between m′ and n′ is
+(7)
+Because H obeys TRS, we have HΘ = ΘH (and hence (∇H)Θ = Θ(∇H)), and thus
+(8)
+By the antiunitarity of Θ, ⟨Θu|Θv⟩ = ⟨u|v⟩*, so that
+(9)
+The corresponding Berry magnetic force on adiabatic surface m′ is
+(10)
+Equation 10 shows that, given TRS and the same momentum, the nuclei feel equal and opposite forces on different Kramer doublet surfaces.
+2.2. Detailed Balance and Equilibrium For Systems with TRS
+Although our primary interest is the nature of chemical reactions in the condensed phase, for the present paper, we will simulate the small unbound system in Figure 1 within a microcanonical ensemble. In restricting ourselves to a small system, our rationale is that, because we can employ exact scattering theory for small systems, we will be able to avoid any and all semiclassical approximations and make definitive statements about quantum dynamics without regard to any question of accuracy; all results here should be appropriately extendable to larger, open systems with some caveats. See section 5.1 for a more detailed discussion of this point. With this framework in mind, consider a system whereby two molecules can undergo a binary collision (with both electrons and nuclei rearranging). We will label the reactant terminal as terminal no. 1 and the product terminal as terminal no. 2. For each terminal, we label the interior quantized states as μ/ν (terminal no. 1) or μ′/ν′ (terminal no. 2); σ, σ′ = ↑, ↓ denote specific spin states. We assume that there is no SOC asymptotically within terminal nos. 1 or 2, so that one can label all incoming and outgoing states with pairs of labels μσ, etc.
+The very first question we must ask is the following: What is the nature of equilibrium for such a system? After a quick second of thought, one realizes that there cannot be any spin polarization in the terminals. After all, at equilibrium, we must find that the population of electronic state μ with spin ↑ in terminal no. 1 is
+(11)
+where Z is the partition function. Using the fact that Θ = KU, where K is the antilinear complex conjugation operator and U is the unitary operator that interconverts between up and down spin, it follows that
+(12)
+Using the fact that there is no SOC asymptotically, one can assume that the spatial state |1, μ⟩ has a real wave function, and so at equilibrium:
+(13)
+For our purposes below, it will be helpful to rederive these equilibrium (Boltzmann) statistics for the internal quantum states explicitly using scattering theory. According to time reversibility, we know that for a scattering process with translational energy E, the transmission rate Ta,μσ→bμ′σ′ satisfies (64)
+(14)
+Here, a, b are indices of terminals (either the same or different), ϵμ, ϵμ′ are the bound energies of the quantized states μ, μ′, and σ̃,σ̃′ are the opposite spin of σ, σ′. In other words, if σ = ↑, then σ̃ = ↓, etc.
+Now, we suppose that the terminals are in contact with a bath at temperature kTbath = 1/β that promotes collisions and dictates (on average) the translational energy of collision as E. Let us define the state-to-state rate constant
+(15)
+In terms of k, eq 14 reads
+(16)
+There are two key properties of these state-to-state resolved transmission factors and rate constants that must be emphasized. First, in eq 14, by letting b = a and μ′ = μ, we recover the equality
+(17)
+i.e., the reflection probability is not changed by switching spin.
+Second, according to the conservation of probability
+(18)
+Therefore, if we invoke eq 17, we find
+(19)
+Or, in terms of k
+(20)
+At this point, we can prove that Boltzmann statistics arise. According to standard kinetics, the change in population of any one internal state is
+(21)
+If we apply eq 20 to the first term of eq 21 and we apply eq 16 to the second term of eq 21, we arrive at:
+(22)
+Similar expressions can be obtained starting from . Ultimately, because all populations must be stationary at equilibrium , we find that the equilibrium populations must indeed satisfy:
+(23)
+Here Z = ∑μe–βϵμ is the normalization constant, i.e., the total partition function.
+For the seasoned reader, the above arguments just recapitulate facts that are well-known from statistical mechanics: detailed balance at equilibrium follows from the time-reversible dynamics of a system in contact with a thermal bath. As long as SOC vanishes far away from a crossing point, so that spin is a good quantum number in the terminals, Boltzmann equilibrium statistics still follow from the time-reversal symmetry properties of the transmission probabilities (despite the more complicated spin-dependent nature of those probabilities in eq 14). Nevertheless, the argument above tells us only about equilibrium, not the approach to equilibrium. With this goal in mind, let us now turn our attention to reaction rates and dynamics, using the transmission probabilities defined above.
+2.3. Reaction Rates for Systems with TRS
+Given the background above, let us consider a simple thought experiment. Suppose we start with a system out of equilibrium, or more specifically a system in local equilibrium only, i.e., with all population in one terminal. Given TRS, from the argument above, we will necessarily find that—at long times—the systems will reach an equilibrium state without any spin-polarized population anywhere. Nevertheless, one can ask: what about short times? Will one ever observe spin-polarized populations at short times? Or vice versa, in language adapted to the canonical ensemble, for a system with time reversal symmetry, can we find spin-dependent reaction rate constants?
+In general, yes, we can find spin-dependent rate constants. Or, in blunt language, suppose that, at the beginning of a simulation, the system is equilibrated only at terminal no. 1, i.e., (where Z1 is the partition function of terminal no. 1). For very short times, we can ignore the buildup of population in other terminals or any changes in P1,μ↑, P1,μ↓ as functions of time. Therefore, the short time expression for polarization in any other terminal (e.g., terminal no. 2) becomes
+(24)
+In general, k1,μ↑→2,μ′↑ ≠ k1,μ↓→2,μ′↓ and k1,μ↓→2,μ′↑ ≠ k1,μ↑→2,μ′↓, so the polarization in terminal no. 2 (as given by eq 24) is not zero. Our goal in this paper will be to analyze the size of these spin polarizations.
+That being said, there are two caveats to this general conclusion that must now be discussed; in particular, there are two cases where spin polarization will never occur.
+2.3.1. Caveat No. 1: System with Inversion Symmetry
+For a system with time reversibility, the transmission rates are connected by eq 14. Moreover, if the system also satisfies inversion symmetry (IS) between terminal no. 1 and terminal no. 2, then for inversion symmetric pairs of states |1, μ⟩, |2,μ̃⟩ and |1, ν⟩, |2,ν̃⟩, we have ϵμ = ϵμ̃, ϵν = ϵν̃, and
+(25)
+In such a case, if the system begins in equilibrium in terminal no. 1, then the overall spin polarization in terminal no. 2 is zero even at short times:
+(26)
+The significance of eq 26 is that, for a system with inversion symmetry, provided that one equilibrates all dynamics initially in one terminal, no spin polarization will ever be observed in the other terminal. There is no such constraint for systems lacking inversion symmetry, such as systems with a chiral helical potential. (65−67) However, one must note that a lack of inversion symmetry is only a necessary (but not sufficient) condition for chirality, since a molecular system can be both achiral and inversion asymmetric (e.g., one water molecule). We are continuing to explore the exact relationship between structural chirality and nuclear-induced spin-polarization in our laboratory.
+2.3.2. Caveat No. 2: System with Two Terminals and No Spin Flip
+Although our entire discussion above has been in the context of a system with two terminals, all of the conclusions above were in fact general and applicable to the case of arbitrarily many terminals. However, for a system with two terminals (and not three or more) and no possibility of spin flip, there is one more key symmetry worth mentioning. Namely, if we assume that one terminal has an equilibrated set of internal quantum states, the total transmission will necessarily be equal for the up spin and down spin; thus, no spin polarization can be observed. The proof is given in Appendix B.
+This concludes the necessary background as far as understanding spin-dependent rate constants.
+3. Simulation Details
+Jump To
+3.1. Observables
+In order to gain information for spin-dependent reaction rates, below we will study a quasi-1D system where the diabatic surfaces E1 and E2 are unbound in one direction. We imagine a simple complex-valued avoided crossing (see Figure 2), and we define two coordinates: (1) a longitudinal (reaction) coordinate, where nuclei are incoming and outgoing and along which the magnitude of the potential energy surfaces changes; (2) a transverse coordinate, where the nuclear wave function is bound and along which only the phase of the diabatic coupling changes. The nuclei will enter with a small enough energy such that one always starts and ends on the ground adiabatic electronic state. Nevertheless, in the transverse coordinate, there is enough energy such that the nuclei can switch between different bound states. Therefore, each individual state of interest is characterized by two numbers: the transverse eigenstate nT and electronic spin σ. By design, all SOC parameters are negligible outside the reaction region, so that the spin is a good quantum number for the incoming and outgoing waves.
+Figure 2
+Figure 2. Region setup for a scattering calculation in (a) a bent geometry and (b) a linear geometry. The definitions of longitudinal coordinate (R∥) and transverse coordinate (R⊥) are marked in the figure. Note for the linear geometry, there is one unique R∥ and one unique R⊥.
+From the arguments in Appendix B, it is clear that, for the case of two terminals, many spin-dependent effects can be washed away if we average over an equilibrated set of initial conditions. With this caveat in mind, below, we will report state-to-state transmission (rather than a total rate constant that would be the integral over many state-to-state transmission rates). In particular, we will report transmission rates from the ground transverse state (nT = 0) of electronic diabatic state 1 to all other possible transverse states corresponding to diabatic state 2. In other words, if the initial spin is σ and we denote the final spin σ′, the spin-dependent transmission rate we report is
+(27)
+Beyond raw transmission, we will also report the absolute spin polarization (ΔT) and the relative spin polarization (P):
+(28)
+(29)
+By investigating these three observables (T, ΔT, and P) for a series of Hamiltonians (that break spatial symmetry in one way or another), we will necessarily learn about how Berry force affects spin-dependent chemical reaction rates.
+3.2. Form of the Hamiltonian
+The Hamiltonians studied below will be characterized by three different criteria:
+3.2.1. Form of SOC
+The first criterion is the form of the SOC. Generally, a Hamiltonian with SOC has the form
+(30)
+where a, b = 1, 2 are the indices of diabatic states, α is the SOC magnitude and the L̂’s are electronic angular momentum operators. Comparing eq 30 with eq 1, the two SOC terms in our model, s↑↑(R) and s↑↓(R), correspond to the z-component and xy-components of SOC, respectively. Here, we will assume that only one of s↑↑(R) or s↑↓(R) is nonzero, so that the Hamiltonians below come in two cases:
+1. A two-state case: s↑↑(R) ≠ 0, s↑↓(R) = 0, where the two opposite spins are decoupled. The effective Hamiltonian of each spin consists of two electronic states:
+(31)
+2. A four-state case with s↑↑(R) = 0, s↑↓(R) ≠ 0. Here, Berry curvature arises only from the complex-valued nature of the spin-flipping SOC.
+3.2.2. Geometry of Diabatic Potential Energy Surfaces
+The second criterion is the geometric form of the diabatic potential energy surfaces. Again we consider two cases: a bent geometry and a linear geometry. See Figure 2.
+The parameters for the bent system are
+(32)
+(33)
+where and θ = arctan(y/x) are the polar coordinates. We place a hard wall at R = Rmin or R = Rmax; i.e., E1 = E2 = +∞ if R < Rmin or R > Rmax. As far as the couplings are concerned, we set:
+(34)
+(35)
+The incoming and outgoing terminals of the system are located at θ = 0 and θ = π/2, respectively. We choose Rmin = 4, Rmax = 8, ϵ = 5 and M = 1000 (all in atomic units, same below), and fix D ≪ C in our simulations.
+The parameters for the linear system are
+(36)
+(37)
+We place a hard wall at or , i.e., E1 = E2 = +∞ if or .
+As far as the couplings are concerned, we set
+(38)
+(39)
+The incoming and outgoing terminals of the system are located at and , respectively. We choose Lx = 8, Ly = 4, ϵ = 5 and M = 1000 in our simulations.
+3.2.3. Geometry Dependence of the SOC Phase
+Our third criterion is the phase changing direction u(x, y) (see eqs 34, 35, 38, and (39). We investigate two types of phase modulation functions u:
+1. Radial dependence:
+2. Linear dependence: u(x, y) = x cos ϕ + y sin ϕ. Here ϕ is a parameter specifying the coupling direction.
+3.3. Berry Curvature
+Recall that, for a system in 2D, the Berry curvature can be quantified by an effective magnetic field (see eq 6). Here, we will give analytic expressions for that magnetic field along the adiabatic ground state. (68)
+3.3.1. Two-State Case
+In the two-state case, the spin is a well-defined quantity everywhere, so we can use spin to label the adiabatic ground surfaces. As discussed before, the equivalent magnetic fields for the up and down spin surfaces are equal and opposite.
+For the case of a bent geometry, the equivalent magnetic field for adiabatic state |0↑⟩ is given by
+(40)
+Equation 40 is proved in Appendix A. For the case of a linear geometry, the equivalent magnetic field for |0↑⟩ is
+(41)
+In eqs 40 and 41, , , ỹ = ϵy, and γ(θ), γ′(θ) are unitless factors depending on u(x, y):
+(42)
+(43)
+For the bent geometry, since the diabatic crossing point is located at , where the diabatic coupling Vt also reaches its maximum, it is worthwhile to report B0↑ at as a representative value of the Berry curvature strength:
+(44)
+In all expressions above, the equivalent magnetic field for the |0↓⟩ surface is B0↓(x, y) = −B0↑(x, y).
+3.3.2. Four-State Case
+One can perform the same calculation as above for the four-state case. However, since the adiabatic ground state is doubly degenerate, and spin is not a good quantum number, the definition of the two adiabatic ground states is left as a matter of choice. Here we choose our ground adiabatic states as (in the diabatic basis |1↑⟩, |1↓⟩, |2↑⟩, |2↓⟩):
+(45)
+where η is the normalization constant. In our simulations, we set Vt ≫Vs, so that when , we find |0α⟩ ≈ |1↑⟩ and |0β⟩ ≈ |1↓⟩; vice versa, when , we find |0α⟩ ≈ |2↑⟩ and |0β⟩ ≈ |2↓⟩. Therefore, in the terminals, the α and β states can be approximated as having up spin and down spin, respectively.
+For the bent geometry, B0α is given by
+(46)
+and when ,
+(47)
+For the linear geometry, B0α is given by
+(48)
+In all expressions above, B0β(x, y) = −B0α(x, y).
+4. Computational Results
+Jump To
+4.1. Methods for Calculating Transmission Probabilities
+To calculate transmission probabilities, we have run two-dimensional quantum scattering calculations, where we solve the Schrodinger equation: (69)
+(49)
+Here, H is the model Hamiltonian, E is the incoming energy and |Ψ⟩ is the overall wave function. |Ψ⟩ is defined in three regions:
+(50)
+Region II is the region of interest, and regions I/III are located (respectively) on the incoming/outgoing sides of region II. The region definition for each geometry is shown in Figure 2.
+The four parts of the wave function are the incoming wave |ψinc⟩, the reflecting wave ψr, the transmitting wave |ψt⟩ and the interior wave function ψs. Their specific expressions are defined as
+(51)
+(52)
+(53)
+Here, |ψ(x, y)⟩ denotes the electronic wave function at nuclear positions (x, y), |n⟩ is the electronic state, rnμ and tnμ are the reflection and transmission coefficients in channel nμ, and R∥ and R⊥ are the longitudinal and transversal coordinates in region III. For the bent geometry R∥ = −x and R⊥ = y; for the linear geometry, R∥ = y and R⊥ = x. |unμI⟩ and |unμIII⟩ are the μth transverse eigenstates associated with electronic state n in regions I and III, which satisfy
+(54)
+(55)
+Here VnI and VnIII are the diabatic energies of electronic state n in regions I and III. In regions I and III, the wave numbers associated with energies E0, nuclear transverse state μ and electronic state n are and , respectively.
+As discussed above, we fix the incoming transverse state to be the ground state (i.e., μinc = 0) in all calculations. To calculate the spin-dependent transmission rates, we choose ninc to be either adiabatic state |0↑⟩ or adiabatic state |0↓⟩.
+4.2. Simulation Results of the Two-State System
+We begin our investigation by plotting the transmission and spin polarization for the two-state system (Vt ≠ 0 and Vs = 0) with a bent geometry. As shown in Figure 3a, we calculate the transmission rates T↑→↑ and T↓→↓ with model parameters A = 0.02, C = 0.005, and W = 0.2. We set and the overall incoming energy 0.001 ≤ E ≤ 0.038. As would be expected for any scattering process through or over an energetic barrier, the transmission is close to zero for both spins when the incoming energy is less than the barrier height (which is given by Ebarrier = A – C = 0.015 here); vice versa, when energy is over the barrier height, the transmission increases dramatically.
+Figure 3
+Figure 3. Two-state system simulation results for a bent geometry. (a) Spin-specific transmission rate T(E), (b) transmission rate difference ΔT(E) and (c) polarization P(E) as functions of energy; see eqs 28 and 29. The energy barrier is shown by the vertical dashed line. The polarization peaks are marked with black triangles in parts b and c. The parameters are A = 0.02, C = 0.005, W = 0.2, and . See eqs 32, 33, and 34. Note that, while spin polarization is observed, the details of which spin is favored at which energy is rather complicated.
+In Figure 3b, we plot the absolute spin polarization ΔT, as calculated by eq 28 at each incoming energy. For most incoming energies (0.010 < E < 0.034), the down spin is significantly preferred. The absolute polarization reaches its maximum magnitude (0.038) when the incoming energy is slightly above the barrier (E ≈ 0.022 here), and it decreases when the incoming energy gets even higher. The reason that polarization decreases at high energy, as the nuclear momentum increases, is 2-fold: (1) the relative bending effect of a magnetic field becomes weaker (which can be inferred from the classical expression of cyclotron motion radius rc = Mv/B), and (2) the time the nuclei spend in the crossing region (where the magnetic field is strongest) is also shorter. Remember that Berry force is not homogeneous but highly localized in space (i.e., localized to the crossing region). Not intuitively, when the incoming energy approaches the threshold for populating the first excited state (E > 0.034), the up spin is preferred. (The exact physical motivation behind such a polarization is unclear; one can only speculate for now.)
+Lastly, in Figure 3c, we plot the relative spin polarization P as calculated by eq 29. Around E = 0.02, P follows the same pattern as ΔT insofar as the down spin is preferred, though the peak minimum is shifted to a lower energy (around E = 0.015, as marked by the triangles). For very low energies, we find that the transmission of the up spin is actually preferred; however, any preference at such a low energy is likely not very meaningful as the total transmission is effectively negligible.
+4.2.1. Polarization Dependence on the Phase Gradient Magnitude, Energy Gap, and Coupling Strength
+Having identified spin polarization for one Hamiltonian, we will now turn our attention to the more important question: how does spin polarization change for different Hamiltonians? Specifically, we will focus on three parameters: the phase gradient magnitude W, the half energy gap A and the coupling strength C. We will vary one parameter at a time, and fix all other parameters as their default values: W = 0.2, A = 0.02 and C = 0.005. Results are plotted in Figure 4. As one might expect, we find that changing the phase gradient W has no influence on the total transmission (Figure 4a), but this change does affect the polarization (both absolute and relative) dramatically (Figure 4b,c). By contrast, increasing the half energy gap A both shifts the transmission and leads to a broadened and deeper polarization peak (Figure 4d–f). The former result is intuitive because changing A leads to a change in the energy barrier; the latter result is more interesting and will be discussed below. Finally, changing the coupling strength C also affects both transmission and polarization (Figure 4g–i). As the diabatic coupling strength increases, the transmission increases and shifts to low energy, because, with a strong coupling strength, the energy barrier of the adiabatic ground state is lower and the system becomes more adiabatic. However, more interestingly, as C increases, the relative polarization becomes smaller, as will also be discussed below in detail.
+Figure 4
+Figure 4. Total transmission T(E) (a, d, g), absolute polarization ΔT(E) (b, e, h) and relative polarization P(E) (c, f, i) with different phase gradient magnitude W, half energy gap A, and diabatic coupling strength C for a two-state system with a bent geometry. The polarization peaks (which will be plotted in Figure 5 below) are marked with black triangles (b, c, e, f, h, i). The default parameters are A = 0.02, C = 0.005, W = 0.2, and . See eqs 32, 33, 34. Increasing W does not change transmission but does amplify polarization (a–c). Increasing A shifts both transmission and polarization (d–f). Increasing C shifts transmission and polarization, but also reduces transmission (g–i).
+To better analyze the data in Figure 4, in Figure 5 we plot (in red) the peak value for the relative polarization Ppeak (i.e., which is defined as the extreme value of the relative polarization P(E) when E > 0.9Ebarrier [see the black triangles in Figure 4]) as a function of the three parameters W, C, and A. We also plot (in blue) the peak in absolute polarization ΔT(E).
+Figure 5
+Figure 5. Peak relative polarization Ppeak and peak absolute polarization ΔTpeak (see black arrows in Figure 3c and Figure 3b) as functions of W, C, and A for the two-state system with bent geometry. The default parameters are A = 0.02, C = 0.005, and W = 0.2 and . The magnitude of Ppeak increases with W and A but decreases with C, which agrees with the strength of effective magnetic field (eq 44) qualitatively. Thus, the relative peak polarization goes up in the nonadiabatic limit. Vice versa, the peak absolute polarization has a maximum around C = 0.003.
+We begin with P(E). As would be expected qualitatively from the analytic expression for the effective magnetic field in eq 44, we find the following:
+The peak polarization Ppeak has a linear dependence on W (Figure 5a).
+The peak polarization becomes smaller as the diabatic coupling strength C increases (Figure 5b) and one enters the adiabatic limit.
+The peak polarization Ppeak increases with half energy gap A (Figure 5c).
+Note that interpreting the last result above is difficult: Changing A is not as simple as just changing the adiabaticity of the rate process because A modulates both the asymptotic energy gap as well as the gradients of the diabatic curves at the crossing point. Overall, the spin-polarization appears to track very well with the form of the effective magnetic field at the crossing point (eq 44), and our preliminary conclusion is that the relative spin-polarization should be largest in the nonadiabatic limit.
+Next, we turn to ΔT(E). As far as dependence on W and A, the peak in ΔT(E) follows the peak in P(E) qualitatively. However, realizing that the total transmission must go to zero in the extreme nonadiabatic limit (when C → 0), it makes sense that we find that the peak in absolute spin polarization (i.e., the maximum ΔT(E)) has a maximum for an intermediate value of C. Thus, for the experimentalist interested in measuring or producing large spin polarization, there is a sweet spot for the Hamiltonian.
+4.2.2. Polarization Dependence on the Phase Gradient Direction and Geometry of Energy Surface
+Having investigated how spin polarization depends on the magnitude of the phase gradient of the diabatic coupling (W), let us next turn our attention to the direction of the phase gradient. We will work with both the bent and linear geometries.
+First, for the case of a bent geometry, we will set perform simulations for a family of possible phases u(x, y) = x cos ϕ + y sin ϕ where ϕ ∈[0, 2π]. In Figure 6a, we show some representative results for P(E) with different angles ϕ, and in Figure 6b, we plot the dependence of Ppeak on ϕ. Overall, we find that the polarization P(E) is largest when or , i.e., where the phase gradient is perpendicular to the momentum of the nuclei. Vice versa, when or , the phase gradient is parallel to the momentum, and the polarization is almost zero. As above, our result can be explained by considering the analytic expression for the effective magnetic field at the crossing point. As shown in eqs 42 and (44), the effective magnetic field at a diabatic crossing point is proportional to , and both the polarization and the magnetic field are maximized when or . Note that, in Figure 6b, we have fit the computed Ppeak – ϕ curve by , and we find that the relative polarization agrees quantitatively with the strength of the effective magnetic field at the crossing point (eq 44).
+Figure 6
+Figure 6. (a) Energy-polarization curve for the bent geometry for a few different phase directions ϕ. (b) Ppeak as a function of ϕ for the bent geometry. Note that for the bent systems, the overall spin polarization can be mapped directly onto the Berry force at the crossing point (see eqs 42 and 44), denoted “ fit” here. (c) Energy-polarization curve for the linear system for a few different phase dependence functions u(x, y). Note here that, even though the Berry force has the same form as in Figure 6a, there is no spin polarization (which highlights the fact that the observed spin polarization depends on the both the magnitude of the Berry force and the shape of the potential energy surfaces). The default parameters for all systems are A = 0.02, C = 0.005, and W = 0.2.
+Second, we turn to the case of a linear geometry, where x is the transverse direction and y is the direction of incoming momentum. Again, we perform simulations for the same family of possible phases. Note that, in Figure 6c (and unlike Figure 6a,b), we now observe no polarization for any u(x, y)—even though there is a nonzero Berry force (see eq 41). To rationalize this finding, note that the diabatic potential energies in this system have a plane of reflection symmetry that is parallel to the direction of incoming and outgoing momentum. In other words, even though incoming nuclei moving in the y direction will feel opposite Berry magnetic forces in the x direction (depending on their spin [up or down]) and therefore bend either to left (−x) or right (+x), their total transmission in the y direction will not depend on the spin. (70) Overall, Figure 6c must remind us that, even though the spin polarization can be mapped to the effective magnetic field in eq 44, systems with the same Berry curvature magnitude can yield completely different observable spin current behavior; after all, quantum wavepacket motion depends just as much (and usually far more) on the adiabatic potential energy surfaces than it depends on the Berry force.
+This completes our discussion of the two state results.
+4.3. Simulation Results of the Four-State System
+Let us next turn our attention to the four-state systems with bent geometry. As above, we perform scattering calculations with incoming nuclear energy 0.001 ≤ E ≤ 0.038; the system parameters are A = 0.02, C = 0.005, D = 0.001, and W = 1 (see eqs 32, 33, 34, and 35). Note that we now have two diabatic coupling parameters, C and D. We set . The data is plotted in Figure 7. For the four-state system (and unlike the two-state system), one allows for spin-flipping transmission, and so for a complete story, we must separately analyze all four cases for transmission rates between individual initial and final spins. See Figure 7a. We find that the energy-transmission curve for the four-state system has a pattern which is similar to the curve for the two-state system. The major contribution for transmission comes from spin-preserving transmission–since the spin-preserving coupling Vt is much larger than the spin-flipping coupling Vs here (C ≫D).
+Figure 7
+Figure 7. Four-state system simulation results. (a) Spin-specific transmission rate T(E), (b) transmission rate difference ΔT(E), and (c) polarization P(E) as functions of energy. In this figure, the “overall” ΔT(E) and P(E) lines refer to eq 28 and eq 29, respectively; the “flipping” ΔT(E) and P(E) lines refer to the contribution of spin-flipping transmission to the polarization (T↓→↑– T↑→↓), ((T↓→↑– T↑→↓)/Toverall), respectively. The parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . See eqs 32, 33, 34, and 35. Note that, although the total transmission is dominated by spin-preserving processes, the spin polarization arises mostly from spin-flipping processes.
+In Figure 7b,c, we calculate the absolute and relative polarizations for the transmission data and find a preference for the transmission of spin up. Here, we analyze in detail the contribution from spin-flipping transmission ΔTflip = T↓→↑– T↑→↓ and . Even though spin-preserving transmission is much larger than spin-flipping transmission on an absolute scale, we find that the major contribution to spin polarization comes from spin-flipping transmission. This is perhaps not so surprising since, although C ≫ D, only D (which is the spin-flipping coupling) multiplies a diabatic coupling with complex-valued character. Note that for a realistic Hamiltonian, SOC will be present for both spin-preserving and spin-flipping matrix elements, and recent studies on CISS systems have concluded that spin-flipping transmission is not likely a major contribution to spin polarization for CISS systems. (71−74)
+4.3.1. Polarization Dependence on the Phase Gradient Magnitude, Energy Gap, and Coupling Strength
+At this point, again we turn to the parameter dependence of spin polarization for the four-state system with bent geometry. In addition to the phase changing rate W, the half energy gap A, and the spin-preserve coupling strength C, there is another parameter of interest: the spin-flipping coupling strength D. As for the two-state case, we will vary one or two parameters at a time, and fix all other parameters as their default value: A = 0.02, C = 0.005, D = 0.001, and W = 1. The results are plotted in Figure 8. Similar to the two-state case, increasing W does not change the total transmission, but dramatically increases polarization (Figure 8a–c); increasing A shifts both transmission and polarization to higher energies (Figure 8d–f). The dependence of spin polarization on coupling strengths C and D is more complicated. Two points are worth noting:
+The transmission increases with C and spin polarization decreases with C, similar to the two-state system (Figure 8g–i). However, quantitatively speaking, the spin polarization (both absolute and relative) is more sensitive to C in the four-state case relative to the two-state case. For instance, by doubling the value of C from 0.005 to 0.01, the absolute polarization is reduced by a full 4/5 of it original value (whereas for the two-state case, one would expect a decrease of only 1/4). This sensitivity must arise somehow from the competition between spin-preserving and spin-flipping transmissions, since spin-flipping transmission is the major source of spin polarization.
+As far as the spin-flipping coupling D is concerned, increasing D does not strongly affect the total transmission, but the polarization increases dramatically.
+Figure 8
+Figure 8. Total transmission T(E) (a, d, g), absolute polarization ΔT(E) (b, e, h) and relative polarization P(E) (c, f, i) with different W, A, C, and D for the four-state systems with bent geometry. The polarization peaks (which will be plotted in Figure 9 below) are marked with black triangles (c,f,i). The default parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . See eqs 32, 33, 34, and 35. The polarization for the four-state system is more sensitive to C (relative to the two-state case) and increases with D.
+Next, let us turn to the dependence of peak polarization Ppeak on the different parameters of the Hamiltonian. In Figure 9, we plot Ppeak as a function of W, A, C, and D. Here, Ppeak increases with W, A, and D and decreases with C, which agrees qualitatively with the expression for the magnetic field at the crossing point (eq 47). It is worth mentioning that, according to eq 47, the relative ratio between C and D is more important than the absolute value of each parameter as far as determining the amount of polarization. In fact, eq 47 implies that given a certain C, the magnetic field at the crossing point is maximized when . Therefore, given only a small SOC, the spin polarization can still be very significant if the non-SO coupling is small enough.
+Figure 9
+Figure 9. Relative peak polarization Ppeak as a function of the model parameters W, A, C, and D for the four-state system with a bent geometry. The default parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . Note that Ppeak increases with W, A, and D but decreases with C, which agrees with eq 47 qualitatively.
+5. Discussion
+Jump To
+From the data above, it is easy to conclude that Berry force can have a measurable effect on spin-polarized transmission (at least for a model system). Armed with this knowledge, there are quite a few outstanding items that we must highlight as unanswered questions—questions that we will hope to address over the next few years.
+5.1. Measuring Spin-Dependent Rate Constants in the Condensed Phase
+The first outstanding question that we must address in the future is whether or not the spin polarization rates calculated above can be observed in the condensed phase (as opposed to the gas phase) with finite temperature and some degrees of disorder or friction. To begin our discussion, consider a system with nuclear and spin degrees of freedom where spin-flipping is not allowed and where one operates in the nearly adiabatic limit. In the classical limit, the leading correction to the dynamics will be the introduction of the Berry force in eq 4. However, for any classical system, the presence of a magnetic field does not affect the equilibrium state according to the Fokker–Planck equation. (75) And as far as equilibrium rates are concerned, for realistic experiments in the condensed phase, there will be a distribution of momenta for the reactants and it is possible that all Berry force effects will be washed away entirely. After all, according to the transition state theory (TST) of chemical reactions, one assumes an equilibrated velocity distribution across the barrier that separates reactants from products and the presence of a magnetic field has no influence at all on the rate; in general, this assumption seems to match most experiments. (76) Dynamical corrections to TST are well-known and could in principle depend on a magnetic field; but in general, dynamical corrections (like Kramers’ theory (77,78)) are small, and of course, any such correction would also need to keep the equilibrium distribution unchanged by the magnetic field. Lastly, in the limit of an overdamped reaction, momenta equilibrate very quickly and no magnetic field could possibly be detected. Thus, if we think of a spin-dependent reaction as occurring on one classical surface, there cannot be any magnetic field effect on the equilibrium rate constant.
+Next, consider a slightly more quantum-mechanical context where we imagine a curve-crossing (as in Figure 1). As we showed in section 4.2.1, we expect the relative spin-polarization to be maximized in the nonadiabatic limit. And yet, a very simple argument can demonstrate that in the nonadiabatic limit, the Fermi’s golden rule (FGR) rate constant will not lead to spin polarization. After all, consider the reaction from state 1 to state 2 initially without spin. The FGR rate is
+(56)
+Notice that, since the rate depends only on the absolute value of couplings V1 μ2 μ′, changing the phases of the diabatic coupling does not affect reaction rates; Fermi’s golden rule does not depend on whether the coupling is V1 μ2 μ′ or V1 μ2 μ′*. With this in mind, suppose one allows spin to enter the dynamics. By time reversibility, we know that we must find
+(57)
+Therefore, the relevant FGR rate constant is now:
+(58)
+Therefore, k1↑→2 = k1↓→2 so that, according to FGR, if one starts in equilibrium in terminal no. 1 with one spin orientation (up or down), the total probability of reaching terminal no. 2 cannot depend on that initial spin orientation.
+Now admittedly, the FGR argument presented above needs not be correct in general; one can certainly imagine that spin-polarization arises at a level of theory beyond first order perturbation theory (i.e., the basis for FGR). Nevertheless, even so, from the classical argument above alone, one could make a reasonably strong case that Berry phase and Berry force effects for the nuclei should not yield any meaningful spin-dependence in the condensed phase—at least as far the equilibrium rate constants are considered only. That being said, however, for a system out of equilibrium (e.g., with a temperature gradient or a current running through the system (79−83)), the arguments above become entirely void, and no matter how we do the calculation, we have every reason to expect a Berry force effect even in the condensed phase. Indeed, there is already a substantial literature that has investigated Berry forces in the context of molecular conduction experiments. (84−86) While we are currently working on the theory of nonequilibrium spin-dependent rate constants, it is already clear in practice that modern experiments do exist showing that spin-polarization can be promoted by the presence of a voltage (24,25,28,87,88)—which brings us necessarily to the CISS effect. (21,89)
+5.2. Implications for CISS Effect
+Although we will examine CISS effects in more detail in a later paper, a few brief words of review are perhaps appropriate regarding CISS (which represents the second outstanding question for the current research). As shown by Naaman and co-workers, the original CISS effect was demonstrated by the following scenario: Imagine that one shines light on a gold (Au) surface coated with (chiral) dsDNA. If one measures the spin of the electrons ejected, one finds a spin preference for one spin orientation versus another (all relative to the principle axis of the dsDNA). (23) And over the years, it has been shown that this effect is not limited to dsDNA on gold: the effect occurs for various molecules or materials. (23−33,88) The basic molecular model of the CISS effect is shown in Figure 10: somehow or another (and the underlying physics remain debatable), an electron undergoing chiral transmission has a fundamental spin preference.
+Figure 10
+Figure 10. Schematic model of the original CISS effect: an electron moving through a chiral potential has a probability of transmission that depends on its spin. The sites on the molecule are numbered.
+A multitude of theories have been proposed to explain the CISS effect. (65−67,71,74,89−99) Indeed, the physics behind CISS has been and continues to be explored using approaches including (i) tight-binding atomistic simulations (where one assumes Rashba-like SOC) (67,91−94) as well as (ii) solid state calculations, whereby one investigates transport in the context of band theory with SOC and a chiral potential. (66,89,96−98) However, while all these theoretical frameworks successfully predict spin polarization in certain conditions, the fundamental physical force behind the CISS is not yet fully understood. Two essential items remain not fully explained:
+1. The magnitude of the observed spin polarization is not yet consistent with theory. For most atomistic calculations, a SOC much larger than a free carbon atom (several meV) is required for theory to match experiment. For some models, (89,97) one must also require the energy of the incoming electron to be comparable to the SOC gap, even though experimentally, CISS is observed for systems with thermal energy much higher than an SOC splitting. (23−25,87)
+2. For most theoretical models, calculations have not usually modeled incoherent effects present for charge transport. And yet, for molecules like DNA and protein, studies have shown that electron transfer can have a very large incoherent component. (100−103) More broadly, the overall effect of nuclear motion has not yet been fully explored for CISS.
+With this background in mind, the present paper offers another perspective on the CISS effect with regards to both of the questions above. In particular, here we have studied exactly how nuclear motion can become entangled with electronic spin dynamics, and we have shown that nuclear motion can indeed lead to quantitative and qualitative differences in spin-dependent transmission. For instance, for one model system above, we find that polarization of ∼10% can be obtained with parameters that are not too exaggerated relative to the parameters used by other electronic-based models of CISS. (67,91) Thus, one must wonder what we will find if we begin to study CISS and properly include nuclear motion (an idea which is also now being pursued independently by Fransson (104)). Though our simulations are in electronically closed systems with odd numbers of electrons, as discussed in section 5.1, the spin polarization induced by Berry force should be observable (and could be even more evident) in open systems, where the steady state occupation of electrons is usually fractional. Indeed, for a typical CISS experiment, spin selectivity is usually observed when the system is out of equilibrium (e.g., with a current or under illumination), and according to molecular electron conduction experiments, spin-polarization does increase dramatically far away from equilibrium (i.e., with high voltage). (24,25,28,87,88)
+Now, despite all of these enticing features, we must also admit that it is far too early to conclude whether or not (in any definitive way) nuclear motion directly connects to the actual CISS experiments. After all, consider the naïvete of the simulations above: (i) we modeled unbound nuclear motion above (i.e., a nuclear scattering problem), which does not line up at all with Naaman’s experiments; (ii) we have not attempted to match our parameters to Naaman’s experiments and have simulated simple scattering problems with two (rather than many) electronic states—more on this below. For these reasons, one cannot draw any meaningful conclusions yet regarding whether or not a nuclear Berry force is important for CISS. From our perspective, to connect with CISS, we intend to run semiclassical surface hopping calculations in the future using a recently defined FSSH protocol for treating complex-valued Hamiltonians. (52)
+5.3. The Question of Multiple Electronic States
+The third and final outstanding question regarding Berry force effects on reaction dynamics is the question of multiple electronic states. As we demonstrated in Appendix B, the two-terminal scattering case is special insofar as the fact that, when only two terminals are open, the overall transmission from no. 1 to no. 2 must be symmetric and equal to the overall transmission from no. 2 to no. 1 even in the presence of an external magnetic field that breaks TRS. Obviously, this is a quirk of the two-terminal case. Consider the diagram shown in Figure 11 with three symmetric terminals:
+Figure 11
+Figure 11. Schematic view of a symmetric three-terminal system with external magnetic field (pointing inward, marked as gray crossings). Assuming the trajectories of particles are bent to right, the blue and red arrow show the favored flow and unfavored flow. In such system, the rate constants k1→2 = k2→3 = k3→1, but in general, k1→2 ≠ k2→1.
+Clearly, with a magnetic field on, we will not find that k1→2 = k2→1. Instead, by symmetry, we will find that k1→2 = k2→3 = k3→1. As a result, when we start from a certain terminal (e.g., no. 1), some reaction pathways will be preferred to others. Thus, the impact of Berry’s phase must be examined carefully with many electronic states (and more than two terminals). Interestingly, a consensus has emerged within the theoretical chemistry community that, for the most part, the geometric phase around real-valued conical intersections does not usually play a big role. Althorpe et al. have shown that one can disentangle the propagators for paths that circle a conical intersection different numbers of times (i.e., have different winding numbers), and they have argued that in many cases (and at least for the H2 + H reaction) there is little interference between these paths for unbound systems. (105) Nevertheless, it is not yet known what are the consequences (in practice) of a Berry magnetic or geometric force (i.e., the force that appears with a complex-valued Hamiltonian) in the presence of a conical intersection–which is a question we are currently exploring.
+Finally, there is one more key point worth mentioning. For the two-state system considered above, a Berry force emerged from the dependence of the phase of the diabatic coupling Wu(x, y) (see eqs 34, 35, 38, and 39). And in this regard, one might question whether such a non-Condon term can have a large effect on the overall spin-dynamics of a given system. After all, non-Condon terms are entirely absent from the standard Marcus theory—which often does pretty well (though non-Condon effects can sometimes be important (106,107)). That being said, consider a case of three electronic states (e.g., corresponding to superexchange) where two diabatic states come close together but are also coupled weakly to a third state:
+(59)
+Notice that, if E1(R), E2(R), and E3(R) are not parallel, we will still find a nonzero Berry force if the couplings V12, V13, and V23 are all nonzero and not all of them are real. Moreover, if E1(R) and E2(R) are close together, the Berry force can be very large. Thus, in the future, in order to model Berry force effects on nonadiabatic dynamics, it will be crucial to investigate systems with more than two (spatial) electronic states.
+6. Conclusion
+Jump To
+In summary, we have investigated the effect of Berry’s phase (or more importantly, Berry force) on nuclear dynamics in the context of a complex-valued model Hamiltonian with two electronic states. Our quantum scattering simulations have demonstrated that magnified spin polarization can arise for nuclear geometries without inversion symmetry, and our scattering results can even be roughly predicted using an analytic expression for Berry force at the crossing point. Overall, our findings may provide some insight into recent CISS experiments, suggesting a possible role for nuclear motion in promoting spin selective electronic transport, though a great deal more research (likely with large numerical simulations) will be needed to confirm such a hypothesis.
+Author Information
+Jump To
+Corresponding Authors
+Yanze Wu - Department of Chemistry, University of Pennsylvania, Philadelphia, Pennsylvania 19104, United States;  http://orcid.org/0000-0001-9140-2782;  Email: wuyanze@sas.upenn.edu
+Gaohan Miao - Department of Chemistry, University of Pennsylvania, Philadelphia, Pennsylvania 19104, United States;  http://orcid.org/0000-0002-6377-0614;  Email: gaohan@sas.upenn.edu
+Joseph E. Subotnik - Department of Chemistry, University of Pennsylvania, Philadelphia, Pennsylvania 19104, United States;  Email: subotnik@sas.upenn.edu
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+Jump To
+This material is based on the work supported by the National Science Foundation under Grant No. CHE-1764365. J.E.S. acknowledges support from a Camille and Henry Dreyfus Teacher Scholar Award. J.E.S. thanks Abraham Nitzan for very stimulating conversations.
+Appendix A. Derivation of the Effective Magnetic Field
+Jump To
+Here we derive the effect magnetic field for the two-state system with bent geometry (eq 40). In the two-state system, the electronic Hamiltonian for the up spin is given by
+(A1)
+where E1, E2, and Vt are given in eqs 32, 33, and 34. Now, we define , Ã(θ) = A tanh θ̃, and C̃(θ) = Ce–θ̃2, so that
+(A2)
+The two adiabatic states and energies are
+(A3)
+(A4)
+(A5)
+(A6)
+where η0 = and also η1 = are the normalization constants. By substituting the equations above into eq 5, we recover
+(A7)
+Let us define ∇u(x, y) = γ(x, y)eR + ζ(x, y)eθ. Then
+(A8)
+Because the component in the eR direction (proportional to γ(x, y)) is exclusively imaginary, the imaginary component in the eθ direction (proportional to ζ(x, y)) will not contribute to the final Berry force. Substituting eq A8 into eq 6 gives the effective magnetic field:
+(A9)
+Finally, using the fact that and C̃2=|Vt|2, we arrive at eq 40.
+Appendix B. Proof of Two Terminal Symmetry
+Jump To
+Here we prove the statement mentioned in section 2.3.2 that spin polarization will not arise with two terminals if the system is initially equilibrated in one terminal and there is no possiblity of spin flip. We will begin with most general Green’s function expression for transmission (valid for the case of arbitrarily many terminals): (76)
+(B1)
+(B2)
+where Σ is the self-energy and Γ1,μσ, Γ2,μσ are the imaginary parts of the self-energies for terminal nos. 1 and 2 with spin σ and state μ.
+Since there is no spin-flipping transmission, the spin polarization rate kpolar defined in eq 24 is just
+(B3)
+By time-reversibility (eq 14), we have
+(B4)
+Now, most generally, the overall Hamiltonian can be divided into blocks:
+(B5)
+When there is no spin flip (i.e., H↑↓ = H↓↑ = 0), H↑↑ and H↓↓ are independent blocks. For the up spin, only H↑↑ enters into the expression. By defining G↑(E) = (E – H↑↑ – Σ↑)−1, Γ1↑ = ∑μΓ1,μ↑ and Γ2↑ = ∑μ′Γ2,μ′↑, eq B4 can be simplified as
+(B6)
+For notational convenience, we omit the energy dependence in Γ and G in eqs B6–B12, but they remain functions of energy. To prove kpolar = 0, let us show that
+(B7)
+By separating the real and imaginary part of Σ↑, Σ↑ = Λ↑ + iΓ↑, and defining Ω↑↑ = E – H↑↑–Λ↑, the LHS of eq B7 can be expanded as
+(B8)
+The key point is that, when there are only two terminals, Γ↑ = Γ1↑ + Γ2↑. Therefore,
+(B9)
+Vice versa, it is also true that
+(B10)
+Lastly, using the well-known identity D–1 – C–1 = D–1(D – C)−1C–1 and setting D = Ω↑↑– iΓ↑ and C = Ω↑↑ + iΓ↑, it follows that eq B7 holds. Therefore, if we begin in equilibrium in terminal no. 1, we can never find any polarization in terminal no. 2.
+Furthermore, according to eq B7, for a system with only two terminals (with or without time reversal symmetry), the rate constant must satisfy k1→2Z1 = k2→1Z2, as follows from the general expressions:
+(B11)
+(B12)
+References
+Jump To
+This article references 107 other publications.
+1Žutić, I.; Fabian, J.; Das Sarma, S. Spintronics: Fundamentals and applications. Rev. Mod. Phys. 2004, 76, 323– 410,  DOI: 10.1103/RevModPhys.76.323 [Crossref], [CAS], Google Scholar
+2Rocha, A. R.; García-SUÁREZ, V. M.; Bailey, S. W.; Lambert, C. J.; Ferrer, J.; Sanvito, S. Towards molecular spintronics. Nat. Mater. 2005, 4, 335– 339,  DOI: 10.1038/nmat1349 [Crossref], [PubMed], [CAS], Google Scholar
+3Fert, A. Origin, development, and future of spintronics (Nobel lecture). Angew. Chem., Int. Ed. 2008, 47, 5956– 5967,  DOI: 10.1002/anie.200801093 [Crossref], [CAS], Google Scholar
+4Herrmann, C.; Solomon, G. C.; Ratner, M. A. Organic radicals as spin filters. J. Am. Chem. Soc. 2010, 132, 3682– 3684,  DOI: 10.1021/ja910483b [ACS Full Text ], [CAS], Google Scholar
+5Herrmann, C.; Solomon, G. C.; Ratner, M. A. Designing organic spin filters in the coherent tunneling regime. J. Chem. Phys. 2011, 134, 224306,  DOI: 10.1063/1.3598519 [Crossref], [PubMed], [CAS], Google Scholar
+6Chumak, A. V.; Vasyuchka, V. I.; Serga, A. A.; Hillebrands, B. Magnon spintronics. Nat. Phys. 2015, 11, 453– 461,  DOI: 10.1038/nphys3347 [Crossref], [CAS], Google Scholar
+7Linder, J.; Robinson, J. W. Superconducting spintronics. Nat. Phys. 2015, 11, 307– 315,  DOI: 10.1038/nphys3242 [Crossref], [CAS], Google Scholar
+8Jungwirth, T.; Marti, X.; Wadley, P.; Wunderlich, J. Antiferromagnetic spintronics. Nat. Nanotechnol. 2016, 11, 231– 241,  DOI: 10.1038/nnano.2016.18 [Crossref], [PubMed], [CAS], Google Scholar
+9Baltz, V.; Manchon, A.; Tsoi, M.; Moriyama, T.; Ono, T.; Tserkovnyak, Y. Antiferromagnetic spintronics. Rev. Mod. Phys. 2018, 90, 015005,  DOI: 10.1103/RevModPhys.90.015005 [Crossref], [CAS], Google Scholar
+10Herrmann, C. Spectroscopic Properties of Inorganic and Organometallic Compounds ; 2018; Vol. 14; pp 43– 70.Google Scholar
+11Baibich, M. N.; Broto, J. M.; Fert, A.; Van Dau, F. N.; Petroff, F.; Etienne, P.; Creuzet, G.; Friederich, A.; Chazelas, J. Giant magnetoresistance of (001)Fe/(001)Cr magnetic superlattices. Phys. Rev. Lett. 1988, 61, 2472– 2475,  DOI: 10.1103/PhysRevLett.61.2472 [Crossref], [PubMed], [CAS], Google Scholar
+12Moodera, J. S.; Kinder, L. R.; Wong, T. M.; Meservey, R. Large magnetoresistance at room temperature in ferromagnetic thin film tunnel junctions. Phys. Rev. Lett. 1995, 74, 3273– 3276,  DOI: 10.1103/PhysRevLett.74.3273 [Crossref], [PubMed], [CAS], Google Scholar
+13Gambardella, P.; Miron, I. M. Current-induced spin-orbit torques. Philos. Trans. R. Soc., A 2011, 369, 3175– 3197,  DOI: 10.1098/rsta.2010.0336 [Crossref], [CAS], Google Scholar
+14Brataas, A.; Kent, A. D.; Ohno, H. Current-induced torques in magnetic materials. Nat. Mater. 2012, 11, 372– 381,  DOI: 10.1038/nmat3311 [Crossref], [PubMed], [CAS], Google Scholar
+15Manchon, A.; Železný, J.; Miron, I. M.; Jungwirth, T.; Sinova, J.; Thiaville, A.; Garello, K.; Gambardella, P. Current-induced spin-orbit torques in ferromagnetic and antiferromagnetic systems. Rev. Mod. Phys. 2019, 91, 035004,  DOI: 10.1103/RevModPhys.91.035004 [Crossref], [CAS], Google Scholar
+16Berger, L. Emission of spin waves by a magnetic multilayer traversed by a current. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 9353– 9358,  DOI: 10.1103/PhysRevB.54.9353 [Crossref], [PubMed], [CAS], Google Scholar
+17Slonczewski, J. C. Current-driven excitation of magnetic multilayers. J. Magn. Magn. Mater. 1996, 159, L1– L7,  DOI: 10.1016/0304-8853(96)00062-5 [Crossref], [CAS], Google Scholar
+18Ralph, D. C.; Stiles, M. D. Spin transfer torques. J. Magn. Magn. Mater. 2008, 320, 1190– 1216,  DOI: 10.1016/j.jmmm.2007.12.019 [Crossref], [CAS], Google Scholar
+19Sinova, J.; Valenzuela, S. O.; Wunderlich, J.; Back, C. H.; Jungwirth, T. Spin Hall effects. Rev. Mod. Phys. 2015, 87, 1213– 1260,  DOI: 10.1103/RevModPhys.87.1213 [Crossref], Google Scholar
+20Hirsch, J. E. Spin hall effect. Phys. Rev. Lett. 1999, 83, 1834– 1837,  DOI: 10.1103/PhysRevLett.83.1834 [Crossref], [CAS], Google Scholar
+21Naaman, R.; Waldeck, D. H. Chiral-induced spin selectivity effect. J. Phys. Chem. Lett. 2012, 3, 2178– 2187,  DOI: 10.1021/jz300793y [ACS Full Text ], [CAS], Google Scholar
+22Naaman, R.; Waldeck, D. H. Spintronics and Chirality: Spin Selectivity in Electron Transport Through Chiral Molecules. Annu. Rev. Phys. Chem. 2015, 66, 263– 281,  DOI: 10.1146/annurev-physchem-040214-121554 [Crossref], [PubMed], [CAS], Google Scholar
+23Göhler, B.; Hamelbeck, V.; Markus, T. Z.; Kettner, M.; Hanne, G. F.; Vager, Z.; Naaman, R.; Zacharias, H. Spin selectivity in electron transmission through self-assembled monolayers of double-stranded DNA. Science 2011, 331, 894– 897,  DOI: 10.1126/science.1199339 [Crossref], [PubMed], [CAS], Google Scholar
+24Xie, Z.; Markus, T. Z.; Cohen, S. R.; Vager, Z.; Gutierrez, R.; Naaman, R. Spin specific electron conduction through DNA oligomers. Nano Lett. 2011, 11, 4652– 4655,  DOI: 10.1021/nl2021637 [ACS Full Text ], [CAS], Google Scholar
+25Kettner, M.; Göhler, B.; Zacharias, H.; Mishra, D.; Kiran, V.; Naaman, R.; Fontanesi, C.; Waldeck, D. H.; Sek, S.; Pawlowski, J.; Juhaniewicz, J. Spin Filtering in Electron Transport Through Chiral Oligopeptides. J. Phys. Chem. C 2015, 119, 14542– 14547,  DOI: 10.1021/jp509974z [ACS Full Text ], [CAS], Google Scholar
+26Zwang, T. J.; Hürlimann, S.; Hill, M. G.; Barton, J. K. Helix-Dependent Spin Filtering through the DNA Duplex. J. Am. Chem. Soc. 2016, 138, 15551– 15554,  DOI: 10.1021/jacs.6b10538 [ACS Full Text ], [CAS], Google Scholar
+27Eckshtain-Levi, M.; Capua, E.; Refaely-Abramson, S.; Sarkar, S.; Gavrilov, Y.; Mathew, S. P.; Paltiel, Y.; Levy, Y.; Kronik, L.; Naaman, R. Cold denaturation induces inversion of dipole and spin transfer in chiral peptide monolayers. Nat. Commun. 2016, 7, 10744,  DOI: 10.1038/ncomms10744 [Crossref], [PubMed], [CAS], Google Scholar
+28Kiran, V.; Mathew, S. P.; Cohen, S. R.; Hernández Delgado, I.; Lacour, J.; Naaman, R. Helicenes - A New Class of Organic Spin Filter. Adv. Mater. 2016, 28, 1957– 1962,  DOI: 10.1002/adma.201504725 [Crossref], [PubMed], [CAS], Google Scholar
+29Abendroth, J. M.; Nakatsuka, N.; Ye, M.; Kim, D.; Fullerton, E. E.; Andrews, A. M.; Weiss, P. S. Analyzing Spin Selectivity in DNA-Mediated Charge Transfer via Fluorescence Microscopy. ACS Nano 2017, 11, 7516– 7526,  DOI: 10.1021/acsnano.7b04165 [ACS Full Text ], [CAS], Google Scholar
+30Aragonès, A. C.; Medina, E.; Ferrer-Huerta, M.; Gimeno, N.; Teixidó, M.; Palma, J. L.; Tao, N.; Ugalde, J. M.; Giralt, E.; Díez-Pérez, I.; Mujica, V. Measuring the Spin-Polarization Power of a Single Chiral Molecule. Small 2017, 13, 1602519,  DOI: 10.1002/smll.201602519 [Crossref], Google Scholar
+31Bloom, B. P.; Graff, B. M.; Ghosh, S.; Beratan, D. N.; Waldeck, D. H. Chirality Control of Electron Transfer in Quantum Dot Assemblies. J. Am. Chem. Soc. 2017, 139, 9038– 9043,  DOI: 10.1021/jacs.7b04639 [ACS Full Text ], [CAS], Google Scholar
+32Suda, M.; Thathong, Y.; Promarak, V.; Kojima, H.; Nakamura, M.; Shiraogawa, T.; Ehara, M.; Yamamoto, H. M. Light-driven molecular switch for reconfigurable spin filters. Nat. Commun. 2019, 10, 2455,  DOI: 10.1038/s41467-019-10423-6 [Crossref], [PubMed], [CAS], Google Scholar
+33Inui, A.; Aoki, R.; Nishiue, Y.; Shiota, K.; Kousaka, Y.; Shishido, H.; Hirobe, D.; Suda, M.; Ohe, J.-i.; Kishine, J.-i.; Yamamoto, H. M.; Togawa, Y. Chirality-Induced Spin-Polarized State of a Chiral Crystal CrNb3S6. Phys. Rev. Lett. 2020, 124, 166602,  DOI: 10.1103/PhysRevLett.124.166602 [Crossref], [PubMed], [CAS], Google Scholar
+34Kent, A. D.; Worledge, D. C. A new spin on magnetic memories. Nat. Nanotechnol. 2015, 10, 187– 191,  DOI: 10.1038/nnano.2015.24 [Crossref], [PubMed], [CAS], Google Scholar
+35Apalkov, D.; Dieny, B.; Slaughter, J. M. Magnetoresistive Random Access Memory: Magnetoresistive random access memory (MRAM) and particularly spin-transfer-torque MRAM is a nonvolatile memory with very high endurance and scalability. It is based on an array of magnetic tunnel junctions with magn. Proc. IEEE 2016, 104, 1796– 1830,  DOI: 10.1109/JPROC.2016.2590142 [Crossref], [CAS], Google Scholar
+36Parkin, S.; Jiang, X.; Kaiser, C.; Panchula, A.; Roche, K.; Samant, M. Magnetically engineered spintronic sensors and memory. Proc. IEEE 2003, 91, 661– 680,  DOI: 10.1109/JPROC.2003.811807 [Crossref], [CAS], Google Scholar
+37Kane, B. E. A silicon-based nuclear spin quantum computer. Nature 1998, 393, 133– 137,  DOI: 10.1038/30156 [Crossref], [CAS], Google Scholar
+38Allwood, D. A.; Xiong, G.; Faulkner, C. C.; Atkinson, D.; Petit, D.; Cowburn, R. P. Magnetic domain-wall logic. Science 2005, 309, 1688– 1692,  DOI: 10.1126/science.1108813 [Crossref], [PubMed], [CAS], Google Scholar
+39Hoff, A. J. Advanced EPR: applications in biology and biochemistry; Elsevier, 2012.Google Scholar
+40Mai, S.; Marquetand, P.; González, L. A general method to describe intersystem crossing dynamics in trajectory surface hopping. Int. J. Quantum Chem. 2015, 115, 1215– 1231,  DOI: 10.1002/qua.24891 [Crossref], [CAS], Google Scholar
+41Penfold, T. J.; Gindensperger, E.; Daniel, C.; Marian, C. M. Spin-Vibronic Mechanism for Intersystem Crossing. Chem. Rev. 2018, 118, 6975– 7025,  DOI: 10.1021/acs.chemrev.7b00617 [ACS Full Text ], [CAS], Google Scholar
+42Schiff, L. I. Quantum Mechanics; McGraw-Hill: New York, 1968.Google Scholar
+43Richter, M.; Marquetand, P.; González-Vázquez, J.; Sola, I.; González, L. SHARC: Ab initio molecular dynamics with surface hopping in the adiabatic representation including arbitrary couplings. J. Chem. Theory Comput. 2011, 7, 1253– 1258,  DOI: 10.1021/ct1007394 [ACS Full Text ], [CAS], Google Scholar
+44Richter, M.; Marquetand, P.; González-Vázquez, J.; Sola, I.; González, L. Femtosecond intersystem crossing in the DNA nucleobase cytosine. J. Phys. Chem. Lett. 2012, 3, 3090– 3095,  DOI: 10.1021/jz301312h [ACS Full Text ], [CAS], Google Scholar
+45Mai, S.; Marquetand, P.; Richter, M.; González-Vázquez, J.; González, L. Singlet and triplet excited-state dynamics study of the keto and enol tautomers of cytosine. ChemPhysChem 2013, 14, 2920– 2931,  DOI: 10.1002/cphc.201300370 [Crossref], [PubMed], [CAS], Google Scholar
+46Richter, M.; Mai, S.; Marquetand, P.; González, L. Ultrafast intersystem crossing dynamics in uracil unravelled by ab initio molecular dynamics. Phys. Chem. Chem. Phys. 2014, 16, 24423– 24436,  DOI: 10.1039/C4CP04158E [Crossref], [PubMed], [CAS], Google Scholar
+47Marazzi, M.; Mai, S.; Roca-Sanjuán, D.; Delcey, M. G.; Lindh, R.; González, L.; Monari, A. Benzophenone Ultrafast Triplet Population: Revisiting the Kinetic Model by Surface-Hopping Dynamics. J. Phys. Chem. Lett. 2016, 7, 622– 626,  DOI: 10.1021/acs.jpclett.5b02792 [ACS Full Text ], [CAS], Google Scholar
+48Mai, S.; Marquetand, P.; González, L. Intersystem Crossing Pathways in the Noncanonical Nucleobase 2-Thiouracil: A Time-Dependent Picture. J. Phys. Chem. Lett. 2016, 7, 1978– 1983,  DOI: 10.1021/acs.jpclett.6b00616 [ACS Full Text ], [CAS], Google Scholar
+49Sánchez-Rodríguez, J. A.; Mohamadzade, A.; Mai, S.; Ashwood, B.; Pollum, M.; Marquetand, P.; González, L.; Crespo-Hernández, C. E.; Ullrich, S. 2-Thiouracil intersystem crossing photodynamics studied by wavelength-dependent photoelectron and transient absorption spectroscopies. Phys. Chem. Chem. Phys. 2017, 19, 19756– 19766,  DOI: 10.1039/C7CP02258A [Crossref], [PubMed], [CAS], Google Scholar
+50Tully, J. C. Molecular dynamics with electronic transitions. J. Chem. Phys. 1990, 93, 1061– 1071,  DOI: 10.1063/1.459170 [Crossref], [CAS], Google Scholar
+51Mead, C. A. The ”noncrossing” rule for electronic potential energy surfaces: The role of time-reversal invariance. J. Chem. Phys. 1979, 70, 2276– 2283,  DOI: 10.1063/1.437733 [Crossref], [CAS], Google Scholar
+52Miao, G.; Bellonzi, N.; Subotnik, J. An extension of the fewest switches surface hopping algorithm to complex Hamiltonians and photophysics in magnetic fields: Berry curvature and ”magnetic” forces. J. Chem. Phys. 2019, 150, 124101,  DOI: 10.1063/1.5088770 [Crossref], [PubMed], [CAS], Google Scholar
+53Berry, M. V. Quantal phase factors accompanying adiabatic changes. Proceedings of the Royal Society of London. A. Mathematical and Physical Sciences 1984, 392, 45– 57,  DOI: 10.1098/rspa.1984.0023 [Crossref], Google Scholar
+54Yarkony, D. R. Diabolical conical intersections. Rev. Mod. Phys. 1996, 68, 985– 1013,  DOI: 10.1103/RevModPhys.68.985 [Crossref], [CAS], Google Scholar
+55Matsika, S.; Yarkony, D. R. On the effects of spin-orbit coupling on conical intersection seams in molecules with an odd number of electrons. I. Locating the seam. J. Chem. Phys. 2001, 115, 2038– 2050,  DOI: 10.1063/1.1378324 [Crossref], [CAS], Google Scholar
+56Matsika, S.; Yarkony, D. R. On the effects of spin-orbit coupling on conical intersection seams in molecules with an odd number of electrons. II. Characterizing the local topography of the seam. J. Chem. Phys. 2001, 115, 5066– 5075,  DOI: 10.1063/1.1391444 [Crossref], [CAS], Google Scholar
+57Matsika, S.; Yarkony, D. R. Spin-orbit coupling and conical intersections in molecules with an odd number of electrons. III. A perturbative determination of the electronic energies, derivative couplings and a rigorous diabatic representation near a conical intersection. J. Chem. Phys. 2002, 116, 2825– 2835,  DOI: 10.1063/1.1427914 [Crossref], [CAS], Google Scholar
+58Matsika, S.; Yarkony, D. R. Spin-orbit coupling and conical intersections. IV. A perturbative determination of the electronic energies, derivative couplings, and a rigorous diabatic representation near a conical intersection. The general case. J. Phys. Chem. B 2002, 106, 8108– 8116,  DOI: 10.1021/jp020396w [ACS Full Text ], [CAS], Google Scholar
+59Domcke, W.; Yarkony, D. R; Köppel, H. Conical intersections. Electronic structure, dynamics and spectroscopy 2004, 15, 1,  DOI: 10.1142/5406 [Crossref], Google Scholar
+60Takatsuka, K.; Yonehara, T. Exploring dynamical electron theory beyond the Born-Oppenheimer framework: From chemical reactivity to non-adiabatically coupled electronic and nuclear wavepackets on-the-fly under laser field. Phys. Chem. Chem. Phys. 2011, 13, 4987– 5016,  DOI: 10.1039/c0cp00937g [Crossref], [PubMed], [CAS], Google Scholar
+61Subotnik, J.; Miao, G.; Bellonzi, N.; Teh, H. H.; Dou, W. A demonstration of consistency between the quantum classical Liouville equation and Berry’s phase and curvature for the case of complex Hamiltonians. J. Chem. Phys. 2019, 151, 074113,  DOI: 10.1063/1.5116210 [Crossref], [PubMed], [CAS], Google Scholar
+62Mahfouzi, F.; Nikolić, B. K.; Kioussis, N. Antidamping spin-orbit torque driven by spin-flip reflection mechanism on the surface of a topological insulator: A time-dependent nonequilibrium Green function approach. Phys. Rev. B: Condens. Matter Mater. Phys. 2016, 93, 115419,  DOI: 10.1103/PhysRevB.93.115419 [Crossref], Google Scholar
+63Mead, C. A.; Truhlar, D. G. On the determination of Born-Oppenheimer nuclear motion wave functions including complications due to conical intersections and identical nuclei. J. Chem. Phys. 1979, 70, 2284– 2296,  DOI: 10.1063/1.437734 [Crossref], [CAS], Google Scholar
+64Zhai, F.; Xu, H. Q. Symmetry of spin transport in two-terminal waveguides with a spin-orbital interaction and magnetic field modulations. Phys. Rev. Lett. 2005, 94, 246601,  DOI: 10.1103/PhysRevLett.94.246601 [Crossref], [CAS], Google Scholar
+65Yeganeh, S.; Ratner, M. A.; Medina, E.; Mujica, V. Chiral electron transport: Scattering through helical potentials. J. Chem. Phys. 2009, 131, 014707,  DOI: 10.1063/1.3167404 [Crossref], [PubMed], [CAS], Google Scholar
+66Eremko, A. A.; Loktev, V. M. Spin sensitive electron transmission through helical potentials. Phys. Rev. B: Condens. Matter Mater. Phys. 2013, 88, 165409,  DOI: 10.1103/PhysRevB.88.165409 [Crossref], [CAS], Google Scholar
+67Gutierrez, R.; Díaz, E.; Naaman, R.; Cuniberti, G. Spin-selective transport through helical molecular systems. Phys. Rev. B: Condens. Matter Mater. Phys. 2012, 85, 081404,  DOI: 10.1103/PhysRevB.85.081404 [Crossref], [CAS], Google Scholar
+68For the above Hamiltonians, a different expression can also be generated along the excited state, but it is not provided here.
+69Subotnik, J. E.; Nitzan, A. Multibody scattering, correlation, molecular conduction, and the 0.7 anomaly. J. Chem. Phys. 2008, 129, 144107,  DOI: 10.1063/1.2988495 [Crossref], [PubMed], [CAS], Google Scholar
+70One could perhaps resolve spin currents if one attempted to split apart the outgoing wavepackets into multiple subterminals and resolve how the product wavepacket varied in the x direction after the first crossing.
+71Maslyuk, V. V.; Gutierrez, R.; Dianat, A.; Mujica, V.; Cuniberti, G. Enhanced Magnetoresistance in Chiral Molecular Junctions. J. Phys. Chem. Lett. 2018, 9, 5453– 5459,  DOI: 10.1021/acs.jpclett.8b02360 [ACS Full Text ], [CAS], Google Scholar
+72Nürenberg, D.; Zacharias, H. Evaluation of spin-flip scattering in chirality-induced spin selectivity using the Riccati equation. Phys. Chem. Chem. Phys. 2019, 21, 3761– 3770,  DOI: 10.1039/C8CP07257D [Crossref], [PubMed], [CAS], Google Scholar
+73Mishra, S.; Mondal, A. K.; Pal, S.; Das, T. K.; Smolinsky, E. Z. B.; Siligardi, G.; Naaman, R. Length-Dependent Electron Spin Polarization in Oligopeptides and DNA. J. Phys. Chem. C 2020, 124, 10776– 10782,  DOI: 10.1021/acs.jpcc.0c02291 [ACS Full Text ], [CAS], Google Scholar
+74Zöllner, M. S.; Varela, S.; Medina, E.; Mujica, V.; Herrmann, C. Insight into the Origin of Chiral-Induced Spin Selectivity from a Symmetry Analysis of Electronic Transmission. J. Chem. Theory Comput. 2020, 16, 2914– 2929,  DOI: 10.1021/acs.jctc.9b01078 [ACS Full Text ], [CAS], Google Scholar
+75This can be easily checked by allowing for a magnetic field and observing that the stationary (Boltzmann) solution to the Fokker–Planck equation is unchanged.
+76Nitzan, A. Chemical dynamics in condensed phases: relaxation, transfer and reactions in condensed molecular systems; Oxford university press: 2006.[Crossref], Google Scholar
+77Pollak, E.; Grabert, H.; Hänggi, P. Theory of activated rate processes for arbitrary frequency dependent friction: Solution of the turnover problem. J. Chem. Phys. 1989, 91, 4073– 4087,  DOI: 10.1063/1.456837 [Crossref], [CAS], Google Scholar
+78Hänggi, P.; Talkner, P.; Borkovec, M. Reaction-rate theory: Fifty years after Kramers. Rev. Mod. Phys. 1990, 62, 251– 341,  DOI: 10.1103/RevModPhys.62.251 [Crossref], Google Scholar
+79Segal, D.; Nitzan, A.; Hänggi, P. Thermal conductance through molecular wires. J. Chem. Phys. 2003, 119, 6840– 6855,  DOI: 10.1063/1.1603211 [Crossref], [CAS], Google Scholar
+80Galperin, M.; Nitzan, A.; Ratner, M. A. Heat conduction in molecular transport junctions. Phys. Rev. B: Condens. Matter Mater. Phys. 2007, 75, 155312,  DOI: 10.1103/PhysRevB.75.155312 [Crossref], [CAS], Google Scholar
+81Solomon, G. C.; Herrmann, C.; Hansen, T.; Mujica, V.; Ratner, M. A. Exploring local currents in molecular junctions. Nat. Chem. 2010, 2, 223– 228,  DOI: 10.1038/nchem.546 [Crossref], [PubMed], [CAS], Google Scholar
+82Galperin, M.; Nitzan, A.; Ratner, M. A. Inelastic effects in molecular junction transport: Scattering and self-consistent calculations for the Seebeck coefficient. Mol. Phys. 2008, 106, 397– 404,  DOI: 10.1080/00268970701837784 [Crossref], [CAS], Google Scholar
+83Craven, G. T.; He, D.; Nitzan, A. Electron-Transfer-Induced Thermal and Thermoelectric Rectification. Phys. Rev. Lett. 2018, 121, 247704,  DOI: 10.1103/PhysRevLett.121.247704 [Crossref], [PubMed], [CAS], Google Scholar
+84Dou, W.; Nitzan, A.; Subotnik, J. E. Surface hopping with a manifold of electronic states. II. Application to the many-body Anderson-Holstein model. J. Chem. Phys. 2015, 142, 084110,  DOI: 10.1063/1.4908034 [Crossref], [PubMed], [CAS], Google Scholar
+85Galperin, M.; Nitzan, A. Nuclear Dynamics at Molecule-Metal Interfaces: A Pseudoparticle Perspective. J. Phys. Chem. Lett. 2015, 6, 4898– 4903,  DOI: 10.1021/acs.jpclett.5b02331 [ACS Full Text ], [CAS], Google Scholar
+86Bode, N.; Kusminskiy, S. V.; Egger, R.; von Oppen, F. Current-induced forces in mesoscopic systems: A scattering-matrix approach. Beilstein J. Nanotechnol. 2012, 3, 144– 162,  DOI: 10.3762/bjnano.3.15 [Crossref], [PubMed], [CAS], Google Scholar
+87Kettner, M.; Maslyuk, V. V.; Nürenberg, D.; Seibel, J.; Gutierrez, R.; Cuniberti, G.; Ernst, K. H.; Zacharias, H. Chirality-Dependent Electron Spin Filtering by Molecular Monolayers of Helicenes. J. Phys. Chem. Lett. 2018, 9, 2025– 2030,  DOI: 10.1021/acs.jpclett.8b00208 [ACS Full Text ], [CAS], Google Scholar
+88Naaman, R.; Paltiel, Y.; Waldeck, D. H. Chiral Molecules and the Spin Selectivity Effect. J. Phys. Chem. Lett. 2020, 11, 3660– 3666,  DOI: 10.1021/acs.jpclett.0c00474 [ACS Full Text ], [CAS], Google Scholar
+89Naaman, R.; Paltiel, Y.; Waldeck, D. H. Chiral molecules and the electron spin. Nature Reviews Chemistry 2019, 3, 250– 260,  DOI: 10.1038/s41570-019-0087-1 [Crossref], [CAS], Google Scholar
+90Medina, E.; López, F.; Ratner, M. A.; Mujica, V. Chiral molecular films as electron polarizers and polarization modulators. Epl 2012, 99, 17006,  DOI: 10.1209/0295-5075/99/17006 [Crossref], [CAS], Google Scholar
+91Guo, A. M.; Sun, Q. F. Spin-selective transport of electrons in DNA double helix. Phys. Rev. Lett. 2012, 108, 218102,  DOI: 10.1103/PhysRevLett.108.218102 [Crossref], [PubMed], [CAS], Google Scholar
+92Guo, A. M.; Sun, Q. F. Spin-dependent electron transport in protein-like single-helical molecules. Proc. Natl. Acad. Sci. U. S. A. 2014, 111, 11658– 11662,  DOI: 10.1073/pnas.1407716111 [Crossref], [PubMed], [CAS], Google Scholar
+93Gutierrez, R.; Díaz, E.; Gaul, C.; Brumme, T.; Domínguez-Adame, F.; Cuniberti, G. Modeling spin transport in helical fields: Derivation of an effective low-dimensional hamiltonian. J. Phys. Chem. C 2013, 117, 22276– 22284,  DOI: 10.1021/jp401705x [ACS Full Text ], [CAS], Google Scholar
+94Rai, D.; Galperin, M. Electrically driven spin currents in DNA. J. Phys. Chem. C 2013, 117, 13730– 13737,  DOI: 10.1021/jp404066y [ACS Full Text ], [CAS], Google Scholar
+95Gersten, J.; Kaasbjerg, K.; Nitzan, A. Induced spin filtering in electron transmission through chiral molecular layers adsorbed on metals with strong spin-orbit coupling. J. Chem. Phys. 2013, 139, 114111,  DOI: 10.1063/1.4820907 [Crossref], [PubMed], [CAS], Google Scholar
+96Kuzmin, S. L.; Duley, W. W. Properties of specific electron helical states leads to spin filtering effect in dsDNA molecules. Phys. Lett. A 2014, 378, 1647– 1650,  DOI: 10.1016/j.physleta.2014.04.019 [Crossref], [CAS], Google Scholar
+97Medina, E.; González-Arraga, L. A.; Finkelstein-Shapiro, D.; Berche, B.; Mujica, V. Continuum model for chiral induced spin selectivity in helical molecules. J. Chem. Phys. 2015, 142, 194308,  DOI: 10.1063/1.4921310 [Crossref], [PubMed], [CAS], Google Scholar
+98Matityahu, S.; Utsumi, Y.; Aharony, A.; Entin-Wohlman, O.; Balseiro, C. A. Spin-dependent transport through a chiral molecule in the presence of spin-orbit interaction and nonunitary effects. Phys. Rev. B: Condens. Matter Mater. Phys. 2016, 93, 075407,  DOI: 10.1103/PhysRevB.93.075407 [Crossref], [CAS], Google Scholar
+99Dalum, S.; Hedegård, P. Theory of Chiral Induced Spin Selectivity. Nano Lett. 2019, 19, 5253– 5259,  DOI: 10.1021/acs.nanolett.9b01707 [ACS Full Text ], [CAS], Google Scholar
+100Zhang, Y.; Liu, C.; Balaeff, A.; Skourtis, S. S.; Beratan, D. N. Biological charge transfer via flickering resonance. Proc. Natl. Acad. Sci. U. S. A. 2014, 111, 10049– 10054,  DOI: 10.1073/pnas.1316519111 [Crossref], [PubMed], [CAS], Google Scholar
+101Xiang, L.; Palma, J. L.; Bruot, C.; Mujica, V.; Ratner, M. A.; Tao, N. Intermediate tunnelling-hopping regime in DNA charge transport. Nat. Chem. 2015, 7, 221– 226,  DOI: 10.1038/nchem.2183 [Crossref], [PubMed], [CAS], Google Scholar
+102Kim, H.; Kilgour, M.; Segal, D. Intermediate Coherent-Incoherent Charge Transport: DNA as a Case Study. J. Phys. Chem. C 2016, 120, 23951– 23962,  DOI: 10.1021/acs.jpcc.6b07602 [ACS Full Text ], [CAS], Google Scholar
+103Beratan, D. N. Why Are DNA and Protein Electron Transfer So Different?. Annu. Rev. Phys. Chem. 2019, 70, 71– 97,  DOI: 10.1146/annurev-physchem-042018-052353 [Crossref], [PubMed], [CAS], Google Scholar
+104Fransson, J. Vibrational Origin of Exchange Splitting and Chirality Induced Spin Selectivity. arXiv2020; arXiv:2005.06753.Google Scholar
+105Althorpe, S. C. General explanation of geometric phase effects in reactive systems: Unwinding the nuclear wave function using simple topology. J. Chem. Phys. 2006, 124, 084105,  DOI: 10.1063/1.2161220 [Crossref], [PubMed], [CAS], Google Scholar
+106Medvedev, E. S.; Stuchebrukhov, A. A. Inelastic tunneling in long-distance biological electron transfer reactions. J. Chem. Phys. 1997, 107, 3821– 3831,  DOI: 10.1063/1.474741 [Crossref], [CAS], Google Scholar
+107Jang, S.; Newton, M. D. Theory of torsional non-Condon electron transfer: A generalized spin-boson Hamiltonian and its nonadiabatic limit solution. J. Chem. Phys. 2005, 122, 024501,  DOI: 10.1063/1.1828431 [Crossref], [PubMed], [CAS], Google Scholar
+Cited By
+Jump To
+Citation Statements
+beta
+Supporting
+1
+Mentioning
+16
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 16 publications.
+Zhen Tao, Tian Qiu, Joseph E. Subotnik. Symmetric Post-Transition State Bifurcation Reactions with Berry Pseudomagnetic Fields. The Journal of Physical Chemistry Letters 2023, 14 (3) , 770-778. https://doi.org/10.1021/acs.jpclett.2c02668
+Suraj S. Chandran, Yanze Wu, Joseph E. Subotnik. Effect of Duschinskii Rotations on Spin-Dependent Electron Transfer Dynamics. The Journal of Physical Chemistry A 2022, 126 (50) , 9535-9552. https://doi.org/10.1021/acs.jpca.2c06149
+Xuezhi Bian, Yanze Wu, Jonathan Rawlinson, Robert G. Littlejohn, Joseph E. Subotnik. Modeling Spin-Dependent Nonadiabatic Dynamics with Electronic Degeneracy: A Phase-Space Surface-Hopping Method. The Journal of Physical Chemistry Letters 2022, 13 (32) , 7398-7404. https://doi.org/10.1021/acs.jpclett.2c01802
+Clarice D. Aiello, John M. Abendroth, Muneer Abbas, Andrei Afanasev, Shivang Agarwal, Amartya S. Banerjee, David N. Beratan, Jason N. Belling, Bertrand Berche, Antia Botana, Justin R. Caram, Giuseppe Luca Celardo, Gianaurelio Cuniberti, Aitzol Garcia-Etxarri, Arezoo Dianat, Ismael Diez-Perez, Yuqi Guo, Rafael Gutierrez, Carmen Herrmann, Joshua Hihath, Suneet Kale, Philip Kurian, Ying-Cheng Lai, Tianhan Liu, Alexander Lopez, Ernesto Medina, Vladimiro Mujica, Ron Naaman, Mohammadreza Noormandipour, Julio L. Palma, Yossi Paltiel, William Petuskey, João Carlos Ribeiro-Silva, Juan José Saenz, Elton J. G. Santos, Maria Solyanik-Gorgone, Volker J. Sorger, Dominik M. Stemer, Jesus M. Ugalde, Ana Valdes-Curiel, Solmar Varela, David H. Waldeck, Michael R. Wasielewski, Paul S. Weiss, Helmut Zacharias, Qing Hua Wang. A Chirality-Based Quantum Leap. ACS Nano 2022, 16 (4) , 4989-5035. https://doi.org/10.1021/acsnano.1c01347
+Xuezhi Bian, Yanze Wu, Hung-Hsuan Teh, Joseph E. Subotnik. Incorporating Berry Force Effects into the Fewest Switches Surface-Hopping Algorithm: Intersystem Crossing and the Case of Electronic Degeneracy. Journal of Chemical Theory and Computation 2022, 18 (4) , 2075-2090. https://doi.org/10.1021/acs.jctc.1c01103
+Martin Sebastian Zöllner, Aida Saghatchi, Vladimiro Mujica, Carmen Herrmann. Influence of Electronic Structure Modeling and Junction Structure on First-Principles Chiral Induced Spin Selectivity. Journal of Chemical Theory and Computation 2020, 16 (12) , 7357-7371. https://doi.org/10.1021/acs.jctc.0c00621
+Robert Littlejohn, Jonathan Rawlinson, Joseph Subotnik. Representation and conservation of angular momentum in the Born–Oppenheimer theory of polyatomic molecules. The Journal of Chemical Physics 2023, 158 (10) https://doi.org/10.1063/5.0143809
+Yanze Wu, Joseph E. Subotnik. A quantum-classical Liouville formalism in a preconditioned basis and its connection with phase-space surface hopping. The Journal of Chemical Physics 2023, 158 (2) https://doi.org/10.1063/5.0124835
+Robert Littlejohn, Jonathan Rawlinson, Joseph Subotnik. The parallel-transported (quasi)-diabatic basis. The Journal of Chemical Physics 2022, 157 (18) https://doi.org/10.1063/5.0122781
+Yanze Wu, Xuezhi Bian, Jonathan I. Rawlinson, Robert G. Littlejohn, Joseph E. Subotnik. A phase-space semiclassical approach for modeling nonadiabatic nuclear dynamics with electronic spin. The Journal of Chemical Physics 2022, 157 (1) https://doi.org/10.1063/5.0093345
+Xuezhi Bian, Tian Qiu, Junhan Chen, Joseph E. Subotnik. On the meaning of Berry force for unrestricted systems treated with mean-field electronic structure. The Journal of Chemical Physics 2022, 156 (23) https://doi.org/10.1063/5.0093092
+Suraj S. Chandran, Yanze Wu, Hung-Hsuan Teh, David H. Waldeck, Joseph E. Subotnik. Electron transfer and spin–orbit coupling: Can nuclear motion lead to spin selective rates?. The Journal of Chemical Physics 2022, 156 (17) https://doi.org/10.1063/5.0086554
+Yanze Wu, Joseph E. Subotnik. Electronic spin separation induced by nuclear motion near conical intersections. Nature Communications 2021, 12 (1) https://doi.org/10.1038/s41467-020-20831-8
+Yanze Wu, Joseph E. Subotnik. Semiclassical description of nuclear dynamics moving through complex-valued single avoided crossings of two electronic states. The Journal of Chemical Physics 2021, 154 (23) https://doi.org/10.1063/5.0054014
+Xuezhi Bian, Yanze Wu, Hung-Hsuan Teh, Zeyu Zhou, Hsing-Ta Chen, Joseph E. Subotnik. Modeling nonadiabatic dynamics with degenerate electronic states, intersystem crossing, and spin separation: A key goal for chemical physics. The Journal of Chemical Physics 2021, 154 (11) https://doi.org/10.1063/5.0039371
+Gaohan Miao, Xuezhi Bian, Zeyu Zhou, Joseph Subotnik. A “backtracking” correction for the fewest switches surface hopping algorithm. The Journal of Chemical Physics 2020, 153 (11) https://doi.org/10.1063/5.0022436
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Schematic representation of the energy surface of our model. Note that the nuclear coordinates R are two-dimensional, and here, we only show the reaction coordinate.
+Figure 2
+Figure 2. Region setup for a scattering calculation in (a) a bent geometry and (b) a linear geometry. The definitions of longitudinal coordinate (R∥) and transverse coordinate (R⊥) are marked in the figure. Note for the linear geometry, there is one unique R∥ and one unique R⊥.
+Figure 3
+Figure 3. Two-state system simulation results for a bent geometry. (a) Spin-specific transmission rate T(E), (b) transmission rate difference ΔT(E) and (c) polarization P(E) as functions of energy; see eqs 28 and 29. The energy barrier is shown by the vertical dashed line. The polarization peaks are marked with black triangles in parts b and c. The parameters are A = 0.02, C = 0.005, W = 0.2, and . See eqs 32, 33, and 34. Note that, while spin polarization is observed, the details of which spin is favored at which energy is rather complicated.
+Figure 4
+Figure 4. Total transmission T(E) (a, d, g), absolute polarization ΔT(E) (b, e, h) and relative polarization P(E) (c, f, i) with different phase gradient magnitude W, half energy gap A, and diabatic coupling strength C for a two-state system with a bent geometry. The polarization peaks (which will be plotted in Figure 5 below) are marked with black triangles (b, c, e, f, h, i). The default parameters are A = 0.02, C = 0.005, W = 0.2, and . See eqs 32, 33, 34. Increasing W does not change transmission but does amplify polarization (a–c). Increasing A shifts both transmission and polarization (d–f). Increasing C shifts transmission and polarization, but also reduces transmission (g–i).
+Figure 5
+Figure 5. Peak relative polarization Ppeak and peak absolute polarization ΔTpeak (see black arrows in Figure 3c and Figure 3b) as functions of W, C, and A for the two-state system with bent geometry. The default parameters are A = 0.02, C = 0.005, and W = 0.2 and . The magnitude of Ppeak increases with W and A but decreases with C, which agrees with the strength of effective magnetic field (eq 44) qualitatively. Thus, the relative peak polarization goes up in the nonadiabatic limit. Vice versa, the peak absolute polarization has a maximum around C = 0.003.
+Figure 6
+Figure 6. (a) Energy-polarization curve for the bent geometry for a few different phase directions ϕ. (b) Ppeak as a function of ϕ for the bent geometry. Note that for the bent systems, the overall spin polarization can be mapped directly onto the Berry force at the crossing point (see eqs 42 and 44), denoted “ fit” here. (c) Energy-polarization curve for the linear system for a few different phase dependence functions u(x, y). Note here that, even though the Berry force has the same form as in Figure 6a, there is no spin polarization (which highlights the fact that the observed spin polarization depends on the both the magnitude of the Berry force and the shape of the potential energy surfaces). The default parameters for all systems are A = 0.02, C = 0.005, and W = 0.2.
+Figure 7
+Figure 7. Four-state system simulation results. (a) Spin-specific transmission rate T(E), (b) transmission rate difference ΔT(E), and (c) polarization P(E) as functions of energy. In this figure, the “overall” ΔT(E) and P(E) lines refer to eq 28 and eq 29, respectively; the “flipping” ΔT(E) and P(E) lines refer to the contribution of spin-flipping transmission to the polarization (T↓→↑– T↑→↓), ((T↓→↑– T↑→↓)/Toverall), respectively. The parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . See eqs 32, 33, 34, and 35. Note that, although the total transmission is dominated by spin-preserving processes, the spin polarization arises mostly from spin-flipping processes.
+Figure 8
+Figure 8. Total transmission T(E) (a, d, g), absolute polarization ΔT(E) (b, e, h) and relative polarization P(E) (c, f, i) with different W, A, C, and D for the four-state systems with bent geometry. The polarization peaks (which will be plotted in Figure 9 below) are marked with black triangles (c,f,i). The default parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . See eqs 32, 33, 34, and 35. The polarization for the four-state system is more sensitive to C (relative to the two-state case) and increases with D.
+Figure 9
+Figure 9. Relative peak polarization Ppeak as a function of the model parameters W, A, C, and D for the four-state system with a bent geometry. The default parameters are A = 0.02, C = 0.005, D = 0.001, W = 1, and . Note that Ppeak increases with W, A, and D but decreases with C, which agrees with eq 47 qualitatively.
+Figure 10
+Figure 10. Schematic model of the original CISS effect: an electron moving through a chiral potential has a probability of transmission that depends on its spin. The sites on the molecule are numbered.
+Figure 11
+Figure 11. Schematic view of a symmetric three-terminal system with external magnetic field (pointing inward, marked as gray crossings). Assuming the trajectories of particles are bent to right, the blue and red arrow show the favored flow and unfavored flow. In such system, the rate constants k1→2 = k2→3 = k3→1, but in general, k1→2 ≠ k2→1.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

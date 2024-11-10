@@ -1,0 +1,347 @@
+<DOCUMENT>
+Dynamic modelling, simulation and control of isobutane dehydrogenation in a commercial Oleflex process considering catalyst deactivation
+Highlights
+•
+Dynamic performance of the Oleflex process to produce isobutene is investigated.
+•
+The accuracy of the model is validated against available plant data.
+•
+Sensitivity analysis is carried out to evaluate the influence of disturbances.
+•
+Process controllability is investigated using conventional feedback controllers.
+Abstract
+The main goals of this research are dynamic operability and controllability analysis of the commercial isobutane dehydrogenation Oleflex process to produce isobutene. The process consists of three series moving-bed radial flow reactors that inter-stage furnaces have placed between reactors. The dehydrogenation reactors are modelled based on the mass and energy conservation laws considering a two-dimensional heterogeneous model. Isobutane dehydrogenation, hydrogenolysis, propane dehydrogenation and coke formation reactions have been considered in the kinetic model. To prove the accuracy of the considered model and assumptions, the simulation results are compared with plant data. The open loop sensitivity analysis is carried out to evaluate dynamic characteristics and operability of the process. Also, the process controllability is investigated considering the conventional feedback PI and PID controllers. The simulation results show that the conventional PID controller is capable to reject load and track set point.
+Graphical abstract
+Download : Download full-size image
+Nomenclature
+a
+catalyst activity
+av
+specific surface area of catalyst pellet (m2/m3)
+Ac
+cross section area (m2)
+Ci
+molar concentration of component i (mol/m3)
+Cp
+specific heat capacity (J/mol K)
+Ct
+total mole concentration (mol/m3)
+D
+diameter (m)
+f
+friction factor
+hf
+gas-solid heat transfer coefficient (W/m2 K)
+k
+catalyst activity constant (s−1)
+kg
+mass transfer coefficient (m/s)
+L
+reactor length (m)
+P
+total pressure (bar)
+Re
+Reynolds number
+r
+radial reactor coordinate (m)
+ri
+rate of reaction (mol kg/Cat s)
+T
+temperature (C)
+u
+superficial velocity of fluid phase (m/s)
+y
+component mole fraction
+z
+axial reactor coordinate (m)
+Greek letters
+ρ
+density of fluid phase (kg/m3)
+α
+catalyst activity constant (kgCat/kgCoke)
+η
+effectiveness factor
+ε
+bed void fraction
+∆H
+heat of reaction (J/mole3)
+Superscripts
+B
+reactor bed
+g
+in the bulk gas phase
+p
+particle
+s
+at the catalyst surface
+1. Introduction
+Isobutene as an unsaturated hydrocarbon is a colourless and extremely flammable gas at standard condition. It is used as the feedstock to produce some chemical components such as methyl tert-butyl ether, ethyl tert-butyl ether and isooctane. It is also used as a monomer or copolymer to produce synthetic rubber and various plastics. Some commercial technologies have been developed for dehydrogenation of light paraffinic components, which differ in catalyst, reactor and regeneration system. Catofin dehydrogenation process, commercialized by CB&I, is a continuous cyclic process in which reactors operates through a controlled sequence of reaction and regeneration [1]. In the Oleflex technology, commercialized by UOP Company, dehydrogenation occurs in the adiabatic moving-bed reactors over modified Pt based catalyst [2]. The Oleflex process consists of three radial-flow reactors, inter-stage furnaces and regeneration system.
+Many researchers have focused on isobutene synthesis from isobutane dehydrogenation. Zwahlen and Agnew studied mechanism of isobutane dehydrogenation reaction over Cr/Al2O3 catalyst at up to 570 °C and 1 bar in a bench scale reactor without considering inter-particle transport resistance and side reactions [3]. They investigated coke formation on the catalyst and presented a simple first order deactivation model. Cortright et al. presented an accurate rate equation for isobutane dehydrogenation over Pt−Sn catalyst [4]. The kinetic data for the hydrogenation and dehydrogenation reactions over the catalysts was described based on Horiuti–Polanyi mechanism without considering catalyst deactivation. The experiments were designed at a wide range of isobutane partial pressure and a complicated rate equation was proposed. Buzari et al. studied kinetic of isobutane dehydrogenation over commercial Pt−Sn catalyst [5]. Developed rate equation based on the Langmuir−Hinshelwood mechanism, considering isobutane adsorption as a rate-limiting step, presented a good accuracy to predict isobutane dehydrogenation rate.
+Farsi et al. proposed an axial flow membrane reactor for isobutane dehydrogenation and optimized the process condition to enhance isobutene production and selectivity [6]. The main disadvantage of work was lack of experimental data to prove operability of the proposed membrane reactor. Farsi et al. modelled the isobutane dehydrogenation in radial flow moving bed reactors at steady state condition [7]. The simulation results showed an acceptable agreement with the plant data. The main advantage of work was considering a detailed reaction network and catalyst deactivation in the developed model to predict process selectivity. Farsi et al. optimized isobutane dehydrogenation in the Oleflex process considering a detailed reaction network at steady state condition [8]. The simulation results showed that isobutene conversion is enhanced about 4% considering optimal feed temperature.
+In this work, the synthesis section of Oleflex process is modelled heterogeneously based on the mass and energy balances at dynamic condition. Since this section consists of three reactors and inter-stage furnaces, it suffers from dead time and nonlinearity. In the Oleflex process, dehydrogenation reaction occurs in the adiabatic moving-bed reactors over the Pt−Sn/Al2O3 catalyst. The catalyst is gradually coked as it moves down through reactors. The outlet catalyst from each reactor is entered to the top of next reactor. The outlet catalyst from the third reactor is sent to the regeneration section and the formed coke on the catalyst surface is burnt. Then, the regenerated catalyst is sent back to the first reactor. The main goal of this research is dynamic simulation and controllability analysis of the commercial Oleflex process and estimation of controller parameters. There is not any research in the literature on dynamic modelling and controllability of commercial isobutane dehydrogenation process. To create an exact and accurate model, as well as the isobutane dehydrogenation as main reaction, hydrogenolysis, propane dehydrogenation and coke formation reactions have been adopted in the kinetic model. To prove the accuracy of the considered model and assumptions, the simulation results are compared with the available plant data. Sensitivity analysis provides a method for systematically investigating the effects of perturbations on the process output and suggesting targets for interventions. In this work, the effect of input variables, such as feed temperature, concentration and fuel flow rate, on output temperature and concentrations is investigated through dynamic model. Also, the process controllability is analysed considering conventional PI and PID controllers.
+2. Kinetic model
+In the Oleflex process, isobutane is converted to isobutene through a reversible and endothermic reaction. Isobutane cracking, coke formation and propane dehydrogenation reactions occur as side reactions over Pt–Sn/Al2O3 catalyst. The kinetic of isobutane dehydrogenation is as follows:
+(1)
+i−C4H10 ↔ i−C4H8 + H2
+(2)
+i−C4H10 + H2 ↔ C3H8 + CH4
+(3)
+C3H8 ↔ H2 + C3H6
+(4)
+i−C4H8 → 4 C + 4 H2
+Although increasing temperature and decreasing pressure shift the isobutane dehydrogenation reaction towards completion, it promotes side reactions and catalyst deactivation. In this work, the kinetic model and reaction rate parameters are selected from literature [9], [10].
+3. Process modelling
+3.1. Reactor model
+The Oleflex dehydrogenation process consists of three moving bed radial flow reactors in series that feed stream, is preheated in a furnace and send to the first reactor. Since the temperature of outlet product drops due to endothermic reactions, the inter-stage furnaces are placed between rectors to increase temperature. The outlet product from the first reactor is heated in the second inter-stage furnace and fed to the second reactor. Due to coke formation on the catalyst surface, the outlet catalyst from the third reactor is sent to the regeneration section. In the regeneration reactor, the formed coke is burnt and regenerated catalyst is recycled to the first reactor and turns along the process. Fig. 1 shows the schematic diagram of the Oleflex process.
+Download : Download full-size image
+Fig. 1. Schematic diagram of the Oleflex isobutane dehydrogenation process.
+A two-dimensional heterogeneous model has been developed to simulate the reactors. In the considered mathematical model, the following assumptions are adopted:
+•
+The gas mixture is in ideal condition (low pressure and high temperature condition).
+•
+Radial diffusion of mass and energy is negligible.
+•
+The chemical reactions take place on the catalyst phase.
+•
+The temperature gradient in the solid phase is negligible.
+•
+The catalyst flows uniformly in the axial direction of reactors.
+Subject to these assumptions, gas phase mole and energy balances are as follows:
+(5)
+ɛ
+ɛ
+ɛ
+(6)
+ɛ
+ɛ
+ɛ
+The component mole and energy balances in the solid phase are expressed by:
+(7)
+ɛ
+(8)
+ɛ
+ɛ
+The total mole balance is expressed by:
+(9)
+ɛ
+ɛ
+ɛ
+From the ideal gas condition, total concentration can be expressed by:
+(10)
+Since the catalyst to gas velocity ratio is very low, moles and energy balance equations can be simplified to below:
+(11)
+ɛ
+(12)
+ɛ
+(13)
+ɛ
+(14)
+ɛ
+(15)
+ɛ
+The coke mass balance can be expressed by:
+(16)
+The pressure drop through the radial direction of the catalytic beds is calculated based on Tallmadge equation that is usable in laminar and turbulent regimes [11].
+(17)
+ɛ
+ɛ
+ɛ
+ɛ
+(18)
+The activity of commercial catalyst is calculated based on Mohajeri and Khorashe work [12]. The parameters of catalyst activity equation have been tabulated in Table 1.
+(19)
+(20)
+(21)
+Table 1. Parameters of the considered correlation for catalyst activity.
+Parameter value
+k1 (s−1) 7.84 × 10−3
+k2 (s−1) 1.15 × 10−3
+α1 (kgCat/kgCoke) 813
+α2 (kgCat/kgCoke) 289
+E1 (kJ/mol) 221
+E2(kJ/mol) 325.8
+Cmax (kgCoke/kgCat) 6.82 × 10−4
+In this reactor, the catalyst moves along the axial direction, while the feed flows in radial direction. It results in a two dimensional activity profile. In the other words, the radial velocity of reactants, coke deposition on the catalyst surface and axial velocity of catalyst result in a two dimensional activity profile. Feed specifications, reactor and catalyst characteristics of the commercial process have been presented in Table 2 [13].
+Table 2. Feed and product specifications of the commercial dehydrogenation reactors.
+Empty Cell
+Reactor 1 Reactor 2 Reactor 3
+Feed
+Temperature (C) 600 610 604
+Flow rate (ton/h) 106
+Pressure (barg) 1.4 0.9 0.4
+Catalyst
+Catalyst loading (ton) 17 18 21
+Catalyst density (kg/m3) 800
+Catalyst diameter (m) 6 × 10−4
+3.2. Furnace model
+Conventionally, the direct and indirect fired furnaces are used in chemical industries. In direct fired furnaces, chemical reaction and combustion take place in the coil and chamber, respectively. The indirect furnaces are used to preheat the reactant stream and reaction takes place in other vessels. In the Oleflex process, furnaces have placed between reactors to preheat the feed streams as an indirect heating method. The energy balances in the coil and chamber are expressed by:
+(22)
+(23)
+3.3. Auxiliary equations
+There are some parameters in the heterogeneous models such as heat and mass transfer coefficients between gas and solid phases that connect the governing equations in gas and solid phases and should be calculated from proper correlations. In addition, suitable temperature and component dependent correlations should be chosen to estimate physical properties of components and mixture such as viscosity, specific heat capacity, heat conductivity and diffusion coefficients along the reactor. The source of considered correlations to calculate components and mixture physical properties, mass and heat transfer coefficient between phases are summarized in Table 3 [14], [15], [16], [17], [18], [19].
+Table 3. Used correlations for physical properties, mass and heat transfer coefficient.
+Parameter Equation
+Gas conductivity Lindsay and Bromley equation
+Mixture heat capacity
+Viscosity of reaction mixtures
+Mass transfer coefficient
+Binary diffusion coefficient
+Effective diffusion coefficient in pellet
+Gas–catalyst heat transfer coefficient
+ɛ
+4. Numerical solution
+In this system, the reactor length is discretized in the axial direction, then the dynamic mass and energy governing equations are written for each axial segment. Thus, a set of nonlinear partial differential equations is obtained in radial direction. To solve this set of nonlinear partial differential equations (PDEs) obtained from dynamic modelling; the PDEs are converted to a set of ordinary differential equations (ODEs) in time domain using finite difference method. This set of equations is solved by 4th order Runge–Kutta method.
+5. Results and discussion
+5.1. Model validation
+In this section, the dynamic operability of Oleflex process to produce isobutene is presented. To demonstrate the accuracy of the considered model and assumptions, the simulation results are validated against the plant data at steady state condition. Table 4 presents comparison between simulation results and plant data for an industrial case in Imam Khomeini Petrochemical Complex in Iran.
+Table 4. Comparison of simulation results and plant data for industrial reactor.
+Empty Cell
+Plant data Model R.E.
+Total conversion 38.8 38.53 0.7%
+Selectivity 90.9 90.76 0.15%
+It is observed that the predicted isobutane conversion and selectivity have a good agreement with the observed plant data. Fig. 2 shows the isobutene concentration profile in the third reactor at steady state condition. Since the catalyst activity decreases along the axial direction of reactors, isobutene concentration decreases and higher concentration appears at the top of the reactor.
+Download : Download full-size image
+Fig. 2. Isobutene concentration along the radial and axial direction of the third reactor.
+The results show that the produced isobutene in the Oleflex process is 182.4 mol/s. The overall isobutane conversion and isobutene selectivity are 38.53% and 90.76% at the considered operating condition. Selectivity as the main parameter to investigate side reactions is defined as the ratio of produced isobutene per consumed isobutane. In this section, the average of temperature and mole fractions along the radial direction is presented. The average component mole fraction in the radial direction is defined as:
+(24)
+5.2. Open loop simulation
+5.2.1. Dynamic characteristics of reactor
+The sensitivity analysis has a variety of meanings in different disciplines. Sensitivity analysis is a systematic investigation of the model response to quantitative perturbations and qualitative factors such as inputs, process structure and connectivity modules. Sensitivity analysis allows us to analyse the effects of inputs perturbations from normal state and identify the parameters which are important in controlling the system behaviour. This section has focused on the investigation of the effect of quantitative factors such as step changes in feed temperature and concentration on reactor output. Fig. 3(a) and (b) shows the effect of imposing 10 °C increase in feed temperature on outlet temperature and concentration. According to Le Chatelier's principle, if a chemical system at equilibrium experiences a change in independent variables such as concentration and temperature, the equilibrium shifts to counteract the imposed change and a new equilibrium is established. Increasing feed temperature in the isobutane dehydrogenation reactor changes the equilibrium conversion and reaction rate, simultaneously. It increases reaction rate and the equilibrium shifts towards higher isobutene production due to higher energy content in the reaction zone. Since a part of entered energy is consumed through isobutane dehydrogenation reaction, the imposing 10 °C increase in feed temperature results in 4 °C increase in product temperature. This figure shows that process time delay and settling time are 1 and 8 s, respectively. Also, change in feed temperature has a direct and important effect on the isobutene concentration, so isobutene concentration has increased about 7%. The simulation results prove that the feed temperature has fast and significant effect on the isobutene production in the Oleflex process.
+Download : Download full-size image
+Fig. 3. (a) The outlet isobutene mole fraction and (b) temperature profiles against a 10 °C step change in feed temperature.
+Fig. 4 shows the effect of imposing 5% step change in the feed concentration on outlet reactor temperature and concentration. According to Le Chatelier's principle, increasing isobutane concentration as the main reactant shifts the thermodynamic equilibrium limitations and a new equilibrium is established. As can be seen in Fig. 4, the process time delay and settling time are 2 and 9 s, respectively. Also, the outlet concentration has changed about 4% against 5% step change in the feed concentration. The simulation results indicate that feed temperature and composition are the major process disturbances that should be rejected by the designed control system.
+Download : Download full-size image
+Fig. 4. The outlet isobutene mole fraction profile against a 5% step change in feed concentration.
+5.2.2. Dynamic characteristic of process
+This section has focused on investigating the effect of quantitative factors such as step changes furnace feed temperature and fuel flow rate on process output. It was mentioned that Oleflex process consists of three series reactors and inter-stage heaters. Fig. 5(a) and (b) shows the effect of imposing 10 °C step change in feed temperature of the first furnace on the outlet isobutene mole fraction and temperature from the third reactor. The feed flows in the coil of first furnace and then is entered to the first reactor. In this system three furnaces and reactors are in series. In the first furnace, increasing feed temperature influence the equilibrium conversion and reaction rate in all reactors, simultaneously. It decreases temperature difference between coil and chamber sides and results in lower heat transfer between chamber and coil. It was shown in the last section that outlet temperature from the first reactor increases about 4 °C against 10 °C step change in the reactor feed temperature. Thus, this disturbance is damped along the process and decreases in amplitude, so the outlet temperature from the third reactor increases about 1.4 °C. As can be seen in Fig. 3(a), the process time delay and settling time are 15 and 80 s, respectively.
+Download : Download full-size image
+Fig. 5. (a) The outlet isobutene mole fraction and (b) temperature profiles from the third reactor against 10 °C step change in feed temperature to the first furnace.
+Fig. 6(a) and (b) shows the effect of imposing 2% step change in fuel flow rate in the first furnace on the outlet isobutene mole fraction and temperature from the third reactor. It is assumed that fuel to air ratio remains at optimal stoichiometry. It means that using a perfect ratio control the fuel to air ratio is controlled at a desired level. Increasing fuel flow rate in the first furnace increases outlet stream temperature and warmer feed is entered to the first reactor. As can be seen in Fig. 6(a), the process time delay and settling time are 13 and 100 s, respectively. The outlet concentration from third reactor has changed about 2.3% against 2% step change in furnace fuel flow rate. The above results indicate that the fuel flow rate in the furnace has a direct, fast and significant effect on the outlet product from reactor and can be used as manipulated variable to reject disturbances.
+Download : Download full-size image
+Fig. 6. (a) The outlet isobutene mole fraction and (b) temperature profiles from third reactor against 2% step change in fuel flow rate of first furnace.
+5.3. Process control
+In this section, the controllability of the Oleflex process against disturbance rejection and set point tracking are presented. Controllability is the ability to maintain the process outputs within certain bounds using the process inputs and in the presence of set point changes and disturbances [20]. The radial flow packed bed reactors are distributed parameter systems that have attracted significant tendency in design and control. In this section a feedback control loop is designed and tuned based on the conventional proportional–integral–derivative (PID) controllers. Since the fuel flow rate in the furnaces have a direct, fast and significant effect on the outlet product from reactors, they have been selected as manipulated variables. In this study, the considered controllers are tuned based on the closed loop Ziegler–Nichols method. This algorithm is one of the most common methods for tuning of PID controllers based regulatory problem. The gain of proportional controller is increased at constant set point until it reaches the ultimate gain, at which the output of the control loop oscillates with constant amplitude. The parameters of the controller, i.e. the proportional gain, reset time, and derivative value, are derived from the ultimate gain and the sustained period of oscillation [21]. This type of tuning creates a quarter wave decay ratio which is acceptable for most systems. According to this procedure, the calculated controller gain, reset time and derivative constants are presented in Table 5.
+Table 5. Controller tuning results.
+Empty Cell
+First reactor Second reactor Third reactor
+Proportional gain 0.27 0.15 0.11
+Integral time (τI) 0.33 0.25 0.21
+Derivative time (τD) 0.055 0.024 0.015
+5.3.1. Load rejection
+To investigate the performance of considered control structure and controllers, 10 °C step change is applied on the first furnace feed temperature. The outlet temperature from the first, second and third reactors have been presented in Fig. 7(a–c), respectively. This load is applied on the first furnace and then is entered to the next reactors and inter-stage furnaces. As can be seen from Fig. 7(c), the load is completely rejected after 8 min using PI and PID controllers in the process. The inserted load is damped in the first reactor and entered load to the second reactor has lower amplitude. It is shown that maximum outlet temperature deviation from set point in first, second and third reactors are 3 °C, 1 °C and 0.7 °C, respectively. Thus, this disturbance is damped using considered control system. Although PID and PI controllers have rejected the applied load and outlet temperature has approached towards the set point, the lowest settling time and amplitude are appeared in PID response, particularly in second and third reactors. In the case that is controlled by PID, outlet temperature from third reactor approaches towards the desired set point after 300 s. While it approaches towards the desired set point after 450 s, in the case that is controlled by PI. The PID controller provides a faster settling time because derivative action tends to reduce the oscillatory behaviour in the temperature. Thus, the performance of PID controller to reject considered load is more effective compared to the PI controller, particularly in the third reactor.
+Download : Download full-size image
+Fig. 7. (a–c), The closed loop response of the process against load rejection problem.
+5.3.2. Set point tracking
+The set point tracking problem is investigated by applying a step change in the set point of each reactor. Fig. 8(a–c) presents the outlet temperature from reactors against a step change in set point. In the first reactor, outlet temperature approaches towards the desired set point after 5 min. Since, the outlet stream from first reactor is fed to the second furnace; it acts as an undesired load and influences the second reactor. Thus, the second reactor is faced with the load rejection and set point tracking problems, simultaneously. It makes temperature control in the second and third reactors more difficult compared to the first reactor. These figures show that the performance of PID controller to track the considered set point is better than the PI controller, particularly in the third reactor. Table 6 presents the dynamic characteristics of the closed loop system for the set point tracking. The settling time and overshoot in the third reactor are about 3.5 min and 0.32, respectively.
+Download : Download full-size image
+Fig. 8. (a–c), The outlet temperature from reactors against set point tracking problem.
+Table 6. Dynamic characteristics of the closed loop process for the set point tracking.
+Empty Cell
+First reactor Second reactor Third reactor
+Settling time (s) 175 200 210
+Overshoot 0.03 0.24 0.32
+6. Conclusion
+In this study, the dynamic operability and controllability of the Oleflex process were analysed considering a heterogeneous two-dimensional model. To create an accurate and exact mathematical model, isobutane dehydrogenation, hydrogenolysis, propane dehydrogenation and coke formation reactions were inserted in the kinetic model. The comparison between simulation results and the plant data proved the accuracy of the considered model and assumptions. The dynamic sensitivity analysis results showed that the feed temperature and composition are the main disturbances in the reactors. Also, the fuel flow rate was selected as the manipulated variables due to direct, fast and powerful effect on the outlet reactor condition. The simulation results proved the efficiency of PID controller to reject considered loads and set point tracking compared to PI controller, particularly in the third reactor. In the third reactor, settling time and overshoot are about 3.5 min and 0.32 in set point tracking problem, respectively. Simulation results showed that the Oleflex process suffers from dead time and nonlinearity. Although the controllability of commercial process is poor, the simulation results concluded tuning of controller parameters could improve process performance to regulate disturbance and set point tracking.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

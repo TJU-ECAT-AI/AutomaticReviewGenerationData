@@ -1,0 +1,269 @@
+<DOCUMENT>
+Multiscale modeling reveals aluminum nitride as an efficient propane dehydrogenation catalyst†
+Nonoxidative propane dehydrogenation (PDH) is a promising route to meet the steadily increasing demand for propylene, an important building block in the chemical industry. Wurtzite group-IIIA metal nitrides are potential catalysts for PDH with high chemical, thermal, and mechanical stability alongside inherent Lewis acid–base properties that can activate the C–H bond of alkanes. Herein, we investigate the catalytic behavior of pristine (AlN) and gallium-doped (Ga/AlN) aluminum nitride for PDH via concerted and various stepwise mechanisms using density functional theory (DFT) calculations and microkinetic modeling (MKM). The reaction profiles investigated with DFT calculations are used in MKM, which reveals that the stepwise mechanisms produce >99% of propylene on both AlN and Ga/AlN. AlN has approximately one order of magnitude higher activity than Ga/AlN due to lower barriers along the dominant PDH reaction pathway. In summary, we propose the potential application of AlN as an efficient dehydrogenation catalyst for the conversion of light alkanes into valuable olefins. In addition, we show that multiscale simulations are essential to evaluate the catalytic behavior of complex alkane conversion reaction networks and obtain activity trends for dehydrogenation catalysts.
+Introduction
+Propylene (C3H6) is a highly versatile industrial precursor for the production of important chemicals, including polypropylene, propylene oxide, and acrylonitrile.1–5 C3H6 is traditionally produced as a byproduct of thermal steam cracking and fluid catalytic cracking of heavy oils and naphtha.3,4 However, these technologies are limited by the high energy requirements, low yield, poor product selectivity, CO2 emissions, and costly separation and purification processes.2 Additionally, the global C3H6 demand (more than 100 million metric tons per year)6 exceeds the production capacity of existing steam crackers and refineries.1,4 Therefore, there is a pressing need to discover alternative routes for C3H6 production. The large-scale exploration of shale gas reservoirs worldwide has provided an opportunity for producing C3H6 through the catalytic dehydrogenation of low cost and readily available propane feedstock (C3H8).7
+Nonoxidative propane dehydrogenation (PDH) is an endothermic and equilibrium-limited reaction wherein one mole of C3H8 generates one mole of C3H6 and one mole of molecular H2.3 Accordingly, the reaction benefits from high temperatures of 550–750 °C and/or low C3H8 partial pressures of <0.1 bar (due to a positive change in reaction entropy) to increase the equilibrium conversion of C3H8.2,3,7 The selective removal of H2 molecules, for instance in membrane reactors, can significantly enhance the equilibrium conversion and improve the efficiency of the downstream separation section of PDH processes.8,9 The residual hydrogen can further be combusted to heat the dehydrogenation reactor, potentially eliminating the need for an additional fuel source.10 Moreover, the design and discovery of active and stable catalysts play a key role in reducing the energy required in PDH processes. Commercial PDH processes utilize Al2O3-supported Pt (OLEFLEX and steam-activated reforming processes) and CrOx (CATOFIN process) catalysts.3,5 However, Pt-based catalysts are expensive and exhibit issues with coking and sintering, while CrOx/Al2O3 catalysts suffer from fast deactivation, requiring frequent catalyst regeneration, as well as high toxicity of Cr species.3,5
+Metal oxides such as γ-Al2O3,11–13 β-Ga2O3,14,15 ZrO2,16 TiO2,17,18 V2O3,19 Cr2O3,20,21 and ZnO20,22 have been extensively studied as PDH catalysts, among which γ-Al2O3 and β-Ga2O3 are found to be promising candidates. γ-Al2O3 has been experimentally shown to be active and selective for the PDH reaction13 and computational work of PDH over γ-Al2O3 (100) and (110) surfaces has shown that the PDH mechanism is site-dependent with the concerted mechanism (simultaneous activation of two C–H bonds) being preferred on the most active site.23 β-Ga2O3 exhibits high dehydrogenation activity owing to the presence of coordinatively unsaturated Ga3+, which can activate paraffinic C–H bonds.14 However, the temperatures required for dehydrogenation induce sintering of GaOx-based catalysts which causes rapid deactivation.24 Interestingly, it has been reported that catalyst modification through doping can enhance the catalytic performance via modification of the electronic properties of the catalyst. For instance, doping γ-Al2O3 with gallium atoms has been shown to enhance the dehydrogenation activity by improving the Lewis acid–base properties of the catalyst.10,25 Additionally, Pt doping on Ga2O3 improved the catalytic performance dramatically by hindering deep dehydrogenation reactions and increasing the long-term catalyst stability.26
+Although intense efforts have been devoted to identifying alternative dehydrogenation catalysts, their performance is still unsatisfactory compared to commercial catalysts mainly due to the insufficient C–H bond activation ability.24 Therefore, it is desirable to evaluate and identify alternative catalysts for dehydrogenation processes. Metal nitrides constitute an important series of heterogeneous catalysts, complementing metal oxides in many applications.27 The thermodynamically stable wurtzite-structure group-IIIA metal nitrides exhibit intrinsic Lewis acid–base properties that can selectively activate the C–H bonds of alkanes28 alongside an appealing mix of chemical, physical, and structural properties that are crucial for dehydrogenation processes. These properties include high thermal conductivity, high temperature stability, high corrosion resistance, high mechanical strength, non-toxicity, and good chemical stability.28–32 For instance, aluminum and gallium nitrides (AlN and GaN) exhibit higher thermal conductivity than γ-Al2O3, which promotes heat transfer within the catalyst beds during reactions.33 Generally, catalysts with high thermal conductivity could efficiently avoid local overheating of the surface, which minimizes sintering in thermal catalysis.33,34
+GaN is a metal nitride that has recently been evaluated as a dehydrogenation catalyst. GaN has multifunctional Lewis acid (Ga centers) and base (N centers) sites, which can selectively activate the paraffinic C–H bonds of alkanes.28,35,36 Chaudhari et al. performed density functional theory (DFT) calculations to study the nonoxidative coupling of methane to ethylene on both (100) GaN and (001) β-Ga2O3 and identified comparable C–H bond activation barriers of 4.68 eV and 4.42 eV for GaN and β-Ga2O3, respectively.28 Li et al. and Dutta et al. experimentally revealed superior catalytic performance, selectivity, and thermal stability of GaN compared to gallium oxides in nonoxidative short-chain alkane dehydroaromatization to benzene at elevated temperature.35,36 AlN has been found, in both experimental and computational studies, to catalyze several reactions, including ammonia synthesis and aldol addition.31,37 Despite its promising results in catalysis, AlN has not yet been assessed as a dehydrogenation catalyst.
+In this work, DFT calculations are used to evaluate different nitride systems (GaN and AlN in their pristine and doped states) for PDH. Following an initial catalyst screening approach, pristine and Ga-doped AlN are selected for a detailed DFT and MKM analysis. Our results suggest pristine AlN as a promising candidate for nonoxidative propane dehydrogenation to propylene, while revealing rich information on dehydrogenation mechanisms.
+Computational details
+DFT calculations were performed using the CP2K package, applying a hybrid Gaussian and plane waves method, implemented in the QUICKSTEP program.38 The Perdew–Burke–Ernzerhof exchange–correlation functional39 was used in the DFT calculations together with Grimme's D3 method40 to account for dispersion effects in the adsorbate–surface interactions.41 Core electrons were approximated using Goedecker, Teter, and Hutter pseudopotentials.42–44 The electronic wavefunctions of Al and Ga atoms were described using the double-ζ valence polarized basis sets, whereas triple-ζ valence polarized basis sets were used for C, H, and N.45 A kinetic energy cutoff of 500 Ry was used in all calculations. The geometries were relaxed using the Broyden–Fletcher–Goldfarb–Shanno minimization algorithm46 until all forces were below 4.0 × 10−4 Hartree Bohr−1 with SCF convergence criteria of 10−7 Hartree. Transition states (TSs) were located through climbing image nudged elastic band47 and dimer methods.48 All TSs were verified to have a single imaginary frequency along the reaction coordinate through frequency analysis using the harmonic oscillator approximation. The Gibbs free energies (G) of all states in the dehydrogenation reaction energy profiles were calculated using statistical thermodynamics as per the formula in eqn (1):
+G = E + ZPE + ∫CpdT − TS (1)
+where ZPE is the zero-point energy, Cp is the heat capacity, S is the entropy, T is the temperature, and E is the total electronic energy of each system. The vibrational modes of only the adsorbates were factored in the free energy calculations. Enthalpic and entropic contributions of gas phase C3H8, C3H6, and H2 molecules were calculated with the ideal gas approximation, whereas the enthalpy and entropy of adsorbed and transition states were computed with the harmonic oscillator approximation.49
+The nonpolar (110) a-planes of wurtzite metal nitride systems were considered due to their high chemical stability and well-defined atomic structures.32,50 The (110) surfaces were modeled with a (2 × 4) surface cell and described with eight atomic layers, consisting of 128 atoms. The bottom four layers were fixed at their optimized bulk positions, whereas the top four layers and the adsorbates were allowed to relax during geometry optimization. A vacuum spacing of 15 Å was used to separate the slabs along the surface normal direction. The (110) Ga-doped AlN facet (Ga/AlN) was constructed from the pristine (110) AlN surface by replacing one Al surface atom with a Ga atom.10 The segregation energy of the Ga dopant was defined as follows:51
+Eseg = (Epure bulk + Edopant in surface) − (Edopant in bulk + Epure surface) (2)
+where Epure bulk and Edopant in bulk are the total electronic energies of undoped AlN bulk and Ga/AlN bulk, respectively. Edopant in surface is the total electronic energy of (110) AlN surface with Ga dopant in the surface first-layer. Epure surface is the total electronic energy of a bare (110) AlN surface. Negative segregation energy indicates that segregation to the surface is thermodynamically favored. The binding energy of dissociated hydrogen (H2 BE)10,23,52,53 on metal–nitrogen surface site pairs is calculated as follows:
+H2 BE = Esurface/H2 − (EH2 + Eclean surface) (3)
+where Esurface/H2 and Eclean surface are the total electronic energy of a heterolytically dissociated H2 on metal–nitrogen site pair and clean (110) AlN surface, respectively. EH2 is the total electronic energy of an isolated H2 molecule in the gas phase. Negative H2 BE indicates exothermic dissociation of molecular hydrogen on the surface.
+MKM was performed using the fp_echem software package available on the Mpourmpakis group Github.54 A full reaction network was constructed, which simultaneously considered four propane dehydrogenation mechanisms investigated with DFT calculations. A total of seventeen elementary steps were included in the kinetic model. Tables 1 and 2 report the different elementary steps of the full PDH reaction network for both AlN and Ga/AlN, respectively. Additional details regarding the total set of elementary steps are presented in Section S1 of the ESI† file. For adsorption events, the forward rate constants were evaluated using the Hertz–Knudsen eqn (4):
+(4)
+In eqn (4), σ is the sticking coefficient, which was set to one. A is the active site area, which for a single nitrogen and two metal atoms on Al/N and Ga/AlN surfaces is 4 Å2. m is the mass of the adsorbing molecule, kB is the Boltzmann constant, and T is the temperature. Desorption rate constants were computed considering the equilibrium constants for each reaction and the partial pressure of the relevant species:
+(5)
+Here, p is the partial pressure and where ΔG is the Gibbs free energy of adsorption. Forward rate constants for surface reaction steps were calculated using the Eyring–Polanyi eqn (6):
+(6)
+In eqn (6), h is Planck's constant and ΔG‡ is the free energy barrier of the reaction. Reverse rate constants for these events were then determined from the forward rates using the equilibrium constants for each relevant elementary step:
+(7)
+All energies used in the microkinetic models were free energies calculated from DFT. Partial pressures of the gas phase species were held constant in MKM simulations. The specific pressures were 1.01 bar for C3H8, 0.001 bar for C3H6, and 0.001 bar for H2. This was done to approximate the behavior of a flow reactor which nearly instantly removed C3H6 and H2 from the near vicinity of the catalyst. Without holding the gas phase partial pressures constant, the hydrogenation of C3H6 to C3H8 would dominate chemical turnover and quench any dehydrogenation activity of the nitride catalysts. It would also more closely reflect a batch operation, which is not the typical reactor setup that is employed at-scale for dehydrogenation chemistries. Initial coverages of any adsorbates were set to zero. Turnover frequencies (TOFs) were calculated by summing the forward (positive) and reverse (negative) rates for elementary reaction steps that produced C3H6. Net rates for the individual elementary reaction steps were determined as the difference between the forward and reverse reaction rates for each individual elementary step. The reaction networks were analyzed by calculating the degrees of rate control (DRCs) using finite differences,55 where rate constants for the elementary steps of interest were lowered by 0.01% and all other parameters were kept constant. TOF for C3H6 production was used in the calculation of all DRCs.
+Table 1 Thermodynamic and kinetic parameters of the elementary steps in the PDH reaction network on pristine AlN. The model considers three total surface sites that are involved in adsorption, surface reactions, and desorption. These are two metal sites (Al1 and Al2) and one nitrogen site. The subscripts v and h respectively denote vertical and horizontal adsorption configurations of alkanes, carbocations, and alkenes. The subscripts a and b identify H2 adsorption states with or without a neighboring adsorbed alkene
+Reaction step Ea (kJ mol−1) ΔE (kJ mol−1) k
+873K
+fwd
+(s−1) k
+873K
+rev
+(s−1)
+C3H8,(g) + Al1 + Al2 + N ↔ C3H8–Al1–Al2–N −36.66 −36.66 8.92 × 101 4.36 × 1011
+C3H8,(g) + Al1 ↔ C3H8,v–Al1 −15.44 −15.44 8.92 × 101 1.18 × 1012
+C3H8,(g) + Al1 ↔ C3H8,h–Al1 −34.74 −34.74 8.92 × 101 1.07 × 1011
+C3H8–Al1–Al2–N ↔ C3H6–Al2 + H–Al1 + H–N 216.13 94.56 2.20 × 100 1.45 × 106
+C3H8,v–Al1 + N ↔ C3H7,v–Al1 + H–N 77.19 1.92 2.32 × 107 8.01 × 109
+C3H8,h–Al1 + N ↔ C3H7,h–Al1 + H–N 104.20 27.98 9.58 × 104 7.77 × 108
+C3H7,v–Al1 + H–N + Al2 ↔ C3H6,v–Al1 + H2–Al2a + N 221.92 109.99 2.08 × 100 1.32 × 105
+C3H7,v–Al1 + Al2 ↔ C3H6,h–Al1 + H–Al2 176.57 109.03 1.07 × 103 5.98 × 107
+C3H7,h–Al1 + Al2 ↔ C3H6,h–Al1 + H–Al2 184.29 102.27 3.22 × 102 8.39 × 106
+C3H6,v–Al1 ↔ C3H6,(g) + Al1 52.10 52.10 1.27 × 1011 9.13 × 101
+C3H6,h–Al1 ↔ C3H6,(g) + Al1 61.75 61.75 3.14 × 1010 9.13 × 101
+C3H6–Al2 ↔ C3H6,(g) + Al2 54.99 54.99 1.14 × 1011 9.13 × 101
+H–Al1 + H–N ↔ H2–Al1b + N 76.22 35.70 1.94 × 109 4.77 × 108
+H2–Al1b ↔ H2,(g) + Al1 8.68 8.68 8.21 × 1011 4.17 × 102
+H2–Al2a ↔ H2,(g) + Al2 10.61 10.61 1.23 × 1016 4.17 × 102
+H–Al2 + H–N ↔ H2–Al2b + N 90.70 −3.86 1.16 × 108 9.05 × 104
+H2–Al2b ↔ H2,(g) + Al2 4.82 4.82 6.51 × 1011 4.17 × 102
+Table 2 Thermodynamic and kinetic parameters of the elementary steps in the PDH reaction network on Ga/AlN. The model considers three total surface sites that are involved in adsorption, surface reactions, and desorption. These are two metal sites (Ga and Al) and one nitrogen site. The subscripts v and h respectively denote vertical and horizontal adsorption configurations of alkanes, carbocations, and alkenes. The subscripts a and b identify H2 adsorption states with or without a neighboring adsorbed alkene
+Reaction step Ea (kJ mol−1) ΔE (kJ mol−1) k
+873K
+fwd
+(s−1) k
+873K
+rev
+(s−1)
+C3H8,(g) + Ga + Al + N ↔ C3H8–Ga–Al–N −26.05 −26.05 8.92 × 101 1.46 × 1011
+C3H8,(g) + Ga ↔ C3H8,v–Ga −15.44 −15.44 8.92 × 101 3.73 × 1011
+C3H8,(g) + Ga ↔ C3H8,h–Ga −33.77 −33.77 8.92 × 101 9.54 × 1010
+C3H8–Ga–Al–N ↔ C3H6–Al + H–Ga + H–N 184.29 65.61 9.29 × 100 1.74 × 106
+C3H8,v–Ga + N ↔ C3H7,v–Ga + H–N 105.17 −17.37 3.53 × 106 9.01 × 107
+C3H8,h–Ga + N ↔ C3H7,h–Ga + H–N 124.47 7.72 1.35 × 104 1.47 × 107
+C3H7,v–Ga + H–N + Al ↔ C3H6,v–Ga + H2–Ala + N 241.21 137.01 8.31 × 100 2.83 × 104
+C3H7,v–Ga + Al ↔ C3H6,h–Ga + H–Al 202.62 139.9 6.55 × 100 1.05 × 107
+C3H7,h–Ga + Al ↔ C3H6,h–Ga + H–Al 210.34 133.15 3.10 × 101 4.54 × 106
+C3H6,v–Ga ↔ C3H6,(g) + Ga 44.38 44.38 7.78 × 1010 9.13 × 101
+C3H6,h–Ga ↔ C3H6,(g) + Ga 52.10 52.10 9.54 × 109 9.13 × 101
+C3H6–Al ↔ C3H6,(g) + Al 53.07 53.07 1.51 × 1011 9.13 × 101
+H–Ga + H–N ↔ H2–Gab + N 127.36 56.93 4.16 × 106 5.09 × 106
+H2–Gab ↔ H2,(g) + Ga 7.72 7.72 2.94 × 1011 4.17 × 102
+H2–Ala ↔ H2,(g) + Al 9.65 9.65 4.82 × 1011 4.17 × 102
+H–Al + H–N ↔ H2–Alb + N 89.73 −6.75 2.15 × 108 5.68 × 104
+H2–Alb ↔ H2,(g) + Al 4.82 4.82 5.59 × 1011 4.17 × 102
+Results and discussion
+The binding energy of dissociated hydrogen has been previously identified as a quantitative dehydrogenation activity descriptor (i.e., correlating with rate-determining dehydrogenation barriers) on pristine and gallium-doped γ-Al2O3.10,23,52,56 Previous studies have shown that active PDH catalysts exhibit a mild H2 BE ranging between ∼−50 to −70 kJ mol−1, (neither too weak to prevent C–H cleavage, nor too strong to poison the catalyst), in line with the Sabatier principle.23,56 Thereby, we used H2 BE to identify active dehydrogenation dual acid–base sites on candidate metal nitride catalysts. We calculated the H2 BE on different active site pairs of pristine GaN (Fig. 1(a and b)) and AlN (Fig. 1(c)). We found that the dissociated hydrogen atoms bind stronger on GaN (H2 BE equals −134.5 and −120.2 kJ mol−1 for Gaa–Na and Gab–Na, respectively) than AlN (H2 BE equals −44.5 kJ mol−1 for Ala–Na). The stronger binding of dissociated hydrogen atoms on GaN than the optimal H2 BE (−50 to −70 kJ mol−1) indicates high energy barrier to form and desorb molecular H2 from the catalytic surface. Consequently, the dehydrogenation activity of GaN will be affected adversely by site blocking due to the strongly bound surface hydrogen atoms.
+Fig. 1 Graphical snapshots of relaxed structures and binding energy of H2 (H2 BE) interaction with metal–nitrogen active sites (a) Gab–Na of GaN (b) Gaa–Nb of GaN, (c) Ala–Na of AlN, and (d) Gaa–Na of Ga/AlN. Negative binding energies (values in kJ mol−1) indicate exothermic dissociative binding of H2. Key: N, blue; Al, magenta; Ga, green; H, white.
+Previously, doping γ-Al2O3 with Ga was found to increase the H2 BE (i.e., H2 BE becomes either more exothermic or less endothermic depending on the adsorption site), resulting in a decrease in the C–H bond activation energy barrier of the most kinetically favored concerted mechanism (for different mechanisms see Fig. 2, vide infra).10 As noted, GaN exhibited more exothermic H2 BE than AlN. Hence, we hypothesize that doping AlN with Ga atoms could potentially shift the H2 BE of AlN towards the target H2 BE range of ∼−50 to −70 kJ mol−1 while not blocking the doped active sites with surface hydrogen. To examine the doping effect on the binding strength of the dissociated hydrogen, we substituted a single Ga atom for an Al atom in the Ala–Na site pair (Fig. 1(d)). We observed a more exothermic H2 BE of −64.8 kJ mol−1, as initially postulated. Accordingly, we expect a beneficial effect on the concerted C–H bond activation step (i.e., barrier decrease) upon doping AlN with Ga.10 These initial calculations of the H2 BE suggest that Ga/AlN could be a potential dehydrogenation catalyst.
+Fig. 2 Possible mechanisms for propane dehydrogenation on metal nitrides. In the stepwise mechanism notation, the order of the P and S highlights the mode of the C–H bond activation, where P and S are short for primary and secondary C–H activation, respectively. I and D in PSI and PSD, stand for indirect and direct, respectively.
+To act as an active site for dehydrogenation, the Ga atom must preferentially reside on the surface of the catalyst. Thus, it is important to address the preference of the Ga dopant segregation towards the surface, therefore we examined the segregation of Ga atom from the bulk structure to the surface first layer. We observed favorable bulk segregation to the surface, with a segregation energy of −77.3 kJ mol−1. The favorable surface segregation can be attributed to the larger atomic radii of the Ga dopant relative to the host Al metal, which adds strain to the doped bulk state. To release this strain, the dopant has a thermodynamic preference to segregate to the surface.
+As already discussed, Ga/AlN binds the heterolytically dissociated H2 stronger than AlN. Hence, we performed ab initio molecular dynamics (AIMD) simulations to examine molecular H2 formation events from two hydrogen atoms adsorbed on the surface under dehydrogenation conditions at 873.15 K while taking into consideration the dynamics of the catalyst. Details of AIMD simulations are presented in Section S2 of the ESI† file. The AIMD simulations showed that molecular H2 formation events can be accessible at the typical dehydrogenation temperature, confirming that the poisoning of the doped active site of Ga/AlN by hydrogen adsorption is unlikely (Fig. S1†).
+Motivated by the initial H2 BE screening results and the AIMD simulations, we assessed AlN and Ga/AlN as potential dehydrogenation catalysts. It is generally accepted that the PDH reaction occurs through concerted and stepwise mechanisms, as illustrated in Fig. 2.12,21,23 The concerted mechanism (Fig. 2, top panel) entails simultaneous activation of two C–H bonds of propane to directly form propylene and two surface-bound hydrogen atoms which further recombine to form molecular H2. Alternatively, PDH can occur via sequential removal of two hydrogen atoms from the methyl and methylene groups (i.e., primary and secondary carbons) of the propane molecule, followed by desorption of propylene and molecular H2 from the catalyst. In the following discussion, PS is short for initial activation of a primary, methyl, C–H bond followed by activation of a secondary, methylene, C–H bond. The SP notation indicates instead the activation of a secondary C–H bond followed by the activation of a primary C–H bond. The PS pathway (Fig. 2, middle panel) can be further classified as either PS indirect (PSI) or PS direct (PSD) mechanisms. In the first step of both PS mechanisms, a primary C–H bond is broken via abstraction of a proton by a surface nitrogen atom (N–H+*), with the 1-propyl group bonding to the active metal to form a surface-bound metal-1-propyl species with carbanionic character (M–CH3CH2CH2−*; charges determined with Bader analysis). In the second step of the PS mechanisms, there can be a differentiation in the second C–H activation. In the PSI mechanism, the secondary C–H bond is activated by a neighboring surface metal atom to form a propylene molecule and metal-hydride species (M–H−*). Then, the propylene molecule desorbs, and the dissociated proton and hydride (N–H+* and M–H−*) recombine to form H2 molecule. In the PSD mechanism, the second step entails direct recombination of the surface proton (N–H+*) with the β-hydride of the 1-propyl intermediate to form a weakly bound H2 molecule and propylene. The SP mechanism (Fig. 2, bottom panel) is initiated by the activation of a secondary C–H bond through the abstraction of a proton by a surface nitrogen atom (N–H+*), with the 2-propyl group bonded to the active metal atom (M–CH3CHCH3−*). In the following step, a primary C–H bond is activated by a neighboring surface metal atom to form metal-hydride species (M–H−*) and a propylene molecule. The last step involves proton–hydride surface recombination to form molecular H2.
+Fig. 3 shows the free energy pathways of each investigated mechanism. Electronic energy diagrams are shown in Fig. S2.† The adsorption of propane was found to be endergonic with adsorption energies of 68.8 and 61.4 kJ mol−1 on AlN and Ga/AlN, respectively, due to the significant entropy loss at dehydrogenation conditions of 873.15 K and 1.01 bar. From the adsorbed state, the energy barriers for the simultaneous activation of two C–H bonds were 217.7 and 206.8 kJ mol−1 on AlN and Ga/AlN, respectively. Then, the propylene molecule was desorbed from the catalyst surface with desorption energies of −56.7 and −59.0 kJ mol−1 for AlN and Ga/AlN, respectively. The subsequent H2 production step on Ga/AlN was more energetically demanding than that on AlN, by 44.9 kJ mol−1, owing to the extra stabilization of the hydride-proton intermediate on Ga/AlN (GaH−* + NH+*) as compared to that on AlN (AlH−* + NH+*). The energy span57 between the highest lying TS and lowest lying intermediate on Ga/AlN is 18.2 kJ mol−1 lower than on AlN, suggesting that concerted PDH is more feasible on Ga/AlN. Going back to the H2 BE results of Fig. 1(d), this finding illustrates that mild H2 BE is needed to enhance the overall PDH activity while not poisoning the doped active site with surface hydrogen (as confirmed by the AIMD simulations in Fig. S1†).
+Fig. 3 Free energy PDH reaction profiles at 873.15 K and 1.01 bar on (a) undoped AlN and (b) Ga/AlN via the four mechanisms presented in Fig. 2. Concerted, stepwise PSD, stepwise PSI, and stepwise SP mechanisms are depicted in light blue, pink, green, and orange, respectively. Adsorbed states are denoted with asterisks.
+We next investigated stepwise PS mechanisms on AlN and Ga/AlN. For the PSI mechanism, the energy barrier for the first C–H bond activation is significantly lower than the concerted C–H bond activation, with activation energy barriers of 100.0 and 113.2 kJ mol−1 for AlN and Ga/AlN, respectively. The second dehydrogenation step (i.e., β-hydride elimination from the M–CH3CH2CH2−* intermediate by a neighboring surface aluminum atom) was found to be more energetically demanding on Ga/AlN than AlN, by 37.2 kJ mol−1, due to the higher stability of the Gaa–CH3CH2CH2−* intermediate compared to Ala–CH3CH2CH2−* intermediate. The H2 production step exhibited comparable energy barriers on AlN and Ga/AlN because the dissociated hydrogen atoms were abstracted from aluminum–nitrogen site pairs in both AlN and Ga/AlN (i.e., the Ga site does not participate in the H2 production TS on this mechanism). We observed comparable energy spans for PDH through the stepwise PSI mechanism on both Ga/AlN (300.3 kJ mol−1) and AlN (290.5 kJ mol−1).
+Alternatively, PDH can occur through the PSD mechanism. The activation energies of β-hydride elimination by a surface proton (formed from the first C–H bond activation step) were found to be 192.3 and 204.9 kJ mol−1 for AlN and Ga/AlN, respectively. The catalytic cycle of the stepwise PSD mechanism is completed by the desorption of the weakly bound H2 molecule and propylene to regenerate the catalytic surface. Upon comparing the energy spans of the PSD mechanism (β-hydride elimination by a surface proton) and PSI mechanism (β-hydride elimination by a surface aluminum atom) on AlN, the latter was found to be preferred by 21.4 kJ mol−1. On the other hand, PSD and PSI mechanisms were energetically indistinguishable on Ga/AlN, with energy spans of 300.3 kJ mol−1 and 297.2 kJ mol−1 for stepwise PSI and PSD, respectively.
+Further, we investigated PDH on AlN and Ga/AlN through the stepwise SP mechanism. We found that it is slightly less favorable to abstract the first hydrogen from a nonterminal methylene group (stepwise SP mechanism) than from a terminal methyl group (stepwise PS mechanism) because the latter has lower C–H bond activation energy barriers, by 38.7 and 40.6 kJ mol−1 on AlN and Ga/AlN, respectively. The subsequent hydrogen abstraction from a terminal methyl group in the SP mechanism is found to be 16.8 kJ mol−1 more energetically demanding on Ga/AlN than AlN, owing to the stabilization of the Gaa–CH3CHCH3−* carbanion compared to Ala–CH3CHCH3−* carbanion. Considering the free energy barriers of all elementary steps of the three different stepwise mechanisms, the elimination of the second hydrogen is found to be the most energetically demanding step on AlN and Ga/AlN. By comparing the free energy barriers of the second C–H bond activation step of the stepwise mechanisms on AlN, we observed that hydrogen elimination by surface metal (i.e., stepwise PSI and SP) occurs through lower energy barriers compared to hydrogen elimination by surface proton (i.e., stepwise PSD, with the surface proton being generated in the first C–H activation step). This activation energy trend is due to the stronger Lewis acidity of the metal center and higher facility to abstract the hydrogen atom.
+Although the reaction energies and barriers in the reaction coordinates of Fig. 3 provide valuable information about the detailed energetics of PDH elementary reaction steps and potential preference of one mechanism over the other, they do not provide information on the reaction rates that would be observed on AlN or Ga/AlN catalysts. To obtain reaction rates, we need to consider the effects of surface coverages and gas phase pressures on the overall PDH rate. Moreover, the competition between each of the mechanisms through highly stable intermediates cannot be extracted from the potential energy profiles in Fig. 3. To calculate the rates of PDH on AlN and Ga/AlN, we constructed microkinetic models of the full PDH reaction networks for each catalyst. All four PDH mechanisms were considered in the kinetic model. The MKM results including TOFs, and DRC information are summarized in Fig. 4 for AlN (a and b) and Ga/AlN (c and d).
+Fig. 4 Comparison of PDH kinetics on (a and b) AlN and (c and d) Ga/AlN catalysts. (a and c) Turnover frequencies as a function of temperature for each PDH reaction mechanism and the single composite PDH mechanism. (b and d) Degree of rate control (Xrc,i) for the most critical elementary steps as a function of temperature.
+As shown in Fig. 4(a and c), AlN is consistently over an order of magnitude more active than its Ga-doped derivative in terms of the total TOF of the composite mechanism (i.e., single mechanism composed of all four PDH mechanisms of Fig. 2). From 700 K to 1000 K, the TOF of C3H6 on AlN increases from 4.1 × 10−5 s−1 to 2.7 × 10−1 s−1. In the same temperature range, the TOF of C3H6 on Ga/AlN increases from 1.6 × 10−6 s−1 to 2.5 × 10−2 s−1. It is therefore apparent that the dehydrogenation rate is higher on AlN than Ga/AlN in the entire temperature range, which shows that doping is not preferential for the activity. By comparing the TOF of each individual mechanism against the composite mechanism on AlN and Ga/AlN, stepwise PSI mechanism was found to dominate the activity. We also compared the TOFs of the nitride catalysts to metal oxide catalysts which have been discussed in the literature. Table S1† summarizes this comparison and shows that AlN performs better than most of the active oxide PDH catalysts. Specifically, pristine AlN exhibited at least one order of magnitude higher catalytic activity than β-Ga2O3, α-Cr2O3, ZnO, and TiO2, in their pristine and doped states.
+Additionally, we have investigated the reaction rates for each elementary step in the composite dehydrogenation mechanism on AlN (Fig. S3†). The elementary steps included in the PSI mechanism have the highest rates and together contribute to 84.5% of all C3H6 product. The steps related to the SP mechanism contribute approximately 15.5% of produced C3H6. The steps in the PSD and concerted mechanisms produce essentially no C3H6. This shows that the PSI mechanism is primarily responsible for C3H6 production on AlN, in agreement with the TOF results of Fig. 4(a).
+The dominant dehydrogenation mechanism on undoped AlN was also verified by DRC analysis. The DRC for the most important elementary steps in the dehydrogenation reaction network on AlN are shown in Fig. 4(b). Steps which are not shown have DRC of zero. The most critical reaction steps are the removal of the second and first hydrogen from C3H8 in the PSI mechanism, supporting the conclusion that the PSI mechanism is most responsible for C3H6 production on AlN. At lower temperatures there is also a modest effect on total reaction rate by H2 formation in the concerted pathway. Although the concerted steps are not directly significant in C3H6 formation, it is worth noting that the hydrogen atoms removed from C3H8 in this pathway populate the metal centers which are responsible for alkane adsorption in each of the stepwise mechanisms. Accumulation of atomic hydrogen on the Al and N sites of the AlN surface through the concerted pathway can therefore block the adsorption of alkane for the stepwise pathways, inhibiting C3H6 turnover. At higher temperatures, the desorption of hydrogen is accelerated and the rate control of the concerted H2 formation step decreases. Interestingly, we observed negative DRC for the splitting of H2 in the concerted mechanism and the formation of C3H8 in the PSI mechanism. Increasing the rate of these steps would therefore inhibit the productive PDH turnover, since these are elementary steps that occur in the direction of net hydrogenation to produce C3H8 from C3H6. Overall, it is apparent from Fig. 4(a and b) that propane dehydrogenation on AlN is driven by reaction events primarily belonging to the PSI pathway.
+We next performed an analysis of the reaction rates on the Ga/AlN system as shown in Fig. S3.† We found that the PSI steps remain the most significant for the overall dehydrogenation activity. For Ga/AlN, PSI produces 63.4% of the total C3H6, SP produces 35.3%, and the concerted pathway yields 1.3%. Virtually no C3H6 is formed through the PSD mechanism. Through inspection of Fig. S3,† we conclude that the general effect of Ga doping is to inhibit the highly active PSI and SP mechanisms and accelerate the otherwise inactive concerted mechanism. Fig. 4(d) shows the DRC for all PDH reaction steps on Ga/AlN. Once again, steps with zero DRC are omitted. In comparison to Fig. 4(b), it is apparent that multiple reaction steps compete to control the total dehydrogenation rate on Ga/AlN. There are notable additions of SP and concerted pathway events to the list of critical elementary steps, and the relative importance of the highly active PSI steps is smaller on Ga/AlN than on AlN.
+The main conclusion from our MKM analysis is that the PSI mechanism is the most active pathway for C3H6 formation on AlN and Ga/AlN. This result is not evident from the free energy diagrams in Fig. 3. More specifically, the energy span57 between the highest lying TS and lowest-lying intermediate on Ga/AlN suggests that the concerted mechanism is dominant over the stepwise mechanisms, with energy span of 268.2 kJ mol−1, while those for stepwise mechanisms varied between 297.3–306.8 kJ mol−1. Both concerted and stepwise PSI mechanisms were favored on AlN, with energy spans of 286.5 and 290.5 kJ mol−1, respectively. From only the free energy diagram, we would therefore expect the concerted mechanism to be the most active pathway for alkane dehydrogenation. Instead, our kinetic analysis shows that the PSI pathway is more active than the concerted one. Reinspecting Fig. 3, it can be seen that the first C–H bond activation energy barrier is the highest for the concerted pathway. Thus, after alkane adsorption, it is more feasible to form a carbanion from a stepwise mechanism than an alkene from the concerted mechanism. This is depicted in the smaller forward rate constant of the concerted C–H bond activation step (2.20 and 9.29 s−1 for AlN and Ga/AlN, respectively) compared to that of the first C–H bond activation of stepwise PSI (2.32 × 107 and 3.53 × 106 s−1 for AlN and Ga/AlN, respectively) and SP (9.58 × 104 and 1.35 × 104 s−1 for AlN and Ga/AlN, respectively), as shown in Tables 1 and 2. In fact, the barrier for C–H bond activation in the concerted pathway is larger than the barrier for the second C–H bond activation in all stepwise pathways, which is reflected in the faster forward rate constant of the second C–H bond activation step of stepwise PSI and SP mechanisms compared to the concerted C–H bond activation step on AlN and Ga/AlN (Tables 1 and 2). Therefore, although the concerted pathways on AlN and Ga/AlN have the lowest dehydrogenation barriers (in term of overall energy span), our MKM analysis highlights the fact that the individual stepwise C–H bond activations are less energy intensive (i.e., lower barriers) than the concerted C–H bond activation step. This results in higher coverages of intermediates relevant to stepwise pathways, supporting higher turnover rates for the stepwise mechanisms. It is noteworthy that designing a catalyst, which selectively favors the concerted mechanism over the stepwise one to avoid the buildup of surface carbanion species, is very difficult to achieve. This is because the Lewis acid–base properties of the catalyst simultaneously affect the first C–H bond activation steps of both the concerted and stepwise mechanisms.
+Taken together, our first-principles-based multiscale investigation revealed AlN as an efficient PDH catalyst. Our initial catalyst screening was based on H2 BE (Fig. 1), a dehydrogenation descriptor that identified AlN-based systems as potential PDH catalysts. Future studies could apply similar approaches to screen metal-nitride catalysts, as well as their various facets towards alkane dehydrogenation. In this way, rapid screening of Lewis acid–base sites through the H2 BE descriptor can identify potential active sites that will be investigated further in detail through combining DFT with MKM.
+Conclusions
+In this contribution, we employed periodic DFT calculations and microkinetic analysis to investigate PDH through various dehydrogenation mechanisms, namely, concerted and three different stepwise mechanisms on AlN and Ga/AlN. These catalysts were identified as potential PDH catalysts through established activity relationships. Kinetic analysis revealed the stepwise PSI mechanism as being majorly responsible for C3H6 formation on AlN and Ga/AlN. Reaction rates and degree of rate control unraveled the importance of elementary steps in the overall dehydrogenation network where multiple reaction mechanisms can compete. This information cannot be captured from DFT calculations alone, highlighting the importance of applying multiscale simulations in understanding and predicting catalytic behavior on alkane dehydrogenation catalysts. In summary, this multiscale computational work revealed AlN as a potential catalyst for light alkane dehydrogenation into valuable olefins, guiding experimentation, and demonstrated routes to address complexity on understanding and evaluating alkane dehydrogenation catalytic mechanisms.
+Conflicts of interest
+There are no conflicts of interest to declare.
+Acknowledgements
+This material is based upon work supported by the National Science Foundation under Grant No. 1920623. EVM acknowledges support from NSF Graduate Research Fellowship Program under grant no. 1747452. GM acknowledges sabbatical support from Chalmers University of Technology, Areas of Advance: Materials Science, and the Wenner Gren Foundation. The authors would like to acknowledge computational support from the Center for Research Computing at the University of Pittsburgh and the Extreme Science and Engineering Discovery Environment, which is supported by the NSF (ACI-1548562).
+References
+I. Amghizar , L. A. Vandewalle , K. M. Van Geem and G. B. Marin , Engineering, 2017, 3 , 171 —178 CrossRef CAS .
+S. Liu , B. Zhang and G. Liu , React. Chem. Eng., 2021, 6 , 9 —26 RSC .
+J. J. H. B. Sattler , J. Ruiz-Martinez , E. Santillan-Jimenez and B. M. Weckhuysen , Chem. Rev., 2014, 114 , 10613 —10653 CrossRef CAS PubMed .
+S. M. Sadrameli Fuel, 2015, 140 , 102 —115 CrossRef CAS .
+B. M. Weckhuysen and R. A. Schoonheydt , Catal. Today, 1999, 51 , 223 —232 CrossRef CAS .
+A. H. Motagamwala , R. Almallahi , J. Wortman , V. O. Igenegbai and S. Linic , Science, 2021, 373 , 217 —222 CrossRef CAS PubMed .
+C. Li and G. Wang , Chem. Soc. Rev., 2021, 50 , 4359 —4381 RSC .
+C. J. Dittrich Chem. Eng. J., 2020, 381 , 122492 CrossRef CAS .
+C. Brencio , R. Gough , A. de Leeuw den Bouter , A. Arratibel , L. Di Felice and F. Gallucci , Chem. Eng. J., 2023, 452 , 139125 CrossRef CAS .
+M. Abdelgaid , J. Dean and G. Mpourmpakis , Catal. Sci. Technol., 2020, 10 , 7194 —7202 RSC .
+S. Rostom and H. de Lasa , Catalysts, 2020, 10 , 418 CrossRef CAS .
+J. Joubert , F. Delbecq and P. Sautet , J. Catal., 2007, 251 , 507 —513 CrossRef CAS .
+D. Zhao , H. Lund , U. Rodemerck , D. Linke , G. Jiang and E. V. Kondratenko , Catal. Sci. Technol., 2021, 11 , 1386 —1394 RSC .
+Y. Liu , Z. H. Li , J. Lu and K.-N. Fan , J. Phys. Chem. C, 2008, 112 , 20382 —20392 CrossRef CAS .
+B. Zheng , W. Hua , Y. Yue and Z. Gao , J. Catal., 2005, 232 , 143 —151 CrossRef CAS .
+T. Otroshchenko , S. Sokolov , M. Stoyanova , V. A. Kondratenko , U. Rodemerck , D. Linke and E. V. Kondratenko , Angew. Chem., Int. Ed., 2015, 54 , 15880 —15883 CrossRef CAS PubMed .
+F. Jiang , L. Zeng , S. Li , G. Liu , S. Wang and J. Gong , ACS Catal., 2015, 5 , 438 —447 CrossRef CAS .
+L. Xiao , Z. Xie , S. Song , Z. Zhao , M. Ke , W. Song , Z. Zhao and J. Liu , Ind. Eng. Chem. Res., 2021, 60 , 1200 —1209 CrossRef CAS .
+J. Zhang , R.-J. Zhou , Q.-Y. Chang , Z.-J. Sui , X.-G. Zhou , D. Chen and Y.-A. Zhu , Catal. Today, 2021, 368 , 46 —57 CrossRef CAS .
+Q.-Y. Chang , Q. Yin , F. Ma , Y.-A. Zhu , Z.-J. Sui , X.-G. Zhou , D. Chen and W.-K. Yuan , Ind. Eng. Chem. Res., 2019, 58 , 10199 —10209 CrossRef CAS .
+M. Huš , D. Kopač and B. Likozar , J. Catal., 2020, 386 , 126 —138 CrossRef .
+G. Liu , L. Zeng , Z.-J. Zhao , H. Tian , T. Wu and J. Gong , ACS Catal., 2016, 6 , 2158 —2162 CrossRef CAS .
+M. Dixit , P. Kostetskyy and G. Mpourmpakis , ACS Catal., 2018, 8 , 11570 —11578 CrossRef CAS .
+S. Chen , X. Chang , G. Sun , T. Zhang , Y. Xu , Y. Wang , C. Pei and J. Gong , Chem. Soc. Rev., 2021, 5 , 3315 —3354 RSC .
+S. P. Batchu , H.-L. Wang , W. Chen , W. Zheng , S. Caratzoulas , R. F. Lobo and D. G. Vlachos , ACS Catal., 2021, 11 , 1380 —1391 CrossRef CAS .
+Q. Y. Chang , K. Q. Wang , P. Hu , Z. J. Sui , X. G. Zhou , D. Chen , W. K. Yuan and Y. A. Zhu , AIChE J., 2020, 66 , e16232 CrossRef CAS .
+J. Buha , I. Djerdj , M. Antonietti and M. Niederberger , Chem. Mater., 2007, 19 , 3499 —3505 CrossRef CAS .
+V. Chaudhari , K. Dutta , C.-J. Li and J. Kopyscinski , Mol. Catal., 2020, 482 , 110606 CrossRef CAS .
+J. Zagorac , D. Zagorac , M. Rosić , J. C. Schön and B. Matović , CrystEngComm, 2017, 19 , 5259 —5268 RSC .
+X. C. Ruilin Han and Yu Yan , Chin. Phys. B, 2017, 26 , 438 —444 Search PubMed .
+H. Kleineberg , M. Eisenacher , H. Lange , H. Strutz and R. Palkovits , Catal. Sci. Technol., 2016, 6 , 6057 —6065 RSC .
+M. Landmann , E. Rauls , W. G. Schmidt , M. D. Neumann , E. Speiser and N. Esser , Phys. Rev. B: Condens. Matter Mater. Phys., 2015, 91 , 035302 CrossRef .
+H.-m. Liu and D.-h. He , J. Phys. Chem. C, 2010, 114 , 13716 —13721 CrossRef CAS .
+G. Lin , H. Li and K. Xie , Angew. Chem., 2020, 132 , 16582 —16586 Search PubMed .
+L. Li , X. Mu , W. Liu , X. Kong , S. Fan , Z. Mi and C.-J. Li , Angew. Chem., Int. Ed., 2014, 53 , 14106 —14109 CrossRef CAS PubMed .
+K. Dutta , L. Li , P. Gupta , D. P. Gutierrez and J. Kopyscinski , Catal. Commun., 2018, 106 , 16 CrossRef CAS .
+P. Strak , K. Sakowski , P. Kempisty , I. Grzegory and S. Krukowski , J. Phys. Chem. C, 2018, 122 , 20301 —20311 CrossRef CAS .
+J. VandeVondele , M. Krack , F. Mohamed , M. Parrinello , T. Chassaing and J. Hutter , Comput. Phys. Commun., 2005, 167 , 103 —128 CrossRef CAS .
+J. P. Perdew , K. Burke and M. Ernzerhof , Phys. Rev. Lett., 1997, 78 , 1396 CrossRef CAS .
+S. Grimme J. Comput. Chem., 2006, 27 , 1787 —1799 CrossRef CAS PubMed .
+S. Gautier , S. N. Steinmann , C. Michel , P. Fleurat-Lessard and P. Sautet , Phys. Chem. Chem. Phys., 2015, 17 , 28921 —28930 RSC .
+S. Goedecker , M. Teter and J. Hutter , Phys. Rev. B: Condens. Matter Mater. Phys., 1996, 54 , 1703 —1710 CrossRef CAS PubMed .
+C. Hartwigsen , S. Goedecker and J. Hutter , Phys. Rev. B: Condens. Matter, 1998, 58 , 3641 —3662 CrossRef CAS .
+M. Krack Theor. Chem. Acc., 2005, 114 , 145 —152 Search PubMed .
+J. VandeVondele and J. Hutter , J. Chem. Phys., 2007, 127 , 114105 CrossRef PubMed .
+J. D. Head and M. C. Zerner , Chem. Phys. Lett., 1985, 122 , 264 —270 CrossRef CAS .
+G. Henkelman , B. P. Uberuaga and H. Jónsson , J. Chem. Phys., 2000, 113 , 9901 —9904 CrossRef CAS .
+G. Henkelman and H. Jónsson , J. Chem. Phys., 1999, 111 , 7010 —7022 CrossRef CAS .
+C. J. Cramer Essentials of computational chemistry: theories and models , J. Wiley, Chichester, West Sussex, 2004, Search PubMed .
+C. Liu , J. Kang , Z.-Q. Huang , Y.-H. Song , Y.-S. Xiao , J. Song , J.-X. He , C.-R. Chang , H.-Q. Ge , Y. Wang , Z.-T. Liu and Z.-W. Liu , Nat. Commun., 2021, 12 , 2305 CrossRef CAS PubMed .
+L. Farsi and N. A. Deskins , Phys. Chem. Chem. Phys., 2019, 21 , 23626 —23637 RSC .
+M. C. Cholewinski , M. Dixit and G. Mpourmpakis , ACS Omega, 2018, 3 , 18242 —18250 CrossRef CAS PubMed .
+M. Abdelgaid and G. Mpourmpakis , ACS Catal., 2022, 12 , 4268 —4289 CrossRef CAS .
+E. V.Miu and G.Mpourmpakis, fp_echem software package, https://github.com/mpourmpakis/fp_echem.
+C. Stegelmann , A. Andreasen and C. T. Campbell , J. Am. Chem. Soc., 2009, 131 , 13563 CrossRef CAS .
+Z. Xie , Z. Li , P. Tang , Y. Song , Z. Zhao , L. Kong , X. Fan and X. Xiao , J. Catal., 2021, 397 , 172 —182 CrossRef CAS .
+S. Kozuch and S. Shaik , Acc. Chem. Res., 2011, 44 , 101 —110 CrossRef CAS PubMed .
+Footnote
+† Electronic supplementary information (ESI) available. See DOI: https://doi.org/10.1039/d2cy02173k
+This journal is © The Royal Society of Chemistry 2023
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

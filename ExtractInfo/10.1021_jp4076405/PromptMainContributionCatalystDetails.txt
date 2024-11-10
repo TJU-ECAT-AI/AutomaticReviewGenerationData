@@ -1,0 +1,441 @@
+<DOCUMENT>
+Site-Specific Scaling Relations for Hydrocarbon Adsorption on Hexagonal Transition Metal Surfaces
+Abstract
+Screening a large number of surfaces for their catalytic performance remains a challenge, leading to the need for simple models to predict adsorption properties. To facilitate rapid prediction of hydrocarbon adsorption energies, scaling relations that allow for calculation of the adsorption energy of any intermediate attached to any symmetric site on any hexagonal metal surface through a carbon atom were developed. For input, these relations require only simple electronic properties of the surface and of the gas-phase reactant molecules. Determining adsorption energies consists of up to four steps: (i) calculating the adsorption energy of methyl in the top site using density functional theory or by simple relations based on the electronic structure of the surface; (ii) using modified versions of classical scaling relations to scale between methyl in the top site and C1 species with more metal–surface bonds (i.e., C, CH, CH2) in sites that complete adsorbate tetravalency; (iii) using gas-phase bond energies to predict adsorption energies of longer hydrocarbons (i.e., CR, CR2, CR3); and (iv) expressing energetic changes upon translation of hydrocarbons to various sites in terms of the number of agostic interactions and the change in the number of carbon–metal bonds. Combining all of these relations allows accurate scaling over a wide range of adsorbates and surfaces, resulting in efficient screening of catalytic surfaces and a clear elucidation of adsorption trends. The relations are used to explain trends in methane reforming, hydrocarbon chain growth, and propane dehydrogenation.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+1 Introduction
+ARTICLE SECTIONSJump To
+Much research has been devoted to the adsorption of hydrocarbons on transition metals, due to its importance in surface science and catalysis. Alkyls, (1-20) alkylidenes, (8-24) alkylidynes, (11-22, 25) atomic carbon, (14-20) and atomic H (2, 8, 13-20, 25-27) have all been implicated in a wide variety of catalytic transformations as well as graphene deposition. Perhaps the most important quantity associated with adsorption is the adsorption energy, as adsorption energies have been widely used to predict the activity and selectivity of catalytic surfaces. For example, the Sabatier principle states that the most active catalyst often binds the relevant chemical species with an intermediate bond strength. (28-32) Additionally, Brønsted–Evans–Polanyi (BEP) relations can be used to predict activation energies from adsorption energies, thereby allowing predictions about the relative rates of a reaction pathway on different surfaces. (29, 31, 33-38) Hence, to a good approximation, designing a catalyst with high activity or selectivity consists of designing a surface with the proper adsorption properties. Therefore, understanding and predicting adsorption energies are important, fundamental goals in catalysis and surface science, and predicting hydrocarbon adsorption energies could aid in catalyst design for many processes.
+Due largely to surface science and theoretical work, much progress has been made in understanding and predicting adsorption trends. (39, 40) In particular, the d-band model has been widely used to explain adsorption trends, primarily in terms of the d-band center, (41-48) and has been used to screen alloy surfaces for their adsorption energies. (49) However, the d-band model generally does not give quantitatively accurate predictions unless the set of metals being screened is restricted, e.g., to a single metal in fairly similar environments. (50, 51) Indeed, recent work (52) has shown that catalytic activity does not always have a simple dependence on the d-band center, and a study of CH3 adsorption on Au nanoparticles has shown that other factors, such as adsorbate–s coupling and the charge on the nanoparticle, can be used to predict the adsorption energy in some cases. (53) One goal of the present work is to elucidate what factors other than the d-band center contribute to variations in hydrocarbon adsorption energies.
+Several models have been created in order to efficiently screen surfaces for their adsorption properties. The unity bond-index quadratic exponential potential method (UBI-QEP, formerly known as the bond-order conservation model), (54) effective medium theory, (55) and the Newns–Anderson model (56) (on which the d-band model is based) are older models that are mainly used to rationalize trends or when many adsorption energies are needed, for example, as inputs to microkinetic models. (57) Advances in density functional theory (DFT) have allowed relatively accurate calculations of adsorption energies in individual cases. However, DFT is still too computationally expensive to allow the calculation of reaction networks on a large number of surfaces. This problem can be partially resolved through the use of scaling relations, which have been identified for flat surfaces, (58-65) steps and kinks, (61, 62, 66) and nanoparticles. (66, 67) Scaling relations use the adsorption energy of one chemical species to predict the adsorption energy of others, allowing surfaces to be screened on the basis of just a few calculations. These relations are often simple and accurate, combining near-DFT accuracy with reasonable computational expense.
+It has been noted previously (62) that the accuracy of scaling relations can be improved by scaling to specific sites. However, this leaves the problem of predicting which site an adsorbate prefers on a particular surface. In our previous work, (68) we developed a model that predicts the site preference of alkyls on late transition metals. We now extend this model to all transition metals, as well as to all hydrocarbons that bind to the surface through a single carbon atom. This allows us to take advantage of the accuracy of site-specific scaling relations.
+The primary goal of this work is to develop relations that allow the prediction of a variety of hydrocarbons in a variety of sites based primarily on the adsorption energy of methyl in the top site(s), as depicted in Scheme 1. We begin by developing an expression to accurately predict adsorption energies in particular sites from electronic structure parameters. This expression will be used to provide intuitive insight and a rationale for the validity of scaling relations. We then demonstrate the accuracy of C1 site-specific scaling relations, which allow predictions for hydrocarbons with a variable number of pendant groups (see (1) in Scheme 1). Next, we demonstrate the accuracy of using gas-phase C–H bond energies to scale across different adsorbates with the same number of pendant groups, allowing predictions for how variations in the identity of these pendant groups affect adsorption energies (see (2) in Scheme 1). We then develop relations for predicting translations of adsorbates between different sites on hexagonal transition metal surfaces (see (3) in Scheme 1). All of these relations are combined into a single model, and the model is applied to methane reforming, C–C coupling, chain termination, and propane dehydrogenation.
+Scheme 1
+Scheme 1. Using the Adsorption Energy of Methyl in the Top Site, Predictions Can Be Made of the Adsorption Energy of Hydrocarbons with (1) a Varying Number of Alkyl Groups Attached to the Adsorbing Carbon Atom, (2) a Varying Identity of Those Alkyl Groups, and (3) a Varying Adsorption Site
+2 Methods
+ARTICLE SECTIONSJump To
+Using plane-wave DFT, a large database (more than 500 data points) of hydrocarbon adsorption energies on 27 hexagonal (fcc(111) and hcp(0001)) transition metal surfaces from groups 3 to 5 and 7 to 11 (shown in the Supporting Information) was created. All surfaces were used in the studies of the effect of electronic structure parameters on adsorption energies and in the final model, while a smaller set was used for developing site-specific scaling relations and expressions for adsorbate translation (section 3.3–3.5).
+The DFT calculations were performed with the Vienna ab initio Simulation Package (VASP). (69, 70) The PW91 exchange-correlation functional (71) was used, as it has been shown to correctly predict alkyl site preferences in several cases (72, 73) and to give an accurate adsorption energy for methyl on Pt(111). (74) The projector augmented-wave method (75, 76) was used for the core electrons. The k-point mesh was a 7 × 7 × 1 Monkhorst–Pack (77) grid, and the plane-wave basis was cut off at 396 eV. Spin polarization was employed only for Ni and Co. Four layers were used to model the substrates, with the bottom two fixed at their bulk positions. A 3 × 3 surface cell was used, resulting in a coverage of 1/9 ML. Density of states (DOS) calculations were performed by fixing the charge density with tetrahedral smearing, increasing the k-point mesh to 19 × 19 × 1, and performing a non-self-consistent calculation. The DOS was sampled over intervals on the order of 10–4 eV. Band centers were calculated by projecting the wave function on atom-centered spherical harmonics within a cutoff radius and taking the first moment of the entire band for a given atom. Atomic graphics were created in QuteMol. (78)
+In a few cases—methyl in the top site and CH in the bridge site of Ti(0001) and ethyl in the top site of Re(0001), Sc(0001), and Zr(0001)—adsorbates had to be constrained to prevent them from relaxing out of site. The lowest carbon atom was fixed in the directions parallel to the surface but allowed to relax perpendicularly to the surface.
+3 Results and Discussion
+ARTICLE SECTIONSJump To
+3.1 Using Metallic Parameters to Predict Methyl Adsorption in the Top Site
+We first examine the factors that control adsorption for what is perhaps the simplest case, methyl bonded to a single atom in the top site; this will aid in developing scaling relations below. Using a linear fit to the d-band center, εd, gives a mediocre accuracy for predicting the adsorption energy, with a mean absolute error (MAE) of 0.15 eV. Adding terms to account for the idealized d-band filling, f, and matrix coupling element, Vad, similar to previous work, (68) only provides moderate improvement (MAE of 0.11 eV). In particular, none of these terms can explain why Pt binds methyl more strongly than Pd. However, adding a dependence on the p-band center significantly increases the accuracy:
+(1)
+where εa is the energy of methyl’s singly occupied molecular orbital (SOMO). Equation 1 predicts our database of methyl top-site adsorption energies with an MAE of 0.06 eV, with parameter values as shown in Table 1.
+The second term in eq 1 accounts for the Pauli repulsion and the amount of adsorbate–metal coupling. (46, 79) As shown in Table 1, β2 turns out to be negative, and the coupling appears to be a stronger effect than the Pauli repulsion. Since β3 is positive, a lower p-band is stabilizing, while a lower d-band is destabilizing. The p-band center term likely accounts for differences in the adsorbate–p resonance; this will be explored more thoroughly in a separate publication. Values of Vad were calculated using the C–M distance for methyl in the top site: (80)
+(2)
+where rd is the size of the d orbitals in the appropriate metal atom (previously tabulated (80, 81)) and d is the C–M distance. Thus, using eq 1 with appropriate electronic structure parameters, one can predict the adsorption energy of methyl in the top site of any hexagonal surface.
+Table 1. The Values of the Parameters in eq 1, the Standard Error, and the MAE in eV if They Are Eliminated
+  value standard error MAEa if eliminated
+β1 –0.31 0.02 0.21
+β2 –0.22 0.03 0.12
+β3 0.09 0.02 0.11
+β4 0.45 0.01 0.53
+aWith all the parameters, the MAE is 0.06 eV.
+3.2 Scaling across Similar Hydrocarbons
+We now examine how to predict adsorption energies of longer hydrocarbons in their tetravalent sites, shown as (2) in Scheme 1. These relations are useful for studying the reactions of longer hydrocarbons as well as C–C coupling.
+Using the energy of the SOMOs of different alkyls, eq 1 can be used to predict our database of 85 top-site alkyl adsorption energies with an MAE of 0.10 eV. (The parameter values are similar to when eq 1 is applied just to methyl.) We previously demonstrated that for alkyls the SOMO controls both top-site adsorption energies and gas-phase bond energies, allowing predictions of changes in adsorption energies based on gas-phase bond energies: (68, 73)
+(3)
+where Eads(-yl, top) is the adsorption energy of an alkyl in the top site, EC–H is the C–H bond energy of the corresponding alkane, and EMeTop is the adsorption energy of methyl in the top site.
+An analogous relation can be applied to other types of hydrocarbons. In each case, the adsorption energy of a Cn adsorbate in its tetravalent site is predicted using the adsorption energy of the corresponding C1 adsorbate in the same site and the total energy of the C–H bonds broken to produce the Cn adsorbate from an alkane. For example, to predict the adsorption energy of ethylidyne in the fcc hollow, we use the adsorption energy of methylidyne in the fcc hollow and the energy necessary to dehydrogenate gas-phase ethane to gas-phase ethylidyne and 3/2H2. Applying this to alkyls gives an MAE of 0.04 eV, applying it to alkylidenes gives an MAE of 0.03 eV, and applying it to alkylidynes gives an MAE of 0.03 eV.
+3.3 Site-Specific C1 Scaling Relations
+We now use eq 1 to rationalize site-specific C1 scaling relations, which are depicted schematically as (1) in Scheme 1. The first column of Table 2 shows that eq 1 accurately predicts the adsorption energies of C1 hydrocarbons in their “tetravalent sites”, i.e., those sites that fulfill the tetravalency principle. As noted in previous work, (58, 82) if there is a function f(wi) of the metallic parameters wi that determines, within a multiplicative and an additive constant, the adsorption energy of different chemical species, then there will be a scaling relation between those species. We therefore apply eq 1 to each pair of methyl and another C1 adsorbate in their tetravalent sites, with a single set of fitting parameters but with a multiplicative and an additive offset. For example, to explain the scaling between methyl and methylidyne, we set
+(4)
+(5)
+The {βi} and {ηi} were fit to the data, and the MAEs for each adsorbate when paired with methyl are given in the second column of Table 2. For each pair, methyl’s adsorption energies were predicted with an MAE of less than 0.09 eV. Hence, it is clear that each pair of adsorbates can be accurately predicted from metallic parameters using a single set of fitting parameters, which implies that scaling across the tetravalent sites should allow accurate predictions. This is indeed the case, and the MAEs of this type of site-specific scaling are given in the third column of Table 2. The similarities in the MAEs in all three columns of Table 2 give further support to the idea that scaling relations stem from the applicability of eq 1 to all C1 hydrocarbons.
+Table 2. MAEs in eV of Various Predictions of Adsorption Energies in Tetravalent Sites
+adsorbate MAE, ESa MAE, ESSR with CH3b MAE, SR from CH3c
+CH3 0.07    
+CH2 0.17 0.17 0.18
+CH 0.24 0.25 0.26
+C 0.29 0.29 0.32
+H 0.13 0.13 0.11
+aElectronic structure (ES): Equation 1 is applied to each adsorbate individually, each with its own set of fitting parameters.
+bElectronic structure scaling relations (ESSRs): Equation 1 is applied to each pairing of CH3 and another adsorbate with a single set of fitting parameters as well as an additive and multiplicative offset, as in eqs 4 and 5.
+cScaling relations (SRs).
+In contrast, scaling between hydrocarbons in their most favorable site (which can change across surfaces) is inaccurate when applied to a wide variety of transition metals, as shown in Figure 1. Scaling from methyl in its most favorable site to methylidyne in its most favorable site results in a large MAE of 0.49 eV. We will refer to this type of scaling as min–min scaling. Min–min scaling relations have been shown to be accurate for C1 hydrocarbons on various metals from groups 8 to 10 (62) but fail when applied to a wider variety of metals. Figure 1 demonstrates that min–min scaling relations fail in two cases: strongly inhomogeneous surfaces such as Pt1Au8 and surfaces with strong C–H–M interactions, such as Ti and Ru. On Pt1Au8, methyl prefers to bind directly atop the Pt atom, while methylidyne prefers the fcc hollow site, where it interacts with both Pt and Au atoms. Thus, the Au atoms directly destabilize methylidyne but not methyl. On Ti and Ru, methyl’s adsorption geometry in the hollow site causes its C–H bonds to interact with metal atoms, while methylidyne does not experience these C–H–M interactions. This stabilizes methyl without affecting methylidyne.
+Adding site-specificity can resolve these issues. The basic scheme is as follows: scaling relations between different types of C1 adsorbates (methyl, methylidene, methylidyne, and carbon) are used only to scale energies between tetravalent sites. Thus, methyl in the top site can be used for scaling to all other C1 adsorbates, even if methyl is actually more stable in another site. As discussed in section 3.5 below, other relations will be employed to determine whether adsorbates translated to other types of sites are more stable. Inhomogeneities can be accounted for by averaging the methyl adsorption energies over the three top sites around the hollow site, and scaling from methyl in the top site avoids the effect of C–H–M interactions. For example, to predict CH in the hollow site of Pt1Au8, we scale from the average of the methyl adsorption energies in the Pt and Au top sites around the hollow site.
+To ensure that scaling across the tetravalent sites is the most accurate form of site-specific scaling, the adsorption energies of methylidyne in all four high-symmetry sites were calculated on the surfaces used for scaling (listed in the Supporting Information). We then scaled from methyl in the top site to methylidyne in each site (see Figure 2). Scaling to methylidyne in the top site was the least accurate, resulting in an MAE of 0.70 eV, while scaling to the bridge resulted in an MAE of 0.40 eV. Scaling to the fcc hollow was the most accurate, with an MAE of 0.26 eV, followed by the hcp hollow with an MAE of 0.30 eV.
+Figure 1
+Figure 1. Methylidyne adsorption energies as a function of methyl adsorption energies.
+The accuracy of scaling across the tetravalent sites is intuitively sensible, since each case involves the formation of bonds analogous to gas-phase single bonds. We note that tetravalency has a long history in the literature of both hydrocarbon adsorption (83) and scaling relations, (62) and that tetravalency was assumed in a previous study employing group additivity for adsorbed hydrocarbons. (84) Therefore, we scale from methyl in the top site to methylene in the bridge site and to methylidyne in the fcc hollow site (see Table 2 for the MAEs and Figure 3 for a plot). Since it is not possible for the C atom to complete its tetravalency on a surface with hexagonal symmetry, we scale to it in the fcc hollow site.
+Figure 2
+Figure 2. Methylidyne adsorption energies as a function of methyl adsorption energies: (a) top–top scaling relation, (b) top–bridge scaling relation, (c) top–fcc scaling relation (which we use in our model), and (d) top–hcp scaling relation.
+Figure 3
+Figure 3. Site-specific scaling relations, with each C1 adsorbate in its tetravalent site and H in its divalent site.
+It has been noted previously (2) that atomic hydrogen and alkyls are isolobal and thus should have similar bonding properties; however, there are notable discrepancies in the adsorption behavior of methyl and hydrogen. It turns out that the methyl top site adsorption energy scales with the hydrogen top site adsorption energy (see Table 2), and the differences in adsorption behavior between hydrogen and methyl are primarily due to the differences in their behavior in more highly coordinated sites.
+3.4 Modifying C1 Scaling Relations
+In principle, one could choose any hydrocarbon (alkyl, alylidene, alkylidyne, or carbon) as a basis from which to scale all other adsorbates. To aid in deciding on the most useful form of site-specific scaling relations for a particular case, we have calculated MAEs for using each adsorbate to predict every other adsorbate, as shown in Table 3. This table can be used to decide which form of scaling is most useful in a particular application. However, it is necessary to scale from methyl for most inhomogeneous surfaces, since there are generally more unique top sites than unique bridge and hollow sites. In this case, there is no way to decouple the effects from individual metal atoms surrounding a hollow site to make predictions for the top site. Therefore, the values in Table 3 are calculated by excluding Pt1Au8, resulting in slightly different values than in Table 2. For these homogeneous surfaces, more accurate scaling is achieved for adsorbates with a similar number of adsorbate–metal bonds. Hence, if only homogeneous surfaces are considered, choosing an adsorbate that is similar to the most important intermediate(s) would likely increase the accuracy of predictions of catalytic performance.
+Table 3. MAEs in eV for Scaling Relations (SRs) and Modified Scaling Relations (MSRs)a
+  CH3 CH2 CH C H
+CH3 SR   0.15 (3.7%)b 0.27 (4.0%) 0.33 (4.6%) 0.12 (4.3%)
+CH3 MSR   0.11 (2.5%) 0.19 (2.8%) 0.23 (3.2%) 0.06 (2.1%)
+CH2 SR 0.07 (3.6%)   0.11 (1.7%) 0.17 (2.4%) 0.14 (5.1%)
+CH2 MSR 0.07 (3.5%)   0.09 (1.4%) 0.14 (1.9%) 0.10 (3.8%)
+CH SR 0.07 (3.3%) 0.07 (1.6%)   0.19 (2.6%) 0.16 (5.7%)
+CH MSR 0.06 (3.0%) 0.06 (1.4%)   0.18 (2.5%) 0.12 (4.3%)
+C SR 0.08 (3.7%) 0.09 (2.1%) 0.17 (2.5%)   0.16 (5.8%)
+C MSR 0.08 (3.7%) 0.08 (1.8%) 0.16 (2.3%)   0.12 (4.3%)
+H SR 0.11 (5.2%) 0.26 (6.2%) 0.52 (7.6%) 0.68 (9.5%)  
+H MSR 0.05 (1.9%) 0.14 (3.3%) 0.22 (3.2%) 0.23 (3.2%)  
+aScaling is done from the adsorbate in the left-most column to the adsorbate in the top row, both in their tetravalent site.
+bThe MAE as a percentage of the adsorption energy on Pt(111) is given in parentheses.
+In order to increase the utility of scaling relations for catalyst screening, it is useful to know under what conditions scaling relations produce significant errors and how to increase their accuracy. For example, different adsorbates have slightly different dependencies on the d-band center. Therefore, the accuracy can be improved by adding a term proportional to the d-band center. Additionally, the energy change due to deformation of the lattice will be higher for adsorbates that bind more strongly, so we also can add a term proportional to the deformation energy. It has previously been shown (20) that this energy can affect the accuracy of scaling relations. We estimate this energy by moving an atom out of the surface by 5% of the lattice constant and subtracting the energy of this deformed surface from the energy of the bare, relaxed surface. This quantity, Edef, has a moderate correlation with both the melting temperature of the metal and the s-band center. We denote this more accurate form of scaling relations which includes Edef and εd terms as modified scaling relations. For example, the adsorption energy of CH can be predicted as Eads(CH) = b1 + b2Eads(CH3) + b3εd + b4Edef, with the {bi} as fitting parameters. As shown in Table 3, adding these two terms results in moderate decreases in the MAE, particularly for adsorbates that are fairly different. Adding these two terms to min–min scaling relations has very little effect on their accuracy.
+3.5 Translating Adsorbates to Different Sites
+Scaling across the tetravalent sites is accurate, but it is not very useful if adsorption energies in the most favorable sites cannot be predicted. In the spirit of our previous work, (68) we will write the energy changes upon translation of adsorbates to different sites in terms of metallic and adsorbate parameters. These expressions are shown schematically as (3) in Scheme 1.
+In this work, we only predict those sites that are the most favorable for a reasonable number of hexagonal transition metal surfaces. Table 4 shows the frequency with which CHx prefers different sites. It is clear that hydrocarbons very rarely prefer sites with lower coordination than their tetravalent sites. The exception is CH on the pseudomorphic overlayer Cu/Pd, which prefers the bridge site by 0.01 eV, likely because Cu is too small (relative to Pd) for its electron density to reach far into the hollow site. We predict the top site and hollow sites for alkyls and H, the bridge and hollow sites for alkylidenes, and the hollow sites for alkylidynes and C.
+Table 4. Number of Surfaces on Which a Given Site Is Preferred for a Given Adsorbatea
+adsorbate top bridge hollow
+CH3 9 0 11
+CH2 0 4 11
+CH 0 1 19
+aAll data are for those surfaces on which enough calculations were performed to make a reasonable determination of site preference.
+We extend our previous model of alkyl adsorption on late transition metal surfaces to all hexagonal transition metal surfaces and apply it to both alkyls and alkylidenes. We retain the overall scheme for calculating the energy of translations across sites, which involves adding contributions for each C–H–M interaction and each additional C–M interaction beyond the tetravalent site. We treat these as separate, additive terms since they involve different orbitals in the hydrocarbons.
+To determine the energetics of adding C–M interactions, we examine methyl in the top and staggered hollow sites. This translation primarily involves a change in the matrix coupling element. (68) The matrix coupling element between surface metal atoms (Vdd) will also be included as a measure of how far the d-orbitals extend into the hollow site as compared to the top site. There is also a change in electron–electron repulsion between the adsorbate state and the filled metal states. Since the p electrons are more delocalized, they have a stronger effect in the hollow site than the d states. Hence, the center of the occupied p states (εp(occ)) will also be included. Therefore, this energetic change can be written as
+(6)
+Vdd is proportional to rd3/dM5, where dM is the M–M distance; it is calculated relative to Cu. When applied to methyl, this equation gives an MAE of 0.07 eV. Equation 6 can also be used to predict the change in energy upon translating CH from the fcc hollow to the bridge site with an MAE of 0.10 eV and to the top site with an MAE of 0.13 eV, suggesting broad applicability. On late transition metals, the second term in eq 6 is proportional to Vad8f4 if Vad is taken from previous linearized muffin-tin orbital calculations (46) and f is the atomic filling, which explains the previous finding that Vad8f4 calculated in this way can predict ΔEC–M on late transition metals. (68) For H, the Vad2 and Vdd2 terms are less important because the H 1s orbital is less directional than the SOMO of an alkyl. This difference between H and alkyls has been previously discussed. (2) For inhomogeneous surfaces, simple averages of metallic parameters over the atoms surrounding a particular site are used as the effective parameters for that site, although weighting the average using Vad has been suggested as a better approximation for the d-band center. (40)
+To predict the energetics of hydrocarbon translations, we must also predict the energetics of adding C–H–M interactions. The number of empty d-states correlates with the strength of C–H–M interactions, consistent with the idea that agostic interactions consist of donation from C–H bonds to metal states. (4) The lattice constant is also a good predictor of the strength of C–H–M interactions, which may be because a smaller lattice will involve closer—and hence stronger—C–H–M interactions. The H–M distance has previously been shown to affect the strength of C–H–M interactions, (85) and the linear form chosen may be a linear approximation to a more complex form. Therefore, we write the strength of C–H–M interactions as
+(7)
+where a is the lattice constant of the bonding metal atoms (scaled by √2 for hcp metals). Combining these relations with the scaling relations across alkyls, the adsorption energy of alkyls in the top and hollow sites can be predicted on the basis of that of methyl in the top site with an MAE of 0.07 eV. For alkyls, the hollow sites have two additional C–M interactions and up to three C–H–M interactions. These relations also allow predictions of the adsorption energy of alkylidenes in the bridge and hollow sites based on methylene in the bridge site with an MAE of 0.07 eV. Alkylidenes have one additional C–M interaction in the hollow site and up to two C–H–M interactions depending on the adsorbate and its orientation. In this work, the difference between the fcc and hcp hollows will be ignored. In the Supporting Information, we demonstrate that including this difference for C and alkylidynes can improve the accuracy of the predictions.
+3.6 Combining Site-Specific Scaling Relations and Translation Expressions
+Combining all of the previous relations allows accurate predictions of the adsorption energy in multiple sites of any hydrocarbon that bonds through a single carbon atom to a hexagonal transition metal surface, using only the adsorption energies of methyl in the top sites and a few simple metallic and adsorbate parameters. Several simplifications and unifications can be made to reduce the number of fitting parameters. The following equations will be used to predict C in the hollow sites, alkylidynes in the hollow sites, alkylidenes in the bridge and hollow sites, and alkyls in the top and hollow sites:
+(8)
+(9)
+(10)
+(11)
+(12)
+(13)
+Capitalized Roman letters are fitting parameters. Equations 8–11 are used to predict the adsorption energy of hydrocarbons in their tetravalent sites, and eqs 12 and 13 are used to predict changes in energy upon translation of alkyls or alkylidenes to hollow sites. The numeric coefficients in front of the EMeTop terms are derived from the original formulation of scaling relations, (62) those in the Edef terms are the number of C–M bonds, and those in the EC–H term are the number of C–H bonds broken to produce the adsorbate from an alkane. The adsorption energy of hydrogen in the top and hollow sites can also be predicted:
+(14)
+(15)
+where eq 15 is used to predict the energy change upon translation from a top to a hollow site. Hence, using only a few simple DFT calculations (methyl in the top site(s), a DOS calculation, and a calculation of Edef), the adsorption energies of a large collection of hydrocarbons, as well as atomic hydrogen, can be predicted for various sites. This is useful for quickly predicting the energetics of reaction networks. A schematic of how the model relates various adsorption energies is given in Figure 4.
+This model has 15 fitting parameters (see Table 5) and an MAE of 0.13 eV (0.07 eV for alkyls, 0.17 eV for alkylidenes, 0.20 eV for alkylidynes, 0.23 eV for C, and 0.11 eV for H) when applied to our 527-point data set (see Figure 5 for the parity plot). This MAE is roughly the size of typical errors in DFT, which are expected to be on the order of 0.1–0.2 eV. (82) Table 5 shows that the standard errors are small compared to the parameter values, indicating that the values are well-defined. Using predictions from eq 1 as input to the model gives an MAE of 0.17 eV. In this case, the adsorption energy of alkyl, aklylidene, alkylidyne, and carbon intermediates in all high-symmetry sites can be predicted without DFT calculations of adsorption energies. Further, previous work indicates that it may be possible to predict the electronic structure parameters without DFT calculations of the DOS, (81, 86) which would allow extremely efficient screening. For more accurate predictions, additional parameters can be added. In the Supporting Information, we expand the model to include 24 parameters; this more complex model has an MAE of 0.11.
+Figure 4
+Figure 4. Given the adsorption energy of methyl in the top site(s), predictions can be made of the adsorption energy of any hydrocarbon that bonds to the surface through a single carbon atom. Site-specific scaling relations (SSRs) scale across the sites where single bonds are formed between the adsorbate and surface, adsorbate scaling relations (ASRs) use gas-phase bond energies, and translations (T’s) account for changes in C–M and C–H–M interactions.
+The model, like min–min scaling relations, is useful for screening surfaces for their catalytic properties. It is more accurate than previous scaling relations, particularly across a wide range of metals. However, this increase in accuracy is accompanied by an increase in complexity and a loss of immediate applicability to other surface facets. Therefore, while this model will be useful in many cases, we do not expect it to supplant min–min scaling relations in all cases. However, even in cases where min–min scaling relations are used, our model may give insight into the approximations made and hence when these relations may fail. Essentially, min–min scaling relations will fail when scaling from or to alkyls or alkylidenes on strongly inhomogeneous surfaces, on those with a very negative ΔEC–M, and on those with strong C–H–M interactions (see the Supporting Information for more details).
+Figure 5
+Figure 5. Parity plot for eqs 8–15 applied to the 527-point data set.
+Table 5. The Values of the Parameters and the Standard Error
+parameter value standard error
+A1 2.92 0.07
+A2 0.65 0.02
+A3 –0.45 0.02
+A4 –1.79 0.09
+A5 1.33 0.03
+A6 –0.19 0.005
+B1 –0.59 0.05
+B2 0.29 0.02
+B3 –0.13 0.02
+B4 –0.022 0.003
+C1 –0.67 0.15
+C2 –0.21 0.07
+D1 –0.74 0.15
+D2 0.89 0.09
+3.7 Applications
+The model’s predictions are consistent with several previously discovered trends, such as those for mode softening and site preference. Mode softening does not occur for methyl adsorbed in the top site, meaning that softened modes can be used to discover site preference. In agreement with experimental work, the model indicates that metals further to the left and closer to the top of the periodic table tend to bind hydrocarbons in more highly coordinated sites. (87) For those metals where methyl binds in the hollow site, the model’s predictions of EC–H–M are consistent with previously discovered trends in the strength of mode softening (Ni > Rh > Cu). (87, 88)
+Insight can also be gained into hydrocarbon chain growth, as the reaction energy of methyl coupling with the other C1 hydrocarbons can be quickly calculated, as shown in Figure 6a. The C + CH pathway, which has been previously identified as a possible mechanism on Fe and Co, (89) is the most favorable on all of the tested surfaces except Au, although the difference is small on Ag and Pd1Cu8. We have also calculated the reaction energy of chain termination as a function of branching (see Figure 6b). In general, chain termination is more favorable for more highly branched alkyls. There is essentially no change in chain termination energy between ethyl, propyl, and butyl, in agreement with previous work (data not shown). (15)
+Further, the model can be used to rationalize some previously determined trends in methane reforming. Since the oxygen adsorption energy may play a role in determining reactivity, we only consider metals that have previously been shown to have oxygen adsorption energies near the optimum; (90) these are shown in Figure 7a. On the basis of the first dehydrogenation step of methane, which is thought to be important for determining activity, (90, 91) it appears that Ru and Rh should be more active than Ir and Ni. Indeed, Rh and Ru have generally been found to have the highest activity for methane reforming. (90, 92)
+Figure 6
+Figure 6. The reaction energy of (a) methyl coupling with the other C1 adsorbates and (b) chain termination for alkyls with different branching structures.
+Figure 7
+Figure 7. (a) Potential energy surfaces for methane dehydrogenation, relative to the bare surface and methane in the gas phase. (b) Energy of propane cracking to methyl and ethyl as a function of the energy of propane dehydrogenation to propyl and H.
+We conclude this section with a more extended discussion of an example system that illustrates the versatility of the model. The model is particularly useful for calculating potential energy diagrams for reactions involving longer hydrocarbons, allowing investigation of, for example, the dehydrogenation or oxidative dehydrogenation of propane to propylene. As a basis for comparison, we have compiled a rough ordering of catalytic performance from several experimental studies (93-95) on propane and ethane dehydrogenation:
+(16)
+Propane (oxidative) dehydrogenation involves competition between dehydrogenation and cracking. (96) One feature of the model is that it allows one to quickly calculate adsorption energies for hydrocarbon adsorbates having different length. Hence, we have plotted the energy of propane cracking into methyl and ethyl as a function of propane dehydrogenation to propyl and H (see Figure 7b). (Dehydrogenation to isopropyl and H is also possible, but the model indicates it is less favorable on all surfaces.) An ideal surface would be favorable for dehydrogenation and unfavorable for cracking, and using this simple measure, Pt is found to be the best pure metal of those tested. This may partially explain why Pt has generally been observed to be the best pure metal for oxidative dehydrogenation. (96)
+An additional feature of the model is that it considers intermediates that involve multiple bonds to the metal surface. This can be useful for analyzing propane dehydrogenation because previous work has proposed that “deep dehydrogenation” of C3 hydrocarbons leads to cracking. (97) A likely cracking mechanism identified previously is α-dehydrogenation of propyl to propylidene, followed by further bond-breaking steps to form CH and CH3C. This allows the development of a slightly more sophisticated metric for the efficacy of catalysts for propane dehydrogenation. We first compute the energy of propyl α-dehydrogenation as well as the energy of cracking propylidene to CH and CH3C, and then add the maximum of these to the energy of dehydrogenating propane to propyl. This metric is highest for surfaces that are favorable for the initial step of propane dehydrogenation but are unfavorable for cracking, either because propylidene formation is unfavorable or because propylidene cracking is unfavorable. Applying this metric to the relevant surfaces, we find the following order, which compares fairly well with the experimental one:
+(17)
+The predicted ordering is nearly identical when using predictions of the methyl adsorption energy based on eq 1 and values of Vad from pure metal calculations, meaning that this ordering can be predicted from a single DOS calculation for each surface (or some other method for determining the band centers). The only exception is the Sn atoms in Sn3Pt6(d), which require a DFT calculation of methyl adsorption since Sn is not a transition metal.
+The model is physically transparent and allows us to trace changes in reaction energies to features of the adsorbate and surface. For example, Cu3Pt6 has a copper atom neighboring every hollow site, which destabilizes alkylidynes but has little effect on alkyls. This destabilizes cracking more than dehydrogenation. In fact, this may explain why promoters such as Sn, Pb, As, and Ge are often added to Pt to improve performance for propane dehydrogenation. (96) Simple min–min scaling relations would likely not capture this effect adequately, as the destabilization of an adsorbed carbon atom would be indiscriminately applied to both alkylidynes and alkyls. We have performed further calculations on Au3Pt6 and Ag3Pt6, and found that Ag and Au should have a similar effect as Cu. Ag in particular is predicted to make propylidene cracking much less favorable, while Sn has the greatest effect on the α dehydrogenation of propyl.
+There are, of course, many further complexities to consider. For example, Au generally cannot dissociate O2, which would likely make it a poor catalyst for oxidative dehydrogenation, even though it scores well according to our metric. However, using the model to calculate this metric is an efficient way to make a first screening of a large number of surfaces.
+These applications demonstrate the broad utility of site-specific scaling relations, and the possibility of using them to employ design paradigms more sophisticated than tuning one or two adsorption energies. While more detailed studies involving DFT calculations of the reaction energies and barriers would allow further insight into these systems, our model allows fast, accurate screening of a variety of surfaces. Further, the framework proposed here allows these reaction energies to be directly traced back to surface properties, which is potentially a powerful route to catalyst design.
+4 Conclusions
+ARTICLE SECTIONSJump To
+Since predicting hydrocarbon adsorption energies would allow efficient catalyst screening, we have studied how adsorption energies vary across metals and across adsorbates. For predictions from a metal’s electronic structure, adding a dependence on the p-band center to the usual dependencies on the d-band center, the matrix coupling element, and the d-band filling can significantly improve the accuracy. Since this expression accurately gives the adsorption energies of all C1 hydrocarbons in their tetravalent sites, it can be used to justify site-specific scaling relations, which in turn offer insight into the validity of min–min scaling relations. Site-specific scaling relations offer improved accuracy over min–min scaling relations, particularly for inhomogeneous surfaces and earlier transition metals. In addition to the C1 site-specific scaling relations, we have developed expressions for scaling to longer hydrocarbons and for adsorbate translations to different sites, which allow accurate predictions of adsorption energies in various sites. Combining all of these relations together allows efficient screening of transition metal surfaces for their catalytic properties.
+Supporting Information
+ARTICLE SECTIONSJump To
+Details on the surfaces employed, a more complex model, and a discussion of when min–min scaling relations fail. This material is available free of charge via the Internet at http://pubs.acs.org.
+jp4076405_si_001.pdf (5.09 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Author
+J. Will Medlin - Department of Chemical and Biological Engineering, University of Colorado Boulder, UCB 596, Boulder, Colorado 80309, United States ;  Email: will.medlin@colorado.edu
+Author
+Matthew M. Montemore - Department of Mechanical Engineering, University of Colorado Boulder, UCB 427, Boulder, Colorado 80309, United States
+Notes
+The authors declare no competing financial interest.
+Acknowledgment
+ARTICLE SECTIONSJump To
+The authors acknowledge support from the National Science Foundation for funding this research through Grant CBET-0854251. This work utilized the Janus supercomputer, which is supported by the National Science Foundation (Award No. CNS-0821794) and the University of Colorado Boulder. The Janus supercomputer is a joint effort of the University of Colorado Boulder, the University of Colorado Denver, and the National Center for Atmospheric Research. We acknowledge supercomputing time at the Center for Nanoscale Materials at Argonne National Laboratory, supported by the U.S. Department of Energy, Office of Basic Energy Sciences, under Contract DE-AC02-06CH11357. A portion of the research was performed using EMSL, a national scientific user facility sponsored by the Department of Energy’s Office of Biological and Environmental Research and located at Pacific Northwest National Laboratory.
+References
+ARTICLE SECTIONSJump To
+This article references 97 other publications.
+1Zaera, F. Molecular Approach to the Study of the Mechanisms of Alkyl Reactions on Metal Surfaces J. Mol. Catal. 1994, 86, 221– 242[Crossref], [CAS], Google Scholar
+2Papoian, G.; Nørskov, J. K.; Hoffmann, R. A Comparative Theoretical Study of the Hydrogen, Methyl, and Ethyl Chemisorption on the Pt(111) Surface J. Am. Chem. Soc. 2000, 122, 4129– 4144[ACS Full Text ], [CAS], Google Scholar
+3Albers, P.; Angert, H.; Prescher, G.; Seibold, K.; Parker, S. F. Catalyst Poisoning by Methyl Groups Chem. Commun. 1999, 1619– 1620[Crossref], Google Scholar
+4Michaelides, A.; Hu, P. Softened C-H Modes of Adsorbed Methyl and their Implications for Dehydrogenation: An ab initio Study J. Chem. Phys. 2001, 114, 2523– 2526[Crossref], Google Scholar
+5Driessen, M. D.; Grassian, V. A Comprehensive Study of the Reactions of Methyl Fragments from Methyl Iodide Dissociation on Reduced and Oxidized Silica-Supported Copper Nanoparticles J. Am. Chem. Soc. 1997, 119, 1697– 1707[ACS Full Text ], Google Scholar
+6Lin, J. L.; Bent, B. E. Coupling and Disproportionation Reactions of Alkyl Iodides on a Single-Crystal Copper Surface: Alkyl Radicals versus Metal Alkyls J. Am. Chem. Soc. 1993, 115, 6943– 6950[ACS Full Text ], Google Scholar
+7Yang, H.; Whitten, J. Ab Initio Chemisorption Studies of CH3 on Ni(111) J. Am. Chem. Soc. 1991, 113, 6442– 6449[ACS Full Text ], Google Scholar
+8Kokalj, A.; Bonini, N.; de Gironcoli, S.; Sbraccia, C.; Fratesi, G.; Baroni, S. Methane Dehydrogenation on Rh@Cu(111): A First-Principles Study of a Model Catalyst J. Am. Chem. Soc. 2006, 128, 12448– 12454[ACS Full Text ], Google Scholar
+9Chuang, T.; Chan, Y.; Chuang, P.; Klauser, R. The Surface Chemistry of Methyl and Methylene Radicals Adsorbed on Cu(111) J. Electron Spectrosc. Relat. Phenom. 1999, 98–99, 149– 173[Crossref], [CAS], Google Scholar
+10Zaera, F. Reversibility of C1 Hydrogenation-Dehydrogenation Reactions on Platinum Surfaces under Vacuum Langmuir 1991, 7, 1998– 1999[ACS Full Text ], Google Scholar
+11Zheng, C.; Apeloig, Y.; Hoffmann, R. Bonding and Coupling of C1 Fragments on Metal Surfaces J. Am. Chem. Soc. 1988, 110, 749– 774[ACS Full Text ], [CAS], Google Scholar
+12De Koster, A.; van Santen, R. A. Molecular Orbital Studies of the Adsorption of CH3, CH2, and CH on Rh (111) and Ni (111) Surfaces J. Catal. 1991, 127, 141– 166[Crossref], Google Scholar
+13Yang, H.; Whitten, J. Chemisorption of Atomic H and CHx Fragments on Ni (111) Surf. Sci. 1991, 255, 193– 207[Crossref], Google Scholar
+14Liu, Z.-P.; Hu, P. A New Insight into Fischer–Tropsch Synthesis J. Am. Chem. Soc. 2002, 124, 11568– 11569[ACS Full Text ], Google Scholar
+15Cheng, J.; Hu, P.; Ellis, P.; French, S.; Kelly, G.; Lok, C. M. A DFT Study of the Chain Growth Probability in Fischer–Tropsch Synthesis J. Catal. 2008, 257, 221– 228[Crossref], Google Scholar
+16Chen, J.; Liu, Z.-P. Origin of Selectivity Switch in Fischer–Tropsch Synthesis over Ru and Rh from First-Principles Statistical Mechanics Studies J. Am. Chem. Soc. 2008, 130, 7929– 7937[ACS Full Text ], Google Scholar
+17Zhang, W.; Wu, P.; Li, Z.; Yang, J. First-Principles Thermodynamics of Graphene Growth on Cu Surfaces J. Phys. Chem. C 2011, 115, 17782– 17787[ACS Full Text ], [CAS], Google Scholar
+18Yang, M.-L.; Zhu, Y.-A.; Fan, C.; Sui, Z.-J.; Chen, D.; Zhou, X.-G. DFT Study of Propane Dehydrogenation on Pt Catalyst: Effects of Step Sites Phys. Chem. Chem. Phys. 2011, 13, 3257– 3267[Crossref], [PubMed], [CAS], Google Scholar
+19Cheng, J.; Hu, P.; Ellis, P.; French, S.; Kelly, G.; Lok, C. M. Some Understanding of Fischer–Tropsch Synthesis from Density Functional Theory Calculations Top. Catal. 2010, 53, 326– 337[Crossref], [CAS], Google Scholar
+20Fan, C.; Zhu, Y.; Xu, Y.; Zhou, Y.; Zhou, X.-G.; Chen, D. Origin of Synergistic Effect over Ni-based Bimetallic Surfaces: A Density Functional Theory Study J. Chem. Phys. 2012, 137, 014703[Crossref], Google Scholar
+21Ge, Q.; Neurock, M.; Wright, H. A.; Srinivasan, N. A First Principles Study of Carbon-Carbon Coupling over the 0001 Surfaces of Co and Ru J. Phys. Chem. B 2002, 106, 2826– 2829[ACS Full Text ], Google Scholar
+22Wang, W.; Gong, J. Methanation of Carbon Dioxide: An Overview Front. Chem. Sci. Eng. 2011, 5, 2– 10[Crossref], [CAS], Google Scholar
+23DeWulf, D.; Jin, T.; Bard, A. Electrochemical and Surface Studies of Carbon Dioxide Reduction to Methane and Ethylene at Copper Electrodes in Aqueous Solutions J. Electrochem. Soc. 1989, 136, 1686– 1691[Crossref], [CAS], Google Scholar
+24Kaneco, S.; Iiba, K.; Suzuki, S.; Ohta, K.; Mizuno, T. Electrochemical Reduction of Carbon Dioxide to Hydrocarbons with High Faradaic Efficiency in LiOH/Methanol J. Phys. Chem. B 1999, 103, 7456– 7460[ACS Full Text ], Google Scholar
+25Li, M.; Guo, W.; Jiang, R.; Zhao, L.; Lu, X.; Zhu, H.; Fu, D.; Shan, H. Mechanism of the Ethylene Conversion to Ethylidyne on Rh(111): A Density Functional Investigation J. Phys. Chem. C 2010, 114, 8440– 8448[ACS Full Text ], Google Scholar
+26Goda, A. M.; Barteau, M. A.; Chen, J. G. Correlating Electronic Properties of Bimetallic Surfaces with Reaction Pathways of C2 Hydrocarbons J. Phys. Chem. B 2006, 110, 11823– 11831[ACS Full Text ], Google Scholar
+27Pallassana, V.; Neurock, M.; Hansen, L. B.; Hammer, B.; Nørskov, J. K. Theoretical Analysis of Hydrogen Chemisorption on Pd(111), Re(0001) and PdML/Re(0001), ReML/Pd(111) Pseudomorphic Overlayers Phys. Rev. B 1999, 60, 6146– 6154[Crossref], Google Scholar
+28Cheng, J.; Hu, P. Utilization of the Three-Dimensional Volcano Surface To Understand the Chemistry of Multiphase Systems in Heterogeneous Catalysis J. Am. Chem. Soc. 2008, 130, 10868– 10869[ACS Full Text ], Google Scholar
+29Ferguson, G.; Mehmood, F.; Rankin, R.; Greeley, J. P.; Vajda, S.; Curtiss, L. A. Exploring Computational Design of Size-Specific Subnanometer Clusters Catalysts Top. Catal. 2012, 55, 353– 365[Crossref], [CAS], Google Scholar
+30Okamoto, Y.; Sugino, O. Hyper-Volcano Surface for Oxygen Reduction Reactions over Noble Metals J. Phys. Chem. C 2010, 114, 4473– 4478[ACS Full Text ], Google Scholar
+31Cheng, J.; Hu, P.; Ellis, P.; French, S.; Kelly, G.; Lok, C. M. Brønsted-Evans-Polanyi Relation of Multistep Reactions and Volcano Curve in Heterogeneous Catalysis J. Phys. Chem. C 2008, 112, 1308– 1311[ACS Full Text ], Google Scholar
+32Sabatier, P. Hydrogénations et Déshydrogénations par Catalyse Ber. Dtsch. Chem. Ges. 1911, 44, 1984– 2001[Crossref], Google Scholar
+33Wang, S.; Temel, B.; Shen, J.; Jones, G.; Grabow, L.; Studt, F.; Bligaard, T.; Abild-Pedersen, F.; Christensen, C.; Nørskov, J. K. Universal Brønsted-Evans-Polanyi Relations for C–C, C–O, C–N, N–O, N–N, and O–O Dissociation Reactions Catal. Lett. 2011, 141, 370– 373[Crossref], Google Scholar
+34van Santen, R. A.; Neurock, M.; Shetty, S. G. Reactivity Theory of Transition-Metal Surfaces: A Brønsted-Evans-Polanyi Linear Activation Energy-Free-Energy Analysis Chem. Rev. 2010, 110, 2005– 2048[ACS Full Text ], [CAS], Google Scholar
+35Michaelides, A.; Liu, Z.-P.; Zhang, C. J.; Alavi, A.; King, D. A.; Hu, P. Identification of General Linear Relationships between Activation Energies and Enthalpy Changes for Dissociation Reactions at Surfaces J. Am. Chem. Soc. 2003, 125, 3704– 3705[ACS Full Text ], [CAS], Google Scholar
+36Liu, Z.-P.; Hu, P. General Trends in the Barriers of Catalytic Reactions on Transition Metal Surfaces J. Chem. Phys. 2001, 115, 4977– 4980[Crossref], [CAS], Google Scholar
+37Evans, M.; Polanyi, M. Inertia and Driving Force of Chemical Reactions Trans. Faraday Soc. 1938, 34, 11– 24[Crossref], [CAS], Google Scholar
+38Brønsted, J. N. Acid and Basic Catalysis Chem. Rev. 1928, 5, 231– 338[ACS Full Text ], [CAS], Google Scholar
+39Groß, A. Theoretical Surface Science: A Microscopic Perspective; Springer: New York, 2003.[Crossref], Google Scholar
+40Nilsson, A.; Pettersson, L. G. M.; Nørskov, J. K., Eds. Chemical Bonding at Surfaces and Interfaces; Elsevier: Oxford, U.K., 2008.[Crossref], Google Scholar
+41Schwank, J.; Linic, S. Measuring and Relating the Electronic Structures of Nonmodel Supported Catalytic Materials to Their Performance J. Am. Chem. Soc. 2009, 131, 2747– 2754[ACS Full Text ], Google Scholar
+42Toyoda, E.; Jinnouchi, R.; Hatanaka, T.; Morimoto, Y.; Mitsuhara, K.; Visikovskiy, A.; Kido, Y. The d-Band Structure of Pt Nanoclusters Correlated with the Catalytic Activity for an Oxygen Reduction Reaction J. Phys. Chem. C 2011, 115, 21236– 21240[ACS Full Text ], [CAS], Google Scholar
+43Groß, A. Tailoring the Reactivity of Bimetallic Overlayer and Surface Alloy Systems J. Phys.: Condens. Matter 2009, 21, 084205[Crossref], [PubMed], [CAS], Google Scholar
+44Ruban, A.; Hammer, B.; Stoltze, P.; Skriver, H. L.; Nørskov, J. K. Surface Electronic Structure and Reactivity of Transition and Noble Metals J. Mol. Catal. A: Chem. 1997, 115, 421– 429[Crossref], [CAS], Google Scholar
+45Hammer, B.; Nørskov, J. K. Electronic Factors Determining the Reactivity of Metal Surfaces Surf. Sci. 1995, 343, 211– 220[Crossref], [CAS], Google Scholar
+46Hammer, B.; Nørskov, J. K. Theoretical Surface Science and Catalysis–Calculations and Concepts Adv. Catal. 2000, 45, 71– 129Google Scholar
+47Muscat, J.; Newns, D. Nature of the Bond in Hydrogen Chemisorption on Ni, Pd, and Pt Phys. Rev. Lett. 1979, 43, 2025– 2028[Crossref], Google Scholar
+48Muscat, J.; Newns, D. Simple Model of Hydrogen and Lithium Chemisorption on Jellium Substrates Phys. Rev. B 1979, 19, 1270– 1282[Crossref], Google Scholar
+49Xin, H.; Holewinski, A.; Linic, S. Predictive Structure-Reactivity Models for Rapid Screening of Pt-based Multimetallic Electrocatalysts for the Oxygen Reduction Reaction ACS Catal. 2012, 2, 12– 16[ACS Full Text ], [CAS], Google Scholar
+50Mavrikakis, M.; Hammer, B.; Nørskov, J. K. Effect of Strain on the Reactivity of Metal Surfaces Phys. Rev. Lett. 1998, 81, 2819– 2822[Crossref], [CAS], Google Scholar
+51Hyman, M.; Medlin, J. Effects of Electronic Structure Modifications on the Adsorption of Oxygen Reduction Reaction Intermediates on Model Pt (111)-Alloy Surfaces J. Phys. Chem. C 2007, 111, 17052– 17060[ACS Full Text ], Google Scholar
+52Hofmann, T.; Yu, T. H.; Folse, M.; Weinhardt, L.; Bär, M.; Zhang, Y.; Merinov, B. V.; Myers, D. J.; Goddard, W. A., III; Heske, C. Using Photoelectron Spectroscopy and Quantum Mechanics to Determine d-Band Energies of Metals for Catalytic Applications J. Phys. Chem. C 2012, 116, 24016– 24026[ACS Full Text ], [CAS], Google Scholar
+53Mowbray, D. J.; Migani, A.; Walther, G.; Cardamone, D. M.; Rubio, A. Gold and Methane: A Noble Combination for Delicate Oxidation J. Phys. Chem. Lett. 2013, 4, 3006– 3012[ACS Full Text ], [CAS], Google Scholar
+54Shustorovich, E.; Sellers, H. The UBI-QEP Method: A Practical Theoretical Approach to Understanding Chemistry on Transition Metal Surfaces Surf. Sci. Rep. 1998, 31, 1– 119[Crossref], [CAS], Google Scholar
+55Nørskov, J. Covalent Effects in the Effective-Medium Theory of Chemical Binding: Hydrogen Heats of Solution in the 3d Metals Phys. Rev. B 1982, 26, 2875– 2885[Crossref], Google Scholar
+56Newns, D. M. Self-Consistent Model of Hydrogen Chemisorption Phys. Rev. 1969, 178, 1123– 1135[Crossref], [CAS], Google Scholar
+57Moqadam, M.; Rahmani, M.; Karimi, Z.; Naderifar, A. A UBI-QEP Microkinetic Study for Fischer–Tropsch Synthesis on Iron Catalysts Procedia Eng. 2012, 42, 34– 44[Crossref], Google Scholar
+58Calle-Vallejo, F.; Martnez, J. I.; Garca-Lastra, J. M.; Rossmeisl, J.; Koper, M. T. M. Physical and Chemical Nature of the Scaling Relations between Adsorption Energies of Atoms on Metal Surfaces Phys. Rev. Lett. 2012, 108, 116103[Crossref], [PubMed], [CAS], Google Scholar
+59Salciccioli, M.; Vlachos, D. G. Kinetic Modeling of Pt Catalyzed and Computation-Driven Catalyst Discovery for Ethylene Glycol Decomposition ACS Catal. 2011, 1, 1246– 1256[ACS Full Text ], [CAS], Google Scholar
+60Salciccioli, M.; Chen, Y.; Vlachos, D. G. Density Functional Theory-Derived Group Additivity and Linear Scaling Methods for Prediction of Oxygenate Stability on Metal Catalysts: Adsorption of Open-Ring Alcohol and Polyol Dehydrogenation Intermediates on Pt-Based Metals J. Phys. Chem. C 2010, 114, 20155– 20166[ACS Full Text ], [CAS], Google Scholar
+61Jones, G.; Studt, F.; Abild-Pedersen, F.; Nørskov, J. K.; Bligaard, T. Scaling Relationships for Adsorption Energies of C2 Hydrocarbons on Transition Metal Surfaces Chem. Eng. Sci. 2011, 66, 6318– 6323[Crossref], [CAS], Google Scholar
+62Abild-Pedersen, F.; Greeley, J.; Studt, F.; Rossmeisl, J.; Munter, T. R.; Moses, P. G.; Skúlason, E.; Bligaard, T.; Nørskov, J. K. Scaling Properties of Adsorption Energies for Hydrogen-Containing Molecules on Transition-Metal Surfaces Phys. Rev. Lett. 2007, 99, 016105[Crossref], [PubMed], [CAS], Google Scholar
+63Ferrin, P.; Simonetti, D.; Kandoi, S.; Kunkes, E.; Dumesic, J. A.; Nørskov, J. K.; Mavrikakis, M. Modeling Ethanol Decomposition on Transition Metals: A Combined Application of Scaling and Brønsted-Evans-Polanyi Relations J. Am. Chem. Soc. 2009, 131, 5809– 5815[ACS Full Text ], Google Scholar
+64Jones, G.; Bligaard, T.; Abild-Pedersen, F.; Nørskov, J. K. Using Scaling Relations to Understand Trends in the Catalytic Activity of Transition Metals J. Phys.: Condens. Matter 2008, 20, 064239[Crossref], Google Scholar
+65Fernández, E.; Moses, P.; Toftelund, A.; Hansen, H. A.; Martnez, J. I.; Abild-Pedersen, F.; Kleis, J.; Hinnemann, B.; Rossmeisl, J.; Bligaard, T.; Nørskov, J. K. Scaling Relationships for Adsorption Energies on Transition Metal Oxide, Sulfide, and Nitride Surfaces Angew. Chem., Int. Ed. 2008, 47, 4683– 4686[Crossref], Google Scholar
+66Jiang, T.; Mowbray, D. J.; Dobrin, S.; Falsig, H.; Hvolbæk, B.; Bligaard, T.; Nørskov, J. K. Trends in CO Oxidation Rates for Metal Nanoparticles and Close-Packed, Stepped, and Kinked Surfaces J. Phys. Chem. C 2009, 113, 10548– 10553[ACS Full Text ], [CAS], Google Scholar
+67Fu, Q.; Cao, X.; Luo, Y. Identification of the Scaling Relations for Binary Noble-Metal Nanoparticles J. Phys. Chem. C 2013, 117, 2849– 2854[ACS Full Text ], Google Scholar
+68Montemore, M.; Medlin, J. A Simple, Accurate Model for Alkyl Adsorption on Late Transition Metals J. Phys. Chem. C 2013, 117, 2835– 2843[ACS Full Text ], Google Scholar
+69Kresse, G.; Furthmüller, J. Efficiency of ab-initio Total Energy Calculations for Metals and Semiconductors Using a Plane-Wave Basis Set Comput. Mater. Sci. 1996, 6, 15– 50[Crossref], [CAS], Google Scholar
+70Kresse, G.; Hafner, J. Ab initio Molecular Dynamics for Liquid Metals Phys. Rev. B 1993, 47, 558– 561[Crossref], [PubMed], [CAS], Google Scholar
+71Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Sing, D. J.; Fiolhais, C. Atoms, Molecules, Solids, and Surfaces: Applications of the Generalized Gradient Approximation for Exchange and Correlation Phys. Rev. B 1992, 46, 6671– 6687[Crossref], [PubMed], [CAS], Google Scholar
+72Yang, M.-M.; Bao, X.-H.; Li, W.-X. Density Functional Theory Study of CHx (x= 1–3) Adsorption on Clean and CO Precovered Rh (111) Surfaces J. Chem. Phys. 2007, 127, 024705[Crossref], Google Scholar
+73Montemore, M. M.; Medlin, J. W. A Density Functional Study of C1–C4 Alkyl Adsorption on Cu(111) J. Chem. Phys. 2012, 136, 204710[Crossref], Google Scholar
+74Karp, E.; Silbaugh, T.; Campbell, C. Energetics of Adsorbed CH3 on Pt (111) by Calorimetry J. Am. Chem. Soc. 2013, 135, 5208– 5211[ACS Full Text ], Google Scholar
+75Blöchl, P. E. Projector Augmented-Wave Method Phys. Rev. B 1994, 50, 17953– 17979[Crossref], [PubMed], [CAS], Google Scholar
+76Kresse, G.; Joubert, D. From Ultrasoft Pseudopotentials to the Projector Augmented-Wave Method Phys. Rev. B 1999, 59, 1758– 1774[Crossref], [CAS], Google Scholar
+77Monkhorst, H.; Pack, J. Special Points for Brillouin-Zone Integrations Phys. Rev. B 1976, 13, 5188– 5192[Crossref], Google Scholar
+78Tarni, M.; Cignoni, P.; Montani, C. Ambient Occlusion and Edge Cueing to Enhance Real Time Molecular Visualization IEEE Trans. Vis. Comput. Graphics 2006, 12, 1– 8[Crossref], Google Scholar
+79Ciobîcă, I. M.; Frechard, F.; van Santen, R. A.; Kleyn, A. W.; Hafner, J. A Theoretical Study of CHx Chemisorption on the Ru(0001) Surface Chem. Phys. Lett. 1999, 311, 185– 192[Crossref], Google Scholar
+80Harrison, W. A. Electronic Structure and the Properties of Solids; W. H. Freeman and Company: San Francisco, CA, 1980.Google Scholar
+81Xin, H.; Holewinski, A.; Schweitzer, N.; Nikolla, E.; Linic, S. Electronic Structure Engineering in Heterogeneous Catalysis: Identifying Novel Alloy Catalysts Based on Rapid Screening for Materials with Desired Electronic Properties Top. Catal. 2012, 55, 376– 390[Crossref], [CAS], Google Scholar
+82Calle-Vallejo, F.; Koper, M. T. M. First-Principles Computational Electrochemistry: Achievements and Challenges Electrochim. Acta 2012, 84, 3– 11[Crossref], [CAS], Google Scholar
+83Minot, C.; van Hove, M. A.; Somorjai, G. A. A Covalent Model for the Bonding of Adsorbed Hydrocarbon Fragments on the (111) Face of Platinum Surf. Sci. 1982, 127, 441– 460[Crossref], Google Scholar
+84Kua, J.; Faglioni, F.; Goddard, W. Thermochemistry for Hydrocarbon Intermediates Chemisorbed on Metal Surfaces: CH nm (CH3) m with n= 1, 2, 3 and mâL′d′ n on Pt, Ir, Os, Pd, Rh, and Ru J. Am. Chem. Soc. 2000, 122, 2309– 2321[ACS Full Text ], Google Scholar
+85Gavin, R. M.; Reutt, J.; Muetterties, E. Metal-hydrogen bridge bonding of hydrocarbons on metal surfaces Proc. Natl. Acad. Sci. U.S.A. 1981, 78, 3981– 3985[Crossref], Google Scholar
+86İnoğlu, N.; Kitchin, J. R. New Solid-State Table: Estimating d-Band Characteristics for Transition Metal Atoms Mol. Simul. 2010, 36, 633– 638[Crossref], [CAS], Google Scholar
+87Sheppard, N.; de la Cruz, C. Vibrational Spectra of Hydrocarbons Adsorbed on Metals:: Part II. Adsorbed Acyclic Alkynes and Alkanes, Cyclic Hydrocarbons Including Aromatics, and Surface Hydrocarbon Groups Derived from the Decomposition of Alkyl Halides, etc Adv. Catal. 1998, 42, 181– 313Google Scholar
+88Solymosi, F.; Klivényi, G. HREELS study of CH3I and CH3 adsorbed on Rh (111) surface J. Electron. Spectrosc. Relat. Phenom. 1993, 64/65, 499– 506[Crossref], [CAS], Google Scholar
+89Cheng, J.; Hu, P.; Ellis, P.; French, S.; Kelly, S.; Lok, C. M. Chain Growth Mechanism in Fischer–Tropsch Synthesis: A DFT Study of C-C Coupling over Ru, Fe, Rh, and Re Surfaces J. Phys. Chem. C 2008, 112, 6082– 6086[ACS Full Text ], Google Scholar
+90Jones, G.; Jakobsen, J. G.; Shim, S. S.; Kleis, J.; Andersson, M. P.; Rossmeisl, J.; Abild-Pedersen, F.; Bligaard, T.; Helveg, S.; Hinnemann, B.; Rostrup-Nielsen, J. R.; Chorkendorff, I.; Sehested, J.; Nørskov, J. K. First Principles Calculations and Experimental Insight into Methane Steam Reforming over Transition Metal Catalysts J. Catal. 2008, 259, 147– 160[Crossref], [CAS], Google Scholar
+91Quiroga, M. M. B.; Luna, A. E. C. Kinetic Analysis of Rate Data for Dry Reforming of Methane Ind. Eng. Chem. Res. 2007, 46, 5265[ACS Full Text ], Google Scholar
+92Rezaei, M.; Alavi, S.; Sahebdelfar, S.; Yan, Z.-F. Syngas Production by Methane Reforming with Carbon Dioxide on Noble Metal Catalysts J. Nat. Gas Chem. 2006, 15, 327– 334[Crossref], [CAS], Google Scholar
+93Bharadwaj, S.; Schmidt, L. Olefins by Catalytic Oxidation of Alkanes in Fluidized-Bed Reactors J. Catal. 1995, 155, 403– 413[Crossref], Google Scholar
+94Yokoyama, C.; Bharadwaj, S.; Schmidt, L. Platinum-Tin and Platinum-Copper Catalysts for Autothermal Oxidative Dehydrogenation of Ethane to Ethylene Catal. Lett. 1996, 38, 181– 188[Crossref], Google Scholar
+95Bharadwaj, S.; Yokoyama, C.; Schmidt, L. Catalytic Partial Oxidation of Alkanes on Silver in Fluidized Bed and Monolith Reactors Appl. Catal., A 1996, 140, 73– 97[Crossref], [CAS], Google Scholar
+96Bhasin, M.; McCain, J.; Vora, B.; Imai, T.; Pujadó, P. R. Dehydrogenation and Oxydehydrogenation of Paraffins to Olefins Appl. Catal., A 2001, 221, 397– 419[Crossref], [CAS], Google Scholar
+97Yang, M.; Zhu, Y.; Zhou, X.; Sui, Z.; Chen, D. First-Principles Calculations of Propane Dehydrogenation over PtSn Catalysts ACS Catal. 2012, 2, 1247– 1258[ACS Full Text ], [CAS], Google Scholar
+Cited By
+ARTICLE SECTIONS Jump To
+Citation Statements
+beta
+Supporting
+4
+Mentioning
+70
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 35 publications.
+Paul L. Kress, Shengjie Zhang, Yicheng Wang, Volkan Çınar, Cynthia M. Friend, E. Charles H. Sykes, Matthew M. Montemore. A Priori Design of Dual-Atom Alloy Sites and Experimental Demonstration of Ethanol Dehydrogenation and Dehydration on PtCrAg. Journal of the American Chemical Society 2023, 145 (15) , 8401-8407. https://doi.org/10.1021/jacs.2c13577
+Cheng Zeng, Tuhina Adit Maark, Andrew A. Peterson. Strain in Catalysis: Rationalizing Material, Adsorbate, and Site Susceptibilities to Biaxial Lattice Strain. The Journal of Physical Chemistry C 2022, 126 (49) , 20892-20902. https://doi.org/10.1021/acs.jpcc.2c07246
+Chukwudi F. Nwaokorie, Matthew M. Montemore. Alloy Catalyst Design beyond the Volcano Plot by Breaking Scaling Relations. The Journal of Physical Chemistry C 2022, 126 (8) , 3993-3999. https://doi.org/10.1021/acs.jpcc.1c10484
+Alexander H. Jenkins, Charles B. Musgrave, J. Will Medlin. Altering Linear Scaling Relationships on Metal Catalysts via Ligand–Adsorbate Hydrogen Bonding. The Journal of Physical Chemistry C 2021, 125 (43) , 23791-23802. https://doi.org/10.1021/acs.jpcc.1c07550
+Kamila Kaźmierczak, Paul Clabaut, Ruben Staub, Noémie Perret, Stephan N. Steinmann, Carine Michel. Designing Active Sites for Structure-Sensitive Reactions via the Generalized Coordination Number: Application to Alcohol Dehydrogenation. The Journal of Physical Chemistry C 2021, 125 (19) , 10370-10377. https://doi.org/10.1021/acs.jpcc.1c01746
+Manish Shetty, M. Alexander Ardagh, Yutong Pang, Omar A. Abdelrahman, Paul J. Dauenhauer. Electric-Field-Assisted Modulation of Surface Thermochemistry. ACS Catalysis 2020, 10 (21) , 12867-12880. https://doi.org/10.1021/acscatal.0c02124
+Hongbo Wu, Jonathan E. Sutton, Wei Guo, Dionisios G. Vlachos. Volcano Curves for in Silico Prediction of Mono- and Bifunctional Catalysts: Application to Ammonia Decomposition. The Journal of Physical Chemistry C 2019, 123 (44) , 27097-27104. https://doi.org/10.1021/acs.jpcc.9b08662
+Jilei Liu, Matthew B. Uhlman, Matthew M. Montemore, Antonios Trimpalis, Georgios Giannakakis, Junjun Shan, Sufeng Cao, Ryan T. Hannagan, E. Charles H. Sykes, Maria Flytzani-Stephanopoulos. Integrated Catalysis-Surface Science-Theory Approach to Understand Selectivity in the Hydrogenation of 1-Hexyne to 1-Hexene on PdAu Single-Atom Alloy Catalysts. ACS Catalysis 2019, 9 (9) , 8757-8765. https://doi.org/10.1021/acscatal.9b00491
+Yoshiyuki Yamamoto, Shusuke Kasamatsu, Osamu Sugino. Scaling Relation of Oxygen Reduction Reaction Intermediates at Defective TiO2 Surfaces. The Journal of Physical Chemistry C 2019, 123 (32) , 19486-19492. https://doi.org/10.1021/acs.jpcc.9b03398
+Sebastian Matera, William F. Schneider, Andreas Heyden, Aditya Savara. Progress in Accurate Chemical Kinetic Modeling, Simulations, and Parameter Estimation for Heterogeneous Catalysis. ACS Catalysis 2019, 9 (8) , 6624-6647. https://doi.org/10.1021/acscatal.9b01234
+Andrew J. Medford, M. Ross Kunz, Sarah M. Ewing, Tammie Borders, Rebecca Fushimi. Extracting Knowledge from Data through Catalysis Informatics. ACS Catalysis 2018, 8 (8) , 7403-7429. https://doi.org/10.1021/acscatal.8b01708
+Matthew T. Darby, Romain Réocreux, E. Charles. H. Sykes, Angelos Michaelides, Michail Stamatakis. Elucidating the Stability and Reactivity of Surface Intermediates on Single-Atom Alloy Catalysts. ACS Catalysis 2018, 8 (6) , 5038-5050. https://doi.org/10.1021/acscatal.8b00881
+Bingxu Chen, Di Wang, Xuezhi Duan, Wei Liu, Yefei Li, Gang Qian, Weikang Yuan, Anders Holmen, Xinggui Zhou, De Chen. Charge-Tuned CO Activation over a χ-Fe5C2 Fischer–Tropsch Catalyst. ACS Catalysis 2018, 8 (4) , 2709-2714. https://doi.org/10.1021/acscatal.7b04370
+Matthew M. Montemore, Matthijs A. van Spronsen, Robert J. Madix, Cynthia M. Friend. O2 Activation by Metal Surfaces: Implications for Bonding and Reactivity on Heterogeneous Catalysts. Chemical Reviews 2018, 118 (5) , 2816-2862. https://doi.org/10.1021/acs.chemrev.7b00217
+M. Meier, J. Ledieu, V. Fournée, and É. Gaudry . Semihydrogenation of Acetylene on Al5Co2 Surfaces. The Journal of Physical Chemistry C 2017, 121 (9) , 4958-4969. https://doi.org/10.1021/acs.jpcc.6b11083
+Matthew M. Montemore, Robert J. Madix, and Efthimios Kaxiras . How Does Nanoporous Gold Dissociate Molecular Oxygen?. The Journal of Physical Chemistry C 2016, 120 (30) , 16636-16640. https://doi.org/10.1021/acs.jpcc.6b03371
+Rengin Peköz, Svenja Wörner, Luca M. Ghiringhelli, and Davide Donadio . Trends in the Adsorption and Dissociation of Water Clusters on Flat and Stepped Metallic Surfaces. The Journal of Physical Chemistry C 2014, 118 (51) , 29990-29998. https://doi.org/10.1021/jp510242h
+Matthew M. Montemore and J. Will Medlin . A Unified Picture of Adsorption on Transition Metals through Different Atoms. Journal of the American Chemical Society 2014, 136 (26) , 9272-9275. https://doi.org/10.1021/ja504193w
+Eric M. Karp, Trent L. Silbaugh, and Charles T. Campbell . Bond Energies of Molecular Fragments to Metal Surfaces Track Their Bond Energies to H Atoms. Journal of the American Chemical Society 2014, 136 (11) , 4137-4140. https://doi.org/10.1021/ja500997n
+Matthew M. Montemore and J. Will Medlin . Predicting and Comparing C–M and O–M Bond Strengths for Adsorption on Transition Metal Surfaces. The Journal of Physical Chemistry C 2014, 118 (5) , 2666-2672. https://doi.org/10.1021/jp5001418
+Sarah M. Stratton, Shengjie Zhang, Matthew M. Montemore. Addressing complexity in catalyst design: From volcanos and scaling to more sophisticated design strategies. Surface Science Reports 2023, 78 (3) , 100597. https://doi.org/10.1016/j.surfrep.2023.100597
+Shengjie Zhang, E. Charles H. Sykes, Matthew M. Montemore. Tuning reactivity in trimetallic dual-atom alloys: molecular-like electronic states and ensemble effects. Chemical Science 2022, 13 (47) , 14070-14079. https://doi.org/10.1039/D2SC03650A
+Sergio Pablo‐García, Rodrigo García‐Muelas, Albert Sabadell‐Rendón, Núria López. Dimensionality reduction of complex reaction networks in heterogeneous catalysis: From l inear‐scaling relationships to statistical learning techniques. WIREs Computational Molecular Science 2021, 11 (6) https://doi.org/10.1002/wcms.1540
+Jaeryul Park, Luke T. Roling. Elucidating energy scaling between atomic and molecular adsorbates in the presence of solvent. AIChE Journal 2020, 66 (12) https://doi.org/10.1002/aic.17036
+Abigale P. Monasterial, Calla A. Hinderks, Songkun Viriyavaree, Matthew M. Montemore. When more is less: Nonmonotonic trends in adsorption on clusters in alloy surfaces. The Journal of Chemical Physics 2020, 153 (11) https://doi.org/10.1063/5.0022076
+Matthew M. Montemore, Chukwudi F. Nwaokorie, Gbolade O. Kayode. General screening of surface alloys for catalysis. Catalysis Science & Technology 2020, 10 (13) , 4467-4476. https://doi.org/10.1039/D0CY00682C
+Rodrigo García-Muelas, Núria López. Statistical learning goes beyond the d-band model providing the thermochemistry of adsorbates on transition metals. Nature Communications 2019, 10 (1) https://doi.org/10.1038/s41467-019-12709-1
+Bo Wu, Guangze Tang, Liqin Wang, Le Gu. Lubricity of Low-Viscosity Aviation Fuel JP-10 and Tribological Behaviors of Silver (Ag) Films in JP-10. Tribology Transactions 2019, 62 (5) , 789-800. https://doi.org/10.1080/10402004.2019.1617917
+Martin Hangaard Hansen, Jens K. Nørskov, Thomas Bligaard. First principles micro-kinetic model of catalytic non-oxidative dehydrogenation of ethane over close-packed metallic facets. Journal of Catalysis 2019, 374 , 161-170. https://doi.org/10.1016/j.jcat.2019.03.034
+Alireza Khorshidi, James Violet, Javad Hashemi, Andrew A. Peterson. How strain can break the scaling relations of catalysis. Nature Catalysis 2018, 1 (4) , 263-268. https://doi.org/10.1038/s41929-018-0054-0
+I. Mitchell, A.J. Page. The influence of hydrogen on transition metal - Catalysed graphene nucleation. Carbon 2018, 128 , 215-223. https://doi.org/10.1016/j.carbon.2017.11.048
+Matthew M. Montemore, Oliviero Andreussi, J. Will Medlin. Hydrocarbon adsorption in an aqueous environment: A computational study of alkyls on Cu(111). The Journal of Chemical Physics 2016, 145 (7) https://doi.org/10.1063/1.4961027
+Kyeounghak Kim, Jeong Woo Han. Effect of caffeic acid adsorption in controlling the morphology of gold nanoparticles: role of surface coverage and functional groups. Physical Chemistry Chemical Physics 2016, 18 (40) , 27775-27783. https://doi.org/10.1039/C6CP04122A
+Troy D. Gould, Matthew M. Montemore, Alia M. Lubers, Lucas D. Ellis, Alan W. Weimer, John L. Falconer, J. Will Medlin. Enhanced dry reforming of methane on Ni and Ni-Pt catalysts synthesized by atomic layer deposition. Applied Catalysis A: General 2015, 492 , 107-116. https://doi.org/10.1016/j.apcata.2014.11.037
+Matthew M. Montemore, J. Will Medlin. Scaling relations between adsorption energies for computational screening and design of catalysts. Catal. Sci. Technol. 2014, 4 (11) , 3748-3761. https://doi.org/10.1039/C4CY00335G
+Download PDF
+close the sidebar.
+Abstract
+Scheme 1
+Scheme 1. Using the Adsorption Energy of Methyl in the Top Site, Predictions Can Be Made of the Adsorption Energy of Hydrocarbons with (1) a Varying Number of Alkyl Groups Attached to the Adsorbing Carbon Atom, (2) a Varying Identity of Those Alkyl Groups, and (3) a Varying Adsorption Site
+Figure 1
+Figure 1. Methylidyne adsorption energies as a function of methyl adsorption energies.
+Figure 2
+Figure 2. Methylidyne adsorption energies as a function of methyl adsorption energies: (a) top–top scaling relation, (b) top–bridge scaling relation, (c) top–fcc scaling relation (which we use in our model), and (d) top–hcp scaling relation.
+Figure 3
+Figure 3. Site-specific scaling relations, with each C1 adsorbate in its tetravalent site and H in its divalent site.
+Figure 4
+Figure 4. Given the adsorption energy of methyl in the top site(s), predictions can be made of the adsorption energy of any hydrocarbon that bonds to the surface through a single carbon atom. Site-specific scaling relations (SSRs) scale across the sites where single bonds are formed between the adsorbate and surface, adsorbate scaling relations (ASRs) use gas-phase bond energies, and translations (T’s) account for changes in C–M and C–H–M interactions.
+Figure 5
+Figure 5. Parity plot for eqs 8–15 applied to the 527-point data set.
+Figure 6
+Figure 6. The reaction energy of (a) methyl coupling with the other C1 adsorbates and (b) chain termination for alkyls with different branching structures.
+Figure 7
+Figure 7. (a) Potential energy surfaces for methane dehydrogenation, relative to the bare surface and methane in the gas phase. (b) Energy of propane cracking to methyl and ethyl as a function of the energy of propane dehydrogenation to propyl and H.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

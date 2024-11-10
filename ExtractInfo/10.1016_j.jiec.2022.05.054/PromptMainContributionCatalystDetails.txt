@@ -1,0 +1,409 @@
+<DOCUMENT>
+Sustainable H2 production from glycerol steam reforming in the heat-integrated reactor: Using reforming-side by-products as feed for the catalytic combustion-side
+Highlights
+•
+Production of sustainable H2 by coupling of glycerol steam reforming and catalytic combustion processes.
+•
+Supplying all the required fuel for catalytic combustion side from reforming side by-products.
+•
+Design of a novel heat-integrated process to eliminate conventional furnace and save energy.
+•
+Improvement of H2 yield and glycerol conversion by this new process.
+Abstract
+Currently, fossil fuels are considered the primary energy carriers having a significant role in the global energy market. Two main features, including environmental pollution owing to greenhouse gas emissions as well as fossil fuel reserves depletion, make severe instability in the world market. Consequently, researchers are trying to propose different processes to attain energy from renewable sources. In this study, a novel heat exchanger reactor for sustainable hydrogen production from glycerol steam reforming has been suggested. In this configuration, the required heat of steam reforming reactions is supplied through the catalytic combustion reaction. At the same time, the required fuel for the combustion reactions is provided by reforming side by-products. A one-dimensional mathematical model has been developed to study the reactor behavior and the role of different influencing parameters on its performance. The results showed that it is feasible to eliminate the furnace used in the conventional process and enhance the glycerol conversion by 48% compared to the adiabatic reactor. Since the use of by-products of the glycerol steam reforming as a heat source for the hydrogen production has not been used so far, it can be acknowledged that this method could be feasible and beneficial in energy saving.
+Graphical abstract
+Download : Download high-res image (157KB)
+Download : Download full-size image
+Nomenclature
+a
+Specific surface area of catalyst,
+Ac
+Cross section area,
+Catalyst surface,m2 kgcat−1
+C
+Concentration,
+Cp
+Fluid heat capacity,
+Dij
+Binary diffusion coefficient,
+Dim
+Multicomponent gas mixture diffusivity,
+Dt
+Diameter of tube,
+dp
+Diameter of particle,
+F
+Molar flow rate,
+h
+Heat transfer coefficient,
+K
+Thermal conductivity,
+kc
+Mass transfer coefficient between fluid and solid particle,
+k
+Chemical components total number
+MW
+Molecular weight
+N
+Reactions total number
+P
+Pressure,
+Pr
+Prandtl number
+R
+Universal gas constant,
+Re
+Reynolds number
+r
+Reaction rate,
+Sc
+Schmidt number
+T
+Temperature,
+Uoverall
+Overall heat transfer coefficient,
+us
+Superficial velocity,
+y
+Mole fraction
+z
+Axial coordinate,
+Greek letters
+µ
+Viscosity of fluid,kg m−1 s−1
+Heat of formation,
+Reaction enthalpy,J mol-1
+ε
+Porosity of bed
+η
+Effectiveness factor
+ρ
+Density of fluid,
+ρb
+Density of bed,
+υ
+Stoichiometric coefficient
+υc
+Molecular diffusion volume, cm3 mol−1
+Superscripts
+0
+Inlet condition
+g
+Gas phase
+s
+Solid phase
+Subscripts
+i
+Chemical species
+j
+Number of reaction
+n
+Number of side (1 = tube-side and 2 = shell-side)
+Introduction
+In recent years, the consumption of fossil fuels as energy sources has escalated owing to the rising industry demand and the earth's population. Combustion of carbon-based compounds and conventional fuels leads to the production of CO2, which is known as a greenhouse gas. An increase in CO2 emission causes environmental pollution and climate warming [1], [2]. One of the possible solutions to solve these issues is to use H2 as a green energy carrier [3]. H2 as a fuel has attractive properties such as cleanliness, sustainability, convenience, and independence from foreign sources. These advantages make H2 an alternative fuel to gasoline, natural gas, and other hydrocarbon-based fuels. Additionally, H2 has a high energy content per unit mass (i.e., 140.4 MJ/kg) which is about three times greater than gasoline energy content (i.e., 48.6 MJ/kg) [4]. Pure H2 does not normally exist in nature and is usually found in the sources such as water, hydrogen-containing compounds, natural gas, fossil fuels as well as biomass. Thus production of pure H2 requires some effort. The raw material and energy supply are the two critical challenges to it [5].
+Steam reforming is the most common process used to produce H2. This process is highly endothermic and requires severe conditions such as pressures up to 3.5Mpa and temperatures of 970–1100 K. Natural gas is the most widespread feed for this process, reacting on the nickel-based catalyst along with steam to produce syngas. However, hydrocarbons with high hydrogen to oxygen ratio are also good candidates for hydrogen production. The large amount of CO2 emission, as well as the usage of fossil fuels as the main feed and the heat source are two major problematic issues of this process [6]. Partial oxidation of hydrocarbons is the second major way to produce H2. In this exothermic method, hydrocarbons react with O2 and H2O under moderately high pressure, with or without the presence the catalyst [6]. Catalysts deactivation and coke deposition are the two main drawbacks of this process [5]. Autothermal reforming is another process to produce H2 by a combination of steam reforming and partial oxidation processes. In this method, the required energy for the synthesis gas production from steam reforming of the hydrocarbon feedstock is supplied by partial oxidation [4].
+Owing to limited sources of fossil fuels and the greenhouse effect brought about by them, the world is interested in using H2 produced from renewable and clean sources such as bio-mass, H2O, geothermal, wind, and solar [7]. When H2 is generated from renewable energy sources, and no greenhouse gases or other pollutants are emitted into the atmosphere, this process can be called green. In the predicted future H2 industry, green H2 production processes will be used to provide H2 for direct application as a fuel or to produce synthetic fuels [8]. Water electrolysis is a green method in which H2O is decomposed into hydrogen and oxygen. This method has no environmental pollution and produces H2 with high purity, but even so, high energy consumption as well as high cost are two main drawbacks of this process [9]. Alcohols are another source of hydrogen that can be produced from renewable sources. The use of alcohols to produce H2 has attractive advantages such as high energy density, renewability, easy storage, high power density, and also the H2-rich gas produced by biofuels could be utilized directly in the fuel cells [10], [11]. Methanol and ethanol are two of the widely used raw material to produce H2 through the steam reforming process, which sustainability, reducing greenhouse gas emissions and good environmental properties make these methods attractive [12], [13].
+One of the most promising sustainable fuels is biodiesel, which has attracted much attention recently; therefore, it is expected to extend its global usage continuously [14]. Biodiesels can reduce the CO2 emission into the atmosphere by 52% compared to fossil diesel [15]. The transesterification process is a well-known biodiesel synthesis method, which converts fat or oil along with alcohol to esters and glycerol [16]. For every 100 kg of biodiesel synthesis from this process, 10 kg of glycerol is produced [15]. Utilization of glycerol as a by-product in other processes results in diminishing biodiesel price [17]. Glycerol steam reforming (GSR) is an efficient route to produce sustainable H2 that has received much attention recently. This method could produce 7 mole H2 per one mole of glycerol according to reaction stoichiometry (Eq. (1)) which shows the great potential of this process. Another advantage of GSR is the use of waste (glycerol) as the main feed, while in the conventional steam reforming processes, a costly fuel (i.e., methane) is utilized [18].
+(1)
+Generally, the catalysts used for the GSR reaction are based on noble metals, transition metals, or a combination of these elements in bimetallic systems. The noble metals include Platinum (Pt), Ruthenium (Ru), Rhodium (Rh), Palladium (Pd), and Iridium (Ir) which their high cost practically prohibits their application on an industrial scale. Among the transition metals, Nickel (Ni) has attracted the attention of many researchers due to its very interesting features including higher availability and lower cost than noble metals as well as having excellent intrinsic activity. In addition, Ni-based catalysts are already widely used in the natural gas processing and petroleum industries. However, these types of catalysts suffer from thermal deactivation at high temperatures and metal particles sintering because of insufficient thermal stability. To solve the mentioned issues, it is recommended to operate at lower temperatures (between 600 and 700 ˚C) and higher steam/glycerol ratios (from 9 to 12) [19], [20], [21].
+In this regard, several researchers have studied sustainable H2 production using GSR from a simulation and mathematical modeling point of view [22], [23], [24], [25], [26], [27]. Silva et al. [23] used a mathematical model to investigate the GSR in the fixed-bed reactor. The operating conditions in their study cover the inlet pressures, temperatures, and steam/glycerol ratios of 1–5 atm, 748–848 K, 3–12, respectively. The results indicated that the glycerol conversion and H2 production rate were elevated with increasing pressure and steam/glycerol ratio. It may be observed from different studies carried out in the field of GSR that the product quality depends on different variables such as feed composition, reaction temperature, inlet pressure, catalyst type, and glycerol conversion. Nevertheless, in the presence of nickel-based catalysts and under the typical conditions (i.e., 673–973 K, 1–5 atm, and H2O:Glycerol ratio of 3–12), the major gaseous products include H2, CO2, CO and CH4, which the typical composition of these components lie within the range of 60–65%, 22–30%, 2–10%, and 1–5%, respectively [23], [28], [29], [30], [31].
+Membrane reactors could attain higher glycerol conversion and H2 yield at moderate conditions (lower temperature) compared to conventional reactors, which are beneficial in terms of reducing coke deposition, catalyst destruction, and side reactions. Therefore some researchers modified the GSR process using membrane reactors [28], [32], [33], [34], [35], [36]. Integration of endothermic and exothermic reactions in the thermally coupled reactor is another approach for improving the efficiency of the GSR process. In these configurations, the required heat for the GSR side is provided through the exothermic side, in which two sides are isolated by a solid wall [37]. Moreover, using thermally coupled reactors could lead to eliminating the cooling and heating systems that are required for the exothermic and endothermic reactions, respectively [18]. Hence some studies have evaluated the integration of GSR with other exothermic reactions such as ammoxidation of propane [30], chemical looping combustion [29], and hydrogenation of nitrobenzene [18], [38], aiming to eliminate the need for a furnace. Lately, Khademi et al. [14] used tri-reforming of methane as a heat source for the glycerol steam reforming. In their study, produced CO2 in the GSR side was utilized as feedstock for the tri-reforming of methane which is an environmental advantage. However, this process required extra fuel (i.e., CH4 make up) to proceed the tri-reforming reactions.
+As mentioned above, one of the main GSR drawbacks is the need for a furnace to supply the necessary heat for the steam reforming reactions, which consumes a considerable amount of fuel. Therefore, the conventional process suffers from high material consumption and operational costs, along with greenhouse gas emissions. In order to solve these issues, the integration of the GSR and catalytic combustion of CO and CH4 in a novel thermally coupled reactor is proposed. In this configuration, the required heat for the reforming reactions is supplied through the catalytic combustion side. In the meantime, the required fuel for the combustion side is provided by reforming side by-products. The suggested process can produce sustainable H2 using its by-products as a heat source, which eliminates the burning of fossil fuels in the furnace. Even though the use of GSR in thermally coupled reactors to produce H2 has been investigated in other studies, but for the first time, H2 production using GSR when the reforming side output by-products are used as feed for the combustion side has been evaluated in this study. The main contributions of this work are as follows: (1) a comparative assessment between the suggested heat-integrated process and conventional process, and (2) establishing a one-dimensional (1-D) mathematical model to study the influence of important parameters on the process performance.
+Process description
+Conventional glycerol-steam reformer
+Fig. 1(a) illustrates a block diagram of the conventional steam reforming of glycerol process. The glycerol is pumped into a heat exchanger to vaporize and then mixed with H2O to make the feed stream, and after that enters the fixed-bed reactor to produce H2. A furnace is inserted to supply the essential heat for the GSR reactions. The outlet stream of reactor enters to condenser and flash drum to separate the glycerol and H2O from other gases, and next pressure swing adsorption (PSA) unit is employed to separate pure H2 [39].
+Download : Download high-res image (177KB)
+Download : Download full-size image
+Fig. 1. Block flow diagram of a) Conventional glycerol-steam reformer and b) HMIR process [14].
+Heat and mass integrated reformer (HMIR)
+Fig. 1(b) shows a block diagram of the proposed integrated GSR with and catalytic combustion process. HMIR is the key part of this process. Additionally, Fig. 2 illustrates a diagram of the conceptual design of this novel configuration. HMIR has a shell and tube structure, in which GSR occurs in the tube side as an endothermic reaction and catalytic combustion reactions take place in the shell side as a heat source for the reforming side. The required fuel for the combustion side is provided from by-products of the reforming side, which are recycled from the reforming side outlet to the combustion side. As Fig. 1(b) indicates, the combustion side output stream, including unreacted gasses and steam, is used in a heat exchanger to preheat the input glycerol. Moreover, the produced H2O from the combustion reactions, together with the separated glycerol and H2O from the reforming side outlet stream, are recycled at the beginning of the process.
+Download : Download high-res image (186KB)
+Download : Download full-size image
+Fig. 2. Schematic diagram of HMIR.
+Methodology
+Governing equations
+To study the species concentration and temperature profile along the reactor length, a 1-D heterogeneous mathematical model has been developed. Mass and energy conservation equations for the shell and tube sides of the reactor are written based on a differential element Δz which is illustrated in Fig. 2 and as well as the following assumptions:
+•
+Owing to the high compressibility factor (i.e., 1.0 and 0.995 for the catalytic combustion and reforming sides reactions, respectively), calculated by the Peng-Robinson equation of state, the ideal gas law is applied for the gas phase.
+•
+Steady-state condition and constant bed void fraction along the reactor are assumed in the shell- and tube sides.
+•
+The reactor is filled with fresh catalysts; thus deactivation of catalysts is ignored.
+•
+Based on the high Peclet number (Pe > 100), the axial mass and heat diffusion terms are insignificant compared to the gas bulk movement and can be ignored [40].
+•
+The thermal tube wall resistance is ignored in comparison with the gas phase convection resistance.
+•
+The effectiveness factors for both sides of the reactor are taken equal to one because of the small catalyst diameter (i.e., <0.25 mm) [41].
+Mass conservation equations for component i
+(2)
+(3)
+Where
+is equal to +1 and −1 for production and consumption of component i, respectively, and also
+represents the species stoichiometric coefficients.
+Overall mass balance
+(4)
+Energy balances
+(5)
+(6)
+(7)
+Momentum balance
+(8)
+Boundary conditions
+In order to solve the conservation equations, the Dirichlet boundary conditions are used as follows:
+(9)
+In HMIR, the product stream from the tube side is recycled into the shell side at the various injection points. At the mixing point, the temperature and mole fraction are calculated by Eqs. (10), (11). Where -, 0, and + superscripts show injection stream, entered stream, and exit stream of mixing point, respectively.
+(10)
+(11)
+Fundamental equations
+Fundamental property relations that are applied to determine the transport and physical properties are presented in Table 1.
+Table 1. Fundamental equations.
+Variable Expression Reference
+Mass transfer coefficient between the fluid phase and the solid particle
+[42]
+Molecular diffusion coefficient in a multi-component gas mixture
+[43]
+Binary diffusion coefficient
+[44]
+Overall heat transfer coefficient
+Heat transfer coefficient between the tube wall and fluid phase
+[42]
+Heat transfer coefficient between the packed-tube wall and fluid phase
+[45]
+Heat transfer coefficient between the solid particle and the fluid phase
+[46]
+Fluid mixture density
+Fluid mixture viscosity
+[47]
+Gas viscosity
+[48]
+Fluid mixture heat capacity
+[49]
+Heat capacity of species
+Reaction kinetics
+Steam reforming of glycerol
+Eq. (1) shows the overall form of GSR, which contains water–gas shift as well as decomposition of glycerol reactions. This reaction occurs on Ni/Al2O3 catalyst under temperatures of higher than 723 K and atmospheric pressure. Even though, some side reactions such as Eqs. (14), (15), (16), (17), (18), (19), (20), (21), (22) are possible to happen with the primary reactions.
+(12)
+(13)
+(14)
+(15)
+(16)
+(17)
+(18)
+(19)
+(20)
+(21)
+(22)
+The high ratios of H2O to glycerol can diminish the carbon deposition [50], so Eqs. (18), (19), (20) are not considered in the developed model. Although, CH4 is the main by-product of the GSR reaction, which involves in the reactions (14), (15), (16), (17), so CH4 formation should be considered in the model. In addition, acetol, acetaldehyde, formaldehyde, and acetic acid (See reactions (21), (22)) are other possible side-products of GSR [51], [52] that have been ignored in this study. The power-law rate expression proposed by Cheng et al. [39] is considered for the GSR reaction (Eq. (23)). In this kinetic model, the production rate of CH4, CO, CO2 and H2 was measured based on reactions that occurred during the GSR. The required GSR rate expression parameters are provided in Table 2.
+(23)
+Table 2. GSR rate expression constants [39].
+Components A
+E
+a b
+C3H8O3 3.81 59.8 0.48 0.34
+H2 37.2 60.2 0.34 0.27
+CO2 11.6 61.8 0.39 0.41
+CO 308.6 73.9 0.74 −0.39
+CH4 2834.2 118.9 0.88 0.34
+Catalytic combustion
+The catalytic combustion of CH4 and CO occur in the reactor shell side over Rh/α-Al2O3 catalyst, which are shown by Eqs. (24), (25). In the case of CO catalytic combustion, noble catalysts are widely used due to their high activity as well as excellent thermal and mechanical stability. On account of the remarkable properties of such catalysts, the obstacle of the high synthesis cost could be ignored. The most well-known noble catalysts in the literature on CH4 and CO oxidation are Pd, Pt, Rh, Au and Co [53], [54]. Among these effective catalysts for partial oxidation of hydrocarbons, Rh has been suggested as the best-performing active element and the least-selective catalyst to carbon formation [55]. The rate expressions suggested by Tavazzi et al. [55] are used for these reactions and listed in Table 3. Pashchenko [56] investigated the NOx emissions for non-catalytic combustion of synthetic fuel, which consists of CH4, H2, CO, CO2, and N2 and compared the results with the cases of using pure components as fuel. The combustion was carried out in a swirl-burner with the temperature in the flame front more than 2000 K. The results showed that at fuel/air ratio of one, the NOx emission for all cases is in the range of 88.9 ppm to 112 ppm. However, in this study, the maximum temperature of combustion zone is below 875 K, which leads to diminishing thermal NOx formation [57] and also the pollutant emissions in the catalytic combustion, at low operating temperatures (<873 K), are much lower (∼5 ppm) than non-catalytic cases [53]. Thus, in this system NOx formation reactions in the combustion section have been ignored.
+(24)
+(25)
+Table 3. Kinetic expressions and parameters of catalytic combustion [55].
+Reaction Kinetic expression
+CH4 combustion
+8.061×10−3 6795
+CO combustion
+0.254 7000
+
+Surface adsorption
+H2O 2.216×10−1 −19900
+Base case
+The specifications of both reforming and combustion sides, including the operating conditions and rector geometry considered in this study, are described in Table 4 as a base case scenario. The HMIR performance has been studied by glycerol conversion, H2, CO and CO2 yields, thermal efficiency, and molar compositions of species, which are shown by Eqs. (26), (27), (28).
+(26)
+(27)
+(28)
+Table 4. Specifications of the GSR- and combustion sides.
+Variable value
+GSR side
+Weight hourly space velocity (WHSV) (hr−1) 4
+Temperature of inlet gas (K) 820
+Steam to glycerol molar ratio 7
+Gauge pressure of inlet gas (atm) 5
+Length of reactor (m) 1
+Tube diameter (m) 0.1
+Catalyst diameter (m)a 1.2 × 10−3
+Density of catalyst (kg m−3)a 1870
+Porosity of bed 0.4
+
+Catalytic combustion side
+Weight hourly space velocity (WHSV) (hr−1) 3
+Temperature of inlet gas (K) 820
+Gauge pressure of inlet gas (atm) 1
+Tube diameter (m) 0.2
+Catalyst diameter (m)b 1.5×10−3
+Density of catalyst (kg m−3)b 2000
+Porosity of bed b 0.5
+a
+Saidi and Moradi. [28].
+b
+Shelepova et al. [58].
+Solving procedure
+The developed mathematical includes a set of simultaneous ordinary differential and algebraic equations. The ordinary differential equations are discretized by the backward finite difference approximation in order to obtain a set of non-linear algebraic equations. Then, to solve these equations, 1000 equally spaced sections are considered along the reactor axis. Within MATLAB (R2015a) software, the “fsolve” function using the trust-region-reflective algorithm is applied to solve the mathematical model.
+Since the tube side outlet stream, after glycerol, H2O, and H2 separation, is recycled to the combustion side, a trial-and-error method is essential to complete the numerical solution. Therefore, at the combustion side entrance, initial values of CH4, CO, and CO2 molar flow rate are assumed, and then compare the final values of these parameters at the outlet of the reforming side to the initial guess. If the difference between the final and initial values of each component is not less than the expected value, the calculated values of the current step are selected as the initial guess of the next step. This procedure continues until convergence is obtained.
+Results and discussion
+Model validation
+For the validation of the proposed mathematical model, the results of simulation are evaluated against the experimental data reported by Cheng et al. [39] under the same operating conditions and geometry used in their study. Table 5 shows that the maximum absolute error (AE) value for H2/glycerol ratio at 823 K is 0.5; thus the simulation results are consistent with the experimental results. Therefore, the proposed mathematical model can predict the performance of glycerol steam reformer. It is worth noting that, as the kinetics model did not provide the H2O production or consumption rate, the atomic balance is used to calculate the H2O molar flow rate. Due to this subject, some errors have been seen in some cases. Although, it is required to validate the accuracy of HMIR results with actual experimental setup data to obtain more certainty and ensure safety.
+Table 5. Glycerol steam reformer model validation with experimental data [39].
+Inlet temperature (K)
+Empty Cell
+Molar ratio
+H2:C3H8O3 CO2:C3H8O3 CO:C3H8O3 CH4:C3H8O3
+723 Simulation results 0.8 0.45 0.075 0.009
+Experimental data 1.0 0.47 0.069 0.017
+Error 0.2 0.02 0.006 0.008
+
+823 Simulation results 2.8 1.3 0.39 0.17
+Experimental data 3.3 1.6 0.28 0.23
+Error 0.5 0.3 0.11 0.06
+Comparison between HMIR and adiabatic glycerol steam reformer
+In this section, a comparison between HMIR and adiabatic glycerol steam reformer (AGSR) under the same conditions is carried out to illustrate the effect of the catalytic combustion side on the HMIR performance. In the AGSR, no heat transfer occurs between the reforming tube and its surrounding. To evaluate the performance of these two reactors, the temperature, glycerol conversion and thermal efficiency profiles along the rector length for HMIR and AGSR are compared.
+Fig. 3(a) illustrates the temperature profiles of AGSR reforming side as well as HMIR reforming-and combustion sides. The reforming side temperature profile of HMIR is located above the AGSR due to heat transfer between exothermic and endothermic sides. Also, a rapid temperature drop near the entrance of the reforming side is related to high H2O and glycerol contents at the entrance of reactor, which leads to a faster reaction rate in this zone. Consequently, the required energy to proceeding the reforming reaction is taken from sensible heat. After that, due to depletion of reactants, a smooth decreasing trend for temperature is observed. In the combustion side of HMIR, a saw tooth shape temperature profile is observed. At the injection point of recycle stream, the temperature increases rapidly because of combustion reactions. After that, a decreasing trend occurs due to heat transfer from the shell side to the tube side.
+Download : Download high-res image (583KB)
+Download : Download full-size image
+Fig. 3. Variation of a) temperature, b) glycerol conversion and thermal efficiency and c) H2, CO and CH4 yields along the length of HMIR and AGSR.
+Fig. 3(b) shows the glycerol conversion and thermal efficiency along the length of HMIR and AGSR. Since the GSR reaction is highly exothermic, so increase in the temperature of reactor leads to an increase in the conversion of reactants. Moreover, the heat transfer from the combustion side to the reforming side makes a higher temperature profile in HMIR compare to AGSR. Thus, as is illustrated in this figure, HMIR has a higher glycerol conversion profile in comparison with AGSR, and increases glycerol conversion by 48%. Increasing the glycerol conversion results in a higher production rate, and subsequently increases the content of H2, CO, and CH4 along the reactor. So HMIR has a higher thermal efficiency (i.e., 41%), H2 yield (i.e., 63%), CO yield (i.e., 4.3%) and CH4 yield (i.e., 2%) compare to AGSR (i.e., 27%, i.e., 41%, i.e., 3.2% and i.e., 1.8% respectively), represented in Fig. 3(c). It should be noted that since the produced CO and CH4 in the reforming side are used as combustion side feed, increasing CO and CH4 yields lead to an increase in the combustion side temperature and subsequently glycerol conversion.
+In general, the results indicate that the use of a catalytic combustion section to provide the required heat for the reforming section is feasible and beneficial, due to increasing the glycerol conversion (∼70%) and H2 yield. Also, recycled CO and CH4 can supply a great amount of energy for reforming side. The supplied energy from the combustion side to the reforming side equals 5.2 KW.
+Components profiles along the length of HMIR
+Fig. 4 depicts the profiles of species mole fraction along the length of combustion side. As seen in this figure, at the injection point of recycle stream, catalytic combustion reactions occur, and immediately the O2 concentration decreases. Also H2O and CO2 are produced, which leads to increase their concentrations in the combustion side. Since the catalytic combustion is very fast reaction, and the mount CO and CH4 as reactants are distributed along the bed, at the injection point, the CO and CH4 concentrations quickly become zero, which has been magnified in the figure.
+Download : Download high-res image (193KB)
+Download : Download full-size image
+Fig. 4. Profiles of species mole fraction in the combustion side.
+Fig. 5 demonstrates the profiles of species mole fraction on the dry basis (without considering H2O content) along the length of reforming side. As illustrated, the catalyst bed can be divided into two zones. In the first part (up to 0.3 of reactor length), due to the high concentration of reactants along with high-temperature conditions (See Fig. 3(a)), the changes in the concentration of components are fast. So rapid reduction in the glycerol concentration as well as an increase in the H2, CO2, CO, and CH4 concentrations are observed. In the second part, fuel depletion and a decrease in the temperature cause a gradual change in the concentration profiles. At the outlet of the reactor, the mole fraction of CH4 and CO reach 1.3 % and 3 %, respectively.
+Download : Download high-res image (229KB)
+Download : Download full-size image
+Fig. 5. Profiles of species mole fraction without considering steam (Dry basis) and pressure variation along the bed in the reforming side.
+Pressure drop is one of the affecting variables in packed-bed reactors, and high values of it are not interested in the process. Therefore, it is necessary to study the pressure behavior and control this variable. For these reasons, the variation of pressure along the bed is plotted on the right Y-axis of Fig. 5. The total pressure drop equals 0.35 atm, which is an acceptable value.
+Effect of reforming side influencing parameters on the performance of reactor
+In this section, the effect of reforming side inlet temperature, pressure, steam/glycerol ratio, and WHSV on the glycerol conversion, H2 yield, and the maximum temperature of combustion side is investigated. It should be noted that the maximum temperature of combustion side is directly related to the flow of recycle stream to the combustion side. Therefore, it can be considered as a criterion for the flow of recycle stream.
+Fig. 6(a) represents the effect of reforming side inlet gas temperature on the reactor performance. Since steam reforming of glycerol is a highly endothermic reaction, rising inlet gas temperature results in more reaction progress, higher glycerol conversion, and H2 production. More CO and CH4 production lead to an increase in recycle stream flow, and consequently, the temperature of combustion side is increased. Since the inlet gas temperature has no impressive effect on the maximum temperature of combustion side, the use of high inlet gas is more favorable.
+Download : Download high-res image (1MB)
+Download : Download full-size image
+Fig. 6. The influence of reforming side inlet gas a) temperature, b) pressure, c) steam/glycerol and d) WHSV on the reactor performance.
+Fig. 6(b) illustrates the reactor performance at various inlet gas pressure. Increasing inlet pressure leads to an increasing glycerol conversion, which is also confirmed by Silva and colleagues [23] as well as Saidi and Moradi [28]. In the range of pressure changes from 2 to 8 atm, glycerol conversion is enhanced by 28.5%. Improving the H2 yield with the inlet pressure is attributed to glycerol conversion. Since rising pressure has a negative impact on the CO production rate, increasing pressure results in diminishing the recycle stream flow and the maximum temperature of combustion side. Considering the higher glycerol conversion at higher pressures, it is recommended that reactor operates at higher pressure; on the other hand elevating the inlet pressure needs more power. So the desirable inlet pressure should be specified depending on the application of reactor.
+Fig. 6(c) shows the changes in the glycerol conversion, H2 yield, and the maximum temperature of combustion side as a function of steam/glycerol ratio. Glycerol conversion improves by 26% with changing in steam to glycerol ratio from 3 to 11. Also, owing to the increase in glycerol conversion, the H2 yield increases with steam to glycerol ratio. By increasing the steam/glycerol ratio at the same feed flow rate, the inlet glycerol content is decreased, which results in diminishing CO and CH4 production rate. Thus, recycle stream flow rate and the maximum temperature of combustion side decrease with glycerol/steam ratio. Regarding the above results, and also decreasing coke deposition with steam/glycerol ratio, the use of higher ratios is beneficial.
+The impact of the inlet WHSV of the reforming side on the performance of reactor is indicated in Fig. 6(d). A rising in WHSV results in a reduction of the flow residence time, and eventually a decrease in the glycerol conversion. Owing to decreasing the glycerol conversion, by changing the WHSV from 3 to 5 hr−1, a decrease in H2 yield is observed. The glycerol conversion and H2 yield decreased by 13 and 14.5%, respectively. In contrast, the maximum temperature of combustion side elevates with WHSV due to an increasing the content of glycerol with WHSV, which leads to an increase in the CO and CH4 production rate, and consequently recycle stream flow to the combustions side. Maximum temperature varies from 842.5 to 858.6 K. However, lower WHSV is suitable for the glycerol conversion and maximum temperature of combustion side, but fewer products are produced due to lower inlet glycerol content.
+Effect of number of injections
+In this section, the performance of reactor at different recycle stream number of injections is investigated. Side feeding strategy for the combustion side is used to control reactor conditions, and preventing hot spot zone in the shell side catalyst bed. By increasing the number of injections, the maximum temperature of combustion side is decreased. Besides the lower number of injections show higher glycerol conversion and H2 yield (See Fig. 7). Moreover, the case of a single injection has a considerably higher glycerol conversion than the other points. When all fuels enter at the entrance of reactor, GSR can utilize more of the heat released from the combustion side. Thus a trade-off is noticed between the maximum temperature of combustion side (decreasing from 966 to 845 K) and the glycerol conversion (reducing from 72 to 67%), showing that considering the proper number of injections is essential to obtain more glycerol conversion and H2 yield at suitable conditions.
+Download : Download high-res image (233KB)
+Download : Download full-size image
+Fig. 7. The influence of the number of injections on the reactor performance.
+Conclusions
+In this study, the production of sustainable H2 was investigated using glycerol steam reforming in a novel heat integrated reactor from the perspective of modeling and simulation. The proposed configuration is a shell and tube heat exchanger reactor in which the GSR occurs in the tube side as the endothermic reaction and catalytic combustion of CO and CH4 take place in the shell side as the exothermic reactions. Simultaneously, produced CO as well as CH4 as by-products of the steam reforming section are recycled to the combustion section as fuel. Thus, the proposed heat-integrated reactor gives a preferable temperature profile along the bed by using its by-products as a heat source. A 1-D heterogeneous mathematical model was developed to investigate the performance of HMIR and compared the results with the adiabatic mode. The following important results were obtained: (1) HMIR could improve the glycerol conversion, thermal efficiency, and H2 yield by 48, 53, 53%, respectively, compared to the AGSR, (2) HMIR provided a 5.2 KW energy for the reforming side from the combustion side, (3) the furnace needed for the conventional GSR process could be eliminated in the HMIR, and consequently, the process cost was reduced as results of fuel consumption reduction. In general, the innovation of this research was to increase the efficiency of GSR without the use of additional fuels for heat supply, and this suggested process has not yet been studied in the case of GSR.
+Furthermore, the effect of key parameters on the HMIR performance was studied. The proper operation conditions included T >800 K, P >5 atm, H2O/Glycerol >8, WHSV <4 hr−1 as well as the number of injections >5 to achieve higher glycerol conversion (nearly 70%) and prevent shell-side catalyst deactivation. The features of the proposed reactor illustrated that this configuration is advantageous from the viewpoint of energy saving; however, a real experimental setup is needed to check the feasibility of this concept more precisely. It should also be noted that, the HMIR has some limitations compared to the conventional reactor, such as reducing control over the process by decreasing the degree of freedom that significantly complicates the process, complexity in recharge or replacement of deactivated catalysts because of shell and tube structure, and different life time of catalysts in the endothermic- and exothermic-side. These challenges can be solved by advanced adaptive control.
+As a suggestion for future works, due to the significant impact of operational variables on the process performance, the process optimization and techno-economic evaluation can be carried out to increase the process efficiency according to the required application. In addition, the effect of CH4 makeup flow rate in the combustion section on the process performance and emissions of CO2 can be investigated.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

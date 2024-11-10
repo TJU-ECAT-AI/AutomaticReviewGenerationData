@@ -1,0 +1,385 @@
+<DOCUMENT>
+Propane Dehydrogenation on Platinum Catalysts: Identifying the Active Sites through Bayesian Analysis
+
+Abstract
+Uncertainty quantification, Bayesian statistics, the reported experimental literature, and density functional theory are synthesized to identify the active sites for the non-oxidative propane dehydrogenation on platinum catalysts. This study tests three different platinum surface models as active sites, Pt(100), Pt(111), and Pt(211), and two different methodologies for generating uncertainty, using data from four density functional theory functionals and data from the BEEF–vdW ensembles. By comparing these three surface facets using two uncertainty sources, a total of six different computational models were evaluated. Three experimental data sets, with varying numbers of reported observables, such as turnover frequencies, selectivity to propylene, apparent activation energy, and reaction orders, are calibrated and validated for these six models. This study finds no evidence for Pt(100) as the dominant active facet and finds that Pt(211) has some evidence for being the most relevant active site on the catalyst. In addition, all four functional models were excluded from final data analysis due to poor “goodness-of-fit”. In contrast, the BEEF–vdW model with ensembles (BMwEs) was found to pass “goodness-of-fit” for most of the models tested. Finally, for both Pt(111) and Pt(211), this study finds that the majority of simulations found the kinetically rate-controlling step the first dehydrogenation step from propane to C3H7*.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+KEYWORDS:uncertainty quantification computational catalysis heterogenous catalysis Bayesian statistics propane dehydrogenation
+Show More
+
+Introduction
+ARTICLE SECTIONSJump To
+Propane dehydrogenation (PDH) to propylene research continues to attract significant scientific interest due to propylene’s industrial importance and reaction complexity. Non-oxidative PDH on platinum-based catalysts continues to be a significant pathway for producing propylene. (1) Understanding the reaction mechanism and kinetics of surface-catalyzed reactions and identifying the active sites for industrial catalysts can help design future catalysts for PDH. Many experimental studies have been done to measure kinetic data for non-oxidative PDH. (2−10) For example, in the work by Biloen et al., (2) platinum and platinum–gold catalysts were studied at 633 K, a partial pressure of hydrogen gas of 2 bar, and a partial pressure of propane of 0.04 bar. They found that the surface was covered by hydrogen under these reaction conditions and reported a turnover frequency (TOF) of propylene of 3.5 × 10–2 s–1. They also calculated a reaction order of −1.1 for hydrogen gas and 1 for propane gas and measured an apparent activation energy of 121 kJ/mol. Finally, they proposed that the rate-determining step was the dehydrogenation step of a propyl radical, C3H7*, to propylene.
+Others have found a similar TOF at higher temperatures with lower partial pressures of H2. In the work performed by Bariås et al., (3) a propylene TOF of 0.2 s–1 was observed on platinum at 792 K, a partial pressure of propane of 0.29 bar, and a partial pressure of H2 of 0.09 bar. In addition to the reported TOF, they also reported a selectivity to propylene of 85%.
+Experimental work on size-dependent platinum particles was performed by Zhu et al. (4) The group studied multiple-sized particles to possibly identify the active site at temperatures from 723 to 823 K and pressures of H2 and propane that vary from 1 to 9 kPa. They found that particles 5 nm in diameter and larger had a higher selectivity and lower TOFs for both propane and propylene than smaller particles. In addition, reaction orders for propane were approximately 1 for all sizes, but the reaction order for H2 ranged from −0.07 to −0.51, with the reaction order decreasing for larger particles. The apparent activation energy was found to range from 92 to 95 kJ/mol under steady-state conditions. Compared with that of Biloen et al., (2) the propane reaction order is the same, but the H2 reaction order is less inhibiting. The apparent activation order is slightly less. Both of these shifts are within reason given the different temperature and partial pressure conditions of propane and H2. One would expect H2 to exhibit a more negative reaction order at lower temperatures and higher H2 partial pressures.
+In the work done by Yang et al., (10) PDH was tested on two different particle shapes that they claimed to contain approximately only Pt(100) and Pt(111) sites. They then evaluated the selectivity to propylene and the TOF of propylene. They found that TOFs of propylene on both surfaces were relatively similar, from 0.58 to 0.6 s–1. However, the cubic particles had a selectivity to propylene of approximately 72%, while the selectivity toward propylene for the octahedral particles was approximately 93%. They believed that this difference in selectivity was due to the particular facets being more present on the cubic particles. They justified this claim by comparing theoretical results using density functional theory (DFT), where they theorized that the lower selectivity to propylene was due to a lower adsorption energy for intermediates involved in the PDH on Pt(100).
+In a similar work done by Zhu et al., (4) experiments and DFT calculations were used to identify a dominant active site. Using a relatively small dehydrogenation network, they concluded that Pt(111) might be the most active site. Other theoretical work has been performed to identify the active site responsible for the activity of platinum catalysts for PDH, by either calculating the adsorption of propane and C3 species on platinum facets (11,12) or by generating microkinetic models on particular surfaces. (13,14) Pt(211) has been studied as a model site representing edges and corners. (4,15,16) It was found that Pt(211) is active but may be unselective toward PDH, dependent on reaction conditions. (16) Numerous and competing theories of the active site for PDH persist.
+In this work, we seek to identify the most likely dominant active site (assuming one facet dominates the reaction kinetics under experimental reaction conditions) by combining published experimental data with Bayesian statistics and our DFT calculations. This work compares three surface facets, Pt(100), Pt(111), and Pt(211), while using two different sources of generating uncertainty and its correlation structure. While modeling each facet, kinetic data such as TOFs for propylene, apparent activation energies, reaction orders, and selectivity to propylene are reported. Finally, this study also seeks to identify the mechanism and rate-controlling species for these potential active sites.
+Methods
+ARTICLE SECTIONSJump To
+Computational Details
+In this study, DFT calculations were performed using the Vienna Ab initio Simulation Package (VASP) version 5.4.4, which uses the projector augmented-wave method. (17−21) A plane-wave energy cutoff of 400 eV was used, and together with a Monkhorst–Pack reciprocal space grid of 5 × 5 × 1, converged energies were obtained for the reaction systems. (22,23) In addition, the Methfessel–Paxton method order one with a smearing width of 0.2 eV was used for calculating the electronic occupancies. The energy convergence criterion was 1 × 10–7 eV, and for geometry convergence, a force criterion of 0.03 eV/Å was used. Transition state searches were conducted using the nudged elastic band method followed by further optimization with the dimer method. (24−28) In addition, it is known that the entropies calculated by a purely harmonic approach may be a poor approximation. Due to this, we apply a frequency correction to set all low frequencies below 50 to 50 cm–1, as previously described by Haworth et al. (28)
+Three surface models, Pt(100), Pt(111), and Pt(211), were chosen as model facets for this project. For Pt(100) and Pt(111), we used a (4 × 4) 4-layer, 64-atom surface, relaxing the first two layers. For Pt(211), an 80-atom, 10-layer surface model was used, and the first six layers were relaxed. The bulk fcc-platinum crystal was found to have an optimized lattice constant of 3.92 Å using the PBE-D3 functional, (29,30) and the optimized surfaces had cell parameters as indicated in Table S1. A vacuum gap of 20 Å was included on each surface to avoid periodic interactions. Representations of these surfaces can be seen in Figure 1. In addition, 138 reactions were investigated, including cracking and deep dehydrogenation. Figure 2 displays the dehydrogenation reaction network for C3 species studied in this system. The full reaction network is described tabularly in tables TS2–TS13 in the Supporting Information.
+Figure 1
+Figure 1. Schematics of all platinum facets used in this study.
+Figure 2
+Figure 2. Dehydrogenation reaction network for C3 species.
+We chose to first explore the system by using the Perdew–Burke–Ernzerhof functional with Grimme’s van der Waals corrections (PBE-D3) for the optimization of the surfaces, adsorbed species, and transition states. (29,30) This functional was chosen for its generality, the computational communities’ extensive experience, and its inclusion of empirical van der Waals interactions. An additional three functionals were chosen, including the revised Perdew–Burke–Enzerhof functional (RPBE), (31) the Bayesian error estimate functional with van der Waals corrections (BEEF–vdW), (32) and the strongly constrained and appropriately normed functional with revised Vydrov and Van Voorhis nonlocal correlations (SCAN-rVV10), (33) to generate single point energies based off the PBE-D3 structures. Three generalized gradient approximation (GGA) functionals, these being PBE-D3, RPBE, and BEEF–vdW, were specifically chosen due to the metallic nature of the surface model and their prominent use in the computational catalysis community, that is, any of them could have been used for studying the PDH over Pt catalysts. In addition, we chose SCAN-rVV10, a meta-GGA that generally does not underpredict energy barriers as much as GGA functionals. Out of these four functionals, three include van der Waals interactions, which we believed to be critical for the adsorption processes of hydrocarbons, and one without van der Waals interactions that generally predicts lower adsorption energies (RPBE), but that is optimized for predicting adsorption energies of small molecules so that errors in adsorption energies would be more likely to be represented in the prior distribution. These functionals were also previously compared in other work, and it was thought that they might aid in identifying possible functional pairings that may better estimate the errors present. (34) Next, BEEF–vdW was used as it generates 2000 non-self-consistent ensemble energies based on the converged charge density. Finally, gas-phase thermodynamics were corrected to NIST data using a Dirichlet distribution as described in the work done by Walker et al. in order to allow gas-phase uncertainties to be uniformly sampled among the three different gas-phase species. (35−38) The range for the gas-phase errors was allowed to range from ±0.2 eV, assuming that propane, propylene, and H2 are generally well described by DFT. All of the intermediate, gas-phase species and transition-state energies of these four functional calculations can be found in Tables S2–S14 in Section II of the Supporting Information.
+Functional Latent Variable Model
+To summarize the uncertainty present in our DFT calculations, factor analysis was applied to the four functionals used in this study in the same way as that in Walker et al. (37−39) This has been thought to be an encompassing methodology for calculating the uncertainties for the energies of the species involved. In general, the different functionals, stated in the previous paragraph, have been extensively used in the catalysis community, and these functionals have been thought of as relatively accurate in calculating emergent properties of catalytic surfaces, such as TOFs. The uncertainty for the four functional models (FFMs) was generated by this method, with the covariance matrix calculated between the energies of the adsorbed species and transition-state species, and the mean of the energies being the mean of the four functionals chosen in this study.
+We also chose to generate a second model system using BEEF–vdW and its ensembles. For every species, including gas-phase, metal slab, adsorbed species, and transition-state species, BEEF–vdW generates an ensemble of 2000 non-self-consistent energies. The adsorbed intermediate and transition-state energies were referenced to propane, hydrogen, and the platinum slab, such that
+(1)
+where vref,i,j is the referenced BEEF ensemble energy j for either the adsorbed species or transition state i, vi,j is the BEEF ensemble energy output j for species i, vH2,j and vpropane,j are the gas-phase values of the ensemble energies for propane and hydrogen gas, respectively, vplatinum,slab,j is the ensemble energy j of the specific slab the species is adsorbed on, and Npropane,i and NH2,i are the number of propane and hydrogen molecules, respectively, needed to correct the sum to the number of carbon and hydrogen atoms present in the species i, which can be fractional.
+Next, the mean was taken of the referenced 2000 BEEF–vdW ensembles, μref,i, and subtracted from the referenced 2000 functional ensemble energies, vref,i,j, so that the mean of the ensembles would be 0, as described in eq 2.
+(2)
+where vref,i,j* are the 2000 BEEF ensemble energies for each species with a mean of 0. Finally, the BEEF–vdW referenced energy was added back into the ensemble using the following equation
+(3)
+where GBEEF–vdW,ref,i is the Gibbs free energy of species i computed from the mean of the BEEF–vdW functional (and referenced as before). Equation 3 ensures that the mean of the ensembles yields the BEEF–vdW Gibbs free energy for the intermediate or transition state i. After this, the BEEF–vdW ensemble energies were processed using a factor analysis model. It was found that the covariance matrix generated by the factor analysis and the covariance matrix generated without the factor analysis for BEEF–vdW were similar to each other. Still, this study used the factor analysis-derived covariance matrix to keep the methodologies consistent. Using the BEEF–vdw data, this model is known as the BEEF–vdW model with ensembles (BMwEs).
+Likelihood Function and Model Discrepancy
+The likelihood function, p(D|θ,M), as defined in the previous work, (37,38) provides the likelihood of finding experimental data, D, given the values of parameters and the uncertainty of the model. This study compared our models against three data sets, each data set of a different size. These three data sets are summarized in Table S21 in Section III of the Supporting Information. Data set 1 (D1) contains the following quantities of interest (2)
+(4)
+Data set 2 (D2) contains five quantities of interest to calibrate on. (4)
+(5)
+Data set 3 (D3) contains two quantities of interest to calibrate on. (3)
+(6)
+The TOF is the turnover frequency, αi is the reaction order of either propane or hydrogen gas for propane consumption, and Eapparent is the apparent activation energy for propane consumption. Selectivity is defined to be the following
+(7)
+This study compares data sets of unequal size, remembering that likelihoods are multiplicative, and though incomplete data sets are less than ideal, they are unfortunately a reality of modeling and synthesizing already published experimental data. The measurements are assumed to be independent given our model, which can translate into the factorization of the likelihood function given the data such as D1.
+(8)
+For D2, the equation is similar; however, it includes the additional selectivity term
+(9)
+D3 only reports the TOF and selectivity, which reduces the likelihood function for this set to eq 10.
+(10)
+Each individual likelihood function is defined by the difference between the simulations of our models and the experimental data. This discrepancy is due to unknown errors, both from the model and from the experiment. (36) We assume that the discrepancies are distributed with a mean of zero and an unknown variance in each measurement of σi2. Each of these variances is described using an inverse gamma distribution, which is reported in Table S18 in Section II of the Supporting Information, and an example is graphically described in Figure S1. These discrepancies can be written such that the experimental values are equal to the model value plus an error term.
+(11)
+The likelihood function for the calibration of PDH for experimental D1 can be expanded, as shown in eq 12.
+(12)
+The derivations for the likelihood functions for data sets D2 and D3 are included in Supporting Information Section II. The Quantification of Uncertainty for Estimation, Simulation and Optimization (QUESO) package is used to perform the statistical forward problem and calibration problem. (40) Using this, QUESO performed Metropolis-Hastings Markov chain Monte Carlo simulations for calibrating our data sets and for simulating the experimental data through the use of the microkinetic model. (41,42)
+A similar framework to that of the previous work done by Walker et al. was used to proceed with the Bayesian analysis. (37,38) Bayesian inference was first performed for each surface. Then, the Bayes formula in eq 13 was used to generate a posterior distribution, p(θ|D,M), for each surface model, that is, Pt(100), Pt(111), and Pt(211).
+(13)
+The prior distribution, p(θ|M), contains all of the uncertainties present in the calculations, including the correlation between the molecules.
+Microkinetic Modeling
+To calculate the adsorption free energies, the following equations were used, with propane and hydrogen gas as references
+(14)
+where ΔGads,i is the free energy of adsorption of the intermediate i, Gslab,i is the free energy of the slab and adsorbed intermediate i, Gslab is the free energy of the clean slab, NCH3CH2CH3 is the number of propane gas molecules involved in the reaction, GCH3CH2CH3 is the free energy of gas-phase propane, NH2 is the number of correcting H2 gas molecules present in the reaction, and GH2 is the free energy of hydrogen gas.
+The activation free energy is defined as the following, and the forward rate constants are defined using harmonic transition state theory.
+(15)
+(16)
+where ΔGj‡ is the activation free energy of the reaction j, Gj,i‡ is the free energy of the transition state in the reaction j, Gads,jR is the reactant free energy of adsorption for the reaction j, and kfor,j is the forward rate constant.
+Collision theory was used for calculating adsorption rate constants using the following equation
+(17)
+where N0 is the number of sites per surface area, and mA is the molecular weight of species A. The sticking coefficient has been set to one.
+A linear lateral interaction model was used to calculate the change in adsorption energies and transition state barriers as a result of the coverage of certain intermediates that dominate the surface, such as hydrogen on all three surfaces, CH3C species on Pt(211) and Pt(111), acetylene and single-atom carbon on Pt(100), and CH and CH3CH2C on Pt(111). It is assumed that errors in linear interaction parameters are small relative to the uncertainty in the low coverage species energy such that the linear lateral interaction parameters are only computed with the PBE-D3 functional. This and additional details such as the site occupancy of each species are further described in Section IV of the Supporting Information.
+Reaction orders in H2 and CH3CH2CH3 were calculated using the following equation
+(18)
+where αi is the reaction order of species i, ln(TOF) is the natural logarithm of the TOF of propylene, and ln(Pi) is the natural logarithm of the partial pressure of species i. We also calculated the apparent activation energy using the following equation
+(19)
+where Eapp is the apparent activation energy.
+Campbell’s degrees of kinetic and thermodynamic rate control were calculated using the following equations. (43−45)
+(20)
+(21)
+where XKRC,i is the degree of kinetic rate control, and XTRC,i is the degree of thermodynamic rate control.
+The reaction network studied includes coking (surface carbon atom formation) and other deep-dehydrogenation steps. All of the intermediates and transition states can be found in Section II of the Supporting Information.
+Model Exclusion Using Mahalanobis Distance
+Because of the large number of models tested in this paper, a test was first conducted to see if the Pt(100), Pt(111), and Pt(211) surfaces did not fail to predict the quantities of interest for the calibration and validation data. Failure was checked using the squared Mahalanobis distance for each experimental data set and testing for goodness-of-fit using a chi-squared table. (46−48) The square of the Mahalanobis distance is the following
+(22)
+where μ is a (n × 1) vector of the predicted mean values, n is the number of degrees of freedom present in the evaluated experiment, Σ is the n × n predicted covariance matrix, and d is the (n × 1) vector of reported data. The tested quantities can include TOFs, selectivity, reaction orders in propane and hydrogen, and apparent activation energies.
+If the distance statistic was outside of the probability of occurring at a 5% significance level, data was said to have failed to pass the goodness-of-fit, and those models would have to be removed from consideration. As shown in Table S19 in Section II of the Supporting Information, each of our experiments has different degrees of freedom and thus different outlier exclusion values.
+Bayesian Model Selection
+A similar methodology to that of Walker et al. (38) was used to evaluate the model evidence, also referred to as p(D|M), to see how more probable a surface (and the corresponding microkinetic model) is the active site compared to another surface. Each prior model was assumed to have an equal likelihood of being the active site. We note that it is assumed here that one “characteristic” surface model is able to describe all experimental kinetic data, that is, the experimental observation is not a result of multiple, qualitatively different surface models. In other words, this study did not test combinations of surface facets and corresponding microkinetic models as the collective active site. This does not remove the possibility of a combination of surfaces being the active site, just that this work is only testing the surface models independently. The evidence that was generated is compared between models by using Jeffery’s scale. (49) Jeffery’s scale is a comparison tool for the Bayes factors to see if one model is more favored than another given the ratio of evidence between them. As described in Table S20 of Section II of the Supporting Information, Jeffery’s scale can give a basic description of how much more likely, or how more well supported, a model might be when compared to another model based on evaluating the Bayes factors.
+Results and Discussion
+ARTICLE SECTIONSJump To
+For each catalyst model, a separate microkinetic model, uncertainty region, and gas-phase corrections were performed to generate the quantities of interest for each experimental result. Figures 3 and 4 illustrate the prior distribution of each model for both the BMwE and FFM models under D2 conditions. As visible in these figures, Pt(211) is the more selective of the surfaces, followed by Pt(111) and Pt(100). As reported in Table 1, after lateral interactions are included, we find that under D1 reaction conditions, Pt(211) and Pt(100) are dominated by H*, while Pt(111) has close to equal free and H* sites present on the surface. At higher temperatures, such as 793 and 792 K for experiments D2 and D3, we find that Pt(100) is dominated by C* and CHCH* species, with minor contributions from CHC*, CH3CCH*, and CH2CCH*. Under reaction conditions of D2 and D3, Pt(111) has a high free site coverage and a minor CH* coverage. Pt(211) has a high free site coverage, but CHC* and other minor coverage species, including CH3CHCH3*, CH3CH2C*, CH2CHCH2*, and CH3CCH*, become more prevalent at these higher temperatures. Lateral interactions used and their methodology can be found in Section IV present in the Supporting Information. Using the prior only, we find that Pt(211) has high selectivity to propylene for all reaction conditions, as seen in both Figures 3 and 4 and also displayed in Table S27. Pt(100) has a relatively high selectivity to propylene under D1 conditions; however, it becomes unselective under D2 and D3 conditions, where dominant products include ethylene and methane. Pt(111) is also selective to propylene under D1 conditions. At higher temperatures, Pt(111) becomes less selective toward propylene, with average selectivity to propylene falling from 77 and 84%, dependent on the methodology, to approximately 50%. Methane and ethylene become important products at these temperatures, similar to what happens to Pt(100) at higher temperatures. These changes in selectivity can be explained through reviewing both the free energy of adsorption of propane and other key products, as described in Tables S2–S14, and in activation barriers around the propane to propylene dehydrogenation pathway, as described in Supporting Information Tables S15–S17. Though the adsorption energies of propylene can partially explain the selectivity to propylene, selectivity to propylene may be better explained by the activation barriers for competitive dehydrogenation products for other C3H6 intermediates, deeper dehydrogenation of propylene, and cracking of propylene, which are all partial functions of the adsorption energy of propylene. For Pt(100), activation energies are lower for competitive dehydrogenation steps, such as CH3CH2CH2* → CH3CH2CH* + H* and CH3CHCH3* → CH3CCH3* + H*, than for either CH3CH2CH2* or CH3CHCH3* to produce propylene. At higher temperatures, cracking barriers of propylene and further propylene dehydrogenation are much more accessible, explaining the decrease in selectivity at the increasing temperatures of experimental data sets D2 and D3. For Pt(111), competitive dehydrogenation of the C3H7 intermediate species to other C3H6 species is relevant, as is similar to the case of Pt(100), but the barriers to further deep dehydrogenation and cracking of propylene are higher, explaining the decrease in selectivity as temperature increases but not to the extent of Pt(100). In addition, this may be most evident for the Pt(211) surface, where the dehydrogenation pathways from propane to propylene are more favorable than competitive dehydrogenation reactions from the CH3CH2CH2* and CH3CHCH3* intermediate species. The barriers for further dehydrogenation and cracking are much higher for Pt(211) than Pt(100) and similar to Pt(111), though much larger than the simple dehydrogenation pathways. These selectivity results change after calibration, and the selectivity to propylene becomes much higher for Pt(111) and Pt(211) for all models, which can be seen in Figures 5 and 6 and in Supporting Information Figures S14–S33.
+Figure 3
+Figure 3. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, modeling data set D2 for Pt(100), Pt(111), and Pt(211) using the BMwE for the forward-only model. Reported values are the experimental values reported in data set D2.
+Figure 4
+Figure 4. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, modeling data set D2 for Pt(100), Pt(111), and Pt(211) using the FFM for the forward-only model. Reported values are the experimental values reported in data set D2.
+Figure 5
+Figure 5. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, calibrated with data sets D1 and D3 and validating using data set D2 for Pt(100), Pt(111), and Pt(211) with the BMwE. Reported values are the experimental values reported in data set D2.
+Figure 6
+Figure 6. Quantities of interest including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, calibrated with data sets D1 and D3 and validating using data set D2 for Pt(100), Pt(111), and Pt(211) with the FFM model. Reported values are the experimental values reported in data set D2.
+Table 1. Average Site Coverages after Including Lateral Interactions on Pt(100), Pt(111), and Pt(211) for D1, D2, and D3 Conditions Using the FFM and BMwE
+average coverage of selected species on surface (%), after including lateral interactions, no Calibration
+  FFM
+  D1 conditions D2 conditions D3 conditions
+species Pt(100) Pt(111) Pt(211) Pt(100) Pt(111) Pt(211) Pt(100) Pt(111) Pt(211)
+free site 3.71 33.6 13.1 8.11 65.9 86.0 14.0 64.7 86.2
+H 96.1 66.1 86.4 0.00 0.45 1.22 0.97 0.96 1.36
+CH3C 0.00 0.00 0.00 0.00 0.22 0.00 0.00 0.45 0.00
+CHCH 0.00 0.00 0.00 19.7 0.07 0.00 25.3 1.16 0.00
+CHC 0.00 0.00 0.00 6.08 0.00 5.99 1.23 1.14 1.67
+CH 0.00 0.00 0.00 1.44 28.3 0.21 2.75 30.6 0.04
+C 0.00 0.00 0.00 40.1 2.82 0.12 45.1 0.66 0.00
+other species 0.19 0.30 0.56 24.6 2.25 6.50 10.7 0.30 10.7
+average coverage of selected species on surface (%), after including lateral interactions, no calibration
+  BEEF model with ensembles (BMwE)
+  D1 conditions D2 conditions D3 conditions
+species Pt(100) Pt(111) Pt(211) Pt(100) Pt(111) Pt(211) Pt(100) Pt(111) Pt(211)
+free site 18.7 47.3 48.6 7.23 63.4 87.9 9.58 68.6 97.1
+H 81.4 52.7 51.1 0.74 0.06 0.16 6.34 0.16 0.55
+CH3C 0.00 0.00 0.00 0.00 0.08 0.00 0.51 1.14 0.00
+CHCH 0.00 0.00 0.00 0.16 0.00 0.00 4.16 0.00 0.00
+CHC 0.00 0.00 0.00 0.07 0.00 10.4 3.58 0.00 1.44
+CH 0.00 0.00 0.00 0.03 32.3 0.03 0.15 27.3 0.01
+C 0.00 0.00 0.00 79.8 3.24 0.02 62.6 0.79 0.00
+other species 0.00 0.00 0.34 11.9 0.92 1.48 13.1 2.00 0.95
+average coverage of selected species on surface (%), after including lateral interactions, no calibration
+experiment reaction conditions
+D12 PCH3CH2CH3 = 0.04 bar, PH2 = 2 bar, T = 633 K
+D24 PCH3CH2CH3 = 0.03 bar, PH2 = 0.03 bar, T = 793 K
+D33 PCH3CH2CH3 = 0.29 bar, PH2 = 0.09 bar, T = 792 K
+After evaluating these prior models, we discuss model exclusion through the use of the squared Mahalanobis distance and chi-squared goodness-of-fit and then through analyzing the model evidence to see if any one site can be called a characteristic active site describing the overall kinetics.
+Model Exclusion
+To check whether a catalyst model could be the active site, the goodness-of-fit of each model is checked to the data by using the squared Mahalanobis distance and comparing it to the chi-squared values as described in Table S19 of Section II in the Supporting Information, after calibrating two experimental data sets to the surface microkinetic model and then running under conditions of one of the three experimental data sets. If the squared Mahalanobis distance is smaller than the chi-squared value for the experiment given the number of degrees of freedom, the model is not excluded from further data analysis. However, suppose the squared Mahalanobis distance value is greater than the χ-squared value for a particular experimental condition given a calibration set; in that case, the catalyst model for the entirety of the calibration set is excluded, as its estimates and uncertainties of the quantities of interest are inconsistent with the published experimental data. (2−4) As described in Table 2, we find that we can exclude from further analysis the Pt(100) surface as the potential only active site using both the FFM and the BMwE. In addition, similar results are found for Pt(111) and Pt(211) using the FFM, where the model fails to describe what is occurring in experiments D2 and D1, respectively.
+Table 2. Evaluated Squared Mahalanobis Distances for Pt(100), Pt(111), Pt(211) for Experimental Conditions for the Three Data sets and the Models Generated by the FFM and the BMwEa
+aSquared Mahalanobis distance numbers marked in the bold font are the ones that pass the “goodness-of-fit” tests.
+Considering the squared Mahalanobis distance, the only models to check for Bayes factors are Pt(111) and Pt(211) using the BEEF–vdW with ensembles model.
+Model Evidence
+After testing for goodness-of-fit using the squared Mahalanobis distance, the evidence generated is checked and compared for all non-excluded catalyst models. As described in Table 2, only the BMwE was able to pass the goodness-of-fit tests. This means that in this particular case, the FFM fails to provide consistent predictions with the experimental data for the simulations and must not be considered as a potential model for any of the three catalyst surfaces. For BMwE, the evidence of the Pt(111) and Pt(211) catalyst models can be compared, as they have passed the goodness-of-fit test. Pt(100) is excluded from further analysis as the active site for both uncertainty generation models since the surface failed the goodness-of-fit test in all calibration cases.
+In generating the Bayes factor between Pt(211) and Pt(111) for the BMwE, Table 3 describes that there is strong evidence for Pt(211) to be the active site for PDH when calibrating on D1 and D2. When calibrating models on D1 and D3, there is no evidence for or against either Pt(111) or Pt(211) to be the preferred active site. As described in Figure 5, Pt(211) and Pt(111) give similar results for the majority of the quantities of interest evaluated. Still, there are significant differences in the apparent activation energy, where Pt(211) does a more successful job of capturing the experimental data point.
+Table 3. Evidence of Non-Excluded Models and Their Bayes Factora
+aData marked in black failed “goodness-of-fit” tests for the calibration and validation data sets and thus are excluded from evaluating evidence.
+In addition, we analyzed the surfaces for the degree of kinetic rate control for propane consumption and propylene production. As shown in Figure 7, the Pt(211) and Pt(111) surfaces show that almost all of the rate-controlling steps are PDH to C3H7 species, in line with predictions from the rate-limiting step from the two experiments. (2,4) There is significant uncertainty with how rate-controlling these C3H7 species and these first dehydrogenation steps are, but in the kinetic degree of rate control for propane consumption, these two steps sum to one or close to one for the majority of simulations. Differences arise however when measuring the degree of kinetic rate control for propylene production. As the Pt(211) surface is highly selective, propane consumption and propylene production have the same values for the degree of kinetic rate control. However, for the less selective Pt(111) surface, there are differences for the degree of kinetic rate control on propane consumption and propylene production. This difference is due to the competing mechanisms for different dehydrogenation and C–C cleavage products.
+Figure 7
+Figure 7. Degree of kinetic rate control (DKRC) for PDH to propylene using the TOFs of propane (a,c) and propylene (b,d) using the BMwE forward-only model at 793 K for Pt(111) (a,b) and Pt(211) (c,d).
+Next, the two propane to C3H7 dehydrogenation steps can best explain the reported kinetics, which is again supported by the reported reaction orders. When the rate-controlling step is the dehydrogenation of CH3CH2CH3* + 1* → CH3CH2CH2* + H*, as described in Table S2 in the Supporting Information as reaction 2
+(23)
+then the rate equation is
+(24)
+If one assumes the following adsorption reactions to be in equilibrium
+(25)
+(26)
+then the surface coverage of the adsorbed species is found as
+(27)
+(28)
+Inserting the above equation into the previous equation, it is found that
+(29)
+If the majority of Pt sites are either free or covered by hydrogen, which is the case for Pt(211) sites and for Pt(111) sites under low-temperature conditions, then the free site coverage can be written as
+(30)
+and we obtain the following equation for the observed reaction rate
+(31)
+which can explain both the low-temperature reaction orders found by Biloen (2) with a propane and hydrogen order of 1 and −1, respectively, and to some degree, the higher-temperature orders of 1 and −0.5 for propane and H2, respectively, reported by Zhu et al. (4) that this model is found at a somewhat covered surface.
+Comparing FFM and BMwE Models
+In this study, three surfaces were modeled using two different methods of generating uncertainty, the BEEF–vdW with ensembles model (BMwEs) and the FFM. We note that there are differences in the covariance matrix and Gibbs free energies between these models. Comparing these uncertainty-generating computational models, in addition to the three surfaces, will generate information about differences in the results from different uncertainty quantification methodologies and whether the FFM or BMwE is more successful at modeling the data. This can illuminate if the set of four functionals within the FFM was a good choice for this system, and if BMwE, which is much less computationally involved, is more supported. There is strong evidence to support the BMwE models, as the FFM models all failed the “goodness-of-fit” tests. One can notice the differences in Figures 5 and 6 between the calibrated data sets simulating the same conditions and further graphically in the Supporting Information. The differences between the models are due to the differences in the covariance matrixes from BMwE models and the models using the FFM and more positive Gibbs free energies of adsorption with the BMwE. The differences for Pt(211) and Pt(111) in adsorption energies are depicted in Figure S2 in Section II of the Supporting Information. The BMwE 95% confidence intervals have a similar uncertainty for some intermediates to the FFM models, but for most intermediates, the BMwE confidence intervals are much larger. Though different, one model having greater uncertainty does not make the model better or worse than another model. Similar confidence intervals for the transition state energies are described in Figure S3. In this study, we find that the BMwE can describe the catalysts’ surfaces better, given the experimental data. Given that GGA functionals can generally describe metal surfaces, we expect the BMwE methodology for quantifying uncertainties to be appropriate for most transition metal catalysis problems.
+Conclusions
+ARTICLE SECTIONSJump To
+To identify the active site for the PDH to propylene over Pt catalysts, various elementary reactions for the PDH were studied from first principles over three surfaces: Pt(111), Pt(100), and Pt(211). To develop meaningful mean-field microkinetic models based on transition state theory for these individual surfaces, the lateral interactions between all surface species and transition states were calculated with all high surface coverage species. Given the uncertainties in the DFT energies, we developed two different methodologies for generating the correlation structure of the DFT functional energy uncertainty for each surface model. Next, we performed a Bayesian model selection to identify the most likely active site for PDH over Pt catalysts given reported experimental observables or quantities of interest such as TOF, apparent activation barrier, reaction orders, and propylene selectivity in three different papers. (2−4) Here, we also studied whether using different methods of uncertainty quantification leads to different results, or if one methodology is more favored for transition metal catalysis.
+Using the FFM methodology for evaluating uncertainty, Pt(100), Pt(111), and Pt(211) were found to have failed the goodness-of-fit statistic as shown in the squared Mahalanobis distances and as such were excluded from further data analysis. Using the BMwE model, Pt(100) was found to have no evidence due to its inability to fit the experimental data, and the Bayes factor generated between evidence Pt(111) and Pt(211) strongly supports, based on Jeffreys’ scale, (49) Pt(211) as the active site under conditions D1 and D2. Under conditions D1 and D3, there is no model evidence supporting one particular surface as the dominant active site.
+There are noticeable differences between the BMwE and FFM model results, and the BMwE is the more supported model due to better fit for this specific system. Given that it is currently believed that GGA functionals can generally describe metal surfaces, we expect the BMwE methodology for quantifying uncertainties to be appropriate for most transition metal catalysis problems. Finally, the kinetically rate-controlling steps are some combination of the 1st dehydrogenation steps of adsorbed propane to adsorbed C3H7 intermediates.
+Though this study focused on mainly quantifying and propagating the functional uncertainties present in the data, other uncertainties arise from different parts of these models. These include uncertainties present in the lateral interaction parameters, the site occupancies, and the entropy values for the intermediates and transition states. We hypothesie that much of the entropic uncertainty and that some of the uncertainty in lateral interactions can be viewed as potentially overwhelmed by the functional uncertainty, as the 95% confidence intervals within functionals, as described by Figures S2 and S3 in the Supporting Information, can span upward of 1 eV. Uncertainty in the lateral interactions is, by necessity, not only a function of the uncertainty within the lateral interaction parameters themselves but also by the functionals as well, as the thermodynamics and kinetics of the reaction can and do change, as can be seen by the site coverages reported in Table 1. Uncertainty within the site occupancies can affect results for the microkinetic models as well. Reported in Table S26 in the Supporting Information, TOFs of propylene change by a factor of 10, while there are small, but significant, differences in selectivity and reaction orders. We theorize that the uncertainties in the lateral interactions and site occupancies become less relevant to general uncertainty quantification as the percentage of free sites increases on a surface, as the errors become less relevant to the general reaction mechanism, if the initial adsorbates, desired products, and intermediates have sites that can be well defined. Regardless, this is an important topic that should be explored further in future studies.
+Although this study was comprehensive in determining whether one of the facets was the sole active site, this study did not test if combinations of surface facets formed together the active site that can describe the experimentally observed behavior under the various experimental reaction conditions. Almost all of the simulations yielded relatively high TOFs for each surface, which may indicate that all are participating significantly in the reactions present on a catalyst particle. We plan on performing such a study in the future.
+Supporting Information
+ARTICLE SECTIONSJump To
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acscatal.1c04844.
+Optimized structures for the adsorbed intermediates state structures (TXT)
+Optimized structures for the transition state structures (TXT)
+Additional calculations, dehydrogenation pathway, additional Bayesian calibration and priors, microkinetic modeling results (PDF)
+cs1c04844_si_001.txt (798.2 kb)
+cs1c04844_si_002.txt (2.23 MB)
+cs1c04844_si_003.pdf (3.93 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Authors
+Gabriel Terejanu - Department of Computer Science, University of North Carolina at Charlotte, Charlotte, North Carolina, 28223, United States;  Email: heyden@cec.sc.edu
+Andreas Heyden - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States;  https://orcid.org/0000-0002-4939-7489;  Email: gterejan@uncc.edu
+Authors
+Charles Fricke - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States
+Biplab Rajbanshi - Department of Chemistry, Visva-Bharati University, Santiniketan 731235, Birbhum, West Bengal, India
+Eric A. Walker - Department of Chemical and Biological Engineering, University at Buffalo, The State University of New York, Buffalo, New York 14260, United States;  Institute for Computational and Data Sciences, University at Buffalo, The State University of New York, Buffalo, New York 14260, United States;  https://orcid.org/0000-0002-8125-7160
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+The National Science Foundation supported this work under grant number CBET-1534260 and additional partial support from grant number OIA-1632824. In addition, C.F. acknowledges partial support from the National Science Foundation IGERT program under grant number 1250052. Computer resources were used from the National Energy Research Scientific Computing Center (NERSC) (contract no. DE-AC02-05CH11231), Pacific Northwest National Laboratory (Ringgold ID 130367, grant proposals 51163 and 51711), and the University of South Carolina’s High-Performance Computing Group.
+References
+ARTICLE SECTIONSJump To
+This article references 49 other publications.
+1Sattler, J. J. H. B.; Ruiz-Martinez, J.; Santillan-Jimenez, E.; Weckhuysen, B. M. Catalytic Dehydrogenation of Light Alkanes on Meals and Metal Oxides. Chem. Rev. 2014, 114, 10613– 10653,  DOI: 10.1021/cr5002436 [ACS Full Text ], [CAS], Google Scholar
+2Biloen, P.; Dautzenberger, F. M.; Sachtler, W. M. H. Catalytic Dehydrogenation of Propane to Propene over Platinum and Platinum-Gold Alloys. J. Catal. 1977, 50, 77– 86,  DOI: 10.1016/0021-9517(77)90010-0 [Crossref], [CAS], Google Scholar
+3Bariås, O. A.; Holmen, A.; Blekkan, E. A. Propane Dehydrogenation over Supported Pt and Pt-Sn Catalysts: Catalyst Preparation, Characterization, and Activity Measurements. J. Catal. 1996, 158, 1– 12,  DOI: 10.1006/jcat.1996.0001 [Crossref], Google Scholar
+4Zhu, J.; Yang, M.-L.; Yu, Y.; Zhu, Y.-A.; Sui, Z.-J.; Zhou, X.-G.; Holmen, A.; Chen, D. Size-Dependent Reaction Mechanism and Kinetics for Propane Dehydrogenation over Pt Catalysts. ACS Catal. 2015, 5, 6310– 6319,  DOI: 10.1021/acscatal.5b01423 [ACS Full Text ], [CAS], Google Scholar
+5Wang, Y.; Hu, P.; Yang, J.; Zhu, Y.-A.; Chen, D. C-H bond activation in light alkanes: a theoretical perspective. Chem. Soc. Rev. 2021, 50, 4299– 4358,  DOI: 10.1039/d0cs01262a [Crossref], [PubMed], [CAS], Google Scholar
+6Wang, J.; Chang, X.; Chen, S.; Sun, G.; Zhou, X.; Vovk, E.; Yang, Y.; Deng, W.; Zhao, Z.-J.; Mu, R.; Pei, C.; Gong, J. On the Role of Sn Segregation of Pt-Sn Catalysts for Propane Dehydrogenation. ACS Catal. 2021, 11, 4401– 4410,  DOI: 10.1021/acscatal.1c00639 [ACS Full Text ], [CAS], Google Scholar
+7Xiong, H.; Lin, S.; Goetze, J.; Pletcher, P.; Guo, H.; Kovarik, L.; Artyushkova, K.; Weckhuysen, B. M.; Datye, A. K. Thermally Stable and Regenerable Platinum-Tin Clusters for Propane Dehydrogenation Prepared by Atom Trapping on Ceria. Angew. Chem., Int. Ed. 2017, 56, 8986– 8991,  DOI: 10.1002/anie.201701115 [Crossref], [CAS], Google Scholar
+8Motagamwala, A. H.; Almallahi, R.; Wortman, J.; Igenegbai, V. O.; Linic, S. Stable and selective catalysts for propane dehydrogenation operating at thermodynamic limit. Science 2021, 373, 217– 222,  DOI: 10.1126/science.abg7894 [Crossref], [PubMed], [CAS], Google Scholar
+9Hannagan, R. T.; Giannakakis, G.; Réocreux, R.; Schumann, J.; Finzel, J.; Wang, Y.; Michaelides, A.; Deshlahra, P.; Christopher, P.; Flytzani-Stephanopoulos, M.; Stamatakis, M.; Sykes, E. C. H. First-principles design of a single-atom-alloy propane dehydrogenation catalyst. Science 2021, 372, 1444– 1447,  DOI: 10.1126/science.abg8389 [Crossref], [CAS], Google Scholar
+10Yang, M.-L.; Zhu, J.; Zhu, Y.-A.; Sui, Z.-J.; Yu, Y.-D.; Zhou, X.-G.; Chen, D. Tuning selectivity and stability in propane dehydrogenation by shaping Pt particles: A combined experimental and DFT study. J. Mol. Catal. A: Chem. 2014, 395, 329– 336,  DOI: 10.1016/j.molcata.2014.08.008 [Crossref], [CAS], Google Scholar
+11Yang, M. L.; ZhuChen, Y. F.; Sui, Z.; Chen, D.; Zhou, X. Density functional study of the chemisorption of C1, C2, and C3 intermediates in propane dissociation on Pt(111). J. Mol. Catal. A: Chem. 2014, 321, 42– 49[Crossref], Google Scholar
+12Nykänen, L.; Honkala, K. Density Functional Theory Study on Propane and Propene Adsorption on Pt(111) and PtSn Alloy Surfaces. J. Phys. Chem. C 2011, 115, 9578– 9586,  DOI: 10.1021/jp1121799 [ACS Full Text ], [CAS], Google Scholar
+13Sun, G.; Zhao, Z.-J.; Mu, R.; Zha, S.; Li, L.; Chen, S.; Zang, K.; Luo, J.; Li, Z.; Purdy, S. C.; Kropf, A. J.; Miller, J. T.; Zeng, L.; Gong, J. Breaking the scaling relationship via thermally stable Pt/Cu single atom alloys for catalytic dehydrogenation. Nat. Commun. 2018, 9, 4454,  DOI: 10.1038/s41467-018-06967-8 [Crossref], [PubMed], [CAS], Google Scholar
+14Saerens, S.; Sabbe, M. K.; Galvita, V. V.; Redekop, E. A. The positive role of hydrogen on the dehydrogenation of propane on Pt (111). ACS Catal. 2017, 7, 7495– 7508,  DOI: 10.1021/acscatal.7b01584 [ACS Full Text ], [CAS], Google Scholar
+15Yang, M.; Zhu, Y.; Fan, C.; Sui, Z.; Chen, D.; Zhou, X. DFT study of propane dehydrogenation on Pt catalyst: effects of step sites. Phys. Chem. Chem. Phys. 2011, 13, 3257– 3267,  DOI: 10.1039/c0cp00341g [Crossref], [PubMed], [CAS], Google Scholar
+16Ling, X.; Shan, Y.; Sui, Z.; Chen, D.; Zhou, X.; Yuan, W.; Zhu, Y. Beyond the Reverse Horiuti–Polanyi Mechanism in Propane Dehydrogenation over Pt Catalysts. ACS Catal. 2020, 10, 14887– 14902[ACS Full Text ], Google Scholar
+17Kresse, G.; Furthmüller, J. Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set. Comput. Mater. Sci. 1996, 6, 15– 50,  DOI: 10.1016/0927-0256(96)00008-0 [Crossref], [CAS], Google Scholar
+18Kresse, G.; Furthmüller, J. Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 11169,  DOI: 10.1103/physrevb.54.11169 [Crossref], [PubMed], [CAS], Google Scholar
+19Kresse, G.; Hafner, J. Ab initio molecular dynamics for liquid metals. Phys. Rev. B: Condens. Matter Mater. Phys. 1993, 47, 558,  DOI: 10.1103/physrevb.47.558 [Crossref], [PubMed], [CAS], Google Scholar
+20Blochl, P. E. Projector augmented-wave method. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 50, 17953,  DOI: 10.1103/physrevb.47.558 [Crossref], [PubMed], [CAS], Google Scholar
+21Kresse, G.; Halfer, J. Norm-conserving and ultrasoft pseudopotentials for first-row and transition elements. J. Phys.: Condens. Matter 1994, 6, 8245,  DOI: 10.1088/0953-8984/6/40/015 [Crossref], [CAS], Google Scholar
+22Monkhorst, H.; Pack, J. Special points for Brillouin-zone integrations. Phys. Rev. B: Solid State 1976, 13, 5188,  DOI: 10.1103/physrevb.13.5188 [Crossref], Google Scholar
+23Pack, J.; Monkhorst, H. Special points for Brillouin-zone integrations. Phys. Rev. B: Solid State 1977, 16, 1748,  DOI: 10.1103/physrevb.16.1748 [Crossref], Google Scholar
+24Henkelman, G.; Jónsson, H. A climbing image nudged elastic band method for finding saddle points and minimum energy paths. J. Chem. Phys. 2000, 113, 9901– 9904,  DOI: 10.1063/1.1329672 [Crossref], [CAS], Google Scholar
+25Henkelman, G.; Jónsson, H. Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points. J. Chem. Phys. 2000, 113, 9978– 9985,  DOI: 10.1063/1.1323224 [Crossref], [CAS], Google Scholar
+26Henkelman, G.; Jónsson, H. A dimer method for finding saddle points on high dimensional potential surfaces using only first derivatives. J. Chem. Phys. 1999, 111, 7010,  DOI: 10.1063/1.480097 [Crossref], [CAS], Google Scholar
+27Heyden, A.; Bell, A. T.; Keil, F. J. Efficient methods for finding transition states in chemical reactions: Comparison of improved dimer method and partitioned rational function optimization method. J. Chem. Phys. 2005, 123, 224101,  DOI: 10.1063/1.2104507 [Crossref], [PubMed], [CAS], Google Scholar
+28Haworth, N. L.; Wang, Q.; Coote, M. L. Modeling Flexible Molecules in Solution: A pKa Case Study. J. Phys. Chem. A 2017, 121, 5217– 5225,  DOI: 10.1021/acs.jpca.7b04133 [ACS Full Text ], [CAS], Google Scholar
+29Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized Gradient Approximation Made Simple. Phys. Rev. Lett. 1996, 77, 3865– 3868,  DOI: 10.1103/physrevlett.77.3865 [Crossref], [PubMed], [CAS], Google Scholar
+30Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, S. A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu. J. Chem. Phys. 2010, 132, 154104,  DOI: 10.1063/1.3382344 [Crossref], [PubMed], [CAS], Google Scholar
+31Hammer, B.; Hansen, L. B.; Norskov, J. K. Improved Adsorption Energetics within Density- Functional Theory Using Revised Perdew-Burke-Ernzerhof Functionals. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 7413– 7421,  DOI: 10.1103/physrevb.59.7413 [Crossref], [CAS], Google Scholar
+32Wellendorff, J.; Lundgaard, K. T.; Møgelhøj, A.; Petzold, V.; Landis, D. D.; Nørskov, J. K.; Bligaard, T.; Jacobsen, K. W. Density functionals for surface science: Exchange-correlation model development with Bayesian error estimation. Phys. Rev. B: Condens. Matter Mater. Phys. 2012, 85, 235149,  DOI: 10.1103/physrevb.85.235149 [Crossref], [CAS], Google Scholar
+33Peng, H.; Yang, Z.-H.; Sun, J.; Perdew, J. P. Versatile van der Waals Density Functional Based on a Meta-Generalized Gradient Approximation. Phys. Rev. X 2016, 6, 041005,  DOI: 10.1103/physrevx.6.041005 [Crossref], [CAS], Google Scholar
+34Sharada, S. M.; Karlsson, R. K. B.; Maimaiti, Y.; Voss, J.; Bligaard, T. Adsorption on transition metal surfaces: Transferability and accuracy of DFT using the ADS41 dataset. Phys. Rev. B 2019, 100, 035439,  DOI: 10.1103/physrevb.100.035439 [Crossref], [CAS], Google Scholar
+35Afeefy, H.; Liebman, J.; Stein, S. NIST Chemistry WebBook, NIST Standard Reference Database Number 69; National Institute of Standards and Technology: Gaithersburg MD, USA, 2010.Google Scholar
+36Plessis, S.; Carrasco, N.; Pernot, P. Knowledge-Based Probabilistic Representations of Branching Ratios in Chemical Networks: The Case of Dissociative Recombinations. J. Chem. Phys. 2010, 133, 134110,  DOI: 10.1063/1.3479907 [Crossref], [PubMed], [CAS], Google Scholar
+37Walker, E. A.; Mitchell, D.; Terejanu, G. A.; Heyden, A. Identifying Active Sites of the Water–Gas Shift Reaction over Titania Supported Platinum Catalysts under Uncertainty. ACS Catal. 2018, 8, 3990– 3998,  DOI: 10.1021/acscatal.7b03531 [ACS Full Text ], [CAS], Google Scholar
+38Walker, E.; Ammal, S. C.; Terejanu, G. A.; Heyden, A. Uncertainty Quantification Framework Applied to the Water–Gas Shift Reaction over Pt-Based Catalysts. J. Phys. Chem. C 2016, 120, 10328– 10339,  DOI: 10.1021/acs.jpcc.6b01348 [ACS Full Text ], [CAS], Google Scholar
+39Rencher, A. C. Methods of Multivariate Analysis; John Wiley and Sons, Inc.: Hoboken, NJ, 2007.Google Scholar
+40Prudencio, E. E.; Schulz, K. W. The Parallel C++ Statistical Library “QUESO”: Quantification of Uncertainty for Estimation, Simulation and Optimization. Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, Bordeaux, France, August 29–September 2, 2011; Springer: Berlin, Heidelberg, 2011; Vol. 7155, pp 398– 407.Google Scholar
+41Horvatits, C.; Lee, J.; Kyriakidou, E. A.; Walker, E. A. Characterizing Adsorption Sites on Ag/SSZ-13 Zeolites: Experimental Observations and Bayesian Inference. J. Phys. Chem. C 2020, 124, 19174– 19186,  DOI: 10.1021/acs.jpcc.0c06470 [ACS Full Text ], [CAS], Google Scholar
+42Walker, E. A.; Ravisankar, K.; Savara, A. CheKiPEUQ Intro 2: Harnessing Uncertainties from Data Sets, Bayesian Design of Experiments in Chemical Kinetics. ChemCatChem 2020, 12, 5401– 5410,  DOI: 10.1002/cctc.202000976 [Crossref], [CAS], Google Scholar
+43Campbell, C. T. Future Directions and Industrial Perspectives Micro-and Macro-Kinetics: Their Relationship in Heterogeneous Catalysis. Top. Catal. 1994, 1, 353– 366,  DOI: 10.1007/bf01492288 [Crossref], [CAS], Google Scholar
+44Campbell, C. T. The Degree of Rate Control: A Powerful Tool for Catalysis Research. ACS Catal. 2017, 7, 2770– 2779,  DOI: 10.1021/acscatal.7b00115 [ACS Full Text ], [CAS], Google Scholar
+45Campbell, C. T. Finding the Rate-Determining Step in a Mechanism: Comparing DeDonder Relations with the “Degree of Rate Control”. J. Catal. 2001, 204, 520– 524,  DOI: 10.1006/jcat.2001.3396 [Crossref], [CAS], Google Scholar
+46Mahalanobis, P. C. On the generalised distance in statistics. Proc. Natl. Inst. Sci. India 1936, 12, 49– 55Google Scholar
+47Warren, R.; Smith, R. E.; Cybenko, A. K. Use of Mahalanobis Distance for Detecting Outliers and Outlier Clusters in Markedly Non-Normal Data: A Vehicular Traffic Example; Wright-Patterson Air Force Base, 2011.Google Scholar
+48Brereton, R. G. The chi squared and multinormal distributions. J. Chemom. 2015, 29, 9– 12,  DOI: 10.1002/cem.2680 [Crossref], [CAS], Google Scholar
+49Jeffreys, H. The Theory of Probability; Oxford University Press: Oxford, 1939; pp 356– 357.Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+0
+Mentioning
+14
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 5 publications.
+Charles H. Fricke, Olajide H. Bamidele, Mubarak Bello, Jawad Chowdhury, Gabriel Terejanu, Andreas Heyden. Modeling the Effect of Surface Platinum–Tin Alloys on Propane Dehydrogenation on Platinum–Tin Catalysts. ACS Catalysis 2023, 13 (16) , 10627-10640. https://doi.org/10.1021/acscatal.3c00939
+Rui Ma, Junxian Gao, Jiajing Kou, David P. Dean, Christian J. Breckner, Kaijun Liang, Bo Zhou, Jeffrey T. Miller, Guojun Zou. Insights into the Nature of Selective Nickel Sites on Ni/Al2O3 Catalysts for Propane Dehydrogenation. ACS Catalysis 2022, 12 (20) , 12607-12616. https://doi.org/10.1021/acscatal.2c03240
+Tianyou Mou, Hemanth Somarajan Pillai, Siwen Wang, Mingyu Wan, Xue Han, Neil M. Schweitzer, Fanglin Che, Hongliang Xin. Bridging the complexity gap in computational heterogeneous catalysis with machine learning. Nature Catalysis 2023, 6 (2) , 122-136. https://doi.org/10.1038/s41929-023-00911-w
+Xin-ling QIU, Rui-dong CHAI, Fu ZHONG, Xiu-ling DI, Jiang-yin LU. Investigate of the optimum process conditions for Co/HZSM-5 catalyzed propane dehydrogenation by a response surface method. Journal of Fuel Chemistry and Technology 2022, 50 (11) , 1498-1508. https://doi.org/10.1016/S1872-5813(22)60027-6
+Annette Trunschke. Prospects and challenges for autonomous catalyst discovery viewed from an experimental perspective. Catalysis Science & Technology 2022, 12 (11) , 3650-3669. https://doi.org/10.1039/D2CY00275B
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Schematics of all platinum facets used in this study.
+Figure 2
+Figure 2. Dehydrogenation reaction network for C3 species.
+Figure 3
+Figure 3. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, modeling data set D2 for Pt(100), Pt(111), and Pt(211) using the BMwE for the forward-only model. Reported values are the experimental values reported in data set D2.
+Figure 4
+Figure 4. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, modeling data set D2 for Pt(100), Pt(111), and Pt(211) using the FFM for the forward-only model. Reported values are the experimental values reported in data set D2.
+Figure 5
+Figure 5. Probability densities of reported quantities of interest, including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, calibrated with data sets D1 and D3 and validating using data set D2 for Pt(100), Pt(111), and Pt(211) with the BMwE. Reported values are the experimental values reported in data set D2.
+Figure 6
+Figure 6. Quantities of interest including (a) TOF (1/s), (b) selectivity to propylene, (c) apparent activation energy (eV), (d) propane reaction order, and (e) H2 reaction order, calibrated with data sets D1 and D3 and validating using data set D2 for Pt(100), Pt(111), and Pt(211) with the FFM model. Reported values are the experimental values reported in data set D2.
+Figure 7
+Figure 7. Degree of kinetic rate control (DKRC) for PDH to propylene using the TOFs of propane (a,c) and propylene (b,d) using the BMwE forward-only model at 793 K for Pt(111) (a,b) and Pt(211) (c,d).
+
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

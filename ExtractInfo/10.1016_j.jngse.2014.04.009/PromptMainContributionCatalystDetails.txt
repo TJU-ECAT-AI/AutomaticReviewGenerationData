@@ -1,0 +1,337 @@
+<DOCUMENT>
+Heat integration of isobutane dehydrogenation and hydrogenation of nitrobenzene to aniline in radial flow moving bed reactors: Modelling and operability investigation
+Abstract
+In the process intensification subject, heat integration of endothermic and exothermic reactions in a shell and tube reactor is one of the most important approaches to reduce plant size and decreasing operational cost compared to conventional processes. This paper focuses on modelling and simulation of thermally coupled radial flow moving bed reactors to produce isobutene and aniline. A steady state heterogeneous two-dimensional model is developed to predict the performance and operability of the proposed configuration against conventional process. The catalytic nitrobenzene hydrogenation takes place in the exothermic side and supplies a part of necessary heat for isobutane dehydrogenation in the endothermic side. To prove the accuracy of the considered mathematical model and assumptions, the simulation results of the conventional process are compared with the plant data at the same process condition. Isobutane conversion is enhanced about 5.3% in the thermally coupled process compared to the conventional process. In addition, since the nitrobenzene hydrogenation reaction supplies a part of required heat in the isobutane dehydrogenation side, the smaller furnaces can be used in the commercial Oleflex process.
+1. Introduction
+Currently, due to increasing demand for olefins, researchers have focused on paraffins dehydrogenation to produce olefins through catalytic processes. Isobutene as an unsaturated olefin hydrocarbon is a colourless and extremely flammable gas at standard pressure and temperature. It is used as a feedstock to produce a variety of chemical components such as polybutene, MTBE and ETBE. In addition, alkylation of isobutene by butane produces isooctane as a fuel additive. In addition, isobutene is used as a monomer or copolymer to produce synthetic rubber and various plastics. The industrial method to produce isobutene is catalytic dehydrogenation of isobutane over Pt or Cr based catalysts. Some commercial technologies have been developed for dehydrogenation of light paraffins such as isobutane, which differ in catalyst, reactor type and used regeneration system. The Catofin isobutane dehydrogenation technology commercialized by ABB Lummus, is a cyclic process to produce isobutene over chromia–alumina catalyst (Weiss, 1970, Craig and Spence, 1986). In this process, the fixed bed reactors operate adiabatically and to regenerate the deactivated catalyst, the reactors are changed periodically. In the Oleflex technology, commercialized by UOP Company, dehydrogenation occurs in the several adiabatic moving-bed reactors over modified Pt based catalyst (Bhasin et al., 2001). The Oleflex reactors consist of three moving bed radial-flow reactors, charge and inter-stage heaters, and regeneration reactor.
+There are few articles in the literature, which discuss about isobutane process modelling. Zwahlen and Agnew studied isobutane dehydrogenation over Cr/Al2O3 catalyst in a modified berty reactor (1992). In this study, the Langmuir–Hinshelwood–Hougen–Watson model is found to provide a good fit to initial rate data. Cortright et al. presented an accurate rate equation for isobutane dehydrogenation over Pt–Sn catalyst (1998). Buzari et al. studied the kinetic of isobutane dehydrogenation over the commercial Pt–Sn catalyst at a temperature range of 698–848 K (2006). The results indicated that the obtained rate equation based on the Langmuir–Hinshelwood mechanism, considering isobutene adsorption as a rate-limiting step, has very good agreement with the experimental data. Sahebdelfar et al. modelled the isobutane dehydrogenation in an adiabatic moving bed reactor homogeneously without considering side reactions (2011). They neglected the side reactions while the isobutene selectivity in the considered commercial process was about 90%. Farsi et al. Modelled isobutane dehydrogenation in moving bed radial flow reactors considering reaction network (2012). The isobutane conversion and isobutene selectivity was about 38.53% and 90.76%, respectively, which had good agreement with the plant data. Farsi et al. proposed an axial flow membrane reactor for isobutane dehydrogenation and optimized the process condition to enhance isobutene production and selectivity (2013). Liang and Hughes studied isobutene synthesis from isobutane in a membrane reactor over Pt/Al2O3 catalyst, experimentally (2005). In addition, they modelled the considered palladium/silver membrane fixed bed reactor at steady state condition.
+The heat management is a key policy in reaction engineering design. Thermally coupling of exothermic and endothermic reactions, in one reactor, may offer a new opportunity to broaden the reactor selection possibilities. These multifunctional reactors make the process more efficient and compact and result in large savings in the operational and capital costs (Agar, 1999). Farsi et al. developed a mathematical model for a thermally coupled reactor that is composed of two sides for methanol dehydration and benzene synthesis (2010). This novel configuration decreased temperature of methanol dehydration reaction in the second half of the reactor and shifted the thermodynamic equilibrium to enhance methanol conversion. Khademi et al. presented a distributed mathematical model for thermally coupled membrane reactor that is composed of three sides for methanol and benzene synthesis (2009). Methanol synthesis takes place in the exothermic side and supplies a part of necessary heat for the endothermic dehydrogenation of cyclohexane reaction. Hydrogen permeation through the Pd/Ag membrane is achieved by co-current flow of sweep gas in the permeation side.
+In this paper, a heat-integrated configuration consists of exothermic and endothermic sides has been proposed for isobutane dehydrogenation and nitrobenzene hydrogenation reactions. Although some researchers have focused on the process integration and intensification particularly heat integration of exothermic and endothermic reactions, there is not any work in the literature about coupling of isobutane dehydrogenation and aniline hydrogenation reactions. In the proposed configuration, the radial flow moving bed reactors in the Oleflex process has been modified, so the nitrobenzene hydrogenation and isobutane dehydrogenation reactions take place in the exothermic and endothermic sides, respectively. The main object of this study is higher isobutene production at the same catalyst content in the isobutane dehydrogenation side compared to the conventional Oleflex process. This paper focuses on modelling and simulation of the proposed configuration at steady state condition. Isobutane dehydrogenation is a reversible and endothermic reaction. The high temperature increases rate of isobutane dehydrogenation and shifts the equilibrium toward the higher isobutene production. Thermally coupling of isobutane dehydrogenation with an exothermic reaction in a reactor is an effective method to increase heat content in the isobutane dehydrogenation side. The isobutane dehydrogenation section in the conventional Oleflex process consists of three complicated moving bed radial flow reactors. In this research, these reactors have been redesigned by inserting the vertical plates in the radial direction of the reactors. Since the nitrobenzene hydrogenation reaction supplies a part of required heat in isobutane dehydrogenation, the smaller inter-stage furnaces can be used in the commercial Oleflex process. To prove the accuracy of the considered model and assumptions, the simulation results of the commercial Oleflex process are compared with the available plant data.
+2. Isobutane, isobutene and NGL
+Some liquids are found in the produced natural gas from reservoirs, which include propane, butane, and ethane among others. In the gas refinery plants, the liquids are separated from the natural gas and send into NGL (Natural Gas Liquids) plants to fractionation. The NGL plant consists of a series fractionators whose purpose is to separate a mixture of hydrocarbons into various pure products. Normal butane is a valuable hydrocarbon obtained from natural gas in the NGL process. It is used as a refining blend stock for gasoline and is used as a petrochemical feedstock to produce isobutane. Commercial butane isomerisation units convert extracted normal butane form LNG or refinery streams into mixed butane, which is subsequently fractionated into high purity isobutane and residual normal butane. Then, isobutane is converted to isobutene as an intermediate product in MTBE plants to produce MTBE as a gasoline octane number enhancer. Thus, isobutene is produced from separated normal butane in NGL plants considering isobutane as intermediate product.
+3. Kinetic model
+3.1. Isobutane dehydrogenation
+In non-oxidative dehydrogenation of isobutane, side reactions such as cracking, oligomerization, isomerization, aromatization, alkylation, and coking occur in the process. In the Oleflex technology isobutane dehydrogenation, isobutane cracking and coke formation reactions should be considered as side reactions (Poli, 2007). The kinetic of isobutane dehydrogenation and side reactions over Pt–Sn/Al2O3 catalyst is as follows:
+(1)
+i−C4H10 ↔ i−C4H8 + H2
+(2)
+i−C4H10 + H2 ↔ C3H8 + CH4
+(3)
+C3H8 ↔ H2 + C3H6
+(4)
+i−C4H8 → 4C + 4H2
+The high temperature or residence time causes isobutane cracking to methane and propane (hydrogenolysis reaction) as the main side reaction. In this work, the kinetic models and reaction rate parameters have been selected from literature (Abdi and Kiamanesh, 2008, Moghimpour Bijani and Sahebdelfar, 2008).
+3.2. Nitrobenzene hydrogenation
+Commercially, aniline is produced in two steps from benzene. First, benzene is nitrated using a concentrated mixture of nitric acid and sulphuric acid, which gives nitrobenzene. In the second step, the nitrobenzene is hydrogenated, typically in presence of metal catalysts. Nitrobenzene hydrogenation is an exothermic reversible reaction. The hydrogenation reaction of nitrobenzene to aniline is given by:
+(5)
+C6H5NO + 3H2 ↔ C6H5N H2 + 2H2O
+In this work, the kinetic models and reaction rate parameters are selected from literature (Amon et al., 1999).
+4. Process modelling
+4.1. Conventional Oleflex process
+The conventional dehydrogenation process consists of three moving bed radial flow reactors in series that the feed stream is heated and entered to the reactors. The reactors are two concentric tubes that feed is entered from inner tube and flows along the radial direction. The outlet product from the first reactor is fed to the second reactor. Due to coke formation on the catalyst surface, the outlet catalyst from third reactor is sent to the regeneration section. In the regeneration reactor, formed coke is burnt and the regenerated catalyst is recycled to the first reactor and flows along the axial direction of reactors. Since the outlet temperature from each reactor drops due to endothermic reactions, the inter-stage heaters are placed between rectors to increase temperature. Fig. 1(a) shows the schematic diagram of the conventional Oleflex process. In the considered mathematical model, the following assumptions are adopted:
+•
+The gas mixture is in ideal condition (low pressure and high temperature condition).
+•
+Radial diffusion of mass and energy is negligible.
+•
+The chemical reactions take place on the catalyst surface and reactions occurred in the gas phase have been neglected.
+•
+The temperature gradient in the solid phase is negligible (Biot number is less that 0.1).
+•
+Gas velocity in the axial direction is negligible
+Download : Download high-res image (1MB)
+Download : Download full-size image
+Fig. 1. Schematic diagram of (a) Oleflex isobutane dehydrogenation process and (b) proposed heat integrate process.
+Subject to these assumptions, gas phase component mole and energy balances are as follows:
+(6)
+ⅆ
+ⅆ
+(7)
+ⅆ
+ⅆ
+The component mole and energy balances in the solid phase are as follows:
+(8)
+(9)
+Due to increasing total mole and reactor area along the radial direction, total mole balance is considered in the mathematical model. The total mole balance is as follows:
+(10)
+ⅆ
+ⅆ
+Due to the axial velocity of catalyst and coke formation on its surface, the coke mass balance is considered in the model. In this equation, w is the mass fraction of coke to the catalyst.
+(11)
+ⅆ
+ⅆ
+The pressure drop through the radial direction of the catalytic beds is calculated based on the Tallmadge equation that is usable in laminar and turbulent regimes (Tallmadge, 1970).
+(12)
+(13)
+ⅆ
+ⅆ
+The catalyst activity is calculated from Mohajeri and Khorashe (2008). Table 1 presents the used parameters of coke deposition equation.
+(14)
+(15)
+(16)
+Table 1. Parameters of the considered correlation for catalyst activity.
+Parameter Value
+k1 (s−1) 7.84 × 10−3
+k2 (s−1) 1.15 × 10−3
+α1 (kgCat. kgCoke−1) 813
+α2 (kgCat. kgCoke−1) 289
+E1 (kJ mol−1) 221
+E2 (kJ mol−1) 325.8
+Cmax (kgCoke. kgCat−1) 6.82 × 10−4
+Table 2 shows Feed specifications, reactor, and catalyst characteristics of the commercial dehydrogenation reactors (Operating condition, 2002).
+Table 2. Feed and product specifications of the commercial dehydrogenation reactors.
+Empty Cell
+Reactor 1 Reactor 2 Reactor 3
+Feed
+ Temperature (C) 600 610 604
+ Flow rate (ton hr−1) 106
+ Pressure (barg) 1.4 0.9 0.4
+Catalyst
+ Reactor length (m) 12.5 14 15
+ Catalyst loading (ton) 17 18 21
+ Catalyst density (kg m−3) 800
+ Catalyst diameter (m) 6 × 10−4
+4.2. Heat integrated process
+Thermally coupling of isobutane dehydrogenation with an exothermic reaction is an effective method to increase heat content in the isobutane dehydrogenation side as an endothermic reaction. In this study, the conventional reactors in the conventional Oleflex process have been supported with vertical plates. The plates have been inserted in the reactors vertically along the radial direction and reactors are divided to some zones. The exothermic and endothermic reactions have been placed in the zones, decussately. Since the nitrobenzene hydrogenation reaction supplies a part of required heat in the isobutane dehydrogenation side, the smaller furnaces can be used in the commercial Oleflex process. It results the higher energy efficiency and reduces operational costs. Fig 1(b) shows an elemental view and top view of proposed reactors.
+The gas and solid phase mole and energy balances in the endothermic side of proposed configuration are:
+(17)
+ⅆ
+ⅆ
+(18)
+ⅆ
+ⅆ
+(19)
+(20)
+The gas and solid phase mole and energy balances in the exothermic side are as follows:
+(21)
+ⅆ
+ⅆ
+(22)
+ⅆ
+ⅆ
+(23)
+(24)
+4.3. Auxiliary equations
+There are some parameters in the heterogeneous models such as heat and mass transfer coefficients between gas and solid phases that connect the gas and solid phase conservation equations and should be calculated from proper correlations. In addition, suitable temperature and component dependent correlations should be chosen to estimate physical properties of components and mixture such as viscosity, specific heat capacity, heat conductivity and diffusion coefficients along the reactor. The source of considered correlations to calculate components and mixture physical properties, mass and heat transfer coefficient between phases are summarized in Table 3.
+Table 3. Used correlations for physical properties, mass and heat transfer coefficient.
+Parameter Reference
+Gas conductivity (Lindsay and Bromley, 1950)
+Mixture heat capacity (Poling et al., 2001)
+Viscosity of reaction mixtures (Poling et al., 2001)
+Mass transfer coefficient (Cussler, 1984)
+Binary diffusion coefficient (Hirschfelder et al., 1952)
+Effective diffusion coefficient in pellet (Wilke, 1950)
+Gas–catalyst heat transfer coefficient (Dwivedi and Upadhyay, 1977)
+5. Numerical solution
+The mass and energy governing equations create a set of partial differential equations. This set of nonlinear differential equations isn't solved analytically and should be solved numerically. In this system, the reactor length has been discretized in the axial direction, then the mass and energy governing equations written for each axial segment. Thus, a set of nonlinear ordinary differential equations is obtained in radial direction. Fourth order Runge–Kutta method has been selected to solve this set of equations in each axial segment. At the end of numerical solution, it is possible to plot the concentration of components and temperature versus reactor length and radius.
+6. Results and discussion
+6.1. Model validation
+To demonstrate the accuracy of the considered model and assumptions, the simulation results are validated with the available plant data of at the steady state conditions. Table 4 presents comparison between simulation results and plant data for the industrial case. It is observed that the predicted isobutane conversion and selectivity have a good agreement with the observed plant data.
+Table 4. Comparison of simulation results and plant data for industrial reactor.
+Empty Cell
+Plant data Model R.E.
+Total conversion 38.84 38.53 0.8%
+Selectivity 90.9 90.76 0.15%
+According to this figure, produced isobutene mole flow in the first, second and third reactors is about 80.05, 61.75 and 40.6 mol s−1 at the conventional process. The total produced isobutene in the process is about 182.4 mol s−1. The calculated isobutane conversion is 38.53% at the considered operating condition. Selectivity, which is defined as the ratio of produced isobutene per consumed isobutane, has been obtained about 90.76% in the conventional process. Fig. 2 shows the isobutene concentration along the radial direction of the third reactor. In this reactor, decreasing catalyst activity in the axial direction due to coke formation on the catalyst surface and axial velocity of catalyst cause an axial gradient in the isobutene production. Thus, in the presented results, axial average of temperature and mole fractions along the radial direction is presented. The average component mole fraction in the radial direction is defined as:
+(25)
+Download : Download high-res image (720KB)
+Download : Download full-size image
+Fig. 2. Isobutene concentration along the radial and axial direction of the third reactor.
+6.2. Heat integrated process
+In this section, the operability and performance of the proposed heat integrated process to produce isobutene and aniline is analysed at steady state condition. Fig. 3 shows the profile of isobutene flow rate and hydrogen mole fraction along the radial direction of the conventional and integrated processes, respectively. According to this figure, produced isobutene in the first, second and third heat integrated reactors is 85.5, 67.7 and 38.3 mol s−1. The total produced isobutene in this process is about 191.5 mol s−1 that has been improved about 5% compared to the conventional process. Le Châtelier's principle states that, if a chemical equilibrium system experiences a change in independent variables such as concentration, temperature, or pressure, the equilibrium shifts to counteract the imposed change and a new equilibrium is established. Since the isobutane dehydrogenation is an endothermic equilibrium reaction, the heat transfer from exothermic side of the integrated process toward endothermic side influences on the reaction rate and equilibrium, simultaneously. It increases heat content in the dehydrogenation side and increases isobutene and hydrogen production. The isobutene content in the first reactor has approached to the equilibrium condition because of high catalyst activity. Since coke deposition on the catalyst surface decreases catalyst activity, the lower catalyst active site results lower isobutene production and linear concentration profile in third reactor.
+Download : Download high-res image (342KB)
+Download : Download full-size image
+Fig. 3. (a) Isobutene mole flow rate (b) hydrogen mole fraction along the radial direction reactors.
+Fig. 4 shows isobutane conversion in the radial direction of the conventional and heat integrated processes. The total isobutane conversion is net of conversion through dehydrogenation and cracking reactions. The isobutane conversion in the heat-integrated reactors is about 17.24%, 14.1% and 9.26%, respectively. The calculated total isobutane conversion is 40.6% in the heat-integrated process and has been improved about 5.4% compared to the conventional process. Selectivity as the main parameter to investigate side reactions is about 90.5% in the integrated process, while it is about 90.76% in the conventional system.
+Download : Download high-res image (165KB)
+Download : Download full-size image
+Fig. 4. Isobutane conversion profile in the conventional and heat integrated process.
+Fig. 5 shows the rate of isobutane dehydrogenation reaction along the radial direction of the conventional and heat integrated reactors, respectively. The maximum isobutane dehydrogenation rate occurs at the entrance of reactors due to high feed temperature. It decreases and approaches to the equilibrium condition in all reactors. According to Le Châtelier's principle, decreasing temperature along the radial direction shifts isobutane dehydrogenation reaction toward the left side and decreases isobutane production rate. Since the feed temperature in the exothermic side has lower temperature against the endothermic side, the heat transfer from endothermic toward exothermic side at the reactor entrance decreases isobutane dehydrogenation rate in the integrated process compared to the conventional system. However, a part of generated heat through nitrobenzene hydrogenation reaction as an equilibrium exothermic reaction transferred toward the isobutane dehydrogenation side and increases dehydrogenation rate in other parts of system.
+Download : Download high-res image (187KB)
+Download : Download full-size image
+Fig. 5. Isobutane dehydrogenation rate along the radial direction of the conventional and heat integrated process.
+Fig. 6 shows the radial temperature profiles in the conventional and heat integrated reactors. The heat is produced in the exothermic side and is transferred toward the endothermic side. The figure shows that the exothermic side temperature has a maximum. Due to high nitrobenzene concentration at the initial section of the exothermic side, the rate of heat production through nitrobenzene hydrogenation reaction is faster compared to the heat transfer rate and temperature increases. At the last part of reactors, the nitrobenzene concentration decreases and heat transfer from the exothermic side toward endothermic side is faster compared to heat production through hydrogenation reaction. Since heat consumption through dehydrogenation reaction is more compared to the transferred heat, dehydrogenation side temperature decreases and approaches toward the equilibrium condition. Temperature drop in the endothermic side of the first reactor is higher compared to other reactors and conform to isobutane dehydrogenation reaction rate profile. The higher mean temperature in the third reactor results higher coke formation and lower catalyst activity in this reactor. The process selectivity in the first, second and third heat integrated reactors are about 94.81%, 92% and 90.5%, respectively. Although selectivity in the heat-integrated process has been decreased about 0.3% compared to the conventional process, higher mean temperature in the second and third reactors decreases process selectivity in two systems.
+Download : Download high-res image (215KB)
+Download : Download full-size image
+Fig. 6. Radial temperature profile in the conventional and heat integrated process.
+Fig. 7 shows the catalyst activity profile along the radial direction of heat-integrated reactors. It shows that the higher temperature at the entrance of reactors causes the lower catalyst activity and decreasing temperature along the radial direction increases its. In addition, this figure shows that catalyst at last section of reactors (in the axial direction) have lower activity due to higher residence time. Produced coke in catalytic hydrocarbon processes is deposited on catalyst active sites and reduces reaction rate. Coke deposition deactivates the catalyst by covering the active sites and pore blocking. To reduce coke formation and increasing catalyst activity, hydrogen reach feed is fed to the hydrocarbon processes. The simulation results show that hydrogen mole fraction approaches to 0.56 at the outlet of the third reactor, while inlet hydrogen fraction is about 0.5 in the first reactor. The predicted coke to catalyst mass fraction at the outlet of third integrated reactor is about 1.86% while it is about 1.84% in the conventional process.
+Download : Download high-res image (194KB)
+Download : Download full-size image
+Fig. 7. Catalyst activity profile in the exothermic side of heat integrated process.
+Fig. 8(a) and (b) shows profile of nitrobenzene and aniline mole fraction in the radial direction of the exothermic side. Since, the nitrobenzene hydrogenation reaction supplies a part of required heat to promote isobutane dehydrogenation reaction, energy content decreases in the exothermic side of heat-integrated process. Thus, the nitrobenzene hydrogenation rate decreases in the heat-integrated process compared to the conventional process. Nitrobenzene concentration is converted to aniline and the overall isobutane conversion is about 95% at the considered operating condition. The excesses hydrogen content in the feed stream results high nitrobenzene conversion.
+Download : Download high-res image (309KB)
+Download : Download full-size image
+Fig. 8. (a) Nitrobenzene conversion and (b) aniline mole fraction along the exothermic side of heat integrated process.
+7. Conclusion
+Thermally coupling of endothermic and exothermic reactions in a reactor improves thermal efficiency and production rate, reduces the reactor size, and decreases purification cost. This paper focuses on modelling and simulation of a heat integrated radial flow reactors to produce isobutene and aniline at steady state condition. The nitrobenzene hydrogenation takes place in the exothermic side and supplies a part of necessary heat for isobutane dehydrogenation in the endothermic side. A two dimensional heterogeneous model was considered to analyse the performance of the proposed process. To prove the accuracy of the considered model, the simulation results of the conventional isobutane dehydrogenation process were compared against the plant data at the same process condition. It was shown that the isobutane conversion and isobutene production are 40.6% and 191.4 mol s−1 in the heat integrated process. The isobutene production in the proposed process was improved about 5% compared to the conventional process. The thermally couple configuration decreases size of inter-stage furnaces to preheat feed in the isobutane dehydrogenation side and results the higher energy efficiency and reduces operational costs. The obtained results suggest that this configuration is feasible and beneficial.
+Nomenclature
+A
+Catalyst activity
+av
+Specific surface area of catalyst pellet (m2 m−3)
+Ac
+Cross section area (m2)
+Ci
+Molar concentration of component i (mol m−3)
+Cp
+Specific heat capacity (J mol−1 K−1))
+Ct
+Total mole concentration (mol m−3)
+D
+Diameter (m)
+F
+Friction factor
+hf
+Gas–solid heat transfer coefficient (W m−2 K−1)
+K
+Catalyst activity constant (s−1)
+kg
+Mass transfer coefficient (m s−1)
+L
+Reactor length (m)
+P
+Total pressure (bar)
+Re
+Reynolds number
+r
+Radial reactor coordinate (m)
+ri
+Rate of reaction (mol kgCat−1 s−1)
+T
+Temperature (C)
+u
+Superficial velocity of fluid phase (m s−1)
+y
+Component mole fraction
+z
+Axial reactor coordinate (m)
+Greek letters
+ρ
+Density of fluid phase (kg m−3)
+α
+Catalyst activity constant (kgCat kgCoke−1)
+η
+Effectiveness factor
+ε
+Bed void fraction
+ΔH
+Heat of reaction (j mole−3)
+ΔP
+Pressure difference (Pa)
+Superscripts
+B
+Reactor bed
+g
+In the bulk gas phase
+p
+Particle
+s
+At the catalyst surface
+Appendix A.
+The obtained mass and energy governing equations in the process modelling section create a set of partial differential equations. This set of nonlinear differential equations can be solved numerically. The used algorithm to solve the problem has been presented in Fig. 1-A. In this process, the catalyst particles move along the axial direction and feed stream flows in the radial direction of moving bed reactors. Thus, an activity profile along the axial and radial directions is created in the system. The considered numerical method to solve the differential equations has is applied in the radial direction of reactor and is repeated along the reactor length. At the end of this procedure, it is possible to plot concentration, temperature, and activity profiles along the radial and axial directions.
+Download : Download high-res image (289KB)
+Download : Download full-size image
+Fig. 1-A. The algorithm of problem solution.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

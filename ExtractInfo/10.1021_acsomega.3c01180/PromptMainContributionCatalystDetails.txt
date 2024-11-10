@@ -1,0 +1,658 @@
+<DOCUMENT>
+Amphiphilic Janus Particles Confined in Symmetrical and Janus-Like Slits
+Abstract
+We use Monte Carlo simulations to investigate the behavior of Janus spheres composed of attractive and repulsive parts confined between two parallel solid surfaces. The slits with identical and competing walls are studied. The adsorption isotherms of Janus particles are determined, and the impact of the density in the pore on the morphology is discussed in detail. So far, this issue has not been systematically investigated. New, unique structures are observed along the isotherms, including the bilayer and three-layer structures located at different distances from the walls. We analyze how selected parameters affect the positional and orientational ordering in these layers. In some cases, the particles form highly ordered hexagonal lattices.
+This publication is licensed under
+CC-BY 4.0.
+1. Introduction
+Jump To
+Self-assembly of nanoparticles is a topic attracting intense scientific interest. Various strategies have been developed for the design of novel structures with desired properties, geometries, and dimensions. (1−4) These modern materials have a wide range of applications in electronics, photonics, drug delivery, medical diagnostics, and sensors to name but a few. In this respect, Janus particles (JPs) with two different domains on their surfaces represent an important field of research. Numerous experimental studies of JPs have been complemented by a range of theoretical works devoted to the analysis of self-assembled structures and phase diagrams. (5−15)
+Interactions between the JPs depend on their spatial separation and orientation, resulting in a great variety of self-assembly scenarios. Considerable research effort has been devoted to studying the self-assembly of spherical Janus particles that interact via different potentials. (5−10,16)
+The interactions can be modeled using an effective anisotropic potential involving the orientation vectors defined by the symmetry axis of the spheres. (6) In other models, JPs are treated as a kind of patchy particles decorated with domains on the surfaces exerting attractive forces. The most popular is the Kern-Frenkel model with one attractive patch on an inert (repulsive) surface. (7)
+Self-assembly of JPs in a one-component bulk system depends on the assumed interaction model, density, and temperature. Depending on the conditions JPs can assemble into aggregates of various sizes and shapes, vesicles, bilayers, ordered 2D arrays, and 3D crystals. (1−3,5−9,11−14) It has been proved that the Kern-Frenkel model generates the formation of micelles, vesicles, bilayers, and different crystal phases. (12−14) Granick’s group (2,3,5) has shown that colloidal spheres, hydrophobic on one hemisphere and charged on the other, assemble into small compact aggregates or wormlike strings. Rosenthal et al. (6) have studied the aggregation of amphiphilic Janus particles in bulk phases and shown that an increase in the system density causes the formation of different aggregates, from spherical micelles, through icosahedrons to huge elongated structures. The recent simulations (15) have suggested a simple route toward 2D crystals via the direct self-assembly of 3D systems of amphiphilic JPs that spontaneously formed ordered bilayered lamellae. Within each layer of the bilayered lamellae, abundant highly ordered 2D crystals including the Frank–Kasper phases and open kagome lattice were observed. (15)
+The behavior of JPs can be also manipulated by external magnetic or electric fields, (1) and interfaces (17) the presence of different solvents or isotropic nanoparticles. (18−21) Another method for the design of unique structures is also to assemble JPs under confinement. This can be realized by the adsorption of JPs on solid surfaces or in different pores. (8,9,22−36) Recent advances in computer simulations of colloidal self-assembly driven by anisotropic or orientation-dependent interparticle interactions are highlighted in the comprehensive review. (16)
+A two-dimensional system involving JPs can be considered as a monolayer formed on an inert substrate. Monte Carlo simulations of Janus disks have shown how the assembly and phase transitions depend on the strength of interaction between different patches. (8,9) The self-consistent phonon theory has been applied to study two-dimensional crystalline phases of amphiphilic JPs. (22) This approach predicts the formation of zigzag stripes, trimers, and rotationally disordered plastic crystal phases. The orientational ordering of two-dimensional closely packed JPs has been also explored by extensive Monte Carlo simulations. (23) For large enough patch sizes, the system exhibited a second-order transition into a phase with the stripe patterns of the patches breaking the threefold rotational symmetry. The transition belongs to the universality class of the three-state Potts model. Quite recently, Sato (24) has applied MC simulations to study how two-dimensional self-assemblies formed by the one-patch Kern-Frenkel particles on a flat plane depend on the interaction length and patch area. Huang et al. (37) studied the melting and solid–solid transitions of two-dimensional crystals composed of Janus colloidal spheres interacting via anisotropic attractive pair potential proposed by Doye et al. (10) They discovered a first-order solid–solid transition from a single crystal with uniform stripes to a novel crystal with polycrystalline domains of stripes. In this transition, the particles lost their long-range orientation order but maintained their crystalline positional order. Equilibrium self-assembly of inverse patchy colloids in two dimensions is investigated using Monte Carlo method. (38) Various ordered structures were obtained by tuning the size of the single patch, density, and interaction strengths.
+Numerous studies have shown that the structure of the adsorbed layer can be controlled by the surface potential. (25−34,36,39) The behavior of amphiphilic JPs at planar walls has been investigated using classical density functional theory. (25) In this case, inert surfaces and walls preferring the hydrophilic patch cause the formation of bilayers, while hydrophobic walls typically induce competition between mono- and bilayer structures. Multilayer adsorption of JPs has been also discussed in the framework of the lattice model. (26)
+From a cognitive point of view, it is very interesting to discuss the self-assembly of JPs in different pores. (28−35,39) Several theoretical works dealt with the behavior of JPs in two-dimensional channels. (28−30) Molecular dynamic simulations were carried out for Janus disks in a two-dimensional plane, which were trapped in a one-dimensional harmonic potential, (28) and for Janus spheres in a circular symmetric harmonic trap. (29) In these systems, various membrane-like morphologies were found. These structures consist of single and multiple chain configurations with different orientations of the particles with respect to each other, (28) multiple helices, and Bernal spirals. (29) The assembly of amphiphilic JPs in two-dimensional slits has been investigated using Monte Carlo simulations. (30) The slits with identical walls and Janus-like pores were investigated. The study has shown how interactions between particles, the nature of “walls”, and their separation influence self-assembly.
+The behavior of JPs in three-dimensional channels has been studied using density functional theory (31,32) and molecular simulations. (33−36,39) Rosenthal and Klapp (31) have investigated amphiphilic JPs in slits and discussed the competition between planar structures preferred by the surfaces and nonplanar (micellar) structures induced by particle–particle interactions. They proved that the surfaces can stabilize bilayer structures characterized by a high degree of ordering relative to the walls. Iwashita and Kimura (33,34) have explored the behavior of JPs under confinement. In the first stage, they analyzed purely orientational ordering in close-packed one-patch particles confined in narrow slits and confirmed the decisive impact of confinement on the ordering of JPs. (33) Then, they discussed the impact of the density on the orientational ordering in the slits. (34) Kobayashi and Arai (35) have employed dissipative particle dynamics simulation to investigate the phase behavior of JPs with hydrophobic hemispheres in nanotubes with different walls─hydrophobic, hydrophilic, and hydroneutral. They have found the assemblies that do not occur in bulk systems. Various unique structures have been also observed in Monte Carlo simulations of JPs confined in different slits. (36) Several interesting phenomena were observed in such systems, namely, two-dimensional “crystallization of clusters”, surface-induced formation of “levitating” slabs, and “inverted” adsorption in Janus-like pores. (36) Clusters formed by dumbbell-like JPs confined in thin space between two parallel walls have been also discussed. (39)
+To sum up, numerous studies revealed that JPs confined in nanospaces form unique structures that are not observed in their bulk counterpart. The self-assembly of JPs in pores results from a competition between particle–particle interactions and particle–wall confining forces. This process depends on many parameters, such as the geometry of pores, nature of walls, type of JPs, density, and temperature. Despite intensive research, many questions regarding the role of individual parameters remain unanswered. For example, the evolution of the structure with increasing pore filling has not been systematically discussed. Furthermore, the mechanism of crystallization of JPs under confinement has not yet been clarified. The interplay between the aggregation of JPs and their adsorption at the pore walls also requires further studies.
+Herein, we aimed to gain fundamental insights into the intricate relationship between the slit characteristics, the interactions between JPs, the system density, and the resulting system morphology. We study amphiphilic JPs in different slits using Monte Carlo simulation in a grand canonical ensemble. We investigated two types of slits─symmetrical ones and Janus-like pores.
+The organization of the paper is as follows. In Section 2 we introduce the model, briefly describe our simulation method, and define the calculated quantities. Then, in Section 3 we report and discuss our results. Finally, in Section 4 we conclude the paper with a few remarks.
+2. Methods
+Jump To
+Model
+We study the behavior of Janus particles confined in different slits. The wall separation is assumed to be Lz. The model of amphiphilic Janus particle used here is essentially the same as described in earlier works. (25,35,36,39) The Janus particles consist of two hemispheres; the parts named A are attractive while the parts R are repulsive. The interaction potential between two Janus particles is expressed as a sum of the hard-sphere potential, vJJhs, and the anisotropic contribution
+𝑣
+𝐽𝐽
+=
+𝑣
+ℎ𝑠
+𝐽𝐽
+−
+𝑣
+𝑠𝑤
+𝐽𝐽
+(
+𝑟
+12
+)(
+𝐮
+̂ 
+1
+−
+𝐮
+̂ 
+2
+)·
+𝐫
+̂ 
+21
+(1)
+where the vectors r1 and r2 characterize the positions of the interacting particles, r12 = |r12| = |r1 – r2|,
+𝐫
+̂ 
+21
+=
+𝐫
+21
+/|
+𝐫
+21
+|
+, and
+𝐮
+̂ 
+1
+,
+𝐮
+̂ 
+2
+are the unit patch orientation vectors; the vector
+𝐮
+̂ 
+𝑖
+points toward the repulsive (R) part of the particle i (i = 1, 2), and the
+𝑣
+𝑠𝑤
+𝐽𝐽
+(
+𝑟
+12
+)
+is the square-well potential, with the depth εJJ and the range 1.6σ. The Janus particles prefer to be oriented in opposite directions, such that the attractive parts, A, point toward one another, while the antiparallel orientation with facing R-sides is the most energetically unfavorable one. The parallel configurations are energetically neutral.
+The energy of interactions of JPs with both walls is the following sum
+𝑣
+𝐽𝑊
+(𝑧,
+𝐮
+̂ 
+)=
+𝑣
+(1)
+𝐽𝑊
+(𝑧,
+𝐮
+̂ 
+)+
+𝑣
+(2)
+𝐽𝑊
+(
+𝐿
+𝑧
+−𝑧,
+𝐮
+̂ 
+)
+(
+1
+)
+(
+2
+)
+(2)
+while vJW(i) is the potential of interaction with the ith wall
+𝑣
+(𝑖)
+𝐽𝑊
+=
+𝑣
+ℎ𝑤
+𝐽𝑊
++
+𝑣
+𝑠𝑤
+𝐽𝑊
+(𝑧)(−𝑠
+𝐮
+̂ 
+·
+𝐞
+̂ 
+𝑧
+)
+(
+i
+)
+(3)
+where vJWhw is the hard-wall potential,
+𝐞
+̂ 
+𝑧
+is the unit vector along the axis z, perpendicular to the surface, and vJWsw is the square-well potential of the well range between 0.5σ and 2.5σ, and of the depth εJW. The factor s = ±1 characterizes the wall. When the wall attracts the R-parts of JPs (and repels their A sides), we set s = 1 and abbreviate such a surface as WR. For s = −1, however, the A-sides of JPs are attracted by the wall (WA).
+We study two types of slit-like pores: (i) symmetrical slits (SP) with the same walls (WR) and (ii) Janus-like (antisymmetrical) slits (AP), in which one wall is of the WR-type, while the other is the WA-wall.
+The Janus particle diameter σJ = σ is the unit of distance, and εJJ = ε is taken as the unit of energy. In this work, we use the reduced parameters, e.g., z* = z/σ, Lz* = Lz/σ, or εJW* = εJW/ε, etc.
+Our model was built based on real systems. The potential (eq 1) mimics interactions between JPs composed of hydrophobic (A) and hydrophilic (R) parts in aqueous solutions. The water molecules are adsorbed at the hydrophilic patches of the particles. Due to the resulting steric exclusion, the hydrophilic portions of JPs repel each other. At the same time, configurations with hydrophobic lobes facing each other are preferred because they minimize contact with water in this way. This means that the hydrophobic sides are effectively attractive. A classical example is silica particles, one hemisphere of which is covered with gold, immersed in an aqueous solution. (40,41) On the other hand, the WR face may represent polar substrates such as bare silicon, while the wall of WA mimics nonpolar surfaces such as a methylene-capped silicon surface. (42) However, a great variety of one-patch particles can be represented by the model considered, for example, gold nanoparticles coated with single-stranded DNA (43) and others. (44)
+Simulation Details
+We have carried out a series of Monte Carlo simulations in the grand canonical ensemble. (45,46) Each Monte Carlo step consisted of the following attempts to change the state of the state of the system: a mutual change of the position and orientation of a randomly chosen particle, its reorientation, a “jump” (the annihilation of a selected particle, followed by the creation of a particle at a new position and a new orientation), and an attempt to insert or remove a particle from the system. The use of various ways to change the state of the system increases the efficiency of the method. An acceptance of removal or insertion leads to a change in the number of particles in the system. For other attempts to change the state of the system, the density remains constant. Annihilations, creations, and jumps allow us to avoid ”arresting” the system in metastable states and facilitate the exploration of the free energy landscape. Moreover, in dense systems, certain ”moves” make it easier to fit into the equilibrium structure (e.g., reorientation of a particle without changing its position). The jumps can improve the removal of lattice defects in crystals. Long simulation runs (on the order of 109 MC steps) were necessary to reach equilibrium. The production runs lasted not less than 107 MC steps. To estimate the error bars, we performed five independent simulations.
+Calculated Observables
+During simulations, we have collected density profiles, orientations of JPs, and energies of interactions between the particles and with the walls and used them to calculate various characteristics of the systems.
+To measure the adsorption magnitude, we determine the effective density of JPs in a slit
+𝜌
+∗
+0
+=
+∫
+𝐿
+∗
+−0.5
+0.5
+𝜌
+∗
+(𝑧)d
+𝑧
+∗
+/(
+𝐿
+∗
+𝑧
+−1)
+*
+(4)
+In order to analyze the orientation of JPs with respect to the walls, we used the order parameter characterizing the local “polarization”, h(z), defined as (25)
+ℎ(
+𝑧
+∗
+)=⟨
+∑
+𝑖=1
+𝑁
+𝑧
+𝐮
+̂ 
+𝑖
+·
+𝐞
+̂ 
+𝑖
+/
+𝑁
+𝑧
+⟩
+⟨
+⟩
+(5)
+where Nz is the number of particles within a slice of width Δz. The order parameter assumes values between −1 and 1. For h = 1 (h = −1), the R-parts of all JPs point toward the lower (upper) wall.
+To characterize local structures that evolved during the simulation we use the parameters based on the concept of the local-bond-orientational parameters proposed by Steinhardt et al. (47) According to this method, a quantitative measure of structure around a particle i is characterized by the bond (a vector connecting neighboring particles i and j) order parameter
+𝑞
+𝑙𝑚
+=
+1
+𝑁
+𝑏
+(𝑖)
+∑
+𝑗∈
+𝑁
+𝑏
+(𝑖)
+𝑌
+𝑙𝑚
+(
+𝜃
+𝑖𝑗
+,
+𝜙
+𝑖𝑗
+)
+1
+(6)
+where Nb(i) is the number of neighbors of particle i, θij and ϕij specify the orientation of the bond between particles i and j, and Ylm are the spherical harmonics. We assume that the Janus particles are considered to be coordinating if their distance is less than 1.6σ.
+Recently, Muller-Plathe’s group (48,49) has proposed new order parameters that make possible the identification of quasi-two-dimensional Kagome and hexagonal phases
+𝜆
+1
+(𝑖)=
+1
+𝑁
+𝑏
+(𝑖)
+∑
+𝑗∈
+𝑁
+𝑏
+(𝑖)
+[
+∑
+𝑚=−6
+6
+𝑞
+̂ 
+6𝑚
+𝑞
+̂ 
+∗
+6𝑚
+−
+∑
+𝑚=−4
+4
+𝑞
+̂ 
+4𝑚
+𝑞
+[
+(7)
+and
+𝜆
+2
+(𝑖)=
+1
+𝑁
+𝑏
+(𝑖)
+∑
+𝑗∈
+𝑁
+𝑏
+(𝑖)
+[
+∑
+𝑚=±6,±4
+𝑞
+̂ 
+6𝑚
+𝑞
+̂ 
+∗
+6𝑚
+−
+∑
+𝑚=±4
+𝑞
+̂ 
+4𝑚
+[
+(8)
+where
+𝑞
+̂ 
+𝑙𝑚
+=
+𝑞
+𝑙𝑚
+(𝑖)
+(
+∑
+𝑙
+𝑚=−𝑙
+|
+𝑞
+𝑙𝑚
+(𝑖)|
+2
+)
+1/2
+(
+i
+)
+(9)
+and an asterisk denotes the complex conjugation. In the order parameter space (λ1, λ2), a given phase is represented by the point (λ10, λ20). The parameters which identify the Kagome and hexagonal phases correspond to the points (0.65, 0.7) and (0.0, 0.8), respectively. We assume that a particle belongs to a given phase if the λ1 and λ2 have the values λi = λi0 ± δi, where δi = 0.1λi0 and i = 1, 2.
+We define the parameter characterizing a degree of the ordering in a given layer as
+𝑃
+𝛼
+=
+𝑁
+𝛼
+/
+𝑁
+𝑙
+P
+N
+/
+N
+(10)
+where Nα is the number of particles that satisfy the assumed conditions (α = Kagome, hex) and Nl is the number of particles in a layer.
+In the following, we will refer to the wall separation as H* = Lz*.
+3. Results and Discussion
+Jump To
+Description of the Considered Systems
+We report the results of simulations for JPs adsorbed in the relatively narrow slits with the wall-separation H* = 7 and the wider pores with H* = 11. For these values of H*, the force fields of walls do not overlap inside the slits. Nevertheless, we show that for the assumed range of interparticle interactions, both walls affect the internal structure of the adsorbed fluid. The pore is in equilibrium with the bulk reservoir in which the chemical potential of JPs is equal to μ*. Simulations were performed at temperature T* = 0.2. We investigate symmetrical (SP) and Janus-like (AP) pores. Moreover, two cases of particle–wall couplings are considered: weak (WC) and strong (SC) interactions, with εJW* = 2 and εJW* = 4, respectively.
+We assumed the parameters similar to that used in earlier works. (30,31,36) In particular, we previously considered the Janus particles in narrow pores with overlapping force fields generated by the walls. (36) The behavior of these particles in wider pores has not been the subject of research until now.
+Our goal is to show how an increase in density changes the morphology of these systems. We also analyze the influence of a slit type and the strength of particle–wall interactions on the system structure. We are interested in the mutual interplay between anisotropic particle–particle and particle–wall interactions. The effect of such competition is considerable when the strength of these interactions is similar. Therefore, we focus on the case of weak walls (WC). To limit the size of the article, we describe only the most representative and significant results obtained with stronger walls (SC). For very strong walls the system structure could be completely dominated by the surfaces.
+In some of the studied systems, a hexagonal phase was detected, and the values of the parameter Phex are collected in tables presented in Supporting Information (SI).
+Adsorption and Self-Assembly in the Narrow Slits with H* = 7
+We begin with the analysis of the results for the case of weak JP–wall interactions (WC). The adsorption isotherms obtained for the studied narrow slits are presented in Figure 1. Adsorption is stronger in symmetrical pores than in Janus-like pores. In the range −2.2 < μ* < −1.4 the densities in SP and AP are similar and quickly, but gradually, increase. However, at μ* ≈ – 1.4 the densities rapidly jump. The jump is much greater for the symmetrical pore. With a further increase in the chemical potential, the density of adsorbed JPs continuously rises. For the symmetrical pore, at μ* ≈ 1.0 the increase accelerates. In the case of a Janus-like pore, we see two inflection points–at μ* ≈ – 0.2 and at μ* ≈ 0.8.
+Figure 1
+Figure 1. Results for the narrow pores (H* = 7). (a) Adsorption isotherms for the case WC, εJW* = 2 (black circles) and SC, εJW* = 4 (red squares) in symmetrical pores SP (open symbols) and Janus-like pores AP (filled symbols). The energies EJJ* (red lines) and EJW* (black lines) in symmetrical pores (solid lines) and Janus-like pores (dashed lines) for the case WC, εJW* = 2 (b) and SC, εJW* = 4 (c).
+It is instructive to analyze the energies of the particle–wall
+(
+𝐸
+∗
+𝐽𝑊
+)
+and particle–particle
+(
+𝐸
+∗
+𝐽𝐽
+)
+interactions along the isotherms shown in Figure 1b. The energies of particle–wall interactions gradually elevate as the chemical potential increases to μ* ≈ −1.4 where the small steps are visible. At the same point, a rapid decrease in particle–particle interaction energies is observed. These jumps are more profound for the SP than for the AP. Then, the functions
+𝐸
+∗
+𝐽𝑊
+(
+𝜇
+∗
+)
+and
+𝐸
+∗
+𝐽𝐽
+(
+𝜇
+∗
+)
+are different for symmetrical and antisymmetrical slits. For SP, the EJW* slightly decreases while the EJW* considerably increases. However, at μ* ≈ 1.2 the trend is reversing; the EJW* decreases but EJJ* increases. Note that in the range −1.4 < μ* < 1.2 the particle–particle interactions dominate
+(
+𝐸
+∗
+𝐽𝐽
+<
+𝐸
+∗
+𝐽𝑊
+)
+. In the case of the AP, we see a deep well in the function
+𝐸
+∗
+𝐽𝑊
+(
+𝜇
+∗
+)
+in the range −0.2 < μ* < 0.4 which is correlated with the slight increase in the EJW*. For higher chemical potentials the attractive interactions with the walls become stronger and EJJ* increases while EJW* slowly decreases. To summarize, in both pore types, for very low densities and in the dense systems, the interactions with the solid substrates prevail over the particle–particle interactions. Below, we discuss the structural changes observed near the highlighted points above.
+First, we want to discuss the structural transformations in the symmetrical pore resulting from the increase in density. At μ* ≈ −1.4 we found a transition between disordered surface films and the bilayers located at a certain distance from each wall (BL1). We suppose that it can be a first-order transition. However, rigorous proof of this hypothesis is beyond the scope of this study. In Figure 2, the density profiles and orientational profiles h(z*) are plotted for selected chemical potentials. The density profiles are symmetrical with respect to the axis located at the pore center. To facilitate the discussion, the peaks corresponding to successive layers are numbered. Initially, the density in the surface region (i.e., in the range of wall potential that is 2σ) is low, and here we found chaotically distributed small clusters of different shapes (layers 1 and 7 in Figure 2a). At μ* ≈ −1.4 we see two high and narrow peaks near each wall (layers 2–3 and 5–6). Notice that the outer peaks of the bilayers (3 and 5) are located outside the force field of the walls. We will show below that these peaks correspond to highly ordered monolayers. Adsorption at the surface is still very low, and the middle part of the pore (unmarked layer 4) is empty.
+Figure 2
+Figure 2. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panels) and orientational profiles (top panels) for low (a) and high (b) values of the chemical potential, μ*.
+The morphology of the system results from the competition between adsorption and aggregation. The attractive particle–particle interactions start to dominate which promotes the aggregation (see Figure 1b). However, the impact of the wall enforces the shape of the “giant clusters”, and two bilayers (BL1) are formed parallel to the walls. This is a consequence of the interplay between (i) the system’s geometry, (ii) the relations between ranges of potentials, (iii) possible numbers of neighbors, and (iv) interaction strengths.
+In the surface region (layers 1–2 and 6–7), the R-sides of Janus particles are directed mainly toward the walls (see the h(z) profiles in Figure 2a). However, the particles in the outer layers (3 and 5) of the BL1-structures have opposite orientations. The distance between layers 3 and 5 is close to the range of interactions between particles
+(
+𝑧
+∗
+𝑟
+=1.6)
+. Due to the high orientational ordering, these interactions are repulsive. This additionally stabilizes the BL1 structures. In this way, a kind of narrow pore with mutually repelling walls is formed. Adsorption of Janus particles in the middle of such a pore is energetically unfavorable. Therefore, as the chemical potential increases, adsorption at the walls rapidly rises while the pore center remains unfilled (see the density profiles for μ* = 0.8 and 1.0). Simultaneously, the peaks 2–3 and 5–6 become higher. The orientation parameter h(z*) tends to 1 in the surface region of the bottom wall, while it is approaching −1 in the third layer (inversely near the top wall).
+At the sufficiently dense system, however, a situation changes dramatically (see Figure 2b). For μ* = 1.2, the outer peak of BL1 splits into two lower peaks. One of these double peaks moves toward the wall. The bilayers gradually break down. This enables the formation of the layer in the pore center (layer 4). At μ* = 1.8, the particles accumulate at the walls, at the border of the wall field, and in the middle part of the slit. However, the peaks 2 and 6 become lower and wider. The orientational parameter in the layer 3 (5) is h ≈ −0.5 (h ≈ 0.5). This reflects the fact that the system gradually transforms into a completely different structure. The evolution of the system structure with increasing density is shown in Figure S1 (SI).
+Let us now discuss the positional and orientational ordering in the selected layers. A representative configuration of the BL1 is shown in Figure 3a for μ* = −1.4. The R- and A-sides are blue and red spheres, respectively. The orientational ordering is evident. We found high positional ordering in the layers forming the BL1 structure. For example, for μ* = −1.4 the fractions of particles forming a hexagonal lattice in the layers 2 and 3 are Phex(2) = 0.78 and Phex(3) = 0.74. Figure 3b presents a top view of the “split” layer 3 formed in a denser pore (μ* = 1.2). In this case, the particles with the same orientations form patches that are slightly z-shifted (h(z* < 2.5) ≈ 1 and h(2.5 < z* < 2.8) ≈ – 1).
+Figure 3
+Figure 3. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. (a) The exemplary configuration of the structure BL1 at μ* = −1.4. (b) A top view of the “split” layer 3 formed at μ* = 1.2.
+Interestingly, for μ* = 1.8 a plastic crystal layer is formed at the middle of the slit. This layer exhibits a significant degree of the positional ordering Phex(4) = 0.56, but there is no orientational ordering at all (h(z*) = 0). In this system, the particles begin to form patches of a hexagonal phase also at the walls (Phex(7) = 0.17). Nevertheless, the positional ordering in these layers is much lower compared to that observed in the BL1.
+To visualize the distribution of different structures within a given layer we show the particles which belong to the hexagonal phase as honey spheres and the remaining particles as green spheres in Figure 4. The picture of the outer layer of the BL1 at μ* = −1.4 is shown in Figure 4a. We see that almost all particles form a hexagonal lattice and the others are located at the interface of crystallites. Figure 4b displays the order parameters in the space (λ1, λ2). Indeed, the points accumulated in the region corresponding to a hexagonal phase (marked with a red ellipse). The exemplary results obtained at μ* = 1.8 are placed in the bottom panel. The middle layer (layer 4) is presented in part (c), while the distribution of particles adsorbed immediately at the wall is shown in part (d). A low degree of positional ordering at the wall is evident.
+Figure 4
+Figure 4. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. The distribution of different structures within selected layers. The particles which belong to the hexagonal phase are honey spheres while the remaining particles are green spheres. (a) The outer layer of the BL1 (layer 3) at μ* = −1.4. (b) The order parameters in the space (λ1, λ2). In the bottom panel, the results obtained at μ* = 1.8 are shown: (c) the middle layer (layer 4) and (d) the layer 7 adsorbed at the wall.
+Now let us discuss the structures found in the narrow Janus-like pores. For low densities, adsorption on each wall proceeds almost independently. The surface layer on the wall WR is similar to that observed previously for the symmetrical pore (compare Figure 2a and Figure 5a). In particular, at μ* = −1.4 the highly ordered bilayer (BL1) is formed (layers 2, 3). Adsorption on the other wall (WA) is very low and JPs are chaotically distributed over the surface region. As might be expected, the particles are adsorbed on the WA-surface with the A-sides pointing mainly toward this wall (0.5 < h(z*) < 1). A further increase in the density causes the formation of very interesting structures. For −0.2 < μ* < 0.4 three well-pronounced layers are formed (TL1) on the surface WA (see Figure 5b), while the BL1 near the WR remains unchanged. As the distance from the surface WR decreases, the orientation parameter h(z) gradually changes from 1 to approximately 0.25. Note that this morphology corresponds to the well in the energy EJJ*. At higher densities, the three-layer structure disintegrates and the adsorption directly at the wall WA increases. This transformation is accompanied by a lowering of the orientational order on the WA surface (h(z) tends to 0). At the same time, the BL1 moves away from the surface WR, the layers become wider, and adsorption on the wall WR also increases (Figure 5b).
+Figure 5
+Figure 5. Results for the narrow (H* = 7), Janus-like pore (AP) with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panels) and orientational profiles (top panels) for low (a) and high (b) values of the chemical potential, μ*.
+Let us discuss the structure TL1 in more detail. The relevant fragment of the equilibrium configuration with a loose, quasi-lamellar phase is shown in Figure 6. Long, slightly bent stripes are clearly visible in the xy-plane. The “low walls” on the surface WA are built of cuboids schematically drawn on the right side. In the inset, we remind how the orientation parameter changes across the TL1- structure. As z* increases, it drops from 0.8 to 0.2. The arrows indicate the positions of successive maxima in the density profile. To show the influence of the particle–wall interaction strength on the structure of the system, we also performed simulations for εJW* = 4 (SC). In the case of strong particle–wall coupling, all estimated isotherms are continuous, and adsorption is greater than that discussed previously. As expected, isotherms obtained for the SC-pores are shifted toward lower chemical potentials compared to those for the WC-pores. The particle–walls interactions always dominate, EJW* < EJJ*, and the energy changes with μ* are continuous.
+Figure 6
+Figure 6. Results for the narrow (H* = 7), Janus-like pore (AP) with weak particle–wall interactions (WC), εJW* = 2. An equilibrium configuration of the TL1-structure. The building block is drawn on the right side. In the inset, the corresponding orientational profile is presented. The arrows indicate the positions of successive maxima in the density profile.
+Figure 7 depicts density profiles for the SC-slits and relatively high chemical potentials. We start with the discussion of a situation in the symmetrical pore (Figure 7a). The structure of the system differs from that obtained for the slit with weaker walls (compare with Figure 2). First, we observe large adsorption at the walls, even at low chemical potentials. Second, there are no bilayers (BL1), typical for the systems with εJW* = 2. The particles accumulate closer to the walls; three layers are formed in the range of the potential of each wall. The outer layers (layers 3 and 5) do not interact with each other. As before, at low chemical potentials the middle part of the pores remains empty (not shown here), while at higher μ*, an additional layer forms in the center of the pore (cf. Figure, 2b). It is noticeable that stronger confining forces prevent the previously observed 2D ordering in layers 2 and 6 (see Table 1 in Supporting Information).
+Figure 7
+Figure 7. Results for the narrow (H* = 7) pores with strong particle–wall interactions (SC), εJW* = 4. The density profiles (bottom panels) and orientational profiles (top panels) for (a) symmetrical (SP) and (b) Janus-like (AP) pores and selected values of the chemical potential, μ*.
+The density profiles for the Janus-like pores are plotted in Figure 7b. At the wall WA, an increase in the strength of particle–wall interactions does not have a qualitative impact on the morphology of the surface layer. As previously, the three-layer film TL1 is observed. This is reflected by three peaks in the density profiles. On the other hand, a completely different structure is observed at the WR wall. We see here a series of peaks near the wall: the very high peak at the wall, two much lower ones in the surface region, and the peak outside the field of the wall (z* = 2.5). It should be pointed out that there is no 2D positional ordering within these layers.
+To sum up, for weak particle–wall interactions, the unique BL1-structures are formed near the WR-surfaces, while on the WA-walls the special TL1-structures are observed. We found high degrees of the 2D positional ordering in the layers 2–6 in the BL1. If the particle–wall interactions are strong, the bilayers BL1 disappear, and the adsorption in the region closest to the surface increases. Moreover, the 2D ordering in the internal layers decreases but slightly increases at the walls. As expected, for stronger interactions with the surfaces the orientational ordering near the walls increases. This confirms our hypothesis that some unique structures appear only for relatively weak walls. Strong surfaces impede positional ordering in the inner layers (see SI, Table 1). In this case, the structure of the adsorbed fluid is considerably imposed by the walls.
+Adsorption and Self-Assembly in the Wide Slits with H* = 11
+In this section, we discuss results obtained for wider slits. The isotherms and the energies of interactions for these systems are shown in Figure 8. We focus here on the pores with weakly interacting walls (WC, εJW* = 2). Similar to narrower slits, there is a jump in adsorption at μ* ≈ – 1.4, but then adsorption rises continuously. In the case of symmetrical pores, the energy landscape is only slightly different compared to that for the narrow slits. However, for the Janus-like slits the differences are more significant, namely, in the range −0.2 < μ* < 1, a series of alternating extrema is visible in the plot
+𝐸
+∗
+𝐽𝐽
+(
+𝜇
+∗
+)
+. This suggests the existence of a new structure TL2, which we will discuss below. Example configurations of systems with different densities are shown in Figure S2 (SI).
+Figure 8
+Figure 8. Results for the wide pores (H* = 11). (a) Adsorption isotherms for the case WC, εJW* = 2 (black circles) and SC, εJW* = 4 (red squares) in symmetrical pores SP (open symbols) and Janus-like pores AP (filled symbols). The energies EJJ* (red lines) and EJW* (black lines) in symmetrical pores (solid lines) and Janus-like pores (dashed lines) for the case WC, εJW* = 2 (b) and SC, εJW* = 4 (c).
+In the case of symmetrical pores, the morphology of the wide slit is similar to that in the narrow one (see Figure 9). In particular, the ordered BL1 structures are observed at each surface. However, for higher densities, two layers are formed in the center of pores (BL2) instead of one, and four layers near the walls. The layers in the structures BL1 and BL2 exhibit a considerable degree of the 2D ordering (see Table 2 in Supporting Information).
+Figure 9
+Figure 9. Results for the wide (H* = 11) pores with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panel) and orientational profiles (top panel) for (a) symmetrical (SP) and (b) Janus-like (AP) pores, and selected values of the chemical potential, μ*.
+For the Janus-like slit, a picture of structure transformations is more interesting. The morphology of the layer near the wall WR changes in the same way as in the wide symmetrical pore (compare parts a and b). Moreover, the layers formed at the WA walls in the narrow and wide pores are quite similar. In both cases, the quasi-lamellar structures TL1 are observed. However, in the center of the slit, a very special structure (TL2) is formed. At μ* = 0.4 three well-pronounced identical peaks are visible, indicating the existence of “the three-layer cluster” in the region 4.8 < z* < 5.2. As the chemical potential increases to μ* = 0.6, these peaks spread into two wide peaks in the density profile indicating that the structure TL2 is falling apart. Thus, the structure TL2 transforms gradually into the bilayer. Surprisingly, at μ* = 1.3 (not shown in Figure 9b) three maxima appear again and remain visible with a further increase in density also at μ* = 1.9. It is interesting that at certain intermediate densities the structure TL2 cannot be formed but it is stable at high densities.
+We analyzed the structure TL2 formed inside the wide Janus-like pore and found that it is considerably different from the phase of the TL1-type built at the wall WA. As we show in Figure 10a, the structure TL2 is built of the cuboids in which orientations of the Janus particles are significantly different than those in the structure TL1 (compare insets in Figure 6 and Figure 10a). For the TL2 structure, the orientation parameter h(z*) decreases from 0.75 to −0.75 in the z-direction. The particles in the outer layers of the TL2 are almost oppositely oriented. At the bottom, we present the fuzzy and pleated bilayer observed for μ* = 0.6 and the highly rough structure that appears in the region 4 < z* < 8 at μ* = 1.9.
+Figure 10
+Figure 10. Results for the wide (H* = 11), Janus-like (AP) pore with weak particle–wall interactions (WC), εJW* = 2. (a) An equilibrium configuration of the TL2-structure, the building block, and the corresponding orientational profile (inset) for μ* = 0.4. The arrows indicate the positions of successive maxima in the density profile. (b) The bilayer observed for μ* = 0.6 and (c) the structure in the region 4 < z* < 8 at μ* = 1.9.
+In Figure 11 we present the arrangement of structures TL1 (pink spheres) and TL2 (blue spheres) relative to each other. Note that the orientations of the “strips” are not correlated. To complete our discussion we analyzed the results for εJW* = 4 (Figures S3 and S4). For symmetrical pores, structures similar to those described above are formed. However, the successive layers exhibit a considerably lower degree of ordering (Table 2 in Supporting Information). For example, in the case of εJW* = 2, Phex(3) = 0.83 and Phex(4) = 0.78 (μ* = −0.8), while for εJW* = 4, Phex(3) = 0.58 and Phex(4) = 0.55 (μ* = −0.9). It is interesting that at a high density (μ* = 1.9) we found a certain degree of 2D ordering near the walls (Phex(1) = 0.21 and Phex(2) = 0.20). Also in Janus pores, the surface layers are very similar to those observed for weaker walls (cf. Figure 9b and Figure S4 in SI). Thus, the effect of increasing the wall strength on the structure of the system is similar to that observed in narrow pores (see Table 2 in Supporting Information).
+Figure 11
+Figure 11. Results for the wide (H* = 11), Janus-like (AP) pore with weak particle–wall interactions (WC), εJW* = 2. The arrangement of structures TL1 (pink spheres) and TL2 (blue spheres) relative to each other: (a) a side view, (b) a view from above.
+4. Conclusions
+Jump To
+We have studied the self-assembly of amphiphilic Janus particles confined between two solid surfaces using Monte Carlo simulations in the grand canonical ensemble. We have considered Janus particles consisting of attractive and repulsive hemispheres confined in two types of slits: (i) symmetrical pores (SP), with identical “walls” attracting the repulsive parts of JPs, and (ii) antisymmetrical, Janus-like slits (AP), in which one “wall” attracts the repulsive hemispheres of JPs, while the other attracts their attractive parts. We have focused on the impact of the density of Janus particles on the system morphology. So far, this issue has not been systematically studied.
+We have estimated the adsorption isotherms for narrow (H* = 7) and wide (H* = 11) pores with weak WC,
+(
+𝜀
+∗
+𝐽𝑊
+=2)
+and strong SC,
+(
+𝜀
+∗
+𝐽𝑊
+=4)
+walls. In all cases, we analyzed the structural changes resulting from the increase in the density of particles adsorbed in the pores. To characterize the system morphology, we have calculated the density profiles of JPs along the z-axis, ρ*(z*), the orientation profiles, h(z*), and the parameters measuring the degree of positional ordering in the system (λ1, λ1, Pi).
+In general, the different self-assembly scenarios are due to the geometry of the system and the contributions of particle–particle and wall–particle interactions to the total energy. This results in the formation of structures that cannot be formed in the bulk phases.
+The most interesting results are obtained for relatively weak interactions with the walls (WC). In this case, we observe a complex interplay between aggregation and adsorption in the surface regions. A special geometry of the slits enforces the formation of layers parallel to the walls, instead of micelle-like clusters. In the symmetrical pores, at moderate densities, the characteristic bilayers are formed near each wall. These BL1-structures are located at a certain distance from the walls. The outer layers of the BL1s lie beyond the force field of the surface. The layers exhibit high orientational ordering. In the surface region, the R-sides of Janus particles are directed mainly toward the closest wall, while the particles in the outer layers have opposite orientations. In this way the adsorbed particles create a kind of pore with mutually repulsive walls in the slit’s center. Further adsorption of Janus particles inside this pore becomes energetically unprofitable. Indeed, the density at the middle part of the slit is extremely low. However, at a sufficiently high density, the system morphology changes, the bilayers disappear, particles accumulate at the walls, and an additional layer is formed in the pore center. We have analyzed the 2D ordering in these structures and detected the existence of hexagonal lattices, in some cases. In particular, the BL1 has a high degree of the hexagonal ordering, but the layers at the walls are completely disordered.
+In the Janus-like pore, we found two very interesting, three-layer structures, namely, the structure TL1 at the WA-walls and the structure TL2 in the middle part of the wide slit (H* = 11). The structures resemble loose, quasi-lamellar phases in which the “stripes” are built of cuboids. The orientations of particles in the cuboids belonging to the TL1 layers are different from the orientations in the building blocks of the TL2 layers. We carried out also simulations for stronger particle–wall interactions (SW, εJW* = 4). In this case, the bilayers BL1 disappear, and the adsorption at the walls increases. Moreover, the 2D ordering in the internal layers decreases but slightly increases at the walls. As expected, for stronger interactions with the surfaces the orientational ordering near the walls increases. Our simulations show that the morphology of the system is highly dependent on the strength of the force field generated by the walls. Our simulations demonstrated how the self-assembly of amphiphilic Janus nanoparticles can be controlled by the nature of the pores and the particle’s density. These findings may be expected to contribute to the development of novel applications involving anisotropic building blocks. For example, the design of the chemical nature of the walls can be one of the key factors controlling the assembly. Furthermore, the essential role of spatial confinement on the positional and orientational ordering revealed here may be useful for understanding the behavior of naturally occurring anisotropic colloids, such as proteins, confined by interfaces.
+We hope that our study has provided new knowledge about self-assembly in closed systems that can be applied to the design of unique structures composed of Janus particles.
+Supporting Information
+Jump To
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acsomega.3c01180.
+Figure S1: Additional snapshots for narrow symmetrical pores. Figure S2: Additional snapshots for wide Janus-like pores. Figures S3, S4: Density and orientational profiles for wide pores with strong particle–wall interactions. Tables S1, S2: Tabulated data for fractions of particles forming a hexagonal lattice in different layers. (PDF)
+ao3c01180_si_001.pdf (850.14 kb)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+Jump To
+Corresponding Author
+Łukasz Baran - Department of Theoretical Chemistry, Institute of Chemical Sciences, Faculty of Chemistry, Maria Curie-Sklodowska University in Lublin, Pl. M Curie-Sklodowskiej 3, 20-031 Lublin, Poland;  https://orcid.org/0000-0003-1777-1998;  Email: lukasz.baran@mail.umcs.pl
+Authors
+Małgorzata Borówko - Department of Theoretical Chemistry, Institute of Chemical Sciences, Faculty of Chemistry, Maria Curie-Sklodowska University in Lublin, Pl. M Curie-Sklodowskiej 3, 20-031 Lublin, Poland;  https://orcid.org/0000-0003-1461-249X
+Wojciech Rżysko - Department of Theoretical Chemistry, Institute of Chemical Sciences, Faculty of Chemistry, Maria Curie-Sklodowska University in Lublin, Pl. M Curie-Sklodowskiej 3, 20-031 Lublin, Poland;  https://orcid.org/0000-0001-9806-6056
+Jakub Smołka - Department of Computer Science, Lublin University of Technology, Nadbystrzycka 36B, 20-618 Lublin, Poland
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+Jump To
+This work was supported by the National Science Centre, Poland, under Grant No. 2021/41/N/ST4/00437, PRELUDIUM 20.
+References
+Jump To
+This article references 49 other publications.
+1Lotito, V.; Zambelli, T. Approaches to self-assembly of colloidal monolayers: A guide for nanotechnologists. Adv. Colloid Interface Sci. 2017, 246, 217– 274,  DOI: 10.1016/j.cis.2017.04.003 [Crossref], [PubMed], [CAS], Google Scholar
+2Zhang, J.; Grzybowski, B. A.; Granick, S. Janus Particle Synthesis, Assembly, and Application. Langmuir 2017, 33, 6964– 6977,  DOI: 10.1021/acs.langmuir.7b01123 [ACS Full Text ], [CAS], Google Scholar
+3Zhang, J.; Yan, J.; Granick, S. Directed Self-Assembly Pathways of Active Colloidal Clusters. Angew. Chem., Int. Ed. 2016, 55, 5166– 5169,  DOI: 10.1002/anie.201509978 [Crossref], [CAS], Google Scholar
+4Li, X.; Liu, X.; Liu, X. Self-assembly of colloidal inorganic nanocrystals: nanoscale forces, emergent properties and applications. Chem. Soc. Rev. 2021, 50, 2074– 2101,  DOI: 10.1039/D0CS00436G [Crossref], [PubMed], [CAS], Google Scholar
+5Hong, L.; Cacciuto, A.; Luijten, E.; Granick, S. Clusters of Amphiphilic Colloidal Spheres. Langmuir 2008, 24, 621– 625,  DOI: 10.1021/la7030818 [ACS Full Text ], [CAS], Google Scholar
+6Rosenthal, G.; Gubbins, K. E.; Klapp, S. H. L. Self-assembly of model amphiphilic Janus particles. J. Chem. Phys. 2012, 136, 174901,  DOI: 10.1063/1.4707954 [Crossref], [PubMed], [CAS], Google Scholar
+7Kern, N.; Frenkel, D. Fluid–fluid coexistence in colloidal systems with short-ranged strongly directional attraction. J. Chem. Phys. 2003, 118, 9882– 9889,  DOI: 10.1063/1.1569473 [Crossref], [CAS], Google Scholar
+8Borówko, M.; Rżysko, W. Phase transitions and self-organization of Janus disks in two dimensions studied by Monte Carlo simulations. Phys. Rev. E 2014, 90, 062308,  DOI: 10.1103/PhysRevE.90.062308 [Crossref], [CAS], Google Scholar
+9Patrykiejew, A.; Rżysko, W. Two-dimensional Janus-like particles on a triangular lattice. Soft Matter 2020, 16, 6633– 6642,  DOI: 10.1039/D0SM00656D [Crossref], [PubMed], [CAS], Google Scholar
+10Doye, J. P. K.; Louis, A. A.; Lin, I.-C.; Allen, L. R.; Noya, E. G.; Wilber, A. W.; Kok, H. C.; Lyus, R. Controlling crystallization and its absence: proteins, colloids and patchy models. Phys. Chem. Chem. Phys. 2007, 9, 2197– 2205,  DOI: 10.1039/b614955c [Crossref], [PubMed], [CAS], Google Scholar
+11Jiang, S.; Yan, J.; Whitmer, J. K.; Anthony, S. M.; Luijten, E.; Granick, S. Orientationally Glassy Crystals of Janus Spheres. Phys. Rev. Lett. 2014, 112, 218301,  DOI: 10.1103/PhysRevLett.112.218301 [Crossref], [CAS], Google Scholar
+12Sciortino, F.; Giacometti, A.; Pastore, G. Phase Diagram of Janus Particles. Phys. Rev. Lett. 2009, 103, 237801,  DOI: 10.1103/PhysRevLett.103.237801 [Crossref], [PubMed], [CAS], Google Scholar
+13Vissers, T.; Preisler, Z.; Smallenburg, F.; Dijkstra, M.; Sciortino, F. Predicting crystals of Janus colloids. J. Chem. Phys. 2013, 138, 164505,  DOI: 10.1063/1.4801438 [Crossref], [PubMed], [CAS], Google Scholar
+14Preisler, Z.; Vissers, T.; Smallenburg, F.; Sciortino, F. Crystals of Janus colloids at various interaction ranges. J. Chem. Phys. 2016, 145, 064513,  DOI: 10.1063/1.4960423 [Crossref], [CAS], Google Scholar
+15Sun, Y.-W.; Li, Z.-W.; Sun, Z.-Y. Multiple 2D crystal structures in bilayered lamellae from the direct self-assembly of 3D systems of soft Janus particles. Phys. Chem. Chem. Phys. 2022, 24, 7874– 7881,  DOI: 10.1039/D1CP05894K [Crossref], [PubMed], [CAS], Google Scholar
+16Krishnamurthy, S.; Mathews Kalapurakal, R. A.; Mani, E. Computer simulations of self-assembly of anisotropic colloids. J. Phys.: Condens. Matter 2022, 34, 273001,  DOI: 10.1088/1361-648X/ac55d6 [Crossref], [CAS], Google Scholar
+17Borówko, M.; Słyk, E.; Sokołowski, S.; Staszewski, T. Janus Dimers at Liquid–Liquid Interfaces. J. Phys. Chem. B 2019, 123, 4139– 4147,  DOI: 10.1021/acs.jpcb.9b02467 [ACS Full Text ], [CAS], Google Scholar
+18Borówko, M.; Rżysko, W.; Sokołowski, S.; Staszewski, T. Self-assembly of Janus disks induced by small molecules in two-dimensional systems. J. Chem. Phys. 2017, 147, 014904,  DOI: 10.1063/1.4990415 [Crossref], [PubMed], [CAS], Google Scholar
+19Borówko, M.; Rżysko, W.; Słyk, E. Self-assembly in two-dimensional mixtures of Janus disks and isotropic particles. J. Chem. Phys. 2019, 150, 044705,  DOI: 10.1063/1.5063292 [Crossref], [PubMed], [CAS], Google Scholar
+20Baran, Ł.; Borówko, M.; Rzysko, W.; Sokołowski, S. Self-organisation in two dimensional system involving patchy and isotropic disks. Mol. Phys. 2019, 117, 2802– 2813,  DOI: 10.1080/00268976.2018.1554196 [Crossref], [CAS], Google Scholar
+21Safaei, S.; Todd, C.; Yarndley, J.; Hendy, S.; Willmott, G. R. Asymmetric assembly of Lennard-Jones Janus dimers. Phys. Rev. E 2021, 104, 024602,  DOI: 10.1103/PhysRevE.104.024602 [Crossref], [PubMed], [CAS], Google Scholar
+22Shin, H.; Schweizer, K. S. Theory of two-dimensional self-assembly of Janus colloids: crystallization and orientational ordering. Soft Matter 2014, 10, 262– 274,  DOI: 10.1039/C3SM52094C [Crossref], [PubMed], [CAS], Google Scholar
+23Mitsumoto, K.; Yoshino, H. Orientational ordering of closely packed Janus particles. Soft Matter 2018, 14, 3919– 3928,  DOI: 10.1039/C8SM00622A [Crossref], [PubMed], [CAS], Google Scholar
+24Sato, M. Effect of the Interaction Length on Clusters Formed by Spherical One-Patch Particles on Flat Planes. Langmuir 2021, 37, 4213– 4221,  DOI: 10.1021/acs.langmuir.1c00102 [ACS Full Text ], [CAS], Google Scholar
+25Rosenthal, G.; Klapp, S. H. L. Ordering of amphiphilic Janus particles at planar walls: A density functional study. J. Chem. Phys. 2011, 134, 154707,  DOI: 10.1063/1.3579453 [Crossref], [PubMed], [CAS], Google Scholar
+26Patrykiejew, A. Lattice Model of Multilayer Adsorption of Particles with Orientation Dependent Interactions at Solid Surfaces. Molecules 2021, 26, 5622,  DOI: 10.3390/molecules26185622 [Crossref], [PubMed], [CAS], Google Scholar
+27Borówko, M.; Pöschel, T.; Sokołowski, S.; Staszewski, T. Janus Particles at Walls Modified with Tethered Chains. J. Phys. Chem. B 2013, 117, 1166– 1175,  DOI: 10.1021/jp3105979 [ACS Full Text ], [CAS], Google Scholar
+28Sobrino Fernández, M.; Misko, V. R.; Peeters, F. M. Self-assembly of Janus particles confined in a channel. Phys. Rev. E 2014, 89, 022306,  DOI: 10.1103/PhysRevE.89.022306 [Crossref], [CAS], Google Scholar
+29Fernández, M. S.; Misko, V. R.; Peeters, F. M. Self-assembly of Janus particles into helices with tunable pitch. Phys. Rev. E 2015, 92, 042309,  DOI: 10.1103/PhysRevE.92.042309 [Crossref], [CAS], Google Scholar
+30Baran, Ł.; Borówko, M.; Rżysko, W.; Patrykiejew, A. Self-assembly of Janus disks confined in a slit. J. Chem. Phys. 2019, 151, 104703,  DOI: 10.1063/1.5117887 [Crossref], [PubMed], [CAS], Google Scholar
+31Rosenthal, G.; Klapp, S. H. L. Micelle and Bilayer Formation of Amphiphilic Janus Particles in a Slit-Pore. International Journal of Molecular Sciences 2012, 13, 9431– 9446,  DOI: 10.3390/ijms13089431 [Crossref], [PubMed], [CAS], Google Scholar
+32Patrykiejew, A.; Sokołowski, S.; Sokołowska, Z.; Ilnytskyi, J. Fluid of Janus molecules between two walls: The solvation force. J. Chem. Phys. 2013, 139, 224711,  DOI: 10.1063/1.4840715 [Crossref], [PubMed], [CAS], Google Scholar
+33Iwashita, Y.; Kimura, Y. Orientational order of one-patch colloidal particles in two dimensions. Soft Matter 2014, 10, 7170– 7181,  DOI: 10.1039/C4SM00932K [Crossref], [PubMed], [CAS], Google Scholar
+34Iwashita, Y.; Kimura, Y. Spatial confinement governs orientational order in patchy particles. Sci. Rep. 2016, 6, 27599,  DOI: 10.1038/srep27599 [Crossref], [PubMed], [CAS], Google Scholar
+35Kobayashi, Y.; Arai, N. Self-assembly of Janus nanoparticles with a hydrophobic hemisphere in nanotubes. Soft Matter 2016, 12, 378– 385,  DOI: 10.1039/C5SM01895A [Crossref], [PubMed], [CAS], Google Scholar
+36Baran, Ł.; Borówko, M.; Rżysko, W. Self-Assembly of Amphiphilic Janus Particles Confined between Two Solid Surfaces. J. Phys. Chem. C 2020, 124, 17556– 17565,  DOI: 10.1021/acs.jpcc.0c03214 [ACS Full Text ], [CAS], Google Scholar
+37Huang, T.; Han, Y.; Chen, Y. Melting and solid–solid transitions of two-dimensional crystals composed of Janus spheres. Soft Matter 2020, 16, 3015– 3021,  DOI: 10.1039/D0SM00023J [Crossref], [PubMed], [CAS], Google Scholar
+38Mathews K, R. A.; Mani, E. Stabilizing ordered structures with single patch inverse patchy colloids in two dimensions. J. Phys.: Condens. Matter 2021, 33, 195101,  DOI: 10.1088/1361-648X/abf0c0 [Crossref], Google Scholar
+39Sato, M. Clusters formed by dumbbell-like one-patch particles confined in thin systems. Sci. Rep. 2021, 11, 18078,  DOI: 10.1038/s41598-021-97542-7 [Crossref], [PubMed], [CAS], Google Scholar
+40Yu, C.; Zhang, J.; Granick, S. Selective Janus Particle Assembly at Tipping Points of Thermally-Switched Wetting. Angew. Chem., Int. Ed. 2014, 53, 4364– 4367,  DOI: 10.1002/anie.201310465 [Crossref], [CAS], Google Scholar
+41Jiang, S.; Chen, Q.; Tripathy, M.; Luijten, E.; Schweizer, K. S.; Granick, S. Janus Particle Synthesis and Assembly. Adv. Mater. 2010, 22, 1060– 1071,  DOI: 10.1002/adma.200904094 [Crossref], [PubMed], [CAS], Google Scholar
+42Walther, A.; Müller, A. H. E. Janus Particles: Synthesis, Self-Assembly, Physical Properties, and Applications. Chem. Rev. 2013, 113, 5194– 5261,  DOI: 10.1021/cr300089t [ACS Full Text ], [CAS], Google Scholar
+43Ducrot, É.; He, M.; Yi, G.-R.; Pine, D. J. Colloidal alloys with preassembled clusters and spheres. Nat. Mater. 2017, 16, 652– 657,  DOI: 10.1038/nmat4869 [Crossref], [PubMed], [CAS], Google Scholar
+44Kim, Y.-J.; Moon, J.-B.; Hwang, H.; Kim, Y. S.; Yi, G.-R. Advances in Colloidal Building Blocks: Toward Patchy Colloidal Clusters. Adv. Mater. 2023, 35, 2203045,  DOI: 10.1002/adma.202203045 [Crossref], [CAS], Google Scholar
+45Landau, D. P.; Binder, K. A Guide to Monte Carlo Simulations in Statistical Physics, 3rd ed.; Cambridge University Press, 2009.[Crossref], Google Scholar
+46Frenkel, D.; Smit, B.; Ratner, M. A. Understanding molecular simulation: from algorithms to applications; Academic Press: San Diego, 1996; Vol. 2.Google Scholar
+47Steinhardt, P. J.; Nelson, D. R.; Ronchetti, M. Bond-orientational order in liquids and glasses. Phys. Rev. B 1983, 28, 784– 805,  DOI: 10.1103/PhysRevB.28.784 [Crossref], [CAS], Google Scholar
+48Eslami, H.; Bahri, K.; Müller-Plathe, F. Solid–Liquid and Solid–Solid Phase Diagrams of Self-Assembled Triblock Janus Nanoparticles from Solution. J. Phys. Chem. C 2018, 122, 9235– 9244,  DOI: 10.1021/acs.jpcc.8b02043 [ACS Full Text ], [CAS], Google Scholar
+49Eslami, H.; Sedaghat, P.; Müller-Plathe, F. Local bond order parameters for accurate determination of crystal structures in two and three dimensions. Phys. Chem. Chem. Phys. 2018, 20, 27059– 27068,  DOI: 10.1039/C8CP05248D [Crossref], [PubMed], [CAS], Google Scholar
+Cited By
+Jump To
+This article has not yet been cited by other publications.
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Results for the narrow pores (H* = 7). (a) Adsorption isotherms for the case WC, εJW* = 2 (black circles) and SC, εJW* = 4 (red squares) in symmetrical pores SP (open symbols) and Janus-like pores AP (filled symbols). The energies EJJ* (red lines) and EJW* (black lines) in symmetrical pores (solid lines) and Janus-like pores (dashed lines) for the case WC, εJW* = 2 (b) and SC, εJW* = 4 (c).
+Figure 2
+Figure 2. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panels) and orientational profiles (top panels) for low (a) and high (b) values of the chemical potential, μ*.
+Figure 3
+Figure 3. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. (a) The exemplary configuration of the structure BL1 at μ* = −1.4. (b) A top view of the “split” layer 3 formed at μ* = 1.2.
+Figure 4
+Figure 4. Results for the narrow (H* = 7), symmetrical pore (SP) with weak particle–wall interactions (WC), εJW* = 2. The distribution of different structures within selected layers. The particles which belong to the hexagonal phase are honey spheres while the remaining particles are green spheres. (a) The outer layer of the BL1 (layer 3) at μ* = −1.4. (b) The order parameters in the space (λ1, λ2). In the bottom panel, the results obtained at μ* = 1.8 are shown: (c) the middle layer (layer 4) and (d) the layer 7 adsorbed at the wall.
+Figure 5
+Figure 5. Results for the narrow (H* = 7), Janus-like pore (AP) with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panels) and orientational profiles (top panels) for low (a) and high (b) values of the chemical potential, μ*.
+Figure 6
+Figure 6. Results for the narrow (H* = 7), Janus-like pore (AP) with weak particle–wall interactions (WC), εJW* = 2. An equilibrium configuration of the TL1-structure. The building block is drawn on the right side. In the inset, the corresponding orientational profile is presented. The arrows indicate the positions of successive maxima in the density profile.
+Figure 7
+Figure 7. Results for the narrow (H* = 7) pores with strong particle–wall interactions (SC), εJW* = 4. The density profiles (bottom panels) and orientational profiles (top panels) for (a) symmetrical (SP) and (b) Janus-like (AP) pores and selected values of the chemical potential, μ*.
+Figure 8
+Figure 8. Results for the wide pores (H* = 11). (a) Adsorption isotherms for the case WC, εJW* = 2 (black circles) and SC, εJW* = 4 (red squares) in symmetrical pores SP (open symbols) and Janus-like pores AP (filled symbols). The energies EJJ* (red lines) and EJW* (black lines) in symmetrical pores (solid lines) and Janus-like pores (dashed lines) for the case WC, εJW* = 2 (b) and SC, εJW* = 4 (c).
+Figure 9
+Figure 9. Results for the wide (H* = 11) pores with weak particle–wall interactions (WC), εJW* = 2. The density profiles (bottom panel) and orientational profiles (top panel) for (a) symmetrical (SP) and (b) Janus-like (AP) pores, and selected values of the chemical potential, μ*.
+Figure 10
+Figure 10. Results for the wide (H* = 11), Janus-like (AP) pore with weak particle–wall interactions (WC), εJW* = 2. (a) An equilibrium configuration of the TL2-structure, the building block, and the corresponding orientational profile (inset) for μ* = 0.4. The arrows indicate the positions of successive maxima in the density profile. (b) The bilayer observed for μ* = 0.6 and (c) the structure in the region 4 < z* < 8 at μ* = 1.9.
+Figure 11
+Figure 11. Results for the wide (H* = 11), Janus-like (AP) pore with weak particle–wall interactions (WC), εJW* = 2. The arrangement of structures TL1 (pink spheres) and TL2 (blue spheres) relative to each other: (a) a side view, (b) a view from above.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

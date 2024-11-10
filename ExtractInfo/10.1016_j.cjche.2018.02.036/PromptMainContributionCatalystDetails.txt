@@ -1,0 +1,463 @@
+<DOCUMENT>
+Article
+A sensitivity analysis and multi-objective optimization to enhance ethylene production by oxidative dehydrogenation of ethane in a membrane-assisted reactor
+Abstract
+Owing to the importance of process intensification in the natural gas associated processes, the present contribution aims to investigate the production of an important natural gas downstream product in an improved system. Accordingly, a membrane-assisted reactor for the oxidative dehydrogenation of ethane is presented. The presented system includes a membrane for axial oxygen dosing into the reaction side. Such a strategy would lead to optimum oxygen distribution along the reactor length and prevention of hot spot formation as well. A feasibility study is conducted by developing a validated mathematical model composed of mass and energy balance equations. The effects of various operating variables are investigated by a rigorous sensitivity analysis. Then, by applying the genetic algorithm, a multi-objective optimization procedure is implemented to obtain the optimum operating condition. Considerable increase in the ethane conversion and ethylene yield are the advancements of membrane-assisted oxidative dehydrogenation reactor working under the optimum condition. More than 30% increase in the ethane conversion is obtained. Furthermore, the ethylene yield is enhanced up to 0.45.
+Graphical abstract
+Download : Download high-res image (168KB)
+Download : Download full-size image
+1. Introduction
+Based on the capacity growth in different areas of the world, considerable increase in the production rates of light olefins are observed in the recent years. Despite this fact, according to the comprehensive studies on the outlook of light olefin market, raising the costs of raw material and operation is a foretaste of increasing total production cost of light olefins in the near future [1]. Accordingly, broad experimental and theoretical researches are ongoing to develop economically feasible processes for the production of light olefins. A major part of these researchers focuses on the invention of highly selective catalysts for new chemical routes as well as novel configurations for highly efficient process operation [2].
+1.1. Ethane and ethylene
+Ethane, which is the simplest hydrocarbon with a CC bond, is the second most abundant component present in the natural gas reservoirs. At standard condition, ethane is colorless, odorless, flammable, and exists in the gas state (a normal boiling point of 184.7 K). Ethane could be obtained from natural gas by separation and from coal by carbonization. Furthermore, ethane could be obtained as a by-product in oil refinery units. Although, it is used as refrigerant, vitrifying agent, and feedstock for manufacturing acetic acid and ethyl chloride, the major application of ethane is in large-scale production of ethylene by cracking or dehydrogenation [3], [4], [5], [6], [7].
+Ethylene (also known as ethene) is the simplest hydrocarbon with a CC bond. It is nonpolar, colorless, flammable, and exists in the gas state in the moderate condition (a normal boiling point of 169.5 K). In addition to its application in food ripening, welding gas, production of mustard gas, anti-freeze agents, and detergents, the major part of the produced ethylene is utilized as the building block for the production of various compounds such as polyethylene, ethyl benzene, polyvinyl chloride (PVC), and polyesters. In addition to this, ethylene reaction with the abundant and inexpensive components such as water and oxygen produces valuable chemicals such as ethanol and ethylene oxide [8], [9]. More than the half of global ethylene production is consumed in the polymerization plants to manufacture polyethylene [8], [9]. Currently, steam cracking and catalytic dehydrogenation of hydrocarbons are the conventional routes to produce ethylene in large scale [10], [11], [12], [13], [14], [15]. However, equilibrium-limited reactions, coke formation leading to limited run length, pressure drop, catalyst deactivation, and the endothermic nature of the involved reactions leading to high energy consumption are some drawback of these routes [16], [17]. Hence, investigating the new routes for ethylene production is currently state of the art. In this regard, the oxidative dehydrogenation (ODH) of light hydrocarbons and biomass to bio-olefin are considered as promising ones [18], [19]. Irreversible and exothermic reactions of ODH process lead to the elimination of equilibrium restriction as well as to reduce the energy consumption [20]. Moreover, the presence of carbon dioxide as a valuable by-product could be considered as a potential benefit of this process. In fact, the further separation and supply of carbon dioxide could lead to enhanced process efficiency. Because ethylene is the petrochemical with the largest worldwide production capacity [3], [21], investigation of novel configurations with the aim of improvement in the hydrocarbons ODH to ethylene is currently of a great interest.
+1.2. Process intensification (PI)
+Petrochemicals that are in the category of highly energy-intensive industries are seeking for the elegant technologies with high productivity and energy efficiency [22]. In this regard, inventing alternative configurations or even presenting new chemical routes for the production of valuable chemicals would lead to lower energy consumption and higher productivity [23]. Such a standpoint is managed by applying a novel design approach called process intensification (PI). On the one hand, PI is running the art of managing higher process efficiency by presenting new chemical routes and proper distribution of feedstocks [24], [25]. Chemical reactors that are the most important part of the chemical process assume a key part in PI. In this regard, using membrane-assisted reactors for optimum distribution of the reactants is an effective plan in designing chemical reactors.
+1.3. Membrane reactors
+Membrane-assisted reactors are well known in the art. These equipment include simultaneous reaction and component separation/dosing. Separation of hydrogen and water vapor from reaction ambience as well as carbon dioxide from flare gas have been widely studied in different membrane reactors [26], [27], [28], [29], [30], [31]. Although there is a wealth of information on the investigation of membranes for highly energy-efficient separations, optimal reactants dosing throughout the reactor length is an elegant application of the membranes. On the other hand, such membranes are considered as contactors [32], [33], [34]. The unique features of membranes, such as high surface area per unit volume and adjustable selectivity and permeation rate of specific species, make them attractive for the purpose of reactants dosing. Nevertheless, probable decay in high temperature and pressure condition and then problems caused by their clean up affect their application [32], [35], [36].
+In comparison with the conventional ODH reactor, a membrane-assisted one with oxygen dosing through the length of the reactor could probably lead to promoted selective production of the desired product (i.e. the olefins). Such a standpoint could be, in terms of product yield, efficient. This is due to the prevention of axial dispersion of the reacting fluid. As a whole, ethylene production by applying a membrane-assisted ODH reactor is currently state of the art [34], [37].
+1.4. Literature review
+There is a wealth of information on the different aspects of ODH process such as catalyst preparation, kinetic modeling, process condition, oxygen dosing, and membrane types. Hitherto, a wide range of catalysts for ODH of ethane to ethylene has been introduced in the literature. Transition-metal oxides [21], [38], [39], [40], [41], [42], [43], rare-earth-metal oxides [21], [44], [45], supported alkali oxides [21], [46], [47], [48], [49], supported alkali chlorides [21], [50], Y-zeolites [51], carbon nanotubes [52], and SBA [53] are the most investigated catalysts for ODH of ethane to ethylene. However, NiNbO mixed oxide and vanadium oxide based catalysts are the most attractive ones due to suitable conversion and selectivity [19], [21], [39], [51], [53], [54], [55], [56], [57]. Furthermore, relatively low-temperature process with high selectivity for the favorable reactions are accessible by NiNbO mixed oxides catalyst [56], [57]. More details of the prepared catalysts, their performance, and kinetic modeling of the ODH of hydrocarbons could be found elsewhere [19], [21], [58]. In a comprehensive study, Grabowski [59] discussed the possible mechanisms and the kinetic models applied for the description of ODH reactions of light alkanes. Moreover, main catalysts, their specific characteristics, the type of supports, and promoters were reviewed. At the end, the unresolved problems for clear interpretation of the mechanism were described as well. In point of fact, a precise kinetic modeling of associated reactions leads to accurate evaluation of the reactor performance in the further modeling or scaling up surveys.
+Due to the exothermic nature of ODH reactions, application of multi-tubular reactors, from an industrial perspective, is more beneficial. Hence, temperature control would be more practical, which could lead to desired selectivity [20], [60], [61]. In this regard, different authors have made effort to evaluate the performance of multi-tubular OHD reactors in both experimental and theoretical contributions. Coronas et al. [60] examined a membrane-assisted reactor loaded with Li/MgO catalyst for ODH of ethane. A porous ceramic membrane was utilized for axial oxygen dosing to the reaction ambience. High conversion of ethane and good selectivity were the achievements of proposed configuration. Tonkovich et al. [61] examined the effect of a porous α-alumina membrane for air dosing to a magnesium oxide catalytic bed. The membrane-assisted reactor was observed to be superior to the plug-flow one working without the membrane. By applying a similar approach, Klose et al. [35] set an experimental study to analyze a membrane-assisted reactor packed with VOx/γ-Al2O3 catalyst particles and compared the performance with a conventional fixed-bed one. They found the membrane-assisted reactor advantageous to the conventional one in the whole operation modes. Based on these studies and even discussions presented by other publications, it is almost evident that by utilizing membranes in ODH reactors, both yield and selectivity improves. In addition, oxygen dosing reduces the local rate of reactions and thus leads to lower heat generation. Consequently, undergoing abnormal condition due to the presence of flammable mixtures, as it is, would be ignored. In fact, maintaining oxygen concentration at a low level prevents the creation of hot spot and flame. Hence, a proper heat management is achieved [60], [61], [62], [63], [64]. Along with a lot of research about fixed-bed reactors, Ahchieva et al. [65] conducted an experimental study on the performance of a fluidized-bed membrane-assisted reactor for ODH of ethane over a γ-alumina supported vanadium oxide catalyst. They compared the observed results with the previously studied fixed-bed reactors. Based on their observations, the fluidized-bed membrane-assisted reactor is a promising candidate for the large-scale production of ethylene due to the considerable yield of the product. The superb characteristics of this reactor in the heat transfer are the reason of achievements. By a theoretical approach, López et al. [66] studied the ODH of ethane over Ni-Nb-O mixed oxide catalyst in a multi-tubular fixed-bed reactor. The operability of proposed system was investigated through the sensitivity analysis of operating conditions. The feasibility of intermediate air dosing (i.e. double-bed reactor) was studied as well. As a result, the double-bed reactor was shown to be superior to the single-bed one. On the one hand, higher ethylene production due to higher ethylene selectivity and lower partial pressure of oxygen was achieved. In the further studies of this research group [32], [67], the implementation of ODH membrane-assisted reactor with the aim of ethylene production in two distinct configurations was studied by applying various mathematical models. They made effort to adjust the operating conditions to eliminate oxygen accumulation inside the tubes and thus, to improve the operability of presented configurations. In a recent similar study, Fattahi et al. [19] presented a mathematical model to investigate the effect of various operating conditions on the performance of single and double-bed multi-tubular reactors for ODH of ethane. Accordingly, the double-bed reactor with the intermediate injection of air was shown to have, in terms of ethylene selectivity, a better performance than the one with a single bed. They showed that increasing number of intermediate oxygen dosing points leads to higher ethane conversion as well as ethylene selectivity. In almost all the previous modeling studies, lack of a mathematical model coupled with a proper thermodynamic model for a precise sensitivity analysis is still felt. Additionally, lack of rigorous sensitivity analysis and optimization procedure with the aim of determining proper operating condition is a major defect of previous studies. Hence, the aim of the current study is to narrow down the above knowledge gap.s.
+1.5. Objective
+A fesibility study on the performance of a membrane-assisted reactor for the production of ethylene by oxidative dehydrogenation of ethane is conducted in the present contribution. To do so, a fixed-bed reactor assisted with an inorganic porous membrane for axial oxygen dosing is proposed. A mathematical model composed of energy and mass balance equations with appropriate assumptions and coupled with a thermodynamic model is developed. In the first step, the model is validated by a comparison with real experimental data. In order to determine the effect of various operating conditions and thus to find the optimum ones, a sensitivity analysis followed by an optimization procedure is conducted. Hence, a system with higher performance and efficiency is introduced.
+2. Process Description
+A schematic diagram of the multi-tubular membrane-assisted ODH reactor (MODHR) for the oxygen dosing through the reactor length is presented in Fig. 1. As per figure, flowing oxygen in the membrane side (i.e. shell side) permeates through the membrane thickness into the reaction side. Then, in the presence of oxygen, ethane is dehydrogenated to ethylene on the surface of the catalyst (i.e. NiNbO mixed oxide). As proposed by Rodriguez et al. [34], higher permeation flux, low-temperature operation, and the broad thermal and chemical stability are the advantages of inorganic membrane over dense oxide membranes. Hence, the application of inorganic membrane (e.g. ceramic porous membrane) is proved. In addition to oxygen dosing, flowing a cold fluid in the shell side could lead to temperature control and thus to prevent the creation of hot spots. Typical operating conditions of conventional MODHR, characteristics of the NiNbO mixed-oxide catalyst, and the parameters of the membrane are summarized in Table 1. More details could be found elsewhere [34].
+Download : Download high-res image (273KB)
+Download : Download full-size image
+Fig. 1. Schematic diagram of the multi-tubular membrane-assisted ODH reactor (MODHR).
+Table 1. Typical operating conditions of conventional MODHR, the characteristics of catalyst, and parameters of the membrane
+Parameter Value Unit
+Reaction side (tube side)
+Total flow rate 3000.0 kmol·h− 1
+Inlet temperature 380.0 K
+Inlet pressure 0.5 MPa
+Ethane molar fraction 1 –
+Oxygen molar fraction 0 –
+
+Membrane side (shell side)
+Total flow rate 2711.3 kmol·h− 1
+Inlet temperature 298.2 K
+Inlet pressure 0.615 MPa
+Ethane molar fraction 0 –
+Oxygen molar fraction 1 –
+
+Dimensions
+Reactor length 4 m
+Tube diameter 2.66 × 10− 2 m
+Shell diameter 3.93 m
+Number of tubes 10000 –
+Number of baffles 3 –
+
+Membrane [34]
+Geometric parameter (K0) 23.1 × 10− 10 m
+Geometric parameter (B0) 11.5 × 10− 17 m2
+Thickness 0.00155 m
+Thermal conductivity (Km) 16.06 W·m− 1·K− 1
+
+Catalyst bed
+Particle diameter 4.5 × 10− 3 m
+Bed void fraction 0.48 –
+Density of catalyst bed 50 kg·m− 3
+3. Reaction Scheme and Kinetic
+The reaction network in the ODH process and the kinetics are presented in this section. Followings are the independent reactions in the ODH of ethane [20], [34], [62], [63]:
+(1)
+(2)
+(3)
+Clearly, total oxidation of ethane and ethylene (i.e. combustion reactions) are the undesirable reaction of this system leading to lower ethylene yield, more carbon dioxide generation, and inappropriate temperature rising. In the case of dominant combustion reactions, large amount of undesired heat is produced, which then may lead to catalyst destruction and even explosion. Such problems could probably be controlled by controlling oxygen concentration along the reactor length [19], [32].
+In spite of various kinetic studies on the ODH of ethane on NiNbO mixed-oxide catalyst [59], the power law model presented by Heracleous [56], [57] is applied broadly due to simplicity and accuracy.
+(4)
+(5)
+The kinetic parameters of power law model are tabulated in Table 2. It is worth mentioning that in almost all the previous studies that utilized this model, with the assumption of ideal gas reacting mixture, partial pressures were applied. In the present contribution, the reacting fluid is considered as a non-ideal gaseous mixture. Hence, the fugacities of components calculated by Peng–Robinson equation of state (PR EoS) [64] are applied in the model. PR EoS and corresponding fugacity equations are well provided in Appendix A.
+Table 2. The kinetic parameters of power law model
+①
+Rate constant k0,i/kmol·(kg cat.)− 1·s− 1·Pa− (αi+βi) Ei/J·mol− 1 αi βi
+k1 4.177 × 10− 10 96,180 0.520 0.213
+k2 1.272 × 10− 13 76,210 0.547 0.829
+k3 9.367 × 10− 11 98,420 0.475 0.319
+①
+TR = 543 K.
+4. Mathematical Modeling
+In this section, the applied assumptions for developing the mathematical model and further method of solution are presented.
+4.1. Governing equations
+Followings are the assumptions of the model:
+•
+ODH reactions on the outer surface of the catalyst particles (i.e. homogeneous model)
+•
+Flat radial distributions of mass and heat in both shell and reaction sides (i.e. one-dimensional model) due to high length to diameter (i.e. L/D) ratio
+•
+Negligible mass and heat dispersion along the reactor axis (i.e. plug flow pattern) due to high gas velocity
+•
+Steady state operation in both shell and reaction sides
+•
+Constant porosity of the catalyst bed (i.e. symmetric bed)
+•
+Non-ideal gaseous reacting mixtures
+•
+Co-current fluid flow in the shell and reaction sides
+•
+Adiabatic operation
+•
+Ergun equation for pressure drop in the reaction side
+•
+Negligible pressure drop in the shell side
+By considering an axial differential element and applying the aforementioned assumptions, a set of ordinary differential equations (ODEs) is obtained. The set of ODEs would be composed of mass, energy, and momentum balance equations. The obtained set of ODEs, heat transfer equations, and initial conditions are tabulated in Table 3. As presented in Eq. (6), bulk convection, mass distribution due to chemical reactions, and oxygen permeation terms are considered, respectively. It is clear that the permeation fluxes of other components are neglected. Hence, these terms are not considered in mass balance equations [i.e. Eqs. (6) and (7)]. As per Eq. (8), the terms of bulk heat convection, the heats of chemical reactions, and the lateral heat exchange due to convection and oxygen permeation through membrane thickness are considered, respectively. The pressure drop due to gas flowing through the catalyst bed could be well presented by Ergun equation [i.e. Eq. (10)]. It is clear that in the calculation of overall heat transfer coefficient [i.e. Eq. (13)], the contributions of convection in both reaction and shell sides and conduction through the membrane wall are included. Besides, the boundary conditions are in fact the quantities of variables in the reactor entrance. The auxiliary correlations of thermo-physical properties and their variations with temperature are summarized in Table B1, Table B2, Table B3 of Appendix B. Oxygen permeation flux as a function of total and partial pressures in both sides of the membrane is calculated by the following equations [34], [63]:
+(17)
+(18)
+(19)
+Table 3. The obtained set of ODEs, heat transfer equations, and initial conditions
+Definition Equation
+Mass balance
+Reaction side
+(6)
+Shell side
+(7)
+
+Energy Balance
+Reaction side
+(8)
+Shell side
+(9)
+
+Pressure drop
+Reaction side
+(10)
+Shell side
+(11)
+
+Parameters
+Convective heat transfer coefficient
+(12)
+Overall heat transfer coefficient
+(13)
+Hydraulic diameter
+(14)
+
+Boundary conditions
+Reaction side x = 0 ⟹ Fj = Fj, 0; T = T0; P = P0 (15)
+Shell side x = 0 ⟹ Fjs = Fj, 0s; TS = T0S (16)
+As clear, the differences of total and partial pressures have distinct contributions in this equation.
+4.2. Numerical solution
+The developed mathematical model with the aforementioned assumptions is composed of ODEs, associated initial conditions, auxiliary correlations of thermo-physical properties, and the EoS. The 4th order Runge–Kutta method was applied to integrate the obtained nonlinear set of equations numerically [63]. The length of the reactor is divided into 400 grids to assure managing a minuscule numerical error and thus a stable solution. The solution procedure is implemented in a code provided in MATLAB® programming platform.
+4.3. Model validation
+In order to evaluate the accuracy and reliability of the developed mathematical model and solution procedure, real data of this reacting system is required. In this regard, the results of numerical solution are compared with the collected experimental data of Heracleous and Lemonidou [56], [57]. The data of a fixed-bed reactor with catalyst weight to feed flow rate ratio (W/F) of 0.54 g·s·cm− 3 and ethane to oxygen molar ratio (C2H6/O2) of 1/1 at various temperatures are collected. This dataset consists of ethane and oxygen conversions and ethylene and carbon dioxide selectivities.
+5. Optimization
+Optimization techniques are applied to find the optimum values of effective decision variables by maximizing or minimizing appropriate objective functions. On the other hand, the main objective of applying optimization procedures in the chemical processes is determining optimum process conditions, which could lead to enhanced process efficiency and quality of desired products [65], [66], [67], [68], [69]. Depending on the process type, different process variables such equipment size, input flow rates of components, and operating conditions such as input concentration, pressure, and temperature could be considered as effective decision variables. Most of the conventional optimization techniques that are on the basis of gradient method do not guarantee to find the global optima. In fact, the high probability of sticking in the local optimum points makes their application limited. However, this probability strongly depends on the degree of nonlinearity of problem and initial guesses [65], [66], [67], [68], [69]. Hence, applying modern optimization techniques such as genetic algorithms [68] is currently of a great interest.
+According to the reaction stoichiometry presented in Eqs. (1), (2), (3), ethane participates in two reactions. The desired reaction is ODH to ethylene and the undesired one is total combustion. Moreover, the produced ethylene from ethane tends to react with oxygen and complete the ethylene combustion reaction. Accordingly, the operating conditions should be optimized to enhance the proceeding of desired reactions. To do so, maximization of two objectives, called ethane conversion and ethylene yield and minimization of an objective, called carbon dioxide yield is pursued, simultaneously. Followings are the considered objective functions:
+(20)
+(21)
+(22)
+In this regard, input temperature and pressure of ethane feed stream and input temperature, pressure, and flow rate of oxygen stream in the membrane side are considered as effective decision variables in the optimization procedure. The definitions and feasible bounds of the considered decision variables are tabulated in Table 4. It is worth mentioning that the bounds are selected on the basis of catalyst characteristics and operating considerations.
+Table 4. Definitions, feasible bounds, and obtained optimum values of considered decision variables
+Parameter Feasible bounds Optimized value
+Input temperature of ethane feed stream 360.0 ≤ T0 ≤ 400.0 385.4 K
+Input pressure of ethane feed stream 0.470 ≤ P0 ≤ 0.530 0.474 MPa
+Input flow rate of oxygen stream 2511.3 ≤ Fm, 0 ≤ 2911.3 2648.6 kmol·h− 1
+Input temperature of oxygen stream 293.0 ≤ Tm, 0 ≤ 303.0 296.5 K
+Input pressure of oxygen stream 0.60 ≤ Pm, 0 ≤ 0.63 0.622 MPa
+In order to attain optimum operating conditions, a multi-objective genetic algorithm is applied in the present contribution. Genetic algorithm, which is a strong stochastic method, is the reproduced pattern of natural evolution. In this method, exerting the stochastic operators in an iterative manner makes the population of probable solutions maintained and evolved. Application of genetic algorithm is worthwhile in both constrained and unconstrained problems. More details of fundamental elements of this method such as gene, chromosome, population, selection, and crossover as well as multi-objective genetic algorithm optimization could be found in the literature [28], [65], [68], [70].
+6. Results and Discussions
+The obtained results of numerical solution are presented in this section. In this regard, the results are discussed in two sections, i.e. sensitivity analysis and the optimized case. In order to have a clear view on the impact of various parameters, a sensitivity analysis on the performance of a base case, i.e. the conventional membrane-assisted ODH reactor (MODHR), is discussed in the first section. In the second section, the performance of reactor working under optimum condition (OMODHR) is compared with the conventional one. The operating conditions of base case are presented in Table 1.
+6.1. Model validation
+A qualitative comparison between the real experimental data and the simulation results, in terms of conversions and selectivities, are presented in this section. The graphical representation of model validation is well provided in Fig. 2. As clear, the numerical simulation could predict the experimental data of conversions and selectivities, precisely. The trends of data with varying temperature were predicted as well. Consequently, an acceptable agreement between the experimental data and the simulated ones is observed indicating the accuracy and reliability of developed model.
+Download : Download high-res image (205KB)
+Download : Download full-size image
+Fig. 2. Comparison of numerical results with real experimental data of conversions and selectivities.
+6.2. Sensitivity analysis
+The observed behavior of MODHR is discussed in this section. In this regard, the impact of operating and design parameters such as feed pressure and temperature, oxygen temperature and pressure, and membrane thickness on the temperature profiles, conversion of ethane, and the flow rates of components along the reactor length are investigated.
+6.2.1. Effect of feed temperature
+The effect of feed temperature on the performance of membrane-assisted ODH reactor is well presented in Fig. 3, Fig. 4. The temperature profiles in both reaction and membrane sides are shown in Fig. 3(a). As can be seen, the temperature difference between sides and thus heat transfer leads to sharp temperature change in the reactor entrance. Smooth changes in the middle section of the reactor are observed. Then, in the lower section of the reactor, different patterns are observed. In fact, sudden temperature rises in the lower section of the reactor are the result of heat released due to chemical reactions. On the one hand, exothermic nature of associated reactions in ODH process leads to heat release and thus to increase the temperature in both sides of the reactor. Another important point deduced from this figure is the change in the pattern of reaction initiation by change in feed temperature. In fact, by increasing feed temperature, the ODH reactions tend to start in the middle section of reactor, while more progress in the reactions is observed in the lower temperatures. However, the ODH reactions do not progress in the temperatures below 380 K. Such behaviors are attributed to catalyst activity and selectivity. Therefore, by increasing the feed temperature, the reaction initiation is pushed back to the lower section of the reactor. The patterns of pressure changes in the reaction side are shown in Fig. 3(b). Change in feed temperature does not have a significant effect on the pressure drop along the reactor length, especially in the lower sections of the reactor. However, some discrepancies are observed in the lower section.
+Download : Download high-res image (374KB)
+Download : Download full-size image
+Fig. 3. The effect of feed temperature on the axial profiles of (a): temperatures and (b): pressure.
+Download : Download high-res image (920KB)
+Download : Download full-size image
+Fig. 4. The effect of feed temperature on the axial profiles of (a): ethane flow rate, (b): ethane conversion, (c): ethylene flow rate, (d): carbon dioxide flow rate, (e): oxygen flow rate in the reaction side, and (f): oxygen flow rate in the membrane side.
+The axial profiles of component flow rates and ethane conversion are provided in Fig. 4. It is obvious that along the reactor length, ethane flow rate, as the main reactant, decreases and the flow rates of products, i.e. ethylene and carbon dioxide, increase. Increasing feed temperature results in priority of reaction initiation point and less progress of reactions. Accordingly, by increasing feed temperature, the reactions are initiated early and are advanced less. These results confirm the conclusions previously deduced form temperature patterns in Fig. 3(a). Oxygen flow rates in the reaction side presented in Fig. 4(e) show different behaviors from other components. In the reactor entrance, there is no oxygen in the reaction side. Along the reactor length, the quantity of oxygen increases due to permeation from the membrane side. Accordingly, oxygen flow rates tend to increase to reach a peak in the middle section of reactor. Due to provided temperature for the ODH reactions in this region, these reactions occur instantaneously. Such a behavior leads to a sudden decrease in the oxygen concentration in the reaction side. It is worth mentioning that after this point, almost all the permeated oxygen from the membrane side is consumed immediately, and thus the quantity of oxygen becomes zero. The presence of excess oxygen in the output stream from reactor results in difficulties in the downstream separation units. On the one hand, total consumption of permeated oxygen in the reaction side and thus zero oxygen content in the product stream is an advantage from the technical point of view. From this point of view, lower temperatures in which total oxygen elimination is not achieved are not favorable. Fig. 4(f) that shows the oxygen flow rates in the membrane side confirms the idea of oxygen consumption in the reactor length.
+6.2.2. Effect of feed pressure
+The effect of feed pressure on the performance of membrane-assisted ODH reactor is shown in Fig. 5, Fig. 6. As shown in Fig. 5(a), increasing pressure does not change the location of reaction initiation. However, it has very little effect on the rate of reactions and thus on the heat generation. As per Fig. 5(b), similar trends are observed for the pressure drop along the reactor length, even in the different initial pressures.
+Download : Download high-res image (352KB)
+Download : Download full-size image
+Fig. 5. The effect of feed pressure on the axial profiles of (a): temperatures and (b): pressure.
+Download : Download high-res image (1MB)
+Download : Download full-size image
+Fig. 6. The effect of feed pressure on the axial profiles of (a): ethane flow rate, (b): ethane conversion, (c): ethylene flow rate, (d): carbon dioxide flow rate, (e): oxygen flow rate in the reaction side, and (f): oxygen flow rate in the membrane side.
+Fig. 6 shows the axial profiles of component flow rates and ethane conversion. Increasing feed pressure results in decreasing ethane consumption and the production of ethylene and carbon dioxide. In fact, increasing the pressure of reaction side has two distinct effects. Although increasing the pressure of reaction side enhances the fugacity of hydrocarbons and thus increases the rate of oxygenation and combustion reactions [i.e. Eqs. (1), (2), (3)], it leads to lower oxygen permeation rate from the membrane side and thus to lower oxygen fugacity. Lower oxygen permeation due to higher feed pressure is well deduced from Fig. 6(e) and (f). As a consequence, the decrease in the rates of reactions and thus, the decrease in the consumption of ethane and production of ethylene and carbon dioxide is observed.
+6.2.3. Effect of temperature of input oxygen stream
+The effect of temperature of input oxygen stream is shown in Fig. 7, Fig. 8. As per Fig. 7(a), increasing the temperature of oxygen stream does not change the temperature profiles in the reactor entrance. However, variations in the location of reaction initiation and the reaction progress are observed. It is worth mentioning that temperature has a significant effect on the physical properties of the reacting mixture such as density, viscosity, and diffusion. Accordingly, by increasing the temperature of oxygen input stream, oxygen diffusion increases. However, according to Eqs. (17), (18), (19), the rate of permeation into the reaction side decreases. Fig. 7(b) shows the axial pressure profiles in the reaction side. As seen, change in the temperature of input oxygen stream does not change the pattern of pressure drop inside the reaction side.
+Download : Download high-res image (326KB)
+Download : Download full-size image
+Fig. 7. The effect of temperature of input oxygen stream on the axial profiles of (a): temperatures and (b): pressure.
+Download : Download high-res image (1MB)
+Download : Download full-size image
+Fig. 8. The effect of temperature of input oxygen stream on the axial profiles of (a): ethane flow rate, (b): ethane conversion, (c): ethylene flow rate, (d): carbon dioxide flow rate, (e): oxygen flow rate in the reaction side, and (f): oxygen flow rate in the membrane side.
+The effect of temperature of input oxygen stream on the axial profiles of component flow rates and ethane conversion are shown in Fig. 8. Increasing the temperature up to 303 K improves the ethane conversion and ethylene production. However, by increasing the temperature beyond 303 K, both ethane conversion and ethylene production tend to decrease. Such a trend is observed for the flow rate of carbon dioxide as well. In addition to this, change in the temperature of input oxygen stream does not have significant effect on the trends of oxygen flow rates in both reaction and membrane sides. However, at the lowest temperature (i.e. 293 K), total consumption of oxygen in the reaction side is put off to the rector outlet.
+6.2.4. Effect of pressure of input oxygen stream
+Fig. 9 is to show the effect of pressure of input oxygen stream on the thermal and pressure behavior of reactor. According to Fig. 9(a), a small change in the pressure of input oxygen stream changes the thermal patterns. However, as per Fig. 9(b), small changes in the pressure drop profiles are observed. Oxygen dosing by utilizing membrane is a function of pressure difference between reaction and membrane sides. Such a statement is well understood from the Eqs. (17), (18), (19) presented for oxygen flux. Accordingly, the change in the pressure of input oxygen stream leads to change in pressure difference between the sides and thus to change in the oxygen permeation flux. Therefore, the pressure of input oxygen stream could strongly affect the reactor performance.
+Download : Download high-res image (331KB)
+Download : Download full-size image
+Fig. 9. The effect of pressure of input oxygen stream on the axial profiles of (a): temperatures and (b): pressure.
+The axial profiles of component flow rates and ethane conversion are the corroboration of such statement. These profiles are provided in Fig. 10. As per Fig. 10(a)-(d), 0.3 atm increase in the pressure of oxygen leads to considerable increase in the ethane consumption and ethylene and carbon dioxide production. In fact, increasing the driving force of oxygen permeation into the reaction sides provides more oxygen for the ODH reactions. More oxygen content in the reaction side at higher pressures of oxygen is well understood from Fig. 10(e). As mentioned previously, zero oxygen content in the product stream eliminates the difficulties in the further separation units. Hence, lower pressures, in which the oxygen quantity is not zero, are not desired. Higher oxygen permeation from the membrane side with increasing pressure is evident in the trends of Fig. 10(f), as well. As a whole, increasing the pressure of input oxygen stream has two positive effects on the operation of ODH reactor, i.e. increasing conversion of ethane to ethylene as well as decreasing oxygen content in the product stream.
+Download : Download high-res image (1MB)
+Download : Download full-size image
+Fig. 10. The effect of pressure of input oxygen stream on the axial profiles of (a): ethane flow rate, (b): ethane conversion, (c): ethylene flow rate, (d): carbon dioxide flow rate, (e): oxygen flow rate in the reaction side, and (f): oxygen flow rate in the membrane side.
+6.2.5. Effect of membrane thickness
+The effect of membrane thickness on the operation of ODH reactor is investigated in this section. In this regard, Fig. 11, Fig. 12 are presented. Change in the thermal and pressure behaviors of ODH reactor is well shown in Fig. 11. A slight change in the reactions progress with the membrane thickness is observed. The reaction initiation points and the profile of pressure drop do not undergo significant changes. As shown in Fig. 12, increase in the membrane thickness leads to decrease in the ethane conversion and production of ethylene and carbon dioxide. The decrease in the conversion of ethane is in fact due to the decrease in the quantity of introduced oxygen into the reaction side. On the other hand, by increasing the membrane thickness, oxygen permeation flux into the reaction side decreases and thus, the rate of ODH reactions are controlled by oxygen permeation rate. Fig. 12(e) and (f) are presented to confirm such statement.
+Download : Download high-res image (310KB)
+Download : Download full-size image
+Fig. 11. The effect of membrane thickness on the axial profiles of (a): temperatures and (b): pressure.
+Download : Download high-res image (1003KB)
+Download : Download full-size image
+Fig. 12. The effect of membrane thickness on the axial profiles of (a): ethane flow rate, (b): ethane conversion, (c): ethylene flow rate, (d): carbon dioxide flow rate, (e): oxygen flow rate in the reaction side, and (f): oxygen flow rate in the membrane side.
+6.3. Optimization
+In this section, the observed behavior of OMODHR is compared with MODHR in terms of thermal behavior, ethane conversion, ethylene flow rate, and the yields of products. The obtained optimum parameters are tabulated in Table 4. By applying these parameters, the axial profiles would be calculated at optimum operation. In this regard, the axial profiles of temperature, ethane conversion, and ethylene flow rate are presented in Fig. 13. As per Fig. 13(a), the observed differences in temperature profiles of both membrane and reaction sides in the optimized condition (i.e. OMODHR) imply that there are differences in reaction trends. The enhancement of ethane conversion in OMODHR is shown in Fig. 13(b). As per figure, considerable increase in the ethane conversion is, in fact, the outcome of applying the optimum condition. Accordingly, as presented in Fig. 13(d), more than 30% increase in the ethane conversion is observed in the optimum condition. Higher ethane conversion leads to higher production rates. The axial profiles of ethylene flow rates in two cases are compared in Fig. 13(c). Applying the optimum condition leads to a noticeable increase in the rate of ethylene production. According to the product yields presented in Fig. 13(d), about 0.24 increases in the ethylene yield is obtained. However, about 0.11 increases in the carbon dioxide yield is observed as well. Increase in the production rate of carbon dioxide is unavoidable. This is in fact due to increase in the consumption of ethane and production of ethylene. However, by considering the minimization of this objective in the optimization procedure, minimum carbon dioxide generation is managed. As a whole, the optimization procedure applied in the present contribution could effectively enhance the efficiency and productivity of membrane-assisted ethane ODH rector.
+Download : Download high-res image (703KB)
+Download : Download full-size image
+Fig. 13. Comparing the axial profiles of (a): temperatures, (b): ethane conversion, and (c): ethylene flow rate and (d): output conversions and product yields in the conventional and optimum operating condition.
+7. Conclusions
+In order to present an enhanced system for ethylene production by oxidative dehydrogenation of ethane, a feasibility study was conducted. The applied membrane managed efficient oxygen dosing through the length of the reactor. A validated mathematical model including equations of mass, energy, and momentum balances was employed. A sensitivity analysis was implemented to determine the impacts of process variables on the performance of the system. Furthermore, a multi-objective optimization procedure was conducted to determine the optimum operating condition. In this regard, the genetic algorithm was employed. Simultaneous maximization of ethane conversion and ethylene yield and the minimization of carbon dioxide yield was the goal of the optimization procedure. Followings are the major achievements of the present contribution:
+(1)
+By increasing feed temperature, an initial increase in the ethane conversion and ethylene production followed by further decrease was obtained.
+(2)
+Less oxygen was consumed in the higher temperatures.
+(3)
+Increasing feed pressure led to decrease in the ethane conversion, ethylene production, and oxygen consumption.
+(4)
+Increase in the temperature of input oxygen stream resulted in an initial slight increase in the ethane conversion and ethylene production followed by further decrease.
+(5)
+Increasing temperature of input oxygen stream did not have any significant effect on the oxygen consumption.
+(6)
+Increase in the pressure of input oxygen stream resulted in considerable increase in the ethane conversion, ethylene production, and oxygen consumption.
+(7)
+Slight decrease in the ethane conversion, ethylene production, and oxygen consumption was obtained at higher membrane thicknesses.
+(8)
+More than 30% increase in the ethane conversion was obtained in the system working under optimum condition. Furthermore, the ethylene yield was enhanced up to 0.45 in this condition.
+Although the results of the feasibility study of present contribution showed enhancements in the performance of this system, rigorous economic investigations are required to prove the efficiency. Accordingly, further economic investigations are suggested.
+Nomenclature
+Am
+average area, m2
+AT
+cross-sectional area of tubes, m2
+CP
+specific heat of component, kJ·kmol− 1·K− 1
+dh
+hydraulic diameter, m
+dp
+particle diameter, m
+dT
+tube diameter, m
+E
+activation energy, kJ·mol− 1
+Fi
+molar flow rate, kmol·s− 1
+ΔH
+heat of reaction, kJ·mol− 1
+h
+heat transfer coefficient, J·m− 2·K− 1·s− 1
+i
+reaction i
+J
+permeation flow, kmol·h− 1·m2
+j
+component j
+K & k0, i
+reaction rate constant, kmol·kg− 1·s− 1·Paα + β
+km
+thermal conductivity of membrane, J·m− 1·s− 1·K− 1
+kth
+thermal conductivity of gas, J·m− 1·s− 1·K− 1
+L
+tube length, m
+M
+molar weight, kg·mol− 1
+nT
+number of tubes
+P
+pressure, Pa
+Q
+volumetric flow rate, m3·s− 1
+R
+universal gas constant, J·mol− 1·K− 1
+r
+reaction rate, kmol·s− 1
+S
+shell side
+T
+temperature, K
+TR
+reference temperature for kinetic expression, K
+U
+overall heat-transfer coefficient, kJ·m2·s− 1·K− 1
+vij
+stoichiometric coefficient of component j in reaction i
+X
+conversion
+x
+axial coordinate, m
+y
+molar fraction
+α
+constant
+β
+constants
+δ
+membrane thickness, m
+ε
+porosity
+η
+effectiveness factor
+μ
+viscosity, Pa·s
+ρb
+bed density, kg·m− 3
+Φs
+particle sphericity
+φ
+parameter used in viscosity of mixture
+ϕ
+parameter used in a thermal conductivity of mixture
+Acknowledgements
+The authors are grateful to Shiraz University for supporting this research.
+Appendix A. Peng–Robinson equation of state and corresponding fugacity equation
+(A1)
+(A2)
+(A3)
+(A4)
+(A5)
+(A6)
+(A7)
+(A8)
+(A9)
+(A10)
+(A11)
+Appendix B. Auxiliary correlations of heat capacity, viscosity, and thermal conductivity
+Table B1. The auxiliary correlations and constants of heat capacity
+Heat capacity/J·mol− 1·K− 1
+Component A × 106 B × 106 C × 106 D × 106 E × 106
+C2H6 4.0326 13.422 1.6555 7.3223 7.5287
+C2H4 3.3380 9.479 1.5960 5.5100 7.4080
+O2 2.9103 1.004 2.5265 0.9356 11.5380
+H2O 3.3363 2.679 2.6105 0.8896 11.6900
+CO2 2.9370 3.454 1.4280 2.6400 5.8800
+Mixture
+Table B2. The auxiliary correlations and constants of viscosity
+Viscosity/Pa·s
+Component A × 106 B × 101 C × 10− 1 D × 10− 2
+C2H6 0.25906 6.7988 9.8902 0.0
+C2H4 2.07890 4.1630 35.2700 0.0
+O2 1.10100 5.6340 9.6300 0.0
+H2O 0.01709 11.1460 0.0000 − 739.3
+CO2 2.14800 4.6000 29.0000 0.0
+Mixture
+Table B3. The auxiliary correlations and constants of thermal conductivity
+Thermal conductivity/W·m− 1·K− 1
+Component A × 106 B × 106 C × 103 D × 106 E × 10− 2
+C2H6 7.3869 13.422 1.6555 7.3223 7.5287
+C2H4 3.3380 9.479 1.5960 5.5100 7.4080
+O2 2.9103 1.004 2.5265 0.9356 11.5380
+H2O 3.3363 2.679 2.6105 0.8896 11.6900
+CO2 2.9370 3.454 1.4280 2.6400 5.8800
+Mixture
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

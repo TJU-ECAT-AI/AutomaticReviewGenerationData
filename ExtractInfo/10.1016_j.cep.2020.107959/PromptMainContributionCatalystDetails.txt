@@ -1,0 +1,368 @@
+<DOCUMENT>
+Thermodynamic analysis of chemical looping combustion integrated oxidative dehydrogenation of propane to propylene with CO2
+Highlights
+•
+Self-sustained, ecofriendly oxidative dehydrogenation of propane (ODP) with CO2.
+•
+Novel integrated scheme of chemical looping combustion (CLC) with ODP−CO2.
+•
+Heat and CO2 demand of ODP process is met by thermal and mass integration with CLC.
+•
+Propylene yield of 79.1 % is achieved at 800 °C with 0.5 M ratio of CO2 to propane.
+Nomenclature
+ASPEN
+Advanced system of process engineering
+AR
+Air reactor
+CLC
+Chemical looping combustion
+FR
+Fuel reactor
+HE
+Heat exchanger
+HEN
+Heat exchanger network
+HP
+High pressure (atm)
+HRSG
+Heat recovery and steam generation
+i
+ith component
+IP
+Intermediate pressure (atm)
+LHV
+Lower heating value
+LP
+Low pressure (atm)
+n
+Molar flow rate (kmole/s)
+MXR
+Mixer
+OC
+Oxygen carrier
+ODP
+Oxidative dehydrogenation of propane
+ODP−CO2
+Oxidative dehydrogenation of propane with CO2
+ST
+Steam turbine
+T
+temperature
+X
+Conversion (%)
+Y
+Yield (%)
+Greek symbols
+α
+Ratio of moles of NiO per mole of C3H8 fed to FR
+β
+Ratio of moles of CO2 fed to ODP reactor per mole of C3H8 fed to ODP reactor
+γ
+Ratio of moles of C3H8 used in FR per mole of C3H8 fed to the ODP reactor
+ɳ
+Net plant efficiency (%)
+Superscripts
+ODP-R
+ODP reactor
+P
+Product
+Subscripts
+Comp
+Compressor
+1. Introduction
+Propylene is a vital compound for the petrochemical industry as it is a precursor for production of wide array of specialized industrial products including polypropylene [1], acrylonitrile [2], propylene oxide [3] etc. The current global demand of propylene is nearly 90 million tons/year and it is expected to be increased to 130 million tons/year by 2023 [4] and there exist a need for the development of an efficient and eco-friendly process for propylene production. Also, with an estimated growth rate of 4% per annum in the demand of propylene, industries have been ever increasingly compelled to develop more on-purpose propylene production technologies to achieve the shortage of ≈12–14 %, required to fulfill the demand [5]. Conventionally, propylene is produced as a co-product of ethane steam cracking [6] and fluidized catalytic cracking of hydrocarbons [7]. However, both these processes suffer with the problem of lower propylene yield and may not be efficient enough to meet the ever-increasing demand of propylene. Moreover, these cracking techniques are highly energy intensive [8] and to meet the energy demand of these processes, substantial amounts of fossil fuels are burnt that leads to the emission of CO2 and other greenhouse gases to atmosphere causing environmental issues [9]. All these reasons have factored towards increased attention in developing alternate propylene production methods.
+Development of on-purpose technologies like propane dehydrogenation is being explored as a viable alternative option to replace conventional propylene production technologies. Direct dehydrogenation of propane to give propylene involves the endothermic decomposition of propane into propylene and hydrogen as given below.
+(1)
+C3H8 ↔ C3H6 + H2ΔHo = 109.31 kJ/mol
+But direct dehydrogenation of propane is characterized by low conversion and low propylene yields due to its equilibrium limitations brought on by various side reactions and coke formation [10]. Other than direct propane dehydrogenation, oxidative dehydrogenation with oxidizing agents such as O2, CO2, H2O2, N2O are also being studied extensively [11,12]. Oxidative dehydrogenation of propane (ODP) with a suitable oxidant, in the presence of a heterogeneous catalyst is of interest, as it addresses the drawbacks faced by direct dehydrogenation. Despite the availability of numerous oxidizing agents, the study mainly focuses on just two oxidizing agents i.e., O2 and CO2 due to the factors such as availability, cost, non-toxicity, etc [13]. ODP with O2 is highly exothermic in nature as given in Eq. 2. Selection of a suitable catalyst plays an essential role in increasing the yield and selectivity of propylene. A comprehensive review of different metal based catalysts such as platinum, chromium, gallium, indium, vanadium, zinc, and molybdenum oxides on the dehydrogenation of light alkanes indicated platinum based catalysts are best suited to overcome the limitation of low yield [14]. However, over oxidation of propane and propylene to COx is observed even at small amounts of O2 resulting in lower propylene selectivity and yield [15]. Another hurdle in the ODP with O2 is the requirement of a pure O2 stream, which results in an increased energy expense.
+(2)
+C3H8 + 0.5O2 ↔ C3H6 + H2O ΔHo = -132.50 kJ/mol
+Alternatively, CO2 has been widely explored as a mild oxidant for oxidative dehydrogenation reaction [16]. The propylene production reaction is favored more when CO2 is used as the oxidizing agent as compared to O2 by preventing deep oxidation of the reaction products [15]. Also, CO2 is abundantly available and the usage of CO2 in industrial processes is advantageous in terms of reducing greenhouse gases. Two distinct pathways are possible for the dehydrogenation of propane with CO2. Firstly, being oxidative dehydrogenation to produce propylene as given in Eq. 3.
+(3)
+C3H8 + CO2 ↔ C3H6 + CO + H2O ΔHo = 150.45 kJ/mol
+Secondly, being dry reforming of propane to produce syngas which occurs in presence of excess CO2 as given in Eq. 4, which reduces the propylene yield. Therefore, the CO2/C3H8 ratio plays a vital role in driving the reaction towards more propylene yield [17].
+(4)
+C3H8 + 3CO2 ↔ 6CO + 4H2 ΔHo = 621.96 kJ/mol
+Other side reactions such as propane decomposition (Eq. 5), Boudouard reaction (Eq. 6) and CO reduction by H2 (Eq. 7), which lead to coke formation.
+(5)
+C3H8 ↔ 3C + 4H2 ΔHo = 104.70 kJ/mol
+(6)
+2CO ↔ C + CO2 ΔHo = -172.42 kJ/mol
+(7)
+CO + H2 ↔ C + H2O ΔHo = -131.28 kJ/mol
+The above three side reactions are thermodynamically more favorable than the main reaction of propylene formation [18]. Extensive research is being carried out on catalyst design and synthesis with the objectives of improving of propylene yield by eliminating or minimizing side reactions specifically that lead to coke formation, more details of which can be noted from Table 1. From the exhaustive literature survey made on oxidative dehydrogenation of propane to propylene with CO2, it was found that nearly 20 papers published with experimental results and only one paper is available with exclusive modelling results since 2002 [18]. From the reported experimental studies on ODP−CO2 as listed in Table 1, it is to be noted that by using different types of catalysts it is possible to achieve the propylene selectivity and yields more than 90 % and 50 % respectively. Highest propylene yield of 55 % is obtained in the presence of Cr-MSUx catalyst with 62 % and 84 % propylene selectivity and propane conversion respectively [19].
+Table 1. Literature review of experimental work on oxidative dehydrogenation of propane with CO2.
+Catalyst Catalyst weight (mg) Molar Ratio Total flow rate (ml/min) Temp(oC) XC3H8% XCO2% YC3H6% SC3H6% Ref
+Propane CO2 Inert
+Empty Cell
+Empty Cell
+Empty Cell
+Empty Cell
+Empty Cell
+Empty Cell
+Empty Cell
+Cr-MSU-x 200 1 1 8 30 700 84 NA 55 62 [19]
+V-MCM-41 200 1 4 4 15 600 58 11 53.3 92 [20]
+Cr/SiO2 NA 1 2 3.67 NA 600 71 19 47 66.2 [21]
+V-MSNS 200 1 4 4 15 600 58 NA 46.9 81 [22]
+Cr-TUD-1 200 1 0.25 NA NA 650 45 NA 33.7 75 [23]
+Cr/ZrO2 200 1 2.6 36.4 20 550 41 NA 25.4 62 [24]
+Cr-O/SiO2 500 1 5 NA 30 600 27.7 NA 25.2 90.8 [17]
+Ni-Cr/Si 200 1 1 8 NA 600 90 55 24 26.6 [25]
+Cr2O3/SBA-15 200 1 2 NA 20 550 24.2 NA 20.3 83.8 [26]
+Cr/H[B]MFI 100 1 1 4.67 NA 600 15.7 NA 14.6 93 [27]
+Pd/CeZrAlOx 200 1 1 0.7 15 500 10.1 NA 9.3 92 [28]
+In2O3-Al2O3 NA 1 4 35 100 600 8 15 4.1 51 [29]
+Cr/MSU-1 200 1 3 NA NA 500 3.7 NA 3.6 95.7 [30]
+Fe3Ni1 100 1 1 2 40 550 2.1 4.7 1.6 58.2 [31]
+Fe3Ni1 100 1 1 2 40 550 2.7 4 1.6 58.2 [32]
+Despite the numerous advantages of the ODP−CO2, the process still has several limitations. Firstly, the requirement of pure CO2 co-feed requires highly energy intensive separation techniques such as pre, post and oxy combustion capture [33] that increases the cost of propylene production. Secondly, with ODP−CO2 reaction being highly endothermic (ΔH0 = +164 kJ/mol), heat required by the process is supplied by burning fossil fuels which emits substantial amount of CO2 to environment and thereby defeats the eco-friendly purpose of the ODP−CO2 process. These challenges set by existing ODP−CO2 processes are addressed with the novel process scheme proposed in the present study. This study aims to make the ODP−CO2 eco-friendlier by coupling the process with a novel combustion technology i.e. chemical looping combustion (CLC). The integrated scheme would help to produce pure CO2 feed stream and also provide heat required by the endothermic process.
+CLC process has an inherent feature of CO2 sequestration and the reactions in the CLC system are net exothermic in nature [34]. CLC system consists of two interconnected fluidized bed reactors, a fuel reactor (FR) and an air reactor(AR) among which metal based oxygen carriers (OCs) are circulated [35]. Fuel is oxidized by metal oxides to CO2 and H2O in FR while simultaneously getting reduced. The reduced metal oxides are then transferred to AR, where they are re-oxidized liberating large amount of heat, which would be used to meet the energy requirement of the ODP−CO2 process. Pure CO2 stream needed for the ODP−CO2 process is obtained by condensing steam from flue gases exiting the FR [34].
+The current study proposes a novel eco-friendly and self-sustained process scheme for the production of propylene, through an integrated process of ODP−CO2 with CLC for the first time. Further, the process has been investigated with the objectives of generating pure CO2 stream as co-feed for ODP−CO2 while effectively utilizing the energy generated in CLC section to meet the endothermic heat demand of ODP process. Steady state plant-wide model has been developed for the proposed process using ASPEN Plus. Detailed thermodynamic analysis of the proposed scheme has been carried out through simulation study for the two scenarios including with and without incorporation of coke formation reactions in modelling. Further, rigorous sensitivity analysis of operating parameters is carried out to maximize the performance parameters such as propane conversion and propylene yield. Finally, the performance of the proposed CLC integrated ODP−CO2 process has been compared with conventional ODP−CO2 process.
+2. Process description
+A novel CLC integrated ODP−CO2 process has been proposed in this study. The setup mainly consists of an ODP reactor, a CLC reactor system, a heat recovery steam generation (HRSG) section and a power generation section (Fig. 1). The propane (100 %) feed was split into two streams with a feed splitter and directed to both the ODP and CLC sections.
+Download : Download high-res image (252KB)
+Download : Download full-size image
+Fig. 1. Schematic representation of CLC integrated ODP−CO2 system.
+2.1. ODP-CO2
+The ODP−CO2 system consists of fixed bed reactor to which propane and CO2 are sent as feed. Endothermic oxidative dehydrogenation reaction of propane with CO2 occurs in this reactor to produce propylene as shown in Eq. 3. The heat and CO2 feed required during the ODP process can be met by thermal and mass integration with CLC process.
+2.2. CLC
+CLC system consists of two fluidized bed reactors FR and AR, which are interconnected by metal-based OCs. In the present study Ni-based OCs supported on Al2O3 are used as OCs QUOTE "{Michorczyk, 2012 #75}". In FR, propane gets oxidized to CO2 and H2O with simultaneous reduction of NiO to Ni. The flue gas from FR consists mainly of steam and CO2, which is sent to a condenser to produce a pure CO2 stream. This pure CO2 is directed to the ODP reactor, where it is co-fed along with propane. The reduced Ni is sent to AR, where it gets re-oxidized to NiO by reacting with air and the reaction is highly exothermic in nature. The major reactions occurring within the FR and AR along with their heat of reaction details are provided in Table 2. The regenerated NiO stream is re-circulated to the FR after separated from the depleted air in a cyclone separator. The reaction in FR is endothermic in nature and heat required is provided by the enthalpy of hot NiO solids coming from AR. The hot depleted air from AR, is connected to the jacket of ODP reactor fulfilling its heat requirement.
+Table 2. Reactions occurring in CLC.
+Unit Reaction ΔHo (kJ/mol)
+Air reactor 2Ni + O2(g) ⇌ 2NiO −479.4
+Fuel reactor C3H8(g) + 10NiO ⇌ 3CO2(g) + 4H2O(g) + 10Ni 384.56
+C3H8(g) + 3NiO ⇌ 3CO(g) + 4H2(g) + 3Ni 521.54
+CO(g) + NiO ⇌ CO2(g) + Ni −43.112
+H2(g) + NiO ⇌ H2O(g) + Ni −1.909
+2.3. HRSG and power generation
+Heat recovery and steam generation (HRSG) section facilitates the recovery of heat from various hot streams of the integrated CLC-ODP plant including exhaust gases from FR, ODP reactor and depleted air from the jacket of ODP reactor by using multiple heat exchangers. The recovered heat was used for simultaneously producing steam at three different pressure levels i.e. high pressure (HP) at 80 atm, intermediate pressure (IP) at 15 atm and low pressure (LP) at 3 atm. The steams generated are expanded in steam turbine (ST) to produce power in the power generation section. Thus, making the process self-sustainable as both the heat and power demand of the proposed scheme is met within the plant itself.
+3. Process simulation
+A steady state plant wide model has been developed for the proposed CLC integrated ODP process along with HRSG and power generation section using ASPEN Plus. In this section, various aspects of model development including assumptions, process parameters, design of HRSG along with and energy analysis are discussed in detail. Fig. 2 shows the ASPEN Plus flowsheet developed for the integrated CLC-ODP process. All the reactors in the process scheme are simulated using RGibbs module in ASPEN Plus, which uses the Gibbs free energy minimization principle to determine the equilibrium composition. The Peng-Robinson (PR) property method is used to calculate the thermodynamic properties of individual components. Table 3 presents the complete details of various units present in the plant wide ASPEN plus flowsheet of the integrated CLC-ODP process.
+Download : Download high-res image (356KB)
+Download : Download full-size image
+Fig. 2. ASPEN Plus Flowsheet of CLC integrated ODP−CO2 process.
+Table 3. Details of units used in the plant wide ASPEN Plus model for CLC integrated ODP−CO2 process.
+ASPEN Module Unit Name Description Operating Conditions
+Compr HP-ST Expands the high-pressure steam to generate power Discharge Pressure: 15 atm, ɳisentropic: 0.82
+IP-ST Expands the intermediate pressure steam to generate power Discharge Pressure: 3 atm, ɳisentropic: 0.82
+LP-ST Expands the low pressure steam to generate power Discharge Pressure: 0.01 atm, ɳisentropic: 0.82
+Flash CNDSR-1 Condenses the water from flue gas of fuel reactor Temperature: 25 °C Pressure: 1 atm
+CNDSR-2 Condenses the water form product Temperature: 25 °C Pressure: 1 atm
+FSplit SPLTR-1 Splits C3H8 to be sent to reformer and FR C3H8 to ODP reactor – 1 kmol/h
+SPLTR-2 Splits CO2 to be sent to the ODP reactor C3H8 to ODP reactor – 0.5 kmol/h
+SPLTR-3 Splits fresh water to be sent to HE-1 and HE-2 Optimized by design spec
+Heater ODP-JAKT Provide the heat required by ODP reactor Pressure: 0 atm
+MCompr COMPR Compresses the CO2 captured No of stages: 5, Discharge pressure: 110 atm, Isentropic efficiency: 0.82, Outlet temperature: 25 °C
+HeatX HE-1 Generates HP-steam with simultaneous cooling of depleted air Hot outlet-cold inlet temperature difference: 10 °C
+HE-2 Generates HP-steam with simultaneous cooling of flue gas from FR Hot steam outlet temperature: 90 °C
+HE-3 Superheats IP steam with simultaneous cooling of product gas Hot outlet-cold inlet temperature difference: 10 °C
+HE-4 Superheats LP steam with simultaneous cooling of product gas Hot inlet-cold outlet temperature difference: 10 °C
+HE-5 Generates LP-steam with simultaneous cooling of product gas Hot outlet-cold inlet temperature difference: 10 °C
+Mixer MXR-1 Mixes the total HP steam generated in HRSG section ----
+MXR-2 Mixes the total LP steam generated in HRSG section ----
+Pump HP-PMP Pumps water required for HP steam generation Discharge Pressure: 80 atm, ɳpump: 0.90
+LP-PMP Pumps water to cool product gas Discharge Pressure: 3 atm, ɳpump: 0.90
+RGibbs FR Oxidation C3H8 using OCs Adiabatic, Pressure:1 atm
+AR Oxidation of OCs using air Temperature =1000 °C, Pressure: 1 atm
+ODP-R Oxidative dehydrogenation of propane with CO2 Temperature: 800 °C, Pressure :1 atm
+SSplit CS Separates oxidized OCs from depleted air Fraction of CISOLID in stream 9: 0
+3.1. Assumptions
+The following assumptions are taken into consideration during the simulation [18,36]:
+•
+The atmospheric temperature and pressure considered during the study are 25 °C and 1 atm respectively.
+•
+No particle size distribution for solid phase.
+•
+No heat and pressure loss across any unit operations module.
+•
+Gas-solid separations are 100 % efficient.
+•
+The reactivity of NiO remains constant even after multiple cycles.
+•
+The AR is operated at 1000 °C to avoid sintering and agglomeration of OCs.
+•
+To improve the thermal, mechanical and physical properties of the OCs, they are assumed to be supported with 30 % aluminum oxide (Al2O3).
+•
+No carbon formation is assumed.
+3.2. Design of HRSG and power generation sections
+In this section, the heat is recovered form depleted air, flue gas from FR and product gas from ODP reactor to generate the steam at three different pressure levels which are further used for power generation. HRSG section is designed based on the composite curves or temperature to heat flux (T-Q) diagrams. Design specification tool in ASPEN Plus has been used to control the flowrate/temperature of cold/hot stream while designing the heat exchanger network (HEN) in HRSG section. Fig. 3(a–c) shows the temperature profiles of heat recovery processes for depleted air, flue gas of FR and product gas from ODP reactor, respectively. In the figure, continuous line represents the hot process streams while the dotted line represents the cold streams.
+Download : Download high-res image (259KB)
+Download : Download full-size image
+Fig. 3. Composite curves (T-Q diagrams) for a) depleted air, b) flue gas of FR and c) product gas.
+The depleted air is cooled from 810 °C to 35 °C in HE-1, and the recovered heat is used to produce HP steam at 520 °C and 80 atm as shown in Fig. 3(a). Similarly, flue gases from FR are cooled from 900 °C to 90 °C in HE-2 and the recovered heat is used to produce HP steam as shown in Fig. 3(b). The HP steams from HE-1 and HE-2 are mixed in MXR-1 and then expanded in HP-ST to generate power. Further, the heat from the exhaust of ODP reactor is recovered in 3 steps using heat exchangers HE-3, HE-4 and HE-5, by cooling it from 800 °C to 120 °C as seen in Fig. 3(c), after which it is condensed to separate water from product. In HE-3, the exhaust from HP-ST at 15 atm, is superheated to 391 °C, while cooling the exhaust gas from ODP reactor from 800 °C to 307 °C. The IP steam is then expanded in IP-ST, generating LP-steam at 212 °C and 3 atm. The exhaust gas from ODP reactor is further cooled to 222 °C in HE-4 by heating the LP-steam to 226 °C. The exhaust gas from ODP reactor is further cooled to 120 °C in HE-5, while generating LP steam. The LP-steams produced in HE-4 and HE-5 are mixed in MXR-2 and then expanded in LP-ST to generate power.
+3.3. Process parameters
+Process parameters consist of input parameters and performance parameters. The objective is to study the influence of input parameters on the overall plant performance and evaluate optimum process parameters, through sensitivity analysis performed on the plant wide model developed.
+3.3.1. Input parameters
+In the present study, input parameters α, β and γ are defined, based on oxidative dehydrogenation of 1 kmol/h of propane. α denotes the molar ratio of NiO to C3H8 fed in FR, β denotes the molar ratio of CO2 to C3H8 fed to the ODP reactor and γ denotes the molar ratio of C3H8 entering FR to ODP reactor as defined below.
+(6)
+α signifies the flow rate of OCs that alter the extent of combustion in FR, whereas β primarily regulates the extent of C3H8 conversion in ODP-reactor which in turn regulates the yield of propylene. γ denotes the amount of propane to be combusted in FR to meet the heat demand of the ODP reactor for propane dehydrogenation with CO2.
+3.3.2. Performance parameters
+The overall performance of the proposed scheme is assessed by considering the parameters including C3H8 conversion
+, CO2 conversion
+, C3H6 yield
+and the net plant efficiency (ɳ) which are computed as follows,
+(7)
+(8)
+(9)
+(10)
+where,
+(11)
+(12)
+4. Results and discussion
+This section presents the simulation results of CLC integrated ODP−CO2 process scheme. Detailed thermodynamic analysis has been done considering two cases with and without coke formation and optimal process parameters are evaluated through rigorous sensitivity analysis. Energy analysis is performed at optimal parameters to understand the potential pay offs of the proposed scheme. Further, the results of the proposed scheme are compared in detail with the conventional ODP process, to further understand the intricacies of the proposed scheme. Finally, the advantages of the proposed scheme over the conventional process has been demonstrated along with the scope for further process development and experimental implementation.
+4.1. Sensitivity analysis
+Sensitivity analysis has been performed using the plant wide model developed in ASPEN Plus by varying the input parameters α, β and γ and studying their effect on respective performance parameters namely, C3H8 conversion, CO2 conversion and C3H6 yield. Further, the effect of operating temperature and pressure of the ODP reactor was also studied. Two scenarios are considered for the simulation of ODP−CO2 process, i.e., with and without including the coke formation reactions (Eqs. (5), (6), (7).
+Figures, Fig. 4 and Fig. 5 show the results of simulations revealing the effect of temperature on products composition and performance of ODP−CO2 process respectively evaluated at 0.5 molar ratio of CO2/C3H8 and 1 atm pressure for the two cases, with and without coke formation reactions. For the simulation case of ODP−CO2 process with coke formation, as observed from Fig. 4(a) results that with the increase in reaction temperature from 500°C to 1000°C, the mole fractions of C3H8, CO2 and C3H6 have remained almost negligible and the mole fractions of coke and H2O are found to be gradually decreased while the mole fraction of CO and H2 are found to be gradually increased and settled, these results are found to be matching with the results of Zangeneh et al., [18] Further for the same case, as observed from Fig. 5(a) that the propane conversion is almost 100 % even at 500°C, but the propylene selectivity and yield remained almost negligible throughout in the entire temperature range. This is mainly because of complete conversion of propane to either coke or syngas, which are thermodynamically more favorable processes than the actual propylene formation reaction.
+Download : Download high-res image (232KB)
+Download : Download full-size image
+Fig. 4. The effect of temperature on equilibrium product composition of ODP−CO2 process, a) with coke formation and b) without coke formation (CO2/C3H8 = 0.5, Pressure =1 atm).
+Download : Download high-res image (272KB)
+Download : Download full-size image
+Fig. 5. The effect of temperature on the performance of ODP−CO2 process, a) with coke formation and b) without coke formation (CO2/C3H8 = 0.5, Pressure =1 atm).
+Considering the simulation results of second case of ODP−CO2 process with no coke formation, as noted from Fig. 4(a) that with the increase in reaction temperature from 500°C to 1000°C, the mole fractions of C3H6 and H2 are found to be gradually increased from 0.03 to 0.25 and 0.27 to 0.45 respectively, beyond 800°C they remained almost constant. Further, the mole fractions of C3H8 and CO are found to be decreased and reached their respective values of 0.31 to 0 and 0.36 to 0.30. Also, the mole fractions of CO2 and H2O are found to be almost negligible throughout. Considering the results shown in Fig. 5(b), it is observed that as the reaction temperature is increased from 500 °C to 1000 °C, the mole fraction, yield and selectivity of propylene are found to be increased from 0.03 to 0.25, 8.11%–82.88% and 35.25%–83.26% respectively. Also, it is observed from the figure that propane conversion and propylene selectivity almost became constant beyond 800 °C. From all the above results, the optimum temperature for ODP−CO2 process is chosen as 800 °C.
+Further, the results of studying the effect of input parameter α (moles of NiO used per mole of C3H8 fed to the FR) on performance parameters are shown in in Fig. 6. α is an important input parameter to be optimized as it regulates the extent of combustion in FR and thereby alters the composition of flue gas from FR, especially the composition of CO2 that in turn regulates the conversion in ODP−CO2 reactor. The value of α is varied from 0 to 20 and its effect is studied on the composition of the product stream of FR and the results are shown in Fig. 6. It is observed from the figure that C3H8 content is found to be decreased gradually with the increase in α and it reduced almost to 0 for the α values beyond 3. On the other hand, at α ≥ 3, the concentrations of CO and H2 are found to be decreased while the concentrations of CO2 and H2O are found to be increased. Complete oxidation of C3H8 to CO2 and H2O is observed at α ≥ 10. It is seen that, CO2 and H2O concentration in the FR flue gas is stabilized at 42.54 % and 56.88 % respectively beyond α = 10. Therefore, the optimum value of α is considered to be 10 as it yields maximum CO2 in FR, which is to be used as a co-feed for ODP reactor.
+Download : Download high-res image (104KB)
+Download : Download full-size image
+Fig. 6. Effect of α on the composition of flue gas from the fuel reactor.
+Next β, which denotes the moles of CO2 per mole of C3H8 fed to the ODP reactor was optimized along with the temperature of ODP reactor. These two are the most crucial parameters that control the conversion of C3H8 and CO2 in the ODP reactor, which in turn regulates the yield of C3H6. To analyze the effect of β and temperature of ODP reactor on performance parameters, the temperature is varied from 500−1000 °C at 4 different β values i.e. 0.5, 1, 1.5, 2 and 5 and the results are shown in Fig. 7.
+Download : Download high-res image (360KB)
+Download : Download full-size image
+Fig. 7. Effect of β and ODP reactor temperature on (a) C3H8 conversion, (b) CO2 conversion, and (c) C3H6 yield at 1 atm pressure.
+It is observed from Fig. 7(a) that C3H8 conversion continuously increases with the increase in temperature of ODP reactor up to 800 °C, beyond which it becomes almost constant and equal for all β ranging from 0.5 to 2. In case of β = 5, the propane conversion reaches 100 % at 600 °C and no further change is observed with increase in temperature. A similar trend is observed for CO2 conversion in Fig. 7(b). It is observed that CO2 conversion continuously increases with increase in temperature of ODP reactor up to 650 °C, beyond which it becomes almost constant and equal for β ranging from 0.5 to 2. In case of β = 5, the CO2 conversion is found to be continuously increasing from 61 % to 78 % as the temperature increases from 500 to 1000 °C. Further, it is noted from Fig. 7(c) and (d) that, C3H6 yield and selectivity are continuously increasing with the increase in temperature of ODP reactor, up to 800 °C for all the values of β (except β = 5), and beyond which it becomes stable. However, unlike propane and CO2 conversions, the propylene yield and selectivity are found to be high for lower β values and at β = 5, the yield/selectivity of propylene is almost negligible throughout the temperature range of 500−1000 °C. Therefore, β = 0.5 with temperature of ODP reactor at 800 °C is chosen as the optimum. The propane conversion, CO2 conversion, propylene yield and its selectivity are found to be 95.77 %, 99.99 %, 79.10 % and 82.60 % respectively. The propane conversion at 650 °C, for β values of 0.5 and 1 are 71.52 % and 77.18 % respectively and these values are nearly matching with the reported experimental [19,21] and simulation [18] results. Also the propylene yield values of 54.88 % and 43.93 % achieved at the respective β values of 0.5 and 1 and 650 °C are also found to be almost matching with the values of reported experimental [[19], [20], [21], [22]] and simulation studies [18].
+Further, the effect of operating reactor pressure on the performance is studied by varying the pressure of ODP reactor from 1−5 atm at chosen optimum values for temperature and β, of 800 °C and 0.5, respectively and the results obtained are presented in Table 4. It is observed from the results that all the performance parameters are found to be decreased with increased pressure. C3H8 conversion, CO2 conversion and C3H6 yield are found to be highest for 1 atm pressure and chosen as optimum operating pressure for ODP−CO2 reactor.
+Table 4. Effect of pressure on performance parameters at 800 °C and β = 0.5.
+Pressure(P) C3H8 conversion(XC3H8) CO2 conversion(XCO2) C3H6 yield(YC3H6) C3H6 Selectivity (SC3H6)
+atm % % % %
+1 95.77 99.99 79.10 82.60
+2 92.05 99.98 75.38 81.90
+3 88.75 99.97 72.09 81.23
+4 85.79 99.95 69.14 80.59
+5 83.12 99.93 66.47 79.98
+γ signifies the quantity of C3H8 needed to be oxidized in the CLC’s FR, to meet the endothermic heat demand of the ODP−CO2 reactor in order to convert 1 kmol/h of propane to propylene. γ is varied in the range of 0.5–2 and its effect on the temperature of depleted air after supplying the heat to the ODP−CO2 reactor is plotted in Fig. 8. As discussed before, the optimum operating temperature of ODP−CO2 reactor is 800 °C in order to attain maximum propylene production. For effective transfer of heat from depleted air to the ODP−CO2 reactor via jacket, the temperature of depleted air from the jacket outlet of ODP−CO2 reactor should be more than 800 °C as per the second law of thermodynamics. It can be observed from Fig. 8 that the temperature of depleted air reaches 800 °C at γ = 0.87. A nominal temperature difference of 10 °C between the depleted air and ODP reactor is observed at γ = 0.91, which is considered to be the optimum.
+Download : Download high-res image (81KB)
+Download : Download full-size image
+Fig. 8. Effect of γ on temperature of depleted air from jacket outlet of ODP reactor.
+4.2. Energy analysis
+Detailed energy analysis has been carried out to assess the performance of proposed integrated process scheme for propylene production as compared to the conventional process, considering 1 kmol/h of propane input to ODP reactor as the basis. The power generated and consumed by each and every unit has been taken into consideration and from the net power generated, the energy efficiency of the overall process scheme as given in Table 5. The resulted net plant efficiency of the proposed CLC-ODP−CO2 scheme is 73.48 %, which is slightly less than that of conventional ODP process (77.12 %), as the proposed process scheme requires additional compression power for the operation of CLC section. Further, the conventional ODP−CO2 process requires the procurement of pure CO2 feed from external sources, which accounts for additional cost, and it doesn’t have the feature of CO2 capture, contributing to environmental problem. On the other hand, in the proposed integrated CLC-ODP−CO2 scheme, 100 % CO2 has been captured from CLC section, from which 18.7 % of CO2 is utilized for ODP reaction. The heat required (93.54 kW) to maintain the temperature of ODP reactor at 800 °C is provided by the hot depleted air outlet from CLC section. Thus, the integration of CLC with ODP reactor successfully fulfils its heat and CO2 requirements with an additional feature of in-situ CO2 capture, thereby making the overall process efficient and eco-friendly.
+Table 5. Performance Comparison.
+S Units CLC-ODP-CO2 Conventional ODP-CO2
+LHVC3H8 kW 1086.82 1009.74
+Wcompr 17.33 --
+Wpump 0.94 0.91
+LHVProduct 625.60 625.60
+Wturbine 160.30 155.42
+CO2 captured % 100 --
+CO2 utilized 18.7 --
+Efficiency 73.48 77.12
+5. Conclusions
+A novel CLC integrated ODP−CO2 process scheme is proposed in this study. The heat demand of ODP−CO2 reactor is met by thermal integration of hot depleted air from the air reactor of CLC to the jacket of ODP−CO2 reactor, while the CO2 requirement of ODP−CO2 reactor is met by taking a part of CO2 produced in fuel reactor of CLC. Further, self-sustainability of the process has been achieved by recovering the excess heat available from different process streams and utilized for power generation. Detailed thermodynamic analysis of the proposed scheme has been carried out through simulation study based on the steady state plant wide model developed using ASPEN Plus. The sensitivity analysis revealed that the optimum temperature, pressure and molar ratio of CO2 to propane in ODP reactor are 800 °C, 1 atm and 0.5 respectively, which resulted in maximum propane conversion of 95.77 %, CO2 conversion of 99.99 % and propylene yield of 79.10 %. The proposed CLC-ODP process has exhibited the advantage of 100 % CO2 capture as compared with conventional ODP process. 18.7 % of the total CO2 generated in CLC section could fulfill the requirement of CO2 to ODP reactor. The proposed integration of CLC with ODP reactor seems to be quite promising in providing an efficient and eco-friendly process for propylene production. The results generated from this study would be serving as baseline for carrying out experimental studies in future.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+CRediT authorship contribution statement
+N. Ruthwik: Conceptualization, Formal analysis, Investigation, Writing - original draft. D. Kavya: Conceptualization, Methodology, Formal analysis, Investigation, Writing - original draft. A. Shadab: Software, Validation, Data curation. N. Lingaiah: Resources, Writing - review & editing, Visualization, Project administration, Funding acquisition. C. Sumana: Software, Resources, Visualization, Supervision.
+Acknowledgment
+The authors acknowledge the financial support of Council of Scientific and Indusrial Research, India, “Mission Mode project (HCP-009)” and The authors acknowledge the financial support of Department of Science and Technology, Govertment of India “DST/IS-STAC/CO2-SR-193/14(G)" under “National Program on CO2 Sequestration Scheme”. The authors would like to thank AcSIR and Director, CSIR-Indian Institute of Chemical Technology, Hyderabad for providing a platform and facilities for carrying out research (IICT/Pubs./2020/067).
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

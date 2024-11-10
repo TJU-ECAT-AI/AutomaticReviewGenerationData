@@ -1,0 +1,257 @@
+<DOCUMENT>
+Novel propane dehydrogenation process design integrated with membrane reactor and solid oxide fuel cell: Economic and environmental aspects
+As environmental pollution worsens, many strategies are emerging to reduce CO2 in various chemical processes. The practical strategy of byproduct hydrogen utilization in propane dehydrogenation is also being reviewed a lot. In this work, a comprehensive analysis was conducted for propane dehydrogenation process design integrated with membrane reactor and solid oxide fuel cell. Especially, membrane reactor and sequential reactor were used to increase the yield of the process. All assessments were investigated based on Aspen Plus®, which is commercial software for process simulation. Levelized cost of electricity was derived through itemized cost estimation. The 2.81 $ kWh-1 of levelized cost of electricity was revealed through itemized cost estimation; it is higher than industrial electricity in general. Therefore, various scenarios were conducted to reduce the levelized cost of electricity compared to industrial electricity price on sale, currently. The optimistic case (1.20 $ kWh-1) can be priced close to industrial electricity price through 100 % of propane recycling rate and − 20 % of reduction in the price of the influential factors. For life cycle assessment, the environmental impact of global warming potential was assessed as 4.93 kg CO2 eq MJ-1 of CO2 emissions. Various scenarios had been proposed to reduce CO2 as with the economic assessment. Under pessimistic, realistic, and optimistic conditions, the results of global warming potential were 5.61, 4.93, and 4.25 kg CO2 eq MJ-1, respectively. The comprehensive analysis will be presented as guidelines for the actual use of byproduct hydrogen.
+Nomenclature
+H2 mole flow rate (mol s-1)
+Partial pressure of H2 on the retentate part (Pa)
+Partial pressure of H2 on the permeate part (Pa)
+Equipment cost ($)
+Reference cost ($)
+E
+Attribution of equipment
+CEPCI
+Chemical engineering plant cost index
+P
+CEPCI
+Size of the equipment
+Correlation for the equation
+Solid oxide fuel cell system cost ($)
+Inverter cost ($)
+Active surface area (m2)
+Cell number
+Operating temperature of solid oxide fuel cell (K)
+Power output of solid oxide fuel cell (kW)
+Standard Gibbs free energy (kJ mol-1)
+F
+Faraday constant (kJ mol-1)
+R
+Gas constant (kJ mol-1 K-1)
+Mole flow rate of each chemical
+CRF
+Capital recovery factor
+Discount rate
+Project period
+1. Introduction
+All countries of the world are trying to increase the growth of economy to alleviate standard of living for people and environmental issues are becoming complicated. As environmental pollution becomes serious around the world, many environmental regulations are also being created. In particular, electricity generation is the one of factors that has the greatest influence on environmental pollution, and conventional electricity production emits a lot of CO2, SO2, NOx, and other air pollutants. The reported global warming impacts of electricity production were 660–1050 kg CO2 eq MWh-1 from the coal, 350–1000 kg CO2 eq MWh-1 from natural gas, and 530–900 kg CO2 eq MWh-1 for oil [1], [2]. As a consequence, various methods of electricity generation from renewable energy have been proposed and technology is still being developed to increase its economic feasibility [3]. In addition, research is underway to reduce energy consumption for various chemical processes. A fuel cell is applied to produce electricity by converting chemical energy into electrical energy [4]. Various types of fuel cells have been developed such as alkaline fuel cell, proton exchange membrane fuel cell, phosphoric acid fuel cell, and solid oxide fuel cell [5]. Redox reaction is a type of chemical reaction which involve the transfer of electrons that leads to the conversion of energy. In fuel cell, the hydrogen (H2) is fed into the anode, and air is fed into the cathode. Especially, solid oxide fuel cell has many advantages due to their solid materials and high operating temperature. Also, expensive catalysts such as platinum or ruthenium are avoided, and solid oxide fuel cell has a good ability to tolerate impurities as life increases under high operating temperature.
+In the propane dehydrogenation process, the process converts propane to propylene and produces H2 as a byproduct [6]. Byproduct H2 is a significant material which can be utilized in a lot of areas such as chemical material and energy source [7]. Also, it can be obtained in various processes including dehydrogenation reaction such as naphtha steam cracking. Currently, there is a special demand for H2; therefore, H2 from the propane dehydrogenation process can apply to various sectors. Moreover, byproduct H2 is regarded as a more economically and environmentally viable option compared to H2 produced through conventional steam methane reforming. Byproduct H2 can also be used in fuel cells where H2 becomes a reactant to generate valuable electricity energy. To utilize the process, it is necessary to evaluate the economic and environmental performance process. Yang et al. designed propylene production processes using shale gas and naphtha; also, economic and environmental feasibilities were evaluated for the process. The unit production cost of propylene and life cycle assessment (LCA) result of the integrated process including propane dehydrogenation were estimated as 382.9 $ ton-propylene-1 and 2.095 kg CO2 eq kg-propylene-1, respectively [8]. Ricca et al. evaluated the stability and activity of the catalyst and developed a mathematical model based on experimental results. The fixed bed reactor using Pt-based catalyst and Pd-based membrane separator was utilized for the evaluation. Under 6 atm of operating pressure, the conversion rate was increased according to increasing temperature, and reached approximately 20 % at 600 °C [9]. Qin et al. developed the hybrid process of propane dehydrogenation with steam methane reforming. The Pt-based catalyst was used, and the conversion rate of propane was 38 % with 88 % of selectivity. The capital expenditure was 812,000,000 $ and the operating expenditure was 852,400,000 $ y-1 with 125 ton h-1 of propylene production and 11.1 ton h-1 of H2-rich gas [10]. Saidi and Safaripour observed the propane conversion rate and propylene selectivity of propane dehydrogenation using Pd-Ag membrane reactor with Pt-Sn/Al2O3 catalyst. The conversion rate was increased from 3 % to 41 % when the operating temperature was increased from 400 °C to 600 °C [11]. Rica et al. evaluated the performance of propane dehydrogenation using Pt-Sn based catalytic reactor and Pd-based membrane separator by varying operating conditions. According to temperature increase, the conversion rate was increased continuously, but selectivity started to decrease from 500 °C. Also, the conversion rate of propane at 6 atm and 600 °C of operating conditions was 20 % [12]. Agarwal et al. modeled the three processes regarding propane dehydrogenation at 600,000 ton y-1 of capacity. The overall conversion rate and selectivity of the process with fluidized catalyst bed in a radial flow reactor were 40 % and 90 %, respectively. In addition, economic feasibility and environmental impact assessment were evaluated for the process. The CO2 emissions of common propane dehydrogenation were 1 million ton y-1, which is 1.22 and 2 times more than the integrated process and intensified process [13]. Choi et al. modeled the propane dehydrogenation using a packed-bed membrane reactor by Aspen Plus®. The sweep-to-feed was an important factor in the performance, and the 1.5 of optimal ratio for energy was estimated. In addition, the hollow fiber was used for the membrane reactor to increase efficiency by minimizing the radial dispersion and increasing the surface area to catalyst volume ratio [14]. Chen et al. summarized the conversion rate and selectivity of propane dehydrogenation using various Pt-based catalysts. The conversion rate could be from 3.6 % to 70 % and the average conversion rate for all cases was 33.73 % [15]. Moparthi et al. estimated the gross profits of conventional propane dehydrogenation, sweep flow rate of Pd-based membrane and Si-based membrane, thickness, and operating conditions of the reactor. The cost was 60–70 % more compatible than the conventional one [16]. For the research of the propane dehydrogenation process, many research are being conducted to increase the conversion rate through the development of catalysts and reactors, and a method to increase the yield using membrane reactors is also being researched. The research regarding sequential reactors was also conducted to increase yield, as follows. Peters et al. observed H2 flux and coke formation with various operating conditions by experiment using sequential packed-bed reactor and Pd-based membrane separation. Sequential reactor can operate propane dehydrogenation under lower temperatures than common packed-bed membrane reactors, so the coke formation was reduced because coke formation could be prevented under 300 °C [17]. Byun et al. proposed the methanol steam reforming process using serial packed-bed reactors with membrane filters. The conversion rate was increased by serial reactor and H2 yield was also increased by revising the disadvantages of the conventional system such as the deactivation of the catalyst and permeance blocking by liquid occurrence [18]. Many concepts regarding propane dehydrogenation in membrane reactors with solid oxide fuel cell have been studied, but little research has been done to evaluate the economic and environmental assessment of the actual use of byproduct H2. In this work, comprehensive assessment including economic and environmental aspects was conducted for propane dehydrogenation in membrane reactor with solid oxide fuel cell; the research could be practical guidelines for actual use of byproduct H2 by conducting a comprehensive analysis. The following Fig. 1 is a schematic diagram of the comprehensive assessment of the process of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Download : Download high-res image (141KB)
+Download : Download full-size image
+Fig. 1. Schematic diagram of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+2. Methods
+2.1. Process modeling
+The process simulation of propane dehydrogenation is simulated based on kinetic modeling by Lobera et al. [19]. The three steps of processes are reacted over a Pt-Sn-K/Al2O3 catalyst as follows Eqs. (S.1-S.3). Dehydrogenation of propane reaction can be classified into three important equations. Especially, dehydrogenation and cracking reactions are highly endothermic reaction, and it can cause the increase of propane conversion. The Pt-Sn-based catalyst is one of the commercial catalysts of propane dehydrogenation because C-H bonds could be easily activated with Pt and Sn can improve the catalytic performance. The properties of catalyst bed density and catalyst void fraction are applied for kinetics modeling as 2000 kg m-3 and 0.5, respectively [20]. Propane dehydrogenation process is mechanistic kinetic modeling; also, the Langmuir-Hinshelwood mechanism and power law as a functional relationship are used for the process. Below Eqs. (S.4-S.11) are presented as kinetics for each process of propane dehydrogenation. Fig. 2 shows the process flow diagram of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Download : Download high-res image (164KB)
+Download : Download full-size image
+Fig. 2. Process flow diagram of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Aspen Plus® as commercial software for process simulation is utilized for propane dehydrogenation in membrane reactors with solid oxide fuel cell simulation. Based on the Peng-Robinson equation of state, the overall process is simulated because the equation of state is proper to calculate equilibrium properties such as vapor-liquid phase reaction. The propane as a reactant (P1) is fed into heat exchanger (HX-1) with 36 kmol h-1 at standard temperature (25 °C) and 3 bar of pressure conditions. The feed (P1) is preheated through heat exchanger (HX-1) by heat transfer from the recovered heat energy of solid oxide fuel cell (H12). Rigorous plug flow reactors (R-1, R-2, and R-3) with rate-controlled and equilibrium reactions based on known as explained previously and separators (S-1, S-2, and S-3) are considered to implement the serial membrane reactors. Membrane reactor is simulated with specific equation that can be calculated with various variables using a calculation as follows Eq. (S.12). Also, the membrane reactor is simulated at
+mol m-2 s-1 Pa-1 of H2 permeance and 0.308 m2 of membrane surface area [21]. Basically, a conventional Pd membrane follows the Sievert’s law with pressure dependence of 0.5 for calculating the flux of H2 from retentate to permeate. However, pressure dependence 1 is used as a result of technological development for thin H2 membranes [22], [23]. Propylene on the retentate side (P14) and H2 (P17) on the permeate side is produced by passing through the serial membrane reactors. Also, the pressure swing adsorption (PSA) technology is assumed to separate the propylene, H2, and other materials (S-5). Air is fed into the cathode and H2 is injected into the anode. In this process simulation, some separators, reactors, and mixers are considered to implement the solid oxide fuel cell model. Two separators (S-5 and S-6) were applied to separate the accurate chemical materials for electrochemical reaction and shifting reaction. The reactions of the cathode and anode of the solid oxide fuel cell are as follows Eqs. (S.13-S.14). Also, 4000 of number of cells, 0.027 m2 of single cell reaction area, and 45.2 % of cell efficiency are applied for solid oxide fuel cell by referring to You et al. [24].
+2.2. Economic analysis
+The economic analysis is performed to estimate the levelized cost of electricity (LCOE). Itemized cost estimation is investigated with various economic information obtained from previous research and simulation data based on Aspen Plus® simulator, which is commercial software regarding process simulation. Especially, the composition of key stream flow could be obtained from the results of simulation, and it would be used for economic and environmental assessment. Also, the economic analysis is conducted based on methods from Turton et al. [25]. Reactor, membrane, heater, PSA, solid oxide fuel cell, inverter, catalyst, and supplement are considered as capital costs; also, reactant, sweep gas, electricity, operation of PSA, maintenance, and other costs have been decided as items of operating costs. All economic parameters can be calculated based on the six-tenth rule, which is the correlation with capacity and cost; also, 0.6 of cost exponent was considered when there is not enough economic information regarding the specific cost exponent of equipment. The chemical engineering plant cost index (CEPCI) is considered for cost fluctuation over time. The equation regarding the six-tenth rule and CEPCI is as follows Eq. (S.15). To estimate the membrane reactor, reactor and membrane module are considered. The economic information of reactor and membrane module is 28,746 $ with 57.6 Nm3 h-1 of reactor scale and 5382 $ m-2 with 0.308 m2 of membrane area [26], [27], [28]. Capital and operating expenditure of PSA are 370,380 $ y-1 and 170,940 $ y-1 with 115.99 kmol h-1 of input flow rate [29]. Heater is estimated based on the equipment cost equation (Eq. (S.16)). Each correlation values for the heater are 4.0336, 0.2341, and 0.0497 m2 for
+,
+, and
+, respectively. The solid oxide fuel cell system and inverter are calculated based on those equations (Eqs. (S.17-S.18)). The power output can be calculated by the Nernst equation as follows Eq. (S.19). The supplement cost can be calculated by assuming 20 % of the total capital cost. The annual cost is estimated by the capital recovery factor (CRF) considering the interest rate and project period (Eq. (S.20)). Also, project period is assumed 10 years for membrane module, heater, solid oxide fuel cell, inverter, and catalyst; period of production for reactor is assumed 20 years. The reactant cost and sweep gas cost are calculated considering propane cost and water cost (sweep gas) as 610 $ ton-1 and 9.2 $ ton-1, respectively [30]. Electricity cost is estimated with 0.06 $ kWh-1 and energy consumption of heater. Maintenance costs and other costs can be calculated by assuming 2 % and 1 % of the total capital costs, respectively.
+2.3. Life cycle assessment
+LCA is a tool for assessing and analyzing environmental aspects with all the stages of the product. The International Organization for Standardization (ISO) has created standards regarding environmental management; therefore, LCA follows ISO 14040 and ISO 14044 as standards. The four phases are considered for LCA: goal and scope definition, inventory analysis, impact assessment, and interpretation of results [31]. Also, ReCiPe 2016 Midpoint (H) and Ecoinvent 3 – allocation, cut-off by classification – system is used as methods for LCA through SimaPro software.
+3. Results and discussion
+3.1. Technical analysis
+Process simulation of the propane dehydrogenation in membrane reactor was validated by referring to Saidi et al. [20]. Fig. 3 shows the model validation results with propane conversion according to operating conditions.
+Download : Download high-res image (155KB)
+Download : Download full-size image
+Fig. 3. Model validation with propane conversion according to temperature and pressure.
+In general, the propane dehydrogenation is a highly endothermic reaction rate, which reaction leads to high conversion under high operating temperature. One thing to note that operating cost would be affected by propane conversion. Therefore, the reaction requires to be performed at a high operating temperature of over 500 °C [32]. Saidi et al. investigated the propane conversion in the range of 400–600 °C and 1–6 bar as operating conditions to consider the impact of operating conditions. In the literature and simulation results, propane conversion was improved according to increase of operating temperature. In addition, high operating temperature can improve the kinetic properties of the catalyst, and it can obtain higher propane conversions. The H2 permeance was enhanced according to increasing the operating temperature, it can shift the equilibrium condition by the principle of Le Chatelier. Also, propane conversion was decreased according to increasing operating pressure. Based on the Eq. (S.12) for the Pd-based membrane, the driving force of H2 permeation is enhanced by increasing the operating condition, basically. However, the propane dehydrogenation reaction is not preferred under high pressure conditions because increasing operating pressure has a negative influence by raising the mole numbers. In this simulation, propane dehydrogenation was simulated under 550 °C of temperature and 3 bar of pressure, which is best fitted value with results from previous literature and has a high conversion as shown in the Fig. 3. Also, the performance of the membrane reactor was compared with the conventional packed-bed reactor (Fig. 4).
+Download : Download high-res image (86KB)
+Download : Download full-size image
+Fig. 4. Performance of membrane reactor and packed bed reactor with temperature variation.
+The propylene molar flow rate was simulated in the range of 400–600 °C of operating temperature in membrane reactor and packed bed reactor. Apparently, membrane reactor had high performance than packed-bed reactor because of the principle of membrane as previously explained. The performance of membrane reactors had approximately 2.73–23.84 kmol h-1 of propylene molar flow according to increasing temperature in contrast to the low performance of the packed-bed reactor as 1.50–15.39 kmol h-1.
+3.2. Economic analysis
+The LCOE was calculated by estimating total costs based on various economic indicators from literature and simulation data. The LCOE could be obtained when 36 kmol h-1 of propane feed was fed into the membrane reactor. Also, power output through solid oxide fuel cell was estimated as 438.17 kW. Fig. 5 indicates the result of itemized cost estimation of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Download : Download high-res image (230KB)
+Download : Download full-size image
+Fig. 5. Levelized cost of electricity of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+The results of economic assessment were as follows in Fig. 5. Items marked with diagonal patterns are capital cost and items marked with dot patterns are operating cost. Each costs represented the capital expenditure, operating expenditure, and total expenditure (0.07, 2.74, and 2.81 $ kWh-1). Especially, the total production cost of propylene was 10,716,653 $ y-1, it could be compared to conventional propane dehydrogenation process (510,000,000 $ y-1 [8]) even though the whole process is different. The 2.81 $ kWh-1 of LCOE was higher than industrial electricity in general; the industrial electricity price is widely distributed around the globe, but the range of LCOE from IEA is formed from 0.028 $ kWh-1 (Sweden; nuclear source) to 0.896 $ kWh-1 (Italy; wind source) [33]. The reactant cost account for the largest portion 86.83 % of LCOE. Aside from this, the portion of electricity, PSA capital expenditure, sweep gas, and solid oxide fuel cell were 8.56 %, 1.80 %, 1.34 %, and 0.09 %, respectively. As a result, the process is more suitable to recycle energy of the process rather than direct sales. However, LCOE could be reduced with the proposed various scenarios in the further sections. Fig. 6 shows various economic scenarios of LCOE.
+Download : Download high-res image (703KB)
+Download : Download full-size image
+Fig. 6. Economic scenarios of levelized cost of electricity: (a) sensitivity analysis in terms of reactant, sweep gas, electricity, and PSA capital expenditure, (b) levelized cost of electricity according to recycling rate of propane, and (c) levelized cost of electricity under pessimistic, realistic, and optimistic conditions.
+Fig. 6a represents the results of the sensitivity analysis of propane dehydrogenation in membrane reactor with solid oxide fuel cell. Sensitivity analysis provides some guidelines through variations of influential factors of the process. Each result of LCOE was determined by changing − 30 % to 30 % of the itemized cost. The variation of LCOE could be determined through changes in the reactant, sweep gas, electricity, and PSA capital expenditure, which accounts for large proportion of the results obtained from itemized cost estimation. The LCOE results show a variation from 2.08 to 3.54 $ kWh-1, 2.80–2.82 $ kWh-1, 2.74–2.88 $ kWh-1, and 2.79–2.83 $ kWh-1 in the case of reactant, sweep gas, electricity, and PSA capital expenditure, respectively. When reactant cost was reduced by − 30 %, the LCOE result significantly decreased because reactant cost accounts for the largest portion of the LCOE. Fig. 6b shows the LCOE according to propane recycling rate. The proposed scenario was LCOE with recycling rate of propane in the range of 5–100 %. Maximum LCOE was 2.74 $ kWh-1 at 5 % of propane recycling rate and minimum LCOE was 1.50 $ kWh-1 at 100 % of propane recycling rate. Absolutely, the LCOE tends to decrease with increasing in propane recycling rate; the LCOE was decreased as the recycling rate increase because the reactant cost was expensive. In addition, the cost of electricity, sweep gas, and PSA capital expenditure had a significant impact on LCOE according to the results of itemized cost estimation previously confirmed. The LCOE values were calculated by considering pessimistic, realistic, and optimistic situations to find the best strategy for cost saving. Fig. 6c indicates the LCOE under pessimistic, realistic, and optimistic conditions. Each condition was classified by variation of influential factors (reactant, sweep gas, electricity, and PSA capital expenditure) for LCOE and propane recycling rate (0 %, 50 %, and 100 %). + 20 % of reactant, sweep gas, electricity, and PSA capital expenditure cost under 0 %, 50 %, and 100 % of propane recycling rate were pessimistic, the original value of each item under 0 %, 50 %, and 100 % of propane recycling rate were realistic, and − 20 % of reactant, sweep gas, electricity, and PSA capital expenditure cost under 0 %, 50 %, and 100 % of propane recycling rate were optimistic conditions. Respective LCOE values were 3.36, 2.58, and 1.79 $ kWh-1 for pessimistic scenario, 2.81, 2.15, and 1.50 $ kWh-1 for realistic scenario, and 2.25, 1.73, and 1.20 $ kWh-1 for optimistic scenario. The LCOE from IEA covered various countries (Australia, Austria, Belgium, Brazil, Canada, China, Denmark, Finland, France, Germany, Hungary, India, Italy, Japan, Korea, Mexico, Netherland, Norway, Romania, Russian Federation, Slovakia, Sweden, Switzerland, and United States of America) and energy sources (bio, combined heat & power (CHP), coal, fuel cell, gas, geothermal, hydro, lignite, nuclear, solar, and wind). The optimistic case could be priced close to the maximum LCOE (Italy; wind source) through a 100 % of propane recycling rate and − 20 % of reduction in the price of the influential factors.
+3.3. Life cycle assessment
+The functional unit, which is the unique feature of LCA different from other approaches, is 1 MJ of electricity generation. Also, the system boundary is cradle to gate, which means that the boundary condition of product life from the manufacturer to the industry gate. In this work, LCA focused on the global warming potential for analyzing carbon emissions, which is a major issue for environmental pollution. The environmental impact assessment was investigated based on simulation data from Aspen Plus® and the life cycle inventory referred to by Staffell et al. [34]. Table 1 indicates the life cycle inventory of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Table 1. Life cycle inventory of propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Life cycle inventory 1: Propane dehydrogenation
+Output Propane dehydrogenation 6,756,746 kg
+Input Propane {GLO}| market for | Cut-off, S 15,339 Ton
+Empty Cell
+Water, deionised {RoW}| water production, deionised | Cut-off, S 15,667 Ton
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S 15,375,689 kWh
+
+Life cycle inventory 2: Solid oxide fuel cell single cell
+Output Solid oxide fuel cell single cell 40 g
+Input 3 % of Yttria-Stabilized Zirconia 7.84 g
+Empty Cell
+Nickel-rich materials {GLO}| market for nickel-rich materials | Cut-off, S 0.58 g
+Empty Cell
+Lanthanum Strontium Manganite 1.3 g
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S (for sintering) 5.76 kWh
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S (other uses) 0.084 kWh
+
+Life cycle inventory 3: Solid oxide fuel cell interconnect
+Output Solid oxide fuel cell interconnect 44 g
+Input Steel, stainless 304, quarto plate/kg/RNA (for sheet) 1.35 g
+Empty Cell
+Steel, stainless 304, quarto plate/kg/RNA (for pipe) 1.9 g
+Empty Cell
+Nickel-rich materials {GLO}| market for nickel-rich materials | Cut-off, S (for interlayer) 3.2 g
+Empty Cell
+LSM 2.1 g
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S 0.27 kWh
+
+Life cycle inventory 4: Solid oxide fuel cell gas delivery
+Output Solid oxide fuel cell gas delivery 1 g
+Input Steel, stainless 304, quarto plate/kg/RNA (for pipe) 0.54 kg
+Empty Cell
+Steel, stainless 304, quarto plate/kg/RNA 0.2 kg
+Empty Cell
+Synthetic rubber {GLO}| market for | Cut-off, S 0.1 kg
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S 0.38 kWh
+
+Life cycle inventory 5: Solid oxide fuel cell case
+Output Solid oxide fuel cell case 1 g
+Input Steel, stainless 304, quarto plate/kg/RNA (for sheet) 1.68 kg
+Empty Cell
+Steel, stainless 304, quarto plate/kg/RNA (for wire) 0.64 kg
+Empty Cell
+Steel, stainless 304, quarto plate/kg/RNA (for pipe) 1.27 kg
+Empty Cell
+Copper-rich materials {GLO}| market for copper-rich materials | Cut-off, S 0.12 g
+Empty Cell
+Electricity, high voltage {KR}| production mix | Cut-off, S 1.29 kWh
+Environmental impact assessment can be performed through the collected life cycle inventory. Fig. 7 shows the result of the environmental impact assessment of global warming for propane dehydrogenation in membrane reactor with solid oxide fuel cell.
+Download : Download high-res image (359KB)
+Download : Download full-size image
+Fig. 7. Result of environmental impact assessment for global warming potential.
+The environmental impact assessment of global warming potential result was performed as 4.93 kg CO2 eq MJ-1 of CO2 emissions. The result had recorded 1.76 kg CO2 eq MJ-1 (35.70 %) from propane dehydrogenation and 3.18 kg CO2 eq MJ-1 (64.50 %) from solid oxide fuel cell stack. Especially, propane is used as a reactant in the propane dehydrogenation process, electricity for a single cell of solid oxide fuel cell, and tube insulation have a large CO2 emission in the process. Therefore, those are influential factors for environmental impact assessment of propane dehydrogenation in membrane reactor with solid oxide fuel cell. To evaluate the environmental impact of the propane dehydrogenation in membrane reactor with solid oxide fuel cell, the amount of three influential factors were adjusted by
+20 %. Fig. 8 represents the global warming potential under various conditions.
+Download : Download high-res image (183KB)
+Download : Download full-size image
+Fig. 8. Global warming potential under pessimistic, realistic, and optimistic conditions.
+Under pessimistic, realistic, and optimistic conditions, the results of global warming potential were 5.61, 4.93, and 4.25 kg CO2 eq MJ-1, respectively. Pessimistic and optimistic cases reflected the amount of leading factors by
+20 %. If the amount of reactant was decreased, both economic and environmental performance were shown as satisfactory results. However, increasing the yield of the propane dehydrogenation can be a solution essentially. Likewise, reducing energy consumption can be obtained good performance for both economic and environmental aspects. For electricity, if the electricity is changed to electricity generation from renewable energy sources, lower CO2 emission results can be obtained.
+4. Conclusions
+Conventional pathway of electricity production is economically suitable and can be supplied smoothly. However, it has occurred environmental issue because the process emits a lot of CO2. Fuel cell is a method of electricity generation by driving through chemical reaction without environmental pollution. It would be a more economical and environmental route if electricity is produced using H2 as a byproduct produced from propane dehydrogenation in these fuel cell. In addition, a membrane reactor was used to enhance the performance of propane dehydrogenation. From technical aspect, membrane reactor had a higher conversion than the conventional packed-bed reactor. Also, when simulated in operating conditions of 400–600 °C and 1–6 bar, the process simulation was carried out at 550 °C and 3 bar, which are the most suitable conditions for fitting with the literature and having a high yield. Economic analysis was conducted to calculate the LCOE based on the simulation data from Aspen Plus®. Respective LCOE was 2.81 $ kWh-1 for the propane dehydrogenation in membrane reactor with solid oxide fuel cell process. However, the LCOE from itemized cost estimation was significantly higher compared to the industrial electricity price currently on sale. Therefore, the variation of prices through various scenarios was investigated. Firstly, reactant, sweep gas, electricity, and PSA capital expenditure had a significant impact on LCOE; therefore, sensitivity analysis was conducted with several influential factors. LCOE results show a variation from 2.08 to 3.54 $ kWh-1, 2.80–2.82 $ kWh-1, 2.74–2.88 $ kWh-1, and 2.79–2.83 $ kWh-1 in the case of reactant, sweep gas, electricity, and PSA capital expenditure, respectively. Moreover, economic scenarios were considered with propane recycling rate; it could be obtained the LCOE from 1.50 to 2.74 $ kWh-1 according to propane recycling rate. Also, the scenario analysis was investigated under pessimistic, realistic, and optimistic conditions with variations of influential factors and propane recycling rate. Respective levelized cost of electricity values were 3.36, 2.58, and 1.79 $ kWh-1 for pessimistic case, 2.81, 2.15, 1.50 $ kWh-1 for realistic case, and 2.25, 1.73, and 1.20 $ kWh-1 for optimistic case. Especially, LCOE could be priced at 1.20 $ kWh-1 under an optimistic case, the price is close to the industrial electricity price. The environmental impact of global warming potential was 4.93 kg CO2 eq MJ-1 of CO2 emissions. This suggests that achieving the current electricity production cost is possible when economic scenarios are enhanced through technological advancements. As the results of the economic assessment, propane as a feed and electricity were the influential factor for the economic aspect; also, tube insulation had a large CO2 emission too. The results of global warming potential were 5.61, 4.93, and 4.25 kg CO2 eq MJ-1 under pessimistic, realistic, and optimistic, respectively. Overall, the yield of the propane dehydrogenation process should be increased; it has better economic and environmental performance if the yield increases. Because the amount of reactant can be decreased. For environmental reasons, electricity production from renewable energy should also be considered.
+CRediT authorship contribution statement
+Heehyang Kim: Writing – original draft, Conceptualization, Methodology, Investigation. Jiwon Gu: Data curation, Writing – original draft. Manhee Byun: Methodology, Formal analysis. Changgwon Choe: Methodology, Data curation. Hankwon Lim: Conceptualization, Writing – review & editing, Supervision, Project administration.
+Declaration of Competing Interest
+We, authors, certify that they have NO affiliations with or involvement in any organization or entity with any financial interest (such as honoraria; educational grants; participation in speakers’ bureaus; membership, employment, consultancies, stock ownership, or other equity interest; and expert testimony or patent-licensing arrangements), or non-financial interest (such as personal or professional relationships, affiliations, knowledge or beliefs) in the subject matter or materials discussed in this manuscript.
+Acknowledgement
+This work was supported by the Carbon Neutrality Demonstration and Research Center (1.230053.01) of UNIST (Ulsan National Institute of Science and Technology); and also supported by the Agency for Defense Development by the Korean Government (UD2200061D).
+Appendix A. Supplementary material
+Download : Download Word document (23KB)
+Supplementary material.
+.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

@@ -1,0 +1,442 @@
+<DOCUMENT>
+The second law optimal state of a diabatic binary tray distillation column
+Abstract
+A new numerical procedure to minimize the entropy production in diabatic tray distillation columns has been developed. The method was based on a least square regression of the entropy production at each tray. A diabatic column is a column with heat exchangers on all trays. The method was demonstrated on a distillation column separating propylene from propane. The entropy production included contributions from the heat transfer in the heat exchangers and the mass and heat transfer between liquid and vapor inside the distillation column. It was minimized for a number of binary tray distillation columns with fixed heat transfer area, number of trays, and feed stream temperature and composition. For the first time, the areas of heat exchange were used as variables in the optimization. An analytical result is that the entropy production due to heat transfer is proportional to the area of each heat exchanger in the optimal state. For many distillation columns, this is equivalent to a constant driving force for heat transfer. The entropy production was reduced with up to 30% in the cases with large heat transfer area and many trays. In large process facilities, this reduction would ideally lead to 1–2 GWh of saved exergy per year. The most important variable in obtaining these reductions is the total heat transfer area. The investigation was done with a perspective to later include the column as a part in an optimization of a larger process. We found that the entropy production of the column behaved almost as a quadratic function when the composition of the feed stream changed. This means that the feed composition is a natural, easy variable for a second law optimization when the distillation column is a part of a process. The entropy production was insensitive to variations in the feed temperature.
+1. Introduction
+Distillation is a widely used separation method that requires large inputs of energy (King, 1980). Research is therefore being done to find methods that can replace distillation, e.g. membranes (Baker, 2002). A lot of effort has also been put into the search for improved designs and operation of the conventional distillation columns. One such design is the heat-integrated distillation column (HIDIC) (Nakaiwa et al., 2001), while another is the diabatic distillation column, where heat is added or withdrawn by heat exchangers on each tray (Rivero, 1993, Rivero, 2001). We will focus on the efficiency of the latter concept. It has been known for long that this kind of distillation columns have better second law efficiencies (Fonyo, 1974a, Fonyo, 1974b). Previous work have shown that potentially large savings could be obtained in the use of high quality energy (Sauar et al., 1997, Kauchali et al., 2000, De Koeijer et al., 2004).
+The aim of this work is to contribute to a better energy economy of distillation by increasing the energy efficiency. Maximum efficiency is found by minimizing the entropy production in diabatic columns. We continue the work by De Koeijer et al. (2004), who minimized the entropy production in diabatic distillation columns. We shall add to earlier work and show how we can determine, by theory and calculation, the optimal area of heat exchange at each tray. A new numerical solution procedure shall also be reported. We will not yet include aspects related to the practical implementation (like controllability and cost) in this study. The ultimate goal is to include such aspects in the optimization, but there are still unanswered questions as of how the operating conditions affect the efficiency: how does the composition and temperature of the feed affect the entropy production of diabatic columns operating at minimum entropy production? What effect does the total heat transfer area and number of trays have? When the kind of optimization we study here, is included in a larger process optimization, the effect of these operating conditions must be known.
+More specifically, we shall theoretically study the separation of different mixtures of propane and propene at 15 bar. The mixtures are separated into two product streams with mole fractions of propene equal to 0.95 and 0.05 for the top and bottom stream, respectively. Since the product purities are fixed, the thermodynamical state of the material outputs from the columns are also fixed. For a given separation task, the adiabatic and diabatic column have thus the same net energy requirement. The diabatic column is more efficient in terms of the second law. In the present context second law optimization means to find the amounts of heat transferred locally. Given a certain allowed total heat transfer area, we shall find the distribution of this area, and of the transferred heat, that produces the least entropy. We assume that any kind of cooling or heating medium is available at any temperature. The separation task, number of trays, and total heat transfer area are fixed in the optimization. This problem has not been solved before.
+The separation of propene (or propylene) and propane is present in many different chemical plants, especially those producing higher olefins. Olefins are the basic compounds in the making of a large variety of polymers. An additional complication with this separation is that the boiling points are close, which means that the separation must be carried out in columns with many trays and large heat transfer in both the stripping and rectifying sections. Studies so far have mostly been concerned with shorter columns and less heat transfer.
+2. Diabatic distillation
+We have chosen to study the separation of propylene (
+) and propane (
+). This is done in a sieve-plate distillation column (McCabe et al., 1993) with N plates (or trays). A sieve plate is designed to bring a rising stream of vapor into intimate contact with a descending stream of liquid. In lack of rate expressions describing the transfer of heat and mass between vapor and liquid, we assume that the liquid and vapor leaving each tray are in equilibrium (see however Wesselingh, 1997, Kjelstrup and De Koeijer, 2003). We further assume that the sieve-plate column has no pressure drop. The input of new material is done through a feed stream F, entering at a certain tray number
+. Distillate D, is removed above the top tray, and bottom flow B, is removed below the bottom tray. Both product streams are liquids at their boiling points. Fig. 1 shows the layout of a distillation column. Traditionally, distillation is done adiabatically, which means that heat is added or withdrawn only in a condenser and a reboiler. No mass transfer is assumed to occur here. In our model, this corresponds to tray number 0 and
+, respectively. To increase the second law efficiency, heat exchangers may be introduced on each tray in the distillation column, making the column diabatic. This allows heat,
+, to be transferred at tray number n. The heat transferred will change the liquid and vapor streams
+(1)
+where V and L is the vapor and liquid streams, respectively, and h is the enthalpy of the streams. At the feed tray (
+) and the tray above (
+), the above equation has an additional term on the right-hand side that includes the heat carried with the vapor and/or liquid part of the feed stream
+(2)
+where q is the fraction of liquid in the feed stream. The symbol
+shall for the reminder of this article be referred to as the “duty”.
+Download : Download full-size image
+Fig. 1. A diabatic distillation column.
+In the modeling of adiabatic distillation columns, the energy balance, Eq. (1), is used with
+for
+. The material balances, on the other hand, are identical for adiabatic and diabatic columns. Rather than considering one tray, these balances are constructed by considering the transport of mass in and out of a control surface covering the top of the column. A total mass balance gives
+(3)
+A similar balance exists for the mass of the light component.
+3. The entropy production
+The objective function for the minimization is the entropy production of the column plus heat exchangers. In the column, there is entropy production due to heat and mass transfer between the fluid streams (De Koeijer et al., 2004, Ray and Sengupta, 1996). In the heat exchanger, there is entropy production due to heat transfer only.
+The details of the heat and mass transfer in the column are not well known, so we describe the entropy production on a tray in the column by the entropy flows out minus in on each tray
+(4)
+The first four terms to the right represent the entropy carried in and out with the mass flow, while the last term is the entropy change due to flow of heat through the heat exchanger.
+The heat transfer in the heat exchangers can be modeled in more detail by the product of an average heat flux from the heat exchangers to each tray, and its driving force (De Koeijer and Rivero, 2003).
+(5)
+The average heat flux is
+, and the average driving force is
+. The following simple model was used before (De Koeijer et al., 2004)
+(6)
+Here
+and
+are the thickness and thermal conductivity of the liquid film covering the heat exchangers, respectively, and
+is the area of heat exchange at tray n.
+The objective function is now the sum of Eqs. (4) and (5) over n
+(7)
+Eq. (7) does not require knowledge of the heating/cooling medium in the heat exchangers.
+3.1. An analytical formulation of the minimization problem
+The optimization task is to minimize the objective function, Eq. (7), while keeping the total heat transfer area constant. However, it has proved to be difficult to perform this minimization with ordinary constrained optimization tools. An analytical formulation of the problem, provides an alternative route to obtaining the minimum.
+A complete problem formulation is given in the appendix, while a short version of the most important part of the derivation is given here. The parts of the objective function and constraints that contain
+, constitutes a Lagrangian function
+(8)
+where
+is the Lagrangian function and
+is a Lagrange multiplier. Other constraints are required for a complete description, but they do not include
+. Differentiation of Eq. (8) with respect to
+, produces a set of relations that must be fulfilled in the optimal state. Since the objective function has a term containing
+, which is a function of
+by Eq. (6), we get the following expression:
+(9)
+This relation states that the entropy production in all the exchangers must be proportional by the same factor to their heat transfer area. Eq. (9) is valid as long as the model of the heat exchangers, Eq. (6), are of the general form
+(10)
+Even though we do not know the value of
+, Eq. (9) allows us to use less variables in the numerical optimization of Eq. (7). This greatly enhances the speed and stability of the numerical algorithms. At the same time, it explains some observations done by De Koeijer et al. (2004). They found that the lowest entropy production in a binary separation of benzene and toluene, was obtained by setting
+equal on all trays. If we eliminate
+and
+from Eq. (9), we obtain
+(11)
+When the variations in
+and
+are small from top to bottom of the column,
+is close to constant. With the numbers from De Koeijer et al. (2004), the relative variation of
+, calculated from the above equation, was in the order of 1%.
+4. Calculations
+4.1. Numerical solution procedure
+The minimization problem is a nonlinear constrained optimization problem. The most straight-forward way to do the optimization, is to minimize the objective function as it is given in Eq. (7), by varying the independent variables. Unfortunately, this method converges only for a small set of initial conditions, and then very slowly. Another way, is to solve the analytically derived equations in the appendix, which we tried without success.
+Due to the nature of the function, it was possible to adopt a different approach. The objective function is, through our formulation, the sum of many contributions. Each contribution may or may not be affected by the different variables. However, the sum of them will always depend on all of the variables. The sum of the terms in Eq. (7), is hiding the structure of the objective function. Rather than minimizing the sum, we shall perform a least square regression including each of the terms in the sum. More specifically, there are
+terms due to the internal entropy production and
+terms due to the entropy production of heat transfer. A general formulation of the sum in Eq. (7) is
+(12)
+where
+is the objective function, and
+is the square root of each contribution to the total entropy production. The square root is always a real number since the local entropy production is positive by nature. Experience has shown that least square regression converges much faster and are more stable than other optimization methods.
+In our description of diabatic distillation, we have N independent degrees of freedom. This number is found by subtracting the number of relations from the number of variables. To arrive at this number we also made use of relation (9). The independent variables were the temperatures,
+(from tray 2 until tray
+). The temperatures
+,
+,
+and
+are given, once the product amount and purity are specified. Through the equilibrium relation and the energy, mass and component balances, the duties of all trays, except in the condenser and reboiler, are determined. The optimal values of
+and
+are determined from the optimal vapor flows,
+and
+(see the appendix).
+By combining Eq. (6) with Eq. (9), we obtain
+as function of
+and
+, independent of
+(13)
+Through this equation, we ensured that
+, by adjusting
+in each iteration.
+To solve this regression problem, we used a nonlinear least squares function called lsqnonlin from the Optimization Toolbox in Matlab R13, MathWorks Inc. This algorithm uses a Gauss–Newton method (Dennis, 1977) with line search.
+Before the actual optimization studies were started, we calculated adiabatic distillation columns as reference columns. The heat exchange area was equally divided between the condenser and reboiler only. For a given feed tray position, we found the set of independent variables (i.e., the tray temperatures and duty of condenser and reboiler) that satisfied the energy balances, Eq. (1). This was done with a non-linear equation solver in Matlab called fsolve. Through repeated calculations, we found the position of the feed tray that gave the lowest entropy production (or equivalently, the lowest reflux ratio
+). The result was used as a fair basis for measuring reductions in the entropy productions.
+The optimizations of the diabatic columns were then carried out. As initial guesses for the temperatures on each tray, we used the values from the adiabatic distillation columns. The optimal location of feed trays was found by repeated minimizations with different guesses for
+.
+4.2. Case studies
+The numerical procedure described above was used to find the state of minimum entropy production for a set of diabatic distillation columns. Each column had fixed total heat transfer area
+, total number of trays N, feed temperature
+, and overall feed composition
+. The two first variables are related to the geometry of the column, while the two last are related to the operating conditions. Each of the two sets of variables was kept constant, while the other was varied systematically:
+Case I. Changing operating variables: The geometric variables of the column (total heat transfer area and number of trays) were fixed at
+and
+. The properties of the feed stream were changed systematically in 156 optimizations, with
+and
+. This covered feed conditions ranged from super-cooled liquid to super-heated vapor of different composition.
+Case II. Changing geometric variables: The properties of the feed stream were kept at
+and
+(liquid at the bubble point,
+). Seventy optimizations were performed with changing geometry,
+and
+.
+The feed stream to the column was always 1.0 mol/s, while the operating pressure was 15 bar. At this pressure, the boiling points of the pure components were 308.03 and 317.05 K for propylene and propane, respectively. In all optimizations, the product streams, D and B, had compositions 0.95 and 0.05, respectively. We used data from Daubert and Danner (1992), to calculate the thermal conductivity of the liquid films covering the heat exchangers,
+. The thicknesses of these films were assumed to be
+, and constant (Taylor and Krishna, 1993).
+The enthalpy, entropy and equilibrium relations as functions of temperature and composition, were found from the equation of state, see e.g. Prausnitz et al. (1999). We used a cubic equation of state for mixtures of propylene and propane as reported by Ishikawa et al. (1980).
+5. Results
+We present first some optimal properties of an adiabatic and a diabatic column with a particular geometry and operation. We then proceed with results that show the response of the entropy production to changes in the feed properties (Case I). Finally, we present results for the entropy production for changing heat transfer area and number of trays (Case II).
+5.1. Optimal properties, fixed geometry and operating conditions
+The properties of the adiabatic and diabatic column with geometric and operating variables
+,
+,
+and
+are shown in Fig. 2, Fig. 3, Fig. 4. Fig. 2 shows the vapor flows through both columns, while Fig. 3 shows the corresponding distributions of heat transfer areas. In Fig. 4, the duties at the trays are shown. The profiles are represented by continuous lines rather than discrete points to enhance the clarity. In the case of the adiabatic column the reflux ratio was 17.0, while it was reduced to 0 in the diabatic column.
+Download : Download full-size image
+Fig. 2. The vapor flow (mol/s) in two columns with
+,
+,
+and
+.
+Download : Download full-size image
+Fig. 3. The distribution of heat exchanger area (
+) in two columns with
+,
+,
+and
+.
+Download : Download full-size image
+Fig. 4. The duties (kW) along the diabatic column and the adiabatic column with
+,
+,
+and
+.
+The total entropy production as well as the magnitude of its two contributions are given in Table 1, for the two columns. The entropy produced by the internal mass and heat transfer increased somewhat by making the column diabatic. However, the entropy produced by heat transfer, decreased more, giving a net decrease of 0.45 W/K.
+Table 1. Entropy productions (W/K) in an adiabatic and diabatic column
+Empty Cell
+Adiabatic 3.83 4.34 8.17
+Diabatic 4.01 3.71 7.72
+Change 4.59 % −14.56 % −5.58 %
+In the adiabatic column the feed tray was at tray 54, while the optimal position in the diabatic column, was at tray 52.
+5.2. Case I: Changing operating variables
+At fixed geometry
+and
+, the feed properties were varied. The total entropy production for the different optimizations are plotted in Fig. 5. A parabolic behavior was observed, with changing feed composition. As the mole fraction of propene in the feed approached high and low values, the entropy production approached low values. A change in the feed temperature had little effect on the entropy production.
+Download : Download full-size image
+Fig. 5. Optimal total entropy production with changing operating variables.
+5.3. Case II: Changing geometric variables
+When we kept the feed properties fixed while changing total heat transfer area and column length, we found optimal diabatic columns with total entropy production as shown in Fig. 6. Clearly, the entropy production was highest for short columns with small heat exchanger area. By increasing either the number of trays, or available heat exchanger area, the total entropy production was reduced. This is expected, since both these variables made the mass and heat transfer more reversible when they increased. The two contributions to the total entropy production were plotted separately as function of the total heat transfer area and number of trays in Figs. 7 and 8. The entropy production due to the heat transfer showed the same behavior as the total entropy production. It did, however, approach zero at large heat transfer areas and number of trays. The internal entropy production dropped as the number of trays was increased. Fig. 8 shows that changes in the heat transfer area had little effect on this term.
+Download : Download full-size image
+Fig. 6. Total entropy production vs. total heat transfer area and number of trays in the optimizations with changing geometric variables.
+Download : Download full-size image
+Fig. 7. Entropy production due to heat transfer in the optimizations with changing geometric variables.
+Download : Download full-size image
+Fig. 8. Entropy production due to mass transfer in the optimizations with changing geometric variables.
+Compared to adiabatic columns with the same geometric and operating variables, the diabatic columns had lower total entropy production. Fig. 9 show the obtained reduction. At low tray numbers and heat exchanger area, the possible saving was very small. Larger number of trays and higher heat exchanger area, gave much larger savings in the entropy production. This also corresponded to the greatest relative reductions, of approximately 30%.
+Download : Download full-size image
+Fig. 9. Absolute savings in entropy production in the optimizations with changing geometric variables.
+6. Discussion
+6.1. The model
+The first law of thermodynamics does not rank the performance of distillation columns with respect to their ability to use energy for the purpose of separation. This information is only obtained from a second law analysis, which computes the entropy production. In our distillation model, the net energy input/output is completely specified by the difference between the enthalpy flow of products and feed. A first law optimization of the net energy requirement of the column has therefore little meaning. The second law optimization, however, has predicted columns that all produce heat at higher temperatures and consume heat at lower temperatures than conventional columns. There are some flaws in the model we have used, however. We shall first discuss these, to give a perspective on the validity of the results.
+We have done two crucial assumptions in order to model the column: equilibrium between the vapor and liquid leaving each tray and constant pressure through the column. It is justifiable to ask how well our model of the distillation column predicts reality.
+Results for the entropy production in a diabatic column have to some extent been compared and verified with experiments, and it is known that the assumption of equilibrium between the fluids at the outlet on each tray is not good (De Koeijer and Rivero, 2003, Wesselingh, 1997). By allowing the mixture of vapor and liquid on each tray to reach equilibrium, we end up with a column that is more efficient than it should be. It is not known in what direction a nonequilibrium model will change the potential reduction in the entropy production. Nonequilibrium models are available (De Koeijer and Kjelstrup, 2002, Taylor and Krishna, 1993, Krishna and Wesselingh, 1997), but have not been used in optimization studies. Clearly, there is a potential for further improvements, by using nonequilibrium models in the optimization.
+The pressure changes in a column with frictional flows. Relatively large pressure drops at small absolute pressures, may give a significant contribution to the entropy production. In the present case with a pressure of 15 bar, this direct effect is probably small. We expect further that the entropy production due to heat transfer is not affected by a pressure change. The entropy produced by the internal heat and mass transfer may be influenced to a larger degree since the internal flow rates changes a lot as a consequence of the changing heat transfer along the column.
+6.2. Properties of an optimal column
+The results from the optimization of a particular set of operating and geometric variables give characteristics of a representative optimal diabatic column. The variables
+,
+and
+are typical for industrial purposes.
+In an adiabatic distillation column, there are only small variations in the vapor flow along the column, since the enthalpies of the vapor and liquid streams are relatively constant. This is not so in the diabatic column: from the energy balance, (1), we see that a nonzero
+allows for large variations in vapor (and liquid) flows. The reflux ratio is furthermore zero in the diabatic column; most of the condensation that was done in the condenser of the adiabatic column, has been shifted down in the column. The optimal vapor flow profile, Fig. 2, was similar to the one reported by De Koeijer et al. (2004). As they point out, this profile may have implications for design of diabatic columns.
+The optimal distribution of the heat transfer area Fig. 3, is a new interesting finding. In the top and bottom of the column, the areas of heat exchange on many trays become relatively large. From tray 10–65, the area is approximately zero, which in practice means that these heat exchangers can be removed. Compared with the adiabatic column, it is the redistribution of the area of the condenser and reboiler that gives a lower entropy production. It is surprising that only about one-third of the heat exchangers are active. One explanation for this is that the total heat transfer area (
+) is small. We observed a slight increase in the fraction of active heat exchangers with a larger area.
+The optimal duty profile, Fig. 4, was similar (except the sign in the rectifying section) to that of the heat transfer area profile, Fig. 3. This is explained by Eq. (11). Since
+varies little through the column, the relation
+makes
+proportional to
+.
+To summarize, we have found that all optimal columns had non-constant material flows, contrary to the adiabatic column, a fact that may have a bearing on the design of such columns. An interesting and useful outcome of the optimization was a large fraction of inactive heat exchangers. A redistribution of the entropy production took place over the trays, with a reduction in entropy production due to a change in the heat transfer in the reboiler and condenser (see Table 1).
+6.3. Effects of changing operating conditions
+One of the aims of the present investigation was to find how sensitive the results for the optimal column were to changes in operating conditions. Operating conditions can normally not be varied freely; they are given by upstream process units. It is thus important to understand how the surrounding process influences an optimal diabatic column. Consider the results in Fig. 5 from this perspective.
+The optimal entropy production varied in a parabolic-like manner as the feed composition was changed. This is expected. When the feed composition was equal to the distillate composition
+, or the bottom composition
+, no separation was needed and the entropy production was zero. The curve therefore approached zero for these conditions. The large variation between these two values followed
+, in agreement with Agrawal and Herron (1997).
+The temperature of the feed, however, had only a very small effect on the entropy production. This is surprising, considering that a phase transition can take place. Evidently, the heat transfer required to change the temperature and phase of the feed, produced little entropy. The small irregularity in the entropy production with changing temperature, was caused by a phase transition of the feed phase. Below
+, the entropy production was highest when the feed was in the vapor phase. Above
+, the entropy production was highest when the feed was in liquid phase. The feed composition governed the ratio between D and B, and through the energy balance, this affected which part of the column had the largest heat transfer.
+To summarize, we have observed from Fig. 5 the following interesting features: if the feed composition changed, the entropy production of the column behaved almost as a quadratic function. This means that
+is a natural variable to use in a process optimization. On the other hand, the entropy production was insensitive to variations in the feed temperature. This means that the feed temperature can be determined by the optimization of an upstream unit, i.e., a reactor, without need for heat exchange up-front to adjust the temperature.
+6.4. Effects of changing geometry
+Large variations in the entropy production by changing the geometry were expected. Interesting here was to see how a variation in
+could be traded by a variation in N or vice versa.
+The total entropy production in Fig. 6, can be understood through its two contributions. The entropy production due to heat transfer, Fig. 7, varied in a hyperbolic manner with respect to the variables,
+and N. Independent of N, the entropy production due to heat transfer approached zero when
+increased. Increasing N to infinity, in order to make the column operate reversibly, did not eliminate the entropy produced in the heat exchangers. As long as the total heat transfer area was finite, the heat that was transferred inevitably produced some entropy. The entropy produced in the heat transfer was equal to
+, which will only be zero if
+is zero or
+is infinitely large for all n. According to Schaller et al. (2002),
+approached zero in the limit of infinitely many trays. This cannot be correct, since
+was independent of the number of trays, and only dependent on the state of the feed and product streams.
+When N decreased toward the minimum number of trays, fewer trays were available for heat transfer. With fewer degrees of freedom, the minimum entropy production increased.
+The entropy production due to the internal heat and mass transfer, Fig. 8, varied little with the total heat transfer area. This suggests that properties of optimal columns with different
+are the same, except that heat is transferred more reversibly for larger
+. With increasing N, the internal entropy production approached zero, as the separation was done reversibly.
+The results in Fig. 6 was the sum of the results in Figs. 7 and 8. The two contributions to the total entropy production dominated different regions of Fig. 6, depending on the total heat transfer area. We see that
+was a number that weighed the relative importance of the two contributions to the entropy production. High available area meant that
+was small, effectively reducing the objective function to
+. For small heat transfer areas, the opposite occurred when
+became exceedingly large compared to
+.
+Fig. 9 shows that the largest reductions in entropy production could be obtained if the total heat transfer area and number of trays were large. It was interesting that the relative reductions behaved in the same way, varying from 0.5% to 30% (not shown). As both N and
+increased, the reduction in entropy production strictly increased. This reduction was solely due to the decrease in entropy produced by heat transfer. Second law analysis and optimizations are always valid, but the gain in entropy production may not necessarily be large enough to be of practical interest. The absolute reductions in entropy production showed clearly that for combinations of low tray numbers and low heat transfer area, little was gained by making a diabatic column.
+The result of this study was therefore that a larger N made the internal heat and mass transfer more reversible and gave more degrees of freedom in the optimization. This resulted in a lower minimum for the entropy production. A larger
+allowed more heat exchangers to be used, thereby enabling large reductions. The largest reductions found for the entropy production was approximately 1.0 W/K. Initially, this might seem a small number, but our feed stream was also small. For larger throughput than 1 mol/s, this saving could be substantial. At BASF's propane dehydrogenation plant in Tarragona, Spain, a typical production of propylene is 350,000 ton/year (Limited, 2002) (or an equimolar feed of 500 mol/s). If we assume that all propylene could be separated from propane in an optimal diabatic distillation column, the saved exergy during the course of one year would ideally amount to approximately 1.3 GWh.
+6.5. Practical considerations
+We have seen above that a relative reduction up to 30% was obtainable in the entropy production for the given system. This was surprising considering that
+and
+differed by only 9 K. Intuitively, one may expect a small potential for second law improvements in distillations of components with close boiling points. But, the close boiling points are not the only consideration to take into account. Our system is also characterized by the relatively large amounts of heat to be transferred, and this property makes the particular distribution of heat along the column a target for improvements.
+A number of hot and cold utility streams are required to realize the optimal distribution of heat exchangers. The optimal solution gives the local targets for design of
+,
+and
+. It is a rather practical finding that more than half of the heat exchangers were not needed in the optimal solution, cfr. Fig. 3. The right
+,
+and
+are realized by finding the right flow rate and temperature of each utility stream. If we are allowed to tailor the heat capacity of the utility fluids, the number of different ways to operate the heat exchangers grows.
+To assist in the design of diabatic columns, a contour plot of the surface in Fig. 10 may be helpful, see Fig. 6. From the contour plot, it is easy to identify the preferred direction for further changes, given that the variables
+and N are available. For instance, when N is already high, it is meaningless to increase N further, unless
+is also very high. If the heat transfer area is
+, the only reasonable thing to do is to increase N. By following a path that is always orthogonal to the level curves, a design engineer can identify the path with the best improvement of the second law efficiency. Furthermore, since
+and N are central in a calculation of investment cost, the information contained in Fig. 10, can also assist in identifying the cost optimal diabatic distillation column.
+Download : Download full-size image
+Fig. 10. A contour plot of the total entropy production at different total heat transfer areas and number of trays.
+The numerical procedure that has been documented in this work, is an improvement of earlier procedures because it is more robust and simpler. This makes it also a suitable tool for more practical problem formulations than the ones we report here. The number of heat exchangers is normally limited in a plant, and this number and other boundaries for the heat exchangers must be included as constraints to make the optimization a practical one. A particular heat exchanger network, like for instance the one given by Rivero, 1993, Rivero, 2001 and Jimenez et al. (2003), where the heat exchangers in the rectifying and stripping section are connected in series, is a more practical form of column. Such columns may easily be studied with our numerical tool by adding a model for the heat exchanger medium and some new constraints. The introduction of additional constraints, will lead to solutions with higher entropy productions than what we have found here, but the economical barrier to practical implementations may be smaller.
+7. Conclusion
+We have developed further the method for minimizing the entropy production of a diabatic tray distillation column. A new numerical procedure has been used, based on a least square regression of the entropy production at each tray. The method was demonstrated on a distillation column separating propylene from propane. The numerical procedure gives a basis for further theoretical and practical studies.
+The entropy production included contributions from the heat transfer in the heat exchangers and the heat and mass transfer between liquid and vapor inside the distillation column. No pressure drops were accounted for and equilibrium was assumed between vapor and liquid leaving each tray. The entropy production was minimized for a number of binary tray distillation columns with fixed heat transfer area, number of trays, and feed stream temperature and composition.
+For the first time, the areas of heat exchange were used as variables in the optimization. An analytically derived result is that the entropy production due to heat transfer is proportional to the area of each heat exchanger in the optimal state. This is for many distillation columns equivalent with a constant driving force for heat transfer, and explained previous findings. Numerical results give the most important positions for heat exchange in the column. Surprisingly, less than half the positions are needed.
+Compared to the state of adiabatic columns, the optimal state was characterized by varying fluid flows and varying heat exchanger areas and corresponding duties along the column. The entropy production was reduced with up to 30% in the cases with large heat transfer area and many trays. In large process facilities, this reduction would ideally lead to 1–2 GWh of saved exergy per year. The most important variable in obtaining this reduction is the total heat transfer area.
+We observed that the entropy production of the column behaved almost as a quadratic function when the composition of the feed stream changed. This means that the feed composition easily can be used as variable when a distillation column is part of a process optimization. Surprisingly, the entropy production was almost independent of the feed temperature. This reduces the sensitivity of the entropy production toward changes in the column feed temperature in a process optimization.
+Notation
+area of heat exchange,
+bottom flow, mol/s
+entropy production, J/K s
+distillate flow, mol/s
+feed flow, mol/s
+enthalpy, J/mol
+liquid flow, mol/s
+Lagrangian function
+total number of trays
+feed tray number
+pressure, bar
+fraction of liquid in feed
+duty, W
+entropy, J/K mol
+temperature, K
+molar volume,
+/mol
+vapor flow, mol/s
+mole fraction of light component in liquid
+driving force for heat transfer,
+mole fraction of light component in vapor
+Greek letters
+Lagrange multiplier for total area constraint
+Lagrange multiplier for vapor flow constraint
+Lagrange multiplier for vapor flow constraint
+film thickness, m
+thermal conductivity of liquid film, K/ms
+Acknowledgements
+Statoil's VISTA program is thanked for the financial support to Audun Røsjorde.
+Appendix A. Detailed mathematical formulation
+A.1. Variables and constraints
+We use the tray temperatures as one set of free variables. From a given set of temperatures, the equilibrium relations give the compositions of the vapor and liquid streams. With known compositions, we can find the vapor and liquid streams from the mass balances (3), and the component balances. Using the energy balances, Eq. (1), the duty on each tray can be calculated. However, in the condenser and reboiler, we cannot calculate the vapor and liquid flows, and thus not the duties. In the condenser and reboiler, the component balances are reduced to the mass balances, since we have assumed total condensation/evaporation. This means that
+and
+are free variables, independent of any tray temperature,
+.
+The driving force for heat transfer can be eliminated by introducing the heat transfer area through Eq. (6). Since
+is not related to the tray temperatures or to the vapor flows in the condenser or reboiler, the heat transfer areas are also considered as independent variables.
+To avoid trivial or unphysical solutions, the minimization of Eq. (7), must be done subject to one equality constraint and two inequality constraints:
+(1)
+The total heat transfer area must add up to a certain fixed value:
+.
+(2)
+The vapor flow leaving tray 1 must be equal to or greater than the distillate flow:
+.
+(3)
+The liquid flow leaving tray
+must be equal to or greater than the bottom product flow:
+or equivalently,
+.
+A.2. The Lagrangian function
+Based on the three constraints we formulate a Lagrangian function,
+:
+(A.1)
+where
+,
+and
+are Lagrange multipliers. The necessary condition for a minimum is that the derivatives of
+with respect to the different variables are equal to zero
+(A.2)
+The duty of one heat exchanger depends on the temperature on the tray above and below, as well as the current one. The partial derivative of
+with respect to the temperature is then
+(A.3)
+In the last transformation we have re-introduced
+into the equations to simplify the final result. The differentiations of the duties,
+,
+and
+, in Eq. (A.3), are trivial and are not given.
+The partial derivative of
+with respect to the heat transfer area is
+(A.4)
+Since the constraints on the vapor flows in the condenser and reboiler are inequality constraints, we must find out whether the constraints are active or not, in the minimum state. An active constraint means that the inequality operator is replaced by an equality operator. If the objective function is a convex function in the dimension of the constrained variable, it is sufficient to evaluate the sign of the derivative at the point where the constraint becomes active. Depending on the sign, the optimal value of the constrained variable will be in the interior or at the border of the constraint.
+From the energy balance Eq. (1), we find that the duty is a linear function of the vapor flows. The entropy production is a quadratic function of the duties, and hence also of the vapor flows. It is therefore easy to see from the sign of the derivative at the border of the constraint, whether the unconstrained minimum will fall within the constraint or not.
+In a series of test trials, the derivatives of the entropy production with respect to
+and
+were estimated numerically. The sign of the derivative was positive in both cases, which means that the vapor flow must be decreased beyond the constraints to decrease the entropy production further. Both inequality constraints were in other words active:
+and
+. This result has a somewhat intuitive meaning: the heat transferred in the condenser and reboiler becomes as small as physically possible when the constraints on the vapor flows are active. This means that less heat is produced at low temperature and less heat is consumed at high temperature. The net effect is a decrease in the entropy production.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

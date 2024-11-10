@@ -1,0 +1,432 @@
+<DOCUMENT>
+Revealing the Janus Character of the Coke Precursor in the Propane Direct Dehydrogenation on Pt Catalysts from a kMC Simulation
+
+Abstract
+As the commercial catalyst in the propane direct dehydrogenation (PDH) reaction, one of the biggest challenges of Pt catalysts is coke formation, which severely reduces activity and stability. In this work, a first-principles DFT-based kinetic Monte Carlo simulation (kMC) is performed to understand the origin of coke formation, and an effective method is proposed to curb coke. The conventional DFT calculations give a complete description of the reaction pathway of dehydrogenation to propylene, deep dehydrogenation, and C–C bond cracking. The rate-limiting step is identified as the dissociative adsorption of propane. Moreover, a comparison between different exchange-correlation functionals indicates the importance of van der Waals corrections for the adsorption of propane and propylene. The lateral interactions between the surface adsorbates are significant, which implies that mean field microkinetic modeling might not adequately describe the reaction process. There are two distinct stages in PDH, which are quick deactivation and steady state, respectively, as revealed from the kMC simulation. The precursor of coke mainly formed during the quick deactivation. The calculations indicate that the geometries of the active sites for the dehydrogenation and deep reactions are different. Therefore, the availability of surface sites is a crucial factor in the formation of propylene and side products. The active sites from quick deactivation are mainly occupied by C2/C1 species, which are hard to remove. On the other hand, the surface sites that are left are mainly active toward dehydrogenation to propylene due to the geometry constraint. Therefore, a stable activity and selectivity is reached. Furthermore, the effect of hydrogen molecules in the input stream is also explored. The calculations indicate that the inclusion of hydrogen in PDH reactants not only enhances the forward reactions to the propylene formation but also reduces the consumption of the resulted propylene during the reaction. Therefore, hydrogen is very helpful to the selectivity increase in PDH in addition to other effects. Overall, the current study lays out a solid base for the future optimization of the Pt catalysts in PDH and we propose that the fine control of the surface sites on Pt has paramount importance in reducing coke formation.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+KEYWORDS:propane dehydrogenation kinetic Monte Carlo density functional theory platinum catalyst coke
+
+1. Introduction
+ARTICLE SECTIONSJump To
+Short alkane molecule (C1–C3) activation is always a formidable task for catalytic conversion. They are very stable and nonpolar molecules. The bond energy of C–H varies from 410.4 to 439.3 kJ/mol. (1,2) Even more challenging, products such as ethylene and propylene are less stable than the corresponding alkane molecules, which implies that products are prone to deep reaction and a decent selectivity is difficult to achieve. One of the important catalytic routes for alkane activation is catalytic dehydrogenation. Depending on whether an oxidant is used or not, this route can be categorized as direct or oxidative dehydrogenation. (3) The product from a dehydrogenation reaction such as propylene is a key raw material in chemical industry. It is used to synthesize various chemicals, such as polypropylene, acrylonitrile, and propylene oxide, and the demand for propylene is growing steadily. (4) Pt-based catalysts have been found to be very effective for direct dehydrogenation of paraffin as early as the 1940s, (3) and it was used in the Pacol process (UOP), which is the first industrial and commercial alkane dehydrogenation technology and had been developed for propane direct dehydrogenation (PDH) later. (4) The greatest current challenges for PDH are coke formation and sintering of the catalyst, which seriously undermine the stability and require the periodic regeneration of the catalyst. Many experimental and theoretical studies have been performed to understand the reaction pathway and mechanism of PDH on Pt catalysts, aiming to tackle these challenges. (5−18)
+In PDH, the reactions generally happen in four steps: reactant adsorption, surface reaction (first, second hydrogen abstraction), propylene desorption, and site regeneration. The precursors of coke could result from either propylene deep dehydrogenation or C–C bond breaking. To prevent coke formation and increase Pt catalyst stability, it is of pivotal importance to correctly describe and understand the process of the side reactions such as deep dehydrogenation and C–C bond breaking. First-principles DFT calculations have made significant progress along this direction. Valcárcel et al. reported the DFT study of thermodynamics of 18 elementary reactions of the propylene dehydrogenation to propylidyne on a Pt(111) surface. (19,20) From the calculations, it is indicated that propylidyne is the most stable species from the dehydrogenation of propylene. Furthermore, the conversion between propylene and propylidyne is thermodynamically favorable. This study clearly reveals that the propylene from PDH could easily undergo deep dehydrogenation. In another DFT study, Yang et al. reached a similar conclusion that propylidyne is the most stable species during the dehydrogenation of propylene. (11) In addition, propyne is predicted to be the starting point for C–C bond breaking. Hauser et al. used a subnanometer Pt4 cluster as a computational model and studied the PDH reaction pathway. (21) The calculations revealed that the propylene is very stable on Pt catalysts and product desorption needs to conquer the largest energy barrier among all elementary steps during the reaction. The strong binding of propylene on Pt catalysts could lead to side reactions such as deep dehydrogenation and decrease the selectivity. Similar phenomena have been reported in other computational studies as well. Nykänen et al. (12) revealed that the binding energy of propylene is around 0.5 eV on Pt(111) and 0.8 eV on Pt(211), respectively, which indicates the better reactivity of atoms at steps. Moreover, it has been found that the addition of Sn can significantly reduce the binding energy of propylene because of the shift of the d-band center. Furthermore, the work of Yang et al. (14) showed that the second Sn metal addition can increase the barrier of deep dehydrogenation of adsorbed species, which improves the selectivity, and 3:1 has been determined to be the best ratio for PtSn alloy for propane dehydrogenation. Recently, an understanding of light alkane activation at the molecular level has been summarized from a computational perspective (22) and further improvements in catalytic performance by adding a second metal have been revealed. (23,24)
+The aforementioned computational studies mostly used the mean field approximation, which is averaged over the spatial dimension. On the other hand, the lateral interactions between adsorbates, spatial inhomogeneous considerations, and dynamic structure evolution are very important for an understanding of the surface catalytic reaction. In particular, a heterogeneous catalytic reaction such as PDH involves a very complex reaction network and various intermediates, as shown in Figure 1, which is likely not be adequately described by the mean field methods. On the other hand, the kinetic Monte Carlo (kMC) method captures the stochastic nature of the complex events and reveals the dynamic properties. It has been extensively employed in heterogeneous catalysis studies. (25−28) The coke formation during PDH is the major reason for the Pt catalyst deactivation and severely shortens the catalyst life. Although tremendous progress has been made from computational simulations, a detailed description of the coke formation on the Pt catalysts in PDH is still lacking due to the stochastic and dynamic nature of the process. Therefore, the kMC method is applied in this work, aiming to unravel the nature of the coke formation and supply a practical method to increase the selectivity. In this work, a total of 50 elementary steps in PDH are considered, which cover the process from the first C–H bond activation to the C–C bond cracking. The adsorption of reactants and hydrogen is evaluated by both RPBE and BEEF-vdW functionals. The reaction free energy, barrier, rate constant, and pre-exponential factor are obtained from the DFT-BEEF-vdW calculations. On the basis of these thermal and kinetic parameters from DFT, kMC is performed on Pt(111) surfaces. The reaction process with time evolution is revealed; in particular the origin of formation of the coke precursor is discussed. Moreover, the positive effects on reactivity from hydrogen molecules are also indicated. The current study makes a significant contribution to curb the coke formation in PDH and pave the way to novel Pt-based catalysts for PDH.
+Figure 1
+Figure 1. Network of surface reactions of PDH. All elementary reactions are reversible. Asterisks indicate surface adsorbed species. The reaction labels (RX, X = 1–45) are shown in Table 2. Adsorption reactions of gases and dissociation of hydrogen are not included.
+2. Calculation Details
+ARTICLE SECTIONSJump To
+The calculations reported here were performed by using periodic density functional theory as implemented in the form of the Vienna ab initio simulation package (29−31) (VASP). For valence electrons, a plane-wave basis set was adopted with an energy cutoff of 400 eV and the ionic cores were described with the projector augmented-wave (PAW) method. (32,33) The Bayesian error estimation functional with van der Waals correlation (BEEF–vdW) (34) was used as the exchange-correlation functional approximation. In some cases, the RPBE (35) functional was also used for comparison purposes. A 3 × 3 × 1 Monkhorst–Pack k-point grid was used to sample the Brillouin zone. A four-layer slab with a p(3 × 3) supercell whose bottom layer is fixed was used to model the Pt(111) surface, and the thickness of the vacuum region is 12 Å. The reaction pathways and energy barriers were calculated by using the climbing nudged elastic band (CI-NEB) method. (36) The total energy and band structure energy were converged to an accuracy of 1 × 10−7 eV/atom to obtain accurate forces, and a force tolerance of 0.03 eV/Å was used in all structure optimizations. Those parameters were tested to be sufficient to yield accurate results, as shown in Table S1.
+The correction of zero-point energy (ZPE) was calculated by
+where h is Planck’s constant and vi is the vibrational frequency calculated by DFT.
+The kMC simulation was carried out with the Zacros software package. (37,38) Three surface models were used in our simulations, which consist of 40 × 40, 20 × 20, and 5 × 5 rhombic unit cells, respectively. Each unit cell includes one atop site and one fcc hollow site, as shown in Figure 2, and the side length of the unit cell is 2.77 Å. Therefore, the side of our surface model is 11.08 nm, and the species on the edges can cross the boundary of the surface. To simulate the experimental reaction conditions, the temperature was set to be 873 K and the total pressure was set to be 1 atm. The lateral interaction between surface adsorbates was evaluated by cluster expansion Hamiltonians. (38,39)
+Figure 2
+Figure 2. Top view of first layer of the Pt(111) surface (Pt is shown in gray) and the considered sites (shown in the colors indicated) used in the simulation. The Pt(111) surface consists of four different sites: atop, bridge, fcc hollow, and hcp hollow.
+The rates of elementary reactions were calculated by the Arrhenius equation
+(1)
+where A is the pre-exponential factor, Ea is activation energy, kb is Boltzmann’s constant, and T is temperature. It should be noted that it is necessart to multiply by the partial pressure of gas species X. The details of calculations of the pre-exponential factor are shown in the Supporting Information.
+3. Results and Discussion
+ARTICLE SECTIONSJump To
+3.1. DFT Results
+3.1.1. Adsorption of Propane and Propylene
+The interactions between the reactant (propane) and product (propylene) with catalysts have apparent importance for PDH. Three different exchange-correlation functionals are employed to calculate the binding energy of propane and propylene on Pt(111): RPBE, RPBE-vdW, (40) and BEEF-vdW, respectively. The optimized adsorbed structures of propane and propylene are shown in Figure 3, and binding energies are shown in Table 1. Short alkane molecules such as propane are generally physisorbed on the catalyst surface, which was also observed in our previous work. (41,42) The calculated adsorption energies of propane from RPBE, RPBE-vdW, and BEEF-vdW functionals are −0.01, −0.35, and −0.30 eV, respectively. The adsorption energies from RPBE-vdW and BEEF-vdW are close to each other and significantly greater than that from RPBE. This clearly indicates that van der Waals forces make an important contribution to the propane adsorption. On the other hand, the distance between propane and Pt(111) is around 3 Å, as shown in Figure 3. The bond distance suggests that this is mainly an intermolecular interaction. In contrast, propylene has a much stronger adsorption on Pt(111). The adsorption energies calculated from RPBE, RPBE-vdW, and BEEF-vdW are −0.56, −1.68, and −1.06 eV under 1/9 ML coverage, respectively. The binding energy of propylene is much higher than that of propane. The strong binding of propylene hinders the desorption of propylene, which could lead to the deep dehydrogenation. The energies calculated by the RPBE functional are low in comparison with experimental measurements (−0.75 eV) (43) and computational results (−0.93 eV (1/9 ML)). (11) Considering the performance of the molecule adsorption, the BEEF-vdW functional was employed in our calculations.
+Figure 3
+Figure 3. Side view of geometries of propane (left) and propylene (right) adsorbed on Pt(111). Three different GGA functionals have been used: RPBE, RPBE-vdW, and BEEF-vdW. Pt is shown in light gray, C in dark gray, and H in white.
+Table 1. Binding Energy (Ead, eV) of Propane and Propylene on Pt(111) Calculated from Different Functionals
+  functional
+  RPBE RPBE-vdW BEEF-vdW
+Ead (propane) –0.01 –0.35 –0.30
+Ead (propylene) –0.56 –1.68 –1.06
+3.1.2. Adsorption Energy and Geometric Configuration of H
+Hydrogen as the product in PDH has a significant influence on the reaction equilibrium. Conventionally, hydrogen is introduced together with propane in PDH industrial production. The adsorption configuration of hydrogen atoms on Pt(111) has been optimized and is shown in Figure 4. Four different sites (atop, bridge, fcc, and hcp) are considered for the hydrogen adsorption. The binding energies of hydrogen atoms are −3.57, −3.42, −3.40, and −3.45 eV at atop, bridge, fcc, and hcp sites, respectively. The most favorable site of H adsorption on Pt(111) is the atop site, which is different from that determined in a previous computational report. (11) The bond distance at the atop site is 1.56 Å, which is also the shortest distance among the four investigated sites. The van der Waals force correction might account for the different favorable site identification for the hydrogen adsorption. (12)
+Figure 4
+Figure 4. Geometries of adsorbed hydrogen atoms on four different sites on Pt(111) and the bond distance between Pt and H. Pt is shown in light gray and H in white.
+3.1.3. Propane Activation and Surface Reactions
+Under the real conditions of PDH, gas inputs consist of propane and hydrogen. Therefore, the surface reaction network falls into three types: CxHy species dehydrogenation, CxHy species cracking, and dissociation of hydrogen.
+The elementary steps considered in the calculations are shown in Table 2. The geometric configurations of the transition state (TS) of H–H, C–H, and C–C breaking reactions are shown in Figure 5–7, respectively. For dissociation of the hydrogen molecule, the hydrogen molecule is slightly stretched in the TS, in which the bond distance is 0.78 Å while the counterpart in the gas phase is 0.74 Å. The barrier is estimated to be 0.17 eV, as shown in Table 2. The TS shown in Figures 6 and 7 can be categorized into three groups: (1) reactions leading to propylene formation (R1, R2, R4, R5), (2) reactions leading to propylene deep dehydrogenation (R3, R6–R17), and (3) reactions of C–C bond breaking. At transition states, the breaking bonds C–H and C–C are significantly elongated. The calculations indicate that the barriers of dehydrogenation are lower than those of C–C bond breaking until R28. After that, the activation barriers of C–H and C–C bond breaking become close to each other, as shown in Figure 8. This step corresponds to the cracking of propyne.
+Figure 5
+Figure 5. Geometry of the transition state for hydrogen molecule activation. Pt is shown in light gray and H in white.
+Figure 6
+Figure 6. Geometries of transition states in the C–H breaking reactions of C3 species. The distance of the breaking bond is also indicated. Pt is shown in light gray, C in dark gray, and H in white.
+Figure 7
+Figure 7. Geometries of transition states in C–C breaking reactions. The distance of the breaking bond is also indicated. Pt is shown in light gray, C in dark gray, and H in white.
+Table 2. Energy Barriers and Pre-Exponential Factors of H–H, C–C, and C–H Activation
+    DFT   ZPE corrected   pre-exponential factor (at 873 K)  
+reaction   fw bw fw bw fw bw
+R1diss-ada CH3CH2CH3 + 2* → CH3CH2CH2* + H* 0.92 0.80 0.78 0.76 1.72 × 107 4.03 × 1013
+R2diss-ada CH3CH2CH3* + 2* → CH3CHCH3* + H* 0.92 0.74 0.77 0.70 3.54 × 107 4.26 × 1013
+R3 CH3CH2CH2* + * → CH3CH2CH* + H* 0.95 0.61 0.81 0.59 7.02 × 1014 5.06 × 1013
+R4 CH3CH2CH2* + * → CH3CHCH2* + H* 0.90 0.83 0.75 0.80 4.23 × 1014 2.70 × 1013
+R5 CH3CHCH3* + * → CH3CHCH2* + H* 0.94 0.98 0.81 0.94 2.40 × 1014 2.98 × 1013
+R6 CH3CHCH3* + * → CH3CCH3* + H* 1.06 0.73 0.89 0.70 5.16 × 1014 2.15 × 1013
+R7 CH3CH2CH* + * → CH3CH2C* + H* 0.52 1.05 0.49 1.11 3.34 × 1013 2.64 × 1012
+R8 CH3CH2CH* + * → CH3CHCH* + H* 0.80 0.83 0.64 0.80 4.39 × 1014 1.54 × 1013
+R9 CH3CHCH2* + * → CH3CHCH* + H* 1.02 0.70 0.86 0.68 2.79 × 1014 1.11 × 1013
+R10 CH3CHCH2* + * → CH3CCH2* + H* 1.08 0.88 0.89 0.83 4.55 × 1014 1.73 × 1013
+R11 CH3CCH3* + * → CH3CCH2* + H* 0.81 0.90 0.68 0.87 1.77 × 1014 2.01 × 1013
+R12 CH3CH2C* + * → CH3CHC* + H* 1.43 0.75 1.23 0.69 5.17 × 1014 2.55 × 1013
+R13 CH3CHCH* + * → CH3CHC* + H* 1.28 1.09 1.07 0.99 5.41 × 1014 6.01 × 1013
+R14 CH3CHCH* + * → CH3CCH* + H* 1.00 0.83 0.80 0.75 3.94 × 1014 3.04 × 1013
+R15 CH3CCH2* + * → CH3CCH* + H* 1.14 0.77 0.93 0.68 5.19 × 1014 4.19 × 1013
+R16 CH3CHC* + * → CH3CC* + H* 1.51 0.41 1.31 0.36 6.42 × 1014 2.55 × 1013
+R17 CH3CCH* + * → CH3CC* + H* 1.67 0.55 1.48 0.50 5.20 × 1014 2.96 × 1013
+R18diss-ada CH3CH2CH3 + 2* → CH3* + CH3CH2* 2.66 2.39 2.56 2.37 1.86 × 107 4.44 × 1013
+R19 CH3CH2CH2* + * → CH2* + CH3CH2* 1.82 1.32 1.64 1.22 1.12 × 1014 2.23 × 1013
+R20 CH3CHCH3* + *→ CH3* + CH3CH* 1.99 1.67 1.87 1.64 3.16 × 1014 5.16 × 1013
+R21 CH3CH2CH* + * → CH* + CH3CH2* 1.74 1.85 1.53 1.71 7.20 × 1014 1.69 × 1014
+R22 CH3CHCH2* + * → CH2* + CH3CH* 2.24 1.28 2.08 1.21 4.59 × 1014 7.13 × 1013
+R23 CH3CCH3* + * → CH3* + CH3C* 1.43 1.75 1.37 1.75 7.54 × 1013 3.36 × 1013
+R24 CH3CH2C* + * → C* + CH3CH2* 2.29 0.99 2.14 0.91 8.57 × 1013 2.37 × 1013
+R25 CH3CHCH* + * → CH* + CH3CH* 1.86 1.42 1.75 1.36 1.02 × 1014 2.87 × 1013
+R26 CH3CCH2* + * → CH2* + CH3C* 1.77 1.70 1.67 1.66 8.02 × 1013 2.02 × 1013
+R27 CH3CHC* + * → C* + CH3CH* 2.34 1.26 2.23 1.21 8.16 × 1013 2.78 × 1013
+R28 CH3CCH* + * → CH* + CH3C* 1.43 1.68 1.35 1.65 7.79 × 1013 7.88 × 1013
+R29 CH3CC* + * → C* + CH3C* 1.15 1.45 1.10 1.41 4.09 × 1013 1.98 × 1013
+R30diss-ada CH3CH3* + 2* → CH3CH2* + H* 0.99 0.81 0.86 0.76 8.6 × 107 2.76 × 1013
+R31 CH3CH2* + * → CH2CH2* + H* 0.98 0.99 0.84 0.94 5.5 × 1013 4.60 × 1013
+R32 CH3CH2* + * → CH3CH* + H* 1.00 0.75 0.86 0.73 3.5 × 1013 1.10 × 1013
+R33 CH2CH2* + * → CH2CH* + H* 1.10 0.74 0.95 0.72 6.0 × 1013 9.31 × 1012
+R34 CH3CH* + * → CH2CH* + H* 0.98 0.83 0.83 0.79 5.8 × 1013 2.09 × 1013
+R35 CH3CH* + * → CH3C* + H* 0.48 0.86 0.35 0.84 6.9 × 1013 8.35 × 1012
+R36 CH2CH* + * → CHCH* + H* 1.18 0.76 0.98 0.67 3.5 × 1014 2.64 × 1013
+R37 CH2CH* + * → CH2C* + H* 1.35 1.07 1.15 0.97 4.5 × 1014 3.86 × 1013
+R38 CH3C* + * → CH2C* + H* 1.57 0.81 1.40 0.73 1.6 × 1014 4.00 × 1013
+R39 CHCH* + * → CHC* + H* 1.72 0.45 1.52 0.41 3.6 × 1014 1.03 × 1013
+R40 CH2C* + * → CHC* + H* 1.70 0.36 1.49 0.31 5.8 × 1014 1.35 × 1013
+R41 CHC* + * → CC* + H* 1.76 0.56 1.59 0.51 3.6 × 1014 1.54 × 1013
+R42diss-ada CH4* + 2* → CH3* + H* 1.07 0.83 0.95 0.77 1.2 × 108 3.01 × 1013
+R43 CH3* + * → CH2* + H* 1.03 0.68 0.91 0.66 1.6 × 1013 1.24 × 1013
+R44 CH2* + * → CH* + H* 0.52 0.81 0.38 0.77 1.3 × 1014 1.36 × 1013
+R45 CH* + * → C* + H* 2.03 1.14 1.81 1.03 4.1 × 1014 6.12 × 1013
+H2diss-ada H2 + 2 * →2 H* 0.15 0.64 0.17 0.78 3.33 × 108 2.41 × 1013
+aDissociative adsorption reaction.
+Figure 8
+Figure 8. Activation energy of dehydrogenation and cracking of C3 species after ZPE correction. Red bars denote dehydrogenation, and black bars denote cracking. Reactions R1–R29 are indicated in Table 2.
+During the surface reaction, the different elementary steps have unique requirements for the available sites on the catalysts. In detail, two, three, and four/five Pt atoms on the catalyst surface are required for the reaction steps R1 and R2, R3–R6, and R7–R29, respectively. It is obvious that reactions are unable to proceed when the required sites are occupied.
+3.2. kMC Calculations
+3.2.1. Rate Constant and Lateral Interactions
+The most stable geometric configurations are used to represent the adsorption states in kMC. The rate of every elementary step is calculated by eq 1, and the barriers are shown in Table 2. Another parameter that needs to be evaluated is the pre-exponential factor. As shown in the Supporting Information, the pre-exponential factor has different forms regarding the various surface reaction processes and the calculated pre-exponential factors are also shown in Table 2.
+The lateral interaction will influence the adsorption energy, activation energy, etc., and those effects can be included by an effective cluster interaction (ECI), which replaces the Ising model by the lattice-gas convention. (39) The results of lateral interaction are shown in Table S2. The nearest-neighbor lateral interactions among Cx spices (x = 1–3) and hydrogen are considered. From Table S2, the lateral interactions of up to 0.4 eV between C1 and C1 are significantly greater than others. Therefore, there is a significant contribution from the lateral interaction.
+3.2.2. Reaction Path of PDH
+The kMC simulations can yield the number of each elementary step occurring which can serve to estimate the reaction flow as a function of consumption of propane, as shown in Figure 9. From Figure 9, the most favorable reaction pathway is revealed. It is found that first dehydrogenation of propane is preferred by R2 over R1, as 70.81% of propane became 2-propyl, which means that secondary hydrogen abstraction is more favorable than primary hydrogen abstraction, although the two reactions have the similar reaction barrier. Furthermore, 54.97% of activated propane is converted into propylene in the gas phase. The main path of propane dehydrogenation to propylene is R2 and R5. The other 45.03% of propane has been consumed by intermediates, deep dehydrogenation, and cracking. Deep dehydrogenation mainly occurs via R6 and R10, and the cracking occurs via R28. Moreover, the intermediates during the reaction are not accumulated on the catalyst surfaces; most of them are quickly reacted and consumed. This observation implies that the surface reactions are not the rate-determining step (RDS).
+Figure 9
+Figure 9. “Flow direction” of carbon species in PDH. Simulation parameters: 20 × 20 lattice, no hydrogen in the initial state. The percentages are obtained by the number of reactions (forward reaction minus backward reaction) divided by consumption of propane.
+3.2.3. Origin of Deactivation of the Catalyst
+To further understand the reaction process, in particular at the beginning of the reaction, the consumption speed of propane and selectivity of propylene are correlated with time, as shown in Figure 10. It is clearly indicated from the consumption of propane that there are two stages in the reaction. In the first stage, the consumption speed is decreasing rapidly. In the meantime, the selectivity of propylene increases quickly. It can be concluded that the surface reactions including both C–H and C–C bond activation rapidly occur at this stage. In the second stage, both the consumption rate of propane and the selectivity of propylene become stable and do not show significant variations with reaction progress. Therefore, it is suggested that the reaction reaches an equilibrium state. Overall, the PDH reaction can be divided into two different stages: quick deactivation and steady states, respectively. In the quick deactivation state, all active sites are available and are exposed to the reactants (propane and hydrogen) at the beginning of the reactions. Therefore, this causes a high consumption rate of propane. Both dehydrogenation to form propylene and side reactions including deep dehydrogenation and C–C bond cracking easily take place because of the large amount of available free sites, as shown in Figure 11a. On the other hand, the geometry of the available free sites is very important, in particular for side reactions. A deep dehydrogenation reaction, for example R7, requires an arrangement of four neighboring active sites in a special shape, as shown in Figure 6. At the beginning, the clean Pt surface supplies abundant sites for the dehydrogenation/side reactions, which explains the large consumption rate of propane. As shown in Figure 11c, 91.3% of converted propane is consumed in side reactions. With reaction progress, 69.3% of active sites have been occupied by surface species, as shown in Figure 11b. On the Pt surface, it is estimated that 89.7% of surface species are C1/2, which occupy a majority of active sites. This also explains the quick decline in the propane consumption rate, as the active sites are almost occupied. Moreover, the simulation also indicates that the C1/2 species is difficult to remove and block the sites for propylene formation. However, there is still left some small block of free sites on the catalyst surface, as shown in Figure 11b. Those sites maintain the activity of PDH and the selectivity. On the other hand, the cracking and deep dehydrogenation reactions have difficulty in proceeding due to the limited available sites at the steady stage, as the adsorbate/TS in deep dehydrogenation/cracking needs four or five neighboring sites in a special shape as discussed above. The identification of quick deactivation and steady states from the simulation is consistent with the experimental observations. (5,17) For example, Weckhuysen’s group used operando Raman to investigate the coke formation during PDH on Pt catalysts. (44) It is indicated that coke immediately formed and quickly accumulated in the first few minutes after catalyst exposure to propane. This is exactly corresponding to the fast deactivation stage as revealed from the simulation.
+Figure 10
+Figure 10. Time evolution of the propane consumption and selectivity of various products from PDH.
+Figure 11
+Figure 11. Snapshots and species statistics at 5 × 10–4 s and 2 × 10–2 s: (a, b) snapshots of the 20 × 20 lattice, with H atoms shown in blue, C3 species in red, and C2/1 species in black; (c, d) statistics of surface species of (a) and (b), respectively. The numbers abc* along the x axis represent CHaCHbCHc* species (for example, 322* represents the subscript numbers in CH3CH2CH2*).
+From the above discussions, the importance of the arrangement of the free sites is clearly revealed. To investigate this effect in detail on a longer time scale, a smaller 5 × 5 lattice model was used in the kMC simulation. Although the smaller cell is more sensitive to dimensional fluctuations, it can still capture the essential effects of the variations of surface sites on the catalytic reactivity. The time evolution of TOF and selectivity is shown in Figure 12. The selectivity of propylene decreases rapidly from 0.019 to 0.028 s and increase agains from 0.052 to 0.063 s. Undoubtedly, these fluctuations of the reaction reflect the changes in the catalyst surface. As shown in Figure 13, the snapshots of two representative time frames during the reaction revealed the changes in available surface sites. The selectivity decreased quickly at 0.019 s, as shown in the first frame (the similarity of the surface site geometry to that in the first frame is around 70.6% in the investigated time period) in Figure 13. There are a great number of adjoining free active sites which are available for both dehydrogenation and deep reactions. The competition between propylene formation and deep reactions causes a decrease in selectivity. At the fast increase stage of selectivity, as shown in the second frame (the similarity of the surface site geometry to that in the second frame is around 83.3% in the investigated time period) in Figure 13, the free active sites are much reduced and connected to each other and become only suitable for dehydrogenation to propylene. On the other hand, the deep reactions are prohibited, as there are missing regular triangle sites. Therefore, the selectivity is sharply increased. Overall, the calculations clearly indicate the relation between the surface sites and the reaction rate/selectivity. It is very straightforward to deduce that the catalytic surface reaction requires a special geometry of the active sites. For example, R1 and R2 need two sites, and R3–R6 need three neighboring sites, but the reactions after R6 need four sites which must contain at least one regular triangle, as shown in Figure 6. The importance of the active site geometry is also revealed from the studies on the Sn promoter effect in PDH. It has been suggested that Sn addition will decrease the size of the Pt catalyst ensemble. It is found that a smaller Pt ensemble inhibits side reactions. (15) This observation is consistent with the results from current work that the side reactions need more surface sites. Therefore, the dehydrogenation to propylene and side reactions in PDH are governed by the competition for the available active sites, which is revealed from the kMC simulation.
+Figure 12
+Figure 12. Time evolution of rates and selectivity of propylene obtained from a smaller 5 × 5 lattice simulation.
+Figure 13
+Figure 13. Snapshots of the 5 × 5 lattice at 0.019 and 0.052 s. Adsorbed C3 species are shown in red, adsorbed C2/1 species in black, and free sites in green. The closed dotted curve highlights the adjoining active sites.
+3.2.4. Effect of H2
+As mentioned before, hydrogen is mixed with propane as the input stream in industrial PDH. It is naturally expected that H2 can reduce the coke and regenerate active sites. Furthermore, experiments and simulations show that the input of H2 can also increase the selectivity and activity of the Pt catalyst without a promoter. (5,45) To understand this effect, the selectivities of propylene with input of pure propane or a propane/H2 mixture in PDH are calculated (the partial pressure of hydrogen is 1 kPa). Through a comparison, the selectivity of propylene is increased by 9.81% when hydrogen is present. Furthermore, calculations indicate that the hydrogen can enhance the forward reactions of R4/R5, which produce more adsorbed propylene, and the backward reactions of R9/R10, which lead to more adsorbed propylene from the hydrogenation of products from the deep dehydrogenation reactions. From Figure 14, more propane (from 85.82% to 88.29%) is converted to the adsorbed propylene in R4/R5 reactions after H2 addition. On the other hand, the consumption of propylene is decreased from 6.05% to −1.31% for R9/R10 reactions. The negative value means that the backward reactions of R9/R10 exceed the forward reactions. Therefore, more propylene is obtained. In short, the increase in the forward reaction is higher than that in the backward reaction for R4 and R5, while the inverse is true for R9 and R10. From an analysis, it is indeed seen that hydrogen can increase the selectivity of PDH. On the other hand, the activity of the Pt catalyst is also improved, as the number of both forward and backward reactions is significantly increased after introduction of hydrogen, as shown in Figure 14.
+Figure 14
+Figure 14. Count of forward (fw) and backward (bw) elementary reaction steps under pure propane (indicated by 0) and propane/H2 mixture (indicated by 1). The percentages are obtained by dividing the number of the reaction by the consumption of propane (positive values of R4 and R5 represent product propylene, and positive of values of R9 and R10 represent consumption of propylene). Gray indicates a forward reaction and red a backward reaction.
+4. Conclusions
+ARTICLE SECTIONSJump To
+In the current work, DFT calculations have been devoted to the understanding of the reaction network for propylene formation and side reactions, including deep dehydrogenation and cracking. Furthermore, kMC simulations have been performed to reveal the coke evolution during the reaction. The critical steps in the reaction pathway and the origin of the coke formation are indicated. Moreover, the effect of hydrogen molecules in the input stream is also discussed. The main conclusions from the current work are summarized below.
+(1) The detailed reaction pathway to propylene formation and side reactions are revealed. The transformation from propane to propylene mainly occurs via the pathway R2 → R5 with minor contributions from the pathway R1 → R4. Deep dehydrogenations occur via R6 → R11 and R10 and finally lead to the cracking of C3 species. The cracking mainly starts from propyne. The rate-limiting step of PDH is identified as the dissociative adsorption of propane. The calculations of propane and propylene adsorption indicate the importance of van der Waals corrections.
+(2) The availability of active sites is crucial for both propylene and coke formations. The dehydrogenation to propylene, deep dehydrogenation, and cracking need two, three, and four sites at least, respectively. The kMC simulations reveal that there are quick deactivation and steady states during PDH. The quick deactivation occurs because most of the active sites are occupied by cracking products which are hardly removed from the surface. However, the coverage of surface species and active sites become stable after quick deactivation, which leads to the steady state. Furthermore, the analysis shows that the geometry of the active sites in the steady state hinders the side reactions, which leads to a stable selectivity. Rational construction of the surface structure of the Pt catalyst might be the key factor in controlling coke formation.
+(3) The origin of the hydrogen effect on the selectivity is revealed from the calculations. It is indicated that hydrogen in the input stream not only enhances the forward reactions of propylene formation but also decreases the consumption rate of the adsorbed propylene on the surface. Therefore, selectivity is increased with the presence of hydrogen.
+Supporting Information
+ARTICLE SECTIONSJump To
+The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acscatal.8b00107.
+Calculations of pre-exponential factor, test of the model and setup, relations of reaction coordinate with energy, coverage of adsorption species versus time, count of reaction, and “flow direction” of C species with/without hydrogen, geometries of transition states in the C−H breaking reactions of C2 and C1 species (PDF)
+cs8b00107_si_001.pdf (3.94 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Authors
+Bo Li - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  http://orcid.org/0000-0001-8895-2054;  Email: boli@imr.ac.cn
+Dang Sheng Su - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  Email: dssu@imr.ac.cn
+Authors
+Zan Lian - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  School of Materials Science and Engineering, University of Science and Technology of China, Shenyang 110016, Liaoning, People’s Republic of China
+Sajjad Ali - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  University of Chinese Academy of Sciences, Shijingshan District, Beijing 100049, People’s Republic of China
+TianFu Liu - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  School of Materials Science and Engineering, University of Science and Technology of China, Shenyang 110016, Liaoning, People’s Republic of China
+Chaowei Si - Shenyang National Laboratory for Materials Science, Institute of Metal Research, Chinese Academy of Sciences, Shenyang 110016, Liaoning People’s Republic of China;  School of Materials Science and Engineering, University of Science and Technology of China, Shenyang 110016, Liaoning, People’s Republic of China
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+This work was supported by the NSFC (21573255, 51521091) and the “Strategic Priority Research Program” of the Chinese Academy of Sciences (Grant No. XDA09030103). B.L. acknowledges a financial grant from the Institute of Metal Research (Y3NBA211A1). This work was also supported by the State Key Laboratory of Catalytic Materials and Reaction Engineering (RIPP, SINOPEC). The computations were also supported by the Special Program for Applied Research on Super Computation of the NSFC Guangdong Joint Fund (the second phase) under Grant No. U1501501.
+Abbreviations
+ARTICLE SECTIONSJump To
+PDH propane dehydrogenation
+DFT density functional theory
+kMC kinetic Monte Carlo
+TS transition state
+References
+ARTICLE SECTIONSJump To
+This article references 45 other publications.
+1Dobis, O.; Benson, S. W. Analysis of Flow Dynamics in a New, Very Low Pressure Reactor. Application to the Reaction: Cl + CH4 ⇌ HCl + CH3. Int. J. Chem. Kinet. 1987, 19, 691– 708,  DOI: 10.1002/kin.550190803 [Crossref], Google Scholar
+2Russell, J. J.; Seetula, J. A.; Gutman, D. Kinetics and Thermochemistry of CH3, C2H5, and i-C3H7. Study of the Equilibrium R + HBr ⇌ R-H + Br. J. Am. Chem. Soc. 1988, 110, 3092– 3099,  DOI: 10.1021/ja00218a017 [ACS Full Text ], Google Scholar
+3Bhasin, M. M.; McCain, J. H.; Vora, B. V.; Imai, T.; Pujadó, P. R. Dehydrogenation and Oxydehydrogenation of Paraffins to Olefins. Appl. Catal., A 2001, 221, 397– 419,  DOI: 10.1016/S0926-860X(01)00816-X [Crossref], [CAS], Google Scholar
+4Sattler, J.; Ruiz-Martinez, J.; Santillan-Jimenez, E.; Weckhuysen, B. M. Catalytic Dehydrogenation of Light Alkanes on Metals and Metal Oxides. Chem. Rev. 2014, 114, 10613– 10653,  DOI: 10.1021/cr5002436 [ACS Full Text ], [CAS], Google Scholar
+5Barias, O. A.; Holmen, A.; Blekkan, E. A. Propane Dehydrogenation over Supported Pt and Pt-Sn Catalysts: Catalyst Preparation, Characterization, and Activity Measurements. J. Catal. 1996, 158, 1– 12,  DOI: 10.1006/jcat.1996.0001 [Crossref], Google Scholar
+6Kogan, S. B.; Schramm, H.; Herskowitz, M. Dehydrogenation of Propane on Modified Pt/Theta-Alumina Performance in Hydrogen and Steam Environment. Appl. Catal., A 2001, 208, 185– 191,  DOI: 10.1016/S0926-860X(00)00703-1 [Crossref], [CAS], Google Scholar
+7Bednarova, L.; Lyman, C. E.; Rytter, E.; Holmen, A. Effect of Support on the Size and Composition of Highly Dispersed Pt-Sn Particles. J. Catal. 2002, 211, 335– 346,  DOI: 10.1006/jcat.2002.3699 [Crossref], Google Scholar
+8Zhang, Y.; Zhou, Y.; Qiu, A.; Wang, Y.; Xu, Y.; Wu, P. Propane Dehydrogenation on PtSn/ZSM-5 Catalyst: Effect of Tin as a Promoter. Catal. Commun. 2006, 7, 860– 866,  DOI: 10.1016/j.catcom.2006.03.016 [Crossref], [CAS], Google Scholar
+9Siddiqi, G.; Sun, P.; Galvita, V.; Bell, A. T. Catalyst Performance of Novel Pt/Mg(Ga)(Al)O Catalysts for Alkane Dehydrogenation. J. Catal. 2010, 274, 200– 206,  DOI: 10.1016/j.jcat.2010.06.016 [Crossref], [CAS], Google Scholar
+10Pham, H. N.; Sattler, J. J. H. B.; Weckhuysen, B. M.; Datye, A. K. Role of Sn in the Regeneration of Pt/γ-Al2O3 Light Alkane Dehydrogenation Catalysts. ACS Catal. 2016, 6, 2257– 2264,  DOI: 10.1021/acscatal.5b02917 [ACS Full Text ], [CAS], Google Scholar
+11Yang, M.-L.; Zhu, Y.-A.; Fan, C.; Sui, Z.-J.; Chen, D.; Zhou, X.-G. Density Functional Study of the Chemisorption of C1, C2 and C3 Intermediates in Propane Dissociation on Pt(111). J. Mol. Catal. A: Chem. 2010, 321, 42– 49,  DOI: 10.1016/j.molcata.2010.01.017 [Crossref], [CAS], Google Scholar
+12Nykanen, L.; Honkala, K. Density Functional Theory Study on Propane and Propene Adsorption on Pt(111) and Ptsn Alloy Surfaces. J. Phys. Chem. C 2011, 115, 9578– 9586,  DOI: 10.1021/jp1121799 [ACS Full Text ], [CAS], Google Scholar
+13Yang, M.-L.; Zhu, Y.-A.; Fan, C.; Sui, Z.-J.; Chen, D.; Zhou, X.-G. DFT Study of Propane Dehydrogenation on Pt Catalyst: Effects of Step Sites. Phys. Chem. Chem. Phys. 2011, 13, 3257– 3267,  DOI: 10.1039/c0cp00341g [Crossref], [PubMed], [CAS], Google Scholar
+14Yang, M.-L.; Zhu, Y.-A.; Zhou, X.-G.; Sui, Z.-J.; Chen, D. First-Principles Calculations of Propane Dehydrogenation over PtSn Catalysts. ACS Catal. 2012, 2, 1247– 1258,  DOI: 10.1021/cs300031d [ACS Full Text ], [CAS], Google Scholar
+15Nykänen, L.; Honkala, K. Selectivity in Propene Dehydrogenation on Pt and Pt3Sn Surfaces from First Principles. ACS Catal. 2013, 3, 3026– 3030,  DOI: 10.1021/cs400566y [ACS Full Text ], [CAS], Google Scholar
+16Yang, M.-L.; Zhu, J.; Zhu, Y.-A.; Sui, Z.-J.; Yu, Y.-D.; Zhou, X.-G.; Chen, D. Tuning Selectivity and Stability in Propane Dehydrogenation by Shaping Pt Particles: A Combined Experimental and DFT Study. J. Mol. Catal. A: Chem. 2014, 395, 329– 336,  DOI: 10.1016/j.molcata.2014.08.008 [Crossref], [CAS], Google Scholar
+17Zhu, J.; Yang, M.-L.; Yu, Y.; Zhu, Y.-A.; Sui, Z.-J.; Zhou, X.-G.; Holmen, A.; Chen, D. Size-Dependent Reaction Mechanism and Kinetics for Propane Dehydrogenation over Pt Catalysts. ACS Catal. 2015, 5, 6310– 6319,  DOI: 10.1021/acscatal.5b01423 [ACS Full Text ], [CAS], Google Scholar
+18Cybulskis, V. J.; Bukowski, B. C.; Tseng, H.-T.; Gallagher, J. R.; Wu, Z.; Wegener, E.; Kropf, A. J.; Ravel, B.; Ribeiro, F. H.; Greeley, J.; Miller, J. T. Zinc Promotion of Platinum for Catalytic Light Alkane Dehydrogenation: Insights into Geometric and Electronic Effects. ACS Catal. 2017, 7, 4173– 4181,  DOI: 10.1021/acscatal.6b03603 [ACS Full Text ], [CAS], Google Scholar
+19Valcarcel, A.; Ricart, J. M.; Clotet, A.; Markovits, A.; Minot, C.; Illas, F. Theoretical Study of the Structure of Propene Adsorbed on Pt(111). Surf. Sci. 2002, 519, 250– 258,  DOI: 10.1016/S0039-6028(02)02220-3 [Crossref], Google Scholar
+20Valcarcel, A.; Ricart, J. M.; Clotet, A.; Illas, F.; Markovits, A.; Minot, C. Theoretical Study of Dehydrogenation and Isomerisation Reactions of Propylene on Pt(111). J. Catal. 2006, 241, 115– 122,  DOI: 10.1016/j.jcat.2006.04.022 [Crossref], [CAS], Google Scholar
+21Hauser, A. W.; Gomes, J.; Bajdich, M.; Head-Gordon, M.; Bell, A. T. Subnanometer-Sized Pt/Sn Alloy Cluster Catalysts for the Dehydrogenation of Linear Alkanes. Phys. Chem. Chem. Phys. 2013, 15, 20727– 20734,  DOI: 10.1039/c3cp53796j [Crossref], [PubMed], [CAS], Google Scholar
+22Zhao, Z.-J.; Chiu, C.-c.; Gong, J. Molecular Understandings on the Activation of Light Hydrocarbons over Heterogeneous Catalysts. Chem. Sci. 2015, 6, 4403– 4425,  DOI: 10.1039/C5SC01227A [Crossref], [PubMed], [CAS], Google Scholar
+23Jiang, F.; Zeng, L.; Li, S.; Liu, G.; Wang, S.; Gong, J. Propane Dehydrogenation over Pt/TiO2-Al2O3 Catalysts. ACS Catal. 2015, 5, 438– 447,  DOI: 10.1021/cs501279v [ACS Full Text ], [CAS], Google Scholar
+24Wang, T.; Jiang, F.; Liu, G.; Zeng, L.; Zhao, Z.-j.; Gong, J. Effects of Ga Doping on Pt/CeO2-Al2O3 Catalysts for Propane Dehydrogenation. AIChE J. 2016, 62, 4365– 4376,  DOI: 10.1002/aic.15339 [Crossref], [CAS], Google Scholar
+25Mei, D. H.; Hansen, E. W.; Neurock, M. Ethylene Hydrogenation over Bimetallic Pd/Au(111) Surfaces: Application of Quantum Chemical Results and Dynamic Monte Carlo Simulation. J. Phys. Chem. B 2003, 107, 798– 810,  DOI: 10.1021/jp0139890 [ACS Full Text ], [CAS], Google Scholar
+26Rogal, J.; Reuter, K.; Scheffler, M. Co Oxidation on Pd(100) at Technologically Relevant Pressure Conditions: First-Principles Kinetic Monte Carlo Study. Phys. Rev. B: Condens. Matter Mater. Phys. 2008, 77, 155410,  DOI: 10.1103/PhysRevB.77.155410 [Crossref], Google Scholar
+27Mei, D.; Neurock, M.; Smith, C. M. Hydrogenation of Acetylene-Ethylene Mixtures over Pd and Pd-Ag Alloys: First-Principles-Based Kinetic Monte Carlo Simulations. J. Catal. 2009, 268, 181– 195,  DOI: 10.1016/j.jcat.2009.09.004 [Crossref], [CAS], Google Scholar
+28Stamatakis, M.; Vlachos, D. G. Unraveling the Complexity of Catalytic Reactions Via Kinetic Monte Carlo Simulation: Current Status and Frontiers. ACS Catal. 2012, 2, 2648– 2663,  DOI: 10.1021/cs3005709 [ACS Full Text ], [CAS], Google Scholar
+29Kresse, G.; Hafner, J. Abinitio Molecular-Dynamics for Liquid-Metals. Phys. Rev. B: Condens. Matter Mater. Phys. 1993, 47, 558– 561,  DOI: 10.1103/PhysRevB.47.558 [Crossref], [PubMed], [CAS], Google Scholar
+30Kresse, G.; Furthmuller, J. Efficiency of Ab-Initio Total Energy Calculations for Metals and Semiconductors Using a Plane-Wave Basis Set. Comput. Mater. Sci. 1996, 6, 15– 50,  DOI: 10.1016/0927-0256(96)00008-0 [Crossref], [CAS], Google Scholar
+31Kresse, G.; Furthmuller, J. Efficient Iterative Schemes for Ab Initio Total-Energy Calculations Using a Plane-Wave Basis Set. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 11169– 11186,  DOI: 10.1103/PhysRevB.54.11169 [Crossref], [PubMed], [CAS], Google Scholar
+32Blochl, P. E. Projector Augmented-Wave Method. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 50, 17953– 17979,  DOI: 10.1103/PhysRevB.50.17953 [Crossref], [PubMed], [CAS], Google Scholar
+33Kresse, G.; Joubert, D. From Ultrasoft Pseudopotentials to the Projector Augmented-Wave Method. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 1758– 1775,  DOI: 10.1103/PhysRevB.59.1758 [Crossref], [CAS], Google Scholar
+34Wellendorff, J.; Lundgaard, K. T.; Møgelhøj, A.; Petzold, V.; Landis, D. D.; Nørskov, J. K.; Bligaard, T.; Jacobsen, K. W. Density Functionals for Surface Science: Exchange-Correlation Model Development with Bayesian Error Estimation. Phys. Rev. B: Condens. Matter Mater. Phys. 2012, 85, 235149,  DOI: 10.1103/PhysRevB.85.235149 [Crossref], [CAS], Google Scholar
+35Hammer, B.; Hansen, L. B.; Nørskov, J. K. Improved Adsorption Energetics within Density-Functional Theory Using Revised Perdew-Burke-Ernzerhof Functionals. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 7413– 7421,  DOI: 10.1103/PhysRevB.59.7413 [Crossref], [CAS], Google Scholar
+36Henkelman, G.; Uberuaga, B. P.; Jonsson, H. A Climbing Image Nudged Elastic Band Method for Finding Saddle Points and Minimum Energy Paths. J. Chem. Phys. 2000, 113, 9901– 9904,  DOI: 10.1063/1.1329672 [Crossref], [CAS], Google Scholar
+37Stamatakis, M.; Vlachos, D. G. A Graph-Theoretical Kinetic Monte Carlo Framework for on-Lattice Chemical Kinetics. J. Chem. Phys. 2011, 134, 214115,  DOI: 10.1063/1.3596751 [Crossref], [PubMed], [CAS], Google Scholar
+38Nielsen, J.; d’Avezac, M.; Hetherington, J.; Stamatakis, M. Parallel Kinetic Monte Carlo Simulation Framework Incorporating Accurate Models of Adsorbate Lateral Interactions. J. Chem. Phys. 2013, 139, 224706,  DOI: 10.1063/1.4840395 [Crossref], [PubMed], [CAS], Google Scholar
+39Wu, C.; Schmidt, D. J.; Wolverton, C.; Schneider, W. F. Accurate Coverage-Dependence Incorporated into First-Principles Kinetic Models: Catalytic NO Oxidation on Pt (111). J. Catal. 2012, 286, 88– 94,  DOI: 10.1016/j.jcat.2011.10.020 [Crossref], [CAS], Google Scholar
+40Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, H. A Consistent and Accurate Ab Initio Parametrization of Density Functional Dispersion Correction (Dft-D) for the 94 Elements H-Pu. J. Chem. Phys. 2010, 132, 154104,  DOI: 10.1063/1.3382344 [Crossref], [PubMed], [CAS], Google Scholar
+41Liu, T.; Ali, S.; Li, B.; Su, D. S. Revealing the Role of Sp2@Sp3 Structure of Nanodiamond in Direct Dehydrogenation: Insight from Dft Study. ACS Catal. 2017, 7, 3779– 3785,  DOI: 10.1021/acscatal.6b03619 [ACS Full Text ], [CAS], Google Scholar
+42Sun, X.; Han, P.; Li, B.; Mao, S.; Liu, T.; Ali, S.; Lian, Z.; Su, D. S. Oxidative Dehydrogenation Reaction of Short Alkanes on the Nanostructured Carbon Catalysts: A Computational Account. Chem. Commun. 2018, 54, 864– 875,  DOI: 10.1039/C7CC06941C [Crossref], Google Scholar
+43Tsai, Y.-L.; Xu, C.; Koel, B. E. Chemisorption of Ethylene, Propylene and Isobutylene on Ordered Sn/Pt(111) Surface Alloys. Surf. Sci. 1997, 385, 37– 59,  DOI: 10.1016/S0039-6028(97)00114-3 [Crossref], [CAS], Google Scholar
+44Sattler, J. J. H. B.; Beale, A. M.; Weckhuysen, B. M. Operando Raman Spectroscopy Study on the Deactivation of Pt/Al2O3 and Pt-Sn/Al2O3 Propane Dehydrogenation Catalysts. Phys. Chem. Chem. Phys. 2013, 15, 12095– 12103,  DOI: 10.1039/c3cp50646k [Crossref], [PubMed], [CAS], Google Scholar
+45Saerens, S.; Sabbe, M. K.; Galvita, V. V.; Redekop, E. A.; Reyniers, M.-F.; Marin, G. B. The Positive Role of Hydrogen on the Dehydrogenation of Propane on Pt(111). ACS Catal. 2017, 7, 7495– 7508,  DOI: 10.1021/acscatal.7b01584 [ACS Full Text ], [CAS], Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+4
+Mentioning
+79
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 76 publications.
+Ming-Lei Sun, Zhong-Pan Hu, Hao-Yu Wang, Yu-Jun Suo, Zhong-Yong Yuan. Design Strategies of Stable Catalysts for Propane Dehydrogenation to Propylene. ACS Catalysis 2023, 13 (7) , 4719-4741. https://doi.org/10.1021/acscatal.3c00103
+Patricia Poths, Harry W. T. Morgan, Guangjing Li, Autumn Fuchs, Scott L. Anderson, Anastassia N. Alexandrova. Promoter–Poison Partnership Protects Platinum Performance in Coked Cluster Catalysts. The Journal of Physical Chemistry C 2023, 127 (11) , 5376-5384. https://doi.org/10.1021/acs.jpcc.3c00156
+Yuan Zhang, Baojun Wang, Maohong Fan, Lixia Ling, Riguang Zhang. Ethane Dehydrogenation over the Core–Shell Pt-Based Alloy Catalysts: Driven by Engineering the Shell Composition and Thickness. ACS Applied Materials & Interfaces 2023, 15 (8) , 10679-10695. https://doi.org/10.1021/acsami.2c21249
+Lulu Ping, Yuan Zhang, Baojun Wang, Maohong Fan, Lixia Ling, Riguang Zhang. Unraveling the Surface State Evolution of IrO2 in Ethane Chemical Looping Oxidative Dehydrogenation. ACS Catalysis 2023, 13 (2) , 1381-1399. https://doi.org/10.1021/acscatal.2c05770
+Jessica A. Muhlenkamp, Jason C. Hicks. Consequences of Propane Dehydrogenation and Oxidative Regeneration on Ni-Phosphide Phase Stability. Industrial & Engineering Chemistry Research 2022, 61 (39) , 14472-14481. https://doi.org/10.1021/acs.iecr.2c02514
+Sergio Pablo-García, Albert Sabadell-Rendón, Ali J. Saadun, Santiago Morandi, Javier Pérez-Ramírez, Núria López. Generalizing Performance Equations in Heterogeneous Catalysis from Hybrid Data and Statistical Learning. ACS Catalysis 2022, 12 (2) , 1581-1594. https://doi.org/10.1021/acscatal.1c04345
+Shijia Sun, Guodong Sun, Chunlei Pei, Zhi-Jian Zhao, Jinlong Gong. Origin of Performances of Pt/Cu Single-Atom Alloy Catalysts for Propane Dehydrogenation. The Journal of Physical Chemistry C 2021, 125 (34) , 18708-18716. https://doi.org/10.1021/acs.jpcc.1c04295
+Zan Lian, Chaowei Si, Faheem Jan, ShuaiKe Zhi, Bo Li. Coke Deposition on Pt-Based Catalysts in Propane Direct Dehydrogenation: Kinetics, Suppression, and Elimination. ACS Catalysis 2021, 11 (15) , 9279-9292. https://doi.org/10.1021/acscatal.1c00331
+Tao Wang, Xinjiang Cui, Kirsten T. Winther, Frank Abild-Pedersen, Thomas Bligaard, Jens K. Nørskov. Theory-Aided Discovery of Metallic Catalysts for Selective Propane Dehydrogenation to Propylene. ACS Catalysis 2021, 11 (10) , 6290-6297. https://doi.org/10.1021/acscatal.0c05711
+Drejc Kopač, Damjan Lašič Jurković, Blaž Likozar, Matej Huš. First-Principles-Based Multiscale Modelling of Nonoxidative Butane Dehydrogenation on Cr2O3(0001). ACS Catalysis 2020, 10 (24) , 14732-14746. https://doi.org/10.1021/acscatal.0c03197
+Ling Xiao, Yu-Ling Shan, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Wei-Kang Yuan, Yi-An Zhu. Beyond the Reverse Horiuti–Polanyi Mechanism in Propane Dehydrogenation over Pt Catalysts. ACS Catalysis 2020, 10 (24) , 14887-14902. https://doi.org/10.1021/acscatal.0c03381
+Jing-Tan Han, Zhong-Hua Xue, Ke Zhang, Hong-Hui Wang, Xin-Hao Li, Jie-Sheng Chen. Atomically Dispersed Ni-Based Anti-Coking Catalysts for Methanol Dehydrogenation in a Fixed-Bed Reactor. ACS Catalysis 2020, 10 (21) , 12569-12574. https://doi.org/10.1021/acscatal.0c03328
+Sai Chen, Chunlei Pei, Guodong Sun, Zhi-Jian Zhao, Jinlong Gong. Nanostructured Catalysts toward Efficient Propane Dehydrogenation. Accounts of Materials Research 2020, 1 (1) , 30-40. https://doi.org/10.1021/accountsmr.0c00012
+Ningning Kong, Xing Fan, Fangfang Liu, Lu Wang, Haiping Lin, Youyong Li, Shuit-Tong Lee. Single Vanadium Atoms Anchored on Graphitic Carbon Nitride as a High-Performance Catalyst for Non-oxidative Propane Dehydrogenation. ACS Nano 2020, 14 (5) , 5772-5779. https://doi.org/10.1021/acsnano.0c00659
+Xiaoxiao Zhu, Bingbing Chen, Xinping Wang. High active and stable structure of PtBi0.5K4/Si-Beta catalyzing propane dehydrogenation. Chemical Engineering Journal 2023, 474 , 145894. https://doi.org/10.1016/j.cej.2023.145894
+Daniel Arribas, Víctor Villalobos-Vilda, Ezequiel Tosi, Paolo Lacovig, Alessandro Baraldi, Luca Bignardi, Silvano Lizzit, José Ignacio Martínez, Pedro Luis de Andres, Alejandro Gutiérrez, José Ángel Martín-Gago, Pablo Merino. In situ observation of the on-surface thermal dehydrogenation of n -octane on Pt(111). Nanoscale 2023, 15 (35) , 14458-14467. https://doi.org/10.1039/D3NR02564K
+Changqing Chu, Baoyu Chen, Shenggang Li, Yuhan Sun, Ke Liu. Propane dehydrogenation by atomically thin platinum layer on pristine two-dimensional MXenes. Journal of Catalysis 2023, 425 , 333-344. https://doi.org/10.1016/j.jcat.2023.06.031
+Xueer Wei, Jiawei Cheng, Yubing Li, Kang Cheng, Fanfei Sun, Qinghong Zhang, Ye Wang. Bimetallic clusters confined inside silicalite-1 for stable propane dehydrogenation. Nano Research 2023, 16 (8) , 10881-10889. https://doi.org/10.1007/s12274-023-5953-y
+Bing Han, Riguang Zhang. Unraveling the role of active site Rh aggregation form in tuning the catalytic performance of ethane direct dehydrogenation. Molecular Catalysis 2023, 547 , 113397. https://doi.org/10.1016/j.mcat.2023.113397
+Yiou Shan, Huimin Hu, Xiaoqiang Fan, Zhen Zhao. Recent progress in catalytic dehydrogenation of propane over Pt-based catalysts. Physical Chemistry Chemical Physics 2023, 25 (28) , 18609-18622. https://doi.org/10.1039/D3CP01659E
+José F. Ruggera, Marco A. Ocsachoque, Maia Montaña, Mónica L. Casella, Ileana D. Lick. DFT Studies of the Adsorption of Propane and Propene on Metallic Surfaces in Ag/ZrO2 Catalysts as a Model for Catalytic Combustion Reactions of Light Hydrocarbons. Catalysts 2023, 13 (7) , 1068. https://doi.org/10.3390/catal13071068
+Xin Chang, Zhenpu Lu, Xianhui Wang, Zhi-Jian Zhao, Jinlong Gong. Tracking C–H bond activation for propane dehydrogenation over transition metal catalysts: work function shines. Chemical Science 2023, 14 (23) , 6414-6419. https://doi.org/10.1039/D3SC01057K
+Bohan Feng, Dong Li, Jing Xiong, Yuechang Wei, Yuanfeng Li, Zhen Zhao, Weiyu Song, Xiangyang Ji, Jian Liu, Chunming Xu. Unraveling the real active site of reaction-induced trivalent vanadium ion in VOx/Al2O3 catalysts for boosting photothermal catalytic propane non-oxidative dehydrogenation. Applied Catalysis B: Environmental 2023, 325 , 122337. https://doi.org/10.1016/j.apcatb.2022.122337
+Yuan Zhang, Baojun Wang, Maohong Fan, Lixia Ling, Riguang Zhang. Ethane dehydrogenation over the g-C3N4 supported metal single-atom catalysts to enhance reactivity and coking-resistance ability. Nano Research 2023, 16 (5) , 6142-6152. https://doi.org/10.1007/s12274-022-5187-4
+Jiajia Shi, Yao Wei, Leilei Zhang, Dan Zhou, Zhounan Yu, Shengxin Zhang, Xiaofeng Yang, Ji Yang, Yang Su, Zheng Jiang, Aiqin Wang. Potassium-promoted single-atom Co-N-C catalyst for direct dehydrogenation of ethylbenzene. Nano Research 2023, 16 (3) , 3687-3694. https://doi.org/10.1007/s12274-022-4828-y
+Seokhyun Choung, Yoonho Kim, Jinuk Moon, Jangeon Roh, Jinwoo Hwang, Jeong Woo Han. Unveiling the catalyst deactivation mechanism in the non-oxidative dehydrogenation of light alkanes on Rh(111): Density functional theory and kinetic Monte Carlo study. Catalysis Today 2023, 411-412 , 113819. https://doi.org/10.1016/j.cattod.2022.06.034
+Fushan Feng, Haiyuan Zhang, Shaoqi Chu, Qinqin Zhang, Chao Wang, Guangjian Wang, Fang Wang, Liancheng Bing, Dezhi Han. Recent progress on the traditional and emerging catalysts for propane dehydrogenation. Journal of Industrial and Engineering Chemistry 2023, 118 , 1-18. https://doi.org/10.1016/j.jiec.2022.11.001
+Zhinian Cheng, Yang Wang, Daokuan Jin, Jianxin Liu, Wenghang Wang, Yongqiang Gu, Wanxin Ni, Zhaoxuan Feng, Mingbo Wu. Petroleum pitch-derived porous carbon as a metal-free catalyst for direct propane dehydrogenation to propylene. Catalysis Today 2023, 410 , 164-174. https://doi.org/10.1016/j.cattod.2022.06.022
+Xunming Su, Zhong-Pan Hu, Jingfeng Han, Yuhong Jia, Shutao Xu, Jin Zhang, Dong Fan, Yingxu Wei, Zhongmin Liu. Biomolecule-inspired synthesis of framework zinc in MFI zeolite for propane dehydrogenation. Microporous and Mesoporous Materials 2023, 348 , 112371. https://doi.org/10.1016/j.micromeso.2022.112371
+Fang-Cheng Zhao, Huan Yang, Zhi-Jun Sui, Yi-An Zhu, De Chen, Xing-Gui Zhou. Self-adaptive structure and catalytic performance of the Pt–Sn/Al 2 O 3 propane dehydrogenation catalyst regenerated by dichloroethane oxychlorination. Catalysis Science & Technology 2022, 12 (23) , 7171-7181. https://doi.org/10.1039/D2CY00921H
+Mohsin Siddique, Wagma Subhan, Falak Naz, Arif Nawaz. Biosynthesis of highly porous Ag/Bi/SnO2 nanohybrid material using seeds extract of Caesalpinia bonduc and their photocatalytic activity. Physica B: Condensed Matter 2022, 644 , 414209. https://doi.org/10.1016/j.physb.2022.414209
+Hend Omar Mohamed, Rajesh K. Parsapur, Idoia Hita, José Luis Cerrillo, Adrian Ramírez, Kuo-Wei Huang, Jorge Gascon, Pedro Castaño. Stable and reusable hierarchical ZSM-5 zeolite with superior performance for olefin oligomerization when partially coked. Applied Catalysis B: Environmental 2022, 316 , 121582. https://doi.org/10.1016/j.apcatb.2022.121582
+Antonio J. Martín, Sharon Mitchell, Cecilia Mondelli, Shibashish Jaydev, Javier Pérez-Ramírez. Unifying views on catalyst deactivation. Nature Catalysis 2022, 5 (10) , 854-866. https://doi.org/10.1038/s41929-022-00842-y
+Haolei Zhang, Mingcan Zhao, Yanping Li, Chengxiang Li, Wei Ge. Concentration fluctuation caused by reaction–diffusion coupling near catalytic active sites. Chinese Journal of Chemical Engineering 2022, 50 , 254-263. https://doi.org/10.1016/j.cjche.2022.06.023
+Rui Zhang, Qing-Yu Chang, Fang Ma, Muhammad Zeeshan, Ming-Lei Yang, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Yi-An Zhu. Enhanced catalytic performance of transition metal-doped Cr2O3 catalysts for propane dehydrogenation: A microkinetic modeling study. Chemical Engineering Journal 2022, 446 , 136913. https://doi.org/10.1016/j.cej.2022.136913
+Yan Wang, Chunlei Pei, Xianhui Wang, Guodong Sun, Zhi-Jian Zhao, Jinlong Gong. The role of pentacoordinate Al3+ sites of Pt/Al2O3 catalysts in propane dehydrogenation. Fundamental Research 2022, 371 https://doi.org/10.1016/j.fmre.2022.08.020
+Gregor D. Wehinger, Matteo Ambrosetti, Raffaele Cheula, Zhao-Bin Ding, Martin Isoz, Bjarne Kreitz, Kevin Kuhlmann, Martin Kutscherauer, Kaustav Niyogi, Jeroen Poissonnier, Romain Réocreux, Dominik Rudolf, Janika Wagner, Ronny Zimmermann, Mauro Bracconi, Hannsjörg Freund, Ulrike Krewer, Matteo Maestri. Quo vadis multiscale modeling in reaction engineering? – A perspective. Chemical Engineering Research and Design 2022, 184 , 39-58. https://doi.org/10.1016/j.cherd.2022.05.030
+Fuwen Yang, Jie Zhang, Zongbo Shi, Jinwei Chen, Gang Wang, Junjie He, Junyu Zhao, Runsheng Zhuo, Ruilin Wang. Advanced design and development of catalysts in propane dehydrogenation. Nanoscale 2022, 14 (28) , 9963-9988. https://doi.org/10.1039/D2NR02208G
+Yupeng Du, Yanxiao Wang, Chengtao Zhang, Rongzhao Li, Bo Wang, Shuo Li, Chaohe Yang. Theoretical and experimental investigations into light alkane dehydrogenation over chromium-containing catalyst. Fuel 2022, 320 , 123893. https://doi.org/10.1016/j.fuel.2022.123893
+Zhongchen Ma, Wentao Xu, Qige Wang, Qi Zhou, Jicheng Zhou. Highly effective microwave catalytic oxidative dehydrogenation of propane by CO2 over V-La-doped dendritic mesoporous silica-based microwave catalysts. Chemical Engineering Journal 2022, 435 , 135081. https://doi.org/10.1016/j.cej.2022.135081
+Yaoxin Wang, Jiandian Wang, Ping Zheng, Changyong Sun, Junyin Luo, Xiaowei Xie. Boosting selectivity and stability on Pt/BN catalysts for propane dehydrogenation via calcination & reduction-mediated strong metal-support interaction. Journal of Energy Chemistry 2022, 67 , 451-457. https://doi.org/10.1016/j.jechem.2021.10.008
+Bohan Feng, Yue-Chang Wei, Wei-Yu Song, Chun-Ming Xu. A review on the structure-performance relationship of the catalysts during propane dehydrogenation reaction. Petroleum Science 2022, 19 (2) , 819-838. https://doi.org/10.1016/j.petsci.2021.09.015
+M. Pineda, M. Stamatakis. Kinetic Monte Carlo simulations for heterogeneous catalysis: Fundamentals, current status, and challenges. The Journal of Chemical Physics 2022, 156 (12) https://doi.org/10.1063/5.0083251
+Drejc Kopač, Blaž Likozar, Matej Huš. Metal-doped Cr2O3 as a catalyst for non-oxidative propane and butane dehydrogenation: A multiscale kinetic study. Applied Surface Science 2022, 575 , 151653. https://doi.org/10.1016/j.apsusc.2021.151653
+ShuaiKe Zhi, Zan Lian, ChaoWei Si, Faheem Jan, Min Yang, Bo Li. A critical evaluation of the catalytic role of CO 2 in propane dehydrogenation catalyzed by chromium oxide from a DFT-based microkinetic simulation. Physical Chemistry Chemical Physics 2022, 114 https://doi.org/10.1039/D2CP00027J
+Mohsin Siddique, Wagma Subhan, Falak Naz, Arif Nawaz. Biosynthesis of Highly Porous Ag/Bi/Sno2 Nanohybrid Material Using Seeds Extract of Ceasalpinia Bonduc and Their Photocatalytic Activity. SSRN Electronic Journal 2022, 240 https://doi.org/10.2139/ssrn.4118411
+Xiaowen Chen, Mi Peng, Xiangbin Cai, Yunlei Chen, Zhimin Jia, Yuchen Deng, Bingbao Mei, Zheng Jiang, Dequan Xiao, Xiaodong Wen, Ning Wang, Hongyang Liu, Ding Ma. Regulating coordination number in atomically dispersed Pt species on defect-rich graphene for n-butane dehydrogenation reaction. Nature Communications 2021, 12 (1) https://doi.org/10.1038/s41467-021-22948-w
+Yuan Zhang, Baojun Wang, Maohong Fan, Debao Li, Riguang Zhang. Ethane dehydrogenation over the single-atom alloy catalysts: Screening out the excellent catalyst with the dual descriptors. Fuel 2021, 306 , 121641. https://doi.org/10.1016/j.fuel.2021.121641
+Ling Xiao, Ping Hu, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Wei-Kang Yuan, Yi-An Zhu. Rational design of intermetallic compound catalysts for propane dehydrogenation from a descriptor-based microkinetic analysis. Journal of Catalysis 2021, 404 , 32-45. https://doi.org/10.1016/j.jcat.2021.09.008
+Jian Wang, Yong-Hong Song, Zhao-Tie Liu, Zhong-Wen Liu. Active and selective nature of supported CrOx for the oxidative dehydrogenation of propane with carbon dioxide. Applied Catalysis B: Environmental 2021, 297 , 120400. https://doi.org/10.1016/j.apcatb.2021.120400
+Matteo Monai, Marianna Gambino, Sippakorn Wannakao, Bert M. Weckhuysen. Propane to olefins tandem catalysis: a selective route towards light olefins production. Chemical Society Reviews 2021, 50 (20) , 11503-11529. https://doi.org/10.1039/D1CS00357G
+Tao Wang, Frank Abild-Pedersen. Identifying factors controlling the selective ethane dehydrogenation on Pt-based catalysts from DFT based micro-kinetic modeling. Journal of Energy Chemistry 2021, 58 , 37-40. https://doi.org/10.1016/j.jechem.2020.09.034
+Yihu Dai, Xing Gao, Qiaojuan Wang, Xiaoyue Wan, Chunmei Zhou, Yanhui Yang. Recent progress in heterogeneous metal and metal oxide catalysts for direct dehydrogenation of ethane and propane. Chemical Society Reviews 2021, 50 (9) , 5590-5630. https://doi.org/10.1039/D0CS01260B
+Guoming Lin, Yunqi Su, Xiuyun Duan, Kui Xie. High‐Density Lewis Acid Sites in Porous Single‐Crystalline Monoliths to Enhance Propane Dehydrogenation at Reduced Temperatures. Angewandte Chemie International Edition 2021, 60 (17) , 9311-9315. https://doi.org/10.1002/anie.202100244
+Guoming Lin, Yunqi Su, Xiuyun Duan, Kui Xie. High‐Density Lewis Acid Sites in Porous Single‐Crystalline Monoliths to Enhance Propane Dehydrogenation at Reduced Temperatures. Angewandte Chemie 2021, 133 (17) , 9397-9401. https://doi.org/10.1002/ange.202100244
+Yalan Wang, Ping Hu, Jia Yang, Yi-An Zhu, De Chen. C–H bond activation in light alkanes: a theoretical perspective. Chemical Society Reviews 2021, 50 (7) , 4299-4358. https://doi.org/10.1039/D0CS01262A
+Chunyi Li, Guowei Wang. Dehydrogenation of light alkanes to mono-olefins. Chemical Society Reviews 2021, 50 (7) , 4359-4381. https://doi.org/10.1039/D0CS00983K
+XiaoYing Sun, JiaHui Xue, Yu Ren, XinYu Li, LiJing Zhou, Bo Li, Zhen Zhao. Revealing nature of active site and reaction mechanism of supported chromium oxide catalyst in propane direct dehydrogenation. Molecular Catalysis 2021, 505 , 111520. https://doi.org/10.1016/j.mcat.2021.111520
+Tao Wang, Guomin Li, Xinjiang Cui, Frank Abild-Pedersen. Identification of earth-abundant materials for selective dehydrogenation of light alkanes to olefins. Proceedings of the National Academy of Sciences 2021, 118 (11) https://doi.org/10.1073/pnas.2024666118
+Sai Chen, Xin Chang, Guodong Sun, Tingting Zhang, Yiyi Xu, Yang Wang, Chunlei Pei, Jinlong Gong. Propane dehydrogenation: catalyst development, new chemistry, and emerging technologies. Chemical Society Reviews 2021, 50 (5) , 3315-3354. https://doi.org/10.1039/D0CS00814A
+Qige Wang, Wentao Xu, Zhongchen Ma, Fei Yu, Yi Chen, Huanyu Liao, Xianyou Wang, Jicheng Zhou. Highly Effective Direct Dehydrogenation of Propane to Propylene by Microwave Catalysis at Low Temperature over Co−Sn/NC Microwave Catalyst. ChemCatChem 2021, 13 (3) , 1009-1022. https://doi.org/10.1002/cctc.202001640
+Huahua Fan, Xiaowa Nie, Haozhi Wang, Michael J. Janik, Chunshan Song, Xinwen Guo. Mechanistic understanding of ethane dehydrogenation and aromatization over Zn/ZSM-5: effects of Zn modification and CO 2 co-reactant. Catalysis Science & Technology 2020, 10 (24) , 8359-8373. https://doi.org/10.1039/D0CY01566K
+Luka Skubic, Julija Sovdat, Nika Teran, Matej Huš, Drejc Kopač, Blaž Likozar. Ab Initio Multiscale Process Modeling of Ethane, Propane and Butane Dehydrogenation Reactions: A Review. Catalysts 2020, 10 (12) , 1405. https://doi.org/10.3390/catal10121405
+Zhong-Pan Hu, Zheng Wang, Zhong-Yong Yuan. Cr/Al2O3 catalysts with strong metal-support interactions for stable catalytic dehydrogenation of propane to propylene. Molecular Catalysis 2020, 493 , 111052. https://doi.org/10.1016/j.mcat.2020.111052
+Zhe Wang, Yuzhuo Chen, Shanjun Mao, Kejun Wu, Kaichao Zhang, Qichuan Li, Yong Wang. Chemical Insight into the Structure and Formation of Coke on PtSn Alloy during Propane Dehydrogenation. Advanced Sustainable Systems 2020, 4 (9) https://doi.org/10.1002/adsu.202000092
+Chaowei Si, Zan Lian, Samson O. Olanrele, XiaoYing Sun, Bo Li. Revealing the origin of the reactivity of metal-free boron nitride catalysts in oxidative dehydrogenation of propane. Applied Surface Science 2020, 519 , 146241. https://doi.org/10.1016/j.apsusc.2020.146241
+Qing‐Yu Chang, Kai‐Qi Wang, Ping Hu, Zhi‐Jun Sui, Xing‐Gui Zhou, De Chen, Wei‐Kang Yuan, Yi‐An Zhu. Dual‐function catalysis in propane dehydrogenation over Pt 1 –Ga 2 O 3 catalyst: Insights from a microkinetic analysis. AIChE Journal 2020, 66 (7) https://doi.org/10.1002/aic.16232
+Matej Huš, Drejc Kopač, Blaž Likozar. Kinetics of non-oxidative propane dehydrogenation on Cr2O3 and the nature of catalyst deactivation from first-principles simulations. Journal of Catalysis 2020, 386 , 126-138. https://doi.org/10.1016/j.jcat.2020.03.037
+Xiaoping Wu, Qiao Zhang, Lungang Chen, Qiying Liu, Xinghua Zhang, Qi Zhang, Longlong Ma, Chenguang Wang. Enhanced catalytic performance of PtSn catalysts for propane dehydrogenation by a Zn-modified Mg(Al)O support. Fuel Processing Technology 2020, 198 , 106222. https://doi.org/10.1016/j.fuproc.2019.106222
+Chan Wu, Li Wang, Zhourong Xiao, Guozhu Li, Lichang Wang. Understanding deep dehydrogenation and cracking of n -butane on Ni(111) by a DFT study. Physical Chemistry Chemical Physics 2020, 22 (2) , 724-733. https://doi.org/10.1039/C9CP05022A
+Ling Xiao, Fang Ma, Yi-An Zhu, Zhi-Jun Sui, Jing-Hong Zhou, Xing-Gui Zhou, De Chen, Wei-Kang Yuan. Improved selectivity and coke resistance of core-shell alloy catalysts for propane dehydrogenation from first principles and microkinetic analysis. Chemical Engineering Journal 2019, 377 , 120049. https://doi.org/10.1016/j.cej.2018.09.210
+Franziska Hess. Efficient Implementation of Cluster Expansion Models in Surface Kinetic Monte Carlo Simulations with Lateral Interactions: Subtraction Schemes, Supersites, and the Supercluster Contraction. Journal of Computational Chemistry 2019, 40 (30) , 2664-2676. https://doi.org/10.1002/jcc.26041
+Yanping Li, Mingcan Zhao, Chengxiang Li, Wei Ge. Concentration fluctuation due to reaction-diffusion coupling near an isolated active site on catalyst surfaces. Chemical Engineering Journal 2019, 373 , 744-754. https://doi.org/10.1016/j.cej.2019.05.052
+Jingde Li, Guihua Liu, Bohua Ren, Eric Croiset, Yongguang Zhang, Luis Ricardez-Sandoval. Mechanistic study of site blocking catalytic deactivation through accelerated kinetic Monte Carlo. Journal of Catalysis 2019, 378 , 176-183. https://doi.org/10.1016/j.jcat.2019.08.029
+Zhong-Pan Hu, Dandan Yang, Zheng Wang, Zhong-Yong Yuan. State-of-the-art catalysts for direct dehydrogenation of propane to propylene. Chinese Journal of Catalysis 2019, 40 (9) , 1233-1254. https://doi.org/10.1016/S1872-2067(19)63360-7
+Sanket Kadulkar, Debapriya Banerjee, Fardin Khabaz, Roger T. Bonnecaze, Thomas M. Truskett, Venkat Ganesan. Influence of morphology of colloidal nanoparticle gels on ion transport and rheology. The Journal of Chemical Physics 2019, 150 (21) https://doi.org/10.1063/1.5099056
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Network of surface reactions of PDH. All elementary reactions are reversible. Asterisks indicate surface adsorbed species. The reaction labels (RX, X = 1–45) are shown in Table 2. Adsorption reactions of gases and dissociation of hydrogen are not included.
+Figure 2
+Figure 2. Top view of first layer of the Pt(111) surface (Pt is shown in gray) and the considered sites (shown in the colors indicated) used in the simulation. The Pt(111) surface consists of four different sites: atop, bridge, fcc hollow, and hcp hollow.
+Figure 3
+Figure 3. Side view of geometries of propane (left) and propylene (right) adsorbed on Pt(111). Three different GGA functionals have been used: RPBE, RPBE-vdW, and BEEF-vdW. Pt is shown in light gray, C in dark gray, and H in white.
+Figure 4
+Figure 4. Geometries of adsorbed hydrogen atoms on four different sites on Pt(111) and the bond distance between Pt and H. Pt is shown in light gray and H in white.
+Figure 5
+Figure 5. Geometry of the transition state for hydrogen molecule activation. Pt is shown in light gray and H in white.
+Figure 6
+Figure 6. Geometries of transition states in the C–H breaking reactions of C3 species. The distance of the breaking bond is also indicated. Pt is shown in light gray, C in dark gray, and H in white.
+Figure 7
+Figure 7. Geometries of transition states in C–C breaking reactions. The distance of the breaking bond is also indicated. Pt is shown in light gray, C in dark gray, and H in white.
+Figure 8
+Figure 8. Activation energy of dehydrogenation and cracking of C3 species after ZPE correction. Red bars denote dehydrogenation, and black bars denote cracking. Reactions R1–R29 are indicated in Table 2.
+Figure 9
+Figure 9. “Flow direction” of carbon species in PDH. Simulation parameters: 20 × 20 lattice, no hydrogen in the initial state. The percentages are obtained by the number of reactions (forward reaction minus backward reaction) divided by consumption of propane.
+Figure 10
+Figure 10. Time evolution of the propane consumption and selectivity of various products from PDH.
+Figure 11
+Figure 11. Snapshots and species statistics at 5 × 10–4 s and 2 × 10–2 s: (a, b) snapshots of the 20 × 20 lattice, with H atoms shown in blue, C3 species in red, and C2/1 species in black; (c, d) statistics of surface species of (a) and (b), respectively. The numbers abc* along the x axis represent CHaCHbCHc* species (for example, 322* represents the subscript numbers in CH3CH2CH2*).
+Figure 12
+Figure 12. Time evolution of rates and selectivity of propylene obtained from a smaller 5 × 5 lattice simulation.
+Figure 13
+Figure 13. Snapshots of the 5 × 5 lattice at 0.019 and 0.052 s. Adsorbed C3 species are shown in red, adsorbed C2/1 species in black, and free sites in green. The closed dotted curve highlights the adjoining active sites.
+Figure 14
+Figure 14. Count of forward (fw) and backward (bw) elementary reaction steps under pure propane (indicated by 0) and propane/H2 mixture (indicated by 1). The percentages are obtained by dividing the number of the reaction by the consumption of propane (positive values of R4 and R5 represent product propylene, and positive of values of R9 and R10 represent consumption of propylene). Gray indicates a forward reaction and red a backward reaction.
+
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

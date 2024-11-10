@@ -1,0 +1,488 @@
+<DOCUMENT>
+Effect of Surface Oxidation on Oxidative Propane Dehydrogenation over Chromia: An Ab Initio Multiscale Kinetic Study
+
+Abstract
+An increasingly utilized way for the production of propene is propane dehydrogenation. The reaction presents an alternative to conventional processes based on petroleum resources. In this work, we investigate theoretically how Cr2O3 catalyzes this reaction in oxidative and reducing environments. Although previous studies showed that the reduced catalyst is selective for the non-oxidative dehydrogenation of propane, real operating conditions are oxidative. Herein, we use multiscale modeling to investigate the difference between the oxidized and reduced catalyst and their performance. The complete reaction pathway for propane dehydrogenation, including C–C cracking, formation of side products (propyne, ethane, ethylene, acetylene, and methane), and catalyst coking on oxidized and reduced surfaces of α-Cr2O3(0001), is calculated using density functional theory with the Hubbard correction. Parameters describing adsorption, desorption, and surface reactions are used in a kinetic Monte Carlo simulation, which employed industrially relevant conditions (700–900 K, pressures up to 2 bar, and varying oxidants: N2O, O2, and none). We observe that over the reduced surface, propene and hydrogen form with high selectivity. When oxidants are used, the surface is oxidized, which changes the reaction mechanism and kinetics. During a much faster reaction, H2O forms as a coproduct in a Mars–van Krevelen cycle. Additionally, CO2 is also formed, which represents waste and adversely affects the selectivity. It is shown that the oxidized surface is much more active but prone to the formation of CO2, while the reduced surface is less active but highly selective toward propene. Moreover, the effect of the oxidant used is investigated, showing that N2O is preferred to O2 due to higher selectivity and less catalyst coking. We show that there exists an optimum degree of surface oxidation, where the yield of propene is maximized. The coke, which forms during the reaction, can be burnt away as CO2 with oxygen.
+This publication is licensed under
+CC-BY 4.0.
+KEYWORDS:dehydrogenation chromium oxide surface oxidation propane multiscale modeling
+
+Introduction
+ARTICLE SECTIONSJump To
+Short-chained olefins, such as propene (propylene) and butadiene, are important precursor chemicals in the production of plastics, synthetic rubbers, copolymers, epoxides, various organic acids, acrylonitrile, nylon, and so forth. They are predominantly extracted from higher hydrocarbons during steam cracking and fluid catalytic cracking. (1) Due to the increased demand and environmental concerns, alternative production routes are being developed, among which is dehydrogenation. (2−6) By utilizing propane as a feedstock, which represents a more prudent use than burning it as fuel, hydrogen is produced when the process is carried out non-oxidatively. (7,8) However, the high temperatures required due to the endothermicity of the reaction render it less economical. Alternatively, dehydrogenation can be performed with oxidants, such as air, oxygen, N2O, or CO2, releasing hydrogen as water in a strongly exothermic reaction.
+Propane is a rather inert compound (a heat of formation of −104 kJ mol–1) with stable C–H bonds (bond-dissociation energy of 410–420 kJ mol–1), requiring high temperatures and pressures for activation. (9) For non-oxidative dehydrogenation to propene and hydrogen, the reaction enthalpy is +124 kJ mol–1. For the oxidative dehydrogenation, the reaction enthalpy is −118, −200, or +166 kJ mol–1 when using O2, N2O, or CO2 as oxidants, respectively. (10,11) In addition to water, N2 and CO also form.
+To steer the reaction toward propene and avoid extensive cracking (non-oxidative) or oxidation (oxidative), appropriate catalysts must be used. In addition to the experimentally (12−16) and theoretically well-researched alumina-supported Pt/Sn catalysts, which underpin the CATOFIN process and operate at 500–700 °C and 2–4 bar, chromia-based catalysts are also used extensively. Rather than consisting of (semi-)noble metals, they are made of inexpensive source materials. The catalytic performance under optimum conditions (500–600 °C, 1–2 bar) is comparable. Both processes suffer from persistent coking of the catalyst, which must be regenerated or changed often, negatively impacting the catalyst longevity and the process economics.
+The use of chromia dates back to the 1930s, (17) while the first commercial technology was the Pacol process from 1968, using alumina-supported platinum catalysts. (1) Already in the 1970s, chromium oxide was used for ethylene polymerization. (18) Soon, the effectiveness of chromia-based catalysts for dehydrogenation had become apparent. Working on chromia-based catalysts, Suzuki and Kaneko already in 1977 proposed a macrokinetic model. (19) Chang et al. showed that doping with Pt improves the performance of α-Cr2O3(0001) and ZnO(101̅0). (20) Zhang et al. investigated the SBA-15-supported chromia. (21) Mentasty et al. showed that the amount of acidic sites of the alumina support strongly affects the catalytic activity. (22) Most importantly, Shee and Sayari showed that Cr(III) and Cr(VI) convert back and forth in mesoporous Cr2O3/Al2O3 during the reaction. (23) Gascón et al. performed transient kinetic modeling of propane dehydrogenation, which accounted for the coke formation as well. (24) Chin et al. modeled the reaction in an industrial moving bed reactor, (25) but neither accounted for elementary steps rather than lumped reactions. Nijhuis et al. investigated the catalyst surface with operando spectroscopic analysis and showed that small amounts of coking in fact improved the activity probably due to improved adsorption of propane. (26) Gaspar et al. showed that depending on the chromium contents, supports, and precursor compounds used, the ratio between the Cr2+, Cr3+, and Cr6+ sites varies, which strongly affects the productivity of the catalyst: Cr3+ sites are beneficial for dehydrogenation. (27)
+Purely first-principles theoretical descriptions of chromia-based catalysts for propane dehydrogenation remain scarce. In our previous studies, we have investigated the non-oxidative dehydrogenation of propane on the reduced α-Cr2O3(0001) surface using kinetic Monte Carlo (KMC) on DFT-obtained data (28) and butane dehydrogenation in an idealized plug flow reactor using DFT-fed microkinetic modeling. (29) In this work, we used DFT calculations to construct a thorough reaction pathway for propane dehydrogenation when oxidants are co-fed on the reduced and oxidized surfaces of α-Cr2O3(0001). These are used as the two extrema of the realistic catalyst surface. Using extensive KMC modeling, we investigated the kinetic parameters for propane dehydrogenation on each of the surfaces (temperature and pressure dependence), the effect of varying oxidation state (modeled as a varying ratio between the surfaces), and the effect of the oxidant used (none, O2, N2O, or CO2). We identified the rate-determining steps, the simplified reaction rate law descriptions, and the side products formed. Special emphasis is put on catalyst deactivation, which can manifest as extensive coking (formation of C* and other C-containing surface species), reduction of the catalyst surface, or (not-modeled) sintering and phase transitions.
+We show that the oxidized and reduced surfaces behave radically different and how the oxidants influence the selectivity and activity. Although both surfaces bind saturated hydrocarbons weakly, double and triple bond-containing hydrocarbons are strongly adsorbed on the oxidized surface. As a consequence, the latter exhibit a much greater activity but poor selectivity as CO2 is mostly produced. Similarly, using O2 as a strong oxidant increases the activity and suppresses the selectivity in comparison to using N2O. Without the oxidant, the oxidized surface is eventually reduced. Using multiscale modeling, we demonstrate a Goldilocks effect. For optimum conversion of propane to propene, the surface should be partially oxidized. Lastly, we show how the catalyst activity decreases due to coking. Our model captures this as an accumulation of CHx* species, which eventually transform into C*. This is, to the best of our knowledge, the first multiscale study of an industrially relevant catalyst in realistic conditions for propane dehydrogenation. Moreover, since the transition between the oxidized and reduced sites is included, this is effectively a model where the catalyst changes during the reaction.
+Computational Details
+ARTICLE SECTIONSJump To
+Electronic Structure
+Theoretical calculations of the electronic structure were performed with VASP (30−33) in the plane-wave approach. The simulation parameters chosen were consistent with our previous work (28,29) for comparability. A GGA functional by Perdew and Wang was used (PW91) (34) with the projector-augmented wave method. (35,36) To mitigate the self-interaction error on Cr when using GGA functionals, the DFT + U approach (37) was used with a Hubbard factor of D – J = 4 eV, (38,39) which had been proved to describe Cr2O3 satisfactorily. (40,41) As Cr2O3 is magnetic, spin-polarized calculations were performed with initial magnetic moments of 3.0 on chromium. The plane waves were expanded to the energy cut-off of 500 eV. The Grimme D3 correction was used to describe the dispersion interactions. (42)
+Geometry relaxations were performed with a force threshold of 0.03 eV/Å. For the identification of transition states, the dimer method (43−46) was used on rough initial approximations from the nudged elastic band method. (47) All located structures were confirmed with vibrational analysis (a displacement of 0.01 Å) to correspond to local minima (no imaginary frequencies) or saddles (precisely one imaginary frequency) and to obtain the zero-point energies.
+Due to the size of the unit cell of Cr2O3, which was optimized to a0 = 5.09 Å and c0 = 13.77 Å, a 4 × 4 × 2 Monkhorst–Pack mesh of k points sufficed. The (0001) surface was modeled with 12 layers, of which the bottom six were immovable in their bulk positions. All calculations were performed on a supercell, where the Brillouin zone was sampled at a Γ point only due to its size (). There was 15 Å of vacuum between the slabs. The dipole correction was used because the slabs were asymmetrical. (48,49)
+Thermodynamics and Kinetics
+The reaction mechanism consists of surface reactions (Langmuir–Hinshelwood), reactions on the surface involving gaseous reactants (Eley–Rideal), and adsorption/desorption equilibra, which were modeled within the transition state theory approximation. Among the adsorption reactions, we distinguish simple non-activated adsorptions (for instance, hydrocarbons) and activated dissociative adsorptions (hydrogen, CO2, N2O, O2, etc.). The former is a purely kinetic event (eq 3), while the latter is an ER reaction (eq 2). The reaction rates for these types of reactions are calculated as
+(1)
+(2)
+(3)
+where Q’s stand for partition functions (vibrational from the harmonic approximation, translational, and rotational), T for temperature, EA for activation barriers, p for pressure, A for the effective area of the reaction site, and m for mass. Furthermore, kB denotes the Boltzmann constant and h the Planck constant. All the reactions are reversible: EAfwd – EArev = ΔE + ΔΔElateral, where ΔΔElateral denotes the difference between the lateral interaction corrections (ΔElateral = Elattice state – Einfinite separation) to the energy of the initial and final states (ΔElateral final – ΔElateral initial). The reverse of the non-activated adsorption is treated as an ER-type reaction, with EA = ΔE = −Eads.
+The adsorption energy is intuitively defined as Eads = Eslab+adsorbate – Eadsorbate – Eslab, where Eslab+adsorbate stands for the energy of a relaxed slab with the adsorbate, Eadsorbate is the energy of the gaseous adsorbate, and Eslab is the energy of the empty slab. It is decomposed into the electronic interaction, Eint (negative), and the distortion energies of the adsorbate, Edis, and surface, Esurf,dis (both positive). It is evident that Eint + Edis + Esurf,dis = Eads.
+The reaction energy, ΔE, is defined as the difference between the final and initial states (Efinal – Einitial), while for the activation barrier, EA, the transition state must be known (ETS – Einitial). All energies are zero-point energy-corrected.
+Catalyst Model
+We model the catalyst as the (0001) surface of Cr2O3 with 12 layers. To prevent lateral interactions of adsorbates across the adjoining cells, a supercell is used. Wang and Smith (50) performed extensive first-principles simulations of this surface and constructed a phase diagram. They showed that five surface phases can exist between two extrema (segregated Cr atoms and condensed oxygen). From the lowest to the highest chemical potential of oxygen, chromium-terminated (A), () 1/9 ML chromyl-terminated (−Cr═O) (B), () 2/9 ML chromyl-terminated (C), (1 × 1) 1/3 ML chromyl-terminated (D), and (1 × 1) 1/3 ML oxygen-terminated (E) surfaces can manifest. Essentially, these different terminations are congruent with different oxidation states of the chromium atoms at the surface. According to the full potential linearized augmented plane wave calculations on the GGA level of theory, Wang and Smith claim that the E surface is predominant at 850 K and 1 bar O2, which are typical operating conditions for propane dehydrogenation over Cr2O3 (CATOFIN process).
+Several experimental studies have shown that such descriptions of the surface are appropriate. Maurice et al. used scanning tunnelling microscopy to show that (1 × 1) differently terminated phases occur as predicted by theory within the error bar. (51) Rohr et al. used low-energy electron diffraction (LEED) and reported a (1 × 1) Cr═O terminated surface, while the reduced phase was discovered below 10–16 atm oxygen, which is clearly out of the operating conditions for the reaction at hand. (52) Petrosyan et al. studied Cr2O3 in solutions using joint DFT and also investigated the oxygen-terminated surface. (53) In a more recent study, Kaspar et al. studied the surface structure of α-Cr2O3(0001) epitaxial thin films on alumina after activated oxygen exposure using XPS and X-ray photoelectron diffraction (XPD). XPD patterns were found to strongly suggest the Cr–Cr–O3 termination. (54) Similarly, Lübbe and Moritz performed a LEED analysis on α-Cr2O3(0001) bulk single crystals and found that “for the chromia surface the results indicate that termination with a single Cr seems not to hold”. (55) Bikondoa et al. used XRD to study the surface structure of α-Cr2O3(0001) and determined that already at an oxygen pressure of 10–5 atm, the surface is terminated by chromyl species (−Cr═O). (56) Although studying a different facet (Cr2O3(101̅2)), York et al. also found the oxygen-termination to predominate. (57)
+However, the situation during the reaction, where oxidants (O2 and N2O) and reducing species (hydrocarbons) are present, is more complicated. First, these conditions are close to a phase transition and a small increase in the temperature or decrease of the oxygen pressure would render the D surface more stable. Second, the accuracy of DFT calculations is limited in terms of chemical accuracy, meaning that surface diagrams can easily be shifted for 100–200 K and several factors for pressure. Third, catalysts are most active near phase transitions. Fourth, while oxygen is an oxidant, propane is a moderate reducing agent. Lastly, in this work, we study the reaction in both, oxidative and non-oxidative regimes, where O2 (strong oxidant), N2O, and CO2 (soft oxidant) of various concentrations or, alternatively, no oxidant are used. This would necessitate taking into account all five surface structures and their interconversion on-the-fly, which adds too many layers of complexity to a simple model.
+Noting that the B, C, and D surfaces are essentially the E surface of different surface oxygen (in the form of chromyl) coverages, we construct a simplified model as an alternative. In our model, we use the A surface, which was already used in our previous studies, (28,29) and the E surface in varying fractions. The model has three types of active sites: chromium atoms on A (Crred), oxygen atoms on A (Ored), and oxygen atoms on E (Oox). The E surface can lose the surface oxygen as O2 or, more realistically, H2O, being converted to A. It, in turn, can be reoxidized to E by N2O or O2 (see the section Reaction Mechanism for more details). As depicted in Figure 1, the lattice has a quasi-hexagonal symmetry, where each chromium atom is connected to six nearest chromium atoms and three nearest oxygen atoms and vice-versa.
+Figure 1
+Figure 1. Perspective view of the DFT-optimized (a) reduced (A) and (b) oxidized (E) surfaces Cr2O3(0001). (c) Top view of the E surface. For the A surface, an additional layer of Cr atoms is situated atop. Color code: red—O, blue—Cr, green—O (top), and teal—Cr (top). (d) An example of the KMC lattice used (sizes vary). Color code: blue—dummy sites, green—Oox, red—Crred, and yellow—Ored.
+KMC Simulations
+The kinetic analysis was performed as KMC simulations. Kinetic and thermodynamics parameters, as obtained from the DFT data, were used in the KMC model to probe the reaction at various temperatures, reactant concentrations (effectively pressures), and catalyst compositions. The simulations were performed using Zacros, which is a graph-theoretical implementation of the KMC approach. In this approach, the Hamiltonian is calculated within the energetic model, accounting for the number of adsorbed clusters on the lattice and their interactions. (58−61) The raw output from the simulations is the lattice configuration at each time interval and the amount of gaseous species consumed/formed. From these, turnover frequencies (TOFs) and, in turn, apparent activation barriers, reaction order, rate-determining steps, and degree of rate/selectivity control, and so forth are extracted.
+The simulations were carried out on a quasi-hexagonal lattice, as shown in Figure 1, which is commensurate with the lattice of the DFT model. There are two types of surface sites: one corresponding to the exposed chromium atoms and the other to oxygen atoms. Each chromium surface atom (site “Cr”) has six neighbors in the hexagonal arrangement. Additionally, each chromium atom connects to three neighboring oxygen atoms (sites “O”). Oxygen atoms are linked to six oxygen atoms in the hexagonal arrangement and the nearest three chromium atoms. In total, each surface site has a connectivity of nine (Figure 2).
+Figure 2
+Figure 2. Close-up of the lattice showing the connectivity. A gray parallelogram shows one repeating cell.
+To account for the effect of surface oxidation, two different surfaces are investigated: reduced (A) and oxidized (E). The underlying lattice is the same, but the chromium sites are not exposed on the oxidized surface. Thus, three active site types are considered (Oox, Crred, and Ored), while the Crox sites in the KMC are considered inert (having no physical counterpart, they are only included to construct the lattice more easily). The reaction constants and, consequently, the reaction mechanism are different on the two investigated surfaces and were individually determined by separate DFT calculations. The KMC simulations were performed on the 12 × 6 lattice, which corresponds to 288 sites. As seen in Figure 1, their relative ratio was varied by changing the size of the E “island” in the bottom left corner.
+Preliminary testing showed that quadrupling the lattice does not change the calculated TOFs noticeably (less than 2%). Lateral interactions were calculated for all Cx*–H* pairs up to the first nearest neighbor. The simulations were run with 19 different seeds and then averaged. Adsorption and diffusion reactions were treated as fast equilibrated events (stiffness-scaled). (62) A typical simulation was terminated after 3 million events, which sufficed to reach a steady performance. Convergence testing of three different simulations (one for each surface type) with 2 million, 3 million, and 4 million events showed that the obtained TOFs differed by less than 1%.
+The model is checked to be thermodynamically consistent. All reactions paths on the catalyst (on the oxidized or reduced surface) yield the same reaction energy as is the energy difference between the products and reactants in the gaseous phase. In the kinetic model, two sets of adsorption energies and reaction barriers are available, depending on the oxidation state of the active site.
+Results and Discussion
+ARTICLE SECTIONSJump To
+Adsorption
+Saturated hydrocarbons, of which methane, ethane, and propane were included in the model, interact with the surfaces merely through weak and non-specific van der Waals interactions. This results in high barriers for their activation (see the section Reaction Mechanism and Table 4), low surface coverages during the reaction, and negligible surface perturbation. As summarized in Table 1, the adsorption is weaker on the oxidized surface (0.23 eV vs 0.36 eV for propane, 0.21 eV vs 0.23 eV for ethane, and 0.11 eV vs 0.14 eV for methane), whereas the surface and adsorbate distortion energy due to perturbation is negligible. Molecular hydrogen does not bind to the surface. The attractive interaction is wholly due to electronic effects being weaker on the oxidized surface due to the higher electron density on the surface, repelling the saturated hydrocarbons. A Bader charge analysis shows that on the oxidized surface, oxygen atoms with a Bader charge of −0.68 are exposed, whereas the reduced surface is terminated with chromium atoms with a charge of +1.56, while the three neighboring oxygen atoms have a charge of −1.05. Effectively, the oxidized surface exhibits an acidic character with exposed oxygen atoms, which readily take on hydrogen atoms.
+Table 1. Adsorption Energies for Stable Compounds in the Reaction Scheme Can Be Decomposed Into the Interaction and Distortion Energy, Such That Esurf,dis + Edis + Eint = Eadsa
+  reduced surface (A) oxidized surface (E)
+species Esurf,dis Edis Eint Eads Esurf,dis Edis Eint Eads
+C3H8 0.00 0.02 –0.38 –0.36 0.01 0.01 –0.25 –0.23
+CH3CH═CH2 0.03 0.02 –0.50 –0.45 1.20 2.68 –6.88 –3.00
+CH3C≡CH 0.04 0.02 –0.69 –0.63 3.40 3.59 –11.09 –4.10
+C2H6 0.00 0.02 –0.25 –0.23 0.00 0.00 –0.21 –0.21
+CH2═CH2 0.02 0.02 –0.43 –0.39 1.16 2.45 –6.50 –2.89
+CH≡CH 0.04 0.02 –0.46 –0.40 2.78 3.26 –10.23 –4.19
+CH4 0.00 0.01 –0.15 –0.14 0.00 0.00 –0.11 –0.11
+H2 0.00 0.00 –0.04 –0.04 0.00 0.00 0.00 0.00
+aAll values are in eV.
+Hydrocarbons with multiple bonds (propene, propyne, ethene, and ethyne) react with the two surfaces differently. While on the reduced surface they bind to an exposed chromium atom by the interaction of their π electron cloud, they bind with the sp2 or sp carbon atoms to oxygen atoms of the oxidized surface. The latter interaction is approximately 1 order of magnitude stronger, accompanied by the strong electronic interaction and geometric effect. For instance, propene adsorbs strongly (−3.00 eV) despite the large distortion energies of the surface (+1.20 eV) and adsorbate itself (+2.68 eV). Such strong interactions have a profound effect on the reaction selectivity as the intermediates do not readily desorb but instead undergo further dehydrogenation or cracking, as shown later on.
+KMC simulations offer insight into the behavior of the catalyst structure with an atomistic resolution provided sufficient input data are available. Lateral interactions are key to transcending a mean-field description. In Table 2, we list lateral interactions between the co-adsorbed H* and every other intermediate in the reaction network. This was shown to be sufficient in our previous work, (28) while including all possible lateral interactions is impractical due to the sheer number of combinatorial possibilities. With a few exceptions, these interactions are weaker on the oxidized surface, where they are also generally repulsive.
+Table 2. Lateral Interactions (in eV) on the Reduced (A) and Oxidized (E) Surfaces
+species I species II Eint(A) Eint(E)
+H H –0.24 –0.05
+C3H8 H +0.01 0.00
+CH3CH2CH2 H +0.08 +0.20
+CH3CHCH3 H +0.06 +0.06
+CH3CH2CH H –0.01 +0.25
+CH3CHCH2 H +0.03 +0.00
+CH3CCH3 H –0.10 +0.05
+CH3CH2C H –0.25 +0.04
+CH3CHCH H +0.07 +0.37
+CH3CCH2 H +0.03 –0.18
+CH3CHC H –0.36 +0.23
+CH3CCH H +0.02 –0.39
+CH3CC H –0.27 +0.37
+C2H6 H 0.00 0.00
+CH3CH2 H +0.06 +0.07
+CH3CH H –0.24 –0.01
+CH2CH2 H +0.02 +0.07
+CH3C H –0.81 +0.18
+CH2CH H –0.06 +0.24
+CH2C H –0.26 +0.42
+CHCH H +0.08 +0.25
+CHC H –0.27 +0.20
+CC H –1.04 +0.06
+CH4 H 0.00 0.00
+CH3 H +0.02 +0.11
+CH2 H –0.50 +0.07
+CH H –0.48 +0.18
+C H –0.89 +0.06
+Surface (Re)-Oxidation
+On the reduced surface, hydrogen atoms bound to oxygen atoms can only recombine into H2 and desorb. (28,29) However, the oxidized surface can lose its surface oxygen as it gets reduced. Recombination of hydrogen atoms on two adjacent oxygen surface atoms yields chemisorbed water, which can desorb. The ensuing oxygen vacancy can migrate across the surface with a kinetic barrier of 0.63 eV (see reaction 3 in Table 3). This migration is limited to the oxidized part of the catalyst (this is relevant only in the mixed composition). If all surface oxygen atoms are lost, the oxidized surface (E) is equivalent to fully reduced (A). The oxygen vacancy can be replenished by N2O in an exothermic reaction, yielding N2 and the fully oxidized surface. The use of CO2, however, is calculated to be less effective due to a high barrier and strong endothermicity. When two adjacent oxygen vacancies form, they are easily filled by dissociative adsorption of O2. This reaction is two-step. First, O2 strongly adsorbs near the vacancies and then it dissociates. These reactions, effectively enabling a transformation between A and E, are summarized in Table 3 and included in the kinetic model. See Figure 3 for the structures involved.
+Figure 3
+Figure 3. Structures involved in reoxidation of the surface (A to E), labeled as in Table 3.
+Table 3. Reaction Steps Involved in the Oxidation Interconversion between the Reduced and Oxidized Surfacesa
+  reaction EA (eV) ΔE (eV)b
+1 2H* → H2Osurf* + * 1.19 +0.91
+2 H2Osurf* → H2O(g) + Vac* 1.36 +1.36
+3 Vac* + * → * + Vac* 0.63 +0.00
+4 Vac* + N2O(g) → * + N2(g) 0.73 –1.32
+5 Vac* + CO2(g) → * + CO(g) 2.73 +2.35
+6 2Vac* + O2(g) → O2Vac* 0.00 –2.52
+7 O2Vac* → 2* 0.64 –1.41
+aAsterisks (*) denotes empty sites on the oxidized surface (Oox), while oxygen vacancies (Vac*) correspond to the motif of the reduced surface.
+bReaction energies are relative to infinitely separated reactants and/or products.
+The surfaces (A) and (E) represent two extrema. During the reaction, the catalyst exists in an intermediate state, which is characterized by the fraction of oxygen vacancies (V*) on the surface (E).
+Reaction Mechanism
+The reaction mechanism for propane dehydrogenation, although consisting of 74 individual steps, is composed of only four types of reactions (adsorption, ER reactions, diffusion, and Langmuir–Hinshelwood reactions). The steps with the corresponding barriers and reaction energies are listed in Table 4. Propane, propene, propyne, ethane, ethene, ethyne, and methane can adsorb (vide supra), while molecular hydrogen interacts weakly and non-specifically with either surface (steps 8–15). However, it readily dissociates and binds as H(−O) (step 16) and diffuses across the surface (step 17). The carbon species either bind too strongly (all unstable intermediates and multiple bond-containing species on the oxidized surface), rendering them immobile, or too weakly, making diffusion comparable with desorption. The difference in the acidity of the surfaces is noticeable, as the hydrogen adsorption energy is −1.69 eV on the oxidized surface and −0.14 eV on the reduced surface (relative to 1/2H2(g)).
+Table 4. ZPE-Corrected Activation Barriers and Reaction Energies for the Elementary Reactions in the Modela
+      reduced surface (A) oxidized surface (E)
+  reaction step type EA ΔEb EA ΔEb
+8& H2(g) + 2# → H2## ads. 0 –0.04 0 0.00
+9& C3H8(g) + * → C3H8* ads. 0 –0.37 0 –0.23
+10& CH3CH═CH2(g) + * → CH3CHCH2* ads. 0 –0.45 0 –3.00
+11& CH3C≡CH(g) + * → CH3CCH* ads. 0 –0.61 0 –4.10
+12& CH3CH3(g) + * → CH3CH3* ads. 0 –0.23 0 –0.21
+13& CH2═CH2(g) + * → CH2CH2* ads. 0 –0.39 0 –2.89
+14& CH≡CH(g) + → CHCH* ads. 0 –0.40 0 –4.19
+15& CH4(g) + * → CH4* ads. 0 –0.14 0 –0.11
+16 H2## → 2H# dis. 0.54 –0.24 0.58 –3.38
+17& H# + # → # + H# diff. 0.61 0 0.94 0
+18 C3H8* + # → CH3CH2CH2* + H# dehydr. 1.25 +0.85 0.19 –2.64
+19 C3H8* + # → CH3CHCH3* + H# dehydr. 1.27 +0.73 0.11 –2.70
+20 CH3CH2CH2* + # → CH3CH2CH* + H# deep 1.88 +1.59 0.55 –1.88
+21 CH3CH2CH2* + # → CH3CHCH2* + H# dehydr. 1.37 +0.04 1.76 –2.27
+22 CH3CHCH3* + # → CH3CHCH2* + H# dehydr. 0.84 +0.16 0.69 –2.21
+23 CH3CHCH3* + # → CH3CCH3* + H# deep 1.74 +1.44 3.57 –2.08
+24 CH3CH2CH* + # → CH3CH2C* + H# deep 1.87 +1.62 0.60 +0.45
+25 CH3CH2CH* + # → CH3CHCH* + H# deep 1.79 –0.64 0.21 –2.16
+26 CH3CHCH2* + # → CH3CHCH* + H# dehydr. 1.42 +0.90 2.14 –1.77
+27 CH3CHCH2* + # → CH3CCH2* + H# dehydr. 1.22 +0.82 0.23 –1.90
+28 CH3CCH3* + # → CH3CCH2* + H# deep 0.64 –0.46 0.20 –2.03
+29 CH3CH2C* + # → CH3CHC* + H# deep 0.30 –0.59 0.21 –2.34
+30 CH3CHCH* + # → CH3CHC* + H# deep 1.98 +1.68 2.40 +0.27
+31 CH3CHCH* + # → CH3CCH* + H# dehydr. 1.81 +0.37 0.96 –0.99
+32 CH3CCH2* + # → CH3CCH* + H# dehydr. 1.31 +0.45 0.83 –0.86
+33 CH3CHC* + # → CH3CC* + H# deep 0.86 –0.62 0.35 –0.90
+34 CH3CCH* + # → CH3CC* + H# deep 0.92 +0.69 0.95 –0.36
+35 C3H8* + * → CH3CH2* + CH3* cracking 3.23 +1.23 3.02 –2.41
+36 CH3CH2CH2* + * → CH3CH2* + CH2* cracking 2.90 +1.92 1.96 –1.11
+37 CH3CH2CH2* + * → CH3* + CH2CH2* cracking 2.32 +0.60 3.15 –1.79
+38 CH3CHCH3* + * → CH3CH* + CH3* cracking 2.95 +2.22 1.83 –1.58
+39 CH3CHCH2* + * → CH3* + CH2CH* cracking 3.29 +1.44 1.96 –1.28
+40 CH3CHCH2* + * → CH3CH* + CH2* cracking N/A N/A 0.92 –0.71
+41 CH3CCH3* + * → CH3C* + CH3* cracking 2.55 +2.16 N/A N/A
+42 CH3CH2CH* + * → CH3* + CH2CH* cracking 3.20 –0.11 2.81 –1.67
+43 CH3CHCH* + * → CH3* + CHCH* cracking 2.79 +1.26 2.30 –0.52
+44 CH3CCH2* + * → CH3* + CH2C* cracking 3.03 +2.24 N/A N/A
+45 CH3CH2C* + * → CH3* + CH2C* cracking 2.76 –0.11 1.64 –1.76
+46 CH3CCH* + * → CH3* + CHC* cracking 3.14 +1.46 N/A N/A
+47 CH3CHC* + * → CH3* + CHC* cracking 3.13 +0.16 2.66 –0.29
+48 CH3CHC* + * → CH3CH* + C* cracking N/A N/A 0.70 +0.22
+49 C2H6* + # → CH3CH2* + H# dehydr. 1.42 +0.76 0.28 –2.66
+50 CH3CH2* + # → CH2CH2* + H# dehydr. 1.42 +0.21 0.92 –2.01
+51 CH3CH2* + # → CH3CH* + H# deep 1.99 +1.72 0.43 –1.87
+52 CH2CH2* + # → CH2CH* + H# dehydr. 1.28 +0.88 0.36 –1.77
+53 CH3CH* + # → CH3C* + H# deep 1.59 +1.83 0.64 +0.39
+54 CH3CH* + # → CH2CH* + H# deep 0.60 –0.63 0.13 –1.91
+55 CH2CH* + # → CH2C* + H# deep 1.86 +1.63 1.33 +0.36
+56 CH2CH* + # → CHCH* + H# dehydr. 1.47 +0.72 0.13 –1.01
+57 CH3C* + # → CH2C* + H# deep 0.17 –0.83 0.04 –1.94
+58 CHCH* + # → CHC* + H# deep 0.70 +0.58 1.10 +0.51
+59 CH2C* + # → CHC* + H# deep 0.55 –0.32 0.26 –0.69
+60 CHC* + # → CC* + H# deep 1.99 +3.04 1.07 +0.92
+61 C2H6* + * → CH3* + CH3* cracking 3.13 +1.11 2.81 –2.23
+62 CH3CH2* + * → CH3* + CH2* cracking 2.75 +1.89 2.25 –0.91
+63 CH2CH2* + * → CH2* + CH2* cracking N/A N/A 1.05 –0.23
+64 CH3CH* + * → CH3* + CH* cracking 2.53 +2.27 N/A N/A
+65 CH3C* + * → CH3* + C* cracking 2.30 +2.03 1.59 –1.30
+66 CH2C* + * → CH2* + C* cracking N/A N/A 0.26 –0.69
+67 CHC* + * → CH* + C* cracking N/A N/A 1.12 +0.66
+68 CC* + * → C* + C* cracking N/A N/A 0.45 –2.61
+69 CH4* + # → CH3* + H# deep 1.42 +0.78 0.48 –2.46
+70 CH3* + # → CH2* + H# deep 1.98 +1.54 0.64 –1.34
+71 CH2* + # → CH* + H# deep 2.31 +2.11 0.69 +0.48
+72 CH* + # → C* + H# deep 1.86 +2.01 1.09 –2.71
+73 C* + * → CO2(g) + 2Vac* burn     0.96 –1.60
+74 C* + O2(g) → CO2(g) + * burn 1.12 –3.95 0.96 –2.22
+aAsterisks (*) and hash signs (#) denote the Crred and Ored sites on the reduced surface (A). Data for the reduced surface are from ref (28). On the oxidized surface (E), only Oox sites are available, binding all intermediates competitively. Fast-equilibrated steps are indicated by the ampersand sign (&).
+bReaction energies are relative to infinitely separated reactants and/or products. N/A denotes cracking reactions that are deemed inaccessible on a given surface due to excessive reaction energy (ΔE > 3.0 or ΔE > 1.0 eV on the reduced and oxidized surfaces, respectively).
+As shown in Figure 4, we systematically include all possible dehydrogenation steps, where a hydrogen atom is removed from the adsorbate. We distinguish “normal” and deep dehydrogenations. As it takes two steps (two hydrogen atoms must be removed) to convert a single bond to a double bond, dehydrogenation reactions generally link a stable hydrocarbon and a monoradical (either as a reactant or as a product). Deep dehydrogenation reactions violate this rule, yielding multiple radicals. While they are generally unlikely on the reduced surface, the oxidized surface is so active that deep dehydrogenations readily proceed, occasionally surpassing normal dehydrogenation routes (for instance, CH3CH2 is preferentially deep-dehydrogenated to CH3CH instead of forming ethene). Intramolecular hydrogen migrations are omitted because their activation barriers exceed those of the dehydrogenation reactions.
+Figure 4
+Figure 4. Schematic representation of the reaction mechanism with all carbon intermediates. Black arrows represent (de)hydrogenation reaction steps (all reactions are considered reversible in the model) and red lines represent a possible C–C cleavage. Dotted lines represent cleavages that are accounted for due to symmetry.
+Upon a weak physisorption of propane (0.36 eV on the reduced surface and 0.23 eV on the oxidized surface), the reaction proceeds rapidly on the oxidized surface. Due to very low barriers (EA = 0.19 and 0.11 eV), both CH3CH2CH2 and CH3CHCH3 form. On the reduced surface, the barriers are much higher but nearly identical (EA = 1.25 and 1.27 eV), meaning both intermediates also form, albeit much more slowly. However, on the reduced surface, CH3CHCH3 is more susceptible to further dehydrogenation (EA = 0.84 eV), yielding propene. On the oxidized surface, CH3CHCH3 is dehydrogenated to propene (EA = 0.69 eV), as expected, while CH3CH2CH2 undergoes deep dehydrogenation and yields CH3CH2CH instead (EA = 0.55 eV). On the reduced surface, propene converts to propyne via CH3CCH2 (EA = 1.22 and 1.31 eV). On the oxidized surface, CH3CH2CH is dehydrogenated to CH3CHCH (EA = 0.21 eV) and propyne (EA = 0.96 eV), while propene yields propyne via CH3CCH2 (EA = 0.23 and 0.83 eV). Further dehydrogenation to CH3CC is possible on the reduced and especially oxidized surface (EA = 0.92 and 0.95 eV, respectively), where it is exothermic. The potential energy surface of the reaction steps is depicted in Figure 5. In a nutshell, dehydrogenations are exothermic and kinetically more accessible on the oxidized surface and endothermic with higher barriers on the reduced surface.
+Figure 5
+Figure 5. Potential energy surface for propane dehydrogenation over reduced (A) and oxidized (E) Cr2O3(0001). Deep dehydrogenations are not shown. Upon the removal of surface oxygen as H2O, the oxidized surface is reduced and reoxidized with O2 or N2O (latter not shown). Intermediates in light color and transition states connected with dashed lines are energetically disfavored.
+Although C2 hydrocarbons enter the reaction as partially dehydrogenated species formed in various cracking reactions of the C3 intermediates, we model the entire pathway. On the reduced surface, ethene is formed in two steps (EA = 1.42 and 1.42 eV), while on the oxidized surface CH3CH2 (EA = 0.28 eV) preferentially dehydrogenates via CH3CH (EA = 0.43 eV) and CH2CH (EA = 0.13 eV) to ethyne directly (EA = 0.13 eV). Consequently, very little ethene is formed. Methane is unlikely to dehydrogenate on the reduced surface, while the oxidized surface is conducive to full dehydrogenation to coke (C*), which has lower barriers and is exothermic. The ensuing C* cannot utilize adjacent surface oxygen atoms and desorb as CO or CO2 because of the strong endothermicity of such a reaction.
+The increased reactivity of the oxidized surface is mirrored in much greater cracking activity as well. While on the reduced surface, most cracking reactions have high barriers (above 2.5 eV) and are very endothermic, on the oxidized surface, there are kinetically very accessible C–C cleavage reactions. For instance, CH3CH–C and CH2–C are exothermic and with barriers lower than 1.0 eV. C2 species fragment even more readily (CH2–C and C–C are especially prone to cleavage). On the reduced surface, fewer cracking reactions are accessible, although there are rare instances of reactions that occur on the reduced surface and not on the oxidized surface (CH3–CCH, CH3C–CH3, CH3–CCH2, and CH3–CH). As it will be shown later on, this greater activity of the oxidized surface manifests in both higher TOFs for the production of olefins and increased cracking, causing the formation of C2 and C1 products, and coking. The coke formed is usually burnt away with cycles of excess oxygen as CO2.
+Kinetic Modeling
+Temperature Effect
+Using no oxidant, the products of propane dehydrogenation are propene and hydrogen and the reaction is endothermic. When an oxidant is used, propene, CO2, side products (propyne, ethene, etc.), and H2O are produced in an exothermic reaction. On the reduced surface, the elementary step with the largest activation barrier is C3H8 → CH3CHCH3 + H (1.27 eV), while on the oxidized surface, that is, CH3CHCH3 → CH3CHCH2 + H (0.69 eV). However, on the oxidized surface, the formation of water (EA = 1.19 eV) and its desorption (ΔE = + 1.36 eV) also play an important role.
+The true apparent activation energies are shown in Figure 6. For the production of propene, this value is 1.34 eV with O2 and 1.10 eV with N2O. The larger value for O2 does not imply that the reaction proceeds slower, which is clearly shown in Figure 6. Instead, the larger value reflects a great temperature dependence, while the overall TOF is still larger. CO2 is produced with a higher TOF and lower temperature dependence (Eapp = 0.86 and 0.75 eV with O2 and N2O, respectively). On the reduced surface (Figure 6), the apparent activation barrier is 1.39 eV and the effect of the oxidant is non-existent, which agrees with our previous work. (28) We have also studied a mixed surface, consisting of an equal initial fraction of both types of active surface. As shown in Figure 6, the behavior of this surface is, as expected, between the both extrema. The apparent activation barrier for propene production is 1.15, 1.14, and 1.29 eV with O2, N2O, and no oxidant, respectively. When using O2, CO2 is still the main product, while with N2O, propene begins to predominate at lower temperatures.
+Figure 6
+Figure 6. Arrhenius plots for the dehydrogenation of propane at pC3H8 = 1.0 bar and poxidant = 1.0 bar on the oxidized (left), reduced (center), and mixed (right) surface. The mixed surface consists of 50% of each surface type and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Full symbols denote propene production, and empty symbols denote CO2 production. Inset energies correspond to the activation barriers.
+A simple mathematical reasoning shows that the reactions with higher activation energies start to predominate at higher temperatures. However, it is known experimentally that at higher temperatures, hydrocarbons will convert to CO2 in oxidative conditions. This apparent inconsistency with our model is reconciled as follows. At higher temperatures, combustion proceeds homogeneously, while we are interested only in the performance of the catalyst, that is, surface reactions. Although the production of propene increases with temperature, this is in real life offset by homogeneous combustion. Second, real-life scenarios deal with significant catalyst deterioration at higher temperatures due to deactivation, coking, sintering, and so forth. While we include coking (vide infra), other transformations of the catalyst have not been included in the model because we are interested in the performance of the catalyst in its pristine reduced and oxidized forms and not in the description of the process per se.
+Pressure Effect
+The effect of the oxidant used and its pressure on the reaction is shown in Figure 7. At 1 bar of propane and 900 K, the partial pressure of O2 and N2O was varied from 10–3 to 40 bar over the oxidized and reduced surfaces. On the former, increasing the partial pressure of the oxidant has little effect on the selectivity. The reaction order with respect to O2 and N2O is 0.82 and 0.84 for propene and 0.84 and 0.89 for CO2 production, respectively. On the mixed surface, the effect is different. Since CO2 production proceeds only on the oxidized surface, it is not surprising that the reaction order remains virtually unchanged. For the production of propene, the reaction order drops to 0.44 with respect to O2 and 0.19 with respect to N2O. In these more realistic conditions, the effect of oxidant pressure on the selectivity is predicted to have an important effect.
+Figure 7
+Figure 7. TOF for the dehydrogenation of propane at pCH3CH2CH3 = 1.0 bar and T = 900 K and various oxidant types and pressures on the oxidized (left) and mixed (right) surface. The mixed surface consists of 50% of the oxidized and 50% of the reduced surfaces and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2 and ● N2O. Full symbols denote propene production and empty symbols denote CO2 production. Inset values denote the slopes, which correspond to the reaction order with respect to the oxidant.
+This has clear implications for selectivity, which is shown in Figure 8. On the oxidized surface, the selectivity is poor, mostly below 20%, and does not change noticeably with oxidant pressure. On the mixed surface, the effect is pronounced. Whereas at lower oxidant pressures, the production of propene predominates, the selectivity precipitously drops at higher pressures. With oxygen, above 0.3 bar, selectivity toward CO2 plateaus at 80%. Using a softer oxidant yields consistently better selectivities, exceeding 90% below 0.1 bar N2O.
+Figure 8
+Figure 8. Selectivity toward CH3CHCH2 and CO2 in conditions as in Figure 7. Lines are guides for the eye.
+The influence of propane pressure was investigated at poxidant = 1.0 bar and T = 900 K and found to be converse (Figure 9). On the oxidized surface, the reaction order of propene production with respect to propane is 0.24 and 0.14 when using O2 and N2O, respectively, while the formation of CO2 shows a slightly negative reaction order with respect to propane. On the reduced surface, the reaction order with respect to propane is close to unity, consistent with our previous work. (28) The behavior on the mixed surface falls between the two. For the production of CO2, the pressure of propane is irrelevant when using O2 or N2O as oxidants (without the oxidant, there is a positive trend with very low absolute TOF, which is attributed to the loss of surface oxygen atoms). For the production of propene, the reaction orders with respect to propane are 0.49, 0.52, and 1.00 with O2, N2O, and no oxidant, respectively. Higher propane pressures are thus expected to be advantageous for the production of propene.
+Figure 9
+Figure 9. TOF for the dehydrogenation of propane at poxidant = 1.0 bar and T = 900 K and varying propane pressure on the oxidized (left), reduced (center), and mixed (right) surfaces. The mixed surface consists of 50% of oxidized and 50% of reduced surfaces and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Full symbols denote propene production and empty symbols denote CO2 production. Inset values denote the slopes, which correspond to the reaction order with respect to propane.
+In Figure 10, we show a stark difference between the performances of the three surfaces at different propane pressures. On the oxidized surface, the selectivity toward propene remains poor and only marginally improves even when the propane pressure shoots up. On the reduced surface, propane is almost exclusively produced. In the realistic conditions, which are modeled as a mixed catalyst, the selectivity increases with propane pressure from 10% below 0.001 bar to more than 90% above 10 bar. In all instances, N2O as a soft oxidant exhibits better selectivity, which is expected.
+Figure 10
+Figure 10. Selectivity toward CH3CHCH2 and CO2 in conditions as in Figure 9. Lines are guides for the eye.
+Surface Oxidation Effect
+The analysis so far has focused on the effects of temperature and reactant pressure, which were tested on three arbitrary surface oxidation levels: fully oxidized, fully reduced, and mixed (50:50). While the oxidized surface exhibits high activity and low selectivity, the reduced surface has the exact opposite properties. Thus, a closer look into the optimum surface condition is warranted. We construct a series of mixed surfaces, as shown in Figure 1. The overall lattice size is 9 × 9 – there are three active sites per unit cell – where the bottom left corner (“island”) represents the oxidized portion of the surface. The size of the island was varied from 0 × 0 to 9 × 9 and kept fixed within the simulation run, probing different degrees of surface oxidation.
+In Figure 11, the performances of these surfaces at pCH3CH2CH3 = 1.0 bar and poxidant = 1.0 bar at T = 900 K are shown. As expected, the selectivity toward propene drops as the degree of oxidation increases. The drop is more precipitous when using O2 as opposed to NO2. The selectivity toward CO2 displays a converse pattern because no other products are produced in any meaningful amounts; temperatures in excess of 1000 K were found to be required for the production of propyne and C2 products. However, the overall catalyst activity increases with the temperature. Thus, a maximum in propene yield was expected at some intermediate degree of oxidation. When using O2, the optimum degree of oxidation seems to be around 0.2, while with N2O the optimum lies around 0.5, but the effect is not as large.
+Figure 11
+Figure 11. (Top) Selectivity toward propene (left) and CO2 (right), (bottom) catalyst activity (left) and propene yield (right). Propane dehydrogenation is performed at pCH3CH2CH3 = 1.0 bar and poxidant = 1.0 bar at T = 900 K over surfaces with a varying fraction of oxidation. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Lines are guides for the eye.
+For better insight into the catalyst performance, we study the catalyst surface, whose temporal evolution is shown in Figure 12. We plot the fraction of empty oxidized sites (*), surface oxygen vacancies (Vac*), adsorbed H*, and C1, C2, and C3 fragments at different temperatures. The rationale is as follows. The empty oxidized sites are readily available for the reaction. The surface oxygen vacancies actually correspond to the reduced catalyst surface, which is much less active (vide supra) and can be used as a surrogate for reversible catalyst inhibition. The adsorption of H* is transient and does not impede the reaction. Different carbon species, however, constitute irreversible deactivation of the catalyst. While C3 and most C2 species adsorb reversibly since they can undergo further dehydrogenation, the buildup of C1 is indicative of coking. The most abundant C2 species is CC*, which quickly plateaus and acts as an inhibitor. The C1 concentration steadily increases with time but can be burnt away with oxygen, regenerating the catalyst (in our model, we do not account for structural changes of the catalyst such treatment might cause). For comparison, the cumulative production of propene and CO2 and the consumption of propane is also shown on the secondary axes.
+Figure 12
+Figure 12. Coverage of the initially fully oxidized catalyst at T = 800 K (left), T = 900 K (center), and T = 1000 K (right), and pCH3CH2CH3 = 1.0 bar and poxidant = 1.0 bar. The oxidant used is O2 (top) or N2O (bottom). Dashed lines represent the cumulative number of molecules produced (propene, CO2) or consumed (C3H8) per active site and use the right axis. The asterisk (*) represents empty oxidized sites and Vac* represents surface oxygen vacancies, that is, empty reduced sites.
+We observe a few clear trends. First, the fraction of empty oxidized sites decreases with temperature and is higher under O2 than under N2O, where it drops to zero. Conversely, the fraction of empty reduced sites increases and approaches unity at higher temperatures. In most instances, this is the predominant surface motif. The second most abundant species is initially H*, which predominates at low temperatures. The most common carbon species are C2*, followed by C1*, which is higher at lower temperatures. Once the reaction reaches a steady state, C3* are negligible. These results explain the observed kinetic behavior of the catalyst under different conditions.
+It is clear that under N2O, the surface is more reduced, which is beneficial for the selectivity toward propene. Moreover, we see that initially only CO2 is produced (red dashed line) and only when the catalyst is sufficiently reduced is propene also formed (blue dashed line). This transition to the steady state is also accompanied by the decrease of the surface concentration of H* and C3*.
+Deactivation
+Catalyst deactivation is a common problem with oxidation reactions. As coke forms on the catalyst surface, the activity drops. Deactivation is a complex topic, which a first-principles kinetic model cannot fully reproduce. We make no attempt at describing the structural deterioration of the surface, such as sintering, phase transitions, or decomposition. We define deactivation as the buildup of dead-end carbon species, which cannot further dehydrogenate even upon C–C cracking. These are: C*, CH*, CH2*, CH3*, CC*, CHC*, CH2C*, CH3C*, CH3CC*, CH3CHC*, and CH3CH2C*.
+As shown in Figure 13, the deactivation of the catalyst occurs primarily by the accumulation of CC* and C* species. Other species (mostly CHC*) transiently form but are ultimately dehydrogenated. First, CC* is formed, which slowly transforms into C*. This might very well be an artifact of the model as both species describe the coked surface. Thus, we treat both species cumulatively in our analysis. We show that the deactivation of the catalyst can be described with the Arrhenius kinetics. The apparent activation barrier and pre-exponential factor for the deactivation are dependent on the oxidant used: 1.70 eV and A = 1.4 × 108 s–1 for O2 and 0.81 eV A = 3.6 × 102 s–1 for N2O. A much stronger temperature dependence when using a stronger oxidant is an expected result. We can compare these values with the previously calculated deactivation parameters on the reduced surface, which are EA = 2.82 eV and A = 1.66 × 1010 s–1. This shows that the oxidized surface deactivates faster than the reduced surface when O2 is used as the oxidant. Soft oxidants, such as N2O, cause a much slower catalyst deactivation.
+Figure 13
+Figure 13. (Top left) Coverage of the catalyst with transient CC* and C* at T = 900 K and pC3H8 = pO2 = 1 bar; (top right) the Arrhenius plot for the deactivation of the oxidized catalyst (measured as the buildup of CC* and C*) when using different oxidants (O2 and N2O); (bottom left) lattice snapshot after 9.42 s; (bottom right) regeneration of the coked catalyst with 1 bar O2 at 900 K when the C3H8 feed is cut off.
+In Figure 13, we show the catalyst surface after 9.4 s. The catalyst surface is partially reduced (Vac*), while the oxidized sites are mostly coked (initially with CHC* and CC* and later with C*). When the catalyst is fully coked (Figure 13), it can be recovered by burning away the coke as CO2. Since C* is removed as CO2, the surface is briefly reduced and quickly reoxidizes. N2O and CO2 are too weak oxidants for surface recovery. In real operation, cycles of catalyst coking and regeneration repeat with an hourly cadence because the catalyst is not fully oxidized. As shown previously, the reduced surface gets coked much slower. (28)
+Experimental Relevance
+It is difficult and often not very informative to try applying idealized models aimed at understanding the fundamentals in simplified conditions to real-life scenarios. Assumptions (pristine crystal lattice devoid of defects and phase boundaries, constant pressure and temperature, suppression of unwanted side reactions, reactor design, etc.) that make a model neat enough to discern trends can be next to impossible to ensure in experiments. However, some parallels can be drawn.
+The experimentally measured adsorption energy of propane by Suzuki and Kaneko is 10 kcal mol–1 (0.43 eV), which is comparable with our values of 0.36 eV for the reduced surface and 0.23 eV for the oxidized surface. (19) The apparent activation barrier for propane dehydrogenation in their study was found to be 33.9 kcal mol–1 (1.47 eV), which is comparable to values from our model (1.39 eV for the reduced surface and 1.34 eV for the oxidized surface).
+Gascón et al. modeled the reaction of propane dehydrogenation over Cr2O3/Al2O3 with a lumped microkinetic model and found an activation barrier of (308 ± 14) kJ mol–1 (3.21 eV) for the reaction C3H8 → CH4 + C2H4. (24) In our model, the decomposition of propane (C3H8 → CH3CH2 + CH3) has activation barriers of 3.23 and 3.02 eV on the reduced and oxidized surfaces, respectively. In the same model, the authors note that the “apparent reaction order of the coking process with respect to the propane concentration is very low”, which might be due to “the strong propene adsorption” and its coverage being close to unity. In our model, we also observe a weak dependence of the reaction rate on the propane concentration (see Figure 9) and very strong adsorption of propene on the oxidized surface (3.00 eV).
+In their mathematical model of experimental data from the dehydrogenation of a propane-isobutane mixture in a fluidized bed reactor over Cr2O3/Al2O3, Vernikovskaya et al. obtained high selectivities toward isobutylene (89–94%) and propylene (81–100%). (63) They decreased as the temperature increased, which is consistent with our model.
+Conclusions
+ARTICLE SECTIONSJump To
+We have investigated the mechanism and kinetics of propane dehydrogenation over oxidized and reduced α-Cr2O3(0001), which yields primarily propene and CO2. Other potential products, such as propyne and C2 and C1 hydrocarbons, could also form but only in minute amounts, especially when insufficient oxidant is present. We modeled the surface in the reduced and oxidized form. The reduced surface is Cr-terminated, while the oxidized surface has chromyl units exposed (−Cr═O). The kinetic parameters of all possible reaction steps were calculated using a first-principles DFT + U approach using the PW91 functional and D – J value of 5–1 eV. The mechanism was exhaustive, including all possible elementary steps for the dehydrogenation of propane to propene and propyne, cracking of hydrocarbons to C2 and C1 species and catalyst coking.
+First, we show that the surfaces exhibit markedly different affinities toward the adsorbates. While saturated hydrocarbons and molecular hydrogen only physisorb on both surfaces, unsaturated intermediates bind much more strongly on the oxidized surface. On the oxidized surface, the reaction energy for the dissociative adsorption of hydrogen is −3.40 eV, while on the reduced surface, it is only −0.85 eV. Similarly, unsaturated C3 and C2 hydrocarbons have interaction strengths of 3–4 eV with the oxidized surface and 0.3–0.6 eV with the reduced surface. The difference stems from electronic effects, that is, surface basicity and nucleophilicity, as the oxidized surface exposes oxygen atoms with a Bader charge of −0.68e0, while the exposed Cr atoms on the reduced surface have a positive charge (+1.56e0).
+As a consequence, the reaction mechanism is fundamentally different. This is to be expected from the stoichiometry alone as H2O is the co-product in the oxidative environment and H2 in the reducing environment. In the former case, dehydrogenation steps are exothermic with low activation barriers (generally below 1.0 eV), while the reduced surface exhibits higher barriers (typically 1–2 eV) and the steps are generally endothermic. Cracking reactions follow a similar trend, that is, being much more likely on the oxidized surface.
+Dehydrogenation over the oxidized surface follows the Mars–van Krevelen mechanism. Hydrogen atoms that shed off the hydrocarbons are picked up by integral surface oxygen atoms, which desorb in the form of water. The ensuing surface oxygen vacancy corresponds to the reduced site. These are replenished with N2O, which heals one vacancy and yields N2, or O2, which donates two oxygen atoms. While both reactions are exothermic, N2O functions as a soft oxidant with a higher barrier. O2, however, first adsorbs without a barrier in a strongly exothermic step and then readily dissociates, making it a strong oxidant. The reaction with CO2 was calculated to be too endothermic on this surface and was not studied further.
+Chang et al. have shown that the reduced surface with an additional oxygen vacancy is more active than the reduced surface. (20) However, this structure was not predicted to be stable in their phase diagram by Wang et al. (50) Our calculations also showed that this further reducing of the reduced surface is energetically not favorable as the formation energy of such a vacancy is +4.07 eV (with respect to 1/2O2).
+These data were cast into a KMC model, which also accounted for lateral interactions. It was shown that the reduced surface produces propene with high selectivity (>99%) but has a low activity. On the oxidized surface, the production of propene is approximately an order of magnitude faster. However, the production of CO2 is even faster, resulting in low selectivities. The reaction order with respect to propane is ≈1 on the reduced surface and 0.14–0.24 on the oxidized surface using O2 and N2O, respectively. On the oxidized surface, the reaction order is much more dependent on the oxidant pressure (≈0.8). The already low selectivity on the oxidized surface is further depressed if the oxidant pressure increases.
+Realistic conditions during the reaction are between the two extrema (oxidized and reduced surface). First, the reaction was studied on the mixed surface, consisting of equal parts of both surface types. This surface exhibited considerably better performance than each individual surface. Additionally, the selectivity and activity were strongly dependent on the oxidant and propane pressure and oxidant type. Further investigation of surfaces with varying degrees of oxidation showed that there exists an optimum degree of surface oxidation, which is 0.2 when using O2 and 0.5 when using N2O.
+We have shown that the catalyst also gets slowly deactivated due to the formation of carbon-heavy species. After the transient formation of CHC*, CH2*, CH*, CC*, and ultimately C* accumulate on the surface. The deactivation rate is strongly dependent on the temperature and the oxidant used. At higher temperatures with O2, the catalyst is very prone to coking, while with N2O at lower temperatures, it is less so. The formed coke can be removed by burning with O2, while N2O and CO2 are ineffective.
+These results extend our knowledge of propane dehydrogenation on Cr2O3. While our previous work examined the reaction mechanism and kinetics on the reduced surface without co-feeding oxidants, which was shown to produce propene with high selectivity, here, we showed how the catalyst in question performs in more realistic conditions. The addition of the oxidant and consequent partial oxidation of the catalyst improves the activity and can be fine-tuned to avoid excessive CO2 production.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Authors
+Matej Huš - Department of Catalysis and Chemical Reaction Engineering, National Institute of Chemistry, Hajdrihova 19, SI-1000 Ljubljana, Slovenia;  Association for Technical Culture of Slovenia (ZOTKS), Zaloška 65, SI-1000 Ljubljana, Slovenia;  https://orcid.org/0000-0002-8318-5121;  Email: matej.hus@ki.si
+Blaž Likozar - Department of Catalysis and Chemical Reaction Engineering, National Institute of Chemistry, Hajdrihova 19, SI-1000 Ljubljana, Slovenia;  https://orcid.org/0000-0001-7226-4302;  Email: blaz.likozar@ki.si
+Authors
+Drejc Kopač - Department of Catalysis and Chemical Reaction Engineering, National Institute of Chemistry, Hajdrihova 19, SI-1000 Ljubljana, Slovenia;  https://orcid.org/0000-0001-8099-230X
+David Bajec - Department of Catalysis and Chemical Reaction Engineering, National Institute of Chemistry, Hajdrihova 19, SI-1000 Ljubljana, Slovenia;  https://orcid.org/0000-0002-3201-9465
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+This work was supported by the Slovenian Research Agency (ARRS) with the research project J2-1724 and through core funding P2-0152 and infrastructure funding I0-0039. The contribution of the European Commission by funding a Horizon 2020 project BiZeolCat through grant agreement 814671 is greatly appreciated. D.B. acknowledges the support from the Young Researchers Programme by ARRS. The Ažman Computing Centre (ARC) at the National Institute of Chemistry (Ljubljana, Slovenia) is acknowledged for providing the computational resources.
+References
+ARTICLE SECTIONSJump To
+This article references 63 other publications.
+1Sattler, J. J. H. B.; Ruiz-Martinez, J.; Santillan-Jimenez, E.; Weckhuysen, B. M. Catalytic Dehydrogenation of Light Alkanes on Metals and Metal Oxides. Chem. Rev. 2014, 114, 10613– 10653,  DOI: 10.1021/cr5002436 [ACS Full Text ], [CAS], Google Scholar
+2Bruijnincx, P. C. A.; Weckhuysen, B. M. Shale Gas Revolution: An Opportunity for the Production of Biobased Chemicals?. Angew. Chem., Int. Ed. 2013, 52, 11980– 11987,  DOI: 10.1002/anie.201305058 [Crossref], [CAS], Google Scholar
+3Atanga, M. A.; Rezaei, F.; Jawad, A.; Fitch, M.; Rownaghi, A. A. Oxidative dehydrogenation of propane to propylene with carbon dioxide. Appl. Catal., B 2018, 220, 429– 445,  DOI: 10.1016/j.apcatb.2017.08.052 [Crossref], [CAS], Google Scholar
+4Wang, L.-C.; Zhang, Y.; Xu, J.; Diao, W.; Karakalos, S.; Liu, B.; Song, X.; Wu, W.; He, T.; Ding, D. Non-oxidative dehydrogenation of ethane to ethylene over ZSM-5 zeolite supported iron catalysts. Appl. Catal., B 2019, 256, 117816,  DOI: 10.1016/j.apcatb.2019.117816 [Crossref], [CAS], Google Scholar
+5Han, S.; Otroshchenko, T.; Zhao, D.; Lund, H.; Rodemerck, U.; Linke, D.; Gao, M.; Jiang, G.; Kondratenko, E. V. Catalytic non-oxidative propane dehydrogenation over promoted Cr-Zr-Ox: Effect of promoter on propene selectivity and stability. Catal. Commun. 2020, 138, 105956,  DOI: 10.1016/j.catcom.2020.105956 [Crossref], [CAS], Google Scholar
+6Cao, L.; Dai, P.; Zhu, L.; Yan, L.; Chen, R.; Liu, D.; Gu, X.; Li, L.; Xue, Q.; Zhao, X. Graphitic carbon nitride catalyzes selective oxidative dehydrogenation of propane. Appl. Catal., B 2020, 262, 118277,  DOI: 10.1016/j.apcatb.2019.118277 [Crossref], [CAS], Google Scholar
+7Gianotti, E.; Taillades-Jacquin, M.; Reyes-Carmona, Á.; Taillades, G.; Rozière, J.; Jones, D. J. Hydrogen generation via catalytic partial dehydrogenation of gasoline and diesel fuels. Appl. Catal., B 2016, 185, 233– 241,  DOI: 10.1016/j.apcatb.2015.12.015 [Crossref], [CAS], Google Scholar
+8Faria, W.; Dieguez, L.; Schmal, M. Autothermal reforming of propane for hydrogen production over Pd/CeO2/Al2O3 catalysts. Appl. Catal., B 2008, 85, 77– 85,  DOI: 10.1016/j.apcatb.2008.06.031 [Crossref], [CAS], Google Scholar
+9Pittam, D. A.; Pilcher, G. Measurements of heats of combustion by flame calorimetry. Part 8.-Methane, ethane, propane, n-butane and 2-methylpropane. J. Chem. Soc., Faraday Trans. 1 1972, 68, 2224– 2229,  DOI: 10.1039/f19726802224 [Crossref], [CAS], Google Scholar
+10Afeefy, H. Y.; Liebman, J. F.; Stein, S. E. Chapter Neutral Thermochemical Data. In NIST Chemistry WebBook, NIST Standard Reference Database Number 69; Linstrom, P. J., Mallard, W. G., Eds.; National Institute of Standards and Technology, 2017.Google Scholar
+11Burgess, D. R. Chapter Thermochemical Data. In NIST Chemistry WebBook, NIST Standard Reference Database Number 69; Linstrom, P. J., Mallard, W. G., Eds.; National Institute of Standards and Technology, 2017.Google Scholar
+12Schäfer, R.; Noack, M.; Kölsch, P.; Stöhr, M.; Caro, J. Comparison of different catalysts in the membrane-supported dehydrogenation of propane. Catal. Today 2003, 82, 15– 23,  DOI: 10.1016/s0920-5861(03)00198-6 [Crossref], [CAS], Google Scholar
+5th International Conference on Catalysis in Membrane Reactors
+13Liu, X.; Lang, W.-Z.; Long, L.-L.; Hu, C.-L.; Chu, L.-F.; Guo, Y.-J. Improved catalytic performance in propane dehydrogenation of PtSn/γ-Al2O3 catalysts by doping indium. Chem. Eng. J. 2014, 247, 183– 192,  DOI: 10.1016/j.cej.2014.02.084 [Crossref], [CAS], Google Scholar
+14Shan, Y.; Sui, Z.; Zhu, Y.; Chen, D.; Zhou, X. Effect of steam addition on the structure and activity of Pt-Sn catalysts in propane dehydrogenation. Chem. Eng. J. 2015, 278, 240– 248,  DOI: 10.1016/j.cej.2014.09.107 [Crossref], [CAS], Google Scholar
+Tailoring Sustainability through Chemical Reaction Engineering
+15Zhao, Z.-J.; Chiu, C.-c.; Gong, J. Molecular understandings on the activation of light hydrocarbons over heterogeneous catalysts. Chem. Sci. 2015, 6, 4403– 4425,  DOI: 10.1039/c5sc01227a [Crossref], [PubMed], [CAS], Google Scholar
+16Shen, L.-L.; Xia, K.; Lang, W.-Z.; Chu, L.-F.; Yan, X.; Guo, Y.-J. The effects of calcination temperature of support on PtIn/Mg(Al)O catalysts for propane dehydrogenation reaction. Chem. Eng. J. 2017, 324, 336– 346,  DOI: 10.1016/j.cej.2017.05.058 [Crossref], [CAS], Google Scholar
+17Frey, F. E.; Huppke, W. F. Equilibrium Dehydrogenation of Ethane, Propane, and the Butanes. Ind. Eng. Chem. 1933, 25, 54– 59,  DOI: 10.1021/ie50277a013 [ACS Full Text ], Google Scholar
+18Hogan, J. P. Ethylene polymerization catalysis over chromium oxide. J. Polym. Sci., Part A-1: Polym. Chem. 1970, 8, 2637– 2652,  DOI: 10.1002/pol.1970.150080929 [Crossref], [CAS], Google Scholar
+19Suzuki, I.; Kaneko, Y. Dehydrogenation of propane over chromia-alumina-potassium oxide catalyst. J. Catal. 1977, 47, 239– 248,  DOI: 10.1016/0021-9517(77)90171-3 [Crossref], [CAS], Google Scholar
+20Chang, Q.-Y.; Yin, Q.; Ma, F.; Zhu, Y.-A.; Sui, Z.-J.; Zhou, X.-G.; Chen, D.; Yuan, W.-K. Tuning Adsorption and Catalytic Properties of α-Cr2O3 and ZnO in Propane Dehydrogenation by Creating Oxygen Vacancy and Doping Single Pt Atom: A Comparative First-Principles Study. Ind. Eng. Chem. Res. 2019, 58, 10199– 10209,  DOI: 10.1021/acs.iecr.9b01143 [ACS Full Text ], [CAS], Google Scholar
+21Zhang, X.; Yue, Y.; Gao, Z. Chromium Oxide Supported on Mesoporous SBA-15 as Propane Dehydrogenation and Oxidative Dehydrogenation Catalysts. Catal. Lett. 2002, 83, 19– 25[Crossref], [CAS], Google Scholar
+22Mentasty, L. R.; Gorriz, O. F.; Cadus, L. E. Chromium Oxide Supported on Different Al2O3 Supports: Catalytic Propane Dehydrogenation. Ind. Eng. Chem. Res. 1999, 38, 396– 404,  DOI: 10.1021/ie9802562 [ACS Full Text ], [CAS], Google Scholar
+23Shee, D.; Sayari, A. Light alkane dehydrogenation over mesoporous Cr2O3/Al2O3 catalysts. Appl. Catal., A 2010, 389, 155– 164,  DOI: 10.1016/j.apcata.2010.09.013 [Crossref], [CAS], Google Scholar
+24Gascón, J.; Téllez, C.; Herguido, J.; Menéndez, M. Propane dehydrogenation over a Cr2O3/Al2O3 catalyst: transient kinetic modeling of propene and coke formation. Appl. Catal., A 2003, 248, 105– 116,  DOI: 10.1016/s0926-860x(03)00128-5 [Crossref], [CAS], Google Scholar
+25Chin, S. Y.; Radzi, S. N. R.; Maharon, I. H.; Shafawi, M. A. Kinetic model and Simulation Analysis for Propane Dehydrogenation in an Industrial Moving Bed Reactor. World Acad. Sci. Eng. Technol. 2011, 52, 183– 189Google Scholar
+26Nijhuis, T. A.; Tinnemans, S. J.; Visser, T.; Weckhuysen, B. M. Towards real-time spectroscopic process control for the dehydrogenation of propane over supported chromium oxide catalysts. Chem. Eng. Sci. 2004, 59, 5487– 5492,  DOI: 10.1016/j.ces.2004.07.103 [Crossref], [CAS], Google Scholar
+27Gaspar, A. B.; Brito, J. L. F.; Dieguez, L. C. Characterization of chromium species in catalysts for dehydrogenation and polymerization. J. Mol. Catal. A: Chem. 2003, 203, 251– 266,  DOI: 10.1016/s1381-1169(03)00381-9 [Crossref], [CAS], Google Scholar
+28Huš, M.; Kopač, D.; Likozar, B. Kinetics of non-oxidative propane dehydrogenation on Cr2O3 and the nature of catalyst deactivation from first-principles simulations. J. Catal. 2020, 386, 126– 138,  DOI: 10.1016/j.jcat.2020.03.037 [Crossref], [CAS], Google Scholar
+29Kopač, D.; Jurković, DL; Likozar, B.; Huš, M. First-Principles-Based Multiscale Modelling of Nonoxidative Butane Dehydrogenation on Cr2O3(0001). ACS Catal. 2020, 10, 14732– 14746,  DOI: 10.1021/acscatal.0c03197 [ACS Full Text ], [CAS], Google Scholar
+30Kresse, G.; Hafner, J. Ab Initio Molecular Dynamics for Liquid Metals. Phys. Rev. B: Condens. Matter Mater. Phys. 1993, 47, 558– 561,  DOI: 10.1103/physrevb.47.558 [Crossref], [PubMed], [CAS], Google Scholar
+31Kresse, G.; Hafner, J. Ab Initio Molecular-dynamics Simulation of the Liquid-metal–amorphous-semiconductor Transition in Germanium. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 49, 14251– 14269,  DOI: 10.1103/physrevb.49.14251 [Crossref], [PubMed], [CAS], Google Scholar
+32Kresse, G.; Furthmüller, J. Efficiency of Ab-initio Total Energy Calculations for Metals and Semiconductors Using a Plane-wave Basis Set. Comput. Mater. Sci. 1996, 6, 15– 50,  DOI: 10.1016/0927-0256(96)00008-0 [Crossref], [CAS], Google Scholar
+33Kresse, G.; Furthmüller, J. Efficient Iterative Schemes for Ab Initio Total-energy Calculations Using a Plane-wave Basis Set. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 11169– 11186,  DOI: 10.1103/physrevb.54.11169 [Crossref], [PubMed], [CAS], Google Scholar
+34Perdew, J. P.; Wang, Y. Accurate and simple analytic representation of the electron-gas correlation energy. Phys. Rev. B: Condens. Matter Mater. Phys. 1992, 45, 13244– 13249,  DOI: 10.1103/physrevb.45.13244 [Crossref], [PubMed], [CAS], Google Scholar
+35Blöchl, P. E. Projector Augmented-wave Method. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 50, 17953– 17979,  DOI: 10.1103/physrevb.50.17953 [Crossref], [PubMed], [CAS], Google Scholar
+36Kresse, G.; Joubert, D. From Ultrasoft Pseudopotentials to the Projector Augmented-wave Method. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 1758– 1775,  DOI: 10.1103/physrevb.59.1758 [Crossref], [CAS], Google Scholar
+37Dudarev, S. L.; Botton, G. A.; Savrasov, S. Y.; Humphreys, C. J.; Sutton, A. P. Electron-energy-loss spectra and the structural stability of nickel oxide: An LSDA+U study. Phys. Rev. B: Condens. Matter Mater. Phys. 1998, 57, 1505– 1509,  DOI: 10.1103/physrevb.57.1505 [Crossref], [CAS], Google Scholar
+38Rohrbach, A.; Hafner, J.; Kresse, G. Ab initiostudy of the (0001) surfaces of hematite and chromia: Influence of strong electronic correlations. Phys. Rev. B: Condens. Matter Mater. Phys. 2004, 70, 125426,  DOI: 10.1103/physrevb.70.125426 [Crossref], [CAS], Google Scholar
+39Costa, D.; Garrain, P.-A.; Diawara, B.; Marcus, P. Biomolecule–Biomaterial Interaction: A DFT-D Study of Glycine Adsorption and Self-Assembly on Hydroxylated Cr2O3 Surfaces. Langmuir 2011, 27, 2747– 2760,  DOI: 10.1021/la104317j [ACS Full Text ], [CAS], Google Scholar
+40Nigussa, K. N.; Borck, Ø.; Støvneng, J. A. Adsorption of H2S on α-Cr2O3(0001) surfaces: A density functional theory investigation. Corros. Sci. 2016, 111, 1– 12,  DOI: 10.1016/j.corsci.2016.04.027 [Crossref], [CAS], Google Scholar
+41Maldonado, F.; Stashans, A. DFT modelling of hydrogen sulphide adsorption on α-Cr2O3 (0001) surface. Surf. Sci. 2016, 647, 78– 83,  DOI: 10.1016/j.susc.2015.12.033 [Crossref], [CAS], Google Scholar
+42Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, H. A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu. J. Chem. Phys. 2010, 132, 154104,  DOI: 10.1063/1.3382344 [Crossref], [PubMed], [CAS], Google Scholar
+43Xiao, P.; Sheppard, D.; Rogal, J.; Henkelman, G. Solid-state Dimer Method for Calculating Solid-solid Phase Transitions. J. Chem. Phys. 2014, 140, 174104,  DOI: 10.1063/1.4873437 [Crossref], [PubMed], [CAS], Google Scholar
+44Kästner, J.; Sherwood, P. Superlinearly Converging Dimer Method for Transition State Search. J. Chem. Phys. 2008, 128, 014106,  DOI: 10.1063/1.2815812 [Crossref], [PubMed], [CAS], Google Scholar
+45Heyden, A.; Bell, A. T.; Keil, F. J. Efficient Methods for Finding Transition States in Chemical Reactions: Comparison of Improved Dimer Method and Partitioned Rational Function Optimization Method. J. Chem. Phys. 2005, 123, 224101,  DOI: 10.1063/1.2104507 [Crossref], [PubMed], [CAS], Google Scholar
+46Henkelman, G.; Jónsson, H. A Dimer Method for Finding Saddle Points on High Dimensional Potential Surfaces Using Only First Derivatives. J. Chem. Phys. 1999, 111, 7010– 7022,  DOI: 10.1063/1.480097 [Crossref], [CAS], Google Scholar
+47Jónsson, H.; Mills, G.; Jacobsen, K. W. Classical and Quantum Dynamics in Condensed Phase Simulations, 1st ed.; World Scientific, 1998.[Crossref], Google Scholar
+48Makov, G.; Payne, M. C. Periodic Boundary Conditions in Ab Initio Calculations. Phys. Rev. B: Condens. Matter Mater. Phys. 1995, 51, 4014– 4022,  DOI: 10.1103/physrevb.51.4014 [Crossref], [PubMed], [CAS], Google Scholar
+49Neugebauer, J.; Scheffler, M. Adsorbate-substrate and Adsorbate-adsorbate Interactions of Na and K Adlayers on Al(111). Phys. Rev. B: Condens. Matter Mater. Phys. 1992, 46, 16067– 16080,  DOI: 10.1103/physrevb.46.16067 [Crossref], [PubMed], [CAS], Google Scholar
+50Wang, X.-G.; Smith, J. R. Surface phase diagram for Cr2O3(0001): Ab initio density functional study. Phys. Rev. B: Condens. Matter Mater. Phys. 2003, 68, 201402,  DOI: 10.1103/physrevb.68.201402 [Crossref], [CAS], Google Scholar
+51Maurice, V.; Cadot, S.; Marcus, P. Hydroxylation of ultra-thin films of α-Cr2O3(0001) formed on Cr(110). Surf. Sci. 2001, 471, 43– 58,  DOI: 10.1016/s0039-6028(00)00880-3 [Crossref], [CAS], Google Scholar
+52Rohr, F.; Bäumer, M.; Freund, H.-J.; Mejias, J. A.; Staemmler, V.; Müller, S.; Hammer, L.; Heinz, K. Strong relaxations at the Cr2O3(0001) surface as determined via low-energy electron diffraction and molecular dynamics simulations. Surf. Sci. 1997, 372, L291– L297,  DOI: 10.1016/s0039-6028(96)01255-1 [Crossref], [CAS], Google Scholar
+53Petrosyan, S. A.; Rigos, A. A.; Arias, T. A. Joint Density-Functional Theory: Ab Initio Study of Cr2O3 Surface Chemistry in Solution. J. Phys. Chem. B 2005, 109, 15436– 15444,  DOI: 10.1021/jp044822k [ACS Full Text ], [CAS], Google Scholar
+54Kaspar, T. C.; Chamberlin, S. E.; Chambers, S. A. Surface structure of α-Cr2O3(0001) after activated oxygen exposure. Surf. Sci. 2013, 618, 159– 166,  DOI: 10.1016/j.susc.2013.09.005 [Crossref], [CAS], Google Scholar
+55Lübbe, M.; Moritz, W. A LEED analysis of the clean surfaces of α-Fe2O3(0001) and α-Cr2O3(0001) bulk single crystals. J. Phys.: Condens. Matter 2009, 21, 134010,  DOI: 10.1088/0953-8984/21/13/134010 [Crossref], [PubMed], [CAS], Google Scholar
+56Bikondoa, O.; Moritz, W.; Torrelles, X.; Kim, H. J.; Thornton, G.; Lindsay, R. Impact of ambient oxygen on the surface structure of α-Cr2O3(0001). Phys. Rev. B: Condens. Matter Mater. Phys. 2010, 81, 205439,  DOI: 10.1103/physrevb.81.205439 [Crossref], [CAS], Google Scholar
+57York, S. C.; Abee, M. W.; Cox, D. F. α-Cr 2 O 3 (101–2): surface characterization and oxygen adsorption. Surf. Sci. 1999, 437, 386– 396,  DOI: 10.1016/s0039-6028(99)00676-7 [Crossref], [CAS], Google Scholar
+58Stamatakis, M.; Vlachos, D. G. A Graph-theoretical Kinetic Monte Carlo Framework for On-lattice Chemical Kinetics. J. Chem. Phys. 2011, 134, 214115,  DOI: 10.1063/1.3596751 [Crossref], [PubMed], [CAS], Google Scholar
+59Nielsen, J.; d’Avezac, M.; Hetherington, J.; Stamatakis, M. Parallel Kinetic Monte Carlo Simulation Framework Incorporating Accurate Models of Adsorbate Lateral Interactions. J. Chem. Phys. 2013, 139, 224706,  DOI: 10.1063/1.4840395 [Crossref], [PubMed], [CAS], Google Scholar
+60Pineda, M.; Stamatakis, M. Beyond Mean-field Approximations for Accurate and Computationally Efficient Models of On-lattice Chemical Kinetics. J. Chem. Phys. 2017, 147, 024105,  DOI: 10.1063/1.4991690 [Crossref], [PubMed], [CAS], Google Scholar
+61Vignola, E.; Steinmann, S. N.; Vandegehuchte, B. D.; Curulla, D.; Stamatakis, M.; Sautet, P. A Machine Learning Approach to Graph-theoretical Cluster Expansions of the Energy of Adsorbate Layers. J. Chem. Phys. 2017, 147, 054106,  DOI: 10.1063/1.4985890 [Crossref], [PubMed], [CAS], Google Scholar
+62Stamatakis, M.; Vlachos, D. G. Equivalence of On-lattice Stochastic Chemical Kinetics with the Well-mixed Chemical Master Equation in the Limit of Fast Diffusion. Comput. Chem. Eng. 2011, 35, 2602– 2610,  DOI: 10.1016/j.compchemeng.2011.05.008 [Crossref], [PubMed], [CAS], Google Scholar
+63Vernikovskaya, N. V.; Savin, I. G.; Kashkin, V. N.; Pakhomov, N. A.; Ermakova, A.; Molchanov, V. V.; Nemykina, E. I.; Parahin, O.A. Dehydrogenation of propane–isobutane mixture in a fluidized bed reactor over Cr2O3/Al2O3 catalyst: Experimental studies and mathematical modelling. Chem. Eng. J. 2011, 176−177, 158– 164,  DOI: 10.1016/j.cej.2011.05.115 [Crossref], [CAS], Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+0
+Mentioning
+7
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 18 publications.
+Jinshu Tian, Gregory Collinge, Simuck F. Yuk, Jindong Lin, Vassiliki-Alexandra Glezakou, Mal-Soon Lee, Yong Wang, Roger Rousseau. Dynamically Formed Active Sites on Liquid Boron Oxide for Selective Oxidative Dehydrogenation of Propane. ACS Catalysis 2023, 13 (12) , 8219-8236. https://doi.org/10.1021/acscatal.3c01759
+Peng Chen, Ying Liu, Yarong Xu, Chenxi Guo, P. Hu. Quantitative Evidence to Challenge the Traditional Model in Heterogeneous Catalysis: Kinetic Modeling for Ethane Dehydrogenation over Fe/SAPO-34. JACS Au 2023, 3 (1) , 165-175. https://doi.org/10.1021/jacsau.2c00576
+Lulu Ping, Yuan Zhang, Baojun Wang, Maohong Fan, Lixia Ling, Riguang Zhang. Unraveling the Surface State Evolution of IrO2 in Ethane Chemical Looping Oxidative Dehydrogenation. ACS Catalysis 2023, 13 (2) , 1381-1399. https://doi.org/10.1021/acscatal.2c05770
+Yuchen Liu, Ziyi Liu, Wen-Duo Lu, Dongqi Wang, An-Hui Lu. In Situ Generated Boron Peroxo as Mild Oxidant in Propane Oxidative Dehydrogenation Revealed by Density Functional Theory Study. The Journal of Physical Chemistry Letters 2022, 13 (50) , 11729-11735. https://doi.org/10.1021/acs.jpclett.2c03341
+Mona Abdelgaid, Giannis Mpourmpakis. Structure–Activity Relationships in Lewis Acid–Base Heterogeneous Catalysis. ACS Catalysis 2022, 12 (8) , 4268-4289. https://doi.org/10.1021/acscatal.2c00229
+Cedric Karel Fonzeu Monguen, Achraf El Kasmi, Muhammad Fahad Arshad, Patrick Mountapmbeme Kouotou, Samuel Daniel, Zhen-Yu Tian. Oxidative Dehydrogenation of Propane into Propene over Chromium Oxides. Industrial & Engineering Chemistry Research 2022, 61 (13) , 4546-4560. https://doi.org/10.1021/acs.iecr.2c00813
+Chunxiao Tan, Huixian Liu, Yuyao Qin, Liwen Li, Hua Wang, Xinli Zhu, Qingfeng Ge. Correlation between the Properties of Surface Lattice Oxygen on NiO and Its Reactivity and Selectivity towards the Oxidative Dehydrogenation of Propane. ChemPhysChem 2023, 24 (4) https://doi.org/10.1002/cphc.202200539
+Rui Zhang, Qing-Yu Chang, Fang Ma, Muhammad Zeeshan, Ming-Lei Yang, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Yi-An Zhu. Enhanced catalytic performance of transition metal-doped Cr2O3 catalysts for propane dehydrogenation: A microkinetic modeling study. Chemical Engineering Journal 2022, 446 , 136913. https://doi.org/10.1016/j.cej.2022.136913
+Sergei A. Chernyak, Massimo Corda, Jean-Pierre Dath, Vitaly V. Ordomsky, Andrei Y. Khodakov. Light olefin synthesis from a diversity of renewable and fossil feedstocks: state-of the-art and outlook. Chemical Society Reviews 2022, 51 (18) , 7994-8044. https://doi.org/10.1039/D1CS01036K
+Sanele Moloi, Majid D. Farahani, Abdul S. Mahomed, Sooboo Singh, Holger B. Friedrich. The role of monomeric VOx supported on anatase in catalytic dehydrogenation of n-octane assisted by CO2 addition. Molecular Catalysis 2022, 530 , 112578. https://doi.org/10.1016/j.mcat.2022.112578
+D. P. Melnikov, A. A. Novikov, A. P. Glotov, M. V. Reshetina, E. M. Smirnova, H. Q. Wang, V. A. Vinokurov. Dehydrogenation of Light Alkanes (A Review). Petroleum Chemistry 2022, 62 (9) , 1027-1046. https://doi.org/10.1134/S096554412209006
+Qiang Ling, Rong Wu, Zhi-hao Wang, Han-wen Liang, Zhao Lei, Zhi-gang Zhao, Qing-ping Ke, Xiang-chun Liu, Ping Cui. Promotion role of B doping in N, B co-doped humic acids-based porous carbon for enhancing catalytic performance of oxidative dehydrogenation of propane using CO2. Reaction Kinetics, Mechanisms and Catalysis 2022, 135 (4) , 1785-1802. https://doi.org/10.1007/s11144-022-02251-5
+ShuaiKe Zhi, Zan Lian, ChaoWei Si, Faheem Jan, Min Yang, Bo Li. A critical evaluation of the catalytic role of CO 2 in propane dehydrogenation catalyzed by chromium oxide from a DFT-based microkinetic simulation. Physical Chemistry Chemical Physics 2022, 24 (18) , 11030-11038. https://doi.org/10.1039/D2CP00027J
+Jia-Yuan Lv, Rui-Peng Ren, Yong-Kang Lv. A theoretical study on the mechanism of conversion of C 3 H 8 and CO 2 to C 3 H 6 and HCOOH by M 4 –B 24 N 28 catalysis. New Journal of Chemistry 2022, 46 (16) , 7598-7607. https://doi.org/10.1039/D2NJ00522K
+M. Pineda, M. Stamatakis. Kinetic Monte Carlo simulations for heterogeneous catalysis: Fundamentals, current status, and challenges. The Journal of Chemical Physics 2022, 156 (12) , 120902. https://doi.org/10.1063/5.0083251
+Weiyu Song, Yikun Kang, Min Yang, Zhi Li, Lulu Chen, Zhen Zhao, Jian Liu. Promoting propane dehydrogenation via strain engineering on iridium single-atom catalyst. Fuel 2022, 311 , 122580. https://doi.org/10.1016/j.fuel.2021.122580
+Drejc Kopač, Blaž Likozar, Matej Huš. Metal-doped Cr2O3 as a catalyst for non-oxidative propane and butane dehydrogenation: A multiscale kinetic study. Applied Surface Science 2022, 575 , 151653. https://doi.org/10.1016/j.apsusc.2021.151653
+Amrish Kumar, Jayendran Iyer, Fatima Jalid, Manojkumar Ramteke, Tuhin S. Khan, M. Ali Haider. Machine Learning Enabled Screening of Single Atom Alloys: Predicting Reactivity Trend for Ethanol Dehydrogenation. ChemCatChem 2022, 14 (2) https://doi.org/10.1002/cctc.202101481
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Perspective view of the DFT-optimized (a) reduced (A) and (b) oxidized (E) surfaces Cr2O3(0001). (c) Top view of the E surface. For the A surface, an additional layer of Cr atoms is situated atop. Color code: red—O, blue—Cr, green—O (top), and teal—Cr (top). (d) An example of the KMC lattice used (sizes vary). Color code: blue—dummy sites, green—Oox, red—Crred, and yellow—Ored.
+Figure 2
+Figure 2. Close-up of the lattice showing the connectivity. A gray parallelogram shows one repeating cell.
+Figure 3
+Figure 3. Structures involved in reoxidation of the surface (A to E), labeled as in Table 3.
+Figure 4
+Figure 4. Schematic representation of the reaction mechanism with all carbon intermediates. Black arrows represent (de)hydrogenation reaction steps (all reactions are considered reversible in the model) and red lines represent a possible C–C cleavage. Dotted lines represent cleavages that are accounted for due to symmetry.
+Figure 5
+Figure 5. Potential energy surface for propane dehydrogenation over reduced (A) and oxidized (E) Cr2O3(0001). Deep dehydrogenations are not shown. Upon the removal of surface oxygen as H2O, the oxidized surface is reduced and reoxidized with O2 or N2O (latter not shown). Intermediates in light color and transition states connected with dashed lines are energetically disfavored.
+Figure 6
+Figure 6. Arrhenius plots for the dehydrogenation of propane at pC3H8 = 1.0 bar and poxidant = 1.0 bar on the oxidized (left), reduced (center), and mixed (right) surface. The mixed surface consists of 50% of each surface type and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Full symbols denote propene production, and empty symbols denote CO2 production. Inset energies correspond to the activation barriers.
+Figure 7
+Figure 7. TOF for the dehydrogenation of propane at pCH3CH2CH3 = 1.0 bar and T = 900 K and various oxidant types and pressures on the oxidized (left) and mixed (right) surface. The mixed surface consists of 50% of the oxidized and 50% of the reduced surfaces and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2 and ● N2O. Full symbols denote propene production and empty symbols denote CO2 production. Inset values denote the slopes, which correspond to the reaction order with respect to the oxidant.
+Figure 8
+Figure 8. Selectivity toward CH3CHCH2 and CO2 in conditions as in Figure 7. Lines are guides for the eye.
+Figure 9
+Figure 9. TOF for the dehydrogenation of propane at poxidant = 1.0 bar and T = 900 K and varying propane pressure on the oxidized (left), reduced (center), and mixed (right) surfaces. The mixed surface consists of 50% of oxidized and 50% of reduced surfaces and includes diffusion of the intermediates across the phase boundary. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Full symbols denote propene production and empty symbols denote CO2 production. Inset values denote the slopes, which correspond to the reaction order with respect to propane.
+Figure 10
+Figure 10. Selectivity toward CH3CHCH2 and CO2 in conditions as in Figure 9. Lines are guides for the eye.
+Figure 11
+Figure 11. (Top) Selectivity toward propene (left) and CO2 (right), (bottom) catalyst activity (left) and propene yield (right). Propane dehydrogenation is performed at pCH3CH2CH3 = 1.0 bar and poxidant = 1.0 bar at T = 900 K over surfaces with a varying fraction of oxidation. The symbol shape denotes the oxidant used: ■ O2, ● N2O, and ▲ none. Lines are guides for the eye.
+Figure 12
+Figure 12. Coverage of the initially fully oxidized catalyst at T = 800 K (left), T = 900 K (center), and T = 1000 K (right), and pCH3CH2CH3 = 1.0 bar and poxidant = 1.0 bar. The oxidant used is O2 (top) or N2O (bottom). Dashed lines represent the cumulative number of molecules produced (propene, CO2) or consumed (C3H8) per active site and use the right axis. The asterisk (*) represents empty oxidized sites and Vac* represents surface oxygen vacancies, that is, empty reduced sites.
+Figure 13
+Figure 13. (Top left) Coverage of the catalyst with transient CC* and C* at T = 900 K and pC3H8 = pO2 = 1 bar; (top right) the Arrhenius plot for the deactivation of the oxidized catalyst (measured as the buildup of CC* and C*) when using different oxidants (O2 and N2O); (bottom left) lattice snapshot after 9.42 s; (bottom right) regeneration of the coked catalyst with 1 bar O2 at 900 K when the C3H8 feed is cut off.
+
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

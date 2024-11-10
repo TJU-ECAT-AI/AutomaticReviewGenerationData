@@ -1,0 +1,1107 @@
+<DOCUMENT>
+Dynamically Formed Active Sites on Liquid Boron Oxide for Selective Oxidative Dehydrogenation of Propane
+
+Abstract
+Boron oxide-based catalysts have been shown to be both active and selective for driving the oxidative dehydrogenation of propane (ODHP) without the use of metal promoters. However, this reaction occurs at temperatures where boron oxide melts, challenging experimental identification of the molecular structures within the boron oxide phase under reaction conditions and thus hindering the understanding of its active sites and reaction mechanism(s). By combining density functional theory computations, ab initio molecular dynamics simulations, in situ Raman characterization, and microkinetic modeling, we propose that dimerized di-coordinated boron sites (>B–B<)─dynamically formed in liquid boron oxide─are the active species for O2 activation under reaction conditions. The resulting peroxy-like species (>B–O–O–B<) is then responsible for propane activation but is a moderate oxidant for ODHP and thus inert to propene. These peroxy-like structures rapidly activate propane, homolytically cleaving the >B–O–O–B< bond, producing a propyl radical and a >B–O• dangling bond. These > B–O• originate from the >B–O–O–B< sites as well as the liquid B2O3 structure itself and play a critical role in the abstraction of H atoms from propane and propyl. In fact, microkinetic modeling reveals that the formation of adsorbed C3H7* radicals is the main rate-controlling step due to the highly endergonic adsorption of propane into the system. Otherwise, the only activated processes were found to be the dehydration steps that lead to water formation, which exhibit an intriguing dependence on the concentration of surface hydroxyl species. These findings provide significant insights into the ODHP mechanisms on boron-based catalysts and emphasize the importance of understanding the liquid nature of the oxide to account for its catalytic activity.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+KEYWORDS:liquid B2O3 oxidative dehydrogenation of propane di-coordinated boron site boron oxide dimer dehydration of hydroxyls
+Show More
+
+1. Introduction
+ARTICLE SECTIONSJump To
+Boron-containing materials (h-BN, BNOH, B4C, TiB2, NiB, WB, Co2B/Co3B, HfB2, and BS-1) (1−6) and supported boron oxides (B2O3/SiO2 and B2O3/Al2O3) (7−10) are potential catalysts for oxidative dehydrogenation of propane (ODHP). Their interest stems from the fact that these catalysts show reasonable activity and excellent selectivity yet do not require a precious or transition metal as is ubiquitously employed for hydrocarbon transformations. (11−13) Hence, these materials offer the tantalizing prospect of being able to employ catalysts based on earth-abundant and cost-effective materials. It should be noted that ODHP is but one possible technology for dehydrogenation of propane among many others. There are naturally trade-offs between each. To place ODHP over boron-based catalysts within this larger context, we direct the reader to a review by Likozar and co-workers (14) on the dehydrogenation of light alkanes for further reading.
+The origin and identity of the ODHP active site and the dominant ODHP reaction mechanism over these boron-based catalysts are still under intense debate. Grant et al. initially suggested that a >B–O–O–N< structure was the active site for ODHP over h-BN catalysts. (1) This statement was later contradicted by the observation of an oxidized boron phase (BOx), which was generated on the surface of boron-containing materials after the ODHP reaction. (2) Further structure analysis led to the proposition that the active sites are instead surface-formed amorphous species like B2(OH)2xO(3–x) (x = 0–3). (15,16) Taken together, this suggests that it is a nitrogen-free boron oxide that is the active phase. On the other hand, Shi et al. studied the hydroxylated h-BN as a ODHP catalyst and suggested that it is hydroxylated B–OH groups at the edges of h-BN that are the active sites for ODHP, (3,17) suggesting once again that boron nitride is involved, though in this case indirectly. However, further research by Lu et al. on non-nitride catalysts seems to contradict involvement from the boron nitride phase as B2O3/SiO2 catalysts still maintain ODHP activity and selectivity despite the lack of nitrogen. (8) These authors posited that it is the hydroxylated boroxol ring/tri-coordinated planar oxidized boron species that are the active sites and proposed that the B–OH sites react with molecular oxygen (which they postulate is the rate-limiting step) to produce >B–O–O–B< sites (17,18) or >BO*–OH intermediates (8) that can abstract the hydrogen atoms from propane. While not specific to bulk boron oxide, an isolated boron −B[OH–O(H)–Si]2 structure in a zeolite framework with high activity and selectivity for ODHP (4) was also recently reported by Zhou et al., suggesting that the active site is indeed a BOx-type species or moiety. Nonetheless, the identity and structure of the BOx-type species/sites responsible for ODHP over bulk boron-based catalysts and their molecular role in observed ODHP are unknown, let alone agreed upon.
+The remarkable product distribution on these boron-based catalysts was rationalized by Venegas et al. as a combination of surface-mediated formation of radicals (HOO* radicals) over metastable sites (BOx site) and their sequential propagation in the gas phase (HOO* radicals and propane). (19) In that work, the water-assisted surface regeneration reaction
+(2BOH
+−
+→
+−
+H
+2
+O
+B
+O
+∗
++
+B
+∗
++
+H
+2
+O)
+was stated to be the rate-limiting step. Similarly, recent research has confirmed that a gas-phase free radical reaction over h-BN catalysts occurs during ODHP. (19−21) Specifically, Zhang et al. demonstrated that propene is mainly generated on the catalyst surface (BO3 site) from the C–H activation of propane (proposed as the rate-limiting step) following a Langmuir–Hinshelwood mechanism, while C2 and C1 products are formed via both surface-mediated and gas-phase pathways. (21) This was described in our previous report, as well. (22) Lindstedt et al. further stated that a high selectivity toward propene and ethene is fully consistent with a gas-phase conversion mechanism on the boron nitride catalyst, where the catalyst is only responsible for initiating the gas-phase chemistry. (20) Nonetheless, a surface reaction mechanism is far from ruled out. Thus, despite considerable research, the nature and origin of the active site(s) under reaction conditions and corresponding reaction mechanisms remain unclear and need to be further clarified.
+One major challenge which hinders progress for both experimental and theoretical studies is that ODHP catalysis over bulk boron-based materials is typically performed at conditions where boron oxide melts─where a fixed well-defined structure cannot be expected. More specifically, the B2O3 active phase, with a melting point of ∼725 K, (23) is in a liquid state at OHDP reaction temperatures (>800 K). This can be compared to Cr2O3, which is another ODHP metal-oxide catalyst but remains a crystalline solid well above the reaction temperatures of ODHP as its melting point is a magnitude higher at ∼2708 K. (24) Analogous computational studies on Cr2O3, (25−27) therefore, benefit from having a well-defined morphology that permit traditional computational approaches based on static structures. This is not the case here. The low-melting point of B2O3 makes it difficult for ex situ characterization to identify the actual active sites of these boron-based catalysts during the reaction, resulting in the many disparate models describing ODHP active sites and reaction mechanisms. (4,8,15,17,19,21,28−32) Even with in situ experiments, it is difficult to detect short-lived intermediates, which may also be in relatively low concentrations but are nonetheless critical for understanding catalysis. Studies have shown that the dynamic process under real reaction conditions would benefit from computational investigations of metastable surface sites (19,28,33−37) beyond thermodynamically stable species such as tri-coordinated boron species (>B−) and boron hydroxyls (B–OH). (19,28) This requires that one takes into account the mobility of sites and species, collective dynamics, and larger anharmonicities, which are often neglected in computational models based on static structures and which can have a significant impact on computed reaction free energies. (38) Ab initio molecular dynamics (AIMD) along with enhanced sampling methods (39) are powerful tools to provide this type of quantitative information on the atomic-scale structural properties of the catalysts and the intermediate species under real reaction conditions. (40−42) However, this approach alone is not sufficient for probing this phenomenon theoretically. For liquid catalysts, one must also account for long time scale phenomena, such as the flexibility of catalyst structures, sites, and active species, which are critical for the kinetics and hence, a microkinetic ansatz that captures features unique to the liquid state is mandatory. (43,44)
+Herein, by combining AIMD simulations with liquid-state microkinetic modeling and in situ experiments along with enhanced sampling methods for determining liquid-phase reaction free energetics, we have elucidated the active sites and reaction mechanism on bulk boron-oxide containing catalysts under OHDP reaction conditions. AIMD simulations and in situ Raman spectra reveal the presence of di-coordinated boron radical species (>B• site) in the liquid B2O3 phase, whose dimers we show activate dioxygen molecules to form peroxide-like >B–O–O–B< sites. C3H8 molecules are gently oxidized from the gas phase at >B–O–O–B< sites, forming a propyl radical loosely bound to newly formed B–OH. The dynamically formed >B–O• dangling bond plays a key role in the subsequent dehydrogenation reaction while also being very active for C3H8 activation, as well. Importantly, AIMD simulations with enhanced sampling show that the free energetics of recovering active sites via the dehydration of surface B–OH is strongly dependent upon the B–OH concentration, resulting in coverage-dependent thermodynamics and kinetics. These results were then used to parameterize a novel microkinetic model (MKM) of ODHP over liquid phase B2O3 that additionally accounts for unwanted surface-initiated gas-phase radical reactions. The solution of the MKM reveals propyl radical formation to be the primary rate-controlling step. This is found to be caused by the poor adsorption strength of propane at elevated temperatures. The reactions that recover the >B–O• and >B• active sites are found to be the only activated processes in the catalytic cycle at 850 K. The model compares favorably with previously reported kinetics and supports the assertion that dynamical processes are critical for understanding the activity of liquid-phase catalysts.
+2. Results and Discussion
+ARTICLE SECTIONSJump To
+2.1. Formation and Microstructure of Liquid B2O3 Using AIMD Simulations
+At 850 K during ODHP, B2O3 should be in a liquid phase (melting point ∼725 K), suggesting that its structure and physical properties will deviate significantly from the solid phase. To obtain the liquidized B2O3 phase, we carry out AIMD simulations starting from a 480-atom (96 B2O3 formula units) slab model of the low-pressure crystalline polymorph B2O3–I phase, (45−47) whose computed and experimental lattice parameters can be found in Table S1. The shortest simulation cell dimension is 1.7 nm, preventing interactions between atoms and their periodic boundary images. To remove all correlation to this starting configuration, an exceptionally high temperature of 2000 K was applied for ∼12 ps, fully melting the oxide into a completely disordered state. Once disorder was established, we decreased the temperature of the system to 1500 K and allowed it to equilibrate before lowering again to 1000 K, repeating equilibration, and finally decreasing the temperature to the target temperature of 850 K. After the system equilibrated once more, we ran the simulation for an additional ∼20 ps and collected the trajectory data for further analyses. Figure 1 shows a representative snapshot extracted from this final trajectory. Visual inspection suggests a liquid state has been achieved. We quantitatively corroborate this by analyzing the mean square displacement (MSD) of the system as a function of time (Figure S1) to obtain estimates of diffusion coefficients. The self-diffusion coefficients for boron atoms (D(B)) and oxygen atoms (D(O)) were calculated to be ∼7.5 × 10–7 and 8.0 × 10–7 cm2/s, respectively, which are consistent with those found in other molecular dynamics simulations of molten/liquid B2O3. (48−50)
+Figure 1
+Figure 1. (A) Side-on, (B) top-down, and (C) bottom-up view of the liquid B2O3 slab model. The specific structure shown is a representative snapshot of the system, taken from the AIMD trajectory after equilibration at 850 K. Color scheme: green = B and red = O. Due to the fluxional nature of the liquid structure, the indicated slab thickness, and vacuum size are necessarily approximate.
+By computing the pair-wise radial distribution functions, g(r)’s, we are able to confirm the liquid nature of the system while deriving further insights into its microstructure. The g(r) for rBB, rBO, and rOO are shown in Figure 2A,C,E, respectively, where rXY indicates the absolute distance between X and Y atoms in the liquid B2O3 slab model. The g(r)’s for solid-state systems generally have periodic, well-defined peaks centered at nearest-neighbor lattice sites, and they never decay. The g(r) of gases on the other hand exhibit virtually no structure beyond the distances at which dispersion forces act and quickly decay to the bulk density. Such features are clearly absent here. Each g(r) for the B2O3 surface has one strong peak corresponding to the first coordination shell (indicated with roman numeral “I”) and then exhibits oscillations, indicating structuring of the next two to three coordination shells (II, III, and IV). Beyond this, we see low-amplitude high-wavelength oscillations that indicate some loose structuring of the higher coordination shells. These features are very consistent with a liquid state, confirming that we have achieved liquid B2O3. It is interesting to note that beyond ∼10.0 Å, the influence of the vacuum above the surface takes over the behavior of each g(r), producing a constant decay to near zero density instead of to the bulk density of liquid B2O3. The slab model is thick enough, however, that this does not affect our analysis or conclusions.
+Figure 2
+Figure 2. Pairwise radial distribution functions, g(r), and associated coordination number (CN) distributions for (A,B) B–B pairs, (C,D) B–O pairs, and (E,F) O–O pairs within the liquid B2O3 surface at 850 K taken from ensemble/time averages extracted from the final 20 ps of equilibrated AIMD trajectory. Here,
+𝑔(
+𝑟
+BO
+)=
+3
+2
+𝑔(
+𝑟
+OB
+)
+. Coordination shells within each g(r) are identified using roman numerals I–VI (In the case of B–B, there is one less coordination shell than for B–O and O–O pairs), with colored shading used to aid eye. The CN distributions are shown for each thus delineated coordination shell shown in the g(r) plots.
+To ensure our conclusions do not suffer from issues related to the AIMD annealing procedure previously outlined (“initialization #1”, dashed black lines in Figure 2), we ran another overly rigorous annealing procedure (“initialization #2”, solid colored lines in Figure 2). Starting from the final frame of the 850 K AIMD trajectory, we ran AIMD at 2500 K for more than 20 ps before switching to the NVE ensemble and slowly reducing the velocities by 0.05% per AIMD time step, effectively reducing the temperature of the system as slowly as computationally tractable. Once the simulation reached <200 K, we switched the simulation to the NVT ensemble at 2500 K again and allowed the system to equilibrate for at least 10 ps, after which the temperature was lowered to 2000 K and equilibrated again for >20 ps. We repeated this procedure at 1500 and 1000 K before finally equilibrating at the target temperature of 850 K. We ran this final AIMD simulation for >50 ps and used the final 20 ps to compute the g(r)’s once more. As can be seen in Figure 2, there is virtually no difference between initializations #1 and #2, confirming the veracity of the acquired data.
+The various minima in the g(r) oscillations define cutoff radii for each coordination shell and are delineated with vertical black lines below the g(r)’s in Figure 2A,C,E. An analysis of the CN distribution is provided as well in Figure 2B,D,F. We use the center of each CN distribution to determine the mean population of the associated coordination shell, which is shown above each shell delineated in the g(r) plots. A full breakdown of these distributions is given in Table S2. The peaks of the “I” coordination shells in the g(r)’s of B–B, B–O, and O–O pairs are centered at radial distances of 2.48, 1.41, and 2.42 Å and have mean populations of 3.0 B, 3.0 O, and 4.1 O, respectively. This well reflects a predominance of tri-coordinated boron species and strong B–O–B bonds. However, we can see that the corresponding CN distribution for coordination shell “I” is not single-valued, indicating the presence of di- and tetra-coordinated boron species. These are of particular interest as they may be active species for ODHP. A search within the coordination shells in the AIMD trajectory allows us to identify these and the other unique species that are dynamically generated in liquid B2O3. Examples of these species are summarized in Figure 3.
+Figure 3
+Figure 3. AIMD snapshots of each type of ByOx species dynamically formed within liquid B2O3 at 850 K. (A–C) Boroxol rings as a result of liquification. (D–I) Reactive species interconverting within the liquid phase. Color scheme is the same as in Figure 1 except some B atoms are dark blue and some O atoms are yellow to help distinguish the species presented and aid the eye.
+We find that our liquid B2O3 exhibits a significant quantity of stable boroxol rings of various sizes (Figure 3A–C) that typically only exist in the amorphous, liquid B2O3 phase. (46,47) The second coordination shell (shell II) of B–O pairs (Figure 2C) is centered at ∼2.77 Å, which is consistent with the distance between interplanar B–O pairs found across from each other in three-member boroxol rings. Each B atom has 1 O at this distance per three-member boroxol ring, and looking at the B–O shell II CN distribution (Figure 2D), we can see that a CN of 1 O occurs 49.7% of the time, suggesting that ∼50% of B atoms are in three-member boroxol rings, in excellent agreement with the experimentally determined value of ∼49%. (51) Distorted four-member rings appear to account for the 12.3% of shell II B–O pairs with CN of 2, and shell III B–O pairs appear to correspond to undistorted four-member and other higher body rings. Shell IV, on the other hand, is related to the second nearest neighbor O atoms from B atoms in non-ring B–O–B chains. The coordination shell II of both B–B and O–O pairs (Figure 2A,E) completely encompasses coordination shells II–IV of B–O pairs, reflecting the considerable fluxionality of B and O atoms within all the aforementioned structures.
+As alluded above, we also find a nonnegligible quantity of new ByOx species arising from the thermally induced cleavage of B–O–B bonds. To account for the liquid nature of these structures and maintain mass-balance in these and other elementary reactions, we develop chemical formulae hereafter in what we term “stoichiometric form”, where each ByOx structure is defined by the number of B atoms present, and each O atom contributes 0.5 O if linking two B centers, which is represented in stoichiometric form by two tri-coordinated B species, i.e., two “BO1.5” species (Figure 3D). Five new species (Figure 3E–I) are also formed. The first two are the immediate products of B–O–B bond cleavage: a di-coordinate “BO1•” species (Figure 3E) and a tri-coordinate “BO1O•” species that exhibits an O “dangling bond” (Figure 3F). BO1• and BO1O• are found to be radical species by Bader charge analysis (52−56) and confirmed by Bader partitioning of the corresponding spin density. This indicates that B–O–B cleavage is homolytic in nature. We can represent this chemical transformation with reaction 1
+2B
+O
+1.5
+⇌B
+O
+1
+O
+•
++B
+O
+•
+1
+•
+•
+(R1)
+whose balanced stoichiometry illustrates the utility of defining these species’ stoichiometric form. These radical species are very unstable, and they most often stabilize themselves via a reverse reaction, but AIMD reveals that they can also stabilize themselves by transforming into new (and unexpected) ByOx species. Three additional unique species are formed: (i) a tetra-coordinate BO2• radical species (Figure 3G), (ii) a
+(B
+O
+1
+)
+2
+dimer species (Figure 3H), and (iii) a
+(B
+O
+1
+O)
+2
+dimer species (Figure 3I). Note that the small peaks seen in g(rBB) and g(rOO) (Figure 2A,E) prior to their respective high-density 1st coordination shells are in direct correspondence to these dimers. BO2• forms when a BO1O• dangling bond attaches to a tri-coordinate BO1.5, which can be represented with reaction 2.
+B
+O
+1.5
++B
+O
+1
+O
+•
+⇌B
+O
+•
+2
++B
+O
+1.5
+•
+•
+(R2)
+(B
+O
+1
+)
+2
+and
+(B
+O
+1
+O)
+2
+form via the dimerization of two di-coordinate BO1• or two BO1O• dangling bonds, which is represented in reactions 3 and 4, respectively.
+2B
+O
+1
+O
+•
+⇌
+(B
+O
+1
+O)
+2
+•
+(R3)
+2B
+O
+•
+1
+⇌
+(B
+O
+1
+)
+2
+•
+(R4)
+No B atoms were found to be mono-coordinate, consistent with the literature. (47,57) The species and their associated dynamically equilibrated reactions present within the liquid phase are summarized in Figure 4A,B. Their mean populations (i.e., concentration in percent of B atoms) are deduced from the CN distributions in Figure 2 and are shown in Figure 4C.
+Figure 4
+Figure 4. (A) Illustrated summary of reactive BxOy species dynamically formed in simulated liquid B2O3 at 850 K, corresponding to the molecular structures in Figure 3D–I. (B) Equilibrated molecular transformations occurring within the liquid B2O3 phase that are responsible for the dynamic formation of these reactive BxOy species. (C) Concentration of each reactive BxOy species within the liquid phase, in percent of all B atoms present, as determined from the statistical population of each species along the AIMD trajectory. (D) Equilibrium free energies for each reaction shown in panel (B), derived from the concentrations in panel (C) and activity coefficients of both an ideal gas and ideal lattice gas.
+The vast majority (∼95.2%) of B atoms are found on average to be in the more stable tri-coordinate BO1.5 state, while
+(
+BO
+1
+)
+2
+makes up ∼2.5%, BO2• and
+(B
+O
+1
+O)
+2
+make up ∼1.0% each, and ∼0.2% BO1• and <0.1% BO1O• make up the small remainder. We use these populations to define the equilibrium constants for each of the four B2O3 transformation reactions identified and, from these, extract their equilibrium free energies. Using both ideal gas and ideal lattice gas activities, (58) the resultant reaction free energies are presented in Figure 4D. According to these, over 1 eV of work is required to break the B–O–B bonds and form the unstable di- and tri-coordinated monomers at 850 K, but the reactions responsible for stabilizing these (besides reforming a B–O–B bond) recover a substantial amount of this free energy cost back, which explains how appreciable concentrations of active species can be accumulated despite the unfavorability of cleaving the otherwise very strong B–O–B bonds.
+The structure of the liquid B2O3 was also probed using the in situ Raman at ∼850 K under N2 conditions specifically for this work, and the results are shown in Figure 5A. There are four main peaks at 120, 462, 605, and 807 cm–1, which are, respectively, labeled α, β, γ, and θ. Figure 5B–D shows the computational vibrational density of states (VDOS) of liquid B2O3 and corresponding contributions of boron and oxygen at 850 K, respectively. Most peaks in the VDOS are found to align well with those in the in situ Raman spectrum, allowing us to designate the α, β, γ and θ peaks on a one-to-one basis. Other peaks (685–718 cm–1) are evident in the VDOS, which correspond to IR active and Raman inactive modes. (59) The α peak at ∼130 cm–1 (10 cm–1 deviation from Raman) is found to represent the oxygen atoms in both boroxol rings and tri-coordinate BO1.5 sites. The β peak at ∼460 cm–1 (Figure 5B, 2 cm–1 deviation) represents the contribution of boron from the di-coordinated BO1• species, while the γ peak at ∼617 cm–1 (12 cm–1 deviation) represents the contribution of boron from both boroxol rings and tri-coordinate BO1.5 species. The θ peak at ∼795 cm–1 (12 cm–1 deviation) is attributed to the oxygen in boroxol rings. Combining the VDOS and in situ Raman spectra, we can conclude that peaks at 807 and 462 cm–1 (Figure 5A) can be attributed to the contribution of boroxol rings and di-coordinate BO1• sites, respectively. The peaks at 605 and 120 cm–1 mainly come from the contribution of both tri-coordinate BO1.5 species and boroxol ring sites, whereas the peaks at 668 and 718 cm–1 (Figure 5B) can be attributed to other vibrational modes of the boroxol rings, (60) but are not observed in in situ Raman spectra due to being Raman inactive. In addition to confirming the presence of these species, these VDOS data further support that our molecular model of liquid B2O3 accurately reflects its liquid state.
+Figure 5
+Figure 5. (A,B) In situ Raman spectra and the vibration density of states (VDOS) of liquid B2O3 at ∼850 K, respectively. (C,D) Contribution of boron and oxygen atoms to the VDOS, respectively. Shaded regions labeled α, β, γ, and θ designate areas in the local VDOS spectra that match to peaks in the in situ Raman spectrum.
+2.2. Reaction Mechanism for ODHP on Liquid B2O3
+It is widely accepted that dioxygen should first adsorb onto the boron oxide surface, forming active sites for further activation of propane. We found that O2 binds most strongly to the dimerized
+(B
+O
+1
+)
+2
+structure (−2.43 eV) and that binding to any other site/structure is unfavorably endothermic (>0.50 eV). O2 attachment to
+(B
+O
+1
+)
+2
+produces the other dimerized
+(B
+O
+1
+O)
+2
+structure. This process is represented by reaction 5 and 6
+O
+2
+(g)⇌
+O
+2
+(a)
+(
+)
+(
+)
+(R5)
+O
+2
+(a)+
+(B
+O
+1
+)
+2
+⇌
+(B
+O
+1
+O)
+2
+(
+)
+(
+)
+(
+)
+(R6)
+where “(g)” and “(a)” indicate whether the O2 molecule is in the gas or adlayer phase, respectively. The Bader charges on each bridging oxygen atom are ∼1.0 |e–| each, identifying
+(B
+O
+1
+O)
+2
+as an inorganic peroxide species that should be capable of performing oxidation reactions. We therefore add propane to the B2O3 surface and run unconstrained AIMD at ∼850 K (Figure 6A,B). Within less than 1 ps of simulation, the beta C–H bond of C3H8 is activated and quickly abstracted by one of the bridging peroxide oxygen in the
+(B
+O
+1
+O)
+2
+species, forming a C3H7• radical bound to a newly created boroxol BO1OH species (“C3H7-BO1OH”). This cleavage results in the concomitant formation and release of a BO1O• dangling bond upon cleavage of the
+(B
+O
+1
+O)
+2
+structure (Figure 6C,D), giving us reactions 7 and 8
+C
+3
+H
+8
+(g)⇌
+C
+3
+H
+8
+(a)
+(
+)
+(
+)
+(R7)
+C
+3
+H
+8
+(a)+
+(B
+O
+1
+O)
+2
+⇌
+C
+3
+H
+7
+‐B
+O
+1
+OH+B
+O
+1
+O
+•
+•
+(R8)
+After another ∼2.4 ps of AIMD, the thus formed C3H7-BO1OH radical drifts away from the newly formed BO1O• and interacts instead with a nearby tetra-coordinated BO2•, whose O atoms are valence-unsaturated (Bader charge, ∼1.75 |e–|). BO2• quickly abstracts an H atom from the α-carbon of the propyl radical in C3H7-BO1OH to produce a free propene, C3H6 and a second BO1OH (Figure 6E,F), which gives reaction 9
+C
+3
+H
+7
+‐B
+O
+1
+OH+B
+O
+•
+2
+⇌
+C
+3
+H
+6
+(a)+2B
+O
+1
+OH
+•
+(R9)
+Figure 6
+Figure 6. AIMD of ODHP over liquid phase B2O3 at 850K. (A) Top-down and (B) side-on views of propane approaching its active site. (C) Top-down and (D) side-on views of the first hydrogen abstraction to form propyl radical. (E) Top-down and (F) side-on views of the second H abstraction to form propene. In addition to the color scheme shown in Figures 1 and 3, the H atoms of propane that are abstracted are colored magenta to aid the eye.
+Such lifetimes correspond to extraordinarily large turnover rates, indicating the associated free energy barriers for reactions 8 and 9 are very small or entirely absent (note the enthalpy and entropy of activation are not necessarily also small). This would appear to suggest that the liquid environment and the associated high temperatures allow one to entropically access kinetic regimes markedly different from those accessed in the solid phase. The adsorbed propene is stable against further oxidation at 850 K, with no further reaction being observed after ∼9.0 ps of AIMD. It instead desorbs (reaction 10), demonstrating that
+(B
+O
+1
+O)
+2
+is a relatively mild oxidant.
+C
+3
+H
+6
+(a)⇌
+C
+3
+H
+6
+(g)
+(
+)
+(
+)
+(R10)
+To continue the catalytic cycle, a second propane must be oxidatively converted to propene as well. It is found that even in the absence of the
+(B
+O
+1
+O)
+2
+peroxy-type structure or tetra-coordinated BO2•, propane and propyl radicals are easily dehydrogenated in the same fashion by free BO1O• species. Once in proximity, the reaction is almost immediate in AIMD. For the dehydrogenation process of C3H7* species, if the catalyst is in a solid state with relatively fixed active sites, the final dehydrogenation reaction is exceedingly slow as reactivity is limited by diffusion. However, in the liquid state, the surface structure is more flexible and dynamic, (28) and this impediment to reactivity is removed as diffusion of active sites becomes faster than reactivity. Visual inspection of the AIMD simulations confirms that BO1O• dangling bonds, di-coordinated BO1• species, and all their speciations are dynamically formed and have a certain fluidity on the surface of the liquid B2O3 phase regardless of hydroxylation, maintaining prevalence throughout catalytic cycles. In short, we found that there are many very low reaction free energy barriers for all dehydrogenation steps of propane and propyl radicals. Our results indicate that propane and propyl can be dehydrogenated in the liquid state by either (a)
+(B
+O
+1
+O)
+2
+, (b) tetra-coordinated BO2• species, or (c) BO1O• dangling bonds with practically equal alacrity. We can thus define three separate elementary reactions (a, b, and c) for each of reactions 8 and 9. This reactive flexibility suggests that the ODHP rate will strongly depend on the adsorption probability of propane at these sites as the subsequent dehydrogenation steps are rapid and facile.
+Up to this point, we have elucidated the fate of two propane molecules and one oxygen molecule (a stoichiometric ratio for the overall ODHP reaction) with the corresponding elementary reactions leading to the formation of two propene molecules and four BO1OH boroxol species. As mentioned above, AIMD simulations demonstrate that this process is spontaneous without appreciable free energy barriers at 850 K. However, while propene easily desorbs, the 4 BO1OH are chemically stable on the liquid boron oxide surface (Figure S2), consistent with previous observations (19,61) and our own experimental results (Figure S3). This suggests that active site regeneration via the dehydration of BO1OH on the boron oxide surface is activated, consistent with previous assertions that this step may be rate limiting. (19) We rationalize that more propane turnovers would thus occur before these first BO1OH species have a chance to dehydrate, implying that the density of BO1OH would increase and change the chemical environment prior to active site recovery. We therefore ran further AIMD simulations with increasing density of surface BO1OH (Figure 7) to examine whether such a coverage change might affect the favorability of H2O formation and desorption. At ∼9 and ∼13% hydroxylation, we indeed observe the dynamic formation of H2O, which remains bound to a BO1• site (“H2O-BO1”) and recovers a BO1O• dangling bond from two BO1OH species within ∼2.0 and ∼1.0 ps of AIMD, respectively. This defines reaction 11
+2B
+O
+1
+OH⇌
+H
+2
+O‐B
+O
+1
++B
+O
+1
+O
+•
+•
+(R11)
+Figure 7
+Figure 7. Buildup of BO1OH concentration as propane-to-propene turnovers is completed. Color scheme is identical to that used in Figure 6.
+However, at this BO1OH concentration, the H2O does not desorb before dissociating again to form the BO1OH species again. This suggests that proton dynamics and hydroxyl migration may play a pivotal role in the desorption of H2O. When the concentration of surface BO1OH is further increased to ∼13%, we observe H2O formation and desorption (reactions 12 and 13) from the surface at ∼1.0 ps to recover the BO1O• dangling bond and di-coordinated BO1• active sites to close the catalytic cycle.
+H
+2
+O‐B
+O
+1
+⇌
+H
+2
+O(a)+B
+O
+•
+1
+•
+(R12)
+H
+2
+O(a)⇌
+H
+2
+O(g)
+(
+)
+(
+)
+(R13)
+Taken together, these observations lend credence to the hypothesis that the regeneration of the active sites via the dehydration of BO1OH is a controlling factor in the rate for ODHP on liquid boron oxide and strongly depend on the surface BO1OH density.
+Because the formation and desorption of H2O is activated, we turn to Blue-Moon ensemble AIMD simulations to determine their activation free energy barriers at 850 K. Figure 8 shows the Gibbs free energy (ΔG) associated with H2O formation and release via BO1OH dehydration on the liquid boron oxide surface at 850 K. As shown by Collinge et al., the Gibbs free energy of volume-independent reactions like these is equivalent to the Helmholtz free energy (see its Supporting Information), (62) which simplifies computation. For the formation of H2O (Figure 8A), we found that, as the BO1OH concentration increases, the activation free energy decreases from 1.65 to 0.31 eV. For the release of H2O (Figure 8B), the trends are similar to the formation of H2O: the activation free energy decreases from 3.4 eV to a mere 0.28 eV. This result is in line with previous experiments, (61) where a positive linear relationship between the overall reaction rate and the density of OH species was reported (albeit in the transient regime). In addition, the Gibbs free energies (ΔG) of H2O formation and desorption were decomposed into enthalpic, ΔH, and entropic, ΔS, contributions (Figure S4). As the BO1OH concentration increases, a significant increase in ΔS effectively cancels out and overtakes a concomitant increase in ΔH, resulting in an overall decrease in ΔG for the H2O formation step while both entropy and enthalpy become more favorable in the H2O desorption step, reemphasizing the important role of entropy in liquid B2O3 catalysts. (38)
+Figure 8
+Figure 8. Minimum free energy path as a function of BO1OH concentration (given in mol % of all boron in the liquid B2O3 surface) as determined from enhanced sampling AIMD with the Blue Moon ensemble method for (A) water, H2O-BO1, formation from two BO1OH structures and (B) subsequent release of H2O from the BO1 structure.
+2.3. Microkinetic Model of ODHP on Liquid B2O3
+The basic chemistry and mechanism of the ODHP catalytic cycle on liquid B2O3 discussed above is summarized graphically in Figure 9. The complete cycle is provided in Figure S5. Reactions 1–13, as delineated above, represent a complete catalytic cycle, but constructing a MKM with them is challenging because there is more than one type of “site,” and all of them can chemically interconvert and dynamically react to the chemical environment, which would seem to preclude a typical site balance. Our solution is to use the B atoms within the B2O3 surface as the conserved quantity and use a B atom balance to define un-speciated liquid B2O3 sites, which are the tri-coordinated BO1.5 structures. Reactions 1–4 then account for the dynamic formation of the active sites. When a reactant or intermediate interacts with one of the available sites, it and the site are consumed and converted into a new species representing both. Stoichiometry ensures the atom balance is maintained.
+Figure 9
+Figure 9. Proposed reaction mechanism for ODHP over liquid B2O3 at 850 K.
+Surface-initiated gas phase radical reactions have also been invoked in studies of ODHP over boron-based catalysts. (19−21) At the elevated temperatures used, the propyl radical intermediates could conceivably detach from the boroxyl BO1OH species and desorb from the surface. Given the stability of the BO1OH species, this possibility must be considered. This is represented by reactions 14 and 15
+C
+3
+H
+7
+‐B
+O
+1
+OH⇌
+C
+3
+H
+•
+7
+(a)+B
+O
+1
+OH
+•
+(R14)
+C
+3
+H
+•
+7
+(a)⇌
+C
+3
+H
+•
+7
+(g)
+•
+•
+(R15)
+Once desorbed, radical-initiated gas-phase side reactions may then occur, which we use here in conjunction with Reactions 14 and 15 to approximate the ODHP selectivity. Being that gas phase reactions are predominantly bimolecular, we describe these side reactions using reaction 16 under a lumped kinetics approximation
+2
+C
+3
+H
+•
+7
+(g)⇌undesiredproducts
+•
+(R16)
+We use this strategy in this present work because surface-initiated radical reactions have only been explored on static structures (63) and not in the proper liquid phase of the catalyst. Given the computational expense of AIMD, we do not attempt to do this in the present work. The rate constant of reaction 16 is defined as that of gas-phase propyl radical disproportionation because it is reported to be the fastest gas-phase radical reaction of propyl radicals. (64) We will take into account this currently necessary approximation in analysis of our MKM results.
+Finally, we also add two additional reactions to account for the possibility that disproportionation may be occurring in the adlayer phase as well. Reactions 17 and 18 describe this possibility and are reasonably treated as unactivated
+2
+C
+3
+H
+7
+‐B
+O
+1
+OH⇌2
+BO
+1
+OH+
+C
+3
+H
+8
+(a)+
+C
+3
+H
+6
+(a)
+(
+)
+(
+)
+(R17)
+2
+C
+3
+H
+•
+7
+(a)⇌
+C
+3
+H
+8
+(a)+
+C
+3
+H
+6
+(a)
+•
+(R18)
+Reactions 1–18 are given in Table 1 along with a description of each, including the three dehydrogenation pathways (Reactions 8a–8c and 9a–9c).
+Table 1. Summary of Elementary Reactions of our Liquid Phase B2O3 ODHP MKMa
+Rxn # elementary reaction description
+Molecular Transformation within Liquid B2O3
+1   2BO1.5 ⇌ BO1O• + BO1• B–O–B bond cleavage  
+2   BO1.5 + BO1O• ⇌ BO2• + BO1.5 tetra-coordinate BO2• formation  
+3  
+BO1O• dangling bond dimerization  
+4  
+di-coordinate BO1• dimerization  
+ODHP
+5   O2(g) ⇌ O2(a) O2 impingment  
+6  
+O2 activation  
+7   C3H8(g) ⇌ C3H8(a) C3H8 impingment  
+8 a
+C3H8 activation
+  b C3H8(a) + BO2• ⇌ C3H7-BO1OH   via BO2•
+  c C3H8(a) + BO1O• ⇌ C3H7-BO1OH   via BO1O•
+9 a
+propyl radical dehydrogenation
+  b C3H7-BO1OH + BO2• ⇌ 2BO1OH + C3H6(a)   via BO2•
+  c C3H7-BO1OH + BO1O• ⇌ 2BO1OH + C3H6(a)   via BO1O•
+10   C3H6(a) ⇌ C3H6(g) C3H6 desorption  
+11   2BO1OH ⇌ BO1O• + H2O-BO1 water formation and BO1O• recovery  
+12   H2O-BO1 ⇌ BO1• + H2O(a) water release and BO1• recovery  
+13   H2O(a) ⇌ H2O(g) H2O desorption  
+Aberrant Gas Phase Radical Chemistry
+14   C3H7-BO1OH ⇌ BO1OH + C3H7•(a) propyl radical release  
+15   C3H7•(a) ⇌ C3H7•(g) propyl radical desorption  
+16   2C3H7•(g) → undesired products bimolecular gas phase radical reactions  
+Propyl Radical Disproportionation Reactions
+17   2C3H7-BO1OH ⇌ 2BO1OH + C3H8(a) + C3H6(a) disproportionation of C3H7-BO1OH  
+18   2C3H7•(a) ⇌ C3H8(a) + C3H6(a) disproportionation of C3H7•(a)  
+aWe differentiate between the gas and “adsorbed” phase of reactant and product molecules with labels “(g)” and “(a)”, respectively.
+The thermodynamic and kinetic parameters of the MKM are obtained using the reaction dynamics seen in our liquid B2O3 AIMD simulations and account for BO1OH concentration dependence determined for the regeneration of the active sites in the preceding section. To describe the system’s configurational entropy more accurately, the activity coefficient of an ideal lattice gas (
+𝛾
+𝑖
+=
+(
+𝜃
+max
+𝑖
+−
+𝜃
+𝑖
+)
+−1
+)
+is used instead of that of an ideal 2D gas (γi(ideal) = 1). This also helps account for the disparity in maximum coverages of each species (Table S3). Thermodynamic consistency is carefully maintained throughout. Further details concerning the construction and parameterization of the MKM can be found in Section S2 of the Supporting Information.
+Many elementary reactions were found to occur nearly spontaneously (<1 ps) in our AIMD simulations. This indicates that the forward barriers (ΔGi,f‡) of these reactions are no greater than ∼1 kBT at 850 K (∼0.07 eV). We therefore use a value of kBT for those reactions’ free energy barriers to provide an upper estimate. This makes their reverse reaction barriers (ΔGi,r‡) equal to |ΔGi| + kBT. These reaction steps’ spontaneity also imposes another constraint on our MKM: these steps must be exergonic (ΔGi < 0). Only reactions 12 and 13, the formation and release of H2O to recover BO1O• and BO1 active sites, have appreciable barriers. Their activation free energy barriers are taken from a fitting (Section S2.3) of our Blue-Moon ensemble simulation results and vary appropriately as a function of BO1OH concentration. However, the fact that these barriers change at different rates means their reaction free energies themselves change as well. As a result, any or all of the reaction species’ chemical potentials must also change as a function of BO1OH concentration. That is, if a concentration-dependent species is involved in other reactions within the network, those reactions will be concentration dependent, as well. Our MKM is carefully calibrated to ensure all of these functional dependences are accurately represented while strictly maintaining thermodynamic consistency. Overall, it is apparent that BO1OH concentration dependences we discovered in the previous section have unexpectedly profound implications for the whole ODHP reaction over liquid phase B2O3. Fitting the parameters to reproduce the absolute ODHP rate value and experimental selectivity (∼75%) and applying all thermodynamic constraints, we arrive at the reaction free energies shown in Table S4. The final reaction pathways (one for each BO1OH concentration examined in Figure 8) are shown in Figure 10.
+Figure 10
+Figure 10. Free energy diagram of ODHP (2C3H8 + O2 → 2C3H6 + 2H2O) as a function of BO1OH concentration. The reaction free energies are directly computed from the underlying species’ chemical potentials, which were themselves determined by the inversion of the system of linear equations representing the interdependent relationships between reaction free energies and species’ chemical potentials under all thermodynamic constraints.
+Before proceeding to the MKM results, we should first note that while all AIMD was carried out at 850 K, the available experimental data only ranges from 803 to 823 K, so we have solved the MKM at 823 K and constructed Arrhenius plots in this temperature range under the assumption that the free energy/entropy is sufficiently linear within this temperature range. Our experimental data was acquired using a nonstoichiometric 1:1 ratio of C3H8 and O2 in their inlet stream─0.091 atm each of the two─and so we report results using these partial pressures to define gas phase impingement rates.
+According to the model, at steady state, only BO1OH and H2O-BO1 species have concentrations of any significance, respectively making up a mere ∼3.6 and ∼2.4% of all B atoms in the exposed surface of the liquid B2O3 catalyst. The remainder (∼94%) of B atoms are, on average, unconverted tri-coordinate BO1.5 species, which includes those in both boroxol rings and noncyclic B–O–B chains. The absence of any appreciable concentrations (i.e., >1.0 B %) of other species is due to how rapid most elementary steps are─recall that most only have a forward activation free energy barrier of 1 kBT. Thus, as soon as a reaction produces them, there is an unactivated reaction ready to consume it. The only exceptions to this are BO1OH and H2O-BO1, whose only routes to further conversion are through reactions 11 and 12, the only two activated reactions in the catalytic cycle.
+To determine apparent rate orders, we varied the inlet C3H8 and O2 partial pressures in the MKM, mirroring the experimental setup and recorded the corresponding steady-state ODHP rate. We performed a power law
+(𝑟=𝑘
+𝑃
+O
+2
+𝑛
+𝑃
+C
+3
+H
+8
+𝑚
+)
+fitting of the resulting data to compare against our previously published experimental rate order determination at 823 K (65) (where, as previously discussed, the MKM is most valid). As seen in Figure 11A,B, the predicted MKM rates display quite good agreement with experiments as a function of reactant partial pressures in terms of absolute rates. The experimental rate order of ODHP over other boron-based catalysts has been reported to be 2.0 and 0.5 (or Langmuir-type) in C3H8 and O2, respectively. (1,8,66) Power law fits of our experimental rate data produce values closer to 1.2 and 0.2, respectively, though constraining the exponent to 2.0 and 0.5 does not egregiously reduce the goodness-of-fit. With this in mind, in addition to the absolute value and selectivity congruence with experiment, the rate order in O2 also agrees with the experiment remarkably well (exp: ∼0.2; MKM: ∼0.3). To the best of our knowledge, no other published MKMs (66) based on ab initio data for this system have successfully reproduced a partial rate order in O2, suggesting that we have correctly identified the chemical nature and active sites of O2 activation in ODHP over liquified B2O3. However, while experiments consistently yield greater than first-order dependence on propane partial pressure, our MKM predicts that it is roughly linear (exp: ∼1.2; MKM: ∼0.9), just as other MKMs have predicted. Increasing/decreasing the rate constant of bimolecular gas-phase radical reactions, i.e., reaction 16, does not affect this result without inducing major inaccuracies in the reaction selectivity. Despite this, the agreement with the O2 rate order in addition to the absolute rate and selectivity suggests that the MKM is likely capturing the basic chemistry responsible for B2O3’s unique reactivity and selectivity.
+Figure 11
+Figure 11. (A) Arrhenius plots revealing the apparent activation barrier of our MKM (green circles) and that determined from the experiment (orange squares). The dashed lines are best fit lines. (B,C) MKM (blue circles) and experimental (orange squares) ODHP rate as a function of partial pressures of (B) propane and (C) oxygen. (D) Degree of rate control (DRC) and degree of selectivity control (DSC) analysis on each elementary reaction in the MKM. The definition of each reaction can be found in Figure 8 and Table 1.
+The apparent activation barrier of the MKM was found by mildly perturbing β ((kBT)−1) to produce the Arrhenius plot shown in Figure 11C as blue diamonds. From this, we predict an apparent activation barrier of 0.75 eV. The corresponding experimental (65) Arrhenius plot (orange circles) at the same conditions is clearly curved, making a single activation energy assessment difficult to extract. A second-order polynomial fits the data very well, however, and we can use its derivative to determine the activation energy at the temperature the MKM was run at (823 K). This yields a rough estimate of ∼0.92 eV for the experimental apparent activation barrier, which is only 0.15 eV lower than what was previously reported using a linear fit of the experimental data and only 0.17 eV higher than that derived using the second-order fit to the experimental data. The apparent activation barrier clearly increases dramatically as temperatures are lowered toward 800 K, and our MKM rate predictions deviate more substantially. Given that the AIMD data were collected at 850 K, we should not be surprised that the MKM performs best at the higher temperature end of the data.
+Surface-initiated radical reactions were the suggested explanation for the disagreement between propane rate orders by Rajbanshi et al., (66) which follows from a detailed study on this phenomenon by Kraus and Lindstedt. (20) Despite adding second-order (lumped) surface-initiated gas phase reactions to the MKM (reactions 14–16) and yielding reasonably good agreement in reaction selectivity (exp: ∼75%; MKM: ∼83%), we were unable to manifest a partial pressure order in propane greater than unity. This would seem to preclude surface-initiated gas phase radical reactions as the source of this discrepancy. However, we must reserve fully concluding as such until explicit side reactions can be studied in the B2O3 liquid phase and added to our MKM; and we also cannot yet eliminate simple oxidative pyrolysis (OP) in the gas phase as the culprit, either. Indeed, it has been demonstrated that OP in an empty reactor achieves similar selectivities to catalyzed ODHP under the same conditions, (67) with a greater than unity rate order (∼1.36) in propane consumption. Perhaps observed trends can be rationalized as a summation of ODHP and OP; a possibility that is very relevant to future research. On the other hand, if OP is not responsible, we suggest that propane’s activation and in particular, its coverage dependence should be explored in future computational studies in order to account for the second-order dependence. In this case, we suspect that the dimer nature of the
+(B
+O
+1
+O)
+2
+active site plays a role in opening up second-order propane activation pathways that have yet to be elucidated.
+Figure 11D shows the computed DRC (68) and DSC (68) for each elementary step in the reaction mechanism (Table S5). Based on this, we found that the ODHP rate is primarily controlled by the activation of propane─first, by tetra-coordinated BO2 (reaction 6b, DRC = 0.59), and secondarily by the peroxy
+(B
+O
+1
+O)
+2
+dimer (reaction 6a, DRC = 0.25). The remainder of the reactions have less than 0.10 DRC, including the only activated steps in the mechanism. This result is due to the difficulty of adsorbing propane (reaction 7), which itself stems from considerable entropy loss upon adsorption. If the equilibrium constant for adsorption favors the gas phase (as is the case here), then the forward propane flux is initially disfavored and is overall dictated by how quickly the first exergonic steps convert adsorbed propane to a (more) stable intermediate. In this case, these are reactions 6a–6c, which convert propane to the more stable C3H7-BO1OH intermediate, explaining why nearly all of the apparent rate is controlled by these reactions. In other words, the activity of the liquid B2O3 catalyst (the high-temperature mechanism) has much more to do with the probability that propane will be activated upon impingement before desorbing and less to do with the barriers involved in the subsequent conversion steps (though they are certainly a factor). This shows that one must take caution before identifying a rate-controlling step based on barriers alone, particularly in largely anharmonic systems like the liquid catalysts studied here.
+Interestingly, it is the dehydrogenation of propyl radicals to form propene (reactions 10a–10c) that controls ODHP selectivity. This makes sense because the faster that propyl radicals are converted to propene the less there are available to release and desorb into the gas phase (reactions 16 and 17). This is encouraging as it suggests increasing the overall ODHP rate would also enhance selectivity as propyl radicals are more readily consumed on the surface before entering the gas phase.
+Summarily, while the supermajority of our MKM’s parameterization was stiffly constrained, we found that the results are critically dependent upon the tuning of three important parameters: (1) the free energy of propane adsorption, (2) the equilibrium constant for dynamic active site formation, and (3) the saturation coverage of B–OH species. Endergonic propane adsorption (reaction 7) is consistent with experiments showing propane adsorption to be difficult on B2O3 even at room temperature, (18) but quantitative data are not available to precisely benchmark our value. On the one hand, this study does link together the disparate observations and mechanisms previously proposed by the experiment and theory but further reveals clear avenues of future inquiry and experimental validation that may not be apparent from the current state of the literature. For instance, no data at all are available to compare and benchmark our values for the coverage-dependent formation and desorption of water (reactions 11–13), suggesting an opportunity for further investigations to validate these findings through in situ spectroscopy and kinetics in addition to future studies exploring side reactions and the second order activation of propane.
+3. Conclusions
+ARTICLE SECTIONSJump To
+Combined ab initio molecular dynamics, in situ Raman characterization, and detailed microkinetic modeling demonstrate that the liquid B2O3 very likely has two tandem active sites, a di-coordinated >B* boron site and a B–O* dangling bond, formed simultaneously from the dynamic homolytic cleavage of fully saturated B–O–B bonds at the surface of the liquid B2O3 phase. The di-coordinated >B* site (specifically a pair of them) is responsible for activating O2 molecules by forming a non-dissociative peroxy-like >B–O–O–B< complex, which itself acts as a moderate oxidant capable of activating adsorbed propane while exhibiting no activity for deeper oxidation beyond propene. The dynamically formed >B–O* dangling bonds and tetra-coordinated >B< are also capable of activating propane and are found to be essential to abstracting H from C3H7* radical species to form the C3H6 product and boron hydroxyls, B–OH. The dehydration of B–OH and subsequent desorption of H2O to recover the active sites and close the catalytic cycle is a strong function of B–OH concentration. These two steps were found to be the only activated steps in the reaction mechanism at 850 K. Active site recovery would thus likely be rate determining if propane adsorption were favorable.
+This study shows very conclusively that the liquification of B2O3 catalysts is essential to reducing the apparent activation barrier for ODHP. However, at the elevated temperatures needed to melt the catalyst material, reactant adsorption becomes unfavorable, such that the majority of the rate is controlled by propane activation, which is the only mechanism by which propane can accumulate on the surface otherwise. As a result, our study suggests that the simplest and most effective way to enhance the ODHP rate over liquid B2O3 catalysts is to improve propane adsorption. This could be accomplished by, e.g., increasing the partial pressure of propane (which also benefits from its second-order rate dependence), increasing its residence time within the reactor, or making catalyst modifications that decrease the melting temperature of the oxide. For this latter strategy, we have identified thoria (ThO2) as a promising option. A small amount (∼2 mol %) of thoria added to B2O3 produces a eutectic around 598 K (325 °C), (69) which is ∼150 K lower than the melting point of pure B2O3. Survey of the literature suggests that the space of possible materials with eutectics lower than the melting point of B2O3 has scarcely been scratched. Thus, for technological implementation, we suggest that computational screening and experimental studies in this space are critically needed to fully adopt boron-based ODHP catalyst systems.
+4. Methods
+ARTICLE SECTIONSJump To
+4.1. Computational Methods
+4.1.1. DFT Parameters
+All DFT calculations were performed using the CP2K package. (70,71) The exchange–correlation energy was described within the generalized-gradient approximation with the Perdew–Burke–Ernzerhof functional. (72) The Kohn–Sham wavefunction was unrestricted (spin-polarized) in all cases. Dispersion corrections were included according to the Grimme-D3 scheme (73) (radial cutoff of 15 Å). The wavefunctions were expanded in optimized double-ζ Gaussian basis sets with an auxiliary plane wave basis set whose cutoff energy was 400 Rydberg. (74) Core electrons were modeled by scalar relativistic norm-conserving Geodecker–Teter–Hutter (GTH) pseudopotentials (75) with 3, 6, 1, and 4 valence electrons for B, O, H, and C, respectively. Brillouin zone integration was performed with a reciprocal space mesh consisting of only the gamma point.
+4.1.2. Computational Models
+The geometry optimization of crystalline B2O3–I (4 × 4 × 2 supercell) was initially performed using the BFGS algorithm, relaxing both the lattice parameters and the atomic coordinates. We found the optimized unit cell parameters of crystalline B2O3–I to be a = b = 4.36 Å and c = 8.51 Å, which are in good agreement with experimental values (a = b = 4.34 Å and c = 8.34 Å with α = β = 90°, γ = 120°). (45) A B2O3 (101) surface structure was designed by cleaving the B2O3–I bulk structure. The lattice parameters of the thus-constructed B2O3(101), consisting of 480 atoms (192B+288O) atoms, are determined to be a = 19.2 Å, b = 17.467 Å, and c = 50 Å (α = β = 90°, γ = 103.137°) with a vacuum space of ∼25 Å in the z direction.
+4.1.3. AIMD Simulations
+All ab initio MD simulations were performed by sampling the NVT canonical ensemble employing Nose–Hoover thermostats (76,77) with a time step of 0.5 fs at a finite temperature. To obtain a liquid state, we begin by carrying out AIMD at temperatures of 2000 and 1500 K for 12 ps each starting from the B2O3–I (101) facet. The temperature is selected to be high enough to make the system reach a completely disordered state without correlation to the initial configuration. Then, we decrease the temperature of the system gradually from 1000 K to a final target temperature of 850 K running for another 20 ps, respectively. The VDOS was calculated for predicting the spectroscopic characteristics based on the Fourier transform of the velocity autocorrelation function using. (78,79)
+𝐷(𝜔)=
+∫
+∞
+0
+𝑒
+−𝑖𝜔𝑡
+⟨𝜐(𝜏)·𝜐(𝜏+𝑡)⟩
+𝜏
+d𝑡
+∞
+(1)
+where υ is the velocity vector and the angular brackets represent the statistical average over all starting times, τ. This allows us to properly describe the anharmonicity of systems at a given temperature. Further partial VDOS (pVDOS) based on each atom type leads to the accurate interpretation of the associated peaks in the vibrational bands.
+The Blue-Moon ensemble method (80) was used to evaluate free energy barriers of H2O formation from B–OH species (the cleavage of O–H bond) and H2O desorption from the surface (the cleavage of B–O bond). For H2O formation, the O–H distance between two B–OH (RO–H) was chosen to be the collective variable while the B–OH2O distance was chosen for H2O desorption. By constraining the distance between two given atoms, the corresponding Lagrange multipliers, λ, can be integrated over the distances to determine free energy starting from the initial distance and ending once the barrier has been surmounted, via
+Δ𝐺=
+∫
+𝑅
+TS
+C−O
+𝑅
+init
+C−O
+⟨
+𝜆
+R
+C−O
+⟩d
+𝑅
+C−O
+T
+S
+(2)
+where
+⟨
+𝜆
+𝑅
+C−O
+⟩
+is the statistical average value of the
+𝜆
+𝑅
+C−O
+at each constrained point in the Blue-Moon ensemble simulation.
+4.2. Microkinetic Modeling
+Like most MKMs of heterogenous catalytic systems, (81−84) the elementary reaction rates involving surface-bound species were described via Transition State Theory, (85) which defines the rate as
+𝑟
+𝑖
+=
+𝑘
+B
+𝑇
+ℎ
+exp(−𝛽Δ
+𝐺
+‡
+𝑖
+)
+∏
+𝑛
+ISspecies
+𝜃
+𝑛
+𝛾
+n
+I
+S
+i
+(3)
+where ri is the forward or backward reaction rate of elementary reaction i; kB and h are the Boltzmann and Plank constants, respectively; T is the absolute temperature; β is the thermodynamic beta (
+[
+𝑘
+B
+𝑇]
+−1
+); ΔGi‡ is the activation free energy of elementary reaction i; and θn and γn are the coverage and activity coefficient of the nth initial state (IS) species involved in the elementary reaction. Note that we at all times satisfy local thermodynamic consistency by ensuring that the difference between forward and reverse reaction free energy barriers recovers the free energy of reaction: ΔGi,fwd‡ – ΔGi,rev‡ = ΔGi. To impose natural bounds on the species’ coverages, we define the activity coefficient as that of an ideal lattice gas (58,86)
+𝛾
+𝑛
+=
+(
+𝜃
+max
+𝑛
+−
+𝜃
+𝑛
+)
+−1
+1
+(4)
+where θnmax is the maximum or saturation coverage of species n and more accurately reflects the loss in entropy as species’ coverage approach their maximum value. At low coverages, γn tends toward the usual ideal 2D gas activity coefficient of unity (i.e., γn(ideal) = 1). These maximum coverages used are presented in Table S3.
+Based on the AIMD simulations performed, we see no evidence for activated adsorption or desorption events, justifying the use of standard adsorption and desorption rate expressions. (87−90) That is, the adsorption rate of species n is given as
+𝑆
+0
+(
+𝜃
+max
+𝑛
+−
+𝜃
+𝑗
+)
+𝑎
+u.c.
+𝑃
+𝑛
+2𝜋
+𝑚
+𝑛
+𝑘
+B
+𝑇
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+⎯
+√
+P
+(5)
+and its desorption rate is given as
+𝑆
+0
+(
+𝜃
+max
+𝑛
+−
+𝜃
+𝑛
+)
+𝑘
+B
+𝑇
+ℎ
+(
+𝑎
+u.c.
+𝜆
+𝑛
+2
+)
+e
+𝛽(Δ
+𝐺
+ads,𝑛
+)
+(
+𝜃
+𝑛
+𝛾
+𝑛
+)
+(
+)
+(6)
+where S0 is the sticking coefficient, taken to be unity here; au.c. is the area of a unit cell within our system (∼3.53 Å2, derived from the Wigner–Seitz radius of B); Pn, mn, λn, and ΔGads,n are the partial pressure, mass, thermal wavelength
+(
+𝜆
+𝑛
+=
+[
+ℎ
+2
+2𝜋
+𝑚
+𝑛
+𝑘
+B
+𝑇
+]
+1/2
+)
+(
+, and adsorption free energy of species, n, respectively.
+To determine conversion and account for gas phase reactions, the MKM was coupled to an isothermal continuous stir tank reactor (CSTR) model filled with 50 mg of B2O3 catalyst (mimicking the experimental setup), and an explicit gas phase. Further details are provided in Section S2 of the Supporting Information.
+4.2.1. Degree of Rate Control and Selectivity Control
+We use Campbell’s DRC (68) and DSC (68) to probe the elementary reactions within the MKM. With some slight mathematical manipulation, these can be defined succinctly as
+DRC
+i
+=
+(
+∂ln(r)
+∂ln(
+𝜉
+i
+)
+)
+𝜉
+j
+≠
+𝜉
+i
+(
+)
+(7)
+and
+DSC
+𝑖
+=
+(
+∂ln(S)
+∂ln(
+𝜉
+𝑖
+)
+)
+𝜉
+𝑗
+≠
+𝜉
+𝑖
+(
+)
+(8)
+where r is the apparent ODHP rate, S is the selectivity, and ξi is the extent of reaction i, defined as
+𝜉
+𝑖
+=
+𝑟
+f,𝑖
+−
+𝑟
+b,𝑖
+ξ
+(9)
+which is the difference between the forward (rf,i) and backward (rb,i) rates of reaction i. A differential change in the extent of reaction i is thus equivalent to a simultaneous differential change in both forward and backward rate constants as is required to assure thermodynamic consistency. It is mathematically equivalent to the definition provided by Campbell. In practice, we use a perturbation factor of 1.01 to evaluate the derivatives, i.e.
+∂ln(r)=
+1
+|𝑟|
+∂(𝑟)=
+1
+|𝑟|
+(
+𝑟
+∗
+(1.01)−𝑟(1.00))
+1
+1
+(10)
+where (...) in r(1.00) indicates the perturbation factor continuously applied to the extent of the reaction being probed during solution of the MKM, and the asterisk in r*(1.01) re-emphasizes the fact that the extent is that of reaction i under a constant perturbation of 1.01 and is not equivalent to r(1.00).
+We should note that our definition of selectivity here is given by
+S=
+𝑟
+desired
+𝑟
+desired
++
+𝑟
+undesired
+r
+(11)
+which tells us what percentage of the outlet stream is made up of the desired product (here, propene) rather than telling us the moles of desired products produced per mole of undesired products produced as is more common. As a result of this, the DSC is no longer the simple difference between the DRC of desired and undesired reactions as described by Campbell. However, this relationship is far from essential, and we believe our definition communicates the idea of selectivity in a more intuitive manner.
+4.3. Experimental Characterization
+4.3.1. In Situ Raman Spectra
+In situ Raman characterization was performed with Renishaw RT 1000 and Dilor LabRam I microprobe Raman systems equipped with a CCD detector using a home-built high-temperature in situ Raman cell designed for a microprobe Raman spectrometer. The samples were placed in a sample holder equipped with a thermocouple placed below the holder for temperature measurements. The excitation wavelength was a 532.5 nm solid laser with a power of ∼4 mW measured at the analysis spot. The temperature of the Raman cell was then raised from room temperature (RT) to ∼850 K. Raman spectra of the catalyst were recorded at selected temperatures during this process.
+4.3.2. In Situ Fourier Transform Infrared Spectra
+In situ Fourier transform infrared spectra (FT-IR) were recorded under different conditions on a Nicolet 6700 FT-IR spectrometer equipped with a mercury cadmium telluride (MCT) detector. The 32.8% B2O3/SiO2 catalysts of ∼20 mg were compressed as a thin disk (diameter = 1.0 cm) and placed in a transmission cell equipped with KBr windows. We designed three experiments including i) the catalyst was first pretreated in He flow at ∼470K for 2 h and then cooled down to RT. After that, spectra were scanned in the range 600–4000 cm–1 with a 2 cm –1 resolution from RT to 850 K; ii) the system was vacuumed at 850 K and spectra were collected; and iii) the gas feed of C3H8/O2/He with 1:1:9 at 33 mL/min was introduced at 850 K for 10 min and then the system was vacuumed again and the spectra were collected at different times.
+Supporting Information
+ARTICLE SECTIONSJump To
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acscatal.3c01759.
+B2O3 structure, simulation, and spectroscopy; ODHP microkinetic model details; and detailed catalytic cycle (PDF)
+cs3c01759_si_001.pdf (2.39 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Authors
+Mal-Soon Lee - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  https://orcid.org/0000-0001-6851-177X;  Email: malsoon.lee@pnnl.gov
+Yong Wang - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  Voiland School of Chemical Engineering and Bioengineering, Washington State University, Pullman, Washington 99164, United States;  https://orcid.org/0000-0002-8460-7410;  Email: wang42@wsu.edu
+Roger Rousseau - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  Present Address: Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN 37830, United States;  https://orcid.org/0000-0003-1947-0478;  Email: rousseaur@ornl.gov
+Authors
+Jinshu Tian - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014 China;  College of Chemistry and Chemical Engineering, Xiamen University, Xiamen 361005, China;  https://orcid.org/0000-0003-0033-4636
+Gregory Collinge - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  https://orcid.org/0000-0001-8345-6254
+Simuck F. Yuk - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  Department of Chemistry and Life Science, United States Military Academy, West Point, New York 10996, United States;  https://orcid.org/0000-0003-1355-4400
+Jindong Lin - College of Chemistry and Chemical Engineering, Xiamen University, Xiamen 361005, China;  https://orcid.org/0000-0003-0686-6908
+Vassiliki-Alexandra Glezakou - Institute for Integrated Catalysis, Pacific Northwest National Laboratory, Richland, Washington 99354, United States;  Present Address: Chemical Sciences Division, Oak Ridge National Laboratory, Oak Ridge, TN 37830, United States;  https://orcid.org/0000-0001-6028-7021
+Author Contributions
+J.T. and G.C. contributed equally.
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+This work was supported by the US Department of Energy (DOE) Office of Science, Office of Basic Energy Sciences, Division of Chemical Sciences, Geosciences and Biosciences catalysis program (FWP #47319) and the National Natural Science Foundation of China (no. 22279115). PNNL is a multiprogram national laboratory operated by Battelle for DOE. Computational work was performed using the Molecular Sciences Computing Facility (MSCF) in the William R. Wiley Environmental Molecular Sciences Laboratory, a US Department of Energy (DOE) national scientific user facility sponsored by the DOE’s Office of Biological and Environmental Research and located at the Pacific Northwest National Laboratory (PNNL) and the National Energy Research Scientific Computing Center (NERSC) located at Lawrence Berkley National Laboratory provided by a user proposal.
+References
+ARTICLE SECTIONSJump To
+This article references 90 other publications.
+1Grant, J.; Carrero, C. A.; Goeltl, F.; Venegas, J.; Mueller, P.; Burt, S. P.; Specht, S.; McDermott, W.; Chieregato, A.; Hermans, I. Selective oxidative dehydrogenation of propane to propene using boron nitride catalysts. Science 2016, 354, 1570– 1573,  DOI: 10.1126/science.aaf7885 [Crossref], [PubMed], [CAS], Google Scholar
+2Grant, J. T.; McDermott, W. P.; Venegas, J. M.; Burt, S. P.; Micka, J.; Phivilay, S. P.; Carrero, C. A.; Hermans, I. Boron and boron-containing catalysts for the oxidative dehydrogenation of propane. ChemCatChem 2017, 9, 3622– 3626,  DOI: 10.1002/cctc.201701473 [Crossref], [CAS], Google Scholar
+3Shi, L.; Wang, D.; Song, W.; Shao, D.; Zhang, W.-P.; Lu, A.-H. Edge-hydroxylated boron nitride for oxidative dehydrogenation of propane to propylene. ChemCatChem 2017, 9, 1788– 1793,  DOI: 10.1002/cctc.201700004 [Crossref], [CAS], Google Scholar
+4Zhou, H.; Yi, X.; Hui, Y.; Wang, L.; Chen, W.; Qin, Y.; Wang, M.; Ma, J.; Chu, X.; Wang, Y. Isolated boron in zeolite for oxidative dehydrogenation of propane. Science 2021, 372, 76– 80,  DOI: 10.1126/science.abe7935 [Crossref], [PubMed], [CAS], Google Scholar
+5Wang, T.-C.; Yin, J.-L.; Guo, X.-J.; Chen, Y.; Lang, W.-Z.; Guo, Y.-J. Modulating the crystallinity of boron nitride for propane oxidative dehydrogenation. J. Catal. 2021, 393, 149– 158,  DOI: 10.1016/j.jcat.2020.11.029 [Crossref], [CAS], Google Scholar
+6Liu, Z.; Yan, B.; Meng, S.; Liu, R.; Lu, W. D.; Sheng, J.; Yi, Y.; Lu, A. H. Plasma Tuning Local Environment of Hexagonal Boron Nitride for Oxidative Dehydrogenation of Propane. Angew. Chem., Int. Ed. 2021, 60, 19691– 19695,  DOI: 10.1002/anie.202106713 [Crossref], [CAS], Google Scholar
+7Dorn, R. W.; Cendejas, M. C.; Chen, K.; Hung, I.; Altvater, N. R.; McDermott, W. P.; Gan, Z.; Hermans, I.; Rossini, A. J. Structure Determination of Boron-Based Oxidative Dehydrogenation Heterogeneous Catalysts With Ultrahigh Field 35.2 T 11B Solid-State NMR Spectroscopy. ACS Catal. 2020, 10, 13852– 13866,  DOI: 10.1021/acscatal.0c03762 [ACS Full Text ], [CAS], Google Scholar
+8Lu, W.-D.; Wang, D.; Zhao, Z.; Song, W.; Li, W.-C.; Lu, A.-H. Supported boron oxide catalysts for selective and low-temperature oxidative dehydrogenation of propane. ACS Catal. 2019, 9, 8263– 8270,  DOI: 10.1021/acscatal.9b02284 [ACS Full Text ], [CAS], Google Scholar
+9Buyevskaya, O.; Müller, D.; Pitsch, I.; Baerns, M. Selective oxidative conversion of propane to olefins and oxygenates on boria-containing catalysts. Stud. Surf. Sci. Catal. 1998, 119, 671– 676,  DOI: 10.1016/S0167-2991(98)80509-0 [Crossref], [CAS], Google Scholar
+10Liu, Q.; Wu, Y.; Xing, F.; Liu, Q.; Guo, X.; Huang, C. B2O3@ BPO4 sandwich-like hollow spheres as metal-free supported liquid-phase catalysts. J. Catal. 2020, 381, 599– 607,  DOI: 10.1016/j.jcat.2019.11.028 [Crossref], [CAS], Google Scholar
+11Lenoir, D. Selective oxidation of organic compounds-sustainable catalytic reactions with oxygen and without transition metals?. Angew. Chem., Int. Ed. 2006, 45, 3206– 3210,  DOI: 10.1002/anie.200502702 [Crossref], [CAS], Google Scholar
+12North, M. Sustainable Catalysis: Without Metals or Other Endangered Elements, Part 2; Royal Society of Chemistry, 2015, pp 1– 5.Google Scholar
+13Bullock, R. M.; Chen, J. G.; Gagliardi, L.; Chirik, P. J.; Farha, O. K.; Hendon, C. H.; Jones, C. W.; Keith, J. A.; Klosin, J.; Minteer, S. D.; Morris, R. H.; Radosevich, A. T.; Rauchfuss, T. B.; Strotman, N. A.; Vojvodic, A.; Ward, T. R.; Yang, J. Y.; Surendranath, Y. Using nature’s blueprint to expand catalysis with Earth-abundant metals. Science 2020, 369, eabc3183  DOI: 10.1126/science.abc3183 [Crossref], [PubMed], Google Scholar
+14Skubic, L.; Sovdat, J.; Teran, N.; Huš, M.; Kopač, D.; Likozar, B. Ab Initio Multiscale Process Modeling of Ethane, Propane and Butane Dehydrogenation Reactions: A Review. Catalysts 2020, 10, 1405,  DOI: 10.3390/catal10121405 [Crossref], [CAS], Google Scholar
+15Love, A. M.; Thomas, B.; Specht, S. E.; Hanrahan, M. P.; Venegas, J. M.; Burt, S. P.; Grant, J. T.; Cendejas, M. C.; McDermott, W. P.; Rossini, A. J. Probing the transformation of boron nitride catalysts under oxidative dehydrogenation conditions. J. Am. Chem. Soc. 2018, 141, 182– 190,  DOI: 10.1021/jacs.8b08165 [ACS Full Text ], Google Scholar
+16Venegas, J. M.; McDermott, W. P.; Hermans, I. Serendipity in catalysis research: Boron-based materials for alkane oxidative dehydrogenation. Acc. Chem. Res. 2018, 51, 2556– 2564,  DOI: 10.1021/acs.accounts.8b00330 [ACS Full Text ], [CAS], Google Scholar
+17Shi, L.; Wang, D.; Lu, A.-H. A viewpoint on catalytic origin of boron nitride in oxidative dehydrogenation of light alkanes. Chin. J. Catal. 2018, 39, 908– 913,  DOI: 10.1016/s1872-2067(18)63060-8 [Crossref], [CAS], Google Scholar
+18Huang, R.; Zhang, B.; Wang, J.; Wu, K. H.; Shi, W.; Zhang, Y.; Liu, Y.; Zheng, A.; Schlögl, R.; Su, D. S. Direct insight into ethane oxidative dehydrogenation over boron nitrides. ChemCatChem 2017, 9, 3293– 3297,  DOI: 10.1002/cctc.201700725 [Crossref], [CAS], Google Scholar
+19Venegas, J. M.; Zhang, Z.; Agbi, T. O.; McDermott, W. P.; Alexandrova, A.; Hermans, I. Why boron nitride is such a selective catalyst for the oxidative dehydrogenation of propane. Angew. Chem., Int. Ed. 2020, 59, 16527– 16535,  DOI: 10.1002/anie.202003695 [Crossref], [CAS], Google Scholar
+20Kraus, P.; Lindstedt, R. P. It’sa gas: Oxidative dehydrogenation of propane over boron nitride catalysts. J. Phys. Chem. C 2021, 125, 5623– 5634,  DOI: 10.1021/acs.jpcc.1c00165 [ACS Full Text ], [CAS], Google Scholar
+21Zhang, X.; You, R.; Wei, Z.; Jiang, X.; Yang, J.; Pan, Y.; Wu, P.; Jia, Q.; Bao, Z.; Bai, L. Radical chemistry and reaction mechanisms of propane oxidative dehydrogenation over hexagonal boron nitride catalysts. Angew. Chem., Int. Ed. 2020, 132, 8119– 8123,  DOI: 10.1002/anie.202003695 [Crossref], Google Scholar
+22Tian, J.; Tan, J.; Xu, M.; Zhang, Z.; Wan, S.; Wang, S.; Lin, J.; Wang, Y. Propane oxidative dehydrogenation over highly selective hexagonal boron nitride catalysts: The role of oxidative coupling of methyl. Sci. Adv. 2019, 5, eaav8063  DOI: 10.1126/sciadv.aav8063 [Crossref], [PubMed], Google Scholar
+23Krogh-Moe, J. The structure of vitreous and liquid boron oxide. J. Non-Cryst. Solids 1969, 1, 269– 284,  DOI: 10.1016/0022-3093(69)90025-8 [Crossref], [CAS], Google Scholar
+24National Center for Biotechnology Information. PubChem Compound Summary for CID 517277, Chromium(III) Oxide. (accessed April 23, 2023).https://pubchem.ncbi.nlm.nih.gov/compound/Chromium_III_-oxide.Google Scholar
+25Huš, M.; Kopač, D.; Bajec, D.; Likozar, B. Effect of Surface Oxidation on Oxidative Propane Dehydrogenation over Chromia: An Ab Initio Multiscale Kinetic Study. ACS Catal. 2021, 11, 11233– 11247,  DOI: 10.1021/acscatal.1c01814 [ACS Full Text ], [CAS], Google Scholar
+26Huš, M.; Kopač, D.; Likozar, B. Kinetics of non-oxidative propane dehydrogenation on Cr2O3 and the nature of catalyst deactivation from first-principles simulations. J. Catal. 2020, 386, 126– 138,  DOI: 10.1016/j.jcat.2020.03.037 [Crossref], [CAS], Google Scholar
+27Fonzeu Monguen, C. K.; El Kasmi, A.; Arshad, M. F.; Kouotou, P. M.; Daniel, S.; Tian, Z.-Y. Oxidative Dehydrogenation of Propane into Propene over Chromium Oxides. Ind. Eng. Chem. Res. 2022, 61, 4546– 4560,  DOI: 10.1021/acs.iecr.2c00813 [ACS Full Text ], [CAS], Google Scholar
+28Zhang, Z.; Jimenez-Izal, E.; Hermans, I.; Alexandrova, A. N. Dynamic phase diagram of catalytic surface of hexagonal boron nitride under conditions of oxidative dehydrogenation of propane. J. Phys. Chem. Lett. 2018, 10, 20– 25,  DOI: 10.1021/acs.jpclett.8b03373 [ACS Full Text ], Google Scholar
+29Altvater, N. R.; Dorn, R. W.; Cendejas, M. C.; McDermott, W. P.; Thomas, B.; Rossini, A. J.; Hermans, I. B-MWW Zeolite: The Case Against Single-Site Catalysis. Angew. Chem., Int. Ed. 2020, 132, 6608– 6612,  DOI: 10.1002/anie.201914696 [Crossref], Google Scholar
+30McDermott, W. P.; Cendejas, M. C.; Hermans, I. Recent Advances in the Understanding of Boron-Containing Catalysts for the Selective Oxidation of Alkanes to Olefins. Top. Catal. 2020, 63, 1700– 1707,  DOI: 10.1007/s11244-020-01383-z [Crossref], [CAS], Google Scholar
+31Yan, H.; Alayoglu, S.; Wu, W.; Zhang, Y.; Weitz, E.; Stair, P. C.; Notestein, J. M. Identifying Boron Active Sites for the Oxidative Dehydrogenation of Propane. ACS Catal. 2021, 11, 9370– 9376,  DOI: 10.1021/acscatal.1c02168 [ACS Full Text ], [CAS], Google Scholar
+32Si, C.; Lian, Z.; Olanrele, S. O.; Sun, X.; Li, B. Revealing the origin of the reactivity of metal-free boron nitride catalysts in oxidative dehydrogenation of propane. Appl. Surf. Sci. 2020, 519, 146241,  DOI: 10.1016/j.apsusc.2020.146241 [Crossref], [CAS], Google Scholar
+33White, C. E.; Provis, J. L.; Proffen, T.; Riley, D. P.; Van Deventer, J. S. Combining density functional theory (DFT) and pair distribution function (PDF) analysis to solve the structure of metastable materials: the case of metakaolin. Phys. Chem. Chem. Phys. 2010, 12, 3239– 3245,  DOI: 10.1039/b922993k [Crossref], [PubMed], [CAS], Google Scholar
+34Zhang, Z.; Cui, Z.-H.; Jimenez-Izal, E.; Sautet, P.; Alexandrova, A. N. Hydrogen Evolution on Restructured B-Rich WB: Metastable Surface States and Isolated Active Sites. ACS Catal. 2020, 10, 13867– 13877,  DOI: 10.1021/acscatal.0c03410 [ACS Full Text ], [CAS], Google Scholar
+35Zandkarimi, B.; Alexandrova, A. N. Surface-supported cluster catalysis: Ensembles of metastable states run the show. Wiley Interdiscip. Rev. Comput. Mol. Sci. 2019, 9, e1420  DOI: 10.1002/wcms.1420 [Crossref], [CAS], Google Scholar
+36Zhang, Z.; Zandkarimi, B.; Alexandrova, A. N. Ensembles of Metastable States Govern Heterogeneous Catalysis on Dynamic Interfaces. Acc. Chem. Res. 2020, 53, 447– 458,  DOI: 10.1021/acs.accounts.9b00531 [ACS Full Text ], [CAS], Google Scholar
+37Sun, G.; Sautet, P. Metastable Structures in Cluster Catalysis from First-Principles: Structural Ensemble in Reaction Conditions and Metastability Triggered Reactivity. J. Am. Chem. Soc. 2018, 140, 2812– 2820,  DOI: 10.1021/jacs.7b11239 [ACS Full Text ], [CAS], Google Scholar
+38Collinge, G.; Yuk, S. F.; Nguyen, M.-T.; Lee, M.-S.; Glezakou, V.-A.; Rousseau, R. Effect of collective dynamics and anharmonicity on entropy in heterogenous catalysis: Building the case for advanced molecular simulations. ACS Catal. 2020, 10, 9236– 9260,  DOI: 10.1021/acscatal.0c01501 [ACS Full Text ], [CAS], Google Scholar
+39Marx, D.; Hutter, J. Ab initio molecular dynamics: Theory and implementation. Modern Methods and Algorithms of Quantum Chemistry; John von Neumann Institute for Computing, 2000; Vol 1, 301–449, pp 141– 152.Google Scholar
+40Wang, Y.-G.; Mei, D.; Glezakou, V.-A.; Li, J.; Rousseau, R. Dynamic formation of single-atom catalytic active sites on ceria-supported gold nanoparticles. Nat. Commun. 2015, 6, 6511,  DOI: 10.1038/ncomms7511 [Crossref], [PubMed], [CAS], Google Scholar
+41Yang, G.; Akhade, S. A.; Chen, X.; Liu, Y.; Lee, M. S.; Glezakou, V. A.; Rousseau, R.; Lercher, J. A. The nature of hydrogen adsorption on platinum in the aqueous phase. Angew. Chem., Int. Ed. 2019, 58, 3527– 3532,  DOI: 10.1002/anie.201813958 [Crossref], [CAS], Google Scholar
+42Piccini, G.; Lee, M.-S.; Yuk, S. F.; Zhang, D.; Collinge, G.; Kollias, L.; Nguyen, M.-T.; Glezakou, V.-A.; Rousseau, R. Ab initio molecular dynamics with enhanced sampling in heterogeneous catalysis. Catal. Sci. Technol. 2022, 12, 12– 37,  DOI: 10.1039/d1cy01329g [Crossref], [CAS], Google Scholar
+43Motagamwala, A. H.; Dumesic, J. A. Microkinetic modeling: a tool for rational catalyst design. Chem. Rev. 2020, 121, 1049– 1076,  DOI: 10.1021/acs.chemrev.0c00394 [ACS Full Text ], Google Scholar
+44Marin, G. B.; Yablonsky, G. S.; Constales, D. Kinetics of Chemical Reactions: Decoding Complexity; John Wiley & Sons, 2019, pp 139– 171.[Crossref], Google Scholar
+45Assaf, N. W.; De La Pierre, M.; Altarawneh, M. K.; Radny, M. W.; Jiang, Z.-T.; Dlugogorski, B. Z. Structure, Stability, and (Non) Reactivity of the Low-Index Surfaces of Crystalline B2O3–I. J. Phys. Chem. C 2017, 121, 11346– 11354,  DOI: 10.1021/acs.jpcc.7b01347 [ACS Full Text ], [CAS], Google Scholar
+46Huang, L.; Durandurdu, M.; Kieffer, J. New B2O3 crystals predicted from concurrent molecular dynamics simulations and first-principles calculations. J. Phys. Chem. C 2007, 111, 13712– 13720,  DOI: 10.1021/jp0735583 [ACS Full Text ], [CAS], Google Scholar
+47Ferlat, G.; Charpentier, T.; Seitsonen, A. P.; Takada, A.; Lazzeri, M.; Cormier, L.; Calas, G.; Mauri, F. Boroxol rings in liquid and vitreous B2O3 from first principles. Phys. Rev. Lett. 2008, 101, 065504– 065510,  DOI: 10.1103/physrevlett.101.065504 [Crossref], [PubMed], [CAS], Google Scholar
+48Scherer, C.; Schmid, F.; Letz, M.; Horbach, J. Structure and dynamics of B2O3 melts and glasses: From ab initio to classical molecular dynamics simulations. Comput. Mater. Sci. 2019, 159, 73– 85,  DOI: 10.1016/j.commatsci.2018.12.001 [Crossref], [CAS], Google Scholar
+49Alderman, O. L. G.; Ferlat, G.; Baroni, A.; Salanne, M.; Micoulaut, M.; Benmore, C. J.; Lin, A.; Tamalonis, A.; Weber, J. K. R. Liquid B2O3 up to 1700 K: X-ray diffraction and boroxol ring dissolution. J. Phys.: Condens. Matter 2015, 27, 455104,  DOI: 10.1088/0953-8984/27/45/455104 [Crossref], [PubMed], [CAS], Google Scholar
+50Diefenbacher, J.; McMillan, P. F. Molecular Dynamics Study of the Self-Diffusion of Ions in B2O3 Melt at High Pressure. J. Phys. Chem. A 2001, 105, 7973– 7978,  DOI: 10.1021/jp003756t [ACS Full Text ], [CAS], Google Scholar
+51Walrafen, G. E.; Samanta, S. R.; Krishnan, P. N. Raman investigation of vitreous and molten boric oxide. J. Chem. Phys. 1980, 72, 113– 120,  DOI: 10.1063/1.438894 [Crossref], [CAS], Google Scholar
+52Bader, R. F. W. Everyman’s Derivation of the Theory of Atoms in Molecules. J. Phys. Chem. A 2007, 111, 7966– 7972,  DOI: 10.1021/jp073213k [ACS Full Text ], [CAS], Google Scholar
+53Yu, M.; Trinkle, D. R. Accurate and efficient algorithm for Bader charge integration. J. Chem. Phys. 2011, 134, 064111,  DOI: 10.1063/1.3553716 [Crossref], [PubMed], [CAS], Google Scholar
+54Henkelman, G.; Arnaldsson, A.; Jónsson, H. A fast and robust algorithm for Bader decomposition of charge density. Comput. Mater. Sci. 2006, 36, 354– 360,  DOI: 10.1016/j.commatsci.2005.04.010 [Crossref], Google Scholar
+55Sanville, E.; Kenny, S. D.; Smith, R.; Henkelman, G. Improved grid-based algorithm for Bader charge allocation. J. Comput. Chem. 2007, 28, 899– 908,  DOI: 10.1002/jcc.20575 [Crossref], [PubMed], [CAS], Google Scholar
+56Tang, W.; Sanville, E.; Henkelman, G. A grid-based Bader analysis algorithm without lattice bias. J. Phys.: Condens. Matter 2009, 21, 084204,  DOI: 10.1088/0953-8984/21/8/084204 [Crossref], [PubMed], [CAS], Google Scholar
+57Ohmura, S.; Shimojo, F. Mechanism of atomic diffusion in liquid B2O3: An ab initio molecular dynamics study. Phys. Rev. B 2008, 78, 224206– 2242122,  DOI: 10.1103/physrevb.78.224206 [Crossref], [CAS], Google Scholar
+58Campbell, C. T.; Sprowl, L. H.; Árnadóttir, L. Equilibrium Constants and Rate Constants for Adsorbates: Two-Dimensional (2D) Ideal Gas, 2D Ideal Lattice Gas, and Ideal Hindered Translator Models. J. Phys. Chem. C 2016, 120, 10283– 10297,  DOI: 10.1021/acs.jpcc.6b00975 [ACS Full Text ], [CAS], Google Scholar
+59Sommer, A.; White, D.; Linevsky, M. J.; Mann, D. E. Infrared Absorption Spectra of B2O3, B2O2, and BO2 in Solid Argon Matrices. J. Chem. Phys. 1963, 38, 87– 98,  DOI: 10.1063/1.1733501 [Crossref], [CAS], Google Scholar
+60Simon, G.; Hehlen, B.; Vacher, R.; Courtens, E. Hyper-Raman scattering analysis of the vibrations in vitreous boron oxide. Phys. Rev. B 2007, 76, 054210– 054220,  DOI: 10.1103/physrevb.76.054210 [Crossref], [CAS], Google Scholar
+61Zhou, Y.; Lin, J.; Li, L.; Pan, X.; Sun, X.; Wang, X. Enhanced performance of boron nitride catalysts with induction period for the oxidative dehydrogenation of ethane to ethylene. J. Catal. 2018, 365, 14– 23,  DOI: 10.1016/j.jcat.2018.05.023 [Crossref], [CAS], Google Scholar
+62Collinge, G.; Kruse, N.; McEwen, J.-S. Role of carbon monoxide in catalyst reconstruction for CO hydrogenation: first-principles study of the composition, structure, and stability of Cu/Co (1012) as a function of CO pressure. J. Phys. Chem. C 2017, 121, 2181– 2191,  DOI: 10.1021/acs.jpcc.6b09527 [ACS Full Text ], [CAS], Google Scholar
+63Liu, Z.; Lu, W.-D.; Wang, D.; Lu, A.-H. Interplay of On- and Off-Surface Processes in the B2O3-Catalyzed Oxidative Dehydrogenation of Propane: A DFT Study. J. Phys. Chem. C 2021, 125, 24930– 24944,  DOI: 10.1021/acs.jpcc.1c07690 [ACS Full Text ], [CAS], Google Scholar
+64Westley, F. Table of Recommended Rate Constants for Chemical Reactions Occurring in Combustion; National Standard Reference Data System, 1980, pp 83– 84.[Crossref], Google Scholar
+65Tian, J.; Li, J.; Qian, S.; Zhang, Z.; Wan, S.; Wang, S.; Lin, J.; Wang, Y. Understanding the origin of selective oxidative dehydrogenation of propane on boron-based catalysts. Appl. Catal., A 2021, 623, 118271,  DOI: 10.1016/j.apcata.2021.118271 [Crossref], [CAS], Google Scholar
+66Rajbanshi, B.; Saha, S.; Fricke, C.; Ammal, S. C.; Heyden, A. Oxidative dehydrogenation of propane on the oxygen adsorbed edges of boron nitride nanoribbons. Catal. Sci. Technol. 2020, 10, 5181– 5195,  DOI: 10.1039/d0cy01031f [Crossref], [CAS], Google Scholar
+67Kotanjac, Z. S.; Niederer, J. P. M.; Versteeg, G. F. Influence of the Pressure on the Product Distribution in the Oxidative Dehydrogenation of Propane over a Ga2O3/MoO3 Catalyst. Int. J. Chem. React. Eng. 2007, 5(1),  DOI: 10.2202/1542-6580.1392 .[Crossref], Google Scholar
+68Campbell, C. T. The Degree of Rate Control: A Powerful Tool for Catalysis Research. ACS Catal. 2017, 7, 2770– 2779,  DOI: 10.1021/acscatal.7b00115 [ACS Full Text ], [CAS], Google Scholar
+69Rase, D. E.; Lane, G. Phase Equilibrium Studies in the System ThO2-B2O3. J. Am. Ceram. Soc. 1964, 47, 48– 49,  DOI: 10.1111/j.1151-2916.1964.tb14641.x [Crossref], [CAS], Google Scholar
+70Lippert, G.; Hutter, J.; Parrinello, M. The Gaussian and augmented-plane-wave density functional method for ab initio molecular dynamics simulations. Theor. Chem. Acc. 1999, 103, 124– 140,  DOI: 10.1007/s002140050523 [Crossref], [CAS], Google Scholar
+71VandeVondele, J.; Krack, M.; Mohamed, F.; Parrinello, M.; Chassaing, T.; Hutter, J. Quickstep: Fast and accurate density functional calculations using a mixed Gaussian and plane waves approach. Comput. Phys. Commun. 2005, 167, 103– 128,  DOI: 10.1016/j.cpc.2004.12.014 [Crossref], [CAS], Google Scholar
+72Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized gradient approximation made simple. Phys. Rev. Lett. 1996, 77, 3865– 3868,  DOI: 10.1103/physrevlett.77.3865 [Crossref], [PubMed], [CAS], Google Scholar
+73Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, H. A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu. J. Chem. Phys. 2010, 132, 154104,  DOI: 10.1063/1.3382344 [Crossref], [PubMed], [CAS], Google Scholar
+74VandeVondele, J.; Hutter, J. Gaussian basis sets for accurate calculations on molecular systems in gas and condensed phases. J. Chem. Phys. 2007, 127, 114105– 114115,  DOI: 10.1063/1.2770708 [Crossref], [PubMed], [CAS], Google Scholar
+75Goedecker, S.; Teter, M.; Hutter, J. Separable dual-space Gaussian pseudopotentials. Phys. Rev. B 1996, 54, 1703– 1710,  DOI: 10.1103/physrevb.54.1703 [Crossref], [PubMed], [CAS], Google Scholar
+76Hoover, W. G. Canonical dynamics: Equilibrium phase-space distributions. Phys. Rev. A 1985, 31, 1695– 1697,  DOI: 10.1103/physreva.31.1695 [Crossref], [PubMed], [CAS], Google Scholar
+77Nosé, S. A unified formulation of the constant temperature molecular dynamics methods. J. Chem. Phys. 1984, 81, 511– 519,  DOI: 10.1063/1.447334 [Crossref], [CAS], Google Scholar
+78Gaigeot, M.-P.; Martinez, M.; Vuilleumier, R. Infrared spectroscopy in the gas and liquid phase from first principle molecular dynamics simulations: application to small peptides. Mol. Phys. 2007, 105, 2857– 2878,  DOI: 10.1080/00268970701724974 [Crossref], [CAS], Google Scholar
+79Yuk, S. F.; Lee, M.-S.; Collinge, G.; Zhang, J.; Padmaperuma, A. B.; Li, Z.; Polo-Garzon, F.; Wu, Z.; Glezakou, V.-A.; Rousseau, R. Mechanistic understanding of catalytic conversion of ethanol to 1-butene over 2D-pillared MFI zeolite. J. Phys. Chem. C 2020, 124, 28437– 28447,  DOI: 10.1021/acs.jpcc.0c05585 [ACS Full Text ], [CAS], Google Scholar
+80Sprik, M.; Ciccotti, G. Free energy from constrained molecular dynamics. J. Chem. Phys. 1998, 109, 7737– 7744,  DOI: 10.1063/1.477419 [Crossref], [CAS], Google Scholar
+81Eyring, H. The activated complex in chemical reactions. J. Chem. Phys. 1935, 3, 107– 115,  DOI: 10.1063/1.1749604 [Crossref], [CAS], Google Scholar
+82Besora, M.; Maseras, F. Microkinetic modeling in homogeneous catalysis. Wiley Interdiscip. Rev. Comput. Mol. Sci. 2018, 8, 1372– 1385,  DOI: 10.1002/wcms.1372 [Crossref], Google Scholar
+83Cortright, R. D.; Dumesic, J. Kinetics of heterogeneous catalytic reactions: Analysis of reaction schemes. Adv. Catal. 2001, 46, 161– 264,  DOI: 10.1016/S0360-0564(02)46023-3 [Crossref], [CAS], Google Scholar
+84Gokhale, A. A.; Kandoi, S.; Greeley, J. P.; Mavrikakis, M.; Dumesic, J. A. Molecular-level descriptions of surface chemistry in kinetic models using density functional theory. Chem. Eng. Sci. 2004, 59, 4679– 4691,  DOI: 10.1016/j.ces.2004.09.038 [Crossref], [CAS], Google Scholar
+85Laidler, K. J.; King, M. C. Development of transition-state theory. J. Chem. Phys. 1983, 87, 2657– 2664,  DOI: 10.1021/j100238a002 [ACS Full Text ], [CAS], Google Scholar
+86Campbell, C. T.; Sprowl, L. H.; Árnadóttir, L. n. Equilibrium constants and rate constants for adsorbates: two-dimensional (2D) ideal gas, 2D ideal lattice gas, and ideal hindered translator models. J. Phys. Chem. C 2016, 120, 10283– 10297,  DOI: 10.1021/acs.jpcc.6b00975 [ACS Full Text ], [CAS], Google Scholar
+87Kreuzer, H. J. Kinetics of Adsorption, Desorption and Reactions at Surfaces. In Springer Handbook of Surface Science; Springer, 2020, pp 1035– 1052.[Crossref], Google Scholar
+88Payne, S.; McEwen, J.-S.; Kreuzer, H. J.; Menzel, D. Adsorption and desorption of CO on Ru (0 0 0 1): A comprehensive analysis. Surf. Sci. 2005, 594, 240– 262,  DOI: 10.1016/j.susc.2005.07.031 [Crossref], [CAS], Google Scholar
+89Wong, B. M.; Collinge, G.; Hensley, A. J.; Wang, Y.; McEwen, J.-S. Benchmarking the accuracy of coverage-dependent models: adsorption and desorption of benzene on Pt (1 1 1) and Pt3Sn (1 1 1) from first principles. Prog. Surf. Sci. 2019, 94, 100538– 100547,  DOI: 10.1016/j.progsurf.2019.04.001 [Crossref], [CAS], Google Scholar
+90Che, F.; Ha, S.; McEwen, J.-S. Hydrogen oxidation and water dissociation over an oxygen-enriched Ni/YSZ electrode in the presence of an electric field: a first-principles-based microkinetic model. Ind. Eng. Chem. Res. 2017, 56, 1201– 1213,  DOI: 10.1021/acs.iecr.6b04028 [ACS Full Text ], [CAS], Google Scholar
+Cited By
+This article has not yet been cited by other publications.
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. (A) Side-on, (B) top-down, and (C) bottom-up view of the liquid B2O3 slab model. The specific structure shown is a representative snapshot of the system, taken from the AIMD trajectory after equilibration at 850 K. Color scheme: green = B and red = O. Due to the fluxional nature of the liquid structure, the indicated slab thickness, and vacuum size are necessarily approximate.
+Figure 2
+Figure 2. Pairwise radial distribution functions, g(r), and associated coordination number (CN) distributions for (A,B) B–B pairs, (C,D) B–O pairs, and (E,F) O–O pairs within the liquid B2O3 surface at 850 K taken from ensemble/time averages extracted from the final 20 ps of equilibrated AIMD trajectory. Here,
+𝑔(
+𝑟
+BO
+)=
+3
+2
+𝑔(
+𝑟
+OB
+)
+. Coordination shells within each g(r) are identified using roman numerals I–VI (In the case of B–B, there is one less coordination shell than for B–O and O–O pairs), with colored shading used to aid eye. The CN distributions are shown for each thus delineated coordination shell shown in the g(r) plots.
+Figure 3
+Figure 3. AIMD snapshots of each type of ByOx species dynamically formed within liquid B2O3 at 850 K. (A–C) Boroxol rings as a result of liquification. (D–I) Reactive species interconverting within the liquid phase. Color scheme is the same as in Figure 1 except some B atoms are dark blue and some O atoms are yellow to help distinguish the species presented and aid the eye.
+Figure 4
+Figure 4. (A) Illustrated summary of reactive BxOy species dynamically formed in simulated liquid B2O3 at 850 K, corresponding to the molecular structures in Figure 3D–I. (B) Equilibrated molecular transformations occurring within the liquid B2O3 phase that are responsible for the dynamic formation of these reactive BxOy species. (C) Concentration of each reactive BxOy species within the liquid phase, in percent of all B atoms present, as determined from the statistical population of each species along the AIMD trajectory. (D) Equilibrium free energies for each reaction shown in panel (B), derived from the concentrations in panel (C) and activity coefficients of both an ideal gas and ideal lattice gas.
+Figure 5
+Figure 5. (A,B) In situ Raman spectra and the vibration density of states (VDOS) of liquid B2O3 at ∼850 K, respectively. (C,D) Contribution of boron and oxygen atoms to the VDOS, respectively. Shaded regions labeled α, β, γ, and θ designate areas in the local VDOS spectra that match to peaks in the in situ Raman spectrum.
+Figure 6
+Figure 6. AIMD of ODHP over liquid phase B2O3 at 850K. (A) Top-down and (B) side-on views of propane approaching its active site. (C) Top-down and (D) side-on views of the first hydrogen abstraction to form propyl radical. (E) Top-down and (F) side-on views of the second H abstraction to form propene. In addition to the color scheme shown in Figures 1 and 3, the H atoms of propane that are abstracted are colored magenta to aid the eye.
+Figure 7
+Figure 7. Buildup of BO1OH concentration as propane-to-propene turnovers is completed. Color scheme is identical to that used in Figure 6.
+Figure 8
+Figure 8. Minimum free energy path as a function of BO1OH concentration (given in mol % of all boron in the liquid B2O3 surface) as determined from enhanced sampling AIMD with the Blue Moon ensemble method for (A) water, H2O-BO1, formation from two BO1OH structures and (B) subsequent release of H2O from the BO1 structure.
+Figure 9
+Figure 9. Proposed reaction mechanism for ODHP over liquid B2O3 at 850 K.
+Figure 10
+Figure 10. Free energy diagram of ODHP (2C3H8 + O2 → 2C3H6 + 2H2O) as a function of BO1OH concentration. The reaction free energies are directly computed from the underlying species’ chemical potentials, which were themselves determined by the inversion of the system of linear equations representing the interdependent relationships between reaction free energies and species’ chemical potentials under all thermodynamic constraints.
+Figure 11
+Figure 11. (A) Arrhenius plots revealing the apparent activation barrier of our MKM (green circles) and that determined from the experiment (orange squares). The dashed lines are best fit lines. (B,C) MKM (blue circles) and experimental (orange squares) ODHP rate as a function of partial pressures of (B) propane and (C) oxygen. (D) Degree of rate control (DRC) and degree of selectivity control (DSC) analysis on each elementary reaction in the MKM. The definition of each reaction can be found in Figure 8 and Table 1.
+
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

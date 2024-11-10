@@ -1,0 +1,475 @@
+<DOCUMENT>
+Modeling the Effect of Surface Platinum–Tin Alloys on Propane Dehydrogenation on Platinum–Tin Catalysts
+
+Abstract
+Uncertainty analysis, reported experimental literature data, and density functional theory were synthesized to model the effect of surface tin coverage on platinum-based catalysts for nonoxidative propane dehydrogenation to propylene. This study tests four different platinum–tin skin surface models as potential catalytic sites, Pt3Sn/Pt(100), PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211), and compares them to the corresponding pure Pt surface sites using an uncertainty analysis methodology that uses BEEF-vdW with its ensembles (BMwE) to generate the uncertainty for the energies of the intermediates and transition states. One experimental data set with two experimental observations, selectivity to propylene and turnover frequency of propylene, was used as a calibration data set to evaluate the impact of the experimental data on informing the models. This study finds that the prior model for Pt3Sn/Pt(100) is the most active and Pt2Sn/Pt(211) is the most selective toward propylene. Active sites on the (100) facet have the highest probability of being responsible for C1 and C2 product formations (C–C bond cleavage). Increasing the Sn coverage on the (100) surface facet to a PtSn/Pt(100) active site leads to a significantly reduced rate and might explain the experimentally observed higher selectivity of Sn-doped catalysts relative to pure Pt catalysts. Next, this study finds that for all surfaces, except PtSn/Pt(100), the rate-controlling steps are the initial dehydrogenation steps alongside some partially rate-controlling second dehydrogenation steps. For PtSn/Pt(100), only the initial terminal dehydrogenation step to CH3CH2CH2* and second dehydrogenation steps are rate-controlling. Next, the calibrated models for all surfaces were found to be selective toward propylene production and model the reported turnover frequency successfully. Nevertheless, Pt2Sn/Pt(211) emerges as the active site with some (minor) evidence as the main active site based on Jeffreys’ scale interpretation of Bayes factors. This observation agrees with prior studies that also found step sites to be most likely the most relevant active sites for pure Pt catalysts. Overall, the results indicate that tin, in addition to affecting the binding strength of the adsorbed species, prevents deeper dehydrogenation (reducing coking) and cracking reactions through increasing activation barriers for unwanted side reactions.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+KEYWORDS:propane dehydrogenation platinum−tin catalyst uncertainty analysis Bayesian model selection
+
+Introduction
+ARTICLE SECTIONSJump To
+Propylene production from propane is an industrially important reaction due to the usage of propylene as a chemical feedstock and the changing economics of propane to propylene dehydrogenation. (1) Nonoxidative propane dehydrogenation (PDH) on platinum–tin catalysts continues to be a significant industrial process of producing propylene due to its high selectivity to propylene. (2,3) Many experimental studies have been done to evaluate the effect of alloying platinum with tin on propane dehydrogenation. (4−22)
+For example, in Bariås et al., Pt and Pt–Sn alloy nanoparticles were evaluated for propane dehydrogenation. (6) It was found that the single metal platinum nanoparticles were less selective than the alloyed nanoparticles, with the pure metal particles having a selectivity toward propylene of 85%, while the Pt–Sn particles had a selectivity close to 97%. In addition, it was found that the turnover frequencies for propylene production were close to three times higher on Pt–Sn catalysts than on Pt catalysts and that carbon deposition on the Pt–Sn catalysts was much less than on the Pt catalysts. Similar results were found by Kaylor and Davis, (7) where on silica-supported catalysts, Pt–Sn exhibited a much higher selectivity to propylene than on platinum-only catalysts.
+In Wang et al., work was performed to analyze the regeneration of Pt–Sn alloy catalyst particles by measuring the depletion of tin and the following regeneration of the Pt–Sn surface by segregation processes that occur in the Pt–Sn alloy particle. (4) They find that the particles, after undergoing etching of the original tin and then a regeneration treatment to drive tin from the bulk of the particle to the surface, maintain a selectivity of 92% to propylene with minimal effects on the catalytic properties of the particles. Similar results with Sn-enriched surfaces for Pt–Sn catalysts for propane dehydrogenation were seen by Zhu et al. (5)
+In addition to the experimental literature, many density functional theory-based studies have been performed to analyze the impact of tin on platinum–tin catalysts for alkane dehydrogenation. (23−28) One such study by Nam and Celik was performed to analyze the differences between three surfaces Pt(111), Pt3Sn(111), and Pt3Sn surface skin alloys on a bulk Pt(111) surface for ethane dehydrogenation. (23) They found that increasing Sn in the surface skin alloy may increase the selectivity, while forming a bulk alloy may not increase selectivity as significantly, as they found that the surface skin alloy has a higher selectivity to propylene relative to the bulk alloy. This surface skin alloy behavior may better replicate what is seen experimentally by Wang et al. and Zhu et al. (4,5) Specifically, Wang et al. report, based on TEM and EDS data, that the Pt–Sn surface alloy remains stable after the propane dehydrogenation reaction. (4) However, disagreements do arise, as Yang et al. found that the bulk Pt3Sn alloy for Pt(111) may be the most active of the alloys. (24) The majority of density functional theory studies research Pt(111) and Pt(211) facets, in which they model either the facet to be composed of a bulk alloy or the pure platinum facet with a surface Pt–Sn alloy skin. (25,26) Pt–Sn alloys cleaved in the (100) direction are not well studied, though it was found by Fricke et al. that Pt(100) has high turnover frequencies for propane consumption and possibly a low selectivity to propylene. (29)
+In this work, we seek to identify how Sn doping modifies the kinetics of the surface facets of Pt particles for the nonoxidative dehydrogenation of propane to propylene. Specifically, we studied four model surfaces, Pt3Sn/Pt(100), PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211), using density functional theory (DFT) calculations, uncertainty analysis using the BEEF-vdW with its ensemble (BMwE) model, and published experimental literature data. Given the diversity in Sn distributions in a Pt–Sn alloy, we limit this study to surface skin alloys on a Pt core. Likely, such models are most meaningful for small concentrations of Sn given that Sn tends to segregate to the surface. (4) While modeling each facet, kinetic data, such as turnover frequencies (TOFs) for propylene production and other product gases, apparent activation energies, reaction orders, and selectivities to different product gases, are reported. Finally, this study also identifies the mechanism and rate-controlling species for these alloys and compares the activity and selectivity of Pt–Sn alloy catalysts to those of pure platinum catalysts.
+Methods
+ARTICLE SECTIONSJump To
+Computational Details
+Calculations were performed using the Vienna Ab initio Simulation Program (VASP) version 5.4.4. (30−32) BEEF-vdW was the functional chosen for this study. (33) In previous work, it was found that BEEF-vdW with its ensembles (BMwE) was more successful in describing platinum surface behavior than an alternative method based on multiple DFT functionals to describe the uncertainty in the functional choice. (29) A Methfessel–Paxton order of 1 with an electron smearing width of 0.2 eV was used to model the electronic occupancies. (34,35) In addition, an energy cutoff of 400 eV with a 5 × 5 × 1 reciprocal grid using Monkhorst–Pack was found to be well converged for the calculations. (36,37) The energy convergence criterion was 1 × 10–7 eV, and the force convergence criterion was 0.03 eV/Å. To correct for errors in the entropy calculation within the harmonic approximation for small frequencies, frequencies less than 50 cm–1 were corrected to 50 cm–1. (38) Transition states were first converged with nudged elastic band calculations and then with dimer calculations using VTST to ensure that the transition states were well optimized. (39−42) In addition, for each transition state, a frequency calculation was performed to verify that there was only one imaginary frequency and that it corresponded to the desired bond cleavage. 46 intermediate species and 130 transition states were optimized for each surface model. Part of the reaction network is pictorially described in Figure 1. All elementary reactions considered are tabulated in the Supporting Information Tables S1–S6.
+Figure 1
+Figure 1. Dehydrogenation reaction network around C1–3 species.
+Four surfaces were tested in this study: Pt3Sn/Pt(100), PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211). They were chosen to evaluate how a substitutional replacement of platinum with tin would affect the bonding strength of intermediates and transition states. Figure 2 illustrates the four surface skin models that were chosen based on a potential geometric effect of tin on the Pt surface. For example, Pt3Sn/Pt(100) replaces one of the platinum atoms present in each of the 4-fold hollow sites with a tin atom, while PtSn/Pt(100) replaces two of the platinum atoms present in the 4-fold hollow site with tin atoms and all of the bridge sites contain a tin atom. Pt3Sn/Pt(111) models the effect of tin on some of the fcc and hcp sites such that larger surface-adsorbed species have to interact with Sn. The Pt2Sn/Pt(211) model was chosen as it modeled both the effect of the substitution of tin for platinum on the 4-fold hollow site and the fcc and hcp sites present near the edge. While many more different Pt–Sn arrangements are theoretically possible, we expect that these models allow us to qualitatively understand the effects of Sn alloying on the activity and selectivity of the underlying Pt catalyst.
+Figure 2
+Figure 2. Four surfaces evaluated in this study.
+The Pt3Sn/Pt(100), PtSn/Pt(100), and Pt3Sn/Pt(111) surfaces were modeled as 4 × 4 × 4 layer, 64 atom slabs, with a 15 Å vacuum gap added to prevent periodic interactions. The Pt2Sn/Pt(211) model is a 6 layer, 80 atom slab, with a 15 Å vacuum gap added to prevent periodic interactions. All alloys are energetically favored to form, with energies of formation of −0.640 eV or greater, with the exception of PtSn/Pt(100), which has a formation energy of +0.01 eV. We note that while the PtSn/Pt(100) surface is only marginally stable, it was specifically chosen here since Pt(100) was previously found to be the most unselective Pt surface for propane dehydrogenation, and at a stoichiometric surface Sn coverage, all bridge sites must involve both Sn and Pt, i.e., a large surface Sn coverage has the potential to significantly change the activity and selectivity of the (100) facet. The formation energies of all alloys are summarized in Section VIII of the Supporting Information (see Table S22). Figure 2 illustrates all surfaces. Surface slab parameters and coordinates of all surface intermediates and transition states can be found in the Supporting Information as text files.
+As mentioned in the previous section, BEEF-vdW with its ensembles (BMwE) was chosen to represent the uncertainty within the functional energy for the models. (29,43) Previous work found that this was a more supported model for describing platinum surface behavior when used for calibration on experiments. The process for creating this model follows the same methodology used by Fricke et al. However, there is one significant difference: in this case, the BEEF-vdW functional was employed to optimize the entire system, as opposed to being used solely for a single-point energy calculation. (29) This involves using the 2000 BEEF-vdW ensemble energies for each structure together with the optimized mean energies to perform a factor analysis and from that generating the covariance matrix to create the uncertainty and uncertainty correlation around each species energy. We believe that the differences between the optimized versus single-point energies are small in comparison to the total uncertainty in the functional errors, and this allows for a data comparison between this study and our prior platinum-only study. From the prior platinum-only study, some of the intermediates and transition-state structures were reoptimized, and better local minima were obtained. All optimized structures including recently updated ones can be found in the Supporting Information.
+A common challenge present in computational heterogeneous catalysis is that few experimental data sets have been published on the reaction systems of interest that can be calibrated on, and as such, comparisons will be made between the prior model without calibration and the posterior model with calibration. Specifically, the experiment from Bariås et al. is calibrated against, which was performed at 792 K and at approximately 0.29 bar of propane and 0.1 bar H2. (6) The data are calibrated on the turnover frequency of propane and selectivity to propylene. Selectivity to propylene is defined as
+selectivity=
+TOFpropylene
+TOFpropane
+(1)
+where TOFpropylene is the turnover frequency of propylene, and TOFpropane is the turnover frequency of propane, defined as the number of propylene molecules produced per second per site and number of propane molecules consumed per second per site, respectively.
+Given the experimental data, D = [TOFpropylene, selectivity], the likelihood function p(D|θ, M) assumes independence between experimental measurements and it is defined similarly to our previous work: (29,44,45)
+p(D|θ,M)=p(TOFpropylene|θ,M)×p(selectivity|θ,M)
+(2)
+A transformation was applied to the selectivity data using a logit function, as selectivity must be within the bounds of [0, 1]. This transformation was done to change the function range to (−∞, ∞), which is necessary to properly include and analyze the errors. The logit function for selectivity is defined as the following: (46)
+logit(selectivity)=ln(
+selectivity
+1−selectivity
+)
+(3)
+In addition, a similar rationale was determined for transforming the TOFpropylene data into the log10 TOF data to evaluate the errors present in the model on the range from (−∞, ∞).
+Combining the above equations, we find that the full description of the likelihood function is
+p(D|θ,M)=
+1
+√
+2πσ
+2
+TOF
+exp(−
+1
+2
+(log10TOF−log10TOF*)2
+σ
+2
+TOF
+)×
+1
+√
+2πσ
+2
+logit(selectivity)
+exp(−
+1
+2
+(logit(selectivity)−logit(selectivity)*)2
+σ
+2
+logit(selectivity)
+)
+(4)
+where σTOF2 is the variance of the turnover frequency of propylene, σlogit(selectivity)2 is the variance of the selectivity to propylene, log10 TOF* and logit(selectivity)* are the model values of propylene turnover frequency and selectivity, respectively, and log10 TOF and logit(selectivity) are the reported experimental values of the TOF and selectivity, respectively. Details for the distributions of the variances can be found in Section III and Table S7 of the Supporting Information.
+The Quantification of Uncertainty for Estimation, Simulation, and Optimization (QUESO) package was used to perform the statistical forward problem and calibration problem. (47) The multilevel Monte Carlo implementation in QUESO was used to calibrate the microkinetic model using experimental data. (48,49)
+Microkinetic Modeling
+To calculate the adsorption free energies, the free energies of the gas-phase species and the clean surface slab are subtracted from the free energy of the adsorbed species
+ΔGads,i=Gslab,i−Gslab−Gi,gas
+(5)
+where ΔGads,i is the free energy of adsorption of intermediate i, Gslab,i is the free energy of the slab with adsorbed intermediate i, Gslab is the free energy of the clean slab, and Gi,gas is the free energy of the gas-phase species.
+The activation free energy is defined as the following, and the forward rate constants are computed using harmonic transition-state theory (hTST)
+ΔG
+⧧
+j
+=G
+⧧
+j
+−∑G
+R
+ads,j
+(6)
+kfor,j=
+kBT
+h
+e−ΔG
+⧧
+j
+/kBT
+(7)
+where ΔGj⧧ is the activation free energy of reaction j, Gj,i⧧ is the free energy of the transition state in reaction j, Gads,jR is the reactant free energy of adsorption for reaction j, and kfor,j is the forward rate constant.
+Collision theory was used for calculating adsorption rate constants using the following equation
+kads=
+1
+N0
+√
+2πmAkBT
+(8)
+where N0 is the number of sites per surface area, and mA is the molecular weight of species A.
+For calculating the entropic contributions to the Gibbs free energy, the harmonic approximation was used. There are many questions about the accuracy of the harmonic approximation for calculating the entropies of the adsorbed molecules. (50−52) While including the uncertainty from the entropy calculations in our models is desirable, this was not done here given the difficulty in estimating the correlation of the entropy uncertainty for the various surface species. Previous work found that the 95% confidence interval around many species based on the functional uncertainty is approximately 0.7 eV; thus, the functional uncertainty is likely much larger than the effect of the entropic uncertainty on the Gibbs free energy for small molecules, justifying our procedure. (29) Nevertheless, in future work, we plan on developing procedures for properly considering the entropy uncertainty on microkinetic models.
+In all of the Pt–Sn surface model simulations, the free sites made up more than 90% of the total sites present on each surface, and so, lateral interactions of surface species were not considered. However, under the reaction conditions, significant surface coverage of hydrocarbon species was found for the pure platinum surface models. CH species were found on Pt(111) and CHCH species on the Pt(100) surface, while free sites are predominant on the Pt(211) surface. A linear lateral interaction model was therefore used to account for the effect of surface species on adsorption energies and transition-state barriers. Lateral interaction methods and parameters for Pt(100) and Pt(111) models are further described in Section IV of the Supporting Information (see Figures S1 and S2 and Table S11). Section IV of the Supporting Information also contains a description of the number of sites occupied by each species on each surface model (Tables S9 and S10).
+Reaction orders in H2 and CH3CH2CH3 were calculated using the following equation
+αi=(
+∂ln(TOF)
+∂ln(Pi)
+)T,Pj,j≠i
+(9)
+where αi is the reaction order of species i, ln(TOF) is the natural logarithm of the turnover frequency of propylene, and ln(Pi) is the natural logarithm of the partial pressure of species i. We also calculated the apparent activation energy, using the following equation
+Eapp=−kB(
+∂ln(TOF)
+∂(
+1
+T
+)
+)Pi
+(10)
+where Eapp is the apparent activation energy.
+Degrees of kinetic rate control using Campbell’s degree of rate control theory were calculated using the following equation
+XKRC,i=[
+∂ln(TOF)
+∂(
+ΔG
+⧧
+i
+−kBT
+)
+]T,Pi,ΔG
+ads
+i
+,ΔG
+⧧
+j,j≠i
+(11)
+where XKRC,i is the degree of kinetic rate control. (53−55)
+The reaction network studied includes coking and deep dehydrogenation steps. The intermediates and transition states can be found in Section I of the Supporting Information.
+Results and Discussion
+ARTICLE SECTIONSJump To
+For each catalyst model, a separate microkinetic model, uncertainty quantification, and gas-phase corrections were created to generate the quantities of interest for each experimental result. Section IX of the Supporting Information (Figures S8 and S9) illustrates the pairwise distributions of log10 TOF and selectivity, and we observe that relatively low and high rates can be found for both low and high selectivities, respectively, justifying our statistical approach for analyzing our results. Figure 3 describes the distribution of the turnover frequencies for propylene and the selectivity to propylene for each surface. All simulations were ran at 792 K, with partial pressures of propane and H2 at 0.29 and 0.09 bar, respectively, to model Bariås et al. (6) As shown in this figure and described in Table S21 of the Supporting Information, Pt2Sn/Pt(211) is on average the most selective of the surfaces, followed by PtSn/Pt(100), Pt3Sn/Pt(100), and then Pt3Sn/Pt(111). It is interesting to note that Pt3Sn/Pt(111), despite showing the lowest selectivity to propylene of the four surfaces, has the highest selectivity for propyne. As a result, and as illustrated in Figures S5 and S6 of the Supporting Information, it is the active sites on the (100) surface facet that display the highest selectivity toward non-C3, i.e., C1 and C2, products (promote C–C bond cleavage).
+Figure 3
+Figure 3. Histograms of the turnover frequency of propylene (TOF) and selectivity toward propylene on all four surfaces for the prior model, i.e., no calibration.
+In contrast, the turnover frequency of propylene and consumption of propane is on average the highest for Pt3Sn/Pt(100) and then Pt2Sn/Pt(211), Pt3Sn/Pt(111), and finally PtSn/Pt(100). The selectivity and turnover frequency differences can be viewed as a function of multiple factors. One of these factors is the activation energy of key steps surrounding the propane to propylene reaction. As shown in Table 1, the selectivity is highest when the barriers for further dehydrogenation or cracking of propylene are comparatively high or activation barriers for alternative dehydrogenation of the C3H7 species are higher than the dehydrogenation of C3H7 to propylene. This is especially evident for Pt3Sn/Pt(100), where the reaction barrier for competing products from the C3H7 intermediate is significantly lower than that for the dehydrogenation to produce adsorbed propylene. Specifically, reaction R7, as described in Table 1, which constitutes the full dehydrogenation reaction of the central carbon atom, possesses a lower activation free energy by 0.23 eV than reaction R3, which is the dehydrogenation of a terminal carbon to produce the desired adsorbed propylene species. For the Pt3Sn/Pt(111) model, the alternative second dehydrogenation pathway to nonpropylene species is kinetically also favored but only by 0.03 eV, which is clearly within the uncertainty of the DFT calculations. In contrast, for Pt2Sn/Pt(211) and PtSn/Pt(100), reaction R3 is kinetically favored over reaction R7. Similarly, the terminal carbon dehydrogenated propane species can be further dehydrogenated at the terminal carbon (reaction R11) or dehydrogenated at the central carbon to produce adsorbed propylene (reaction R4). For all but the stepped Pt2Sn/Pt(211) surface, this alternative dehydrogenation pathway is more kinetically favorable than propylene production due to the lower activation barrier. Finally, the lower observed selectivity to propylene of Pt3Sn/Pt(100) can be further explained by the kinetics of the deep dehydrogenation and cracking of propylene. The free energies of the transition states for reactions R20, RR22, and RR23 are all considerably lower for Pt3Sn/Pt(100) than for the two higher selectivity surfaces, PtSn/Pt(100) and Pt2Sn/Pt(211). Also, Pt3Sn/Pt(111) has generally higher transition-state free energies for most C–C bond cleavage reactions compared to Pt3Sn/Pt(100), explaining the relatively higher selectivity to C3 products (propylene and propyne), i.e., low selectivity to C1 and C2 products (see Figures S5 and S6).
+Table 1. Activation Free-Energy Barriers of Select Reactions That Occur Early in the Dehydrogenation Mechanisma
+  free energy of the transition state (eV)
+chemical reaction Pt3Sn/Pt(100) PtSn/Pt(100) Pt3Sn/Pt(111) Pt2Sn/Pt(211)
+(R1)
+0.92 1.33 1.48 1.35
+(R2)
+1.01 1.34 1.59 1.30
+(R3)
+0.90 1.39 1.12 0.97
+(R4)
+0.87 1.41 1.05 1.13
+(R5)
+2.62 2.18 3.08 2.58
+(R6)
+1.89 2.36 2.09 2.25
+(R7)
+0.67 1.56 1.09 1.24
+(R8)
+1.69 2.39 2.01 2.14
+(R9)
+2.38 2.68 2.71 2.71
+(R10)
+1.03 1.39 1.32 1.31
+(R11)
+0.74 1.37 1.02 1.15
+(R14)
+0.64 1.70 0.58 0.99
+(R15)
+0.86 0.59 0.94 1.00
+(R16)
+1.17 1.28 1.38 1.68
+(R20)
+1.53 3.00 2.10 2.06
+(R21)
+1.94 2.51 2.16 2.28
+(R22)
+0.78 1.72 1.09 1.62
+(R23)
+0.85 1.11 1.09 1.58
+(R24)
+0.89 0.79 1.22 1.29
+(R38)
+2.32 2.15 1.09 1.58
+(R39)
+1.53 2.89 1.77 1.81
+(R40)
+2.05 3.49 1.80 2.95
+(R41)
+0.92 1.49 0.61 0.64
+(R42)
+1.25 2.15 0.90 0.75
+(R43)
+1.36 1.87 1.25 0.99
+(R44)
+1.52 2.79 1.57 1.75
+(R45)
+0.99 3.00 1.87 2.40
+(R46)
+1.00 1.55 1.17 1.62
+(R47)
+0.95 2.15 0.88 0.62
+aEnergies are referenced to gaseous methane and hydrogen at 1 bar and 792 K, respectively. All reactions occur on the surface.
+Free-energy differences of the various states on the different surfaces can largely be explained by geometric effects that the substitution of tin has on these alloy surfaces. For Pt3Sn/Pt(100) and PtSn/Pt(100), most of the intermediates bind less strongly to the alloy surface than to the pure platinum surface due to most hydrocarbons having to bind to multiple surface atoms and some of them containing Sn. This is most evident for carbon on the surface, which cannot bind to four platinum atoms at the surface due to the substitution of tin on the surface at either 3:1 or 1:1 ratios on these surface alloys on Pt(100). These substitutional effects are most pronounced for PtSn/Pt(100) due to its effects on both the bridge and hollow sites. This explains the severe decrease in turnover frequency seen in Figure 3 for the PtSn/Pt(100) alloy, even though the free site coverages are high, i.e., they are on average 89%, as described in Table S20 in the Supporting Information.
+Next, a combination of geometric and electronic factors can explain changes in the reaction orders for propane and hydrogen gas as a result of Sn alloying. Figure 4 shows that the majority of the alloyed surfaces have a reaction order of 1 for propane and that reaction orders for hydrogen gas predominantly vary from −1.0 to 0.5 for PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211), while the mean hydrogen reaction order is about 0, varying from −2.0 to 1.0, for Pt3Sn/Pt(100). Reaction orders of close to 1 for propane originate from a low hydrocarbon coverage on the surfaces due to the presence of Sn, as described in Table S20 of the Supporting Information. The negative and positive reaction orders for hydrogen originate from the uncertainty of the adsorption and transition-state energies and the corresponding changes in the reaction mechanism. Hydrogen can block sites leading to negative reaction orders, but surface hydrogen can also facilitate the removal of deep dehydrogenated surface species, leading to positive reaction orders.
+Figure 4
+Figure 4. Apparent activation energy, reaction order of propane, and reaction order of H2 for all four surfaces calculated using the TOF of propylene for the prior model, i.e., no calibration.
+In comparison to the pure metal surfaces, all of the tin-doped surfaces except Pt3Sn/Pt(100) show lower activity compared to the pure metal surfaces, as shown in Figures 5 and 6. This trend can be explained by the much higher reaction barriers observed for the PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211) surfaces when compared to the pure Pt(100), Pt(111), and Pt(211) surfaces, respectively (see also Tables S5 and S6). Pt3Sn/Pt(100), however, displays a more diverse trend in the reaction barriers relative to Pt(100), as some of the barriers are equal to or lower than the barriers on Pt(100), hence the slightly higher activity observed for Pt3Sn/Pt(100) relative to Pt(100). Also, Pt3Sn/Pt(100) has generally the lowest reaction barriers among the four tin-doped surfaces, likely because of the open surface structure and low Sn:Pt ratio in the alloy. It is difficult to compare trends in the selectivity of the pure metal surfaces and the tin-doped surfaces as nearly flat distributions are observed for the pure and tin-doped surfaces for the (100) and (111) facets. The flat distribution speaks to a high degree of uncertainty in the selectivity based on the DFT functional. However, when analyzing the selectivity to C1 and C2 products (Figures S5 and S6), it appears that Sn substitution does not change the selectivity significantly but that sites on the (100) facet are more likely responsible for undesirable C–C cleavage reactions relative to all other surface facets. If this is indeed the case, a high Sn coverage on the (100) facet could lead to a reduction in the C–C cleavage selectivity due to a significantly reduced activity of this surface facet (even if the selectivity on the surface facet itself does not change significantly). In contrast, both Pt(211) and Pt2Sn/Pt(211) demonstrate a high selectivity to propylene, although Pt2Sn/Pt(211) has a tail extending to lower selectivity values (due to propyne production), hence reducing the mean selectivity relative to Pt(211). However, the selectivity to C1 and C2 products (Figure S6) remains low, independent of Sn doping. In general, while propylene desorption is favored on the tin-doped surfaces compared to the pure Pt surfaces, due to the weaker adsorption strength and increased reaction barriers as a result of the presence of tin, propane consumption and propylene production are reduced across all of the doped surfaces except for Pt3Sn/Pt(100).
+Figure 5
+Figure 5. Comparison between the pure Pt(100) surface as modeled in this work and in Fricke et al. (29) and its corresponding tin-doped surface prior models studied in this work.
+Figure 6
+Figure 6. Comparison between pure Pt(111) and Pt(211) surfaces as modeled in this work and in Fricke et al. (29) versus their corresponding tin-doped surface prior models studied in this work.
+In this context, we also note that for Pt3Sn/Pt(100), the most important side products are methane and ethylene, while for PtSn/Pt(100), they are methane and acetylene, as seen in Table S21 of the Supporting Information. Acetylene becomes a dominant product on PtSn/Pt(100) due to a significantly reduced adsorption strength, which permits its desorption. The reduced acetylene adsorption strength can again be explained by the high tin coverage and the lack of pure platinum bridge sites on PtSn/Pt(100). Ultimately, the production of triple bond species is, however, equilibrium-limited at practical experimental conversions and hydrogen partial pressures (simulation results are performed at fixed pressure, i.e., zero conversion).
+The predicted values for propylene selectivity and other observable data are dependent on the rate-determining steps. Overall, early dehydrogenation steps are rate-controlling on all of the surfaces. Figure 7 graphically describes the most important rate-controlling steps. On Pt3Sn/Pt(100), both first dehydrogenation steps to the CH3CHCH3* and CH3CH2CH2* intermediates are partially rate-controlling, with the pathway to CH3CHCH3* having a higher average degree of rate control. Similar trends to Pt3Sn/Pt(100) are also seen on Pt3Sn/Pt(111) and Pt2Sn/Pt(211); however, both steps have more similar degrees of rate control and some degree of rate control is observed for the second dehydrogenation steps leading to the production of propylene, i.e., CH3CHCH3 → CH3CHCH2 + H and CH3CH2CH2 → CH3CHCH2 + H. In contrast, for PtSn/Pt(100), the second dehydrogenation steps were found to be partially rate-controlling alongside only the first dehydrogenation step to CH3CH2CH2*.
+Figure 7
+Figure 7. Degree of kinetic rate control (DKRC) for the most important steps on all four Pt–Sn alloy surfaces calculated using the TOF of propane consumption: (a) Pt3Sn/Pt(100), (b) PtSn/Pt(100), (c) Pt3Sn/Pt(111), and (d) Pt2Sn/Pt(211).
+Next, it is interesting to note that the identified rate-determining steps based on propane consumption are similar to those observed based on the turnover frequency of propylene production, as described in Supporting Information Figures S3 and S4. Initial, terminal dehydrogenation is somewhat less rate-controlling for propylene production, and initial, central dehydrogenation is somewhat more rate-controlling. Again, for the PtSn/Pt(100) surface, initial dehydrogenations are less rate-controlling than secondary dehydrogenations, and as expected, deep dehydrogenations to nonpropylene products display no or a negative degree of rate control for propylene production.
+Calibration
+ARTICLE SECTIONSJump To
+In addition to the prior results discussed above, the models were also calibrated to the experimental selectivity and propylene turnover frequency, as previously discussed in the Methods section. The experimental data can be viewed in Supporting Information Table S8. Calibration informs the model by reducing the prior uncertainty derived from BEEF-vdW such that the posterior simulations better explain the experimental data as compared with the prior simulations. This can be seen in Figures 8 and 9. The output of all of the turnover frequencies of the surfaces centers around the reported turnover frequency. Selectivity to propylene for the calibrated models increases significantly with all surfaces encapsulating the experimental data.
+Figure 8
+Figure 8. Calibrated models for TOFs of propylene production and selectivity toward propylene on all four Pt–Sn surface models.
+Figure 9
+Figure 9. Calibrated models for apparent activation energies and reaction orders for propylene production for all four Pt–Sn alloy surface models.
+This calibration procedure affects not only the calibrated experimental quantities of interest, such as the TOF of propylene and selectivity to propylene, but also the reaction orders, apparent activation energies, and degrees of rate control for each surface. As seen in Figures 8 and 9, the differences between the calibrated and prior apparent activation energies and reaction orders are significant. The peaks of the apparent activation energy distributions center at approximately 1 eV, and the reaction orders in hydrogen gas are between −2 and 0. Calibration affects the degree of rate control of the reactions that are kinetically rate-controlling, as seen in Figure 10. For Pt3Sn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211), the kinetic rate-controlling steps based on propane consumption remain the same; however, CH3CH2CH3 → CH3CHCH3 + H is now more clearly the dominant kinetic rate-controlling step, and other reactions are only partially rate-controlling as shown by the high peaks close to zero. For PtSn/Pt(100), calibration results show that the first dehydrogenation reaction to CH3CH2CH2* and second dehydrogenation reactions to propylene from both CH3CH2CH3* and CH3CHCH3* are all almost equally rate-controlling contrary to the distribution in the noncalibrated model. Moreso, the reaction of CH3CH2CH2 → CH3CH2CH + H, found to be partially rate-controlling in the uncalibrated model, is no longer observed to be rate-controlling in the calibrated model. Experimental data can clearly not be explained with a partially rate-controlling deep dehydrogenation step.
+Figure 10
+Figure 10. Degree of kinetic rate control (DKRC) for the most important steps on all four Pt–Sn alloy surfaces calculated using the TOF of propane consumption calibrated to the experimental data. (6)
+Next, the degree of kinetic rate control based on the turnover frequency of propylene is shown in Figure S7 of the Supporting Information. There is hardly any difference in the degree of rate control based on propane consumption. The only minor difference is observed for the PtSn/Pt(100) surface, where CH3CH2CH3 → CH3CHCH3 + H is now also found to be partially rate-controlling. The similarity between the degree of rate control of propane consumption and propylene production is due to the generally high selectivity to propylene for all surfaces.
+Finally, the evidence of the surfaces to describe the experimental kinetic observations can be compared using Bayes factors, as shown in Table 2, and then evaluated using Jeffreys’ scale in Table 3. (56) We find that there is hardly any evidence supporting any single Pt–Sn model as the active site for propane dehydrogenation to propylene. Given the general activity of all of the Pt–Sn surface models considered, it is likely that all of the surfaces participate in the dehydrogenation reaction. Although the Bayes factor indicates that the evidence supporting each of the surface models as the active site is hardly worthy mentioning, it is still interesting that the Bayes factor supporting Pt2Sn/Pt(211) as the active site over each of the other surfaces is highest. We previously also observed for the pure Pt surfaces that the step site has the highest likelihood of being the most relevant active site. In this context, Table S21 also shows that Pt2Sn/Pt(211) has the highest selectivity to propylene, and other side products such as propyne, ethylene, ethyne, and methane are largely produced on the other Pt–Sn surface sites.
+Table 2. Evidence and Bayes Factor for Each Pt–Sn Surface as Compared to That for the Other Pt–Sn Surfaces
+    Bayes factor relative to
+surface evidence Pt3Sn/Pt100 PtSn/Pt100 Pt3Sn/Pt111 Pt2Sn/Pt211
+Pt3Sn/Pt100 3.57 × 10–3 1.00 0.86 0.85 0.41
+PtSn/Pt100 4.13 × 10–3 1.16 1.00 0.98 0.47
+Pt3Sn/Pt111 4.20 × 10–3 1.18 1.02 1.00 0.48
+Pt2Sn/Pt211 8.71 × 10–3 2.44 2.11 2.08 1.00
+Table 3. Jeffreys’ Scale for Bayes Factors, B12 = p(D|M1)/p(D|M2) (56)
+B12 evidence for M1
+1–3.2 not worth more than a bare mention
+3.2–10 positive
+10–100 strong
+>100 very strong
+Studying the uncertainty within the functional energies and how they propagate through the microkinetic models helps to generate a fuller understanding of the behavior of the chemistry on catalysts. Incorporating uncertainty allows for a more evidence-based understanding of reactions and helps to create a fuller picture of the results. This can be seen in the comparisons of the microkinetic model results without incorporating uncertainty, as described in the Supporting Information Tables S12–S19. Major differences can be seen between the prior models of PtSn/Pt(100) and Pt2Sn/Pt(211). Bayesian models with functional uncertainty showed a higher average selectivity on Pt2Sn/Pt(211) compared to that on PtSn/Pt(100), while regular MKM models without functional uncertainty display a higher selectivity to propylene for PtSn/Pt(100). This difference is due to small changes in the reaction energies and barriers leading to significant changes in the favorability of propylene desorption versus deeper dehydrogenation and undesirable side product formation on PtSn/Pt(100). These differences are critical for further understanding how reactions may proceed over Pt–Sn-based catalysts. Calibration allows us to evaluate the model’s fit to the data and directly shows us how informing on the data points impacts our models. It also allows for the generation of evidence, allowing for direct comparisons of active site models, which (with a sufficient number of experimental data at different reaction conditions) can help identify active sites and reaction mechanisms.
+Conclusions
+ARTICLE SECTIONSJump To
+To identify how platinum–tin alloys affect propane dehydrogenation to propylene over Pt–Sn catalysts, multiple elementary reactions for propane dehydrogenation were studied from first-principles over four surface models: Pt3Sn/Pt(100), PtSn/Pt(100), Pt3Sn/Pt(111), and Pt2Sn/Pt(211). Mean-field microkinetic models were generated to give information that can be directly compared to the experimental observation. Given the uncertainties in the DFT energies, we use the BEEF-vdW model with ensembles (BMwE) for generating the correlation structure of the DFT functional energy uncertainty for each surface model. In addition to testing at reported experimental conditions, we calibrated our models to the reported experimental data.
+The prior, uncalibrated models all show a high free site coverage, indicating that a key impact of tin on all of the platinum–tin surface alloys is reducing the coke precursor production. In addition, the prior models showed that the addition of Sn leads to reduced activity across the tin-doped surfaces except for the low Sn coverage surface, Pt3Sn/Pt(100), where a slightly increased activity is likely. In other words, the activity modification due to the presence of Sn is surface facet-dependent. Selectivity distributions for all of the tin-doped surfaces are similar to their corresponding pure Pt surfaces. Unfortunately, the selectivity varies from 0 to 100% dependent on the functional for all but the stepped surfaces. Similar to the pure Pt(211) surface site, Pt2Sn/Pt(211) shows the highest selectivity to propylene among the Sn-doped surfaces. The stepped surfaces are also the only surface facets that are unable to display high selectivity to C1 and C2 products. Based on the prior probability density, it is most likely that the (100) surface facet sites are responsible for most observed C–C cleavage products, although C–C cleavage products can be produced on all active site models. We suggest that the experimentally observed higher selectivity in the presence of Sn is probably due to a reduced activity of a surface facet in the presence of Sn that promotes the production of side products, e.g., large amounts of Sn reduce the activity of the (100) surface.
+The rate-controlling steps for propane consumption and propylene production across all surfaces are the first dehydrogenation steps of propane at the central and terminal carbon. Only for PtSn/Pt(100) do we observe that the initial dehydrogenation at the central carbon is not rate-controlling. Instead, the second dehydrogenation steps are partially rate-controlling for this surface.
+The calibrated model showed that all surfaces were highly selective to propylene production, and all of the probability densities encapsulated the reported turnover frequencies and selectivities. In addition, the rate-controlling steps across the surfaces are similar to the uncalibrated models, with a somewhat higher probability of the initial C–H activation at the central carbon being the most rate-controlling. Again, the PtSn/Pt(100) surface is an exception to this observation since the initial dehydrogenation at the central carbon is not rate-controlling on this surface, and deep dehydrogenation steps remain most likely rate-controlling for this surface. Through Bayesian inference and Jeffreys’ scale, sites similar to the stepped Pt2Sn/Pt(211) have some evidence to be the active site in the experimental catalysts. However, the evidence is small, and either more experimental data at different reaction conditions are needed or the computational uncertainties need to be significantly reduced to conclusively determine the active site for propane consumption and propylene production.
+Though this study was comprehensive in studying surface alloys of different platinum facets, there is much debate over the most representative models of Pt–Sn alloys. Though models may include bulk alloys, in actuality, there are many possibilities, and we remain unsure how to describe the active site for these particular catalysts, especially when catalyst particle composition and distribution vary with catalyst synthesis, which may yield different alloys for catalyst particles, including the presence of pure metal surfaces as well. Finally, more kinetic experimental data, including additional TOFs, selectivities, reaction orders, apparent activation energies, and other reaction data, are likely needed to further refine the calibration problem and perform a fuller model analysis.
+Supporting Information
+ARTICLE SECTIONSJump To
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acscatal.3c00939.
+Free energies of adsorbed species; BEEF-vdW free energies of transition state species; Activation free energy barriers of elementary reactions on the Pt-Sn surface models; Differential Gibbs free energy of adsorption of acetylene on Pt(100); Lateral interactions on Pt(100) and Pt(111) (PDF)
+Pt_ADS (TXT)
+Pt_TS (TXT)
+PtSn_ADS (TXT)
+PtSn_TS (TXT)
+cs3c00939_si_001.pdf (1.67 MB)
+cs3c00939_si_002.txt (806.84 kb)
+cs3c00939_si_003.txt (2.25 MB)
+cs3c00939_si_004.txt (1.04 MB)
+cs3c00939_si_005.txt (2.97 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Authors
+Gabriel Terejanu - Department of Computer Science, University of North Carolina at Charlotte, Charlotte, North Carolina 28223, United States;  https://orcid.org/0000-0002-8934-9836;  Email: gterejan@uncc.edu
+Andreas Heyden - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States;  https://orcid.org/0000-0002-4939-7489;  Email: heyden@cec.sc.edu
+Authors
+Charles H. Fricke - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States;  https://orcid.org/0000-0001-8892-7916
+Olajide H. Bamidele - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States
+Mubarak Bello - Department of Chemical Engineering, University of South Carolina, Columbia, South Carolina 29208, United States
+Jawad Chowdhury - Department of Computer Science, University of North Carolina at Charlotte, Charlotte, North Carolina 28223, United States
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+This work was supported by the Institute for Cooperative Upcycling of Plastics (iCOUP), an Energy Frontier Research Center funded by the U.S. Department of Energy (DOE), Office of Science, Basic Energy Sciences, under Contract DE-AC-02-07CH11358 (Ames National Laboratory). In addition, initial partial support for C.F. was provided by the National Science Foundation under grant number CBET-1534260. C.F. also acknowledges partial support from the National Science Foundation IGERT program under grant number 1250052. Computer resources were used from the National Energy Research Scientific Computing Center (NERSC) Contract No. DE-AC02-05CH11231, Pacific Northwest National Laboratory (Ringgold ID 130367, Grant Proposal 51711), and the University of South Carolina’s High-Performance Computing Group.
+References
+ARTICLE SECTIONSJump To
+This article references 56 other publications.
+1Sattler, J. J. H. B.; Ruiz-Martinez, J.; Santillian-Jimenez, E.; Weckhuysen, B. M. Catalytic Dehydrogenation of Light Alkanes on Metals and Metal Oxides. Chem. Rev. 2014, 114, 10613– 10653,  DOI: 10.1021/cr5002436 [ACS Full Text ], [CAS], Google Scholar
+2Wang, Y.; Hu, P.; Yang, J.; Zhu, Y.; Chen, D. C–H bond activation in light alkanes: a theoretical perspective. Chem. Soc. Rev. 2021, 50, 4299– 4358,  DOI: 10.1039/D0CS01262A [Crossref], [PubMed], [CAS], Google Scholar
+3Zhao, Z.; Jiang, J.; Wang, F. An economic analysis of twenty light olefin production pathways. J. Energy Chem. 2021, 56, 193– 202,  DOI: 10.1016/j.jechem.2020.04.021 [Crossref], [CAS], Google Scholar
+4Wang, J.; Chang, X.; Chen, S.; Sun, G.; Zhou, X.; Vovk, E.; Yang, Y.; Deng, W.; Zhao, Z.; Mu, R.; Pei, C.; Gong, J. On the Role of Sn Segregation of Pt-Sn Catalysts for Propane Dehydrogenation. ACS Catal. 2021, 11 (8), 4401– 4410,  DOI: 10.1021/acscatal.1c00639 [ACS Full Text ], [CAS], Google Scholar
+5Zhu, H.; Anjum, D. H.; Wang, Q.; Abou-Hamad, E.; Emsley, L.; Dong, H.; Laveille, P.; Li, L.; Samal, A. K.; Basset, J. Sn surface-enriched Pt–Sn bimetallic nanoparticles as a selective and stable catalyst for propane dehydrogenation. J. Catal. 2014, 320, 52– 62,  DOI: 10.1016/j.jcat.2014.09.013 [Crossref], [CAS], Google Scholar
+6Bariås, O. A.; Holmen, A.; Blekkan, E. A. Propane Dehydrogenation over Supported Pt and Pt–Sn Catalysts: Catalyst Preparation, Characterization, and Activity Measurements. J. Catal. 1996, 158, 1– 12,  DOI: 10.1006/jcat.1996.0001 [Crossref], Google Scholar
+7Kaylor, N.; Davis, R. J. Propane dehydrogenation over supported Pt-Sn nanoparticles. J. Catal. 2018, 367, 181– 193,  DOI: 10.1016/j.jcat.2018.09.006 [Crossref], [CAS], Google Scholar
+8Iglesias-Juez, A.; Beale, A. M.; Maaijen, K.; Weng, T. C.; Glatzel, P.; Weckhuysen, B. M. A combined in situ time-resolved UV-Vis, Raman and high-energy resolution X-ray absorption spectroscopy study on the deactivation behavior of Pt and PtSn propane dehydrogenation catalysts under industrial reaction conditions. J. Catal. 2010, 276, 268– 279,  DOI: 10.1016/j.jcat.2010.09.018 [Crossref], [CAS], Google Scholar
+9Xiong, H.; Lin, S.; Goetze, J.; Pletcher, P.; Guo, H.; Kovarik, L.; Artyushkova, K.; Weckhuysen, B. M.; Datye, A. K. Thermally Stable and Regenerable Platinum–Tin Clusters for Propane Dehydrogenation Prepared by Atom Trapping on Ceria. Angew. Chem., Int. Ed. 2017, 56, 8986– 899,  DOI: 10.1002/anie.201701115 [Crossref], [CAS], Google Scholar
+10Motagamwala, A. H.; Almallahi, R.; Wortman, J.; Igenegbai, V. O.; Linic, S. Stable and selective catalysts for propane dehydrogenation operating at thermodynamic limit. Science 2021, 373 (6551), 217– 222,  DOI: 10.1126/science.abg7894 [Crossref], [PubMed], [CAS], Google Scholar
+11Hannagan, R. T.; Giannakakis, G.; Reocreux, R.; Schumann, J.; Finzel, J.; Wang, Y.; Michaelides, A.; Deshlarhra, P.; Christopher, P.; Flytzani-Stephanopoulos, M.; Stamatakis, M.; Sykes, E. C. H. First-principles design of a single-atom–alloy propane dehydrogenation catalyst. Science 2021, 372 (6549), 1444– 1447,  DOI: 10.1126/science.abg8389 [Crossref], [CAS], Google Scholar
+12Shi, L.; Deng, G. M.; Li, W. C.; Miao, S.; Wang, Q. N.; Zhang, W. P.; Lu, A. H. Al2O3 nanosheets rich in pentacoordinate Al3+ ions stabilize Pt-Sn clusters for propane dehydrogenation. Angew. Chem., Int. Ed. 2015, 54, 13994– 13998,  DOI: 10.1002/anie.201507119 [Crossref], [CAS], Google Scholar
+13Xu, Z.; Yue, X.; Bao, X.; Xie, Z.; Zhu, H. Propane Dehydrogenation over Pt Clusters Localized at the Sn Single-Site in Zeolite Framework. ACS Catal. 2020, 10 (1), 818– 828,  DOI: 10.1021/acscatal.9b03527 [ACS Full Text ], [CAS], Google Scholar
+14Iglesias-Juez, A.; Beale, A. M.; Maaijen, K.; Weng, T. C.; Glatzel, P.; Weckhuysen, B. M. A combined in situ time-resolved UV–Vis, Raman and high-energy resolution X-ray absorption spectroscopy study on the deactivation behavior of Pt and Pt single bond Sn propane dehydrogenation catalysts under industrial reaction conditions. J. Catal. 2010, 276 (2), 268– 279,  DOI: 10.1016/j.jcat.2010.09.018 [Crossref], [CAS], Google Scholar
+15Pham, H. N.; Sattler, J. H. B.; Weckhuysen, B. M.; Datye, A. K. Role of Sn in the Regeneration of Pt/γ-Al2O3 Light Alkane Dehydrogenation Catalysts. ACS Catal. 2016, 6 (4), 2257– 2264,  DOI: 10.1021/acscatal.5b02917 [ACS Full Text ], [CAS], Google Scholar
+16Deng, L.; Shishido, T.; Teramura, K.; Tanaka, T. Effect of reduction method on the activity of Pt–Sn/SiO2 for dehydrogenation of propane. Catal. Today 2014, 232, 33– 39,  DOI: 10.1016/j.cattod.2013.10.064 [Crossref], [CAS], Google Scholar
+17Zhang, Y.; Zhou, Y.; Qiu, A.; Wang, Y.; Xu, Y.; Wu, P. Propane dehydrogenation on PtSn/ZSM-5 catalyst: Effect of tin as a promoter. Catal. Comm. 2006, 7 (11), 860– 866,  DOI: 10.1016/j.catcom.2006.03.016 [Crossref], [CAS], Google Scholar
+18Duan, Y.; Zhou, Y.; Zhang, Y.; Sheng, X.; Xue, M. Effect of Sodium Addition to PtSn/AlSBA-15 on the Catalytic Properties in Propane Dehydrogenation. Catal. Lett. 2011, 141, 120– 127,  DOI: 10.1007/s10562-010-0445-6 [Crossref], [CAS], Google Scholar
+19Larsson, M.; Andersson, B.; Barias, O. A.; Holmen, A. The use of the H2-D2 equilibration reaction as a probe reaction to study the deactivation on Pt/Al2O3 and Pt-Sn/Al2O3 catalysts during propane dehydrogenation. Stud. Surf. Sci. Catal. 1994, 88, 233– 240,  DOI: 10.1016/S0167-2991(08)62745-7 [Crossref], [CAS], Google Scholar
+20Wu, J.; Mallikarjun Sharada, S.; Sharada, S. M.; Ho, C.; Hauser, A. W.; Head-Gordon, M. Ethane and propane dehydrogenation over PtIr/Mg(Al)O. Appl. Catal., A 2015, 506, 25– 32,  DOI: 10.1016/j.apcata.2015.08.029 [Crossref], [CAS], Google Scholar
+21Bariås, O. A.; Holmen, A.; Blekkan, E. A. Propane dehydrogenation over supported platinum catalysts: effect of tin as a promoter. Catal. Today 1995, 24 (3), 361– 364,  DOI: 10.1016/0920-5861(95)00059-O [Crossref], [CAS], Google Scholar
+22Deng, L.; Miura, K.; Shishido, T.; Hosokawa, S.; Teramura, K.; Tanaka, T. Dehydrogenation of Propane over Silica-SupportedPlatinum–Tin Catalysts Prepared by Direct Reduction:Effects of Tin/Platinum Ratio and Reduction Temperature. ChemCatChem 2014, 6, 2680– 2691,  DOI: 10.1002/cctc.201402306 [Crossref], [CAS], Google Scholar
+23Nam, J.; Celik, F. Effect of Tin in the Bulk of Platinum–Tin Alloys for Ethane Dehydrogenation. Top. Catal. 2020, 63, 700– 713,  DOI: 10.1007/s11244-020-01297-w [Crossref], [CAS], Google Scholar
+24Yang, M.-L.; Zhu, Y.; Zhou, X.; Sui, Z. J.; Chen, D. First-Principles Calculations of Propane Dehydrogenation over PtSn Catalysts. ACS Catal. 2012, 2 (6), 1247– 1258,  DOI: 10.1021/cs300031d [ACS Full Text ], [CAS], Google Scholar
+25Nykänen, L.; Honkala, K. Density Functional Theory Study on ̈ Propane and Propene Adsorption on Pt(111) and PtSn Alloy Surfaces. J. Phys. Chem. C 2011, 115 (19), 9578– 9586,  DOI: 10.1021/jp1121799 [ACS Full Text ], [CAS], Google Scholar
+26Nykänen, L.; Honkala, K. Selectivity in Propene Dehydrogenation on Pt and Pt3Sn Surfaces from First Principles. ACS Catal. 2013, 3 (12), 3026– 3030,  DOI: 10.1021/cs400566y [ACS Full Text ], [CAS], Google Scholar
+27Hook, A.; Massa, J. D.; Celik, F. E. Effect of Tin Coverage on Selectivity for Ethane Dehydrogenation over Platinum-Tin Alloys. J. Phys. Chem. C 2016, 120 (48), 27307– 27318,  DOI: 10.1021/acs.jpcc.6b08407 [ACS Full Text ], [CAS], Google Scholar
+28Wang, T.; Abild-Pedersen, F. Identifying factors controlling the selective ethane dehydrogenation on Pt-based catalysts from DFT based micro-kinetic modeling. J. Energy Chem. 2021, 58, 37– 40,  DOI: 10.1016/j.jechem.2020.09.034 [Crossref], [CAS], Google Scholar
+29Fricke, C.; Rajbanshi, B.; Walker, E. A.; Terejanu, G.; Heyden, A. Propane Dehydrogenation on Platinum Catalysts: Identifying the Active Sites through Bayesian Analysis. ACS Catal. 2022, 12, 2487– 2498,  DOI: 10.1021/acscatal.1c04844 [ACS Full Text ], [CAS], Google Scholar
+30Kresse, G.; Furthmüller, J. Efficiency of ab-initio total energy calculations for metals and semiconductors using a plane-wave basis set. Comput. Mater. Sci. 1996, 6 (1), 15– 50,  DOI: 10.1016/0927-0256(96)00008-0 [Crossref], [CAS], Google Scholar
+31Kresse, G.; Furthmüller, J. Efficient iterative schemes for ab initio total-energy calculations using a plane-wave basis set. Phys. Rev. B 1996, 54 (16), 11169,  DOI: 10.1103/PhysRevB.54.11169 [Crossref], [PubMed], [CAS], Google Scholar
+32Kresse, G.; Hafner, J. Ab initio molecular dynamics for liquid metals. Phys. Rev. B 1993, 47 (1), 558,  DOI: 10.1103/PhysRevB.47.558 [Crossref], [PubMed], [CAS], Google Scholar
+33Wellendorff, J.; Lundgaard, K. T.; Møgelhøj, A.; Petzold, V.; Landis, D. D.; Nørskov, J. K.; Bligaard, T.; Jacobsen, K. W. Density functionals for surface science: Exchange-correlation model development with Bayesian error estimation. Phys. Rev. B 2012, 85, 235149  DOI: 10.1103/PhysRevB.85.235149 [Crossref], [CAS], Google Scholar
+34Blöchl, P. E. Projector augmented-wave method. Phys. Rev. B 1994, 50, 17953,  DOI: 10.1103/PhysRevB.50.17953 [Crossref], [PubMed], [CAS], Google Scholar
+35Kresse, G.; Halfer, J. Norm-conserving and ultrasoft pseudopotentials for first-row and transition elements. J. Phys.: Condens. Matter 1994, 6, 8245,  DOI: 10.1088/0953-8984/6/40/015 [Crossref], [CAS], Google Scholar
+36Monkhorst, H. J.; Pack, J. Special points for Brillouin-zone integrations. Phys. Rev. B 1976, 13, 5188,  DOI: 10.1103/PhysRevB.13.5188 [Crossref], Google Scholar
+37Pack, J.; Monkhorst, H. Special points for Brillouin-zone integrations. Phys. Rev. B 1977, 16, 1748,  DOI: 10.1103/PhysRevB.16.1748 [Crossref], Google Scholar
+38Haworth, N. L.; Wang, Q.; Coote, M. L. Modeling Flexible Molecules in Solution: A pKa Case Study. J. Phys. Chem. A 2017, 121 (27), 5217– 5225,  DOI: 10.1021/acs.jpca.7b04133 [ACS Full Text ], [CAS], Google Scholar
+39Henkelman, G.; Uberuaga, B. P.; Jónsson, H. A climbing image nudged elastic band method for finding saddle points and minimum energy paths. J. Chem. Phys. 2000, 113, 9901– 9904,  DOI: 10.1063/1.1329672 [Crossref], [CAS], Google Scholar
+40Henkelman, G.; Jónsson, H. Improved tangent estimate in the nudged elastic band method for finding minimum energy paths and saddle points. J. Chem. Phys. 2000, 113, 9978– 9985,  DOI: 10.1063/1.1323224 [Crossref], [CAS], Google Scholar
+41Henkelman, G.; Jónsson, H. A dimer method for finding saddle points on high dimensional potential surfaces using only first derivatives. J. Chem. Phys. 1999, 111, 7010,  DOI: 10.1063/1.480097 [Crossref], [CAS], Google Scholar
+42Heyden, A.; Bell, A. T.; Keil, F. J. Efficient methods for finding transition states in chemical reactions: Comparison of improved dimer method and partitioned rational function optimization method. J. Chem. Phys. 2005, 123, 224101  DOI: 10.1063/1.2104507 [Crossref], [PubMed], [CAS], Google Scholar
+43Medford, A. J.; Wellendorf, J.; Vojvodic, A.; Studt, F.; Abild-Pedersen, F.; Jacobsen, K.; Bligaard, T.; Norskov, J. Assessing the reliability of calculated catalytic ammonia synthesis rates. Science 2014, 345 (6193), 197– 200,  DOI: 10.1126/science.1253486 [Crossref], [PubMed], [CAS], Google Scholar
+44Walker, E. A.; Mitchell, D.; Terejanu, G. A.; Heyden, A. Identifying Active Sites of the Water–Gas Shift Reaction over Titania Supported Platinum Catalysts under Uncertainty. ACS Catal. 2018, 8, 3990– 3998,  DOI: 10.1021/acscatal.7b03531 [ACS Full Text ], [CAS], Google Scholar
+45Walker, E.; Ammal, S. C.; Terejanu, G. A.; Heyden, A. Uncertainty Quantification Framework Applied to the Water–Gas Shift Reaction over Pt-Based Catalysts. J. Phys. Chem. C 2016, 120, 10328– 10339,  DOI: 10.1021/acs.jpcc.6b01348 [ACS Full Text ], [CAS], Google Scholar
+46Cramer, J. S. Logit Models from Economics and Other Fields; Cambridge University Press: Cambridge, 2003; pp 149– 157.[Crossref], Google Scholar
+47Prudencio, E. E.; Schulz, K. W. The Parallel C++ Statistical Library ‘QUESO’: Quantification of Uncertainty for Estimation, Simulation and Optimization; Euro-Par 2011: Parallel Processing Workshops. Euro-Par 2011. Lecture Notes in Computer Science, Bordeaux, France, August 29–September 2, 2011; Alexander, M., Ed.; Springer: Berlin, Heidelberg, 2011; pp 398– 407.Google Scholar
+48Horvatits, C.; Lee, J.; Kyriakidou, E. A.; Walker, E. A. Characterizing Adsorption Sites on Ag/SSZ-13 Zeolites: Experimental Observations and Bayesian Inference. J. Phys. Chem. C 2020, 124 (35), 19174– 19186,  DOI: 10.1021/acs.jpcc.0c06470 [ACS Full Text ], [CAS], Google Scholar
+49Walker, E. A.; Ravisankar, K.; Savara, A. CheKiPEUQ Intro 2: Harnessing Uncertainties from Data Sets, Bayesian Design of Experiments in Chemical Kinetics. ChemCatChem 2020, 12, 5401– 5410,  DOI: 10.1002/cctc.202000976 [Crossref], [CAS], Google Scholar
+50Collinge, G.; Yuk, S. F.; Nguyen, M.; Lee, M.; Glezakou, V. Rousseau. Effect of Collective Dynamics and Anharmonicity on Entropy in Heterogenous Catalysis: Building the Case for Advanced Molecular Simulations. ACS Catal. 2020, 10, 9236– 9260,  DOI: 10.1021/acscatal.0c01501 [ACS Full Text ], [CAS], Google Scholar
+51Sprowl, L. H.; Campbell, C. T.; Arnadottir, L. Hindered Translator and Hindered Rotor Models for Adsorbates: Partition Functions and Entropies. J. Phys. Chem. C 2016, 120 (18), 9719– 9731,  DOI: 10.1021/acs.jpcc.5b11616 [ACS Full Text ], [CAS], Google Scholar
+52Jørgensen, M.; Gronbeck, H. Adsorbate Entropies with Complete Potential Energy Sampling in Microkinetic Modeling. J. Phys. Chem. C 2017, 121 (13), 7199– 7207,  DOI: 10.1021/acs.jpcc.6b11487 [ACS Full Text ], Google Scholar
+53Campbell, C. T. Future Directions and Industrial Perspectives Micro-and Macro-Kinetics: Their Relationship in Heterogeneous Catalysis. Top. Catal. 1994, 1, 353– 366,  DOI: 10.1007/BF01492288 [Crossref], [CAS], Google Scholar
+54Campbell, C. T. The Degree of Rate Control: A Powerful Tool for Catalysis Research. ACS Catal. 2017, 7, 2770– 2779,  DOI: 10.1021/acscatal.7b00115 [ACS Full Text ], [CAS], Google Scholar
+55Campbell, C. T. Finding the Rate-Determining Step in a Mechanism: Comparing DeDonder Relations with the “Degree of Rate Control. J. Catal. 2001, 204, 520– 524,  DOI: 10.1006/jcat.2001.3396 [Crossref], [CAS], Google Scholar
+56Jeffreys, H. The Theory of Probability; Oxford University Press: Oxford, 1939.Google Scholar
+Cited By
+This article has not yet been cited by other publications.
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Dehydrogenation reaction network around C1–3 species.
+Figure 2
+Figure 2. Four surfaces evaluated in this study.
+Figure 3
+Figure 3. Histograms of the turnover frequency of propylene (TOF) and selectivity toward propylene on all four surfaces for the prior model, i.e., no calibration.
+Figure 4
+Figure 4. Apparent activation energy, reaction order of propane, and reaction order of H2 for all four surfaces calculated using the TOF of propylene for the prior model, i.e., no calibration.
+Figure 5
+Figure 5. Comparison between the pure Pt(100) surface as modeled in this work and in Fricke et al. (29) and its corresponding tin-doped surface prior models studied in this work.
+Figure 6
+Figure 6. Comparison between pure Pt(111) and Pt(211) surfaces as modeled in this work and in Fricke et al. (29) versus their corresponding tin-doped surface prior models studied in this work.
+Figure 7
+Figure 7. Degree of kinetic rate control (DKRC) for the most important steps on all four Pt–Sn alloy surfaces calculated using the TOF of propane consumption: (a) Pt3Sn/Pt(100), (b) PtSn/Pt(100), (c) Pt3Sn/Pt(111), and (d) Pt2Sn/Pt(211).
+Figure 8
+Figure 8. Calibrated models for TOFs of propylene production and selectivity toward propylene on all four Pt–Sn surface models.
+Figure 9
+Figure 9. Calibrated models for apparent activation energies and reaction orders for propylene production for all four Pt–Sn alloy surface models.
+Figure 10
+Figure 10. Degree of kinetic rate control (DKRC) for the most important steps on all four Pt–Sn alloy surfaces calculated using the TOF of propane consumption calibrated to the experimental data. (6)
+
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

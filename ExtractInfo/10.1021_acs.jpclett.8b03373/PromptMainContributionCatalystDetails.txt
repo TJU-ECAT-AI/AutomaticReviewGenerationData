@@ -1,0 +1,297 @@
+<DOCUMENT>
+Dynamic Phase Diagram of Catalytic Surface of Hexagonal Boron Nitride under Conditions of Oxidative Dehydrogenation of Propane
+Abstract
+Partially oxidized surfaces of hexagonal boron nitride (hBN) and several metal borides are unexpectedly excellent catalysts for oxidative dehydrogenation of alkanes to olefins, but the nature of the active site(s) on these B-containing interfaces remains elusive. We characterize the surface of the partially oxidized B-rich hBN surface under reaction conditions from first principles. The interface has thermal access to multiple different stoichiometries and multiple structures of each stoichiometry. The size of the thermal ensemble is composition-dependent. The phase diagram of the interface constructed on the basis of the statistical ensembles of many accessible states is very different from the one based on global minima. Phase boundaries shift and blur, and phases consist of several stoichiometries and structures. The BO layer transiently exposes the reactive −B═O motifs in the metastable states. The fluxionality and structural diversity emerging under reaction conditions must be taken into account in theoretically descriptions of the catalytic interface.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Propylene, the second most important organic building block in the chemical industry, is the starting material of many useful chemicals including polypropylene, propylene oxide, acrylonitrile, and butyraldehyde, which are the backbone of the modern polymer and pharmaceutical industry. (1,2) With the booming shale gas supplies, dehydrogenation of propane emerges as a promising technique to replace the current energy-intensive and low-yield petrochemical cracking of naphtha for propylene production. (3) To lower the energy consumption of this dehydrogenation technology, oxidative dehydrogenation of propane (ODHP) has been explored as an exothermic alternative. Although this lowers the thermodynamic barrier, it also causes overoxidation of the desired propylene product. (4,5) Over the past decades, several ODHP catalysts have been developed, including VOx, MoOx, WOx, (6) and CrOx (7) supported on silica, (8) zirconia, (9) alumina, (10) and MOFs. (11) Despite the inspiring findings, it is still difficult for catalysts based on oxides to achieve high selectivity at moderate conversion due to lack of kinetic control in their catalytic nature.
+Recently, borides were discovered to be a highly competitive alternative. Hexagonal boron nitride (hBN), in particular, exhibited unexpectedly excellent catalytic performance toward ODHP, achieving 79% propene and 12% ethene at 14% propane conversion. (12) Furthermore, a broad family of borides, including Ti2B, NiB, WB, HfB2, CoxB, hBN, and B4C, and even elemental boron, were reported to exhibit similarly high activity and selectivity toward ODHP. (13) It is clear that boron plays a key role in the ODHP catalysis; however, the structures of these B-containing catalytic interfaces under conditions of ODHP, the nature of the active site(s), and the catalytic mechanism remain elusive. So far, it has been found that B–O bonds are present on surfaces of spent catalysts, suggesting that a BOx surface layer formed during the reaction. Such BOx-containing layer is highly likely to be the general catalytic surface for all ODHP boride catalysts.
+In this work, we focus on the catalytic surface of hBN, perhaps the most interesting ODHP catalyst in the series, because it is highly selective and active, consists of earth-abundant elements, and in the past was generally considered chemically inert. (14) We elucidate the structure of the hBN surface in the presence of oxygen and at the reaction temperature using global optimization. A phase diagram as a function of the chemical potential of B and O (μB, μO) is constructed based on just the global optima and then also based on the ensemble-average of all thermally accessible structures. Electronic structure analysis is then performed for the whole ensemble to reveal the special sites that emerge only under the reaction conditions. In addition, the dynamics of the interface is probed with ab initio molecular dynamics (MD). We demonstrate that, to understand a catalytic surface under realistic conditions and evaluate the catalytic properties, it is necessary to account for the diversity and fluxionality of the dynamic interface under realistic conditions.
+Because the presence of oxidized boron on the surface was suggested for all the boride catalysts, we start by investigating if and how excess boron can bind to hBN. The particle-swarm global optimization (PSO) algorithm implemented in CALYPSO in combination with density functional theory (DFT) calculations was applied to identify the hBN surface with varying boron coverage. The boron-rich surfaces are denoted as Bx (x = 4–12), with x being the number of excess B atoms added to the surface of the 2 × 2 × 1 hBN supercell. The size of the unit cell is limited by the CALYPSO protocol and the required amount of sampling. It is undoubtedly a constraint of the model: Structures of the interface that could be accommodated in a larger supercell will not be discovered. However, we believe this does not qualitatively alter our conclusion regarding the structural diversity and the need for an ensemble representation of the surface under realistic conditions. The DFT calculations are performed using the Vienna ab initio simulation package (VASP) (15) with the projector augmented wave (PAW) (16) and the PBE functional. (17) The D3 dispersion correction (18) was included. As is shown in Figure S1, B–B and B–N bonds are formed between excess boron and hBN surface, breaking the conjugated π-system of the top monolayer of hBN. With the coverage of B increasing, the structure of excess boron evolves from clusters to chains, interwoven networks, and finally an elemental boron layer with undercoordinated sites exposed.
+In the oxygen atmosphere, the boron layer oxidizes. Using PSO–DFT, we next investigate the structure of the oxidized B layer on top of the hBN surface with varying coverage of B and O atoms. The B and O layers added to a 2 × 2 × 1 supercell of hBN are denoted as BxOy (x = 4–6, y = 2–6). The positions of the excess B and O atoms are sampled in the simulation, whereas the top of the hBN slab is allowed to relax in response to the changes in the oxide layer. As shown in Figure S2, the added oxygen readily inserts into the B–B bonds to form B–O–B, penetrates into the B layer, and further deforms the top hBN monolayer, suggesting the capability of boron-rich layer to activate oxygen. At higher O coverage, the surface becomes boron oxide-like, which is unfavorable for ODHP because boron oxide itself exhibits no activity. (10,11) The surfaces with moderate or relatively low O coverage are all possible candidates to do the catalysis.
+To gain insight into the stability of those surface structures with different B and O coverage under realistic conditions, we calculate the surface free energy
+𝛾(𝑇,𝑝)=
+1
+𝐴
+[
+𝐺
+surface
+(𝑇,𝑝,
+𝑁
+𝑖
+)−∑
+𝑁
+𝑖
+𝜇
+𝑖
+(𝑇,𝑝)]
+1
+where A is the area of the surface unit cell, Gsurface is the Gibbs free energy of the most stable surfaces for a specific stoichiometry, and μ is the chemical potential. Treating μO and μB as independent parameters, the chemical potentials of B and O in bulk boron nitride, boron oxide, and elemental boron are used as a reference to compute γ based on the global optimum of each surface composition. Intersections of the γ for different surface stoichiometries split the μO–μB plane into several regions, each dominated by a specific surface coverage of B and O, resulting in a surface phase diagram. It can be seen from Figure 1a that, in general, increasing μO and μB leads to the stabilization of surfaces with higher coverage of O and B, respectively, indicating the drive toward the formation of the highly stable boron oxide layer. However, the change in the stoichiometry is not continuous with the change of the chemical potentials due to instability of some phases such as B6O4, B6O5, and B5O6. Because μO under the realistic condition can be calculated by
+𝜇
+O
+(𝑇,𝑝)=
+𝜇
+o
+(𝑇,
+𝑝
+o
+)+
+1
+2
+𝑘𝑇ln(𝑝/
+𝑝
+𝑜
+)
+1
+in which o superscript stands for standard conditions and p is the partial pressure of oxygen, a preliminary relationship can be established between reaction conditions and the surface composition of the catalyst (Table S1, Supporting Information). In the experiment, the oxygen pressures applied so far have been between 250 and 150 000 Pa (and could me made higher), (12) and that range corresponds to a central portion of the phase diagrams shown in Figure 1. Thus our results provide a link between experimental conditions and specific surface structure and therefore a way to tune the conditions for a specific reactivity.
+Figure 1
+Figure 1. Surface phase diagram of BxOy on hBN as a function of μO and μB based on (a) the global optima only and (b) the ensemble average over all thermally accessible minima of the same stoichiometry at 763 K. Grand canonical ensemble representation at the population cutoff of >5% at (c) 298 and (d) 763 K. Most of the fields of the grand canonical phase diagrams shown in panels c and d contain several colors corresponding to the accessible isomers of different stoichiometries in the ensemble (A, B, C, D, E, F, G, H, I, J, K, L, M, N, and O stand for B4O2, B4O3, B4O4, B4O5, B4O6, B5O2, B5O3, B5O4, B5O5, B5O6, B6O2, B6O3, B6O4, B6O5, and B6O6, respectively). The white fields represent areas where not a single isomer could be identified as leading.
+However, the global optimization revealed that the under-stoichiometric BO surfaces have many competing structural isomers, whose relative energies should make them accessible at the temperature of ODHP. Several distinct isomers within 0.5 eV from global minimum for each surface composition were found, as shown in Figure S2 (the nth configuration counting from the global minimum of BxOy is referred to as BxOy#n). We observed in the past that for highly dynamic catalytic interfaces, such as surface-supported sub-nano-clusters, ensembles of many thermally accessible states collectively define all catalyst properties, such as activity, selectivity, and stability. (18−22) Therefore, for each composition, we constructed a statistical ensemble of surface states, with populations calculated by the Boltzmann statistics
+𝑝
+i
+=exp(−
+𝜀
+𝑖
+𝑘𝑇
+)/
+∑
+𝑖
+exp(−
+𝜀
+𝑖
+𝑘𝑇
+)
+(
+ε
+)
+∑
+(
+ε
+)
+These populations are calculated at room temperature (298 K) and reaction temperature (763 K). (12) As T increases, metastable isomers get populated, while the contribution of the global minimum is reduced. It is important that the size for the accessible ensemble is stoichiometry-dependent; that is, some compositions have one prominent global minimum even at 763 K, whereas other compositions are characterized by diverse ensembles of many states (Table S2). For example, B6O6 has just two accessible minima, whereas B4O2 has 15. As a result, phases rich in isomers become gradually destabilized at higher temperatures due to the inclusion of higher energy isomers in the ensemble. Hence, we reconstruct the surface phase diagram based on ensemble-averaged surface free energies, characteristic of the surface at the experimental temperature. As can be seen from Figure 1b, after including the local (metastable) minima, several phase boundaries shift, exposing previously inaccessible surface compositions, namely, B5O6 and B4O5. The dramatic change in surface phase diagram strongly suggests that the chemistry of the interface might be greatly affected by the metastable isomers.
+Taking the paradigm one step further, we allow the ensembles to not only populate alternative structural forms at higher T, but also change the stoichiometry. In other words, we construct grand canonical ensembles and build a phase diagram in which different structures and different stoichiometries coexist within each field of μB and μO. The εi in the partition function is substituted with the γ, allowing us to calculate the population distribution of each surface structure. As the temperature is elevated to 298 K (Figure 1c), some isomers of different stoichiometries get populated and appear in each field on the phase diagram. At 763 K (Figure 1d), the dominance of the global minima is reduced significantly more than when a fixed stoichiometry was considered. Some areas on the phase diagram (depicted in white in Figure 1c,d) lack any leading configuration in the ensemble, indicating that the surface would pay a minimal energetic penalty for reorganization and changes in composition. This potentially indicates that in these areas of μB and μO the exchange of oxygen atoms between the surface, the gas phase, and the reacting system should be particularly easy.
+The electronic structure of the interface should reflect the found geometric and compositional changes, impacting the potential catalytic mechanism. Indeed, the impressive difference between the phase diagrams based on statistical ensembles and global minima also calls for an ensemble-averaged view on the catalytic activity. Because of the structural diversity of the isomers in the ensemble, it is extremely computationally expensive to explore the ODHP reaction mechanism for all the surface structures and possible sites. To begin unraveling this complexity, we performed the electronic structure analysis of the found phases. We calculated the Bader charges on boron atoms in all of the surface structures contributing to the phase diagram as a function of T (Figure 2). Stoichiometric boron oxide exhibits no activity toward ODHP, whereas elemental boron shows the best performance. Bader charges of B in elemental boron, boron oxide, and boron nitride were calculated to be ca. 0, +2.2, and +2.2, respectively. In the found isomers, B atoms are positioned in diverse chemical environments and have different Bader charges. For example, a B atom coordinated to another B and to N, as in B–B–N, has a Bader charge of ca. +0.9, and the value increases to ca. +1.3 when O or N is added, whereas it decreases to ca. +0.6 when another B is added. Strain and the second-coordination sphere in the chemical environment of an atom also affect the atomic charge. We constructed the statistical distributions of Bader charges to distinguish different types of B atoms present under varying conditions and to understand their contribution to overall chemical properties. Ensemble-averaged Bader charge distribution at different temperatures (Figure S3) reflect how the apparent electronic structure of the interface changes when metastable isomers get populated, which may assist the search for chemically interesting sites responsible for catalysis. In the range of charge from −0.5 to +2.2 (as in BN), two to seven different charge states of B are present on the surface, depending on the stoichiometry. The effect of increasing T mostly consists of broadening of the peaks, that is, subtly changing the charge distributions within the same typical coordination environments. Expectedly, stoichiometries that exhibit greater population sizes and hence greater electronic structure diversity (e.g., B4O2, B4O3, B5O4, B6O3, B6O5) also have the highest sensitivity of the electronic structure to increasing T. On the contrary, stoichiometries such as B6O2 remain indifferent to T increase in terms of the apparent electronic structure. Intuitively, it is more likely that less stable sites are more reactive. Therefore, it is possible that those special charge states on B that develop at increasing T are the ones important for the catalytic mechanism. Given that elemental B is the best catalyst for ODHP and that B atoms in the coordination environments like in elemental B apparently emerge under conditions of ODHP, at least in simulations, we can speculate that these sites are the most relevant to catalysis. Several such sites exist on the surfaces of some stoichiometries in our simulations (Figure S3), and in B4O2 and B4O5, the populations of low charge states grow with increasing T. The unusual −0.5 charge state appears in B6O2 and B6O3, and it corresponds to the coordination sphere consisting of BB5.
+Figure 2
+Figure 2. Structure of (a) B6O3#1 and (b) B6O3#2 shown in a 2 × 2 × 1 supercell. Calculated Bader charge of boron atoms labeled in unit cells of (c) B6O3#1 and (d) B6O3#2. Pink, red, and blue balls represent boron, oxygen, and nitrogen, respectively. N and O atoms are set transparent in panels c and d for clarity of Bader charge labels. (e) Ensemble-averaged Bader charge distribution of B6O3 at temperature of 0, 298, and 763 K, with the x axis being the Bader charge value.
+Finally, ab initio MD simulation provides some insight into whether the various structural isomers of the interface are kinetically accessible and give structural information on the species that transiently form on the surface. The NVT ensemble at 763 K with the Nosé–Hoover thermostat was used. 50 ps trajectories with the time step of 1 fs were performed. Images were collected every 50 fs after the system was equilibrated. We found that isomers with same chemical composition can behave very differently in MD. For some isomers, such as B6O6#2, the B and O layers stay stable over the duration of the simulation, showing no bond dissociation or any reconstructing (Figure 3a). This can be attributed to the structural similarity of this interface with boron oxide, where most of the B atoms are saturated by the stable B–O bonds. However, some other isomers exhibited very different properties. B6O6#1 detached from the hBN surface during MD and reconstructed into a layer with high fluxionality (Figure 3b). Some boron atoms come together to form dynamical arrangements containing usually unstable units, such as −B═O and B2O cycles. At lower oxygen coverage, such units can become more prevalent and stable, for example, in B6O3#2 (Figure 3c). Inspired by the previously reported catalytic activity of −B═O in other systems and the B2O cycle, which is interesting in terms of its three-center bonding nature, we further study those units by calculating Bader charges and structural parameters. (23,24) Bader charge analysis shows that the atomic charge of O is ca. −1.40 in −B═O and ca. −1.50 in B2O cycles, which differs from the value in boron oxide (ca. −1.57). Knowing that boron oxide is not catalytic for ODH, the less negative Bader charge of O suggests a possibility of C–H activation reactivity on these special sites. In B2O cycle, an O atom bridges two B atoms, and the bridging B–O has a length of ca. 1.5 Å, which is markedly longer than B–O in boron oxide (ca. 1.3 Å), suggesting a weaker bond strength and higher structural flexibility. Hence, these transient units, with electronic structures different from boron oxide, are also candidate active sites. It is possible that the catalysis is due to the dynamical layer that forms in situ, featuring reactive units unavailable in stable isomers, and the activity difference between the borides lies in their ability to generate a significant population of such a dynamical layer. We are still far from a clear conclusion, but the possibility definitely deserves awareness.
+Figure 3
+Figure 3. Ab initio MD simulation results of (a) B6O6#2, (b) B6O6#1, and (c) B6O3#2 with duration of 50 ps. Bulk hBN layers are emitted for clarity of the surface region.
+In summary, we predicted the structures of hBN surface layer with different coverage of B and O via PSO–DFT global optimization and obtained structurally diverse low-energy isomers for each surface composition. A surface phase diagram, with respect to the chemical potential of B and O, was established based on the global minima (i.e., at 0 K), the canonical ensemble, and the grand canonical ensemble to evaluate the stability of surfaces with different composition at increasing temperature. We showed how including contributions of low-energy metastable isomers dramatically alters the phase diagram. We thus demonstrate the necessity of ensemble-averaging in representing a catalytic surface under realistic conditions of catalysis. Bader charge distributions under different temperatures were calculated to further investigate the evolution of the electronic structure of the interface at rising T, possibly guiding the search for active sites in the future. Additionally, a dynamical layer with exposed −B═O units was discovered on the surface with lower O coverage via MD simulation, providing a new dimension to discover transient active sites in catalysis. Although turning to a statistical ensemble brings a much greater complexity, both in characterization and in computation, the ensemble representation is bound to be the key to access a new domain of catalytic chemistry.
+Supporting Information
+ARTICLE SECTIONSJump To
+The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acs.jpclett.8b03373.
+Full computational details, slab models for global optimization and μ calculation, structure of global minima of boron-rich hBN surfaces, structure of accessible isomers of BxOy surfaces, ensemble-averaged Bader charge distribution of boron in BxOy surfaces, μO in different T, p, and number of accessible isomers of different stoichiometries at reaction T (PDF)
+jz8b03373_si_001.pdf (5.86 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+ARTICLE SECTIONSJump To
+Corresponding Author
+Anastassia N. Alexandrova - Department of Chemistry and Biochemistry, University of California, Los Angeles, 607 Charles E. Young Drive, Los Angeles, California 90095-1569, United States;  California NanoSystems Institute, Los Angeles, California 90095-1569, United States;  http://orcid.org/0000-0002-3003-1911;  Email: ana@chem.ucla.edu
+Authors
+Zisheng Zhang - Department of Chemistry and Biochemistry, University of California, Los Angeles, 607 Charles E. Young Drive, Los Angeles, California 90095-1569, United States;  Department of Chemistry, Southern University of Science and Technology, Shenzhen 518055, China
+Elisa Jimenez-Izal - Department of Chemistry and Biochemistry, University of California, Los Angeles, 607 Charles E. Young Drive, Los Angeles, California 90095-1569, United States;  Kimika Fakultatea, Euskal Herriko Unibertsitatea (UPV/EHU) and Donostia International Physics Center (DIPC), P. K. 1072, 20080 Donostia, Euskadi, Spain
+Ive Hermans - Department of Chemistry, University of Wisconsin-Madison, 1101 University Avenue, Madison, Wisconsin 53706, United States;  http://orcid.org/0000-0001-6228-9928
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+ARTICLE SECTIONSJump To
+This work was supported by the NSF CAREER Award (CHE-1351968) to A.N.A. Z.Z. was supported by the CSST Summer Fellowship. E.J.-I. acknowledges the Postdoctoral Fellowship of the Basque Country (POS 2015 1 0008). Extreme Science and Engineering Discovery Environment’s (XSEDE) computing resources, UCLA-IDRE cluster, and SUSTech HPC cluster were used to conduct this work.
+References
+ARTICLE SECTIONSJump To
+This article references 24 other publications.
+1 Market Study: Propylene, 2nd ed.; Ceresana, 2014. http://www.ceresana.com/en/market-studies/chemicals/propylene/.Google Scholar
+2Plotkin, J. S. The Changing Dynamics of Olefin Supply/demand. Catal. Today 2005, 106, 10– 14,  DOI: 10.1016/j.cattod.2005.07.174 [Crossref], [CAS], Google Scholar
+3Cavani, F.; Ballarini, N.; Cericola, A. Oxidative Dehydrogenation of Ethane and Propane: How Far From Commercial Implementation?. Catal. Today 2007, 127, 113– 131,  DOI: 10.1016/j.cattod.2007.05.009 [Crossref], [CAS], Google Scholar
+4Gong, C. M.; Ning, H. B.; Xu, J. Q.; Li, Z. R.; Zhu, Q.; Li, X. Y. Experimental and Modeling Study of Thermal and Catalytic Cracking of n-decane. J. Anal. Appl. Pyrolysis 2014, 110, 463– 469,  DOI: 10.1016/j.jaap.2014.10.021 [Crossref], [CAS], Google Scholar
+5Kung, H. H. Oxidative Dehydrogenation of Light (C2 to C4) Alkanes. Adv. Catal. 1994, 40, 1– 38,  DOI: 10.1016/S0360-0564(08)60655-0 [Crossref], Google Scholar
+6Chen, K.; Bell, A. T.; Iglesia, E. Kinetics and Mechanism of Oxidative Dehydrogenation of Propane on Vanadium, Molybdenum, and Tungsten Oxides. J. Phys. Chem. B 2000, 104, 1292– 1299,  DOI: 10.1021/jp9933875 [ACS Full Text ], [CAS], Google Scholar
+7Cherian, M.; Rao, M. S.; Hirt, A. M.; Wachs, I. E.; Deo, G. Oxidative Dehydrogenation of Propane over Supported Chromia Catalysts: Influence of Oxide Supports and Chromia Loading. J. Catal. 2002, 211, 482– 495,  DOI: 10.1006/jcat.2002.3759 [Crossref], [CAS], Google Scholar
+8Dinse, A.; Khennache, S.; Frank, B.; Hess, C.; Herbert, R.; Wrabetz, S.; Schlögl, R.; Schomäcker, R. Oxidative Dehydrogenation of Propane on Silica (SBA-15) Supported Vanadia Catalysts: A Kinetic Investigation. J. Mol. Catal. A: Chem. 2009, 307, 43– 50,  DOI: 10.1016/j.molcata.2009.03.008 [Crossref], [CAS], Google Scholar
+9Otroshchenko, T.; Sokolov, S.; Stoyanova, M.; Kondratenko, V. A.; Rodemerck, U.; Linke, D.; Kondratenko, E. V. ZrO2-Based Alternatives to Conventional Propane Dehydrogenation Catalysts: Active Sites, Design, and Performance. Angew. Chem., Int. Ed. 2015, 54, 15880– 15883,  DOI: 10.1002/anie.201508731 [Crossref], [CAS], Google Scholar
+10Argyle, M. D.; Chen, K.; Bell, A. T.; Iglesia, E. Effect of Catalyst Structure on Oxidative Dehydrogenation of Ethane and Propane on Alumina-Supported Vanadia. J. Catal. 2002, 208, 139– 149,  DOI: 10.1006/jcat.2002.3570 [Crossref], [CAS], Google Scholar
+11Li, Z.; Peters, A. W.; Bernales, V.; Ortuño, M. A.; Schweitzer, N. M.; DeStefano, M. R.; Gallington, L. C.; Platero-Prats, A. E.; Chapman, K. W.; Cramer, C. J. Metal–Organic Framework Supported Cobalt Catalysts for the Oxidative Dehydrogenation of Propane at Low Temperature. ACS Cent. Sci. 2017, 3, 31– 38,  DOI: 10.1021/acscentsci.6b00290 [ACS Full Text ], [CAS], Google Scholar
+12Grant, J. T.; Carrero, C. A.; Goeltl, F.; Venegas, J.; Mueller, P.; Burt, S. P.; Specht, S. E.; McDermott, W. P.; Chieregato, A.; Hermans, I. Selective Oxidative Dehydrogenation of Propane to Propene using Boron Nitride Catalysts. Science 2016, 354, 1570– 1573,  DOI: 10.1126/science.aaf7885 [Crossref], [PubMed], [CAS], Google Scholar
+13Grant, J. T.; McDermott, W. P.; Venegas, J. M.; Burt, S. P.; Micka, J.; Phivilay, S. P.; Carrero, C. A.; Hermans, I. Boron and Boron-Containing Catalysts for the Oxidative Dehydrogenation of Propane. ChemCatChem 2017, 9, 3623– 3626,  DOI: 10.1002/cctc.201701140 [Crossref], [CAS], Google Scholar
+14Shi, L.; Wang, Y.; Yan, B.; Song, W.; Shao, D.; Lu, A.-H. Progress in Selective Oxidative Dehydrogenation of Light Alkanes to Olefins Promoted by Boron Nitride Catalysts. Chem. Commun. 2018, 54, 10936– 10946,  DOI: 10.1039/C8CC04604B [Crossref], [PubMed], [CAS], Google Scholar
+15Kresse, G.; Furthmuller, J. Efficient Iterative Schemes for ab initio Total-energy Calculations Using a Plane-wave Basis Set. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 11169– 11186,  DOI: 10.1103/PhysRevB.54.11169 [Crossref], [PubMed], [CAS], Google Scholar
+16Blöchl, P. E. Projector Augmented-wave Method. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 50, 17953– 17979,  DOI: 10.1103/PhysRevB.50.17953 [Crossref], [PubMed], [CAS], Google Scholar
+17Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized Gradient Approximation Made Simple. Phys. Rev. Lett. 1996, 77, 3865– 3868,  DOI: 10.1103/PhysRevLett.77.3865 [Crossref], [PubMed], [CAS], Google Scholar
+18Grimme, S.; Antony, J.; Ehrlich, S.; Krieg, H. A Consistent and Accurate ab initio Parametrization of Density Functional Dispersion Correction (DFT-D) for the 94 Elements H-Pu. J. Chem. Phys. 2010, 132, 154104,  DOI: 10.1063/1.3382344 [Crossref], [PubMed], [CAS], Google Scholar
+19Zhai, H.; Alexandrova, A. N. Fluxionality of Catalytic Clusters: When It Matters and How to Address It. ACS Catal. 2017, 7, 1905– 1911,  DOI: 10.1021/acscatal.6b03243 [ACS Full Text ], [CAS], Google Scholar
+20Baxter, E. T.; Ha, M.-A.; Cass, A. C.; Alexandrova, A. N.; Anderson, S. L. Ethylene Dehydrogenation on Pt4,7,8 clusters on Al2O3: Strong Cluster-Size Dependence Linked to Preferred Catalyst Morphologies. ACS Catal. 2017, 7, 3322– 3335,  DOI: 10.1021/acscatal.7b00409 [ACS Full Text ], [CAS], Google Scholar
+21Ha, M.-A.; Baxter, E. T.; Cass, A. C.; Anderson, S. L.; Alexandrova, A. N. Boron Switch for Selectivity of Catalytic Dehydrogention on Size-Selected Pt Clusters on Al2O3. J. Am. Chem. Soc. 2017, 139, 11568– 11575,  DOI: 10.1021/jacs.7b05894 [ACS Full Text ], [CAS], Google Scholar
+22Zhai, H.; Alexandrova, A. N. Local Fluxionality of Surface-Deposited Cluster Catalysts: the Case of Pt7 on Al2O3. J. Phys. Chem. Lett. 2018, 9, 1696– 1702,  DOI: 10.1021/acs.jpclett.8b00379 [ACS Full Text ], [CAS], Google Scholar
+23Braunschweig, H.; Radacki, K.; Schneider, A. Oxoboryl Complexes: Boron–Oxygen Triple Bonds Stabilized in the Coordination Sphere of Platinum. Science 2010, 328, 345– 347,  DOI: 10.1126/science.1186028 [Crossref], [PubMed], [CAS], Google Scholar
+24Braunschweig, H.; Radacki, K.; Schneider, A. Cyclodimerization of an Oxoboryl Complex Induced by trans Ligand Abstraction. Angew. Chem., Int. Ed. 2010, 49, 5993– 5996,  DOI: 10.1002/anie.201002300 [Crossref], Google Scholar
+Cited By
+ARTICLE SECTIONS Jump To
+Citation Statements
+beta
+Supporting
+3
+Mentioning
+80
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 47 publications.
+Zisheng Zhang, Ive Hermans, Anastassia N. Alexandrova. Off-Stoichiometric Restructuring and Sliding Dynamics of Hexagonal Boron Nitride Edges in Conditions of Oxidative Dehydrogenation of Propane. Journal of the American Chemical Society 2023, 145 (31) , 17265-17273. https://doi.org/10.1021/jacs.3c04613
+Xiaofeng Gao, Mingjie Liu, Yongkang Huang, Wenhao Xu, Xian Zhou, Siyu Yao. Dimensional Understanding of Boron-Based Catalysts for Oxidative Propane Dehydrogenation: Structure and Mechanism. ACS Catalysis 2023, 13 (14) , 9667-9687. https://doi.org/10.1021/acscatal.3c00728
+Jinshu Tian, Gregory Collinge, Simuck F. Yuk, Jindong Lin, Vassiliki-Alexandra Glezakou, Mal-Soon Lee, Yong Wang, Roger Rousseau. Dynamically Formed Active Sites on Liquid Boron Oxide for Selective Oxidative Dehydrogenation of Propane. ACS Catalysis 2023, 13 (12) , 8219-8236. https://doi.org/10.1021/acscatal.3c01759
+Steven Chavez, Baraa Werghi, Kenzie M. Sanroman Gutierrez, Ruitian Chen, Supriya Lall, Matteo Cargnello. Studying, Promoting, Exploiting, and Predicting Catalyst Dynamics: the Next Frontier in Heterogeneous Catalysis. The Journal of Physical Chemistry C 2023, 127 (5) , 2127-2146. https://doi.org/10.1021/acs.jpcc.2c06519
+Yuchen Liu, Ziyi Liu, Wen-Duo Lu, Dongqi Wang, An-Hui Lu. In Situ Generated Boron Peroxo as Mild Oxidant in Propane Oxidative Dehydrogenation Revealed by Density Functional Theory Study. The Journal of Physical Chemistry Letters 2022, 13 (50) , 11729-11735. https://doi.org/10.1021/acs.jpclett.2c03341
+Patricia Poths, Anastassia N. Alexandrova. Theoretical Perspective on Operando Spectroscopy of Fluxional Nanocatalysts. The Journal of Physical Chemistry Letters 2022, 13 (19) , 4321-4334. https://doi.org/10.1021/acs.jpclett.2c00628
+Xiangcheng Shi, Xiaoyun Lin, Ran Luo, Shican Wu, Lulu Li, Zhi-Jian Zhao, Jinlong Gong. Dynamics of Heterogeneous Catalytic Processes at Operando Conditions. JACS Au 2021, 1 (12) , 2100-2120. https://doi.org/10.1021/jacsau.1c00355
+Ziyi Liu, Wen-Duo Lu, Dongqi Wang, An-Hui Lu. Interplay of On- and Off-Surface Processes in the B2O3-Catalyzed Oxidative Dehydrogenation of Propane: A DFT Study. The Journal of Physical Chemistry C 2021, 125 (45) , 24930-24944. https://doi.org/10.1021/acs.jpcc.1c07690
+Elena V. Khramenkova, Michael G. Medvedev, Guanna Li, Evgeny A. Pidko. Unraveling the Nature of Extraframework Catalytic Ensembles in Zeolites: Flexibility and Dynamics of the Copper-Oxo Trimers in Mordenite. The Journal of Physical Chemistry Letters 2021, 12 (44) , 10906-10913. https://doi.org/10.1021/acs.jpclett.1c03288
+Ziyi Liu, Deting Xu, Miaoren Xia, Wen-Duo Lu, An-Hui Lu, Dongqi Wang. Understanding the Unique Antioxidation Property of Boron-Based Catalysts during Oxidative Dehydrogenation of Alkanes. The Journal of Physical Chemistry Letters 2021, 12 (36) , 8770-8776. https://doi.org/10.1021/acs.jpclett.1c02709
+Huan Yan, Selim Alayoglu, Weiqiang Wu, Yongbo Zhang, Eric Weitz, Peter C. Stair, Justin M. Notestein. Identifying Boron Active Sites for the Oxidative Dehydrogenation of Propane. ACS Catalysis 2021, 11 (15) , 9370-9376. https://doi.org/10.1021/acscatal.1c02168
+Melissa C. Cendejas, Rick W. Dorn, William P. McDermott, Edgard A. Lebrón-Rodríguez, Lesli O. Mark, Aaron J. Rossini, Ive Hermans. Controlled Grafting Synthesis of Silica-Supported Boron for Oxidative Dehydrogenation Catalysis. The Journal of Physical Chemistry C 2021, 125 (23) , 12636-12649. https://doi.org/10.1021/acs.jpcc.1c01899
+Peter Kraus, Rune Peter Lindstedt. It’s a Gas: Oxidative Dehydrogenation of Propane over Boron Nitride Catalysts. The Journal of Physical Chemistry C 2021, 125 (10) , 5623-5634. https://doi.org/10.1021/acs.jpcc.1c00165
+Geng Sun, Jack T. Fuller, III, Anastassia N. Alexandrova, Philippe Sautet. Global Activity Search Uncovers Reaction Induced Concomitant Catalyst Restructuring for Alkane Dissociation on Model Pt Catalysts. ACS Catalysis 2021, 11 (3) , 1877-1885. https://doi.org/10.1021/acscatal.0c05421
+Zisheng Zhang, Zhi-Hao Cui, Elisa Jimenez-Izal, Philippe Sautet, Anastassia N. Alexandrova. Hydrogen Evolution on Restructured B-Rich WB: Metastable Surface States and Isolated Active Sites. ACS Catalysis 2020, 10 (23) , 13867-13877. https://doi.org/10.1021/acscatal.0c03410
+Rajesh Belgamwar, Andrew G. M. Rankin, Ayan Maity, Amit Kumar Mishra, Jennifer S. Gómez, Julien Trébosc, Chathakudath P. Vinod, Olivier Lafon, Vivek Polshettiwar. Boron Nitride and Oxide Supported on Dendritic Fibrous Nanosilica for Catalytic Oxidative Dehydrogenation of Propane. ACS Sustainable Chemistry & Engineering 2020, 8 (43) , 16124-16135. https://doi.org/10.1021/acssuschemeng.0c04148
+Evgeniya Vorobyeva, Viktoria C. Gerken, Sharon Mitchell, Albert Sabadell-Rendón, Roland Hauert, Shibo Xi, Armando Borgna, Daniel Klose, Sean M. Collins, Paul A. Midgley, Demie M. Kepaptsoglou, Quentin M. Ramasse, Andrea Ruiz-Ferrando, Edvin Fako, Manuel A. Ortuño, Núria López, Erick M. Carreira, Javier Pérez-Ramírez. Activation of Copper Species on Carbon Nitride for Enhanced Activity in the Arylation of Amines. ACS Catalysis 2020, 10 (19) , 11069-11080. https://doi.org/10.1021/acscatal.0c03164
+Liancheng Wang, Yuanying Wang, Rong Zhang, Ruimin Ding, Xiaohua Chen, Baoliang Lv. Edge-Activating CO2-Mediated Ethylbenzene Dehydrogenation by a Hierarchical Porous BN Catalyst. ACS Catalysis 2020, 10 (12) , 6697-6706. https://doi.org/10.1021/acscatal.0c00070
+Geng Sun, Anastassia N. Alexandrova, Philippe Sautet. Structural Rearrangements of Subnanometer Cu Oxide Clusters Govern Catalytic Oxidation. ACS Catalysis 2020, 10 (9) , 5309-5317. https://doi.org/10.1021/acscatal.0c00824
+Zisheng Zhang, Borna Zandkarimi, Anastassia N. Alexandrova. Ensembles of Metastable States Govern Heterogeneous Catalysis on Dynamic Interfaces. Accounts of Chemical Research 2020, 53 (2) , 447-458. https://doi.org/10.1021/acs.accounts.9b00531
+Alyssa M. Love, Melissa C. Cendejas, Brijith Thomas, William P. McDermott, Pajean Uchupalanun, Catherine Kruszynski, Samuel P. Burt, Theodore Agbi, Aaron J. Rossini, Ive Hermans. Synthesis and Characterization of Silica-Supported Boron Oxide Catalysts for the Oxidative Dehydrogenation of Propane. The Journal of Physical Chemistry C 2019, 123 (44) , 27000-27011. https://doi.org/10.1021/acs.jpcc.9b07429
+Xiaofeng Gao, Ling Zhu, Feng Yang, Lei Zhang, Wenhao Xu, Xian Zhou, Yongkang Huang, Houhong Song, Lili Lin, Xiaodong Wen, Ding Ma, Siyu Yao. Subsurface nickel boosts the low-temperature performance of a boron oxide overlayer in propane oxidative dehydrogenation. Nature Communications 2023, 14 (1) https://doi.org/10.1038/s41467-023-37261-x
+Zhu Fu, De-Zheng Li, Li-Dai Zhou, Yu-Ming Li, Jia-Wen Guo, Yu-Qiao Li, Hui-Min Liu, Qi-Jian Zhang. A mini review on oxidative dehydrogenation of propane over boron nitride catalysts. Petroleum Science 2023, 20 (4) , 2488-2498. https://doi.org/10.1016/j.petsci.2023.03.005
+Xiuhui Li, Shuhuan Han, Zelong Qiao, Xiaofei Zeng, Dapeng Cao, Jianfeng Chen. Ru monolayer island doped MoS2 catalysts for efficient hydrogen evolution reaction. Chemical Engineering Journal 2023, 453 , 139803. https://doi.org/10.1016/j.cej.2022.139803
+Xiao Jiang, Ke Zhang, Michael J. Forte, Sufeng Cao, Brian S. Hanna, Zili Wu. Recent advances in oxidative dehydrogenation of propane to propylene on boron-based catalysts. Catalysis Reviews 2022, 2 , 1-80. https://doi.org/10.1080/01614940.2022.2113084
+Hao Tian, Bingjun Xu. Oxidative co-dehydrogenation of ethane and propane over h-BN as an effective means for C–H bond activation and mechanistic investigations. Chinese Journal of Catalysis 2022, 43 (8) , 2173-2182. https://doi.org/10.1016/S1872-2067(21)64042-1
+Robert H. Lavroff, Harry W. T. Morgan, Zisheng Zhang, Patricia Poths, Anastassia N. Alexandrova. Ensemble representation of catalytic interfaces: soloists, orchestras, and everything in-between. Chemical Science 2022, 13 (27) , 8003-8016. https://doi.org/10.1039/D2SC01367C
+Sonu Kumar, Andrey Lyalin, Zhenguo Huang, Tetsuya Taketsugu. Catalytic Oxidative Dehydrogenation of Light Alkanes over Oxygen Functionalized Hexagonal Boron Nitride. ChemistrySelect 2022, 7 (1) https://doi.org/10.1002/slct.202103795
+Ali Hussain Motagamwala, Rawan Almallahi, James Wortman, Valentina Omoze Igenegbai, Suljo Linic. Stable and selective catalysts for propane dehydrogenation operating at thermodynamic limit. Science 2021, 373 (6551) , 217-222. https://doi.org/10.1126/science.abg7894
+Yihu Dai, Xing Gao, Qiaojuan Wang, Xiaoyue Wan, Chunmei Zhou, Yanhui Yang. Recent progress in heterogeneous metal and metal oxide catalysts for direct dehydrogenation of ethane and propane. Chemical Society Reviews 2021, 50 (9) , 5590-5630. https://doi.org/10.1039/D0CS01260B
+Son Dong, Natalie R. Altvater, Lesli O. Mark, Ive Hermans. Assessment and comparison of ordered & non-ordered supported metal oxide catalysts for upgrading propane to propylene. Applied Catalysis A: General 2021, 617 , 118121. https://doi.org/10.1016/j.apcata.2021.118121
+Hang Zhou, Xianfeng Yi, Yu Hui, Liang Wang, Wei Chen, Yucai Qin, Ming Wang, Jiabi Ma, Xuefeng Chu, Yeqing Wang, Xin Hong, Zifeng Chen, Xiangju Meng, Hai Wang, Qiuyan Zhu, Lijuan Song, Anmin Zheng, Feng-Shou Xiao. Isolated boron in zeolite for oxidative dehydrogenation of propane. Science 2021, 372 (6537) , 76-80. https://doi.org/10.1126/science.abe7935
+Guido Zichittella, Javier Pérez-Ramírez. Status and prospects of the decentralised valorisation of natural gas into energy and energy carriers. Chemical Society Reviews 2021, 50 (5) , 2984-3012. https://doi.org/10.1039/D0CS01506G
+Qiong Lu, Jing An, Yandong Duan, Qingzhi Luo, Rong Yin, Xueyan Li, Chengchun Tang, Desong Wang. A strategy for preparing efficient Ag/p-BNNS nanocatalyst with a synergistic effect between Ag and p-BNNS. Journal of Catalysis 2021, 395 , 457-466. https://doi.org/10.1016/j.jcat.2021.02.004
+Mingxin Liu, Lida Tan, Baowen Zhou, Lu Li, Zetian Mi, Chao-Jun Li. Group-III Nitrides Catalyzed Transformations of Organic Molecules. Chem 2021, 7 (1) , 64-92. https://doi.org/10.1016/j.chempr.2020.09.014
+William P. McDermott, Melissa C. Cendejas, Ive Hermans. Recent Advances in the Understanding of Boron-Containing Catalysts for the Selective Oxidation of Alkanes to Olefins. Topics in Catalysis 2020, 63 (19-20) , 1700-1707. https://doi.org/10.1007/s11244-020-01383-z
+Juan M. Venegas, Zisheng Zhang, Theodore O. Agbi, William P. McDermott, Anastassia Alexandrova, Ive Hermans. Why Boron Nitride is such a Selective Catalyst for the Oxidative Dehydrogenation of Propane. Angewandte Chemie 2020, 132 (38) , 16670-16678. https://doi.org/10.1002/ange.202003695
+Juan M. Venegas, Zisheng Zhang, Theodore O. Agbi, William P. McDermott, Anastassia Alexandrova, Ive Hermans. Why Boron Nitride is such a Selective Catalyst for the Oxidative Dehydrogenation of Propane. Angewandte Chemie International Edition 2020, 59 (38) , 16527-16535. https://doi.org/10.1002/anie.202003695
+Natalie R. Altvater, Rick W. Dorn, Melissa C. Cendejas, William P. McDermott, Brijith Thomas, Aaron J. Rossini, Ive Hermans. B‐MWW Zeolite: The Case Against Single‐Site Catalysis. Angewandte Chemie 2020, 132 (16) , 6608-6612. https://doi.org/10.1002/ange.201914696
+Natalie R. Altvater, Rick W. Dorn, Melissa C. Cendejas, William P. McDermott, Brijith Thomas, Aaron J. Rossini, Ive Hermans. B‐MWW Zeolite: The Case Against Single‐Site Catalysis. Angewandte Chemie International Edition 2020, 59 (16) , 6546-6550. https://doi.org/10.1002/anie.201914696
+Avik Halder, Mai‐Anh Ha, Huanchen Zhai, Bing Yang, Michael J. Pellin, Sönke Seifert, Anastassia N. Alexandrova, Stefan Vajda. Oxidative Dehydrogenation of Cyclohexane by Cu vs Pd Clusters: Selectivity Control by Specific Cluster Dynamics. ChemCatChem 2020, 12 (5) , 1307-1315. https://doi.org/10.1002/cctc.201901795
+Huanchen Zhai, Philippe Sautet, Anastassia N. Alexandrova. Global Optimization of Adsorbate Covered Supported Cluster Catalysts: The Case of Pt 7 H 10 CH 3 on α‐Al 2 O 3. ChemCatChem 2020, 12 (3) , 762-770. https://doi.org/10.1002/cctc.201901830
+Pavel O. Kuliaev, Evgeny A. Pidko. Operando Modeling of Multicomponent Reactive Solutions in Homogeneous Catalysis: from Non‐standard Free Energies to Reaction Network Control. ChemCatChem 2020, 12 (3) , 795-802. https://doi.org/10.1002/cctc.201901911
+Qiang‐Qiang Li, Jing Xi, Bing‐Qiang Li, Ning Li. MiR‐16, as a potential NF‐κB‐related miRNA, exerts anti‐inflammatory effects on LPS‐induced myocarditis via mediating CD40 expression: A preliminary study. Journal of Biochemical and Molecular Toxicology 2020, 34 (2) https://doi.org/10.1002/jbt.22426
+Lei Wang, Chengcheng Ao, Yitong Zhai, Beibei Feng, Junrui Duan, Siyu Qian, Wei Zhao, Lidong Zhang, Fuyi Liu. Highly active and stable Co3O4 catalyst for the Low-temperature oxidative dehydrogenation of propane. Inorganic Chemistry Communications 2020, 112 , 107725. https://doi.org/10.1016/j.inoche.2019.107725
+Geng Sun, Anastassia N. Alexandrova, Philippe Sautet. Pt8 cluster on alumina under a pressure of hydrogen: Support-dependent reconstruction from first-principles global optimization. The Journal of Chemical Physics 2019, 151 (19) https://doi.org/10.1063/1.5129296
+Borna Zandkarimi, Anastassia N. Alexandrova. Surface‐supported cluster catalysis: Ensembles of metastable states run the show. WIREs Computational Molecular Science 2019, 9 (6) https://doi.org/10.1002/wcms.1420
+Download PDF
+close the sidebar.
+Abstract
+Figure 1
+Figure 1. Surface phase diagram of BxOy on hBN as a function of μO and μB based on (a) the global optima only and (b) the ensemble average over all thermally accessible minima of the same stoichiometry at 763 K. Grand canonical ensemble representation at the population cutoff of >5% at (c) 298 and (d) 763 K. Most of the fields of the grand canonical phase diagrams shown in panels c and d contain several colors corresponding to the accessible isomers of different stoichiometries in the ensemble (A, B, C, D, E, F, G, H, I, J, K, L, M, N, and O stand for B4O2, B4O3, B4O4, B4O5, B4O6, B5O2, B5O3, B5O4, B5O5, B5O6, B6O2, B6O3, B6O4, B6O5, and B6O6, respectively). The white fields represent areas where not a single isomer could be identified as leading.
+Figure 2
+Figure 2. Structure of (a) B6O3#1 and (b) B6O3#2 shown in a 2 × 2 × 1 supercell. Calculated Bader charge of boron atoms labeled in unit cells of (c) B6O3#1 and (d) B6O3#2. Pink, red, and blue balls represent boron, oxygen, and nitrogen, respectively. N and O atoms are set transparent in panels c and d for clarity of Bader charge labels. (e) Ensemble-averaged Bader charge distribution of B6O3 at temperature of 0, 298, and 763 K, with the x axis being the Bader charge value.
+Figure 3
+Figure 3. Ab initio MD simulation results of (a) B6O6#2, (b) B6O6#1, and (c) B6O3#2 with duration of 50 ps. Bulk hBN layers are emitted for clarity of the surface region.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

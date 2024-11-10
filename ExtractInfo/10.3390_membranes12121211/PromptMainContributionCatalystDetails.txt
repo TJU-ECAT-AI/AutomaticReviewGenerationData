@@ -1,0 +1,735 @@
+<DOCUMENT>
+Fluidized Bed Membrane Reactor for the Direct Dehydrogenation of Propane: Proof of Concept
+
+1. Introduction
+With a processing capacity of 107.9 MMT in 2020 that is expected to reach 128 MMT by 2027, propylene is one of the most important raw materials in the petrochemical industry [1]. The growth in propylene production is primarily driven by the industry demand for polypropylene, which is used in a wide variety of applications, such as food packaging, electronics, and construction [2]. The increasing global demand for propylene over the past few years has given rise to the need for the development of more efficient conversion technologies and alternative feedstocks [3]. In this respect, Propane Dehydrogenation (PDH) is emerging as an attractive alternative to traditional processes [4]. In this process, propylene is directly produced from propane according to the following dehydrogenation reaction:
+C
+3
+H
+8
+↔
+C
+3
+H
+6
++
+H
+2
+,
+  Δ
+H
+R
+298
+K
+=
+124.3
+  kJ
+/
+mol
+Since the dehydrogenation reaction is reversible and endothermic, it is often carried out at high temperatures (550–650 °C) and atmospheric pressures using a platinum or chromium catalyst. Platinum offers a superior activation of the paraffinic C-H bond and low activity to C-C cleavage [4]. The activity towards dehydrogenation reactions originates from its metallic (non-oxidative) state. It has been proven that a single platinum site is able to break the C-H bond in propane [5]. The dehydrogenation reaction of light paraffins is insensitive to the structure of the Pt-particles: both the exposed crystallographic plane and the particle size do not influence the reaction. Only the number of active sites is relevant to the reaction, which means that small particles are preferred over larger particles. Platinum-based dehydrogenation catalysts are typically supported on alumina, due to its high thermal and mechanical stability, its high surface area, and its uniform pore size distribution. These two last features make is possible to maintain the platinum nanoparticles well dispersed on the support, which is crucial to attain stable catalyst performance [6]. A critical aspect of alumina supports is represented by their acidity, which promotes skeletal isomerization, cracking, and polymerization of olefinic materials, to enhance coke formation, which rapidly deactivates the catalyst. Therefore, alkaline metals, such as Li, Na and K, are added to poison the acidic sites of the support. Furthermore, olefins react faster on platinum than paraffins, due to the interaction activity between olefins and Pt being stronger than that of paraffins. The addition of platinum modifiers weakens the Pt–olefin interaction selectively, without affecting the Pt–paraffin interaction. Arsenic, tin, or germanium are among the metals reported as being platinum activity modifiers. They also improve catalyst stability against fouling by heavy carbonaceous materials [7]. Although Pt-based dehydrogenation catalysts are highly optimized, the process still suffers from side cracking reactions, which are favored by the high dehydrogenation temperatures and the consequent carbon formation, which rapidly deactivates the catalyst. These restrictions lead to great challenges to the dehydrogenation technologies [8]. The emerging technology of palladium-based membrane reactors shows a high degree of process intensification for the direct dehydrogenation of propane, and has demonstrated significant advantages over the conventional process [9,10,11,12]. The selective removal of H2 from the catalytic bed shifts the equilibrium beyond the thermodynamic limitations. In this way, it would be possible to achieve the same propane conversion as in the conventional reactor, but while working at lower operating temperatures, which results in a drastic reduction of the reactor heat duty, as well as in a reduction of the coke formation rate. Ricca et al. [13] carried out modeling and experimental work on a novel proposed process scheme for the direct dehydrogenation of propane, where Pd-based membranes used for the recovery of hydrogen were integrated in the fixed-bed reaction unit. Their results showed that when using membranes in the reaction unit, the propane conversion increased above its thermodynamic limitation, which also corresponded to the limit of a conventional reaction unit (i.e., without the membranes). Such a solution allows for a higher stability of the catalyst and, accordingly, a prolonged operation time that decreases the need for catalyst regeneration. Didenko et al. [14] experimentally investigated the dehydrogenation of propane in a combined packed-bed membrane reactor. In their work, they demonstrated at a laboratory scale the potential of the membrane reactor technology in increasing the feedstock conversion to propylene by a factor of 1.6–2.0 with respect to the conventional equilibrium value, under optimized operating conditions. Another interesting work that investigates the use of the membrane reactor technology for dehydrogenation processes is presented by He et al. [15]. In this work, the authors performed a thermodynamic analysis of a novel solar driven propane dehydrogenation system with a membrane reactor. The results showed that, compared to the performance of a conventional reactor (without membranes), an H2 permeate pressure of 10−5 bar increased the conversion rate of C3H8 from 4.1% to 99.12% and the selectivity of C3H6 from 93.1% to 99.1% at 400 °C. Thus, the membrane reactor has the potential to significantly increase the dehydrogenation reaction yield at lower temperatures by means of H2 separation.
+Most of the scientific research on H2 selective membranes for dehydrogenation reactions has investigated the packed-bed membrane reactor (PBMR) configuration. This configuration offers, as main advantages, the simplicity in construction and the presence of consolidated and validated models for its design and scale-up. Moreover, packed-bed configurations avoid any damage of the membrane surface due to erosion from catalytic particles, since they are kept in a fixed position. However, the application of an integrated packed-bed membrane reactor for dehydrogenation processes is limited by the inevitable formation of carbon side products, which tend to adsorb on the surface of catalyst particles and membranes and subsequently dissociate, leading to their deactivation. Even though the coking of both the catalyst particles and the H2-selective membranes has been demonstrated to be reversible through regeneration with diluted oxygen, this requires different conditions: a hot air stream at 700 °C is needed to regenerate the catalyst, while Pd-based membranes can only be exposed to air up to 400 °C without compromising their surfaces. Compared to packed beds, the fluidized-bed membrane reactor (FBMR) allows for the movement of solid particles. When connected to an additional regeneration unit, in a Dual Circulating Fluidized Bed Membrane Reactor (DCFBMR) configuration, it becomes possible to have circulation of the solid particles from the reaction zone to the regeneration zone, so that the catalytic bed is always active and separately regenerates the catalyst and the membranes at the required operating conditions. Thus, the Dual Circulating Fluidized Bed Membrane Reactor offers a valuable solution for the catalyst regeneration, which is one of the main limitations of the PDH system. Prior to the evaluation of its industrial potential application for PDH processes, it is worth focusing on the fluidized bed membrane reactor configuration. The performance of the direct dehydrogenation of propane in a fluidized bed membrane reactor is experimentally investigated in this work. The aim is to demonstrate, at a laboratory scale, the higher efficiency of a membrane assisted fluidized bed reactor for the direct dehydrogenation of propane. Firstly, the fluidized bed membrane reactor technology is experimentally studied and compared with the conventional fluidized bed reactor (FBR) technology, with particular attention to the performance and stability of the membranes. Then, the experimental results are used to validate a one-dimensional phenomenological model for the FBMR. This allows us to extrapolate simulation results at a larger scale, which in turn can help in designing the DCFBMR configuration and get insights on its potential application at industrial scales.
+2. Phenomenological Fluidized Bed (Membrane) Reactor Model Description
+The model used in this work is based on the work of Iliuta et al. [16] that was later used by Medrano et al. [17]. The authors proposed a 1D continuum model describing the three-phase system of a bubbling bed model derived by Kunii and Levenspiel [18]. Both the gas and the solid phases are described in this model. The model for the gas flow consists of three phases: bubble, wake, and emulsion. The gas phase is fed into the reactor at a superficial gas velocity above the minimum fluidization velocity. The gas forms a bubble phase, with fraction fb and with a characteristic bubble diameter db as functions of the axial position, which flows upwards with a velocity ub. The bubble carries with its movement a fraction of solid in the so-called wake phase. The volumetric fraction of wake α is estimated to be 15% of the bubble volume. The remaining gas moves upwards in the emulsion phase at the emulsion velocity ue. Mass transfer occurs between the gas in the emulsion phase and the gas in the bubble phase, with a mass transfer coefficient Kbe. On the other hand, the solids present a net downward flow in the emulsion phase with an emulsion velocity use, and they are exchanged with solids in the wake-bubble phase with a mass transfer coefficient Kwe,s. A summary of the hydrodynamics and mass transfer correlations obtained from the literature and used in this work is reported in Appendix A, Table A1.
+For the gas phase, it is possible to write mass balances both in the bubble and in the emulsion phase, as reported in Equations (1) and (2).
+d
+dz
+[
+u
+b
+f
+b
+(
+1
++
+f
+w
+e
+mf
+)
+C
+i
+,
+bw
+]
+=
+±
+R
+i
+,
+bw
+f
+bw
+(
+1
+−
+e
+mf
+)
++
+K
+i
+,
+be
+(
+f
+b
++
+f
+w
+e
+mf
+)
+(
+C
+i
+,
+ce
+−
+C
+i
+,
+w
+)
+(1)
+d
+dz
+[
+u
+g
+,
+e
+(
+f
+ce
+e
+mf
+)
+C
+i
+,
+ce
+]
+=
+±
+R
+i
+,
+ce
+f
+ce
+(
+1
+−
+e
+mf
+)
+−
+K
+i
+,
+be
+(
+f
+b
++
+f
+w
+e
+mf
+)
+(
+C
+i
+,
+ce
+−
+C
+i
+,
+w
+)
+(2)
+The balances are each solved per different instants of time at each axial position of the bed. Similarly, for the solid phase, the model solves the mass balances for every axial position in the wake and in the emulsion phases, as presented in Equations (3) and (4).
+d
+dz
+[
+u
+b
+f
+w
+(
+1
+−
+e
+mf
+)
+C
+i
+,
+w
+]
+=
+±
+R
+i
+,
+w
+f
+w
+(
+1
+−
+e
+mf
+)
++
+K
+i
+,
+we
+f
+w
+(
+1
+−
+e
+mf
+)
+(
+C
+i
+,
+ce
+−
+C
+i
+,
+w
+)
+(3)
+d
+dz
+[
+u
+se
+f
+ce
+(
+1
+−
+e
+mf
+)
+C
+i
+,
+ce
+]
+=
+±
+R
+i
+,
+ce
+f
+ce
+(
+1
+−
+e
+mf
+)
+−
+K
+i
+,
+we
+f
+w
+(
+1
+−
+e
+mf
+)
+(
+C
+i
+,
+ce
+−
+C
+i
+,
+w
+)
+(4)
+Overall, two solid phases are modeled in this work: the fresh and the deactivated catalyst, on top of which coke is deposited. Commercial PtSnK/Al2O3 particles, which have been extensively investigated in the literature for the dehydrogenation of propane and for deriving gas–solid reaction rate expressions to model coke formation [19,20,21,22], are considered as catalytic material in the model. The direct dehydrogenation of propane is described by the following reaction scheme:
+C
+3
+H
+8
+↔
+C
+3
+H
+6
++
+H
+2
+Δ
+H
+R
+298
+K
+=
+124.3
+  kJ
+/
+mol
+(R1)
+C
+3
+H
+8
+  ↔
+CH
+4
++
+C
+2
+H
+4
+Δ
+H
+R
+298
+K
+=
+98.9
+  kJ
+/
+mol
+(R2)
+C
+2
+H
+4
++
+H
+2
+  ↔
+C
+2
+H
+6
+Δ
+H
+R
+298
+K
+=
+−
+136.6
+  kJ
+/
+mol
+(R3)
+C
+3
+H
+6
+  ↔
+3
+CH
+0.5
++
+2.25
+H
+2
+Δ
+H
+R
+298
+K
+=
+119.5
+  kJ
+/
+mol
+(R4)
+The heterogenous catalyzed gas-phase reactions R1–R3 and gas–solid reaction R4 are assumed to follow the kinetics of Lobera et al. [7]. The corresponding reaction rate expressions are reported in Equations (5)–(8).
+−
+r
+1
+=
+α
+k
+1
+(
+P
+C
+3
+H
+8
+−
+(
+P
+C
+3
+H
+6
+P
+H
+2
+K
+eq
+)
+)
+1
++
+(
+P
+C
+3
+H
+8
+K
+C
+3
+H
+6
+)
+(5)
+−
+r
+2
+=
+k
+2
+P
+C
+3
+H
+8
+(6)
+−
+r
+3
+=
+k
+3
+P
+C
+2
+H
+4
+P
+H
+2
+(7)
+dC
+dt
+k
+1
+C
+(
+C
+max
+−
+C
+m
+)
+2
++
+k
+2
+c
+(8)
+To account for the catalyst deactivation due to carbon formation (R4), the parameter α is multiplied by the propane dehydrogenation rate expression r1. This parameter correlates the activity with the content of coke on the catalyst, and it is expresses as:
+α
+=
+(
+1
+−
+γ
+1
+C
+m
+)
++
+γ
+2
+C
+m
+exp
+(
+−
+γ
+3
+(
+C
+M
+C
+m
+)
+)
+(9)
+Where Cm, CM, and Cmax are the coke concentration in the monolayer, in the multilayer, and the maximum coke concentration in the monolayer, respectively. The expression of all the kinetic parameters present in the equations listed above are reported in Appendix A.1. The PDH reactor model developed in this work can be simulated as a conventional fluidized bed reactor (PDH-FBR), and as a fluidized bed membrane reactor (PDH-FBMR), in which a dead-end Pd-based membrane is integrated to selectively remove hydrogen from the reactor. The hydrogen flux permeating through the Pd-based membrane is described by the following equation (Equation (10)):
+J
+H
+2
+=
+α
+(
+t
+)
+1
+δ
+Pe
+0
+exp
+(
+−
+E
+a
+RT
+)
+(
+p
+H
+2
+  ret
+n
+−
+p
+H
+2
+perm
+n
+)
+(10)
+where Pe0 is the pre-exponential of the membrane permeability, Ea is the activation energy, δ is the membrane thickness, pH2 ret and pH2 perm are the hydrogen partial pressure at the retentate and permeate side, respectively, and n is the pressure exponent. The hydrogen flux expression is multiplied by the dimensionless transient deactivation term
+α
+(
+t
+)
+, which correlates the activity of the Pd-based membranes to selectively separate hydrogen with the carbon content formed on the membrane surface that is responsible for its deactivation over time. In this way, it is possible to model the hydrogen flux decay over time, which is representative of the membrane deactivation trend. The membrane activity coefficient
+α
+(
+t
+)
+has been derived by the same authors in a previous work [23], and its expression, together with the values of the kinetic parameters, are reported in Appendix A.1. The main permeation parameters used in this modeling work are reported in Table 1, and result from the fitting of the pure hydrogen permeation experiments, as already described by the same authors in a previous work [24].
+Table 1. Permeability parameters for the Pd–Ag membrane used in this work.
+The hydrogen flux permeating through the membrane is split in emulsion and bubble phases that are proportional to their fractions in the bed. To account for the removal of hydrogen from the reaction ambient, the flow rate of hydrogen permeated through the membrane, calculated from the definition of the hydrogen flux (Equation (10)), is subtracted from the differential mass balances of hydrogen compounds along the reactor length for both the bubble and the emulsion phases.
+The resulting system of partial differential equations has been discretized using a simple first order upwind finite difference scheme for the convection terms, which is solved using the Newton–Raphson’s iterative method.
+3. Materials and Methods
+3.1. Fluidized Bed (Membrane) Reactor Setup
+A schematic representation of the setup used for both the fluidized bed reactor and the fluidized bed membrane reactor experiments is shown in Figure 1.
+Figure 1. Schematic representation of the experimental setup for fluidization tests. FC indicates mass flow controllers, TC represents thermocouples, and PT indicates pressure transducers.
+The setup consists of a stainless-steel reactor with an internal diameter of 0.043 m and a bed height of 0.44 m, and with a porous plate distributor made of Hastelloy X (40 μm pore size). The reactor is placed in an electrically heated oven to maintain isothermal conditions. The temperature was measured by three thermocouples placed inside the reactor bed, one at the bottom, one in the middle, and the last one at the top. The flow rate of the process gases was regulated by Bronkhorst digital mass flow controllers. A back-pressure controller was installed to regulate the operating pressure in the reaction side. The reactor system can be operated both as a conventional fluidized bed reactor and as a fluidized bed membrane reactor by opening/closing the permeate line. The permeate side of the membrane was either operated at atmospheric pressure or at a vacuum pressure. An automated soap bubble flow meter from Horibastec, with a measuring range of 0–0.2 LSTP/min, was used to measure the volumetric flow rate at the permeate side. The composition of both the retentate and the permeate streams was analyzed with a compact gas chromatograph GC (Global Analyzer Solution TM, G.A.S., Breda, The Netherlands) equipped with a TCD detector and three packed columns (HayeSep Q 60–80 mesh and 5A molecular sieve) for the analysis of permanent gases (i.e., H2, CO2, CO and N2) and an FID detector with capillary columns (Rtx-1, MTX-1 and MTX-QBond) was used for the analysis of the hydrocarbons.
+3.2. H2-Selective Membrane
+A novel type of Pd-alloyed membrane, known as a double-skinned membrane, was used in this work. This membrane was prepared following the procedure described by Arratibel at el. [25]. A thin Pd and Ag selective layer was deposited by the electroless plating technique onto a Al2O3 porous tubular substrate, with an external/internal diameter of 14/7 mm and an external pore size of 100 nm provided by Rauschert Kloster Veilsdorf. After the Pd–Ag layer deposition, the sample was turned into a double-skinned membrane by placing an additional thin (<1 μm) mesoporous ceramic (50wt% YSZ- 50wt% γ-Al2O3) layer on top of the Pd–Ag layer through a vacuum-assisted dip coating technique at room temperature. The morphology and the chemical composition of the double-skinned membrane were determined by Scanning Electron Microscope (SEM) and Energy Dispersive X-Ray (EDX) analysis, using a FEI Quanta 250 FEG equipment.
+The additional ceramic layer has already been demonstrated to have a protective effect against mechanical erosion of the selective Pd–Ag layer by particle attritions in fluidized beds by Arratibel et al. [26], and it was proven for the direct dehydrogenation of propane in this work. The membrane has one end closed (i.e., fingerlike configuration), while the other end was sealed with graphite ferrules and a metallic connector using a hydraulic crimping machine (FINN-POWER), as shown in Figure 2.
+Figure 2. Double-skinned membrane with a fingerlike configuration and the other end sealed.
+The membrane, with a total active length of 11 cm, was integrated from the top flange of the reactor with a stainless-steel tube, leaving a distance of 5 cm between the bottom plate distributor and the closed end of the membrane. Prior to the catalytic tests, membrane stability tests were performed to assess the absence of any chemical interaction between the catalyst particles and the membrane selective layer. The membrane was exposed for almost 7 h under a gas mixture of 60vol% H2 and 40vol% N2, in a continuous bubbling fluidization regime, working at 500 °C with 1 bar of pressure difference across the membrane.
+During the reaction tests, the membrane performance was monitored by measuring the hydrogen recovery factor, defined as:
+H
+2
+  Recovery
+  Factor
+=
+F
+H
+2
+,
+permeate
+F
+H
+2
+,
+retentate
++
+F
+H
+2
+,
+permeate
+(11)
+3.3. Catalyst
+The catalyst used in this work was prepared following the procedure reported in the literature [27]. A sequential wet impregnation procedure was used to synthetize the Pt-Sn-K catalyst, which was impregnated onto a 160–250 μm γ-Al2O3 supplied by Sasol. The resulting nominal composition of the catalyst was 0.05, 0.14, and 0.10wt% of Pt, Sn, and K, respectively (Table 2). The specific surface area (S.A.) and pore volume (P.V.) were determined via the BET and BJH elaboration of the N2 adsorption–desorption isotherms at −196 °C, obtained using a Micromeritics ASAP 2020 gas adsorption device. Before the measurement, the sample was degassed at 250 °C for 2 h. The morphology and the chemical composition of the fresh catalyst were analyzed by Scanning Electron Microscope (SEM) and Energy Dispersive X-Ray (EDX) analysis, using a FEI Quanta 250 FEG equipment. The catalyst reducibility was studied via temperature programmed reduction (TPR) analysis performed using a Micromeritics AutoChem 2920 equipment with a TCD detector. The analysis was carried out in the range of 100–700 °C with a heating rate of 10 °C·min−1, while feeding 50 mL·min−1 of a 10% H2/Ar mixture. Prior to the TPR analysis, the sample was outgassed under inert conditions for the N2 physisorption. X-ray diffraction (XRD) analysis in the 2θ range of 10–120° was performed on the reduced catalyst with a MiniFlex600 machine (Rigaku) operating with a Ni β-filtered Cu-Kα radiant at 40 kV and 30 mA and a scan step of 0.05°/min. The results of these characterization techniques are reported in Appendix A.2.
+Table 2. Catalyst and filler particles physical properties.
+To cover the full active membrane surface under gas–solid suspension at minimum fluidization velocity, the catalyst was diluted with inter alumina in a mixture of 195 g of particles (10wt%/90wt%). Blank tests were conducted on both the empty stainless steel reactor and on the reactor filled solely with γ-Al2O3 particles to confirm the absence of any activity towards the dehydrogenation of propane of both the reactor walls and the filler particles, as reported in Appendix A.3.
+Prior to the catalytic fluidization tests, the catalyst was exposed to 5 consecutive cycles of reduction-reaction-oxidation to make the catalyst stable and aged [7]. The catalyst pre-treatment was repeated after each reactive test as a reference to assess the stability and the reusability of the catalyst. The experimental conditions and results of those tests are reported in Appendix A.3. The minimum fluidization velocity was determined experimentally for the filler particles at different temperatures and atmospheric pressures using the standard pressure drop method [28]. According to this method, the volumetric flow rate at the inlet of the reactor is varied in a range of 0–100 mL/min and the pressure difference along the reactor bed is measured by a pressure drop transducer that reaches up to 50 mbar. The minimum fluidization velocity is found when the pressure difference in the reactor is constant. The results reported in Table 3 were used to select the feed flow rate for the reactive experiments necessary to keep the catalyst bed in the bubbling fluidization regime.
+Table 3. Experimental values of minimum fluidization velocity as function of temperature.
+4. Results and Discussion
+4.1. H2-Selective Membrane Characterization
+The different layers of the double-skinned Pd–Ag membrane and their chemical compositions were determined by Scanning Electron Microscope (SEM) and Energy Dispersive X-Ray (EDX) analysis. Figure 3 shows the cross-section image of the membrane. Looking at Figure 3a from the left to the right, it is possible to distinguish the ceramic support (left), the dense selective layer (middle) and the thin protective ceramic layer (right).
+Figure 3. SEM (a) and EDX (b) image of the cross-section of the double-skinned Pd–Ag membrane used in this work.
+The darker areas in Figure 3a mainly consist of oxygen and aluminum (Figure 3b), which represent the protective ceramic layer. The lighter areas show the presence of palladium and silver (Figure 3b), which was detected with a high atomic ratio of 24:1. This is an indication of the hydrogen selective Pd–Ag layer. The SEM-EDX of the top protective layer is reported in Figure 4. In this case, oxygen and aluminum were retrieved over the whole surface with high atomic concentrations of 65.6% and 25.6%, respectively, which indicated the presence of γ-Al2O3 in the top ceramic protective layer, while palladium and silver of the underlying selective layer were detected in lower amounts (7.6% and 1.2%, respectively).
+Figure 4. SEM (a) and EDX (b) image of the top layer of the double-skinned Pd–Ag membrane used in this work.
+4.2. Preliminary Simulation Study to Identify Optimum Operative Conditions
+Prior to the experimental activities, a simulation study was carried out using the phenomenological reactor model described in Section 2. The aim of this study was to identify the optimum operating conditions to be used at a laboratory scale for propane dehydrogenation reaction tests. The criteria were calculated to maximize propane conversion and thus to be able to appreciate any difference between the FBR and the FBMR configurations under this regime. The simulations were performed by modeling the reaction unit with same geometry and catalyst bed composition used for the experimental activities, as described in Section 3. The effects of temperature, feed composition, and pressure on both propane conversion and carbon concentration, expressed in kgcoke/kgcat, were investigated, and the total feed flow rate was set to have a superficial gas velocity over minimum fluidization velocity ratio equal to 3.75. It is worth mentioning that the simulations were performed for the conventional fluidized bed reactor configuration, while the comparison between the FBR and the FBMR were investigated experimentally with the chosen operating conditions.
+Figure 5a,b shows the effects of temperature on propane conversion and carbon concentration, respectively, at 2 bar and using a feed composition of 30vol% C3H8 and 70vol% N2.
+Figure 5. Effect of reaction temperature on (a) propane conversion and (b) carbon concentration, at 2 bar, u/umf = 3.75 and feed composition of 80vol%C3H8 and 20vol%N2. Effect of feed composition on (c) propane conversion and (d) carbon concentration, at 500 °C, 2 bar, u/umf = 3.75. Effect of operating pressure (e) on propane conversion, at 500 °C, u/umf = 3.75 and feed composition of 30vol%C3H8 and 70vol%N2.
+These preliminary results show that the higher the operating temperature, the higher the initial propane conversion, due to the endothermic nature of the system. However, the evolution of the conversion with time displays a faster decrease at higher temperature. Propane conversion drops of c.a. 40% occurred at 475 °C, while it experienced a reduction up to 86.2% at 550 °C after 30 min. This can be explained by the more severe catalyst deactivation, since the higher the temperature increased, the higher the carbon concentration was (Figure 5b).
+The effects of the feed composition were investigated at 500 °C and 2 bar, and the results in terms of propane conversion and coke deposition are reported in Figure 5c,d, respectively.
+These results show that, with only 30vol% of propane in the feed, it was possible to increase the initial propane conversion by almost 10% when compared to the case in which the feed contained 80 vol% of reagent. This would not affect the catalyst deactivation much, as shown by the similar carbon concentration formed as a function of the vol% of propane in the feed. On the other hand, when hydrogen is also present in the feed composition (i.e., blue lines), it acted as a diluent that lowered the final coke concentration by 2.28% when compared to the case of 30vol% of propane in the feed. At the same time, the presence of hydrogen in the feeding mixture reduced the overall propane conversion due to the nature of the main dehydrogenation reaction (R1) being limited by the thermodynamic equilibrium. Finally, the effects of the operating pressure were investigated at 500 °C under a feed composition of 30vol% C3H8 and 70vol% N2. As shown in Figure 5e, the higher the operating pressure, the lower the propane conversion was, due to the thermodynamic nature of the main dehydrogenation reaction. Based on the above reported considerations, a temperature of 500 °C, a pressure of 2 bar, and a feed composition of 30vol% C3H8 and 70vol% N2 were identified as the optimum operating conditions to perform propane dehydrogenation reaction tests under fluidization at a laboratory scale.
+4.3. Conventional Fluidized Bed Reactor
+Figure 6a shows the experimental results in terms of propane conversion and propylene selectivity as a function of time obtained for the catalytic fluidized bed reactor (without membrane) for the direct dehydrogenation of propane at two different superficial gas velocities over minimum fluidization velocity ratios (u0/umf), at 500 °C and 2 bar.
+Figure 6. Fluidized bed reactor (a) performance and (b) carbon balance for different u0/umf ratios, at 500 °C, 1 bar and with a feed composition of 30vol% C3H8-70vol% N2.
+The higher is the ratio of u0/umf, the faster the inlet gas was and the lower the total residence time in the reactor was. As expected, propane conversion increased for lower u0/umf, since the gas had longer time to be in contact with catalyst particles and, as a consequence, to be converted. However, this led to higher carbon formation due to the faster catalyst deactivation. This can be observed in Figure 6b, which reports the carbon balance over time, expressed according to the following equation (Equation (12)):
+C
+  balance
+=
+C
+out
+C
+in
+=
+∑
+i
+n
+i
+F
+i
+,
+out
+∑
+i
+n
+i
+F
+i
+,
+in
+(12)
+where i indicates all the components with carbon atoms, ni is the number of carbon atoms, and Fi is the molar flow rate.
+Moreover, a lower selectivity towards propylene (Figure 6a) was obtained for the lower u0/umf ratio, since the cracking reactions prevailed over the main dehydrogenation reaction for longer residence times. Therefore, for a fixed reaction temperature, an increase in the inlet flow rate will result in a reduced C3H8 conversion rate but at the same time will allow to reach higher propylene selectivity by reducing the total amount of carbon formed during the dehydrogenation process.
+4.4. Fluidized Bed Membrane Reactor
+4.4.1. Membrane Stability Tests
+The presence of the protective layer on top of the selective Pd-based layer of the double-skinned membrane used in this work has already been demonstrated to improve the mechanical stability under long-term (~600 h) fluidization conditions [26]. With this test, we aimed at verifying the absence of any chemical interaction between the selective Pd-based layer of the membrane and the Pt-based catalyst particles. For this purpose, a short term permeation test of hydrogen was sufficient, since a chemical interaction between the palladium and the catalyst used in the test would lead to a sharp drop in the performance of the membrane after several minutes, as already observed by Fernandez et al. [29] and Okazaki et al. [30]. Figure 7 shows the stability performance of the double-skinned membrane, in terms of hydrogen permeance, under fluidization conditions for almost 6 h.
+Figure 7. Membrane performance over time under fluidization conditions at 500 °C, ΔP = 2 bar, u0/umf = 5 and feeding a mixture of 60 vol% H2 and 40 vol% N2.
+The H2 permeance of the membrane showed an initial increasing trend (first hour of test), due to the activation of the Pd-selective layer under exposure to hydrogen. Afterward, the membrane reached a plateau with a value of hydrogen permeance of 2.1 mol m−2 Pa−1 s−1. The membrane did not suffer from any decay in the hydrogen permeance with time. This confirmed the absence of any chemical interaction between the Pt-based catalyst and the membrane surface.
+4.4.2. Reaction Tests
+Once the membrane stability under fluidization conditions was verified, the fluidized bed membrane reactor concept for the PDH was experimentally proven. The reaction tests were conducted under similar operating conditions as those used for the conventional fluidized bed PDH reactions to maintain consistency and comparability between the results. The effects of the superficial gas velocity over minimum fluidization velocity ratios (u0/umf) on the FBMR performance were investigated at 500 °C, with an inlet feed composition of 30vol% C3H8 and 70vol% N2, working at 2 bar in the retentate side and using a vacuum in the permeate side. The reactor performance in terms of propane conversion, propylene selectivity, and carbon balance are reported in Figure 8a,b, respectively.
+Figure 8. Fluidized bed membrane reactor (a) performance and (b) carbon balance for different u0/umf ratios, at 500 °C, 2 bar and with a feed composition of 30vol% C3H8-70vol% N2.
+As already observed in the conventional FBR (see Section 4.2), propane conversion increased with the lower u0/umf ratio, since the reactive mixture had longer contact time to convert with catalyst particles. At the same time, the activity initially decreased faster at lower u0/umf ratios, again due to a faster coke formation, as shown in Figure 8b. The main advantage of using the FBMR configuration is represented by the different trend obtained for the propylene selectivity, compared to the one shown in Figure 8a for the FBR. When hydrogen was extracted from the catalytic bed, the equilibrium was shifted to the product side, and thus the propylene selectivity increased at the beginning and then stabilized to constant values of c.a. 78% over time. Even though initially the propylene selectivity was lower at the lower u0/umf ratio, it increased faster with respect to the case of the higher u0/umf ratio. This is because hydrogen extraction makes the dehydrogenation reaction predominant over cracking side reactions. Thus, the use of a FBMR configuration for PDH allowed for work at a lower inlet gas flow rate, which reached a higher C3H8 conversion rate and higher propylene selectivity, and overcame the trade-off between conversion and selectivity that is typical of the FBR configuration (see Figure 6a).
+4.5. FBR vs. FBMR and Model Validation
+In this section, the performance of the conventional fluidized bed reactor is compared with the ones of the fluidized bed membrane reactor obtained under the same operating conditions. In particular, the conversion of propane (expressed in mol%) obtained at 500 °C and 2 bar, with a feed composition of 30vol% C3H8 and 70vol% N2 for two different u0/umf ratios, is compared for the FBR and the FBMR configurations. The experimental results were compared with modeling results to validate the 1D phenomenological model at different operating conditions. Figure 9a,b shows the results obtained from both experiments and model simulations with u0/umf =3 and u0/umf =1.5, respectively.
+Figure 9. Propane conversion versus time obtained experimentally (dots) and with model simulation (dashed lines) for the FBR and the FBMR, working at 500 °C, 2 bar, with a feed composition of 30vol% C3H8-70vol% N2, with (a) u0/umf = 3 and (b) u0/umf = 1.5.
+In general, the model described the experimental results quite well for the two different u0/umf considered, and for both the FBR and the FBMR configurations. Deviations between ±10–20% were observed for the first experimental points within the first 5 min of the test. This could be related to the fact that the catalyst particles at the beginning showed a higher reactivity under the experimental conditions used in this test compared to the one predicted by the model. The average deviations in the model predictions compared with the experimental data were below 10%. Therefore, it can be concluded that the phenomenological model has been validated and that it can adequately predict the performance of the PDH system in a fluidized bed membrane reactor. However, this model was developed under the assumption of neglecting radial dispersions. Since lateral concentration profiles can affect the overall reactor performance, additional work is needed to account for those additional phenomena and make the model more robust. This will allow it to be used for the design and scale-up of the fluidized bed membrane reactor for PDH, as well as for the fundamental understanding of all the phenomena that are involved. This will help to identify the main limitations of the system and to consequently investigate the DCFBMR configuration as a reaction intensification strategy.
+As already observed in the previous section, the higher C3H8 conversion was obtained when working at the lower u0/umf for both the FBR and the FBMR. For this reason, the main advantage of utilizing hydrogen selective membrane (FBMR) to circumvent the thermodynamic equilibrium limitation was obtained at the lower u0/umf ratio, as is clearly shown in Figure 9b. This would result, at the same time, in a higher total flow rate of hydrogen produced during the dehydrogenation reaction, and therefore it would have a bigger impact on the shift in the thermodynamic equilibrium when extracted through the H2 selective membrane. The initial propane conversion could be increased by almost 21%, going from 19.5% in the FBM to 24.5% in the FBMR, when working with a u0/umf ratio of 1.5, resulting in an average increase of almost 32% for the entire reaction time compared to the average increment of 19% that was obtained working with a u0/umf ratio equal to 3. The positive effect of removing hydrogen to shift the equilibrium toward propylene was confirmed by the trends of the propylene yield over time, which are reported in Figure 10 for both the FBR and the FBMR at the two different u0/umf ratios tested in this work. The propylene yield was always higher in the FBMR than in the FBR configuration, and this was even more evident for a lower u0/umf ratio, which reached an average increase of 43% at a ratio of 1.5 u0/umf compared to the one obtained at a ratio of 3 u0/umf, which was equal to 24%.
+Figure 10. Propylene yield in the FBR (blue symbols) and FBMR (green symbols) working at 500 °C, 2 bar, with a feed composition of 30vol% C3H8-70vol% N2, for u0/umf = 1.5 (■) and u0/umf = 3 (▲).
+The performance of PDH under fluidization obtained in this work are compared with the ones reported in the literature. Most of the scientific works have been conducted in packed-bed reactor (PBR) configurations with the integration of membranes, but in only a few of them was the fluidized bed membrane reactor technology investigated. The propane conversion, operating conditions, catalyst, and reactor configuration used are summarized in Table 4.
+Table 4. Experimental values of minimum fluidization velocity as function of temperature.
+During the test performed with u0/umf equal to 1.5, the performance of the membrane was monitored by measuring the total flow rate permeated and by analyzing its composition. The total flow rate of hydrogen in the permeate side was compared with the total flow rate of hydrogen produced in the retentate side during the dehydrogenation reaction, as shown in Figure 11a. The corresponding hydrogen recovery factor is reported in Figure 11b.
+Figure 11. (a) Hydrogen flow rates measured in the retentate and permeate side of the FBMR and (b) the corresponding hydrogen recovery factor, measured at 500 °C, 2 bar, u0/umf of 1.5, and with a feed composition of 30vol% C3H8-70vol% N2.
+The total amount of hydrogen produced during the dehydrogenation reaction (red line in Figure 11a) had a decreasing trend over time, which could be attributed to the continuous extraction of hydrogen through the membrane, but also to the reduced activity of the catalyst. On the other hand, a typical transient deactivation trend of the hydrogen permeated through the membrane, due to the deactivation of the Pd-based membrane when exposed to alkenes, as already reported by other authors. This made the hydrogen recovery factor go from an initial value of 70.2% to a value of 40.1% in the first 5 min of the test, with a resulting average H2 recovery factor of 40%. Even though the hydrogen recovery factor followed a decreasing trend and stabilized at values around 40%, the main advantage of using the FBMR technology can still be attributed to the positive effect of hydrogen removal from the reaction ambient. This led to a higher conversion of propane towards propylene (see Figure 10), which reduced the extent of side cracking products formation, such as ethane, ethylene, and methane, for which the selectivity in the FBMR is reduced. These observations were also confirmed by the analysis of the permeated outlet stream compositions, which reported in Figure 12.
+Figure 12. Permeate composition measured at 500 °C, 2 bar, u0/umf of 1.5, and with a feed composition of 30vol% C3H8-70vol% N2.
+The GC did not detect any C3H8 in the permeate side of the system, which was attributed to the shift in the thermodynamic equilibrium of the main dehydrogenation reaction to the extraction of hydrogen. For this component, the vol% detected in the permeate side was almost constant in the first 15 min of test, while it started to decrease in the remaining part of the test. This can be attributed to the membrane coking, as confirmed by the continuous growing vol% of methane in the permeate side. The presence of small traces of other components, i.e., N2 and CH4, in the permeate site could be attributed to defects on the membrane sealing, which increased under operation.
+5. Conclusions
+In this work, we demonstrated at a laboratory scale the fluidized bed membrane reactor technology for the direct dehydrogenation of propane. We analyzed the performance of the FBMR configuration, and we compared it with the conventional FBR for different u0/umf ratios. According to the results obtained, propane conversion was increased when working at lower u0/umf ratios in both the FBR and FBMR, which gave higher contact time to the catalyst particles to interact with the reactive mixture. This resulted in a reduced propylene selectivity in the FBR, since the cracking reactions became predominant over the main dehydrogenation reaction for longer residence times. On the contrary, the hydrogen extraction in the FBMR made the dehydrogenation reaction predominant over cracking side reactions for longer residence times. This led to an increase of almost 21% in propane conversion when working at the lower u0/umf ratio, which went from 19.5% in the FBM to 24.5% in the FBMR. These experimental results confirmed the main advantage of utilizing the hydrogen selective membrane (FBMR) to circumvent the thermodynamic equilibrium limitation, despite the limited performance of the Pd-based membrane used. The FBMR system for PDH can be further improved by mitigating the coking behavior of Pd-based membranes, for which an average hydrogen recovery factor below 50% was experimentally measured during the tests. This would require the development of improved Pd-based membrane configurations. Finally, the experimental results validated the 1D phenomenological model developed in this work, which observed an overall discrepancy lower than 10% for the propane conversion. From here, we can conclude that the model can be used to predict the behavior of the FBMR at different operating conditions and scales, and most importantly it can be used to further investigate the Dual Circulating Fluidized Bed Reactor configuration. This in its turn can help in optimizing and designing scaled-up experimental versions of this reactor concept.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

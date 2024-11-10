@@ -1,0 +1,255 @@
+<DOCUMENT>
+Development of a control concept for catalyst regeneration by coke combustion
+Abstract
+Hydrocarbon processes are frequently accompanied by catalyst deactivation through coke deposition on the catalyst surface. A control strategy is proposed for catalyst regeneration in a novel dehydrogenation process designed to be operated in a cyclic production—regeneration mode. The task of the controller is to ensure complete regeneration while maintaining strict limits regarding regeneration time and maximum temperature. The major challenge arises from the uncertainty in the total amount and the spatial distribution of coke loading. The problem is tackled by a model-based approach. This includes a modular analysis of the open-loop behavior and a consistent controller configuration.
+Highlights
+► Regeneration of deactivated hydrocarbon processing catalyst by coke deposition. ► Control concept for complete regeneration below temperatures causing catalyst damage. ► Model-based approach based on dynamic simulations. ► Novel dehydrogenation process as model system.
+1. Introduction
+Industrial chemical production requires increasing amounts of propylene and butene isomers (Arndt et al., 2007). The demanded fraction of lower olefins can be hardly achieved by steam cracking, the established bulk technology for olefin production. Therefore, dedicated dehydrogenation processes for producing propylene and butenes are gaining increasing interest. Mainly four processes for olefin production are available in industrial scale: the UOP Oleflex process, the Phillips STAR process, the Houdry Catofin process and the Snamprogetti FBD-4 process (Arpe, 2007). Besides them LINDE and BASF developed a process up to the stage of a demonstration unit. A comprehensive review on technology and commercial relevance of these processes is given in Bhasin et al. (2001). Interestingly, the above processes differ significantly from each other in reactor design and mode of operation. Nevertheless, a common feature of all processes is the need for periodic catalyst regeneration. Catalyst regeneration comprises mainly oxidative removal of carbonaceous deposits. Optionally, chemical treatment is applied, e.g. exposing the catalyst to a hydrogen atmosphere (McKay and Olbrich, 1990) or to halogenes (Imai and Hung, 1984), in order to retard irreversible deactivation. The state of the art in dehydrogenation technology yields 40% conversion and 90% olefin selectivity per pass.
+Technological improvement in this field strongly depends on catalyst development. As a general trend, the traditional chromia–alumina catalyst is replaced by supported Pt-catalysts. Recently BASF has introduced a novel dehydrogenation process for light olefins (Hechler et al., 2008). The process employs the principle of simultaneous coupling of the endothermic main reaction with an auxiliary exothermic reaction for in situ generation of the required reaction enthalpy, in the particular case by partial combustion of the generated hydrogen. The key to successful implementation of the process is the availability of a Pt-Sn/ZrO2 catalyst capable of selectively oxidizing hydrogen in the presence of hydrocarbons (Hofstadt et al., 2010). Preliminary data clearly indicate the potential of the process to achieve 40% conversion and 95% olefin selectivity per pass. An evolutionary step of the above concept utilizes honeycomb catalysts, thus simplifying the reactor design (Kolios et al., 2011). Major advantages of this reactor concept are high selectivity, simple, scalable, compact reactor design and optimal thermal integration. The new reactor concept is operated in a cyclic mode as well. During the production step carbonaceous deposits accumulate at the catalyst surface. Their composition has been studied in detail in Iglesias-Juez et al. (2010) using a model catalyst. Cyclic loading/regeneration experiments indicate that around 600 °C are necessary for complete burn-off of the coke. An appropriate regeneration procedure is described in Schindler et al. (2005). The aim of the present work is to concretize the regeneration concept toward its implementation in a pilot plant.
+1.1. Dehydrogenation reactor concept
+Fig. 1 shows a schematic picture of the BASF dehydrogenation process. The reactor unit includes the reaction section, a heat exchange section and a gas recirculation loop. The reaction section is divided in three catalytic stages equipped with honeycomb catalysts. A mixing zone is located in front of each catalytic stage, where oxygen is added to the main stream. The heat exchanger attached to the reaction stage enables heat transfer from the hot product stream to the cold feed stream. The gas recirculation loop is activated during the regeneration cycle and allows partial recirculation of auxiliary process streams. During dehydrogenation, mainly two reactions take place in the catalytic section:
+Download : Download high-res image (285KB)
+Download : Download full-size image
+Fig. 1. Heat integrated dehydrogenation reactor concept. (a) Schematic picture of the reactor (a - heat exchanger inlet, b - reaction section inlet, c - reaction section outlet, d - heat exchanger outlet). (b) Evolution of the temperature profiles over the production cycle. (c) Build-up of coke loading in the reaction section.
+Dehydrogenation, e.g. of propane:
+(1)
+and catalytic hydrogen combustion:
+(2)
+This leads to the characteristic saw-tooth-like profile along the reaction section (Fig. 1(b)). Both, selective hydrogen combustion and dehydrogenation occur simultaneously in the catalytic section following the mixing zones. However, combustion is considerably faster than dehydrogenation. Thus, temperature increases rapidly at the entrance of each catalytic section whereas heat consumption of the dehydrogenation reaction leads to a gradual temperature drop further downstream. The dashed line represents the temperature profile established over a fresh catalyst at the beginning of production. In fact, the process never reaches a steady-state, but the profile drifts gradually toward higher temperatures (solid line) since the process is accompanied by catalyst deactivation via coking, formally expressed by the following equation:
+(3)
+Catalyst deactivation primarily causes a decrease in the dehydrogenation reaction rate and accordingly in the heat consumption. However, the combustion reaction and the respective amount of heat release remains unaffected. So, temperature slightly increases at the reactor outlet. Due to the thermal coupling between the reactor outlet and the reactor inlet via the heat exchanger, the effect amplifies and translates in a higher temperature level along the reactor. Coke loading is not measurable under technical conditions. The coke loading profile is estimated based on the evolution of the temperature profile over the production cycle. We assume that coke formation is favored by high temperatures at the entrance of each reactive zone. Furthermore, coke loading increases over the length of the reactor since coke is primarily formed from propylene. Fig. 1(c) shows the estimated coke loading profile at the end of the production cycle. The uncertainty about the nature of the coke, its total amount and its axial distribution is a crucial constraint toward developing a safe and reliable regeneration procedure.
+The regeneration cycle includes the burn-off of the accumulated coke, formally expressed by the following equation:
+(4)
+Coke combustion is widely applied in practice for catalyst regeneration (Moulijn et al., 2001) and thoroughly analyzed in scientific literature (Westerterp et al., 1988, Wahle et al., 2003). Nevertheless, this operation is critical regarding several aspects: the interaction between one immobilized reactant (coke) and a fluid reactant (oxygen) gives rise to an excitable behavior accompanied by complex dynamic phenomena (Salden and Eigenberger, 2001). Once combustion ignites, a combustion front and a thermal front are formed and travel independently along the coked fixed bed. At a certain ratio of oxygen-inlet concentration to initial coke loading the two fronts propagate synchronously leading to an undamped temperature rise, which may cause complete damage of the reactor. A simplified theoretical explanation of the phenomenon is given in Eigenberger et al. (2007). Avoiding this regime is the crucial task from the safety point of view. Therefore, in practice it is indicated to burn-off coke in the oxygen limited regime. This is the case if the oxygen feed concentration
+is chosen to fulfill the following condition (Kolios et al., 2005):
+(5)
+⪡
+This implies a slow and potentially incomplete regeneration of the catalyst. Hence, the aim of the control strategy presented in this paper is to ensure complete regeneration within a reasonable period of time, while maintaining strict temperature limits.
+1.2. Model based controller development
+It is hardly possible to obtain reliable information on the expected behavior of a full-scale plant from laboratory experiments. Therefore we pursue a model-based approach for the controller design. A 1D two phase model with balance equations for material, heat and momentum is used. Negligible heat losses and lumped reaction kinetics are assumed. The mixing zones are modeled as spatially lumped domains where no reaction occurs. The energy balances describing the function of the countercurrent heat exchanger can be adopted from textbooks (Martin, 1992). The respective model equations are obviated here for the sake of simplicity. The mathematical model of the reactive section is described in the appendix.
+We apply a hierarchical procedure for process identification and controller design, imitating the sequence of experimental process development. Fig. 2 illustrates the chosen approach. First we analyze the dynamics of the burn-off process in a uniform catalytic stage to determine appropriate sets of control and manipulating variables as well as the reasonable range of the respective parameter settings (Fig. 2, top). Based thereon we conduct the process identification and controller design for a reaction section consisting of three catalytic stages interconnected by inert mixing zones (Fig. 2, middle). Finally, we adapt the controller to the integrated process including the reaction stage, the heat exchanger and the recirculation loop (Fig. 2, bottom). This approach is supported by the modeling tool ProMoT (Mirschel et al., 2009).
+Download : Download high-res image (250KB)
+Download : Download full-size image
+Fig. 2. Hierarchical model-based approach for structured system identification.
+The paper is organized as follows: We start with a single catalytic stage (Section 2) and identify its intrinsic behavior. In Section 3 we analyze the reaction section including catalytic and mixing zones and setup a controller. In Section 4 we develop and prove the control strategy for the complete system including reaction and heat-exchange section.
+2. Single catalytic stage
+Fig. 3 shows the characteristic regeneration behavior. The simulation starts with a fixed bed uniformly preheated and loaded with a typical amount of coke. To start coke combustion, the catalyst bed has to be preheated above the ignition temperature of combustion
+. The initial and feed temperatures are chosen to be equal. The highest allowed temperature has been limited to
+and the regeneration time to 60 min. After starting the addition of a relatively small amount of oxygen to the inert gas feed, temperature rises immediately. Two propagating fronts develop. Under the considered oxygen-limited conditions the thermal front is much faster than the reaction front (Fig. 3(a)). After breakthrough of the reaction front the monolith cools down to the inlet temperature. As regeneration proceeds the coke loading decreases gradually from the inlet to the outlet (Fig. 3(b)). After 60 min the combustion is very slow and inefficient, which results in a residual coke loading. Oxygen is initially completely consumed (Fig. 3(c)). The oxygen concentration front moves downstream synchronously to the reaction front. If the combustion front approaches the rear end of the catalyst bed, the outlet oxygen concentration increases gradually up to the level of the inlet concentration. Therefore, the outlet concentrations of oxygen and carbon dioxide over time are reliable indicators of the completion of coke combustion. These signals are shown in Fig. 3(d). Parameter studies have been conducted to find applicable operating conditions for the regeneration. Fig. 4 shows the effect of varying the four major process parameters: oxygen mass fraction in the feed, initial coke loading, feed and initial temperature as well as the feed flowrate. The response of the system is evaluated taking the maximal temperature (Tmax) reached along the reactor bed and the residual coke loading after 60 min (Xmax) as representative variables. Each parameter is varied successively starting from the default state represented in Fig. 3. Increasing oxygen feed concentration accelerates the depletion of coke. On the other hand it causes a progressive maximum temperature rise (Fig. 4(a)). The default value is chosen as an applicable oxygen inlet mass fraction to prevent overheating of the catalyst. Initial coke loading has a considerable impact on the temperature level as long as burn-off takes place in the coke limited regime, i.e. at low initial loadings, so that the condition given by Eq. (5) is not fulfilled. This sensitivity diminishes in the oxygen limited regime, i.e. at high initial loadings (Fig. 4(b)). Thus, the maximum temperature is bounded for arbitrary values of the initial loading. This system property is decisive for the applicability of a regeneration strategy given the uncertainty about the coke loading.
+Download : Download high-res image (502KB)
+Download : Download full-size image
+Fig. 3. Regeneration of a uniformly preheated and coked stage at default operating conditions. (a) Evolution of the temperature profile over regeneration time, (b) evolution of the coke loading profile over regeneration time, (c) evolution of oxygen concentration profile over regeneration time, (d) O2 and CO2 outlet concentration signals over regeneration time.
+Download : Download high-res image (485KB)
+Download : Download full-size image
+Fig. 4. Effect of the major regeneration parameters on the maximum temperature (left axis) and residual coke loading (right axis) after 1 h of regeneration. (a) Effect of oxygen molar fraction in the feed, (b) effect of initial coke loading, (c) effect of initial temperature (diagonal indicating the parity line: Tin=T0), (d) effect of the feed flowrate. (The maximum temperature limit is marked with a dashed line.)
+The initial and inlet temperatures are varied simultaneously. It can be generally stated that sufficiently high inlet temperatures should be used in order to ensure the ignition of coke combustion and thus decrease the residual coke loading. However, the temperature should only be slightly higher than the ignition temperature of the combustion in order to avoid excess temperatures (Fig. 4(c)). The effect of a flow rate variation is presented in Fig. 4(d). For low flow rates the total amount of oxygen fed over the duration of the regeneration period is not sufficient to fully oxidize the coke deposits. Thus, increasing the flow rate is particularly effective for minimizing the residual coke loading while the maximum temperature rise is hardly affected.
+3. The reaction section
+3.1. Open loop behavior
+In this section we analyze the interaction of multiple catalytic stages, interconnected by inert mixing zones in the reaction section. We also examine the effect of the initial temperature and coke loading profiles on the regeneration conditions. Since coke burn-off is ignited at the left end and the reaction section is regenerated from the front to the rear part, the procedure will be named “front regeneration mode”. Simulation results suggest the need to start the regeneration cycle with a uniform temperature along the reaction section. Therefore, a purge step with inert gas is switched between the dehydrogenation and regeneration steps.
+Although the operating conditions are based on the most favorable values derived from the analysis of the single stage behavior, the temperature limit cannot be maintained as shown in Fig. 5(a). This can be explained by the aforementioned theory of travelling gas–solid reaction fronts. The mixing zones contain static mixers with a high heat capacity and a low external surface, i.e. negligible coke loading. Thus, they slow down the propagation velocity of the thermal front without affecting that of the reaction front. This causes a retarded temperature increase and decrease as compared with a uniform reactor system (cf. Fig. 3, Fig. 5). As a result, the inlet temperature of the second catalytic section is still high when reached by the reaction front. Since the temperature rise due to coke combustion remains unchanged, the maximum temperature is accordingly higher and may exceed the allowed temperature limit. One way to overcome this problem is a controller concept that eliminates the retarding effect of the mixing zones. This will be discussed in Section 3.3. An alternative is to modify the design of the mixing zones to minimize their heat capacity.
+Download : Download high-res image (280KB)
+Download : Download full-size image
+Fig. 5. Regeneration behavior of the reaction section. (a) Regeneration of a uniformly preheated and coked reaction section with mixing chambers. (b) Progress of coke combustion of a uniformly preheated but non-uniformly coked reaction section. (Note: the mixing zones are considered as concentrated systems and represented by a punctual discontinuity at the position of the vertical dotted lines.)
+The initial coke loading profile does not influence the temperature profile significantly as expected from the preliminary analysis in Section 2. After 1 h of regeneration there is still a remaining low coke loading in the last monolith section (Fig. 5(b)). In order to achieve full coke removal a final polishing step is introduced toward the end of the regeneration, in which the oxygen feed concentration is increased. High temperatures are not to be expected at this stage because of the low amount of coke being reacted.
+3.2. Controller implementation
+A discrete process controller is set-up based on the results of Section 3.1. Fig. 7(a) shows the flow sheet of the controlled reaction section. The controller XC acts on the oxygen inlet concentration depending on the oxygen outlet concentration (Fig. 6(b)). The acting points of the controller are represented by means of a Petri net (Fig. 6(a)). ProMoT/DIANA provides appropriate numerical algorithms for treating Petri nets. The latter consist of places which define, in this case, a system state and transitions specifying the conditions for switching to another state (Lunze and Lamnabhi-Lagarrigue, 2009). They are interconnected by directed arcs. The Petri net representing the front ignition mode consists of four places and three transitions which enable state-controlled switching, triggered by the oxygen outlet concentration. Alternatively, a time controlled switching sequence is implemented (dashed arcs). Additionally, the inlet temperature is controlled by a continuous PI controller. During the purge stage between dehydrogenation and regeneration, the inlet temperature is raised toward the set point for regeneration. The initial temperature profile levels out within the first minutes. Fig. 6(b) shows the different operation points in terms of the inlet and outlet oxygen concentrations. After the purge time (point A) the valve is opened and the main regeneration stage starts. After oxygen breaks through, the outlet concentration exceeds the switching level for initiating the polishing step with high oxygen inlet concentration. In point C the outlet concentration reaches the inlet value indicating that regeneration is finished. The controlled system behavior is illustrated by the temperature and coke loading profiles in Fig. 7(b) and (c). During the main regeneration stage the catalytic packing is heated up and a pronounced combustion front is formed. Temperature amplification due to the previously described retardation of the combustion front in the mixing sections finally causes excess temperatures in the third segment. At the end of the main regeneration stage, some coke remains left in the third segment. The latter is fully removed during the final oxygen rich stage. Finally, complete coke removal is obtained.
+Download : Download high-res image (188KB)
+Download : Download full-size image
+Fig. 6. Control concept of the reaction section in the front regeneration mode. (a) Petri net of the discrete controller XC. (b) Measured and manipulated variable of the process controller.
+Download : Download high-res image (514KB)
+Download : Download full-size image
+Fig. 7. Controlled behavior of the reaction section in the front regeneration mode. (a) Flow sheet of the controlled system. (b)/(c) State of operation during regeneration (solid lines represent the main regeneration stage and dash-dot lines the high oxygen stage). The points in time in the legend of figure (b) correspond to the states represented in Fig. 6(a).
+3.3. Upstream regeneration of the reaction section
+One criticism on the control strategy presented in Section 3.2 is the amplification of the temperature rise as the regeneration zone travels across the successive catalytic segments of the reaction section. It is known that upstream propagation of the regeneration front leads to a damped temperature rise (Salden and Eigenberger, 2001). This behavior can be approximated to some extent by reversing the direction of the regeneration sequence, i.e. starting the regeneration procedure from the rear segment and proceeding upstream with the middle and first sections subsequently. Fig. 9(a) shows the flow sheet of the modified configuration. This is supported by the reactor design since air can be injected independently to each of the three mixing zones. Fig. 8(a) shows the Petri net representation of the respective controller configuration. It consists of eight places and seven transitions. According to Fig. 8(b), air is fed to the rightmost mixing chamber (A). Once oxygen concentration at the reactor outlet exceeds the specified threshold level, it indicates that none or only a marginal amount of coke is left in the last reaction zone. Thus air is fed to the middle mixing zone (B) without the risk of excess temperature to occur in the last reaction zone. This procedure is repeated (C) to regenerate the first reaction zone. After breakthrough of oxygen (D), its inlet concentration to the first mixing zone is increased for finishing coke removal (E). The diagrams in Fig. 9(b)–(d) show the temperature and coke loading profiles during successive stages of the regeneration cycle. Comparing the latter with Fig. 7(b) can be seen that the temperature safety limit is not surpassed when applying the upstream regeneration mode. Nevertheless, complete regeneration is obtained only in slightly longer time as compared to the front regeneration mode (cf. Section 3.2). Evaluating the two regeneration modes can be stated that the front regeneration mode requires less instrumentation. On the other hand, the upstream regeneration mode leads to milder regeneration conditions. Independently of the regeneration mode, coke burn-off must be conducted in at least two periods: a first period under oxygen limited and a second period under oxygen rich conditions.
+Download : Download high-res image (250KB)
+Download : Download full-size image
+Fig. 8. Control concept of the reaction section in upstream regeneration mode (cf. Section 3.3). (a) Petri net of the discrete controller XC. (b) Measured and manipulated variable of the process controller.
+Download : Download high-res image (646KB)
+Download : Download full-size image
+Fig. 9. Controlled behavior of the reaction section in upstream regeneration mode (cf. Section 3.3). (a) Flow sheet with controller implementation, (b) purge stage and regeneration of the rightmost catalytic section, (c) regeneration of middle catalytic section and (d) regeneration of leftmost catalytic section and high oxygen stage.
+4. The heat integrated system
+4.1. Open-loop behavior of the heat integrated system
+The integrated system includes the heat exchanger and a recycle of the regeneration gas. The heat exchanger bridges the gap between the temperature in the reaction section and the periphery (feed and product lines). Recirculating the regeneration gas is intended to reduce the consumption of inert gas, which is required in a large excess to dilute the oxygen during the main regeneration stage. In addition, the design of the mixing zones has been modified in order to reduce their heat capacity as required by the analysis in Section 3.1. We start the analysis of the open-loop behavior with an isothermal and uniformly coked reaction section and a temperature profile in the heat exchanger adopted from the final state of the production period. Nitrogen is initially circulated. Then air is injected in the first mixing chamber. Fig. 10(b) shows the evolution of the temperature profile. One characteristic of the integrated system is the continuous increase of the inlet temperature. The exit temperature of the reaction section increases as soon as the thermal front reaches the reactor outlet. Thermal feedback caused by the heat exchanger leads to higher inlet temperatures into the first catalytic stage, what in turn, increases further the outlet temperature falling into an endless loop. Finally, as shown in Fig. 10(d), the temperature in the reaction section exceeds the permitted limit. Therefore, a dedicated control loop is required to ensure a constant inlet temperature to the reaction section. Another feature of the integrated system is concentration feedback due to gas recirculation. Fig. 10(c) shows the oxygen concentration at the inlet and the outlet of the reaction section over time. Toward the end of the regeneration stage, most of the coke has been burned-off and oxygen breaks through. Since the outlet stream is recirculated, residual oxygen is recycled to the reactor entrance. Hence, the oxygen concentration at the inlet of the first monolith increases steadily until it reaches the concentration of oxygen in air. Consequently, a high oxygen polishing stage as proposed in our control concept in Section 3.1 is automatically given.
+Download : Download high-res image (472KB)
+Download : Download full-size image
+Fig. 10. Open loop behavior of the heat integrated system for a uniformly coked and preheated reaction section. (a) Flow sheet (a - heat exchanger inlet, b - reaction section inlet, c - reaction section outlet, d - heat exchanger outlet). (b) Temperature profile evolution. (c) Reactor inlet and outlet oxygen fraction. (d) Reactor inlet and outlet temperature against regeneration time.
+4.2. Control of the heat integrated system
+Fig. 11(a) shows the controller implementation. Temperature control at the inlet of the reaction section is required to interrupt the thermal feedback described in Section 4.1. The temperature controller acts on the flow rate of a bypass stream to the heat exchanger shell side. For reactor inlet temperatures lower than the set point the complete gas stream passes through the heat exchanger and is heated up. Furthermore an additional fuel stream can be added to prevent extinction of the combustion reaction. For reactor inlet temperatures higher than the set point, a fraction of the cold feed gas bypasses the hot heat exchanger. A simple PI controller has been used to control the temperature. The front regeneration mode described in Section 3.2 is applied. The process controller XC controls the transition from purge stage to regeneration stage and terminates the regeneration period. Fig. 11(b) and (c) show the temperature and coke loading profiles during the controlled regeneration. The limit temperature is maintained (cf. Fig. 11(d)). Regeneration is completed in less than 60 min and complete coke combustion is achieved (cf. Fig. 11(c)).
+Download : Download high-res image (603KB)
+Download : Download full-size image
+Fig. 11. Controlled behavior of the heat integrated system. (a) Flow sheet with controller implementation (a - system inlet, b - inlet reaction section, c - outlet reaction section, d - outlet heat exchanger). (b) Evolution of temperature profile. (c) Progress of coke combustion. (d) Reactor inlet and outlet temperature against regeneration time.
+The controller performance is verified by varying the amount of initial coke loading. Fig. 12 shows the dependence of the maximum temperature and the required regeneration time against the average initial loading. The S-shaped maximum temperature profile clearly indicates the transition from the coke limited to the oxygen limited operation regime. In any case the maximum temperature stays below the specified limit. The regeneration time increases linearly with the amount of coke.
+Download : Download high-res image (137KB)
+Download : Download full-size image
+Fig. 12. Maximum temperature (bold line) and the regeneration time (thin line) in the controlled heat integrated system against initial coke loading.
+5. Conclusions
+Hydrocarbon processing under industrial conditions is accompanied by coke formation at the catalyst surfaces leading to catalyst deactivation. Catalyst activity is restored by burning-off the coke. The aim of the present work is the optimal implementation of the production/regeneration cycle in a novel dehydrogenation process. The major challenge in developing a control strategy arises from the uncertainty about the initial coke loading and its axial distribution. A hierarchical model-based approach is pursued for process identification and for the controller design. Analysis of a homogenous catalytic fixed-bed yields information on the feasible region of parameter settings to obtain an efficient regeneration. It turns out that a sufficiently high inlet temperature to form a pronounced combustion wave clearly improves controllability of the regeneration process. The regeneration procedure includes a purge step, the main regeneration stage under oxygen limited conditions and the finishing oxygen rich conditions. The process can be effectively controlled with a discrete controller, triggered by the oxygen concentration at the outlet of the reaction section. Efficient temperature control and complete regeneration in reasonable time is ensured over a wide range of initial coke amounts.
+Nomenclature
+av specific interface surface area
+c specific heat capacity
+oxygen molar concentration
+dispersion coefficient
+pressure drop correlation (Pa/m)
+F feed flow rate
+molar reaction enthalpy (kJ/mol)
+mass flow density
+MW molar weight (kmol/kg)
+p pressure (Pa)
+r reaction rate of coke burn-off (kmol/(kg s))
+t time (min, h)
+regeneration time (min, h)
+S state or place within a Petri net (–)
+⁎
+time-triggered transition (–)
+event-triggered transition (–)
+T temperature (°C)
+maximum permitted temperature (°C)
+oxygen mass fraction in gas phase (%)
+XC coke loading (%)
+y mole fraction (%)
+z axial coordinate
+
+Greek symbols
+
+heat transfer coefficient
+volumetric phase ratio (–)
+thermal conductivity (W/(m K))
+density
+
+Subscripts
+
+0 initial value
+C carbon
+g gas phase
+in inlet value
+j components index C, O2, CO2
+max maximum value over reactor length
+out outlet value
+pb packed bed
+s solid phase
+Appendix
+The core model consists of the material, energy and momentum balances in a single catalytic stage considering variation in time t and in the axial coordinate z. The model can be derived from a general formulation for a two-phase, 1D fixed-bed reactor model (Dieterich et al., 1997) with the following assumptions:
+•
+Only burn-off of accumulated coke according to Eq. (4) is considered.
+•
+Quasi-stationary mass and energy balances in the gas phase.
+•
+Oxygen is considered as the key component in the gas phase.
+•
+Net mass flux from the surface of the solid phase is identical to the amount of coke burned-off per volume and time unit.
+•
+Heat of reaction is accommodated in the solid phase.
+The set of state variables includes the following elements:
+The defining set of equations reads as follows:
+(6)
+(7)
+(8)
+(9)
+(10)
+(11)
+Initial and boundary conditions:
+The parameter values are proprietary.
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>

@@ -1,0 +1,381 @@
+<DOCUMENT>
+Investigation of flow behaviors in a fluidized bed reactor with binary mixture of Geldart-A and B particles
+Highlights
+•
+A modified EMMS drag model was adopted to examine flow features in a bidisperse fluidized bed.
+•
+The quantified impacts of superficial gas velocity and packing state on flow are obtained.
+•
+Multivariate correlations for dense phase bed expansion were fitted with high accuracy.
+Abstract
+Flow dynamics in bubbling and turbulent fluidized beds containing both Geldart-A and B particles were investigated in this research. The numerical model was validated against experimental data, with a 6.16% average deviation. Results show that binary mixture segregation is enhanced as superficial gas velocity decreases. A larger flotsam packing ratio promotes homogeneous flotsam distribution; Second, bed density decreases with increasing bed height or superficial gas velocity. As the flotsam packing ratio decreases from 81.10 to 10.70%, bed density reaches the maximum at 41.50%, indicating the most severe volume contraction; Third, when the flotsam packing ratio decreases, the local mixing index's variances between upper and lower sections in dense phase first increases, then decreases, with stronger radial fluctuation detected; Fourth, as superficial gas velocity or flotsam packing ratio increases, the full mixing height ratio improves; Finally, multivariate correlations for dense phase bed expansion are established, yielding a 3.94% average error.
+Graphical abstract
+Download : Download high-res image (303KB)
+Download : Download full-size image
+Nomenclature
+a
+acceleration (m∙s−2)
+C1
+model constant 1.44
+C2
+model constant 1.92
+CD
+model constant 0.85
+Cd0
+drag force coefficient
+d
+particle size, mm
+f
+dense phase volume fraction
+g
+gravitational acceleration (m∙s−2)
+Hd
+Heteogeneity
+k
+turbulent kinetic energy (m2∙s−2)
+P
+Pressure (Pa)
+Re
+Reynolds number
+Rε
+Bed expansion coefficient
+ri
+reaction rate of species i
+Uslip
+Inter- phase slip velocity (m∙s−1)
+u
+velocity (m∙s−1)
+umf
+minimum fluidization velocity (m∙s−1)
+v
+velocity (m∙s−1)
+X
+mass fraction
+Greek symbols
+α
+volume fraction
+β
+inter-phase momentum exchange coefficient
+γ
+collisional dissipation of energy
+ΓΘ
+diffusion coefficient for the energy fluctuation
+ε
+dissipation rate of turbulent kinetic energy
+average volume fraction
+εmf
+critical volume fraction
+εs
+solid phase concentration
+Θ
+granular temperature (m2∙s−2)
+θ
+full mixing height ratio
+λ
+thermal conductivity (W∙m−1∙K−1)
+ξ
+bulk viscosity (Pa∙s)
+μ
+viscosity (Pa∙s)
+μe
+effective viscosity (Pa∙s)
+ρ
+density (kg∙m−3)
+σh
+model constant 1.0
+σk
+model constant 1.0
+σY
+model constant 1.0
+σε
+model constant 1.3
+σθ
+model constant 1.9
+τ
+stress tensor
+Φ
+sphericity
+ψ
+local mixing index
+Subscript
+f
+flotsam phase
+g
+gas phase
+i
+i species
+p
+p phase
+q
+q phase
+s
+solid phase
+1. Introduction
+Propylene (C3H6) is a commonly utilized chemical building block in petrochemical operations, including polypropylene, and propylene oxide synthesis [[1], [2], [3]]. Conventional C3H6 production techniques involve steam cracking (SC) or fluid catalytic cracking (FCC) with naphtha and light diesel [4]. Nonetheless, the rapid use of fossil fuels and the rising demand for C3H6 make it increasingly difficult for these conventional technologies to meet the need [5,6].
+Propane dehydrogenation (PDH) is a highly endothermic (∆HR298°K = 124 kJ ∙ mol−1) process that requires rather high temperatures to achieve a high yield of propene in industry applications [7]. Consequently, a suitable reaction heat supply should be the guiding and basic concept for the further designation of novel processes concerning PDH reactions. As for the conventional heavy oil FCC process, there is excess heat available that must be evacuated to prevent probable feedstock over-cracking or severe coking [[8], [9], [10], [11], [12]]. Based on these considerations, our prior work [13] proposed a novel approach that effectively links the PDH and FCC processes. It is achieved by utilizing the FCC catalyst particles as heat carriers to maintain the PDH process's continuous reaction heat supplement. As demonstrated in Fig. 1, it is a novel process integrating equipment, procedure, and energy, and thus, can lead to significant energy savings.
+Download : Download high-res image (85KB)
+Download : Download full-size image
+Fig. 1. The novel process route coupling FCC and PDH [13].
+This novel process comprises two types of particles, heat carrier and dehydrogenation catalyst, as stated previously. Particles with disparate sizes or densities tend to separate while in fluidization [[14], [15], [16]]. The light and/or small particles (flotsam) gather in the fluidized top section of the bed, whilst the heavier and/or larger particles (jetsam) sink to the gas distributor in a de-fluidized state. Due to the fact that particle distributions have large effects on bed expansion, mass and heat transport, and chemical reaction in fluidized beds, studies on the mixing/segregation behavior of binary mixtures are of practical importance. As a result, key challenges in this novel coupling process are the efficient mixing of reaction catalyst (Geldart-B particles) and heat carrier particles (Geldart-A particles). It is crucial to characterize the mixing/segregation behaviors of this large-difference, bidisperse fluidized bed to maximize the heat coupling efficiency of this new method.
+There have been extensive studies on mixing/ segregation fluidization behaviors over the past several decades, which have revealed the influence of numerous variables, such as particle size, density, particle shape, and operating conditions including superficial gas velocity, initial packing states, and particle composition, with a number of corresponding characteristic parameters being formulated in various forms [[17], [18], [19], [20], [21], [22], [23], [24], [25], [26]]. Nonetheless, for a bubbling and turbulent fluidized bed with binary mixtures of Geldart-A and B particles, particularly those mixtures of high-density small particles and low-density large particles, the mixing/ segregation behaviors and the corresponding mechanisms remain unclear and require further quantified research [27,28]. The mixing/ separation behaviors of the binary particles influence both solid and gas phases on the distribution patterns and temperature profiles significantly, hot or cold spots may occur easily under a bad mixing quality, which will result in deteriorated system efficiency and stability [29], thus, quantitative studies on the relevance of superficial gas velocity and initial bed packing state on bed mixing characteristics require further detailed investigation.
+With the rise in computational capacity, computational fluid dynamics (CFD) provides a new technique for comprehending the hydrodynamics and transfer mechanisms in multiphase flows [[31], [32], [33], [34]]. Particularly in the field of fluidization, the application of CFD method has greatly advanced the frontier of fundamental understanding of fluid–solid interaction and enabled accurate theoretical prediction of numerous macroscopic phenomena found in fluidized beds.
+In this paper, following the concept of coupling FCC and PDH processes, mixing/ segregation behaviors and the corresponding mechanisms in the fluidized bed with a binary mixture of Geldart-A and B particles are investigated. The effect of superficial gas velocity and initial packing state on the axial bed density profile, bed expansion characteristics, and radial and axial mixing features inside the dense phase section are discussed. In addition, preliminary multivariate empirical correlations for the dense phase expansion coefficient are obtained. A comprehensive examination of these issues can serve as an essential reference for the practical operation of fluidized bed reactors with binary mixture in industry.
+2. Mathematical model
+2.1. Governing equations
+2.1.1. Mass conservation equations
+Following Batchelor [35], the mass conservation for each phase can be described as Eq. (1):
+(1)
+Where
+represents for the mass transferred from the dispersed second phase or any other user-defined sources to the continuous phase.
+2.1.2. Momentum conservation equations
+The momentum conservation is also established following Batchelor [35], as shown in Eq. (2):
+(2)
+Where the inter-phase momentum transfer is given as the last term of the equation, with the inter-phase mass transfer coefficient, βpq, being formulated following bidisperse EMMS drag model developed by Ahmad et al., [36,37].
+The effective drag coefficient for each particle phase is calculated by following equations:
+(3)
+(4)
+The respective heterogeneity index of this system, which is defined as the ratio of drag coefficient obtained from the EMMS model to the heterogenous drag of Wen and Yu, is calculated as Eq. (5), with the Wen and Yu drag being calculated following Eq. (6):
+(5)
+(6)
+2.1.3. Turbulence equation
+The k − ε model, given by Launder and Spalding [39], is adopted in the description of the turbulent flow field in the fluidized bed reactor. On the basis of Reynolds averaged Navier-Stokes equations, the turbulent kinetic energy k, and the dissipation rate ε for each phase are formulated as Eqs. (7), (8), respectively.
+(7)
+(8)
+2.2. Kinetic theory of granular flow
+Due to the existing turbulent flow in both gas and particles phases, the flow field in a fluidized-bed reactor can be extremely complex, especially for a system involving binary particle mixture with disparate sizes and/or densities as in this paper. In this study, we combined the Eulerian-Eulerian multiphase model with the kinetic theory of granular flow (KTGF), which was developed by Gidaspow [40] and Sinclair and Jackson [41], to simulate turbulent multiphase flow with random fluctuations of particles and particle collisions. Fluctuations are a common occurrence in granular flow, Eq. (9) expresses the transport equation for turbulent fluctuating energy in dispersion phases, often known as granular temperature.
+(9)
+Gas phase stress tensor is expressed as Eq. (10):
+(10)
+Particle phase pressure is formulated as follows in Eq. (11) and Eq. (12):
+(11)
+(12)
+Particle phase bulk viscosity can be calculated following Eq. (13):
+(13)
+Particle phase shear viscosity can be described with Eq. (14) and Eq. (15):
+(14)
+(15)
+Energy fluctuation for collisional dissipation is expressed following Eq. (16):
+(16)
+The diffusion coefficient of particle phase fluctuation is calculated by following Eqs. (17), (18):
+(17)
+(18)
+3. Numerical solution
+3.1. Physical model and grid generation
+The established numerical model is depicted in Fig. 2 (a). Gas flow into the reactor through the bottom inlet with a diameter of 3400 mm; the gas and catalysts escape the reactor from the upper outlet, which is set as 800 mm; the inclined recycling tubes are 700 mm in diameter and 8000 mm in length. The entire height of the reactor is 15,000 mm with the outlet pipe being 6170-mm-long.
+Download : Download high-res image (151KB)
+Download : Download full-size image
+Fig. 2. Schematic diagram of the numerical model.
+The unstructural grids were utilized and the corresponding generated mesh is shown in Fig. 2 (b). In order to increase the calculation's precision, grid independence tests were implemented (ug = 0.10 m ∙ s−1, Xf0 = 61.70%). The volume fraction of the PDH catalyst (jetsam phase) in 1200-mm-high cross-sectional plane (as shown in Fig. 2) and the total pressure drop of the fluidized bed were measured. The variances of the tracked values were within 5% when the element number exceeded 514,682, as presented in Fig. 3.
+Download : Download high-res image (152KB)
+Download : Download full-size image
+Fig. 3. Grid independence test.
+3.2. Boundary conditions
+The inlet and outlet were set as velocity inlet and pressure outlet, respectively. The gas phase was pure air. The solid phase was the binary mixture of PDH catalysts (jetsam particles) and heat carriers (flotsam particles), with particle size of 400 and 60 μm, density of 1270 and 1400 kg∙m−3, respectively. The shear conditions for gas and particle phases were both determined to be no slip. The finite volume method (FVM) was employed to resolve the conservation equations of flow fields, with the Green-Gauss Node-Based method adopted in the gradient's calculation. For interpolation between the pressure and velocity fields, the Coupled algorithm was utilized. The second-order scheme was used in discretization of multiple equations (i.e., pressure, momentum, turbulence, and volume fraction).
+Governing equations were solved based on the Ansys Fluent 2020 R2 software platform. A computational cluster (CPU-AMD EPYC 7742 2.35GHz) was used in the calculation. Approximately 100 h were required to calculate 45 s with a time step of 0.001 s using 128 cores for each operating condition.
+4. Results and discussion
+4.1. Model validation
+In this paper, the flow model was validated using data from previously published experimental research [42], which studied the real-time mixing process with an initial segregated mixture in a quasi-two-dimensional fluidized bed. The two types of particles selected were sand particles and aluminum oxide particles with properties as illustrated in Table 1. The sand particles were placed underneath the aluminum oxide particles, and the packing height of both types of particles was 0.22 m. As depicted in Fig. 4, the fluctuations of the sand volume fraction along bed height under different fluidized gas velocities and areas were observed. The variances between experimental and numerical results were all in the reasonable range, with an average deviation of 6.16%, and the maximum of 13.44%.
+Table 1. Particle properties in flow model validation
+Solid types Particle size (mm) Particle density (kg∙m−3)
+Aluminum oxide 0.175 3500
+Quartz sand 0.175 2650
+Download : Download high-res image (413KB)
+Download : Download full-size image
+Fig. 4. Comparison of numerical and experimental data. (a) Center position, u = 0.42 m∙s−1. (b) Position near wall, u = 0.42 m∙s−1. (c) Center position, u = 0.22 m∙s−1. (d) Position near wall, u = 0.22 m∙s−1.
+4.2. Hydrodynamics of the bidisperse particle mixtures
+The volume fraction of jetsam particles in the 1200-mm-high cross-sectional plane was tracked for all cases during the calculation. The observed particle volume fractions all reach a stable value after around 32 s. The time-averaged values of 35–45 s are used for analysis in section of 4.2.2–4.2.4.
+4.2.1. Flow characteristics of the binary mixture
+Under varied operating conditions, the instantaneous volume fraction patterns of flotsam and jetsam particles are shown in Fig. 5, Fig. 6, respectively. With a total catalyst inventory of 20,000 kg, the two particle phases are well mixed. Along the whole fluidization process, Flotsam particles rise upward during the whole fluidization process, whereas jetsam particles tend to fall; hence, flotsam particles appear to have a higher expansion height than jetsam particles. Furthermore, it is possible to deduce that, while in a bubbling state, binary mixture segregation has a tendency to become greater as gas velocity decreases. The heterogeneous structure of the flotsam phase decreases as the packing ratio of flotsam particles increases from 29.90 to 81.10% under the same superficial gas velocity of 0.10 m ∙ s−1, which implies that a larger packing ratio of flotsam particles is beneficial for the uniformed distribution of flotsam particles. The packing state appears to have less influence on particle dispersion in the jetsam phase than it does in the flotsam phase.
+Download : Download high-res image (705KB)
+Download : Download full-size image
+Fig. 5. Instantaneous flotsam particle distributions in the fluidized bed. (a) ug = 0.05 m ∙ s−1, Xf0 = 61.70%. (b) ug = 0.10 m ∙ s−1, Xf0 = 29.90%. (c) ug = 0.10 m ∙ s−1, Xf0 = 61.70%. (d) ug = 0.10 m ∙ s−1, Xf0 = 81.10%.
+Download : Download high-res image (712KB)
+Download : Download full-size image
+Fig. 6. Instantaneous jetsam particle distributions in the fluidized bed. (a) ug = 0.05 m ∙ s−1, Xf0 = 61.70%. (b) ug = 0.10 m ∙ s−1, Xf0 = 29.90%. (c) ug = 0.10 m ∙ s−1, Xf0 = 61.70%. (d) ug = 0.10 m ∙ s−1, Xf0 = 81.10%.
+Fig. 7 depicts the velocity vector profiles of each phase under varied operation conditions. It indicates that flotsam particles exhibit roughly the same flow patterns as jetsam particles under varying operating conditions, while with greater velocity magnitudes and expansion heights. In addition, under the conditions of a superficial gas velocity of 0.05 m ∙ s−1 and a flotsam packing ratio of 61.70% (Fig. 7 (a)), both types of particles ascend along the wall and drop in the center region. With increased superficial gas velocity into 0.10 m ∙ s−1 (Fig. 7 (c)), the flow patterns for both types of particles reverse into climbing in the center and then descending in the near-wall region. When the flotsam particles packing ratio decreases into 29.90% (Fig. 7 (b)), the flow paths of both types of particles are observed to be bifurcated, particles flow upward at the center in lower area of the bed, followed by symmetrically distributed centripetal vortices in the upper section, leading to downward flow at the center and upward flow along the wall. Nonetheless, with an increase of flotsam particles packing ratio from 61.7 to 81.10% (Fig. 7 (d)), in the lower-section, the particles ascend in the center and drop in the near-wall region. In the upper part, there are two symmetric vortices that point toward the wall, which lead to ascending motion at the center and descending motion near the wall.
+Download : Download high-res image (3MB)
+Download : Download full-size image
+Fig. 7. Velocity vector profiles in the fluidized bed (І, II and III represents for gas, flotsam and jetsam particles, respectively). (a) ug = 0.05 m ∙ s−1, Xf0 = 61.70%. (b) ug = 0.10 m ∙ s−1, Xf0 = 29.90%. (c) ug = 0.10 m ∙ s−1, Xf0 = 61.70%. (d) ug = 0.10 m ∙ s−1, Xf0 = 81.10%.
+With a larger superficial gas velocity and flotsam particle packing ratio, it can be deduced that more vortices are formed, indicating a more intense turbulent disturbance. With decreasing flotsam phase's packing ratio, vortices are observed to first decrease and then increase in size, and in the same time, first increase and then decrease in number.
+4.2.2. Axial distribution characteristic of bed density
+Fig. 8 depicts the axial variation trends of bed density under varying superficial velocity and initial packing states. Like a single-dispersion fluidization system, it can be deduced that the bed density in the dense phase decreases with increasing bed height. In addition, the bed density at a certain bed height drops as the gas velocity increases. Further, it is found that with the packing ratio of flotsam particles decreases from 81.10% to 41.50%, the dense phase bed becomes compressed, with an increase of 6.34 and 6.42% for the average bed density within dense phase section at velocities of 0.05, 0.08 m ∙ s−1, respectively. However, as the packing ratio of flotsam particles declines from 41.50% to 10.70%, the bed density decreases, indicating a continual bed expansion. The complete variation trend for the dense phase bed of being first compressed and then expanded is primarily explained by the fact that while being completely mixed, the flotsam particles exist within the jetsam particles packing gaps, and under the packing ratio of approximately 41.50%, the flotsam particles amount in the jetsam packing gaps reaches a relative saturation state, thereby minimizing the void fraction and maximizing the bed density.
+Download : Download high-res image (751KB)
+Download : Download full-size image
+Fig. 8. Axial distribution of bed density in the fluidized bed. (a) Xf0 = 81.10%. (b) Xf0 = 61.70%. (c) Xf0 = 41.50%. (d) Xf0 = 29.90%. (e) Xf0 = 10.70%.
+4.2.3. Dense phase bed expansion characteristic
+To further quantify bed expansion characteristic, the bed expansion coefficient, which is defined as Eq. (19), is introduced in this paper.
+and
+are the average void fraction and bed density within the dense phase section, respectively. Initially, the critical void fraction, εmf, must be determined. Considering that the critical fluidization states are difficult to detect numerically, the theoretical method is utilized here, which has been verified to be effective by Kong [43]. Due to the fact that the critical fluidization state should be defined as the end of the fixed bed state, this characteristic state can be expressed using the correlation put forward by Ergun [44], denoted as Eq. (21), and can be extended into Eqs. (22), (23). Further, Wen and Yu discovered that Eq. (24) always exist as correlations for any gas-particle fluidization system [45]. Finally, the minimum fluidization velocity and critical void fraction of each particle can be obtained with the combination of Eqs. (21), (22), (23), (24), concluded in Table 2.
+(19)
+(20)
+(21)
+(22)
+(23)
+(24)
+，
+Table 2. Minimum fluidization velocity and critical void fraction of each particle
+Particle type Particle size (μm) Particle density (kg∙m−3) Minimum fluidization velocity (m∙s−1) Critical void fraction
+Flotsam particle 60 1400 0.0017 0.38
+Jetsam particle 400 1270 0.066 0.38
+Fig. 9 (a) shows the variation of bed expansion coefficient with increasing flotsam particles packing mass ratio. The phenomenon of “volume contraction” [46] is apparently detected. It appears that the bed expansion coefficients meet with their minimums at the flotsam packing ratio of about 41.50%, which is in good accord with the variation trend in Fig. 8. Due to the most saturated fulfilling, the hindrance of jetsam particles to the flotsam particle upward movement at this state is the strongest, thus, the average void fraction reaches its minimum value and the bed expansion of the dense phase section with this packing ratio is the weakest. Along with further increase of flotsam packing mass ratio over 41.50%, the hindrance of jetsam particles will be gradually weakened with the increasing amount of flotsam particles, then the flotsam particles being carried into the dilute space will increase and as a result, the bed expansion coefficient increases. Additionally, the bed expansion coefficient varies gentler with the flotsam particles packing mass ratio larger than 41.50%. When the ratio increases from 41.50 to 81.10%, the expansion coefficient grows by 34.37 and 19.71%, with superficial gas velocity of 0.1 and 0.05 m ∙ s−1, respectively, compared to variation ranges of 17.79 and 8.06% under the decreasing packing ratio from 41.50 to 10.70%.
+Download : Download high-res image (245KB)
+Download : Download full-size image
+Fig. 9. Variation of dense phase bed expansion coefficient (a) versus flotsam particles packing ratio. (b) versus superficial gas velocity.
+The variation trends of bed expansion coefficient along the increasing superficial gas velocity with different catalyst packing mass ratios are shown in Fig. 10 (b). It suggests that the bed expansion ratios increase almost linearly with the increase of the superficial velocity and the dense phases section shows a sharper expansion under a larger packing mass ratio of flotsam particles.
+Download : Download high-res image (521KB)
+Download : Download full-size image
+Fig. 10. Axial and radial mixing quality of flotsam particles in the dense phase with different initial packing ratio. (a) ug = 0.10 m ∙ s−1, Xf0 = 81.10%. (b) ug = 0.10 m ∙ s−1, Xf0 = 61.70%. (c) ug = 0.10 m ∙ s−1, Xf0 = 29.90%. (d) ug = 0.10 m ∙ s−1, Xf0 = 10.70%.
+4.2.4. Radial mixing characteristics within dense phase section
+The local mixing index (ψ) is introduced to quantify the local mixing quality in dense phase section, which is defined as Eq. (25). Yflotsam is the local mass fraction of flotsam particles and
+represents for the average mass fraction of flotsam particles in the bed. If ψ approaches 100%, then a local state of well-mixing state is detected. The axial and radial mixing index of flotsam particles under different packing states is delineated in Fig. 10, which indicates that the flotsam particles in the dense phase are roughly distributed uniformly. It can be deduced that the mixing index slightly increases with increasing bed height, implying an improved mixing quality. Along with the same increase of bed height from 1000 to 3000 mm, the average mixing index increases by 4.11, 10.61, 8.28, and 5.39%, for a flotsam phase packing ratios of 81.10, 61.70, 29.90, and 10.70%, respectively, indicating that the local mixing quality variances between upper and lower sections first increases and then decreases as the flotsam packing ratio decreases. It can be explained by the development of bubble behaviors and provides evidence that, under the same superficial gas velocity, with a decreasing packing ratio of flotsam phase, the catalyst bed expands more easily and consequently, the fluidization state gradually changes from bubbling to turbulent, which also leads to a stronger radial fluctuation in local mixing index, as shown in Fig. 10.
+(25)
+The axial and radial distribution profiles of local mixing index under different gas velocities are depicted in Fig. 11, which shows that as superficial gas velocity increases, the average mass fraction of each height all gets closer to the initial packing ratio, thus leading to an index closer to 100% gradually. As bed height grows from 1000 to 4000 mm, the radially average mixing index increases by respectively 69.30, 58.28, and 19.15%, with respective superficial gas velocity of 0.08, 0.10, and 0.12 m ∙ s−1, indicating an improved mixing quality throughout the dense phase section. This is due to the fact that when the gas velocity increases, the gas content within the bed increases, resulting in a stronger bubble motion.
+Download : Download high-res image (503KB)
+Download : Download full-size image
+Fig. 11. Axial and radial mass fraction profiles of flotsam particles in the dense phase with different gas velocity. (a) ug = 0.05 m ∙ s−1, Xf0 = 61.70%. (b) ug = 0.08 m ∙ s−1, Xf0 = 61.70%. (c) ug = 0.10 m ∙ s−1, Xf0 = 61.70%. (d) ug = 0.12 m ∙ s−1, Xf0 = 61.70%.
+4.2.5. Axial mixing characteristics within dense phase bed
+Local full mixing height is a certain height located in the upper section of the dense phase bed, within which, the system enters a full mixing state and the overall variances for flotsam particles' local mass fraction in this section are <5%. Following this concept, another indication, the local full mixing height ratio, is provided to further quantify the axial mixing quality of the bidisperse gas-solid system. It is defined as the ratio of full mixing height to dense phase height, as indicated in Eq. (26). The full mixing height ratio in the dense phase section has a direct influence on the heat transfer efficiency when heat transfer proceeds between the two types of particles.
+(26)
+Fig. 12 shows the axial distributions of flotsam particle mass fraction for various initial packing states and superficial gas velocities. In combination with Fig. 8, it is derived that under the fixed flotsam particles packing ratio of 81.10%, with the gas velocity increasing from 0.05 to 0.12 m ∙ s−1, the dense phase height increases from 2.80 to 4.40 m, together with an increased full mixing height from 0.25 to 2.50 m. That is to say, the full mixing height ratio improves from 8.93 to 56.82%, demonstrating enhanced binary particle mixing within the whole dense phase section. As for the variation in initial packing states, under the same velocity of 0.05 m ∙ s−1, the full mixing height ratio decreases from 8.93 to 4.17%, with flotsam particle mass fraction decreasing from 81.10 to 10.70%, providing evidence for a deteriorated mixing quality in dense phase.
+Download : Download high-res image (722KB)
+Download : Download full-size image
+Fig. 12. Axial distribution of flotsam particles mass fraction in the fluidized bed. (a) Xf0 = 81.10%. (b) Xf0 = 61.70%. (c) Xf0 = 41.50%. (d) Xf0 = 29.90%. (e) Xf0 = 10.70%.
+The variations of full mixing height ratio in dense phase section along superficial gas velocity are shown in Fig. 13. The results further reveal that under a fixed packing state, along with increasing gas velocity, the full mixing height ratio gradually improves. Furthermore, under the same superficial gas velocity, the mixing quality improves with the increasing packing ratio of flotsam particles. The variation trend of full mixing height ratio versus superficial gas velocity with flotsam particles packing ratio under 41.50% is much gentler than that with packing ratio over 41.50%. Further, it appears that the full mixing height ratio with different flotsam packing ratios all changes sharper in the middle section of the velocity range and tends to attain a final stable value that presents to increase when the flotsam packing ratio decreases.
+Download : Download high-res image (283KB)
+Download : Download full-size image
+Fig. 13. Variation of full mixing height ratio versus superficial gas velocity with different initial flotsam packing ratios.
+4.2.6. The multivariate correlations for Rε
+For a large difference, bidisperse fluidization system in industry, identification and prediction of the dense phase bed expansion characteristics is of much significance. In this paper, the multivariate correlations for Rε concerning flotsam packing mass ratio and bidisperse fluidization number are developed and fitted into Eq. (27).
+(27)
+Which is applicable to 0 <
+< 60 for a bubbling or turbulent fluidization system with a binary mixture of Geldart-A and B type particles.
+The bed expansion coefficients of the dense phase section that are calculated from the fitted correlations are compared with the data obtained via simulation, and the discrepancies are shown in Fig. 13. It suggests that the fitted results are in good accord with the simulation data, yielding an average error of 3.94% (Fig. 14).
+Download : Download high-res image (125KB)
+Download : Download full-size image
+Fig. 14. Comparison of numerical and fitted results for Rε.
+5. Conclusions
+This study examined the hydrodynamic features in the fluidized bed with a binary mixture of Geldart-A and B particles under bubbling and turbulent state. The quantified impacts and influencing mechanisms of superficial gas velocity and flotsam particles packing ratio on volume fraction and velocity vector profiles, axial distribution of average particle concentration, bed expansion characteristic and local mixing characteristic in dense phase section were revealed:
+1.
+Binary mixture segregation is greater as gas velocity decreases, an increased flotsam particles packing ratio is beneficial for the uniformed distribution of flotsam particles, and that packing state has less of an effect on particle dispersion in the jetsam phase than it does in the flotsam phase.
+2.
+The bed density decreases as bed height or superficial gas velocity increases, with the flotsam particles packing ratio decreases from 81.10 to 10.70%, while at the ratio of around 41.50%, the bed density reaches its maximum, with the dense phase bed expansion coefficient being minimized, indicating the most severe dense phase bed volume contraction at this state.
+3.
+As the flotsam particle packing ratio drops, the variances of local mixing index between upper and lower sections in dense phase bed first increases and then decreases, and radial fluctuation in mixing quality tends to be more pronounced. Increasing superficial gas velocity improves the mixing quality throughout the dense phase region.
+4.
+As the gas velocity increases in any packing state, the full mixing height steadily increases, implying an improved mixing quality in the dense phase section. While under the same gas velocity, the mixing quality improves as the flotsam packing ratio increases. The full mixing height ratio with different flotsam packing ratios all changes relatively sharper in the middle section of the velocity range and reaches a final stable value that tends to increase with decreasing flotsam packing ratio.
+5.
+The multivariate correlations for dense phase bed expansion coefficient with respect to flotsam packing mass ratio and fluidization number are established, yielding an average error of 3.94%.
+Experiment and process intensification work on mixing/segregation characteristics of this binary mixture and as well as further research on heat transfer characteristics of this large difference, bidisperse fluidization system will be conducted in our future work.
+CRediT authorship contribution statement
+Song Chen: Conceptualization, Methodology, Writing – original draft, Software, Data curation, Visualization. Wang Jiarui: Conceptualization, Methodology, Software, Validation, Visualization. Wang Simin: Conceptualization, Methodology, Supervision. Wen Jian: Writing – review & editing, Supervision.
+Declaration of Competing Interest
+The authors declared that they have no conflicts of interest to this work.
+We declare that we do not have any commercial or associative interest that represents a conflict of interest in connection with the work submitted.
+Acknowledgments
+This work is supported by the National Natural Science Foundation of China (No. 51676146) and the High-Performance Computing Platform of Xi'an Jiaotong University (http://hpc.xjtu.edu.cn/). The first author, Chen Song, would like to specially thank his wife, Lingyu Li, for her support and love all the time.
+Appendix A. Supplementary data
+Download : Download Word document (20KB)
+Drag model description
+</DOCUMENT>
+
+Examine the content within the supplied document to determine if it pertains to any form of propane dehydrogenation, including both Propane Dehydrogenation (PDH) and Oxidative Propane Dehydrogenation (ODH). If the document discusses either of these processes in the context of converting propane to propylene, please continue to assess the main scientific contributions as outlined in the subsequent steps.
+1. Identify the catalyst that represents the main scientific contribution in the document.
+2. Extract and detail the following information for this catalyst:
+    - Name
+    - Type: Metal, Metal Oxide, Single Atom, Alloy, Others
+    - Composition Element(s) (chemical symbols)
+    - If the Type is "Alloy":
+        - Structure Type: Nanoparticulate Alloys, Intermetallic Compounds, Single-atom Alloys, Others
+        - Preparation Method: Impregnation Methods, Heat Treatment, Surface & Support Methods, Solution-Based Methods, In Situ Synthesis, Chemical Methods, Physical Methods, etc.
+    - Active Species Element(s) (chemical symbols)
+    - Promoter Element(s) (chemical symbols, if any)
+    - Support Material: Silica Oxide, Aluminum Oxide, Oxides, Carbides, Zeolites, Others
+    - Conversion (%): Specify type (e.g., single-pass conversion, propane conversion, overall conversion)
+    - Selectivity (%)
+    - Stability (if in h-1 or convert to h-1)
+    - Deactivation Rate(s) (value and units)
+    - Propane Production Rate (value and units)
+    - Propylene Yield (%)
+    - Feed Composition and Ratio(s)
+    - Propane Partial Pressure
+    - Reaction Temperature (value and units)
+    - Inlet Flow Rate (value and units)
+    - Catalyst Loading or Gas Hourly Space Velocity (GHSV) (value and units)
+3. Determine how the manuscript increases selectivity, conversion, and stability, focusing on improvements in catalyst preparation method, structural composition, process conditions, or reactor design.
+4. Describe the specific performance enhancements (selectivity, conversion, stability) and summarize the advancement in one sentence.
+5. Convert the stability to an hourly rate (h-1) if not already in that unit.
+6. Identify whether the catalyst is utilized for Propane Dehydrogenation (PDH), a process that does not involve oxidation, or for Oxidative Propane Dehydrogenation (ODH), where an oxidative process is integral. Clarify the distinction between PDH, where propane is dehydrogenated to propylene without the presence of oxygen or other oxidizing agent, and ODH, which involves the oxidation of propane as a part of the dehydrogenation process to propylene.
+7. Identify the feed gas composition utilized with the catalyst.
+8. Determine if the feed gas contains an oxidizing agent.
+
+Output the information in an XML format following the provided template.
+
+<output>
+	<Relevance>
+		(Indicate yes or no)
+	</Relevance>
+	<IfRelated>
+		<MainScientificContribution>
+			<Catalyst>
+				<Name>____</Name> <!-- N/A if not mentioned -->
+				<Type>____</Type> <!-- Metal, Metal Oxide, Single Atom, Alloy, Others -->
+				<CompositionElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</CompositionElements> <!-- N/A if not mentioned -->
+				<AlloyDetails> <!-- Include only if Type is Alloy -->
+					<StructureType>____</StructureType> <!-- E.g., Nanoparticulate Alloys -->
+					<PreparationMethod>____</PreparationMethod> <!-- E.g., Impregnation Methods -->
+				</AlloyDetails> <!-- N/A if not mentioned -->
+				<ActiveSpeciesElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</ActiveSpeciesElements> <!-- N/A if not mentioned -->
+				<PromoterElements>
+					<Element>__Chemical Symbol__</Element>
+					<!-- Add more elements as necessary -->
+				</PromoterElements> <!-- N/A if not mentioned -->
+				<SupportMaterial>____</SupportMaterial> <!-- N/A if not mentioned -->
+				<ConversionTypes>
+					<Type>____</Type> <!-- E.g., single-pass conversion, propane conversion, overall conversion -->
+					<Value>__Value%__</Value>
+					<!-- Add more types as necessary -->
+				</ConversionTypes> <!-- N/A if not mentioned -->
+				<Selectivity>__Value%__</Selectivity> <!-- N/A if not mentioned -->
+				<StabilityOriginal>__Value (Original Units)__</StabilityOriginal> <!-- N/A if not mentioned -->
+				<ConvertedStability>__Value (h-1)__</ConvertedStability> <!-- N/A if not mentioned -->
+				<DeactivationRates>
+					<Rate>__Value (Units)__</Rate>
+					<!-- Add more rates as necessary -->
+				</DeactivationRates> <!-- N/A if not mentioned -->
+				<PropaneProductionRate>__Value (Units)__</PropaneProductionRate> <!-- N/A if not mentioned -->
+				<PropyleneYield>__Value%__</PropyleneYield> <!-- N/A if not mentioned -->
+				<FeedCompositionAndRatios>
+					<Ratio>____</Ratio>
+					<!-- Add more ratios as necessary -->
+				</FeedCompositionAndRatios> <!-- N/A if not mentioned -->
+				<PropanePartialPressure>____</PropanePartialPressure> <!-- N/A if not mentioned -->
+				<ReactionTemperature>__Value (Units)__</ReactionTemperature> <!-- N/A if not mentioned -->
+				<InletFlowRate>__Value (Units)__</InletFlowRate> <!-- N/A if not mentioned -->
+				<CatalystLoadingOrGHSV>__Value (Units)__</CatalystLoadingOrGHSV> <!-- N/A if not mentioned -->
+ 				<TypeIdentify>____</TypeIdentify>  <!-- PDH or ODH -->
+				<FeedGasComposition>
+					<Component>____</Component>
+					<Component>____</Component>
+					<!-- Add more items as necessary -->
+				</FeedGasComposition>
+				<ContainsOxidizingAgent>____</ContainsOxidizingAgent> <!-- Yes or No -->
+			</Catalyst>
+			<PerformanceEnhancement>
+				<EnhancementDetails>
+					<!-- Specify the aspect(s) that has/have been enhanced (Selectivity, Conversion, Stability) -->
+					<!-- For example, if Selectivity has been enhanced due to a specific preparation method, list it here -->
+					<Aspect>____</Aspect> <!-- E.g., Selectivity, Conversion, Stability -->
+					<ImprovedBy>____</ImprovedBy> <!-- E.g., Preparation Method, Structural Composition, Process Conditions, Reactor Design -->
+					<SummaryOfAdvancement>____</SummaryOfAdvancement>
+				</EnhancementDetails>
+				<!-- Repeat the <EnhancementDetails> element if there are multiple enhancements -->
+			</PerformanceEnhancement>
+		</MainScientificContribution>
+	</IfRelated>
+</output>
