@@ -1,0 +1,433 @@
+Journal of Catalysis 239 (2006) 501–506
+www.elsevier.com/locate/jcat
+Research Note
+Toward computational screening in heterogeneous catalysis:
+Pareto-optimal methanation catalysts
+Martin P. Andersson a, Thomas Bligaard a, Arkady Kustov b, Kasper E. Larsen c, Jeffrey Greeley a,
+Tue Johannessen c, Claus H. Christensen b, Jens K. Nørskov a,∗
+a Center for Atomic-Scale Materials Physics, Department of Physics, NanoDTU, Technical University of Denmark, DK-2800 Lyngby, Denmark
+b Center for Sustainable and Green Chemistry, Department of Chemistry, NanoDTU, Technical University of Denmark, DK-2800 Lyngby, Denmark
+c Department of Chemical Engineering, NanoDTU, Technical University of Denmark, DK-2800 Lyngby, Denmark
+Received 20 January 2006; revised 13 February 2006; accepted 18 February 2006
+Available online 24 March 2006
+Abstract
+Finding the solids that are the best catalysts for a given reaction is a daunting task due to the large number of combinations and structures of
+multicomponent surfaces. In addition, it is not only the reaction rate that needs to be optimized; the selectivity, durability, and cost must also be
+taken into account. Here we propose a computational screening approach and apply it to design a new metal alloy catalyst for the methanation
+reaction (CO + 3H2 →CH4 + H2O).
+2006 Elsevier Inc. All rights reserved.
+Keywords: Alloy; Bimetallic; Methanation; Hydrogenation; Fischer–Tropsch; DFT; Design; Screening; Optimization; Pareto
+1. Introduction
+It has been shown that the kinetics of full catalytic reac-
+tions can be described semiquantitatively on the basis of ther-
+mochemistry and activation energies calculated using density
+functional theory (DFT) [1–3]. If such an approach could be ex-
+tended from a single catalyst to a range of catalysts, then DFT
+calculations could be used for a ﬁrst screening of new catalysts.
+Although this is not yet possible, we take a step in that direction
+with the following procedure. First, we establish a correlation
+between the catalytic activity and a descriptor, which we can
+calculate directly using DFT. The descriptor is chosen on the
+basis of a general understanding of parameters determining the
+variation in catalytic activity from one catalyst to the next [4,5].
+We use experimental data for the activity of a set of elemental
+metals to determine the optimum value of the descriptor. Next,
+* Corresponding author. Fax: +45 45 93 23 99.
+E-mail address: norskov@fysik.dtu.dk (J.K. Nørskov).
+we perform a preliminary screening of a number of intermetal-
+lic alloys based on a model of the effect of alloying developed
+from DFT calculations. Then we study the most interesting al-
+loys using full DFT calculations to verify the alloy model and
+make deﬁnite predictions of the activity. Finally, we synthesize
+the best catalyst candidates and measure their catalytic activi-
+ty.
+To illustrate this approach, we use the methanation reac-
+tion (CO + 3H2 →CH4 + H2O). This is one of the classic
+reactions in heterogeneous catalysis [6–9] used in connection
+with, for instance, catalytic ammonia synthesis (N2 + 3H2 →
+2NH3) to remove trace amounts of CO from the hydrogen
+feed gas. It has attracted renewed interest for the clean up
+of reformate hydrogen fuels for low-temperature fuel cells
+in which CO is a strong poison [10]. The traditional metha-
+nation catalyst is Ni supported on Al2O3 [9]. The reaction
+is well described experimentally [11,12] and theoretically [5,
+13,14], and recently experimental high-throughput screening
+methods have been applied to ﬁnd new catalysts for this reac-
+tion [15].
+0021-9517/$ – see front matter 2006 Elsevier Inc. All rights reserved.
+doi:10.1016/j.jcat.2006.02.016
+502
+M.P. Andersson et al. / Journal of Catalysis 239 (2006) 501–506
+2. Methods
+2.1. Computational details
+2.1.1. Electronic structure calculations
+The electronic structure calculations are carried out using
+DFT calculations [16,17] in a plane wave pseudopotential im-
+plementation [18,19]. Ultra-soft pseudopotentials [20] are used
+to represent the ionic cores, allowing for a reasonable treatment
+of ﬁrst-row atoms and transition metals even with a relatively
+limited plane wave basis. The plane wave cutoff in the calcula-
+tions is 25 Rydberg for the wave functions and 50 Rydberg for
+the electron densities, except for Co, for which the plane wave
+cutoff is 35 Rydberg and the density cutoff 70 Rydberg. For Fe,
+Co, and Ni, the calculations are spin-polarized. The calculations
+are performed using the RPBE exchange correlation [21] on pe-
+riodically repeated stepped fcc(211) metal slabs with 12 layers
+in the [211] direction. This corresponds to 4 close-packed lay-
+ers and gives 24 atoms in the unit cell. This particular choice of
+model allows us to retain the correct bulk composition and pe-
+riodic structure for the ordered binary 1:3 and 1:1 alloys (such
+as FeNi3 and FeNi), as well as for the regular fcc structures.
+In all cases, the uppermost close-packed layer (3 [211]-layers)
+is fully relaxed together with the adsorbed species. The lattice
+constants are chosen as the calculated bulk lattice constant for
+the respective metals in their ground state structure using the
+RPBE functional. There is at least 10 Å of vacuum between the
+slabs, and the dipole interaction between the periodically re-
+peated slabs is decoupled by introducing a dipole layer in the
+vacuum between the slabs. A k-point sampling of 4 × 4 × 1
+Monkhorst–Pack k-points [22] is chosen.
+The calculations are performed with one adsorbate per unit
+cell, that is, a surface coverage of 1/6 monolayers, or equiv-
+alently a step coverage of 0.5. All transition states (TS) are
+found using a constrained bond optimization technique, which
+for both Ni(211) and Ru(211) is found to give the same energy
+as the more rigorous nudged elastic band method [23].
+2.1.2. Oxygen–surface alloy binding energies
+The raw data for the oxygen binding energy (BEO) on bi-
+nary surface alloys, along with the computational details, have
+been provided previously [24]. The alloys are constructed by al-
+lowing incorporation of various coverages of solute atoms into
+the surface layers of assorted hosts. From this database of DFT-
+based BEO, two interpolative schemes to estimate BEO values
+are developed. For the ﬁrst scheme, the interpolated BEO is
+simply taken as the average of the BEO on the pure metals sur-
+rounding the threefold sites. For example, the BEO on a PtPtPd
+threefold site (in which the substrate of the surface alloy can
+be either Pt or Pd) would be estimated as (2BEO(pure Pt) +
+BEO(pure Pd))/3. The particular alloys analyzed with this in-
+terpolative scheme (taken from a larger database in Ref. [24])
+are selected by requiring that the oxygen atom move by no more
+than 0.05 unit cell vectors (∼1/15 of a lattice constant) from the
+threefold sites during relaxation, that the lattice constants of the
+pure metals composing each alloy differ by no more than 0.2 Å,
+and that the surface alloys contain only mixed (not pure) solute
+overlayers. Thus, a total of 62 surface alloys are considered. For
+the second scheme, the interpolated binding energies are again
+calculated as an average of the BEO’s. In this case, however, the
+basic data used for the interpolation come from pure overlayers,
+not pure metals. For example, the BEO of a PtPtPd-on-Pt alloy
+(in which Pt is the substrate) would be (2BEO(PtPtPt-on-Pt +
+BEO(PdPdPd-on-Pt))/3. This scheme thus rigorously accounts
+for strain and electronic structure effects of the substrate ele-
+ment on the surface elements. The surface alloys analyzed in
+this scheme include all of the alloys analyzed in the ﬁrst scheme
+plus additional alloys resulting from the elimination of the lat-
+tice constant restriction (102 in total).
+2.2. Experimental details
+2.2.1. Catalyst preparation
+Spinel, MgAl2O4, a support with particle sizes of 0.25–
+0.40 mm, a pore volume of about 0.7 cm3/g, and a surface area
+of 70 m2/g, is used as a carrier material. Supported Ni/Fe cat-
+alysts are prepared using incipient wetness impregnation of the
+chosen sieve fraction of the support with aqueous solutions of
+the corresponding nitrates. Before impregnation, the support is
+dried in an oven at 200 ◦C for 5 h. A period of about 4 h is al-
+lowed for the salt solution to completely ﬁll the pores of the
+carrier. The impregnated spinel is then dried at room tempera-
+ture for 12 h and heated in air to 450 ◦C at a rate of 2.5 ◦C/min
+and kept at 450 ◦C for 3 h.
+2.2.2. CO hydrogenation
+The catalytic performance of the prepared catalysts is tested
+in CO hydrogenation. In a representative catalytic test, 150 mg
+of the catalyst (fraction 0.25–0.40 mm) is placed into the quartz
+plug-ﬂow U-tube reactor between two layers of quartz wool.
+The ﬂow of 2 vol% CO in H2 is then admitted to the reactor
+at an hourly space velocity of about 40,000 h−1 and a reaction
+pressure of 1.0–1.1 bar. Before the activity measurements, the
+catalysts are reduced at 500 ◦C for 4 h, after which the temper-
+ature is lowered while the concentrations of CO, methane and
+other products are monitored using a Shimadzu gas chromato-
+graph equipped with thermal conductivity and ﬂame ionization
+detectors. The results of the activity measurements are calcu-
+lated as mol CO converted per mol of metal in the catalyst per
+second,
+rate = XCO · FCO
+ncat
+,
+where XCO is the fractional conversion of CO, FCO denotes
+the molar feed rate of CO (mol/s), and ncat is the total molar
+amount of metal in the catalyst used in the activity test.
+3. Results
+3.1. Computational results
+Following the analysis reported previously [5], the two im-
+portant properties of a metal surface in determining the rate of
+the methanation process are the barrier for CO dissociation and
+M.P. Andersson et al. / Journal of Catalysis 239 (2006) 501–506
+503
+the stability of the main intermediates on the surface, atomic
+C and O. Extensive DFT calculations of these parameters for
+different metal surfaces have shown them to be linearly cor-
+related in what is called the Brønsted–Evans–Polanyi (BEP)
+relation [5], as shown in Fig. 1a. The reason for the correla-
+tion is that the C–O bond in the transition state for dissociation
+is so extended that it is very ﬁnal state-like, thus leaving the
+transition state with bonding properties that vary like those of
+adsorbed atomic C and O. This means that one independent
+descriptor of the reactivity can be chosen as the dissociation en-
+ergy of adsorbed CO, Ediss: the energy of C + O on the surface
+relative to the energy of adsorbed CO [25].
+A BEP relation typically leads to a volcano-shaped depen-
+dence of the rate on Ediss [5]; see Fig. 1. For weak adsorption
+(the right leg of the volcano), the barrier for dissociation is high
+and limits the rate, whereas strong adsorption must lead to low
+rates of removal of adsorbed C and O from the surface to form
+the reaction products. This is illustrated in Fig. 1b, which shows
+experimentally measured rates on a number of supported ele-
+Fig. 1. (a) Brønsted–Evans–Polanyi (BEP) relation for the activation energy for
+CO dissociation vs the (adsorbed) CO dissociation energy, Ediss, at steps on the
+close packed surface of the metals. Pure metals are shown in full circles, and
+the two ordered alloys, FeNi and FeNi3, are shown in hollow circles. The blue
+solid line (web wersion) is a best linear ﬁt for the pure metals. (b) Measured cat-
+alytic activities for supported metal catalysts (adapted from Ref. [5]) are shown
+vs. Ediss. All energies are related to the molecularly adsorbed CO state at the
+step.
+mental metal catalysts [5] as a function of the calculated Ediss
+on the most active step sites of the metals. The optimum value
+of Ediss can be seen to be Ediss(optimal) = 0.06 eV.
+Having established that Ediss is a good descriptor for the
+catalytic activity and having found its optimum value, we now
+screen a number of catalysts, M, for their value of Ediss(M) =
+|Ediss(M) −Ediss(optimal)|. We base our screening on a data-
+base of values of Ediss for the elemental metals calculated
+using DFT [4]. We calculate the values for an alloy surface
+using an interpolation model in which the adsorption energy,
+Eads, at a site with a fraction x of A neighbors and a frac-
+tion (1 −x) of B neighbors is calculated as Eads(AxB1−x) =
+xEads(A)+(1−x)Eads(B) [24,26,27]. We tested the model for
+the adsorption energy of atomic oxygen on the threefold sites
+of close-packed surfaces of a variety of surface alloys; Fig. 2
+shows the results. The model gives rise to errors in the 0.1–
+0.2 eV range compared with full DFT calculations. Comparing
+this error with the range of energies, Ediss, in Fig. 1 shows that
+this is a useful accuracy for a ﬁrst screening. When studying the
+most promising candidates in more detail later in this paper, we
+show that the interpolation concept works well for these sys-
+tems.
+We consider bulk alloys of the composition AxB1−x (x = 0,
+0.25, 0.5, 1), where A and B can be any of the metals Ni, Pd, Pt,
+Co, Rh, Ir, Fe, Ru, or Re. This creates a total of 117 different
+catalysts in our study. We make the further approximation that
+the bulk concentration, x, also indicates the range of concen-
+tration of element metal A in the surface site. We have veriﬁed
+that this is a good approximation for the two most interesting
+alloys in the study.
+The interpolation model immediately suggests candidates
+for good alloy catalysts by combining elements on the left leg
+and the right leg of the volcano in Fig. 1. Here we use a more
+systematic approach in which we can include other important
+factors in the problem. As mentioned in Section 1, catalyst op-
+timization is usually a multiobjective optimization problem in
+which it is not a priori possible to weigh the importance of
+different factors in a single measure. We illustrate this by con-
+sidering not only the catalytic activity, but also the price of the
+catalyst. Multiobjective optimization problems are common in
+the economics literature, where a common solution is to use
+the Pareto-optimal set, as deﬁned by the economist V. Pareto
+[28,29]. The Pareto-optimal set is the set of solutions that are
+nondominated in the sense that it is impossible to choose an-
+other solution and improve one property without making an-
+other property worse.
+Fig. 3 shows a plot of the methanation activity measure,
+Ediss, and price for all 117 catalyst materials in our study.
+Each alloy is represented by a point, and the Pareto-optimal
+set is indicated. The ﬁgure shows that very good catalysts,
+such as Ru, can be created, but these are also very expen-
+sive. If, on the other hand, cost is the main concern, then
+a less active catalyst, like Fe, is the best candidate. Ni lies
+somewhere in between Ru and Fe and thus represents a
+compromise if only pure metals are considered. Clearly, the
+Ni–Fe alloys stand out because they form a “knee” in the
+Pareto set, making the neighboring solutions in the Pareto
+504
+M.P. Andersson et al. / Journal of Catalysis 239 (2006) 501–506
+Fig. 2. All data points correspond to threefold site oxygen adsorption on heterogeneous binary surface alloys constructed from the same elemental metals as in Fig. 1
+(pure metal overlayers are not included). Red triangles: interpolated values are estimated from arithmetic averaging of the appropriate pure metal binding energies.
+Alloys with components having lattice constants differing by less than 0.2 Å are shown. The average error is 0.17 eV. This scheme does not rigorously account for,
+e.g., strain differences between the pure metals and the surface alloys. Filled circles: interpolated values are estimated from arithmetic averaging of binding energies
+on pure overlayers on the appropriate metal substrate. This scheme thus accounts rigorously for strain and electronic structure effects, and the average error is 0.1 eV.
+Bulk alloys are expected to be in between these two limits, since they always have lattice constants intermediate between the corresponding constants of the pure
+metals composing the alloy.
+Fig. 3. Pareto plot of the activity measure Ediss(M) = |Ediss(M)−Ediss(optimal)| and the cost for 117 elemental metals and bimetallic alloys of the form AxB1−x
+(x = 0, 0.25, 0.50, 1). Each blue point corresponds to a particular alloy. The elemental metals are shown (black), and the Pareto optimal set is also indicated (red).
+The cost of the bimetallic alloys has been approximated by the current commodity price of the constituent elemental metals [37].
+set considerably worse in one respect or the other. Conse-
+quently, we studied the Ni3Fe and NiFe alloys in more de-
+tail.
+Fig. 1a includes the activation energy and dissociation en-
+ergy for CO on step sites on Ni3Fe and NiFe. It can be seen
+that the interpolation method works quite well; the value for the
+alloys is between Ni and Fe and even follows the bulk concen-
+tration x; the point for Ni3Fe is closest to the main component,
+Ni, whereas the point for NiFe is close to the midpoint between
+Fe and Ni. Therefore, the full DFT calculation supports the
+M.P. Andersson et al. / Journal of Catalysis 239 (2006) 501–506
+505
+model behind Fig. 2 and clearly predicts that both Ni3Fe and
+NiFe should be good candidates for catalysts with an activity
+higher than the constituents and close to that of the best cata-
+lysts, Ru and Co. For Ni3Fe, our thermodynamic analysis of the
+free energies of the surface under reaction conditions found that
+the structure included in Fig. 1 is the most stable.
+3.2. Experimental results
+The Ni–Fe catalysts are synthesized and tested as described
+in the Methods section, and the reaction rates are plotted as
+a function of the Fe content in Fig. 4. The experiments com-
+pletely conﬁrm the predictions from computational screening.
+Depending slightly on temperature and concentration, the max-
+imum activity is found either for Ni3Fe or in between Ni3Fe
+and NiFe. The measured value of the catalytic activity for the
+new Ni3Fe-based catalyst is almost as good as that for Co,
+and it is considerably cheaper. Considering that no attempt
+has been made to optimize the preparation method and acti-
+vation procedure, this ﬁnding must be considered quite promis-
+ing.
+Fig. 4. Measured rate of CO removal for a gas containing 2% CO in 1 bar of
+H2 as a function of the Fe content in FeNi alloy catalysts. Results are shown
+for two different temperatures and two metal concentrations.
+4. Discussion
+Fe–Ni alloys have been found to have good catalytic prop-
+erties for a partial oxidation of methane to syngas [30], and the
+catalytic activity of Fe–Ni alloys has also been tested for other
+hydrogenation reactions of carbon-containing compounds, such
+as CO2 methanation [31] and benzene hydrogenation [32], with
+varying success. In particular, it has been found that Ni–Fe al-
+loys are good for CO hydrogenation under Fischer–Tropsch
+conditions (i.e., high CO pressure) [33]. Based on this ﬁnd-
+ing, it may not be very surprising that Fe–Ni alloys are su-
+perior methanation catalysts. Still, we note that even a recent
+state-of-the-art experimental high-throughput screening search
+for methanation catalysts did not ﬁnd the results shown in
+Fig. 4 [15].
+Under the conditions of the present experiments correspond-
+ing to the situation in which small amounts of CO (or CO2)
+are removed from an H2 stream, the best catalysts all have
+methane as the prime product (>90% selectivity). In view of
+the renewed interest in Fischer–Tropsch synthesis in connec-
+tion with the production of clean diesel and other fuels [10,34],
+it would be interesting to extend the present analysis to in-
+clude high CO pressures, at which the product distribution is
+quite different. This cannot be done trivially, however, because
+the optimum value of Ediss determining the overall rate is ex-
+pected to depend on the reaction conditions [35] and because
+for Fischer–Tropsch synthesis, the selectivity is often more in-
+teresting than the overall turnover.
+The predictive power of the DFT calculations relies strongly
+on the fact that the width of the volcano-like relation in Fig. 1b
+is of the order several tenths of an eV—a general ﬁnding making
+rates of complete catalytic reactions considerably less sensitive
+to systematic errors in calculated interaction energies than the
+rate of each of the individual reaction steps [2,3,36]. This is an
+accuracy that can be routinely obtained by current versions of
+the exchange-correlation functional [21].
+5. Conclusion
+In conclusion, we have shown that it is possible to establish
+quantitative descriptors for the catalytic activity of the metha-
+nation reaction by combining catalytic measurements with DFT
+calculations of appropriate properties of the catalyst surface.
+We can then use DFT calculations and models developed based
+on these calculations to screen for new catalysts with better
+catalytic performance. Synthesis and testing of these catalysts
+revealed that they are superior to the conventional Ni catalyst.
+We have also shown that it is possible to perform multivariable
+optimization of catalyst properties, and suggest that the concept
+of the Pareto-optimal set may be useful in catalyst development.
+A number of challenges remain in the development of an
+entirely computational approach to catalyst optimization. The
+ﬁrst of these challenges is to provide a completely ab initio de-
+termination of the optimum value for the descriptor. This will
+entail the development of a reliable kinetic model. The sec-
+ond challenge is to calculate the descriptor parameter directly
+using DFT rather than using the interpolation model applied
+506
+M.P. Andersson et al. / Journal of Catalysis 239 (2006) 501–506
+here. Finally, it is clear that the reaction that we have studied
+is extremely simple, and then more complex reactions with a
+multitude of products will be considerably more demanding.
+For such complex systems, we suggest that for the foreseeable
+future, optimal use of the available computer power will proba-
+bly dictate using a hierarchy of computational approaches, such
+as those illustrated here.
+Acknowledgments
+The authors acknowledge support from the Danish Research
+Agency (grant 26-04-0047) and the Danish Center for Scientiﬁc
+Computing (grant HDW-1103-06). M.P. Andersson acknowl-
+edges a Marie Curie Fellowship through EU grant MEIF-CT-
+2004-011121. J. Greeley acknowledges a H.C. Ørsted Postdoc-
+toral Fellowship from the Technical University of Denmark.
+The Center for Sustainable and Green Chemistry is sponsored
+by the Danish National Research Foundation.
+References
+[1] S. Linic, M.A. Barteau, J. Am. Chem. Soc. 125 (2003) 4034.
+[2] K. Reuter, D. Frenkel, M. Schefﬂer, Phys. Rev. Lett. 93 (2004) 116105.
+[3] K. Honkala, A. Hellman, I.N. Remediakis, A. Logadottir, A. Carlsson,
+S. Dahl, C.H. Christensen, J.K. Nørskov, Science 307 (2005) 555.
+[4] J.K. Nørskov, T. Bligaard, A. Logadottir, S. Bahn, L.B. Hansen, M. Bol-
+linger, H. Bengaard, B. Hammer, Z. Sljivancanin, M. Mavrikakis, Y. Xu,
+S. Dahl, C.J.H. Jacobsen, J. Catal. 209 (2002) 275.
+[5] T. Bligaard, J.K. Nørskov, S. Dahl, J. Matthiesen, C.H. Chistensen, J. Se-
+hested, J. Catal. 224 (2004) 206.
+[6] P. Sabatier, J.B. Senderens, C. R. Acad. Sci. Paris 134 (1902) 514.
+[7] M.A. Vannice, J. Catal. 50 (1977) 228.
+[8] G.A. Somorjai, Introduction to Surface Chemistry and Catalysis, Wiley,
+New York, 1994.
+[9] J. Sehested, S. Dahl, J. Jacobsen, J.R. Rostrup-Nielsen, J. Phys. Chem.
+B 109 (2005) 2432.
+[10] S. Takenaka, T. Shimizu, K. Otsuka, Int. J. Hydrogen Energy 29 (2004)
+1065.
+[11] D.W. Goodman, R.D. Kelley, T.E. Madey, J.T. Yates Jr., J. Catal. 63 (1980)
+226.
+[12] T. Zubkov, G.A. Morgan Jr., J.T. Yates Jr., O. Kuhlert, M. Lisowski,
+R. Schillinger, D. Fick, H.J. Jansch, Surf. Sci. 526 (2003) 57.
+[13] R.A. van Santen, A. de Koster, T. Koerts, Catal. Lett. 7 (1990) 1.
+[14] M. Mavrikakis, M. Bäumer, H.J. Freund, J.K. Nørskov, Catal. Lett. 81
+(2002) 153.
+[15] K. Yaccato, R. Carhart, A. Hagemeyer, A. Lesik, P. Strasser, A.F. Volpe,
+H. Turner, H. Weinberg, R.K. Grasselli, C. Brooks, App. Catal. A:
+Gen. 296 (2005) 30.
+[16] P. Hohenberg, W. Kohn, Phys. Rev. 136 (1964) B864.
+[17] W. Kohn, L.J. Sham, Phys. Rev. 140 (1965) A1133.
+[18] M.C. Payne, M.P. Teter, D.C. Allan, T.A. Arias, J.D. Joannopoulos, Rev.
+Mod. Phys. 64 (1992) 1045.
+[19] J.G. Kresse, J. Furtmüller, Comput. Mater. Sci. 6 (1996) 15.
+[20] D. Vanderbilt, Phys. Rev. B 41 (1990) 7892.
+[21] B. Hammer, L.B. Hansen, J.K. Nørskov, Phys. Rev. B 59 (1999) 7413.
+[22] H.J. Monkhorst, J.D. Pack, Phys. Rev. B 13 (1976) 5188.
+[23] G. Mills, H. Jonsson, G.J. Schenter, Surf. Sci. 324 (1995) 305.
+[24] J. Greeley, J.K. Nørskov, Surf. Sci. 592 (2005) 104.
+[25] In the present paper we employ a different descriptor, Ediss, than in
+Ref. [5]. Now Ediss is evaluated with respect to the strongly adsorbed CO
+precursor state instead of CO in the gas-phase.
+[26] C.J.H. Jacobsen, S. Dahl, B.S. Clausen, S. Bahn, A. Logadottir, J.K.
+Nørskov, J. Am. Chem. Soc. 123 (2001) 8404.
+[27] P. Liu, J.K. Nørskov, Phys. Chem. Chem. Phys. 3 (2001) 3814.
+[28] V. Pareto, Manuale di Economia Politica, Societa Editrice Libraria, Mi-
+lano, 1906, translated to English as: V. Pareto, Manual of Political Econ-
+omy, Macmillan, New York, 1971.
+[29] T. Bligaard, G.H. Johannesson, A.V. Ruban, H.L. Skriver, K.W. Jacobsen,
+J.K. Nørskov, Appl. Phys. Lett. 83 (2003) 4527.
+[30] J.G. Wang, C.J. Liu, Y.P. Zhang, K.L. Yu, X.L. Zhu, F. He, Catal. Today 89
+(2004) 183.
+[31] S. Mori, W.C. Xu, T. Ishidzuki, N. Ogasawara, J. Imai, K. Kobayashi,
+Appl. Catal. A: Gen. 137 (1996) 255.
+[32] B.H. Zeifert, J. Salmones, J.A. Hernandez, R. Reynoso, N. Nava, J.G. Ca-
+banas-Moreno, G. Aguilar-Rios, Catal. Lett. 63 (1999) 161.
+[33] T. Ishihara, K. Eguchi, H. Arai, Appl. Catal. 30 (1987) 225.
+[34] M.E. Dry, Appl. Catal. A: Gen. 276 (2004) 1.
+[35] C.J.H. Jacobsen, S. Dahl, A. Boisen, B.S. Clausen, H. Topsoe, A. Logadot-
+tir, J.K. Nørskov, J. Catal. 205 (2002) 382.
+[36] T. Bligaard, K. Honkala, A. Logadottir, J.K. Nørskov, S. Dahl, C.J.H. Ja-
+cobsen, J. Phys. Chem. B 107 (2003) 9325.
+[37] Average 2004 metal prices taken from the U.S. Geological Survey:
+Mineral Commodity Summaries, http://minerals.usgs.gov/minerals/pubs/
+mcs/.

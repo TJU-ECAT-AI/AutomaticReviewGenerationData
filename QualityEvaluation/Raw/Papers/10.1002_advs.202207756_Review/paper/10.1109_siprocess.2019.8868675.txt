@@ -1,0 +1,893 @@
+element not found
+element not found
+为了改善您的体验，在您同意我们所有网站和应用的情况下，我们（和我们的合作伙伴）在您连接的终端上存储和/或访问您终端上的信息（cookie或对应信息）。
+我们的网站可能会将这些cookie用于：
+不通过资料收集而判定我们网站上广告的受众
+根据您的导航和个人资料展示个性化广告
+根据您的导航个性化我们的编辑内容
+允许您在我们网站上的社交网络或平台上分享内容
+根据您的位置向您发送广告
+隐私政策
+设定偏好
+全部接受
+全部拒绝
+IEEE.org
+IEEE Xplore
+IEEE SA
+IEEE Spectrum
+More Sites
+Donate
+Cart
+Create Account
+Personal Sign In
+Browse
+My Settings
+Help
+Access provided by:
+TIANJIN UNIVERSITY
+Sign Out
+All
+Books
+Conferences
+Courses
+Journals & Magazines
+Standards
+Authors
+Citations
+Images (Beta)
+ADVANCED SEARCH
+Conferences >2019 IEEE 4th International C...
+A New Radar Signal Modulation Recognition Algorithm Based on Time-frequency Transform
+Publisher: IEEE
+Cite This
+PDF
+Jinliang Bai; Lu Gao; Jingpeng Gao; Hu Li; Ran Zhang; Yi Lu
+All Authors
+6
+Cites in
+Papers
+488
+Full
+Text Views
+Abstract
+Document Sections
+I.
+Introduction
+II.
+System Model
+III.
+System Process
+IV.
+Simulation Results and Analysis
+V.
+Conclusion
+Authors
+Figures
+References
+Citations
+Keywords
+Metrics
+Abstract:
+To solve the problem that exist methods of radar signal modulation recognition do not perform well under low SNR, we propose a new modulation recognition algorithm based on time-frequency transform. The algorithm applies time-frequency transform to analysis radar signal in time-frequency domain. Meanwhile, AlexNet, Hu moments and t-SNE are the detailed methods in algorithm to improve the recognition rate. The AlexNet can extract the detailed feature of radar signal based on transfer learning, while the Hu moments can express the shape feature. Thus the fusion of two kinds of feature further improve the recognition rate. The simulation results show that the proposed algorithm can deal with the small sample of radar signal under low SNR. And the recognition rate is 95% at the SNR of 4dB. The proposed algorithm can be employed in electronic reconnaissance for effective reconnaissance under complex environment.
+Published in: 2019 IEEE 4th International Conference on Signal and Image Processing (ICSIP)
+Date of Conference: 19-21 July 2019
+Date Added to IEEE Xplore: 17 October 2019
+ISBN Information:
+DOI: 10.1109/SIPROCESS.2019.8868675
+Publisher: IEEE
+Conference Location: Wuxi, China
+SECTION I.
+Introduction
+As the development of electronic technique, electronic warfare becomes more and more important in the battlefield [1]. Radar signal modulation classification is one of the key branches in electronic warfare [2]. But the traditional methods based on five conventional parameters are not suitable for today’s battlefield environment any more [3]. Due to the particularity of radar signal, the analysis only based on time or frequency cannot express the full features of radar signal. Thus, the method based on time-frequency has been proposed, such as Wigner Ville Distribution (WVD) [4], Short-time Fourier Transform (STFT) [5]. AlexNet wins the championship in the ILSVRC competition in the field of recognition. The AlexNet could extract the detailed feature of the image [6]. In 1962, Hu put forward the invariant moment theory that can be applied in the field of image recognition, which established a statistical feature method for image recognition [7]. Hu moments could extract the shape feature of the image. Generalized regression neural network (GRNN) was proposed by Donald F. Specht in 1991, which is one of the Radial Basis Network [8]. Compared with other neural networks, GRNN has fewer model parameters, shorter training time, and stronger robustness. Based on AlexNet and Hu moments, this paper proposes a new algorithm on radar signal modulation classification. The algorithm uses AlexNet to extract detailed features of TF images and combines Hu moments to get good recognition rate. GRNN is used to classify the modulation modes.
+The rest of the paper is organized as follows. In section II, we give the model of the whole algorithm, including the signal model and system structure. In section III, the detailed process of the proposed algorithm is introduced. We analysis the simulation results in section IV. Finally, we draw a conclusion in section V.
+SECTION II.
+System Model
+A. Signal Model
+To implement the proposed algorithm, it is necessary to generate radar signal. The radar signal can be expressed as follows [9]:
+s(t)=x(t)+n(t)=A
+e
+jϕ(t)
++n(t)
+(1)
+View Source
+where x(t) is the radar signal, n(t) is the white Gaussian noise. A is the amplitude, we suppose A=1 in this paper. ∅(t) is the instantaneous phase of the radar signal. The modulations of radar signal are BPSK, COSTAS, FRANK, LFM, NLFM, Tl, T2, T3 and T4. The detailed instantaneous phase is given in [10].
+B. System structure
+Firstly, this paper uses Pseudo Wigner-Vile Distribution (PWVD) and Smoothed Pseudo Wigner-Ville Distribution (SPWVD) to transform radar signal into time-frequency (T-F) images. Secondly, to extract features of Hu moments, we need to do preprocess on the TF images. Meanwhile, we use AlexNet to extract detailed features based on transfer learning. Thirdly, the features extracted by Hu moments and AlexNet would fuse together. T-SNE is used to reduce the dimension of the features extracted by AlexNet. We normalize both two kinds of features respectively to fuse them. In the end, GRNN could classify these features. The detailed structure of the proposed radar signal modulation recognition system is shown in Fig. 1.
+SECTION III.
+System Process
+A. Time-frequency (T-F) transformation
+WVD was the earliest TF method, which has attracted wide attention because of its good TF aggregation, high time resolution and frequency resolution, and simple calculation. The WVD of signal s(t) can be defined as follow:
+W(t,f)=
+∫
++∞
+−∞
+s(t+
+τ
+2
+)
+s
+∗
+(t−
+τ
+2
+)
+e
+−j2πfτ
+dτ
+(2)
+View Source
+where the ranger of
+τ
+is
+(−∞,+∞)
+, which cannot be satisfied in practice. And in order to solve the problem of cross-terms generated by the bilinear of WVD, the WVD is usually smoothed in frequency domain. When the core function only does windowing interception on
+τ
+to low cross-terms, we can get PWVD:
+PWV
+D
+s
+(t,ω)=
+∫
++∞
+−∞
+h(τ)s(t+
+τ
+2
+)
+s
+∗
+(t−
+τ
+2
+)
+e
+−jwτ
+dτ
+(3)
+View Source
+where h(τ) is the window function, like the exponential function. PWVD could smooth the cross-terms on the direction of variable τ and low the cross-term resolution on the direction of variable τ.
+When the core function does windowing interception both on t and τ, we could smooth the cross-terms on the direction of t and τ to get SPWVD:
+SPWV
+D
+s
+(t,ω)=
+∫
++∞
+−∞
+∫
++∞
+−∞
+g(u)h(τ)s(t−u+
+τ
+2
+)
+s
+∗
+(t−u−
+τ
+2
+)
+e
+−jωτ
+dudτ
+(4)
+View Source
+where g(u) and h(τ) are two even window functions, h(0)=g(0)=1
+PWVD and SPWVD greatly improve the performance of signal analysis, with smoother edges and fewer miscellaneous items. The paper chose both of two TF transformation methods to generate the TF images. Fig.2 shows the PWVD and SPWVD of BPSK signal. The vertical axis is sampling point and the horizontal axis is frequency.
+Figure 1.
+The radar signal modulation recognition system.
+Show All
+Figure 2.
+PWVD and SPWVD of BPSK signal
+Show All
+B. Feature extraction
+The T-F images of different radar signals have different features, we could classify radar signals through extracting features. Because of the noise and cross-terms, there are much interference information in T-F images. It is necessary to preprocess TF images to filter noise and reduce redundant information, which can enhance the proportion of signal information in T-F images, before feature extraction. The flow chart of the preprocessing on T-F images is shown in Fig.3.
+Figure 3.
+The preprocessing on T-F images
+Show All
+The T-F image could be represented by a M × N matrix C. To the pixel of colorful image, whose three components are red (R), green (G) and blue (B), the grayscale equation can be expressed as
+I
+fg
+=0.3
+B
+fg
++0.59
+G
+fg
++0.11
+R
+fg
+(5)
+View Source
+where
+0<f≤M,0<g≤N
+But the difference of the grayscale value is not obvious in T-F image, it is useful to normalize the gray value of T-F image to reduce the imbalance among data.
+I
+^
+fg
+=(
+I
+fg
+−
+I
+¯
+¯
+¯
+)/
+1
+MN−1
+∑
+f=1
+M
+∑
+g=1
+N
+(
+I
+fg
+−
+I
+¯
+¯
+¯
+)
+2
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+−
+
+⎷
+
+
+(6)
+View Source
+In gray image, the high gray value represents radar signal while the low gray value represents the noise, we can binarize the image, which can also low the amount of calculation.
+P
+fg
+={
+1
+0
+I
+fg
+≥TH
+I
+fg
+< TH
+(7)
+View Source
+where TH is the binarization threshold, in this paper, we let TH=0.4 Through the preprocessing of T F image, we could get a M× N binary matrix P
+a. Hu moments
+The invariant moment theory algorithm is to extract moment features with translation, rotation and scale invariance to achieve the description of image regional features. The (p+q) order origin moment mpq, central moment upq, and normalized central moment ηpq can be defined as follow:
+m
+pq
+=
+∑
+x=0
+M−1
+∑
+y=0
+N−1
+x
+p
+y
+q
+P(x,y)
+(8)
+View Source
+u
+pq
+=
+∑
+x=0
+M−1
+∑
+y=0
+N−1
+(x−
+x
+¯
+¯
+¯
+)
+p
+(y−
+y
+¯
+¯
+¯
+)
+q
+P(x,y)
+(9)
+View Source
+η
+pq
+=
+u
+pq
+u
+r
+00
+,r=
+p+q
+2
+,p+q=2,3,…
+(10)
+View Source
+where
+x
+¯
+¯
+¯
+=
+m
+10
+/
+m
+00
+and
+y
+¯
+¯
+¯
+=
+m
+01
+/
+m
+00
+Hu gets seven function formulas based on normalized central moment.
+⎧
+⎩
+⎨
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+⎪
+h
+1
+=
+η
+20
++
+η
+02
+h
+2
+=
+(
+η
+20
++
+η
+02
+)
+2
++4
+η
+2
+11
+h
+3
+=
+(
+μ
+30
+−3
+η
+12
+)
+2
++
+(
+η
+30
+−3
+η
+21
+)
+2
+h
+4
+=
+(
+η
+30
++
+η
+12
+)
+2
++
+(
+η
+03
++
+η
+21
+)
+2
+h
+5
+=(
+η
+30
+−3
+η
+12
+)(
+η
+30
++
+η
+12
+)[
+(
+η
+30
++
+η
+12
+)
+2
+−3
+(
+η
+03
++
+η
+21
+)
+2
+]
++(
+η
+03
+−3
+η
+21
+)(
+η
+03
++
+η
+21
+)[
+(
+η
+03
++
+η
+21
+)
+2
+−3
+(
+η
+30
++
+η
+12
+)
+2
+]
+h
+6
+=(
+η
+20
+−
+η
+02
+)[
+(
+η
+30
++
+η
+12
+)
+2
+−
+(
+η
+03
++
+η
+21
+)
+2
+]
++4
+η
+11
+(
+η
+30
++
+η
+12
+)(
+η
+03
++
+η
+21
+)
+h
+7
+=3(
+η
+21
+−
+η
+03
+)(
+η
+30
++
+η
+12
+)[
+(
+η
+30
++
+η
+12
+)
+2
+−3
+(
+η
+03
++
+η
+21
+)
+2
+]
++3(
+η
+12
+−
+η
+30
+)(
+η
+03
++
+η
+21
+)[3
+(
+η
+30
++
+η
+12
+)
+2
+−
+(
+η
+03
++
+η
+21
+)
+2
+]
+(11)
+View Source
+We extract these seven Hu moments as the features of T-F images.
+b. AlexNet
+Because CNN could extract features automatically and comprehensively, it is usually applied in the field of image recognition. But it does not work well under small amount of samples. In order to solve this problem, this paper extracts features with the AlexNet based on transfer learning. The structure of AlexNet can be described in a sequence of functions as Input (227× 227× 3) - Convl (55× 55× 96) - Pooling 1 (27× 27× 96)- Norm 1- Conv2 (227× 227× 256)- Pooling2 (13× 13× 256) - Norm2 -Conv3 (13× 13× 384) - Conv4 (13× 13× 384\) - Conv5 (13× 13× 256\) - Pooling5 (6× 6× 256)-FC6(1× 1× 4096)-Drop6-FC7(1× 1× 4096) -Drop7-FC8(1× 1× 1000)- Output (1× 1× 1000).
+CNN can deal with the RGB images directly, so does AlexNet. We first adjust the TF images in to RGB pictures with the size of 227× 227× 3 Then we send the pictures into AlexNet without changing the pre-trained parameters. Based on the theory of transfer learning, we choose the input layer to FC7 layer as feature extraction module. The data output from FC7 is the feature we need.
+C. Feature fusion
+In this paper, we use GRNN as our classifier. We extract radar signal features from Hu moments and AlexNet, it is necessary to fuse them together before classification.
+The high dimension of data is one of the characteristic of CNN. The features extracted by AlexNet in this paper have 4096 dimensions, while the features extracted through Hu moments only have 7 dimensions. The high dimension would both bring the large computation and make the Hu moments ignored in the classifier. We use t-SNE to reduce the dimension of AlexNet data.
+The t-SNE is improved from Stochastic Neighbor Embedding (SNE). The SNE algorithm transforms the Euclidean distance between data points in high dimensional space into conditional probability of similarity between data points. The features extracted by AlexNet could be represented as
+F
+A
+=[
+f
+1
+, 
+f
+2
+,
+f
+3
+,,, 
+f
+4096
+]
+, thus the conditional probability of similarity between fpq and fpq could be represented as
+P
+l|k
+=
+exp(−||
+f
+k
+−
+f
+l
+∥
+2
+/2
+σ
+2
+k
+)
+∑
+k≠m
+exp(−∥
+f
+k
+−
+f
+m
+|
+|
+2
+/2
+σ
+2
+k
+)
+(12)
+View Source
+where
+σ
+k
+is the vector variance of the gauss function in the center of fk
+While the t-SNE uses symmetrical SNE calculation, to be specific, it replaces the condition probability in SNE with the joint probability between high dimensional data points and the corresponding low dimensional data points. At the same time, in order to solve the problem that the congestion of data points in SNE, gauss probability distribution is used in high dimensional space while t-distribution is used in low dimensional space.
+The joint probability in high dimensional space is
+P
+kl
+=
+p
+l|k
+−
+p
+k|l
+2n
+(13)
+View Source
+where n is the length of FAlexNet.
+The joint probability of the corresponding low dimensional space is
+q
+kl
+=
+(1+∥
+y
+k
+−
+y
+l
+∥
+2
+)
+−1
+∑
+e≠r
+(1+∥
+y
+e
+−
+y
+r
+∥
+2
+)
+−1
+(14)
+View Source
+The ultimate objective of this method is to minimize the KL divergence between high dimensional sample similarity P and low dimensional sample Q to obtain the optimal result.
+U(ε)=KL(P∥Q)=
+∑
+k≠/
+p
+kl
+p
+kl
+q
+kl
+(15)
+View Source
+δU
+δ
+y
+k
+=4
+∑
+j
+(
+p
+kl
+−
+q
+kl
+)(
+y
+k
+−
+y
+l
+)(1+∥
+y
+k
+−
+y
+m
+∥
+2
+)
+−1
+(16)
+View Source
+where yk is the data representation in low dimensional space.
+Thus the features after t-SNE could be represented as FAlexNet, and the features extracted by Hu moments could be represented as FHu The features after fusion could be expressed as
+F=[
+F
+AlexNet
+, 
+F
+Hu
+]
+, we send F into GRNN to realize the classification, similar to the classification method in [8].
+SECTION IV.
+Simulation Results and Analysis
+We first need to generate the data sets contain the radar signals under different SNR. In our experiments, every kinds of signal has 500 under different SNR. In this paper, we choose the SNR from -3-6dB. We randomly divide them into training set and test set in the proportion of 7:3. To ensure the reliability of the experiment, we repeat 300 times to get the average recognition rate. The detailed simulation results are shown as follow.
+Figure 4.
+The performance of t-SNE of training and test set
+Show All
+From the Fig 4, we can clearly see the signals are classified into nine groups. Every group has its own area, only a few signals are classified into other signals. The t-SNE calculate these groups based on the features. In other words, the proposed algorithm can extract features comprehensively and correctly. It is because that the AlexNet can fully extract the detailed information of TF images, and the supplement of Hu moments can express the signal well.
+AlexNet has three full connection layers, the selection of full connection layer would affect the recognition of the algorithm. Fig 5 clearly shows the recognition rate of the proposed algorithm would be the highest when we choose FC7 layer.
+Figure 5.
+The recognition of different full connection layers
+Show All
+Fig.6 shows the recognition rate of different feature extraction methods. The proposed algorithm is always the highest among the three methods. It is proved that the fusion of features can improve the recognition rate. What’s more, the performance of AlexNet is worse than the Hu moments under low SNR. Because AlexNet cannot extract features under low SNR due to the noise. While Hu moments only extract the fixed features, it performs better that AlexNet. But AlexNet exceeds Hu moments at 3dB. This is because the high SNR has little interference, AlexNet could extract features comprehensively. And the combination of AlexNet and Hu moments make the algorithm have good performance under all SNR.
+Figure 6.
+The recognition rate of different feature extraction
+Show All
+Fig.7 shows the recognition rate of the proposed algorithm under -3-6dB. We can see the recognition rate would increase as the SNR increases. The recognition rate of training set reached 89% at 0dB, which means the proposed algorithm has a good recognition rate. What’s more, the trend of test set is similar as training set. It shows that there is no over-fitting or under-fitting in classifier. The Fig 6 proves the proposed algorithm can apply on radar signal modulation classification well.
+Figure 7.
+The recognition rate of proposed algorithm
+Show All
+SECTION V.
+Conclusion
+This paper proposes a radar signal modulation recognition algorithm based on AlexNet and Hu moments to deal with the small sample of radar signal under low SNR. We apply AlexNet to extract the detailed features of T-F images. The transfer learning can solve the problem that CNN cannot deal with small samples and low SNR. And the fusion with Hu moments can improve the recognition rate. The simulation results show that the recognition rate of the proposed algorithm is better than other recognition algorithms based on single feature extraction methods.
+ACKNOWLEDGMENT
+This paper is funded by the Fundamental Research Funds for the Central Universities (HEUC FG201832), the Key Laboratory Foundation Project of National Defense Science and Technology Bureau (KY10800180080) and the China Shipbuilding Industry Corporation 722 Research Institute Fund Project (KY10800170051).
+Authors
+Figures
+References
+Citations
+Keywords
+Metrics
+More Like This
+Considering the Parameters of Pulse Width Modulation Voltage to Improve the Signal-to-Noise Ratio of Partial Discharge Tests for Inverter-Fed Motors
+IEEE Transactions on Industrial Electronics
+Published: 2022
+Inverse Synthetic Aperture Radar Imaging at Low Signal-to-noise Ratio
+2010 International Conference on Artificial Intelligence and Computational Intelligence
+Published: 2010
+Show More
+References
+1.
+Ravi Kishore, T and K. Deergha Rao, "Automatic IntraPulse Modulation Classification of Advanced LPI Radar Waveforms", IEEE Transactions on Aerospace and Electronic Systems, vol. 53, pp. 901-914, Apr. 2017.
+Show in Context
+Google Scholar
+2.
+E. L. Key, "Detecting and classifying low probability of intercept radar [Book Review]", IEEE Aerospace & Electronic Systems Magazine, vol. 19, pp. 42-44, June. 2004.
+Show in Context
+Google Scholar
+3.
+Montazer, Gholam Ali, H. Khoshniat and V. Fathi, "Improvement of RBF neural networks using Fuzzy-OSD algorithm in an online radar pulse classification system", Applied Soft Computing Journal, vol. 13, pp. 3831-3838, Sept. 2013.
+Show in Context CrossRef Google Scholar
+4.
+Zuo, Lei, M. Li and X. G. Xia, "New Smoothed Time-Frequency Rate Representations for Suppressing Cross Terms", IEEE Transactions on Signal Processing, vol. 65, pp. 733-747, Feb. 2017.
+Show in Context View Article
+Google Scholar
+5.
+Ljubiša Stanković, "On the STFT Inversion Redundancy", IEEE Transactions on Circuits & Systems II Express Briefs, vol. 63, pp. 284-288, Sept. 2015.
+Show in Context Google Scholar
+6.
+Lee, Sang-Geol et al., "Variations of AlexNet and GoogLeNet to Improve Korean Character Recognition Performance", Journal of Information Processing Systems, vol. 14, pp. 205-217, Feb. 2018.
+Show in Context Google Scholar
+7.
+Hu, Hai-tao et al., "Orthogonal moments based on exponent functions: exponent-Fourier moments", Pattern Recognition, vol. 47, pp. 2596-2606, Aug. 2014.
+Show in Context CrossRef Google Scholar
+8.
+Majumder, Himadri and Kalipada Maity, "Application of GRNN and multivariate hybrid approach to predict and optimize WEDM responses for Ni-Ti shape memory alloy", Applied Soft Computing, vol. 70, pp. 665-679, Sept. 2018.
+Show in Context CrossRef Google Scholar
+9.
+Zhang, Ming, Ming Diao and Limin Guo, "Convolutional neural networks for automatic cognitive radio waveform recognition", IEEE Access vol. 5 June, pp. 11074-11082, 2017.
+Show in Context View Article
+Google Scholar
+10.
+Ravi Kishore, T and K. Deergha Rao, "Automatic IntraPulse Modulation Classification of Advanced LPI Radar Waveforms", IEEE Transactions on Aerospace and Electronic Systems, vol. 53, pp. 901-914, Apr. 2017.
+Show in Context View Article
+Google Scholar
+View More
+IEEE Personal Account
+CHANGE USERNAME/PASSWORD
+Purchase Details
+PAYMENT OPTIONS
+VIEW PURCHASED DOCUMENTS
+Profile Information
+COMMUNICATIONS PREFERENCES
+PROFESSION AND EDUCATION
+TECHNICAL INTERESTS
+Need Help?
+US & CANADA: +1 800 678 4333
+WORLDWIDE: +1 732 981 0060
+CONTACT & SUPPORT
+Follow
+About IEEE Xplore | Contact Us | Help | Accessibility | Terms of Use | Nondiscrimination Policy | IEEE Ethics Reporting | Sitemap | IEEE Privacy Policy
+A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+© Copyright 2024 IEEE - All rights reserved, including rights for text and data mining and training of artificial intelligence and similar technologies.

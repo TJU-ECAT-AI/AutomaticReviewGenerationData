@@ -1,0 +1,925 @@
+Energy band gaps and lattice parameters evaluated with the Heyd-Scuseria-Ernzerhof screened hybrid functional
+Jochen Heyd;
+Juan E. Peralta;
+Gustavo E. Scuseria;
+Richard L. Martin
+Author & Article Information
+J. Chem. Phys. 123, 174101 (2005)
+https://doi.org/10.1063/1.2085170
+Article history
+element not found
+为了改善您的体验，在您同意我们所有网站和应用的情况下，我们（和我们的合作伙伴）在您连接的终端上存储和/或访问您终端上的信息（cookie或对应信息）。
+我们的网站可能会将这些cookie用于：
+不通过资料收集而判定我们网站上广告的受众
+根据您的导航和个人资料展示个性化广告
+根据您的导航个性化我们的编辑内容
+允许您在我们网站上的社交网络或平台上分享内容
+根据您的位置向您发送广告
+隐私政策
+设定偏好
+全部接受
+全部拒绝
+All Content
+AIP Publishing Portfolio
+The Journal of Chemical Physics
+                             Advanced Search
+|
+Citation Search
+Institutional Accounts
+Sign In
+HOME
+BROWSE
+COLLECTIONS
+PUBLISH WITH US
+ABOUT
+Volume 123, Issue 17
+1 November 2005
+Previous Article
+Next Article
+I. INTRODUCTION
+II. THE SEMICONDUCTOR/40 TEST SET
+III. COMPUTATIONAL DETAILS
+IV. RESULTS AND DISCUSSION
+A. Basis Set And Relativistic Effects
+B. Lattice Constants
+C. Band Gaps
+V. CONCLUSIONS
+ACKNOWLEDGMENTS
+REFERENCES
+Supplementary Material
+RESEARCH ARTICLE| OCTOBER 28 2005
+Energy band gaps and lattice parameters evaluated with the Heyd-Scuseria-Ernzerhof screened hybrid functional
+Jochen Heyd;
+Juan E. Peralta;
+Gustavo E. Scuseria;
+Richard L. Martin
+Author & Article Information
+J. Chem. Phys. 123, 174101 (2005)
+https://doi.org/10.1063/1.2085170
+Article history
+Split-Screen
+Views
+PDF
+Share
+Tools
+This work assesses the Heyd-Scuseria-Ernzerhof (HSE) screened Coulomb hybrid density functional for the prediction of lattice constants and band gaps using a set of 40 simple and binary semiconductors. An extensive analysis of both basis set and relativistic effects is given. Results are compared with established pure density functionals. For lattice constants, HSE outperforms local spin-density approximation (LSDA) with a mean absolute error (MAE) of 0.037 Å for HSE vs 0.047 Å for LSDA. For this specific test set, all pure functionals tested produce MAEs for band gaps of 1.0–1.3 eV, consistent with the very well-known fact that pure functionals severely underestimate this property. On the other hand, HSE yields a MAE smaller than 0.3 eV. Importantly, HSE correctly predicts semiconducting behavior in systems where pure functionals erroneously predict a metal, such as, for instance, Ge. The short-range nature of the exchange integrals involved in HSE calculations makes their computation notably faster than regular hybrid functionals. The current results, paired with earlier work, suggest that HSE is a fast and accurate alternative to established density functionals, especially for solid state calculations.
+Topics
+Heyd-Scuseria-Ernzerhof hybrid functional, Density functional theory, Local density approximations, Band gap, Basis sets, Relativistic effects, Spin-orbit interactions, Hybrid density functional calculations, Crystal lattices, GW-approximation
+I. INTRODUCTION
+For many years, the local spin-density approximation1 (LSDA) has reigned supreme for applications in solid-state physics. Structural properties such as lattice constants and bulk moduli are predicted with good accuracy. However, LSDA results for electronic properties such as band gaps are of much lower quality.2 Improvements in density-functional theory (DFT) have first led to generalized-gradient approximations (such as the Perdew-Burke-Ernzerhof3 or PBE functional) and meta-generalized-gradient approximations (such as the Tao-Perdew-Staroverov-Scuseria4 or TPSS functional). The newer approaches do not necessarily improve all calculated properties.5,6 For example, predicted lattice constants are generally more accurate with LSDA than PBE or TPSS,6 and the severe underestimation of band gaps given by LSDA only improves marginally with these other functionals.
+Several approaches that improve the band gaps predicted by LSDA have been developed. The most widely used in the solid-state physics community are the “scissor operator” approach,7 the
+LSDA
++
+U
+⁠,8–10 and Green’s-function-based methods, such as the GW approximation.11 In contrast to LSDA, these approaches succeed in describing the band gaps of semiconductors, although in general they rely on LSDA-optimized lattice parameters.
+There is a distinct need for a universally applicable method that does not contain any system-dependent parameters and is computationally feasible for a wide range of systems. Ideally, such a method would be equally suited for both molecules and solids, providing reliable results for predicted properties. Also, computing analytic energy derivatives is desirable. For molecules, hybrid functionals,12 which include a portion of exact Hartree-Fock (HF) exchange, satisfy part of these requirements and consistently yield excellent results.13,14 However, there are two main issues concerning hybrid DFT calculations in solids. First, exact exchange interactions in three-dimensional metals are doomed to fail.15 Second, even for finite band-gap systems (where calculations are feasible), the CPU time requirement of traditional hybrid functionals is extremely high, especially for systems with small band gaps. The culprit for the limited applicability of traditional hybrid functionals in solid-state physics is the inherently long-range character of HF exchange.16–18 The decay of exact exchange interactions is highly band gap dependent. Systems with large gaps can be treated efficiently but convergence problems and demands for very large amounts of CPU time surface for semiconductors. These problems can be circumvented by employing a screened Coulomb potential for the exchange interaction. Such screened potentials have been previously proposed for solid-state physics calculations19 and also in quantum chemistry.20–24 A screened Coulomb potential is based on a splitting of the Coulomb operator into short-range (SR) and long-range (LR) components. The Heyd-Scuseria-Ernzerhof (HSE) hybrid functional14,17 employs a screened, short-range HF exchange instead of the full exact exchange to avoid the problems mentioned above. In this way, metals, semiconductors, and insulators, as well as molecular systems, can be efficiently treated using the same approach.
+The screened terms in HSE result from splitting the Coulomb operator into short- and long-range terms in the following fashion:
+(1)
+where the complementary error function
+erfc
+(
+ω
+r
+)
+=
+1
+−
+erf
+(
+ω
+r
+)
+and
+ω
+determines the range. For
+ω
+=
+0
+⁠, the long-range term becomes zero and the SR term is equivalent to the full Coulomb operator. The opposite is the case for
+ω
+→
+∞
+⁠. The functional form of HSE is based on the PBEh hybrid functional (also known in the literature as PBE1PBE and PBE0).25,26 The expression for the HSE exchange-correlation energy is:
+E
+xc
+HSE
+=
+a
+E
+x
+HF
+,
+SR
+(
+ω
+)
++
+(
+1
+−
+a
+)
+E
+x
+ω
+PBE
+,
+SR
+(
+ω
+)
++
+E
+x
+ω
+PBE
+,
+LR
+(
+ω
+)
++
+E
+c
+PBE
+,
+(2)
+where
+E
+x
+HF
+,
+SR
+is the SR HF exchange.
+E
+x
+ω
+PBE
+,
+SR
+and
+E
+x
+ω
+PBE
+,
+LR
+are the short- and long-range components of the PBE exchange functional,
+ω
+is the splitting parameter, and
+a
+=
+1
+∕
+4
+is the HF mixing constant (determined analytically via perturbation theory27,28). If
+ω
+=
+0
+⁠, HSE is equivalent to PBEh and if
+ω
+→
+∞
+⁠, HSE tends toward the pure PBE functional. A detailed derivation of the individual terms can be found in Refs. 14, 17, and 18. The HSE form can be viewed as an adiabatic connection functional only for the short-range portion of exchange, whereas long-range exchange and correlation are treated at the PBE generalized-gradient approximation (GGA) level.
+The HSE functional has performed well in a number of previous studies. First, the effect of the screening parameter
+ω
+has been examined for a large number of enthalpies of formation.14 The
+ω
+dependence of this property was only slight, with a range of possible values
+(
+0.15
+a
+0
+−
+1
+<
+ω
+<
+0.30
+a
+0
+−
+1
+)
+⁠. This fact, coupled with preliminary results for solids, has previously led us to choose
+ω
+=
+0.15
+a
+0
+−
+1
+⁠. This value is system independent. Both enthalpies of formation and various other predicted properties for molecules were observed to be on par with the best traditional hybrid functionals such as PBEh and Becke-3-Lee-Yang-Par29 (B3LYP). In fact, preliminary evidence suggests30 that the SR HF exchange accounts for nearly all the improved thermochemical results of hybrid functionals (compared to pure DFT functionals).
+HSE was previously benchmarked on a set of 21 metallic, semiconducting, and insulating solids.18 Results for lattice constants, bulk moduli, and band gaps showed a substantial improvement over pure density functionals with only a modest increase in CPU time. HSE has also been successfully applied to a series of actinide oxide compounds,31,32 as well as semiconducting PtO33 and metallic PtN.34 
+The universal applicability of HSE stands in stark contrast to both traditional hybrid functionals and other screened Coulomb approaches. An interesting, early attempt by Adamson et al.20 and Gill et al.21 screened all Coulomb interactions in molecules but yielded results far from experiment. Other methods22,23,35 make use of the LR HF component and are thus not as suitable for solids. The work by Bylander and Kleinman36 bears connection to the HSE functional but does not make use of the improvements found in GGA exchange-correlation functionals.
+The goal of this study is an in-depth assessment of the HSE screened hybrid functional for the prediction of both lattice constants and band gaps in three-dimensional solids. To this end, we have selected a set of 40 simple and binary systems (mostly semiconductors) where experimental data is available. The following sections first outline the test set and computational methods. Then both basis set and relativistic effects are examined. Finally, we present results for the LSDA, PBE, TPSS, and HSE functionals and compare them.
+II. THE SEMICONDUCTOR/40 TEST SET
+Semiconducting materials are of great technological importance. The accurate prediction of both their structural and electronic properties has received much attention in the past decades. Nonetheless, the authors are not aware of a standard test set used to evaluate the performance of new methods for semiconductors (even though review articles such as Ref. 11 include some collected results). We therefore chose a set of semiconductors based on the following criteria: All considered systems were both closed shell and of simple or binary composition. We preferred solids with simple zinc-blende or rock salt structures but did include several systems with wurtzite structures. In addition, the availability of experimental data for lattice constants (and to a lesser extent band gaps) was an important factor.
+These criteria led to the semiconductor/40(SC/40) set of 40 solids containing 13 group IIA-VI systems, 6 group IIB-VI systems, 17 group III-V systems, and 4 group IV systems. Table I contains a full list of all compounds and references to the experimental data shown in the Results section. A few systems with larger band gaps (diamond, BN, AlN, MgO, and MgS) were included since they otherwise fit into this systematic study. An effort was made to cross-check several experimental results and to cite the most recent data, but for some systems, only a single experimental source was available. Also, several experimental numbers are extrapolations from tertiary alloys. For our purposes, however, these results are still sufficiently accurate. The band gaps cited mostly correspond to the lowest excitation energy (direct or indirect gap). For systems with experimentally known spin-orbit splitting, the weighted average was used as the scalar-relativistic (i.e., neglecting spin-orbit coupling) band gap. The calculated band gaps, presented below, were obtained at the optimized structures for each functional. All experimental and optimized structures, as well as the basis sets used (see below), are available as supplementary material through the EPAPS depository.37 
+Table I.
+Systems, structures, experimental references for the SC/40 set of semiconductors, and the Gaussian basis sets used in this work.
+Solid Structure References Basis seta
+C  A2  diamond  48    1 
+Si  A2  diamond  48    1 
+Ge  A2  diamond  48    2 
+SiC  B3  zinc blende  48   
+1
+∕
+1
+  BN  B3  zinc blende  49   
+1
+∕
+1
+  BP  B3  zinc blende  48   
+1
+∕
+1
+  BAs  B3  zinc blende  50   
+1
+∕
+2
+  BSb  B3  zinc blende  48   
+1
+∕
+2
+  AlN  B4  wurtzite  51   
+1
+∕
+1
+  AlP  B3  zinc blende  52   
+1
+∕
+1
+  AlAs  B3  zinc blende  52   
+1
+∕
+2
+  AlSb  B3  zinc blende  53   
+1
+∕
+2
+  GaN  B4  wurtzite  54   
+2
+∕
+1
+  GaN  B3  zinc blende  55   
+2
+∕
+1
+  GaP  B3  zinc blende  48   
+2
+∕
+1
+  GaAs  B3  zinc blende  48   
+2
+∕
+2
+  GaSb  B3  zinc blende  56   
+2
+∕
+2
+  InN  B4  wurtzite  51 and 57   
+2
+∕
+1
+  InP  B3  zinc blende  53   
+2
+∕
+1
+  InAs  B3  zinc blende  53   
+2
+∕
+2
+  InSb  B3  zinc blende  53   
+2
+∕
+2
+  ZnS  B3  zinc blende  58 and 59   
+3
+∕
+1
+  ZnSe  B3  zinc blende  58 and 59   
+3
+∕
+2
+  ZnTe  B3  zinc blende  58 and 60   
+3
+∕
+2
+  CdS  B3  zinc blende  58   
+3
+∕
+1
+  CdSe  B3  zinc blende  58   
+3
+∕
+2
+  CdTe  B3  zinc blende  58   
+3
+∕
+2
+  MgO  B1  cubic  49   
+1
+∕
+1
+  MgS  B3  zinc blende  61   
+1
+∕
+1
+  MgSe  B1  cubic  62   
+1
+∕
+2
+  MgTe  B3  zinc blende  63   
+1
+∕
+2
+  CaS  B1  cubic  64   
+3
+∕
+1
+  CaSe  B1  cubic  64   
+3
+∕
+2
+  CaTe  B1  cubic  64   
+3
+∕
+2
+  SrS  B1  cubic  65   
+3
+∕
+1
+  SrSe  B1  cubic  65   
+3
+∕
+2
+  SrTe  B1  cubic  66   
+3
+∕
+2
+  BaS  B1  cubic  67 and 68   
+3
+∕
+1
+  BaSe  B1  cubic  67 and 68   
+3
+∕
+2
+  BaTe  B1  cubic  67 and 68   
+3
+∕
+2
+  a
+1
+=
+m
+-
+6
+-
+311
+G
+*
+,
+2
+=
+m
+-pVDZ-PP, and
+3
+=
+m
+-S-RSC (available in Ref. 37).
+III. COMPUTATIONAL DETAILS
+We have previously implemented the HSE functional into the GAUSSIAN suite of programs.38 All calculations employed the periodic boundary-condition (PBC) code39 available in GAUSSIAN. Three-dimensional, self-consistent, closed-shell spin-restricted Kohn-Sham calculations were performed on all systems. The short-range HF exchange interactions were calculated in real space using an adaptation of the near field exchange (NFX) method40 for periodic systems. Gaussian basis sets were used throughout this work.
+All calculations converged the self-consistent field procedure to an accuracy of
+10
+−
+8
+hartree in the total energy per unit cell. SR exchange integrals smaller than
+10
+−
+8
+a.u.
+were neglected. This rather drastic cutoff is made possible by the guaranteed exponential decay of the short-range exchange integrals. Even with this cutoff, total energies are accurate to
+10
+−
+6
+hartree. The numerical cutoffs typically used in periodic HF calculations with the full
+1
+∕
+r
+Coulomb potential (instead of the SR portion in HSE) have similar small effects, on total energies, at least in our code.40 The reciprocal space integration was performed using at least 12
+k
+points in each dimension for the pure density functionals and at least 24
+k
+points in each dimension for the HSE hybrid functional.
+All results were obtained on either dual processor AMD Athlon
+1800
++
+or quad processor AMD Opteron 848 computers. CPU times for the geometry optimizations varied from a few hours to several days depending on the number of electrons and complexity of the system.
+IV. RESULTS AND DISCUSSION
+Our current work focuses on lattice parameters and band gaps of the systems in the SC/40 test set. Since we are using Gaussian-type basis sets and relativistic effects cannot be neglected in many systems of our test set, a closer look at both basis set and relativistic effects is in order.
+A. Basis set and relativistic effects
+All basis sets used are modified molecular Gaussian basis sets. Modifications are necessary since good-quality molecular basis sets normally include diffuse functions to model tails of wave functions that do not exist in solids. These diffuse functions unnecesarily slow down the calculations (making the Coulomb near field of the fast multipole method much slower),41 and may lead in some cases to numerical noise originating from the truncation scheme for exchange in solids. Diffuse exponents also heavily contribute to linear dependencies but these are eliminated in our program in the same way that it is done for molecules (i.e., diagonalizing the overlap matrix and removing combinations of basis functions whose eigenvalue is below a certain threshold). As a general rule, all basis functions in this work with exponents below 0.12 were removed. In cases where gaps between exponents were evidently too large, we added basis functions to produce an even-tempered series (for exponents less than 1.2). These modified basis sets are henceforth denoted with an
+m
+-prefix and available as supplementary material through the EPAPS depository.37 
+For the lighter elements in the SC/40 test set, a modified
+6
+-
+311
+G
+*
+basis was chosen. Extensive tests on several systems showed this basis to be sufficient for structural parameters and band gaps. As an example, Table II shows the basis set dependence of the lattice constant and band gap for Silicon. Both properties are well converged with this basis. Notably, removing the diffuse functions (going from
+6
+-
+311
+G
+*
+to
+m
+-
+6
+-
+311
+G
+*
+⁠) only affected the results slightly.
+Table II.
+Basis set dependence for silicon.
+m
+-denotes a modified basis set (see text).
+Basis LSDA PBE TPSS HSE
+   Lattice constant (Å) 
+6
+-
+31
+G
+*
+  5.426  5.490  5.477  5.454 
+6
+-
+311
+G
+*
+  5.413  5.483  5.469  5.448 
+m
+-
+6
+-
+311
+G
+*
+  5.410  5.479  5.466  5.444 
+m
+-
+6
+-
+311
+G
+(
+2
+d
+)
+  5.408  5.480  5.469  5.446 
+   Band gap (eV) 
+6
+-
+31
+G
+*
+  0.52  0.71  0.78  1.31 
+6
+-
+311
+G
+*
+  0.56  0.75  0.78  1.34 
+m
+-
+6
+-
+311
+G
+*
+  0.58  0.75  0.82  1.28 
+m
+-
+6
+-
+311
+G
+(
+2
+d
+)
+  0.58  0.75  0.84  1.29 
+Relativistic effects come into play for atoms in or below the fourth period. Thirty-one of the 40 systems studied here contain such elements. Therefore, the inclusion of relativistic effects has been examined. We compared nonrelativistic all-electron calculations and both large- and small-core relativistic effective core potential (RECP) calculations. As a benchmark, scalar-relativistic all-electron calculations with a fully uncontracted
+m
+-cc-pVTZ basis set were used. Scalar-relativistic calculations were carried out using the Douglas-Kroll-Hess approximation42–44 as implemented for periodic systems in our group.45 This all-electron full-potential approach allows the treatment of all electrons on an equal footing. All-electron scalar-relativistic calculations for solids are notably more demanding in terms of CPU requirements than its RECP counterparts. Moreover, as analytic forces are not yet available in our code for this case, numerical differentiation has been carried out to obtain the minimum-energy lattice constant (see Ref. 45 for further details), making the computations even more demanding. Therefore, we limit this benchmark to four representative systems: Ge, BAs, GaAs, and InP (for In, a modified universal Gaussian basis set was employed).46 
+In the case of Ge (Table III), a nonrelativistic
+m
+-
+6
+-
+311
+G
+*
+calculation leads to acceptable lattice constants. However, the predicted band gap is significantly overestimated. Large-core RECPs (Ar core) are not suitable since lattice constants are overestimated by up to 0.2 Å. Small-core RECPs (Ne core), on the other hand, perform quite well for both lattice constants and band gaps. Tests using a triple-zeta valence basis set did not change the results in any significant way. Further evidence from BAs, GaAs, and InP is shown in Table IV. The agreement with all-electron scalar-relativistic calculations is good throughout. However, these tests indicate that even calculations using available small-core RECPs tend to overestimate the lattice constants by about 0.02 Å. On the other hand, the small-core RECP approach delivers essentially the same band gaps as the all-electron scalar-relativistic approach.
+Table III.
+Basis set dependence for germanium.
+m
+-denotes a modified basis set (set text).
+Basis Type LSDA PBE TPSS HSE
+      Lattice constant (Å) 
+m
+-
+6
+-
+311
+G
+*
+  all electron  5.629  5.763  5.729  5.702 
+m
+-LANL2DZ  large-core RECP  5.824  5.848  5.856  5.788 
+m
+-LANL2DZdp  large-core RECP  5.794  5.814  5.819  5.765 
+m
+-Stuttgart-RLC  large-core RECP  5.822  5.853  5.871  5.785 
+m
+-cc-pVDZ-PP  small-core RECP  5.634  5.776  5.744  5.701 
+m
+-cc-pVTZ-PP  small-core RECP  5.640  5.778  5.738  5.705 
+m
+-cc-pVTZ  all electron, scalar relativistic  5.603  5.741  5.696  5.675 
+      Band gap (eV) 
+m
+-
+6
+-
+311
+G
+*
+  all electron  0.47  0.27  0.50  1.09 
+m
+-LANL2DZ  large-core RECP  0.44  0.33  0.38  1.23 
+m
+-LANL2DZdp  large-core RECP  0.56  0.62  0.76  1.28 
+m
+-Stuttgart-RLC  large-core RECP  0.00  0.00  0.00  0.19 
+m
+-cc-pVDZ-PP  small-core RECP  0.00  0.00  0.00  0.56 
+m
+-cc-pVTZ-PP  small-core RECP  0.00  0.00  0.00  0.59 
+m
+-cc-pVTZ  all electron, scalar relativistic  0.09  0.00  0.00  0.59 
+Table IV.
+Comparison between the small-core RECP
+m
+-cc-pVDZ-PP and scalar-relativistic, all-electron calculations.
+System Type LSDA PBE TPSS HSE
+      Lattice constant (Å) 
+Ge  RECP  5.634  5.776  5.744  5.701 
+scalar relativistic, all electron  5.603  5.741  5.696  5.675 
+BAs  RECP  4.750  4.829  4.821  4.794 
+scalar relativistic, all electron  4.731  4.809  4.800  4.772 
+GaAs  RECP  5.626  5.771  5.745  5.705 
+scalar relativistic, all electron  5.601  5.744  5.710  5.683 
+InP  RECP  5.839  5.970  5.961  5.909 
+scalar relativistic, all electron  5.814  5.943  5.936  5.887 
+      Band gap (eV) 
+Ge  RECP  0.00  0.00  0.00  0.56 
+scalar relativistic, all electron  0.09  0.00  0.00  0.59 
+BAs  RECP  1.16  1.27  1.29  1.92 
+scalar relativistic, all electron  1.19  1.29  1.29  1.88 
+GaAs  RECP  0.43  0.19  0.52  1.21 
+scalar relativistic, all electron  0.53  0.19  0.49  1.22 
+InP  RECP  0.83  0.68  0.90  1.64 
+scalar relativistic, all electron  0.78  0.66  0.87  1.57 
+In summary, we chose a modified
+m
+-
+6
+-
+311
+G
+*
+basis for the lighter elements and small-core RECPs with a double-zeta valence basis set [
+m
+-cc-pVDZ-PP (Ref. 47) or
+m
+-Stuttgart-RSC-1997] for the heavier elements. Most of these molecular basis sets needed to be modified to make them suitable for calculations in solids (See Ref. 37).
+B. Lattice constants
+Table V shows detailed results for all systems in the SC/40 test. Table VI contains the error statistics for predicting lattice constants with the four functionals studied in this work. In general, LSDA underestimates lattice constants in nearly all cases while PBE and TPSS always overestimate them. The screened hybrid functional HSE reduces the overestimation of PBE (on which it is based) drastically, leading to the best predictions overall. The mean absolute errors (MAEs) for the four functionals are 0.047, 0.076, 0.063, and 0.037 Å for LSDA, PBE, TPSS, and HSE, respectively. All other error measures paint a similar picture.
+Table V.
+Lattice constant (Å) and band gap (eV) results for the SC/40 test set. (a) and (c) denote the two different lattice constants for wurzite.
+    Lattice constants Band gaps
+Solid   LSDA PBE TPSS HSE Expt. LSDA PBE TPSS HSE Expt.
+C     3.537  3.579  3.579  3.553  3.567  4.23  4.17  4.21  5.49  5.48 
+Si     5.410  5.479  5.466  5.444  5.430  0.59  0.75  0.82  1.28  1.17 
+Ge     5.634  5.776  5.744  5.701  5.658  0.00  0.00  0.00  0.56  0.74 
+SiC     4.355  4.404  4.394  4.372  4.358  1.40  1.46  1.42  2.39  2.42 
+BN     3.584  3.629  3.629  3.603  3.616  4.45  4.51  4.52  5.98  6.22 
+BP     4.509  4.567  4.566  4.543  4.538  1.31  1.41  1.45  2.16  2.4 
+BAs     4.750  4.829  4.821  4.794  4.777  1.16  1.27  1.29  1.92  1.46 
+BSb     5.201  5.291  5.280  5.251  n/a  0.80  0.88  0.81  1.37  n/a 
+AlN  (a)  3.112  3.153  3.147  3.127  3.111  4.98  4.95  5.01  6.45  6.13 
+   (c)  4.974  5.045  5.028  5.000  4.981                
+AlP     5.436  5.508  5.497  5.472  5.463  1.60  1.83  1.90  2.52  2.51 
+AlAs     5.639  5.733  5.713  5.691  5.661  1.40  1.62  1.71  2.24  2.23 
+AlSb     6.079  6.188  6.172  6.146  6.136  1.29  1.40  1.63  1.99  1.68 
+GaN  (a)  3.167  3.233  3.224  3.198  3.189  2.09  1.70  1.73  3.21  3.50 
+   (c)  5.165  5.272  5.244  5.204  5.185                
+β
+-GaN     4.476  4.569  4.552  4.518  4.523  1.93  1.55  1.56  3.03  3.30 
+GaP     5.418  5.534  5.522  5.484  5.451  1.59  1.71  1.98  2.47  2.35 
+GaAs     5.626  5.771  5.745  5.705  5.648  0.43  0.19  0.52  1.21  1.52 
+GaSb     6.043  6.208  6.183  6.140  6.096  0.09  0.00  0.08  0.72  0.73 
+InN  (a)  3.523  3.599  3.589  3.555  3.537  0.02  0.01  0.00  0.71  0.69 
+   (c)  5.684  5.807  5.765  5.729  5.704                
+InP     5.839  5.970  5.961  5.909  5.869  0.83  0.68  0.90  1.64  1.42 
+InAs     6.038  6.195  6.170  6.120  6.058  0.00  0.00  0.00  0.39  0.41 
+InSb     6.430  6.608  6.585  6.535  6.479  0.00  0.00  0.00  0.29  0.23 
+ZnS     5.319  5.467  5.465  5.432  5.409  2.25  2.16  2.39  3.42  3.66 
+ZnSe     5.588  5.751  5.736  5.707  5.668  1.21  1.19  1.48  2.32  2.70 
+ZnTe     6.017  6.195  6.174  6.150  6.089  1.28  1.14  1.45  2.19  2.38 
+CdS     5.776  5.934  5.944  5.896  5.818  1.01  1.11  1.34  2.14  2.55 
+CdSe     6.025  6.210  6.195  6.152  6.052  0.34  0.48  0.73  1.39  1.90 
+CdTe     6.422  6.626  6.610  6.568  6.480  0.61  0.62  0.88  1.52  1.92 
+MgO     4.178  4.268  4.247  4.218  4.207  4.92  4.34  4.56  6.50  7.22 
+MgS     5.618  5.721  5.719  5.681  5.622  3.54  3.57  3.88  4.78  5.4 
+MgSe     5.417  5.532  5.520  5.499  5.40  1.70  1.76  2.07  2.62  2.47 
+MgTe     6.381  6.517  6.517  6.478  6.42  2.74  2.68  3.12  3.74  3.6 
+CaS     5.572  5.715  5.710  5.698  5.689  2.16  2.56  2.69  3.59  n/a 
+CaSe     5.799  5.962  5.955  5.946  5.916  1.74  2.11  2.23  3.02  n/a 
+CaTe     6.209  6.387  6.386  6.381  6.348  1.25  1.60  1.72  2.37  n/a 
+SrS     5.926  6.066  6.052  6.037  5.99  2.27  2.68  2.79  3.59  n/a 
+SrSe     6.151  6.306  6.290  6.282  6.234  1.89  2.26  2.37  3.09  n/a 
+SrTe     6.543  6.714  6.703  6.701  6.64  1.51  1.89  2.00  2.57  n/a 
+BaS     6.303  6.436  6.433  6.413  6.389  2.05  2.44  2.61  3.28  3.88 
+BaSe     6.517  6.671  6.659  6.649  6.595  1.76  2.12  2.26  2.87  3.58 
+BaTe     6.897  7.062  7.062  7.051  7.007  1.49  1.87  2.01  2.50  3.08 
+Table VI.
+Lattice constant error statistics for the SC/40 test set (Å).
+Solid LSDA PBE TPSS HSE
+MEa 
+−
+0.046
+  0.076  0.063  0.035 
+MAEb  0.047  0.076  0.063  0.037 
+rmsc  0.058  0.084  0.071  0.044 
+Max
+(
++
+)
+d  0.017  0.158  0.143  0.100 
+Max
+(
+−
+)
+e  0.139  ⋯  ⋯ 
+−
+0.014
+  a
+Mean error.
+b
+Mean absolute error.
+c
+Root-mean-square error.
+d
+Maximum positive deviation.
+e
+Maximum negative deviation.
+The 20% accuracy improvement of HSE over LSDA is noteworthy since LSDA is the most widely used method for lattice optimizations in solids. In addition, the overestimation of lattice constants by using RECPs (mentioned in the previous section) is partly responsible for the observed errors with HSE. We therefore expect scalar-relativistic all-electron calculations to yield even better results with HSE while the underestimation exhibited by LSDA would only be exaggerated in this case.
+C. Band gaps
+It is well known that all three nonhybrid density functionals examined here severely underestimate band gaps.2 The MAEs for LSDA, PBE, and TPSS are 1.14, 1.25, and 1.12 eV, respectively. Band gaps calculated with these functionals are always underestimated, in extreme cases such as MgO, by as much as 2.88 eV. In addition, several small-band gap systems (Ge, GaSb, InN, InAs, and InSb) are predicted to be quasimetallic. Detailed results can be found in Table V while the error statistics are summarized in Table VII. All band gaps correspond to lattices optimized with the respective functional. Band gaps at experimental lattices (available as supplementary material through the EPAPS depository, Ref. 37 show no significant differences from the results reported here.
+Table VII.
+Band gap error statistics for the SC/40 test set (eV).
+Solid LSDA PBE TPSS HSE
+MEa 
+−
+1.14
+  −
+1.13
+  −
+0.98
+  −
+0.17
+  MAEb  1.14  1.13  0.98  0.26 
+rmsc  1.24  1.25  1.12  0.34 
+Max
+(
++
+)
+d  ⋯  ⋯  ⋯  0.32 
+Max
+(
+−
+)
+e 
+−
+2.30
+  −
+2.88
+  −
+2.66
+  −
+0.72
+  a
+Mean error.
+b
+Mean absolute error.
+c
+Root-mean-square error.
+d
+Maximum positive deviation.
+e
+Maximum negative deviation.
+The HSE hybrid functional yields a drastically reduced MAE of only 0.26 eV and predicts even small-band-gap systems correctly. A plot of all theoretical versus experimental band gaps is shown in Fig. 1, illustrating the performance difference between HSE and the pure density functionals. The HSE errors for band gaps are comparable to those obtained with the GW approximation.11 However, two important points need to be raised to put these results into perspective. First, none of our calculations include any excitonic or quasiparticle effects. While these effects are small for some systems, they can be non-negligible for others. Second, some systems in the SC/40 test set exhibit significant spin-orbit coupling effects which can split the band gap by up to 1 eV (for example, ZnTe). For these systems, we are comparing to the weighted average of the split experimental bandgap, but a better description of the systems is highly desirable. Currently, efforts are underway to address the above concerns.
+FIG. 1.
+VIEW LARGEDOWNLOAD SLIDE
+A comparison of experimental band gaps for the SC/40 set with values computed with four different generations of DFT. The local spin-density approximation (LSDA), a generalized-gradient approximation (PBE), a meta-GGA (TPSS), and the hybrid functional HSE.
+V. CONCLUSIONS
+This work assesses the screened Coulomb hybrid functional HSE on a set of 40 solids with optical band gaps ranging from 0.2 to 7.2 eV and compares its performance to several pure density functionals. HSE offers both improved lattice constants compared to LSDA and significantly improved band gaps. Especially for lattice constants, small-core RECPs are necessary to reproduce the scalar relativistic all-electron benchmarks.
+The computational effort involved in HSE calculations presents only a modest increase (a factor of less than 2) over pure DFT calculations. All individual geometry optimizations in this study were completed in a matter of days on commodity hardware. Given the vast improvement in accuracy, such an extra effort is certainly justified.
+It is encouraging that the HSE functional leads to much improved “frozen orbital” approximations to the band gap. However, we should point out that there is no a priori reason to expect a band calculation to precisely reproduce experimental band gaps.
+In summary, the HSE functional is universally applicable and does not contain any system-dependent parameter. It yields excellent results, in molecules and solids, for many different properties. In contrast to other methods, HSE can be employed for both structural and electronic properties. Therefore, HSE provides a unique and powerful alternative for the study of large complex systems, such as chemisorption at surfaces and three-dimenstional impurities in semiconductors.
+ACKNOWLEDGMENTS
+This work was supported by the Department of Energy (Grant No. DE-FG02-01ER15232) and the National Science Foundation (CHE-0457030). In addition, one of the authors (RLM) is grateful for support from the DOE OBES Heavy Element Program and the LDRD Program at Los Alamos National Laboratory.
+REFERENCES
+1.W. Kohn and L. J. Sham, Phys. Rev. https://doi.org/10.1103/PhysRev.140.A1133 140, A1133 (1965).
+Google ScholarCrossref  
+2.J. P. Perdew, Int. J. Quantum Chem. 30, 451 (1986).
+Google ScholarCrossref  
+3.J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. https://doi.org/10.1103/PhysRevLett.77.3865 77, 3865 (1996).
+Google ScholarCrossref PubMed 
+4.J. Tao, J. P. Perdew, V. N. Staroverov, and G. E. Scuseria, Phys. Rev. Lett. https://doi.org/10.1103/PhysRevLett.91.146401 91, 146401 (2003).
+Google ScholarCrossref PubMed 
+5.V. N. Staroverov, G. E. Scuseria, J. Tao, and J. P. Perdew, J. Chem. Phys. https://doi.org/10.1063/1.1626543 119, 12129 (2003).
+Google ScholarCrossref  
+6.V. N. Staroverov, G. E. Scuseria, J. Tao, and J. P. Perdew, Phys. Rev. B https://doi.org/10.1103/PhysRevB.69.075102 69, 075102 (2004).
+Google ScholarCrossref  
+7.G. Baraff and M. Schlüter, Phys. Rev. B https://doi.org/10.1103/PhysRevB.30.3460 30, 3460 (1984).
+Google ScholarCrossref  
+8.V. I. Anisimov, J. Zaanen, and O. K. Andersen, Phys. Rev. B https://doi.org/10.1103/PhysRevB.44.943 44, 943 (1991).
+Google ScholarCrossref  
+9.V. I. Anisimov, I. V. Solovyev, M. A. Korotin, M. T. Czyzyk, and G. A. Sawatzky, Phys. Rev. B https://doi.org/10.1103/PhysRevB.48.16929 48, 16929 (1993).
+Google ScholarCrossref  
+10.A. I. Lichtenstein, J. Zaanen, and V. I. Anisimov, Phys. Rev. B https://doi.org/10.1103/PhysRevB.52.R5467 52, R5467 (1995).
+Google ScholarCrossref  
+11.W. G. Aulbur, L. Jonsson, and J. W. Wilkins, Solid State Phys. 54, 1 (2000).
+Google ScholarCrossref  
+12.A. D. Becke, J. Chem. Phys. https://doi.org/10.1063/1.464304 98, 1372 (1993).
+Google ScholarCrossref  
+13.L. A. Curtiss, K. Raghavachari, P. C. Redfern, and J. A. Pople, J. Chem. Phys. https://doi.org/10.1063/1.473182 106, 1063 (1997).
+Google ScholarCrossref  
+14.J. Heyd and G. E. Scuseria, J. Chem. Phys. https://doi.org/10.1063/1.1668634 120, 7274 (2004).
+Google ScholarCrossref PubMed 
+15.N. W. Ashcroft and N. D. Mermin, Solid State Physics (Saunders College, Orlando, Florida, 1976), p. 335.
+Google Scholar 
+16.W. Kohn, Int. J. Quantum Chem. 56, 229 (1995).
+Google ScholarCrossref  
+17.J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. https://doi.org/10.1063/1.1564060 118, 8207 (2003).
+Google ScholarCrossref  
+18.J. Heyd and G. E. Scuseria, J. Chem. Phys. https://doi.org/10.1063/1.1760074 121, 1187 (2004).
+Google ScholarCrossref PubMed 
+19.D. Pines, Elementary Excitations in Solids (Perseus Books, Reading, Massachusetts, 1999).
+Google Scholar 
+20.R. D. Adamson, J. P. Dombroski, and P. M.W. Gill, Chem. Phys. Lett. https://doi.org/10.1016/0009-2614(96)00280-1 254, 329 (1996).
+Google ScholarCrossref  
+21.P. M.W. Gill, R. D. Adamson, and J. A. Pople, Mol. Phys. https://doi.org/10.1080/00268979650026037 88, 1005 (1996).
+Google ScholarCrossref  
+22.A. Savin, Recent Developments and Applications of Modern Density Functional Theory (Elsevier Science, New York, 1996), pp. 327–357.
+Google ScholarCrossref  
+23.H. Iikura, T. Tsuneda, T. Yanai, and K. Hirao, J. Chem. Phys. https://doi.org/10.1063/1.1383587 115, 3540 (2001).
+Google ScholarCrossref  
+24.A. Seidl, A. Görling, P. Vogl, and J. A. Majewski, Phys. Rev. B https://doi.org/10.1103/PhysRevB.53.3764 53, 3764 (1996).
+Google ScholarCrossref  
+25.M. Ernzerhof and G. E. Scuseria, J. Chem. Phys. https://doi.org/10.1063/1.478401 110, 5029 (1999).
+Google ScholarCrossref  
+26.C. Adamo and V. Barone, J. Chem. Phys. https://doi.org/10.1063/1.478522 110, 6158 (1999).
+Google ScholarCrossref  
+27.D. C. Langreth and J. P. Perdew, Solid State Commun. https://doi.org/10.1016/0038-1098(75)90618-3 17, 1425 (1975).
+Google ScholarCrossref  
+28.J. P. Perdew, M. Ernzerhof, and K. Burke, J. Chem. Phys. https://doi.org/10.1063/1.472933 105, 9982 (1996).
+Google ScholarCrossref  
+29.A. D. Becke, J. Chem. Phys. https://doi.org/10.1063/1.464913 98, 5648 (1993).
+Google ScholarCrossref  
+30.O. Vydrov, J. Heyd, and G. E. Scuseria (unpublished).
+31.I. D. Prodan, G. E. Scuseria, J. A. Sordo, K. N. Kudin, and R. L. Martin, J. Chem. Phys. https://doi.org/10.1063/1.1953427 123, 014703 (2005).
+Google ScholarCrossref PubMed 
+32.I. D. Prodan, G. E. Scuseria, and R. L. Martin (unpublished).
+33.J. Uddin, J. E. Peralta, and G. E. Scuseria, Phys. Rev. B https://doi.org/10.1103/PhysRevB.71.155112 71, 155112 (2005).
+Google ScholarCrossref  
+34.J. Uddin and G. E. Scuseria, Phys. Rev. B https://doi.org/10.1103/PhysRevB.72.035101 72, 035101 (2005).
+Google ScholarCrossref  
+35.T. Yanai, D. P. Tew, and N. C. Handy, Chem. Phys. Lett. https://doi.org/10.1016/j.cplett.2004.06.011 393, 51 (2004).
+Google ScholarCrossref  
+36.D. M. Bylander and L. Kleinman, Phys. Rev. B https://doi.org/10.1103/PhysRevB.41.7868 41, 7868 (1990).
+Google ScholarCrossref  
+37.See EPAPS https://www.scitation.org/doi/suppl/10.1063/1.2085170 for our detailed results for experimental and optimized structures, as well as calculated bandgaps and basis sets used. This document can be reached via a direct link in the online article’s HTML reference section or via the EPAPS homepage (http://www.aip.org/pubservs/epaps.html).
+38.M. J. Frisch, G. W. Trucks, H. B. Schlegel, et al, Gaussian Development Version, Revision C.01 (Gaussian, Inc., Pittsburgh PA, 2004).
+39.K. N. Kudin and G. E. Scuseria, Phys. Rev. B https://doi.org/10.1103/PhysRevB.61.16440 61, 16440 (2000).
+Google ScholarCrossref  
+40.J. C. Burant, G. E. Scuseria, and M. J. Frisch, J. Chem. Phys. https://doi.org/10.1063/1.472627 105, 8969 (1996).
+Google ScholarCrossref  
+41.M. C. Strain, G. E. Scuseria, and M. J. Frisch, Science https://doi.org/10.1126/science.274.5284.51 271, 51 (1996).
+Google ScholarCrossref  
+42.M. Douglas and N. M. Kroll, Ann. Phys. 82, 89 (1974).
+Google ScholarCrossref  
+43.B. A. Hess, Phys. Rev. A https://doi.org/10.1103/PhysRevA.32.756 32, 756 (1985).
+Google ScholarCrossref  
+44.B. A. Hess, Phys. Rev. A https://doi.org/10.1103/PhysRevA.33.3742 33, 3742 (1986).
+Google ScholarCrossref  
+45.J. E. Peralta, J. Uddin, and G. E. Scuseria, J. Chem. Phys. https://doi.org/10.1063/1.1851973 122, 084108 (2005).
+Google ScholarCrossref  
+46.G. L. Malli, A. B.F. Da Silva, and Y. Ishikawa, Phys. Rev. A https://doi.org/10.1103/PhysRevA.47.143 47, 143 (1993).
+Google ScholarCrossref PubMed 
+47.B. Metz, H. Stoll, and M. Dolg, J. Chem. Phys. https://doi.org/10.1063/1.1305880 113, 2563 (2000).
+Google ScholarCrossref  
+48.O. Madelung, Semiconductors-Basic Data 2nd ed. (Springer, New York, 1996).
+Google ScholarCrossref  
+49.B. Rafferty and L. M. Brown, Phys. Rev. B https://doi.org/10.1103/PhysRevB.58.10326 58, 10326 (1998).
+Google ScholarCrossref  
+50.R. M. Wentzcovitch and M. L. Cohen, J. Phys. C https://doi.org/10.1088/0022-3719/19/34/016 19, 6791 (1986).
+Google ScholarCrossref  
+51.Q. Guo and A. Yoshida, Jpn. J. Appl. Phys., Part 1 https://doi.org/10.1143/JJAP.33.2453 33, 2453 (1994).
+Google ScholarCrossref  
+52.B. Monemar, Phys. Rev. B https://doi.org/10.1103/PhysRevB.8.5711 8, 5711 (1973).
+Google ScholarCrossref  
+53.X. Zhu and S. G. Louie, Phys. Rev. B https://doi.org/10.1103/PhysRevB.43.14142 43, 14142 (1991).
+Google ScholarCrossref  
+54.B. Monemar, Phys. Rev. B https://doi.org/10.1103/PhysRevB.10.676 10, 676 (1974).
+Google ScholarCrossref  
+55.G. Ramírez-Flores, H. Navarro-Contreras, and A. Lastras-Martínez, Phys. Rev. B https://doi.org/10.1103/PhysRevB.50.8433 50, 8433 (1994).
+Google ScholarCrossref  
+56.M. Levinshtein, S. Rumyantsev, and M. Shur, Semiconductor Parameters (World Scientific, Singapore, 1996).
+Google Scholar 
+57.B. Arnaudov, T. Paskova, P. P. Paskov, B. Magnusson, E. Valcheva, B. Monemar, H. Lu, W. J. Schaff, H. Amano, and I. Akasaki, Phys. Rev. B https://doi.org/10.1103/PhysRevB.69.115216 69, 115216 (2004).
+Google ScholarCrossref  
+58.O. Zakharov, A. Rubio, X. Blase, M. L. Cohen, and S. G. Louie, Phys. Rev. B https://doi.org/10.1103/PhysRevB.50.10780 50, 10780 (1994).
+Google ScholarCrossref  
+59.U. Lunz, C. Schumacher, J. Nürnberger, K. Schüll, A. Gerhard, U. Schüssler, B. Jobst, W. Faschinger, and G. Landwehr, Semicond. Sci. Technol. https://doi.org/10.1088/0268-1242/12/8/007 12, 970 (1997).
+Google ScholarCrossref  
+60.W. Walukievicz, W. Shan, K. M. Yu, J. W. Ager III, E. E. Haller, I. Miotkowski, M. J. Seong, H. Alawadhi, and A. K. Ramdas, Phys. Rev. Lett. https://doi.org/10.1103/PhysRevLett.85.1552 85, 1552 (2000).
+Google ScholarCrossref PubMed 
+61.D. Wolverson, D. M. Bird, C. Bradford, K. A. Prior, and B. C. Cavenett, Phys. Rev. B https://doi.org/10.1103/PhysRevB.64.113203 64, 113203 (2001).
+Google ScholarCrossref  
+62.D. Rached, N. Benkhettou, B. Soudini, B. Abbar, N. Sekkal, and M. Driz, Phys. Status Solidi B 240, 565 (2003).
+Google ScholarCrossref  
+63.J. M. Hartmann, J. Cibert, F. Kany, H. Mariette, M. Charleux, P. Alleysson, R. Langer, and G. Feuillet, J. Appl. Phys. https://doi.org/10.1063/1.363714 80, 6257 (1996).
+Google ScholarCrossref  
+64.H. Luo, R. G. Greene, K. Ghandehari, T. Li, and A. L. Ruoff, Phys. Rev. B https://doi.org/10.1103/PhysRevB.50.16232 50, 16232 (1994).
+Google ScholarCrossref  
+65.H. Luo, R. G. Greene, and A. L. Ruoff, Phys. Rev. B https://doi.org/10.1103/PhysRevB.49.15341 49, 15341 (1994).
+Google ScholarCrossref  
+66.H. G. Zimmer, H. Winzen, and K. Syassen, Phys. Rev. B https://doi.org/10.1103/PhysRevB.32.4066 32, 4066 (1985).
+Google ScholarCrossref  
+67.G. Kalpana, B. Palanivel, and M. Rajagopalan, Phys. Rev. B https://doi.org/10.1103/PhysRevB.50.12318 50, 12318 (1994).
+Google ScholarCrossref  
+68.R. J. Zollweg, Phys. Rev. https://doi.org/10.1103/PhysRev.111.113 111, 113 (1958).
+Google ScholarCrossref  
+© 2005 American Institute of Physics.
+Supplementary Material
+Supplementary Material- zip file
+View Metrics
+Citing Articles Via
+Web Of Science (2981)
+Google Scholar
+CrossRef (1642)
+Submit your article
+  Sign up for alerts
+Most Read
+Most Cited
+Special Topic Preface: Nucleation—Current understanding approaching 150 years after Gibbs
+Pablo G. Debenedetti, Yi-Yeoun Kim, et al.
+Energy landscapes—Past, present, and future: A perspective
+J. C. Schön
+DeePMD-kit v2: A software package for deep potential models
+Jinzhe Zeng, Duo Zhang, et al.
+Online ISSN 1089-7690 Print ISSN 0021-9606
+Resources
+For Researchers
+For Librarians
+For Advertisers
+Our Publishing Partners 
+Explore
+Journals
+Physics Today
+Conference Proceedings
+Books
+Special Topics
+Publishers
+pubs.aip.org
+About
+User Guide
+Contact Us
+Register
+Help
+Privacy Policy
+Terms of Use
+Connect with AIP Publishing
+Facebook
+LinkedIn
+Twitter
+YouTube
+© Copyright 2024 AIP Publishing LLC

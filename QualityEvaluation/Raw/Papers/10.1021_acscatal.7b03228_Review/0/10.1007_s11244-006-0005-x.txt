@@ -1,0 +1,984 @@
+Reactivity of bimetallic systems studied from ﬁrst principles
+Axel Groß*
+Abteilung Theoretische Chemie, Universita
+¨t Ulm, 89069 Ulm, Germany
+Bimetallic systems are of special interest in the ﬁeld of heterogeneous catalysis since they offer the possibility to tailor the
+reactivity by preparing speciﬁc surface compositions and structures. The reactivity of bimetallic substrates is governed by an
+interplay of electronic and geometric effects which are hard to disentangle experimentally. It will be shown that electronic structure
+calculations allow to identify the microscopic factors underlying the reactivity of bimetallic systems. Recent ﬁrst-principles
+investigations of the reactivity of bimetallic systems will be presented and the general principles that can be derived from these
+studies will be discussed.
+KEY WORDS: electronic structure calculations; heterogeneous catalysis; electrocatalysis; chemisorption; bimetallic surfaces.
+1. Introduction
+One of the main goals of the rational approach
+towards heterogeneous catalysis is to understand the
+main principles underlying the reactivity and selectivity
+of a catalyst and to use this knowledge for the systematic
+design of better catalysts [1,2]. There are basically two
+possibilities for the modiﬁcation of a catalyst, namely to
+alter its structure or its composition (or both). For a
+detailed microscopic analysis of the dependence of cat-
+alysts on both types of modiﬁcations, structured bime-
+tallic surfaces are particularly well-suited. They are
+simple enough so that the relationship between their
+microscopic structure and their catalytic activity can be
+systematically studied. On the other hand, a broad
+variety of possible structures and compositions of
+bimetallic substrates can be prepared with an increasing
+degree of complexity. It should also be noted that many
+bimetallic systems are well-known catalysts in their own
+right [3,4].
+Because of the advances in electronic structure theory
+and the increase in computer power [5], bimetallic sub-
+strates can nowadays be routinely addressed by ﬁrst-
+principles total energy calculations yielding microscopic
+insights into the fundamental factors underlying their
+reactivity. In this brief review, I will present some of the
+recent theoretical studies on the reactivity of bimetallic
+systems and discuss the general principles that can be
+derived from these studies.
+The activity of bimetallic catalysts is often discussed
+using the concept of the ensemble versus the ligand eﬀect
+[3,6]. The term ensemble eﬀect refers to the fact that for
+many reactions a certain number of active sites is
+required for a particular reaction to occur. By blocking
+a large ensemble of active sites certain reactions can be
+suppressed thus increasing the selectivity towards reac-
+tions that only need a small ensemble of active sites. The
+modiﬁcations in the catalytic activity and selectivity
+caused by the electronic interactions between the com-
+ponents of a bimetallic system are described by the term
+ligand eﬀect.
+The size of the systems that can be handled by ﬁrst-
+principles calculations is still too small to incorporate
+several active sites. Consequently, the ensemble eﬀect is
+usually not addressed in detail in these studies. The
+ligand eﬀect, however, can be well studied in electronic
+structure calculations. In addition to the pure electronic
+or ligand eﬀect, the modiﬁcations of the interatomic
+distances in a bimetallic system can have a decisive
+inﬂuence on its catalytic activity, as will be shown in this
+review. Hence this geometric eﬀect should also be con-
+sidered together with the ensemble and ligand eﬀects
+when the reactivity of bimetallic systems is discussed.
+In this review, I will focus on three diﬀerent types of
+bimetallic systems that have been addressed by ﬁrst-
+principle electronic structure calculations: pseudomor-
+phic overlayer systems, surface alloys and supported
+nanoparticles. These diﬀerent types are illustrated in
+ﬁgure 1. This brief review is certainly not meant to give
+a complete overview over the whole ﬁeld. I rather con-
+centrate on studies which illustrate that there is a variety
+of eﬀects that inﬂuence the electronic structure and thus
+the reactivity of the diﬀerent bimetallic systems. It will
+be shown that there are bimetallic systems such as PtRu
+which exhibit properties that do not correspond to an
+intermediate behavior in between those of the pure
+components but that are rather beyond those of both
+components [7–9]. However, there are other bimetallic
+systems such as PdCu which act more like a novel metal
+with properties in between those of the single compo-
+nents [10,11]. In order to analyse and categorize these
+eﬀects, reactivity concepts are very helpful. I will pre-
+dominantly use the d-band model by Hammer and
+* To whom correspondence should be addressed.
+E-mail: axel.gross@chemie.uni-ulm.de
+Topics in Catalysis Vol. 37, No. 1, March 2006 ( 2006)
+29
+DOI: 10.1007/s11244-006-0005-x
+1022-5528/06/0300–0029/0  2006 Springer Science
++Business Media, Inc.
+Nørskov [12–14] which is rather simple but still very
+successful for the interpretation of the reactivity of
+d-band metals.
+As a probe of the reactivity of the bimetallic systems
+mainly the adsorption energies of hydrogen and CO will
+be used. However, one has to be cautious by identifying
+adsorption
+energies
+with
+reactivity.
+High
+catalytic
+activity usually is the consequence of a compromise. On
+the one hand, there should be a suﬃciently strong
+interaction between the catalyst and the reactants in
+order to lead to, e.g., lower dissociation barriers than in
+the gas phase. On the other hand, this interaction should
+be relatively modest so that the products can desorb
+again. Still, the interaction strength of molecules with
+surfaces is often closely correlated with the reactivity for
+a large class of catalytic reactions, for example via a
+Brønsted–Evans–Polanyi-type relation [15].
+This paper is structured as follows. Some aspects of
+the electronic structure theory and the d-band model will
+be very brieﬂy addressed in the next section. The fol-
+lowing sections are devoted to the presentation of ab
+initio studies covering the three diﬀerent types of bime-
+tallic systems shown in ﬁgure 1. The paper will end with
+some concluding remarks.
+2. Theoretical background
+The ﬁeld of ﬁrst-principles calculations for surface
+science problems is dominated by electronic structure
+calculations based on density functional theory (DFT)
+[16,17].
+In
+practical
+applications,
+the
+many-body
+Schro
+¨ dinger equation is replaced by a set of coupled
+eﬀective one-particle equations, the so-called Kohn–
+Sham equations [18] which makes present-day DFT
+implementations numerically very eﬃcient [19–21]. All
+many-body
+eﬀects
+are
+contained
+in
+the
+so-called
+exchange-correlation functional which is unfortunately
+not known. For many surface science problems, a suf-
+ﬁcient accuracy can be obtained within the so-called
+generalized gradient approximation (GGA) [22]. Note
+that we report both adsorption energies and binding
+energies in this paper. While adsorption energies have a
+negative sign for stable adsorption, binding energies
+have a positive sign.
+In order to interpret the results of the electronic
+structure calculations, qualitative concepts are needed
+that allow a fundamental analysis of the electronic
+structure. A rather simple but still very useful reactivity
+concept was derived by Hammer and Nørskov [12], the
+so-called d-band model which is related to the frontier
+orbital concept [23,24]. In this model, the whole d-band
+is replaced by an eﬀective level located at the center of
+the d-band d. This level plays the role of the substrate
+frontier orbitals, i.e., of the highest occupied molecular
+orbital (HOMO) and the lowest unoccupied molecular
+orbital (LUMO).
+The d-band model is particularly useful for compar-
+ing the reactivity of relatively similar systems which only
+diﬀer in the position of the d-band center. Then there is
+a linear relationship between the d-band center shift and
+the change in the interaction strength [13,25] which
+means that there is a stronger interaction or larger
+energy gain upon an upshift of the d-band.
+3. Overlayer systems
+The electronic and chemical properties of pseudo-
+morphic overlayers are modiﬁed mainly because of two
+eﬀects, the electronic interaction between the substrate
+and the overlayers and the strain in the overlayers
+induced by the lattice mismatch between substrate and
+the overlayers. Experimentally, it was demonstrated for
+CO and oxygen adsorbed on Ru(0001) that the expan-
+sion of the substrate lattice leads to a preferential
+adsorption while compression causes a depletion of the
+Figure 1. Schematic illustration of the types of bimetallic systems
+discussed in this review.
+A. Groß/Reactivity of bimetallic systems
+30
+adsorbate layer [26,27]. These results were conﬁrmed in
+DFT calculations [28] and explained in terms of the d-
+band model. Upon expansion of the substrate lattice,
+the width of the d-band decreases because of the reduced
+overlap between the atomic orbitals. If the d-band is
+more than half-ﬁlled, charge conservation leads to an
+up-shift of the d-band and to larger adsorbate binding
+energies.
+For pseudomorphic overlayer systems it is experi-
+mentally usually very hard to disentangle the strain
+eﬀects from the inﬂuence of the electronic interaction
+between overlayer and substrate. As far as the theory is
+concerned, Shubina and Koper have calculated the
+change in the CO adsorption energies on a Pt monolayer
+deposited on a number of diﬀerent d-band metals with
+respect to clean Pt(111) [8]. In particular the Pt/Ru
+system is of strong current interest in the context of CO
+tolerant fuel cell catalysts. CO binds so strongly to many
+catalysts that they become poisoned because all catalytic
+active sites are blocked by CO. The results of the cal-
+culations are shown in ﬁgure 2 as a function of the Pt–Pt
+distance in the pseudomorphic overlayer systems. A
+positive change corresponds to a weaker binding. It is
+obvious that the CO binding energies are reduced on
+most of the overlayer systems.
+In order to disentangle strain eﬀects from electronic
+interaction eﬀects between overlayer and substrate, CO
+adsorption energies on a Pt(111) one-layer slab were
+also calculated as a function of the Pt–Pt distance (solid
+line in ﬁgure 2). The deviations for many systems
+between the overlayer and the one-layer slab calcula-
+tions indicate that pure strain eﬀects are not suﬃcient in
+order to explain in general the modiﬁed reactivity of
+pseudomorphic overlayers.
+Recently, the ﬁrst experimental study was performed
+that allowed a direct identiﬁcation of the lattice strain
+eﬀects versus the electronic interaction eﬀects [9]. In this
+study, the binding energy of CO on Pt/Ru was determined
+as a function of the number n of Pt layers on Ru. The Pt
+lattice constant is 2.5% smaller than the Ru lattice con-
+stant. Still, compressed Pt layers retain their pseudo-
+morphic structure up to a ﬁlm thickness of at least four
+layers. In ﬁgure 3, the measured CO desorption temper-
+ature has been plotted as a function of the number of Pt
+layers on Ru. The desorption temperatures are directly
+related to the binding energy of CO, but the exact value
+depends on the prefactor of the desorption rate which is
+not really known.
+On one Pt overlayer on Ru(0001), the CO binding is
+strongly reduced compared to the clean Pt(111) surface,
+and then there is a rapid increase of the CO bond
+strength for n=1–4 while for n>4 the CO binding
+energy EB remains almost constant. Assuming a pre-
+factor, for desorption adequate for on-top bonded CO
+of k0=1015 1/s, CO binding energies of 0.99 eV (1st
+layer), 1.21 eV (2nd layer) and about 1.30–1.35 eV for
+higher layers are obtained [9]. Still, even for n=10, the
+CO binding on the Pt/Ru system is lower than on pure
+Pt(111) (dashed line in ﬁgure 3). Since for 10 layers Pt
+on Ru no direct electronic interaction between the
+uppermost Pt layer and the substrate is to be expected,
+the lower binding energy is a consequence of the com-
+pressive strain in the pseudomorphic Pt overlayer, in
+qualitative agreement with theoretical predictions [28].
+The experimental ﬁndings are nicely reproduced by
+Figure 2. Calculated change in CO adsorption energy with respect to
+CO/Pt(111) at the most stable adsorption site as a function of the Pt–Pt
+distance. A positive change in the adsorption energy means a reduced
+binding. The solid line corresponds to the CO adsorption energy in the
+hollow site of a Pt(111) one-layer slab (after [8]).
+Figure 3. CO interaction with Pt/Ru(0001) overlayer. (a) Experimen-
+tally determined desorption temperature; (b) calculated CO binding
+energies. The dashed line denotes the corresponding result for pure
+Pt(111). The theoretical result for the largest number of Pt layers on
+Ru has been obtained by a calculation with a pure Pt slab with the
+lateral lattice constant of Ru (after [9]).
+A. Groß/Reactivity of bimetallic systems
+31
+DFT calculations [9]. The results for the largest number
+of Pt layers on Ru in ﬁgure 3b are in fact obtained for a
+ﬁve-layer slab of Pt(111) with the lateral lattice constant
+of Ru. The slight decrease of this energy with respect to
+the results for four and ﬁve Pt layers on Ru is within the
+numerical accuracy of the calculations.
+These results show that both the electronic interac-
+tion and the strain induced by the lattice mismatch can
+contribute signiﬁcantly to the modiﬁed reactivity of
+bimetallic
+overlayer
+system,
+as
+already
+found
+by
+Shubina and Koper (see ﬁgure 2). The strong interac-
+tion of Ru with Pt leads to a downshift of the local
+d-band center which together with the compressive
+strain reduces the CO binding energy on one Pt layer on
+Ru by more than 0.5 eV compared to pure Pt. As far as
+the electronic interaction is concerned, one could say
+that Pt is so strongly interacting with Ru that it cannot
+bind adsorbates as well as pure Pt. Thus depositing a
+less reactive metal (Pu) on a more reactive metal (Ru)
+makes the overlayer even less reactive.
+Now it is of course interesting to investigate an
+overlayer system with opposite properties: a more
+reactive metal deposited pseudomorphically on an inert
+metal with a larger lattice constant. In fact, there is such
+a system that has been studied in detail experimentally,
+namely the Pd/Au system [29–33]. This system is of
+particular interest in the ﬁeld of electrocatalysis because
+of its catalytic activity in the oxidation reactions of
+methanol, formic acid and carbon monoxide.
+In order to assess the reactivity of this system, the CO
+and hydrogen adsorption energies were determined as a
+function of the number of pseudomorphic Pd overlayers
+on Au(111) and Au(100) [34,35]. The results for Pd/
+Au(111) are shown in ﬁgure 4. Pseudomorphic Pd
+overlayers on Au are expanded by about 5%. The pure
+strain eﬀects in the adsorption energies can be deduced
+by comparing the adsorption energies on equilibrium
+Pd(111) and strained Pd(111) with the lateral lattice
+constant of Au which is denoted by Pd(Au) in ﬁgure 4.
+There is a considerable increase in the H and CO
+binding energies on Pd(111) upon the lattice expansion
+by 5% which is in agreement with the predictions of the
+d-band model given above. However, the binding energy
+of the H atom to the on top site in fact decreases upon
+lattice expansion. A similar non-uniform trend as a
+function of the lattice strain has also been found for the
+H adsorption energies on Cu [36]. An analysis of the
+electronic structure suggests that this behavior is caused
+by the strong perturbation of the Pd orbital upon on
+top adsorption so that the d-band model is no longer
+appropriate [34,36].
+As far as the direct interaction between Pd and Au is
+concerned, it leads to a further increase in the binding
+strength. The relative weak interaction between Pd and
+Au makes the Pd overlayer more reactive which is also
+reﬂected by a further upshift of the d-band compared to
+the expanded pure Pd(111) surface. These ﬁndings are in
+agreement with the enhanced CO binding found on Pt/
+Au(111) (see ﬁgure 2). Thus depositing a more reactive
+metal on a less reactive metal makes the overlayer even
+more reactive. Interestingly enough, for Pd/Au there is a
+maximum in the binding energies for two Pd overlayers
+on Au at all adsorption sites. This can be related to
+second nearest neighbor interaction eﬀects. For just one
+layer of Pd on Au(111) there is an indirect repulsive
+interaction between the adsorbates and Au which
+reduces the binding [34].
+In the examples presented so far, the electronic
+interaction and the strain have the same eﬀect: either
+both lead to a weaker (Pt/Ru) or to a stronger (Pd/Au)
+interaction with adsorbates. For Pd/Cu systems, the
+electronic interaction and the lattice mismatch should
+cause opposing eﬀects since the supposedly more inert
+metal, Cu, has a lattice constant that is 8% smaller than
+the one of Pd. In fact, because of this strong suppression
+pseudomorphic Pd overlayers on Cu do not exist, they
+rather form alloys [37,38], as will be discussed in more
+detail in the next section. In contrast to the Pd/Cu(111)
+system, at room temperature Cu/Pd(111) has been
+found to grow in a layer-by-layer fashion for at least the
+ﬁrst
+two
+layers
+[39].
+Furthermore,
+underpotential
+deposition of Cu on Pd(111) in sulfuric acid solution has
+been observed [40,41].
+In order to establish chemical trends, it is still inter-
+esting to calculate adsorption energies on pseudomor-
+phic Pd/Cu(111) and Cu/Pd(111) overlayer systems and
+on the corresponding strained pure substrates. This has
+been done using periodic DFT calculations for hydrogen
+adsorption [11]. The results are shown in ﬁgure 5. In
+contrast to the Pd/Au system, there is a strong interac-
+tion between Pd and Cu. Pd atoms are in fact more
+strongly bound to Cu(111) by 0.3 eV than Cu atoms,
+and conversely, Cu atoms are more strongly bound to a
+Pd(111) surface than Pd atoms. This strong interaction
+is reﬂected in the lower hydrogen binding energies on the
+Figure 4. CO and hydrogen adsorption energies as a function of the
+number of Pd overlayers on Au(111) for diﬀerent adsorption sites on
+the surface at a coverage of h=0.25. The pure Pd substrates with the
+lateral lattice constant of Au (a=4.18 A
+˚ ) and Pd (a=3.96 A
+˚ ) are
+labeled by Pd(Au) and Pd, respectively, (after [34]).
+A. Groß/Reactivity of bimetallic systems
+32
+Pd/Cu(111) overlayer compared to the pure compressed
+Pd surface. The Pd/Cu(111) overlayer shows adsorption
+properties similar to Cu(111). A corresponding result
+has also been found for CO adsorption on a Pd/Cu(111)
+overlayer in DFT–GGA calculations [10]. The Cu/
+Pd(111) properties, on the other hand, are closer to
+those of Cu(111) than Pd(111). This is mainly caused by
+the fact that the geometric strain hardly inﬂuences the
+adsorption energies on Cu [36] while it has a large eﬀect
+on Pd. But overall, both Pd/Cu(111) and Cu/Pd(111)
+exhibit an intermediate behavior between pure Cu(111)
+and pure Pd(111) which is caused by the strong inter-
+action between Pd and Cu.
+4. Alloy surfaces and surface alloys
+In the preceding section, we have seen that the
+chemical properties of bimetallic overlayer systems can
+be strongly modiﬁed with respect to those of the single
+components. Still, bimetallic overlayer systems exhibit
+homogeneous surfaces. The variety of possible modiﬁ-
+cations is strongly enhanced if one considers surfaces of
+bimetallic alloys. Even if some metals are immiscible in
+the bulk they may still be able to form alloys at the
+surface. Then two diﬀerent species are present on sur-
+faces.
+For pseudomorphic bimetallic overlayer systems, I
+just showed how a combination of ﬁrst-principles cal-
+culations and experiments can diﬀerentiate between
+geometric and ligand eﬀects. For surface alloys, to dis-
+entangle these eﬀects is not so easy since no homoge-
+neous substrate is present where for example the
+interatomic distances can be changed uniformly. Still,
+theoretically it should be possible to address this issue by
+performing systematic calculations on carefully pre-
+pared model systems, but to the best of my knowledge
+there has been no such eﬀort yet. Nevertheless, ﬁrst-
+principles calculations have already contributed signiﬁ-
+cantly to the better microscopic understanding of the
+catalytic activity of bimetallic surface alloys, as will be
+shown in this section.
+The presence of two diﬀerent elements on a bimetallic
+surface alloy oﬀers for example the possibility of
+bifunctional mechanisms [42] where one species may
+adsorb one reactant and the other species the other
+reactant
+for
+a
+desired
+reaction.
+This
+bifunctional
+mechanism has been invoked as a possible explanation
+for the fact that PtRu catalysts are among the most
+stable and active CO tolerant catalysts under practical
+conditions [43]. In this mechanism, CO molecules
+adsorbed on Pt atoms are preferentially oxidized by an
+oxygen-containing surface species located above Ru
+atoms. This bifunctional mechanism has been addressed
+in DFT calculations by Koper et al. [7,8]. They have
+calculated the CO adsorption energies on a number of
+diﬀerent PtRu systems. The results for the adsorption
+on top of the Pt and Ru atoms of Pt2Ru(111) and
+PtRu2(0001) are compared to the corresponding results
+for pure Pt(111) and Ru(0001) in ﬁgure 6. Both alloy
+surfaces are stochiometric with a (3·3) structure.
+The inspection of ﬁgure 6 reveals that mixing of Pt by
+Ru leads to a weaker binding of CO while mixing of Ru
+by Pt causes a stronger binding of CO. Thus the dif-
+ference in the CO adsorption energies between Pt and
+Ru sites increases when Pt and Ru are mixed. This
+means that the mixing does not lead to an intermediate
+behavior for both components but rather enhances the
+diﬀerences. The weakening of the Pt–CO bond due to
+the presence of Ru is in agreement with the qualitative
+ﬁndings for the Pt/Ru overlayer system [9]. Because of
+the strong interaction between Pt and Ru, Pt atoms bind
+adsorbates less strongly. At the Ru sites, it is the other
+way around. The Pt–Ru interaction is weaker than the
+Ru–Ru interaction, therefore the Ru atom becomes
+more reactive due to the presence of neighboring Pt
+atoms. This explanation has in fact been backed up
+using the d-band model [7].
+Figure 5. Calculated atomic hydrogen adsorption energy on bimetal-
+lic PdCu surfaces for a quarter monolayer hydrogen coverage, namely
+on pure Cu(111), on a pseudomophic Pd overlayer on Cu(111) (Pd/
+Cu), on pure Pd(111) with the lateral Cu lattice constant (Pd(Cu)), on
+pure Pd(111), on a pseudomophic Cu overlayer on Pd(111) (Cu/Pd),
+and on pure Cu(111) with the lateral Pd lattice constant (Cu(Pd))
+(after [11]).
+Figure 6. Calculated CO adsorption energies at the top sites Pt(111),
+Pt2Ru2(111), PtRu2(0001) and Ru(0001) [7].
+A. Groß/Reactivity of bimetallic systems
+33
+For OH adsorption, the same qualitative trend has
+been found in the adsorption as for CO. OH also favors
+the Ru sites. However, a good CO oxidation catalyst
+should combine a weak binding to CO with a strong
+aﬃnity for OH [7] so that CO can easily be oxidized.
+Motivated by experimental studies [44], the CO and OH
+adsorption has also been addressed on Pt2Mo(111) and
+PtSn3(111) surfaces [8]. Both systems are apparently
+better CO oxidation catalysts than PtRu. On PtMo, OH
+binds much more strongly to Mo than to Pt whereas CO
+does not exhibit a clear site preference. On PtSn, CO
+only binds to Pt while OH shows a preference for the Sn
+sites. Hence both PtMo and PtSn can act as real
+bifunctional catalysts, with one element binding prefer-
+entially the ﬁrst reactant, and the other element the
+second reactant.
+In the last section we had seen that PdCu overlayer
+exhibit intermediate characteristics between Pd and Cu.
+For the CO adsorption on Cu–Pd(111) alloys, in fact
+similar results have been found in electronic structure
+calculations [10,45]. Using DFT, diﬀerent Cu–Pd(111)
+bulk
+and
+surface
+alloys
+have
+been
+studied
+[10].
+Cu3Pd(111) is a stoichiometric surface corresponding to
+a p(2·2) unit cell. The Cu50Pd50 alloy has a bcc structure;
+along the (111) direction pure Cu and pure Pd layers are
+stacked consecutively. Hence for Cu50Pd50(111) both an
+Pd-terminated and a Cu-terminated surface exists. Fur-
+thermore, a Cu3Pd surface alloy on a Cu(111) slab has
+been considered. In addition, the results for the alloy
+surface have been compared to those for the clean sur-
+faces and pseudomorphic overlayer systems.
+The CO binding energies on top of Pd sites are plotted
+as a function of the local d-band center in ﬁgure 7. The
+top sites are not the energetically most favorable CO
+adsorption sites on Pd and Cu, these are rather the
+higher coordinated sites, but the on top adsorption on
+diﬀerent substrates is easier to compare. First of all, an
+approximate linear correlation between binding energy
+and d-band center is obvious, giving credibility to the
+d-band model. Second, the calculations show that the
+presence of the inert component, Cu, reduces the CO
+binding energies. The Pd-terminated Cu50Pd50(111)
+surface is exceptional because of the rather open struc-
+ture of the bcc(111) surface which leads to a better
+binding. On the other hand, the CO binding on Pd/
+Cu(111) is most strongly suppressed because of the
+strong compression of the Pd overlayer, in agreement
+with the results for hydrogen adsorption (see ﬁgure 5).
+The Pd–Cu interaction in the alloys does not only
+lead to a weaker CO binding to Pd, it also causes a
+stronger CO interaction with Cu. At the Cu fcc site of
+Cu3Pd(111), e.g., the CO binding energy is increased to
+1.11 eV from 0.9 eV for the pure Cu(111) surface. And
+on the top site of the Cu-terminated Cu50Pd50(111) the
+CO binding energy is 1.23 eV while it is only 0.75 eV on
+the top site of Cu(111) [10]. It should, however, be noted
+that on the Cu3Pd/Cu(111) surface alloy the CO binding
+energy to the Cu sites is lower than on the pure Cu(111)
+surface indicating that there are subtle geometric and
+electronic eﬀects which are not necessarily easy to
+reveal.
+Still the general picture is valid. Because of the strong
+interaction between Cu and Pd, Cu–Pd alloys do not act
+as bifunctional catalysts. They rather form a relatively
+homogeneous new metal with intermediate properties
+between those of the single components. This is dem-
+onstrated in ﬁgure 8 where the CO on top adsorption
+energies on Pd(111), Cu50Pd50(111), Cu3Pd(lll) and
+Cu(111) are plotted. There is some variation in the
+adsorption energies as a function of the surface structure
+because of additional geometric eﬀects, in particular for
+Cu50Pd50(111), but the diﬀerence between the CO on top
+adsorption energies at the Pd and Cu sites decreases as
+Pd and Cu are mixed, in contrast to the results for PtRu
+alloys (see ﬁgure 8). Again, the Cu3Pd/Cu(111) case (not
+shown in ﬁgure 8) is exceptional because here the dif-
+ference in the on top CO adsorption energies for Pd and
+Cu is larger than on the pure surfaces.
+Finally I would like to demonstrate that the theo-
+retical insight from electronic structure calculations
+Figure 7. Calculated CO binding energies on top of Pd atoms as a
+function of the local d-band center d. The dashed line is plotted as a
+guide to the eye (after [10]).
+Figure 8. Calculated CO adsorption energies at the top sites of
+Pd(111), Cu50Pd50(111), Cu3Pd(111) and Cu(111) [10].
+A. Groß/Reactivity of bimetallic systems
+34
+[46,47] can contribute to the design of more eﬃcient
+bimetallic catalysts [48]. Ni-based catalysts have been
+usually employed in order to promote the steam-
+reforming process in which hydrocarbon molecules
+(mainly CH4) and water are converted into H2 and CO.
+Industrially, this is a very important process since it is
+the ﬁrst step for several large scale chemical processes
+such as ammonia synthesis, methanol production or
+reactions that need H2 [48]. However, during the cata-
+lyzed reaction also an unwanted by-product, namely
+graphite, is formed. The graphite overlayer on the Ni
+surface blocks the active sites of the Ni-based catalyst
+and thus poisons the reaction. This is very costly since
+the time the catalyst can be used is reduced and a more
+frequent maintenance of the reactor unit in the chemical
+plant is required.
+In order to suppress the graphite formation, the
+carbon interaction with the Ni surface should be
+reduced. One possible way is to alloy Ni with Au. While
+Ni and Au are immiscible in the bulk, they still form
+alloys at the surface. And since Au is a noble metal, its
+presence on the surface reduces the chemisorption
+energy of C on Ni signiﬁcantly by almost 2 eV, if the C
+atom is located close to the Au atom, but also next-
+nearest neighbor sites become signiﬁcantly destabilized,
+as DFT calculations have shown [46]. An analysis of the
+calculated electronic structure revealed that the presence
+of neighboring Au atoms leads to a downshift of the d
+states at the Ni atom which weakens the interaction with
+the carbon atoms. Thus the formation of CO becomes
+more likely which prevents the building up of a graphite
+layer.
+The presence of Au has of course also other conse-
+quences. The dissociation of CH4 into CH3 and H is the
+rate-limiting step in the steam-reforming process on Ni.
+According to DFT calculations by Kratzer et al. this
+process is hindered by a relatively high barrier of 1.1 eV
+on pure Ni(111) [47]. If a Ni atom on the (111) surface
+has one or two Au atoms as neighbors, this barrier is
+increased by 165 and 330 meV, respectively. The CH4
+dissociation barrier directly over the Au atom is even
+much higher [46].
+Hence alloying a Ni surface with Au atoms leads to a
+reduced activity of the catalyst. However, for the
+industrial catalyst the lowering of the C chemisorption
+energy by alloying Ni with Au is much more relevant
+than the increase of the CH4 dissociation barrier. The
+NiAu catalyst is slightly less reactive but much more
+robust and stable due to its higher resistance to graphite
+formation. Fundamental theoretical results together
+with experimental studies have thus led to the design of
+a new catalyst that has been patented [48].
+5. Supported cluster
+So far we have only be concerned with ﬂat surfaces.
+However, small supported metal particles are currently
+studied in great detail because of their strongly modiﬁed
+chemical properties compared to extended structures
+[49]. In heterogeneous catalysis, the catalytically active
+metal particles are usually deposited on an oxide support,
+but again, in electrochemistry transition metal cluster
+supported on inert noble metals are of particular interest
+[50,51] since the substrate has to be conductive so that
+supported nanostructures can act as electrodes. Using an
+electrochemical scanning tunneling microscope, highly
+ordered arrays of metal clusters containing of the order
+of only one hundred atoms can be generated [50,52,53].
+In order to contribute to the understanding of the
+chemical properties of these clusters, Pdn clusters with
+n=3, 7, 10 supported on Au(111) have been the subject
+of a DFT study [54]. The structure of these clusters is
+shown in ﬁgure 9a. The nearest-neighbor distances in A
+˚
+are also indicated in the ﬁgure. The calculated value for
+Pd bulk is 2.80 A
+˚ , for Au bulk 2.95 A
+˚ . Although the Pdn
+clusters are deposited on a gold substrate, all nearest-
+neighbor distances are even below the Pd bulk value.
+This is a consequence of the low coordination of the
+cluster atoms which makes the single Pd–Pd bonds
+stronger than in a bulk situation where every Pd atom is
+12-fold coordinated. At the second layer of the Pd10
+cluster, the Pd–Pd distances are even further reduced to
+2.65 A
+˚ . Note that for the free relaxed planar Pd3 and
+Pd7 cluster, the nearest neighbor distances are 2.50 and
+2.64 A
+˚ , respectively.
+The reduction in the interatomic distances results in a
+larger overlap of the d orbitals which leads to a broader
+local d-band and a down-shift of the local d-band center
+because of charge conservation according to the DFT
+calculations [54]. And indeed, the binding energies of
+CO adsorbed on diﬀerent sites of Pd10 clusters sup-
+ported by Au(111) are lower than those on pseudo-
+morphic Pd/Au(111) overlayers (compare ﬁgure 9b with
+ﬁgure 4). The same results have also been found for
+atomic hydrogen adsorption energies. Naively one
+would expect that atoms and molecules bind more
+strongly to these clusters than to the corresponding ﬂat
+overlayer surfaces because of the low coordination of
+the cluster atoms.
+In order to better understand the reason for the
+reduced binding on the Pdn/Au(111) cluster, the CO
+adsorption energies on free Pd10 clusters in exactly the
+same conﬁguration as the supported clusters have also
+been calculated. They are included in ﬁgure 9b as the
+numbers in parentheses. These binding energies are in
+fact larger than on the supported clusters and also on
+ﬂat [55] and stepped Pd surfaces [56–58]. This shows that
+it is the electronic coupling to the Au substrate that
+together with the compression of the clusters contributes
+to the low binding energies. Isolated Pdn clusters still
+interact more strongly with adsorbates than ﬂat surfaces
+in spite of their compression.
+Interestingly enough, at the top layer adsorption site
+of the Pd10 cluster, the CO binding energies on the free
+A. Groß/Reactivity of bimetallic systems
+35
+cluster are smaller than on the supported cluster. This
+surprising result is caused by the reactivity of the
+unsaturated hexagonal bottom layer of the free Pd10
+cluster. An analysis of the energetics and the electronic
+structure of the free cluster shows that the free cluster
+binds the three topmost Pd atoms so strongly that the
+top layer becomes less reactive [54].
+The electronic coupling of the Pd clusters to the metal
+substrate has been analysed by comparing the orbital
+resolved d-band local density of states (LDOS) for Pd3
+clusters deposited on Au(111) and on Pd(111) and for a
+free Pd3 cluster (see ﬁgure 10). The LDOS of the free
+cluster consists of isolated discrete peaks corresponding
+to the localized orbitals of this isolated system. For the
+Pd3/Pd(111) cluster, all d states in the cluster are con-
+siderably broadened. This demonstrates the strong
+coupling between the cluster and the substrate.
+The supported Pd3/Au(111) cluster shows an inter-
+mediate behavior. All d-band orbitals that are conﬁned
+within the cluster layer, i.e., the dxy and the dx2)y2 orbi-
+tals, exhibit a rather discrete structure. This means that
+these orbitals are still well localised within the cluster.
+The LDOS of the other three orbitals that have a
+component along the vertical z-direction, on the other
+hand, is rather broad indicating that these states are
+already delocalized. Thus there is a signiﬁcant electronic
+coupling between the Pd and Au states but it is not as
+strong as the coupling between the Pd states in the
+cluster and the substrate for the Pd3 cluster.
+It has been speculated that the unusual electrochem-
+ical stability of nanofabricated supported metal clusters
+[52] could be caused by quantum conﬁnement eﬀects [59]
+which would lead to a discrete electronic spectrum in the
+clusters. However, already for the small Pd3 clusters the
+DFT calculations yield a continuous spectrum. For
+larger clusters, any quantum conﬁnement eﬀects would
+even be smaller. Thus these calculations do not support
+the speculation of Ref. [59].
+As an alternative explanation it has been proposed
+[60,61] that the electrochemical nanofabrication of the
+Figure 9. Pdn cluster supported on Au(111) studied by DFT calculations. (a) Calculated nearest-neighbor Pd–Pd distances in A
+˚ of the Pdn
+cluster; (b) CO adsorption positions and energies in eV on the Pd10/Au(111) cluster. The energies in parentheses correspond to the adsorption
+energies on free Pd10 clusters in exactly the same conﬁguration as the supported clusters (after [54]).
+Figure 10. Orbital resolved d-band local density of states (LDOS) of
+the supported Pd3/Au(111) and Pd3/Pd(111) clusters and the free Pd3
+clusters determined by DFT calculations (after [54]).
+A. Groß/Reactivity of bimetallic systems
+36
+clusters by the jump-to-contact method leads to an
+alloying of the clusters which causes their high electro-
+chemical stability. Simulations based on the empirical
+embedded-atom-method (EAM). [62,63] indicate that
+electrochemically stable clusters result only in those
+cases where the two metals that are involved form stable
+alloys [64]. In fact, DFT calculations yield that the Pd10
+clusters on Au (111) [54] are stabilized by 0.1 eV if one
+of the Pd atoms at the base of the cluster is exchanged
+with an Au atom of the underlying substrate [65].
+Intermixing or alloying is always an important issue
+in the case of bimetallic systems [3], as also recent
+experimental and theoretical studies on the electronic
+and
+chemical
+properties
+of
+Mo
+nanoparticles
+on
+Au(111) demonstrate [66–68]. These studies were moti-
+vated by the fact that the nanoparticles can act as pre-
+cursors for the preparation of molybdenum sulﬁde and
+molybdenum oxide aggregates [69,70] which are widely
+used catalyst materials in the chemical industry [71].
+The experiments indicated that CO does not adsorb
+on the Mo/Au(111) surface [66]. Since the exact struc-
+ture of the Mo nanoparticles on Au(111) could not be
+determined experimentally several structural models of
+the Mo/Au(111) system were investigated within a (2·2)
+surface unit cell using DFT [68]. Two of them are shown
+in ﬁgure 11 which diﬀer by the fact that the open Mo
+structure in ﬁgure 11a has been ﬁlled up with Au atoms
+in ﬁgure 11b leading to a ﬂat (111) surface. The struc-
+ture shown in ﬁgure 11b is by 0.3 eV/atom more stable
+than the one of ﬁgure 11a with respect to bulk Au and
+bulk Mo, i.e., Mo actually prefers to be embedded in the
+gold surface [67,68]. One gains even another 0.01 eV/
+atom if the surface is fully covered by Au atoms, i.e., if a
+Au–Mo–Au sandwich structure is formed.
+CO binds relatively strongly to both structures shown
+in ﬁgure 11 with exothermic binding energies of 2.22
+and 1.03 eV for the structures a and b, respectively,
+which is at variance with the experimental ﬁndings that
+CO interacts very weakly with the Mo/Au(111) system.
+The binding energy of CO on one Mo monolayer on Au
+(111) is even larger, 2.79 eV [68]. The Mo/Au overlayer
+system behaves actually like the Pd/Au system [34] (see
+ﬁgure 4): The nearest-neighbor distance in Mo is 5%
+smaller than the one in Au so that the pseudomorphic
+Mo overlayer on Au is signiﬁcantly expanded. This
+causes a signiﬁcant upshift of the d-band center and
+consequently a stronger interaction with adsorbates.
+Similar trends have also been found for oxygen and
+sulfur adsorbed on the Mo/Au(111) system.
+Since the calculated binding energies on the Mo/
+Au(111) structures are much larger than expected from
+the experiment, these structures are obviously not real-
+ized under the experimental conditions. Apparently,
+after the Mo deposition Mo–Au site exchange processes
+occur which lead to Au segregation at the surface. Two
+other admetals, Ni and Ru, were also considered in the
+DFT calculations [68]. And indeed, Ni and Ru also tend
+to mix with a Au substrate. As in the case of the Mo/Au
+structures, a monolayer of both Ni and Ru on Au(111)
+is signiﬁcantly less stable than embedded structures such
+as the one shown in ﬁgure 11b by more than 2 eV per
+surface atom. In addition, the qualitative trends in the
+adsorption properties for Ni/Au(111) and for Ru/
+Au(111) resemble those found for Mo/Au (111) . This
+means that Mo, Ni and Ru nanostructures on Au are
+obviously not stable. The metal nanoparticles become
+embedded in the Au matrix, and the resulting bimetallic
+system shows basically the chemical properties of a pure
+Au surface.
+6. Conclusions
+Bimetallic systems show strongly modiﬁed chemical
+properties compared to those of their single compo-
+nents. These modiﬁcations are caused by the direct
+electronic interaction between the components together
+with geometric eﬀects because of the diﬀerent lattice
+constants. While it is hard (but not impossible) to dis-
+entangle these eﬀects experimentally, electronic struc-
+ture calculations are well-suited in order to allow a
+discrimination between these two eﬀects.
+As this review has shown, one can distinguish
+between two diﬀerent classes of bimetallic systems.
+Either its properties are beyond those of the single
+components or they are in between. The list of bimetallic
+systems addressed by electronic structure calculations is
+certainly far from being exhausted. Still the available
+DFT studies suggest that if a more reactive metal with a
+smaller lattice constant is mixed with a more inert metal
+with a larger lattice constant, such as Ru and Pt or Pd
+and Au, then a bimetallic system will result that, e.g.,
+Figure 11. Top and side view of two Mo/Au(111) structures studied
+by DFT calculations [68]. The dark and light balls represent Au and
+Mo, respectively.
+A. Groß/Reactivity of bimetallic systems
+37
+binds adsorbates more strongly than any single com-
+ponent in a comparable structure. This is caused by the
+fact that in such a case both the direct electronic inter-
+action as well as the lattice mismatch have the same
+qualitative eﬀect. These bimetallic systems might be
+used as bifunctional catalysts.
+If, on the other hand, a more reactive metal with a
+larger lattice constant is mixed with a more inert metal
+with a smaller lattice constant, such as Pd and Cu, and
+there is a strong mutual interaction between the two
+elements, then a bimetallic system may be formed that
+behaves as a new, almost homogeneous metal with
+intermediate properties. However, these guiding princi-
+ples must still be checked using a larger database but
+they might already be helpful for the rational design of
+bimetallic catalysts.
+References
+[1] R. Schlo
+¨ gl, Angew. Chem. Int. Ed. 37 (1998) 233.
+[2] Y. Okamoto, Chem. Phys. Lett. 395 (2004) 279.
+[3] J.A. Rodriguez, Surf. Sci. Rep. 24 (1996) 223.
+[4] J.H. Sinfelt, Surf. Sci. 500 (2002) –923.
+[5] A. Groß, Surf. Sci. 500 (2002) 347.
+[6] W.H.M. Sachtler, Faraday Diss. 72 (1981) 7.
+[7] M.T.M. Koper, T.E. Shubina and R.A. Santen, J. Phys. Chem. B
+106 (2002) 686.
+[8] T.E. Shubina and M.T.M. Koper, Electrochim. Acta 47 (2002)
+3621.
+[9] A. Schlapka, M. Lischka, A. Groß, U. Ka
+¨ sberger and P. Jakob,
+Phys. Rev. Lett. 91 (2003) 016101.
+[10] N. Lopez and J.K. Norskov, Surf. Sci. 477 (2001) 59.
+[11] A. Roudgar and A. Groß, Surf. Sci. 597 (2005) 42.
+[12] B. Hammer and J.K. Nørskov, Surf. Sci. 343 (1995) 211.
+[13] V. Pallassana, M. Neurock, L.B. Hansen, B. Hammer and J.K.
+Nørskov, Phys. Rev. B 60 (1999) 6146.
+[14] B. Hammer, Topics Catal. 37 (2006) 3.
+[15] J.K. Nørskov, T. Bligaard, A. Logadottir, S. Bahn, L.B. Hansen,
+M.
+Bollinger,
+H.
+Bengaard,
+B.
+Hammer,
+Z.
+Sljivancanin,
+M. Mavrikakis, et al., J. Catal. 209 (2002) 275.
+[16] P. Hohenberg and W. Kohn, Phys. Rev. 136 (1964) B864.
+[17] A. Groß, Theoretical Surface Science – A Microscopic Perspec-
+tive,(Springer, Berlin, 2002).
+[18] W. Kohn and L. Sham, Phys. Rev. 140 (1965) A1133.
+[19] G. Kresse and J. Furthmu
+¨ ller, Phys. Rev. B 54 (1996) 11169.
+[20] M. Bockstedte, A. Kley, J. Neugebauer and M. Scheﬄer, Com-
+put. Phys. Commun. 107 (1997) 187.
+[21] B. Hammer, L.B. Hansen and J.K. Nørskov, Phys. Rev. B 59
+(1999) 7413.
+[22] J.P. Perdew, J.A. Chevary, S.H. Vosko, K.A. Jackson, M.R.
+Pederson, D.J. Singh and C. Fiolhais, Phys. Rev. B 46 (1992)
+6671.
+[23] K. Fukui, Science 218 (1982) 747.
+[24] R. Hoﬀmann, Rev. Mod. Phys. 60 (1988) 601.
+[25] B. Hammer, O.H. Nielsen and J.K. Nørskov, Catal. Lett. 46
+(1997) 31.
+[26] M. Gsell, P. Jakob and D. Menzel, Science 280 (1998) 717.
+[27] P. Jakob, M. Gsell and D. Menzel, J. Chem. Phys. 114 (2001)
+10075.
+[28] M. Mavrikakis, B. Hammer and J.K. Nørskov, Phys. Rev. Lett.
+81 (1998) 2819.
+[29] L.A. Kibler, M. Kleinert, R. Randler and D.M. Kolb, Surf. Sci.
+443 (1999) 19.
+[30] L.A. Kibler, M. Kleinert, V. Lazarescu and D.M. Kolb, Surf. Sci.
+498 (2002) 175.
+[31] F. Maroun, F. Ozanam, O.M. Magnussen and R.J. Behm, Science
+293 (2002) 1811.
+[32] H. Naohara, S. Ye and K. Uosaki, J. Electroanal. Chem. 500
+(2001) 435.
+[33] M.E. Quayum, S. Ye and K. Uosaki, J. Electroanal. Chem. 520
+(2002) 126.
+[34] A. Roudgar and A. Groß, J. Electronal. Chem. 548 (2003) 121.
+[35] A. Roudgar and A. Groß, Phys. Rev. B 67 (2003) 033409.
+[36] S. Sakong and A. Groß, Surf. Sci. 525 (2003) 107.
+[37] A. deSiervo, E.A. Soares, R. Landers, T.A. Fazan, J. Morais and
+G.G. Kleiman, Surf. Sci. 504 (2002) 215.
+[38] A.B. Aaen, E. Lægsgaard, A.V. Ruban and I. Stensgaard, Surf.
+Sci. 408 (1998) 43.
+[39] G. Liu, T.P. St. Clair and D.W. Goodman, J. Phys. Chem. B 103
+(1999) 8578.
+[40] A. Cuesta, L.A. Kibler and D.M. Kolb, J. Electroanal. Chem. 466
+(1999) 165.
+[41] J. Okada, J. Inukai and K. Itaya, Phys. Chem. Chem. Phys. 3
+(2001) 3297.
+[42] M. Watanabe and S. Motoro, J. Electroanal, Chem. 60 (1975)
+275.
+[43] H. Massong, H. Wang, G. Samjeske
+´ and H. Baltruschat, Elec-
+trochim. Acta 46 (2000) 701.
+[44] B.N. Grgur, N.M. Markovic and P.N. Ross, J. Phys. Chem. B 102
+(1998) 2494.
+[45] F. Illas, N. Lo
+´ pez, J.M. Ricart, A. Clotet, J.C. Conesa and M.
+Ferna
+´ ndez-Garcia, J. Phys. Chem. B 102 (1998) 8017.
+[46] F. Besenbacher, I. Chorkendorﬀ, B.S. Clausen, B. Hammer, A.M.
+Molenbroek, J.K. Nørskov and I. Stensgaard, Science 279 (1998)
+1913.
+[47] P. Kratzer, B. Hammer and J.K. Norskøv, J. Chem. Phys. 105
+(1996) 5595.
+[48] J.H. Larsen and I. Chorkendorﬀ, Surf. Sci. Rep. 35 (1999) 165.
+[49] C.R. Henry, Surf. Sci. Rep. 31 (1998) 235.
+[50] D.M. Kolb, Surf. Sci. 500 (2002) 722.
+[51] J. Meier, J. Schiotz, P. Liu, J.K. Nørskov and U. Stimming,
+Chem. Phys. Lett. 390 (2004) 440.
+[52] D.M. Kolb, R. Ullmann and T. Will, Science 275 (1997) 1097.
+[53] G.E. Engelmann, J.C. Ziegler and D.M. Kolb, J. Electrochem.
+Soc. 145 (1998) 33.
+[54] A. Roudgar and A. Groß, Surf. Sci. 559 (2004) L180.
+[55] W. Dong, V. Ledentu, P. Sautet, A. Eichler and J Hafner, Surf.
+Sci. 411 (1998) 123.
+[56] P.K. Schmidt, K. Christmann, G. Kresse, J. Hafner, M. Lischka
+and A. Groß, Phys. Rev. Lett. 87 (2001) 096103.
+[57] M. Lischka and A. Groß, Phys. Rev. B 65 (2002) 075420.
+[58] M. Lischka, C. Mosch and A. Groß, Surf. Sci. 570 (2004) 227.
+[59] D.M. Kolb, G.E. Engelmann and J.C. Ziegler, Angew. Chemie.
+Int. Ed. 39 (2000) 1123.
+[60] M.G. Del Popolo, E.P.M. Leiva, H. Kleine, J. Meier, U. Stim-
+ming, M. Mariscal and W. Schmickler, Appl. Phys. Lett. 81 (2002)
+2635.
+[61] M.G. Del Popolo, E.P.M. Leiva, H. Kleine, J. Meier, U. Stim-
+ming, M. Mariscal and W. Schmickler, Electrochim. Acta 48
+(2003) 1287.
+[62] S.M. Foiles, M.I. Baskes and M.S. Daw, Phys. Rev. B 33 (1986)
+7983.
+[63] M.S. Daw, S.M. Foiles and M.I. Baskes, Mater. Sci. Rep. 9 (1993)
+252.
+[64] M.G. Del Popolo, E.P.M. Leiva, M. Mariscal and W. Schmickler,
+Nanotechnology 14 (2003) 1009.
+A. Groß/Reactivity of bimetallic systems
+38
+[65] A. Roudgar, private communication.
+[66] J.A. Rodriguez, J. Dvorak, T. Jirsak and J. Hrbek, Surf. Sci. 315
+(2001) 315.
+[67] P. Liu, J.A. Rodriguez, J.T. Muckerman and J. Hrbek, Surf. Sci.
+530 (2003) L313.
+[68] P. Liu, J.A. Rodriguez, J.T. Muckerman and J. Hrbek, Phys. Rev.
+B 67 (2003) 155416.
+[69] Z.P. Chang, Z. Song, G. Liu, J.A. Rodriguez and J. Hrbek, Surf.
+Sci. 512 (2002) L353.
+[70] S. Helveg, J.V. Lauritsen, E. Lægsgaard, I. Stensgaard, J.K.
+Nørskov, B.S. Clausen, H. Topsøe and F. Besenbacher, Phys.
+Rev. Lett. 84 (2000) 951.
+[71] J.M. Thomas and W.J. Thomas, Principles and Practice of Het-
+erogeneous Catalysis, (VCH-Wiley, Weinheim, 1997).
+A. Groß/Reactivity of bimetallic systems
+39

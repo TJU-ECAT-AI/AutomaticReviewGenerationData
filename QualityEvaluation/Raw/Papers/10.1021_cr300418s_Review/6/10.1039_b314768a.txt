@@ -1,0 +1,743 @@
+Spin-forbidden CO ligand recombination in myoglobin
+Jeremy N. Harvey*
+School of Chemistry, University of Bristol, Cantock’s Close, Bristol, UK BS8 1TS.
+E-mail: jeremy.harvey@bris.ac.uk
+Received 17th November 2003, Accepted 28th November 2003
+First published as an Advance Article on the web 27th April 2004
+The reaction of small ligands within the distal pocket of haem proteins such as myoglobin,
+to form ligated, low-spin iron complexes is an archetypal spin-forbidden process in
+bioinorganic chemistry, because the initial, ‘‘deoxy’’ iron complex has a high-spin ground
+state. Density functional theory (DFT), transition-state theory (TST), and hybrid
+DFT/molecular mechanics (QM/MM) calculations are reported on the carbon monoxide
+reaction. Using DFT data for a model compound, TST rate calculations at room
+temperature are carried out which give fair agreement with experiment, and suggest a
+highly non-adiabatic nature to the reaction. QM/MM calculations on the whole protein
+are reported, which are in qualitative agreement with the gas-phase model results, but
+suggest that protein matrix eﬀects on the reaction rate may be important.
+Introduction
+Non-adiabatic reactions are common in biochemistry, especially processes such as electron
+transfer, and photochemical internal conversion and intersystem crossing. The theoretical study of
+biological electron transfer, and its nonadiabatic aspects, is a huge area of research.1,2 Electron
+transfer, e.g. from a redox cofactor to an enzyme active centre, can occur over quite large distances,
+so a considerable amount of work has focussed on understanding the pathways followed by
+electrons in such cases. Photosynthesis and vision are just two examples of processes involving
+electronically excited states. In recent years, a lot of computational work has addressed the
+non-adiabatic chemistry involved in the excited-state dynamics of the retinal chromophore
+involved in vision (see e.g. refs. 3 and 4).
+The class of biological non-adiabatic process which is the topic of this paper is diﬀerent, as it
+involves thermal processes without electron transfer. Many of the transition metal cofactors
+involved in metalloproteins exist at a given oxidation level, and have a coordination shell such that
+their ground state has one or more unpaired electrons. As a result, some thermal bioinorganic
+reactions involve a change in spin state along the reaction coordinate. Except in the limit of very
+strong spin–orbit coupling, therefore, these reactions are non-adiabatic since they will involve
+hopping, with sub-unity probability, from a potential energy surface corresponding to one
+spin-state to one corresponding to another spin-state.
+In recent years, we have carried out studies on a fairly large number of spin-forbidden reactions
+in the area of organo-transition metal chemistry.5–11 We ﬁnd that the spin-forbidden nature of
+reactions can have a profound impact upon their kinetics, regardless of the degree of non-
+adiabaticity involved. The reason for this is that even in the presence of strong spin–orbit coupling,
+movement from one spin-state to another ﬁrst requires that the system reach the regions of
+conﬁgurational space where the zeroth-order potential energy surfaces (or diabatic states) cross.
+DOI: 10.1039/b314768a
+Faraday Discuss., 2004, 127, 165–177
+165
+This journal is # The Royal Society of Chemistry 2004
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online / Journal Homepage / Table of Contents for this issue
+Because these zeroth-order surfaces can be very diﬀerent due to diﬀerences in the bonding in the
+two states, the position and energetics of such crossing regions cannot necessarily be readily
+predicted. In our cited work, we have located the minimum energy crossing points (MECPs) for a
+number of systems, using a code we have developed,12,13 in conjunction with existing ab initio
+program packages. In all cases, we have found that reactivity can be understood in qualitative
+terms based on the energy of the crossing points.
+However, non-adiabatic eﬀects are clearly important also. This is most clear from our study of
+spin-forbidden addition of carbon monoxide to triplet iron tetracarbonyl.11 This reaction has
+been studied experimentally in the gas-phase, and found to proceed about ﬁve hundred times
+slower than the gas-collision rate, in contrast to the spin-allowed related CO addition to iron
+tricarbonyl, which is nearly as fast as the collisional rate. As well as locating the MECP between
+singlet and triplet surfaces, we used a non-adiabatic version of transition state theory to
+calculate the gas-phase rate coeﬃcient for the ﬁrst of these reactions.11 We found that roughly
+half of the decrease in rate coeﬃcient is due to the presence of a very low energy barrier
+introduced by the surface crossing, with the MECP lying less than 1 kcal mol1 above the
+separated reactants. However, the remainder of the rate reduction was due to ineﬃcient surface
+crossing from one diabatic state to another at the MECP. Clearly, non-adiabatic behaviour can
+have a measurable eﬀect on the rate of reaction in spin-forbidden processes involving transition
+metal compounds.
+As well as this work on organometallic systems, we have started to apply our methodology to
+bioinorganic processes (note that others have also considered the eﬀect of spin on reactivity in
+biochemistry, see e.g. refs. 14 and 15). In particular, we have decided to focus initially on the
+reactions of myoglobin and related porphyrin proteins. Myoglobin has been referred to16 as the
+‘‘Hydrogen Atom of Biology’’: an archetypal system which has been studied by a large number of
+groups, using a broad range of methodologies, and addressing a number of fundamental issues
+relating to the properties and reactivity of biomolecules in general. With our interest in spin-
+forbidden chemistry, it is of particular interest because one of the key reactions it undergoes is
+exactly such a process. The central part of myoglobin is a haem group: a porphyrin ring system
+with an iron atom at its centre. As well as the four nitrogen atoms of the porphyrin, the iron is
+bonded to a nitrogen atom on a histidine side-chain. This pentacoordinate iron system is referred
+to as deoxymyoglobin. The physiological function of myoglobin is as an oxygen molecule carrier in
+muscles, as it can bond O2 as a sixth ligand (to form oxymyoglobin). Other small molecules, such
+as carbon monoxide, NO, and isocyanides RNC, are also able to bond to the metal centre.
+The structures of a model system for deoxy- and carbonmonoxy-myoglobin, involving only
+the central part of the haem system, and the imidazole sidechain of the histidine ligand, are shown
+in Fig. 1.
+Deoxymyoglobin is known from experiment to have a quintet electronic state, corresponding to
+a high-spin conﬁguration of the Fe(II), 3d6, iron centre. In contrast, oxymyoglobin, carbonmonoxy-
+myoglobin, and nitroxymyoglobin all have low-spin ground states, with, respectively, S ¼ 0, 0, and
+1/2. The carbonmonoxy- form involves low-spin Fe(II), the oxy- form is best described as having a
+Fig. 1
+Models of the haem centre in myoglobin. (A) deoxymyoglobin; (B) carbonmonoxymyoglobin.
+166
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+low-spin coupling between low-spin Fe(III) and a superoxide O2
+ ligand, whereas the unpaired
+electron in the nitroxy- form is mostly on the NO ligand. In all cases, then, ligand association to the
+deoxy- form involves a spin ﬂip of at least one electron on the metal, and a change in the overall spin,
+so these reactions are spin-forbidden. In the case of interest here, addition of CO, there is a double
+spin ﬂip, to go from a quintet reactant to a singlet adduct.
+There has been a lot of experimental work on this reaction. The main technique used has been
+ﬂash photolysis of the carbonmonoxy- (or oxy- or nitroxy-)myoglobin, leading to rupture of the
+Fe–X bond, followed by spectroscopic,17,18 and more recently ultrafast X-ray crystallographic,19–21
+observation of the resulting dissociated species. These experiments can be described by using the
+heuristic free energy surface shown in Fig. 2.
+Here the protein is shown as a globular structure, with the iron in the ‘‘middle part’’, surrounded
+on all sides but one by the protein and the porphyrin ring. Also shown is a very thin ‘‘tube’’ leading
+from the outside to the vicinity of the iron atom–this is not in fact present in static structures, and is
+likely to arise only as a result of dynamic ﬂuctuations. Finally, there is a cavity (not to scale!) on
+one side of the iron atom, which is present in the X-ray structures, and is referred to as the distal
+cavity. In most experiments, the protein is prepared in its oxy- or carbonmonoxy-bonded form,
+which is then photolysed, to form the geminate pair, in which the ligand is still in the distal cavity,
+but not bonded to the metal. The decay of this state can occur via two processes, geminate
+recombination and diﬀusion of the ligand out into the solvent; both are empirically observed to
+involve some kind of energy barrier. In this work, the focus is on the geminate recombination,
+which is observed, especially at low temperature, to occur on diﬀerent timescales. This has been
+taken17,18 to mean that the geminate pair exists as an ensemble of protein conformations which
+interconvert less readily than they undergo recombination, and that the latter process has barriers
+of diﬀerent height associated with it in the diﬀerent conformations. The aim of the present work is
+to contribute to an understanding, at the atomistic level, of the potential energy surfaces and the
+dynamics associated with recombination of CO.
+As an archetypal system in biophysics, there has naturally been a vast amount of previous
+computational and theoretical work on recombination. On the computational, electronic structure
+side, early work by several groups used systems such as the small model of Fig. 1, and addressed
+aspects such as the structure and electronic structure of carbonmonoxy- and oxy-myoglobin,22–24
+as well as the nature of the exited states and surfaces involved in photodissociation.25–27 This work
+typically used semiempirical theory or low levels of ab initio theory or DFT. More recently,
+Fig. 2
+Heuristic energy surface accounting for the observed kinetics upon ﬂash photolysis of carbon-
+monoxymyoglobin.
+Faraday Discuss., 2004, 127, 165–177
+167
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+increasingly accurate calculations, also on model compounds, have been carried out to address
+e.g. the energetics of iron–porphyrin (porphine) electronic states,28–31 the bonding and infrared
+spectroscopy of the various adducts,32,33 the potential energy surfaces involved in photodissocia-
+tion,34,35 and relative energetics of electronic states and bond energies,36 including the eﬀect of
+hydrogen bonding in the distal cage with extended models.37 Also in the last years, a number of
+hybrid QM/MM calculations have appeared, in which all the myoglobin atoms, not just the haem
+system, are included, and focussing on the geometry and hydrogen bonding in various adducts,38–41
+as well as on vibrational frequencies and NMR shifts.42,43
+A number of studies,44–46 including our own,47 have started to compute potential energy sur-
+faces, for the model systems, to attempt to understand the recombination rates. Most of this work
+has calculated the potential energy on one- and two-dimensional grids, e.g. by varying the Fe–C
+distance, and the Fe out of plane distance. The authors have then used the modelled surfaces to
+make predictions for the recombination rate, based on the locus of crossing of the surfaces and a
+dynamical model. This approach is similar to the one used here, except that the non-adiabatic
+model for recombination is diﬀerent, and that we have located the exact, full-dimensional lowest
+energy crossing point (MECP), not some 2-D or even 1-D approximation. This is important
+because recombination involves motion along several coordinates: as well as the two already
+mentioned, motion of the proximal histidine and slight structural changes in the porphyrin ring
+have some importance. Also, the basis sets used in one of the studies44 were too small, and led to an
+erroneous description of the quintet surface, which was found to be somewhat attractive, instead of
+purely repulsive as in our work.47 This led us to the qualitative picture of the potential energy
+surfaces shown in Fig. 3.
+As can be seen, the deoxyhaem model is computed to have a quintet ground state (with a close-
+lying triplet, which appears not to be important in reactivity), with the singlet lying ca. 5 kcal mol1
+higher. The singlet surface interacts attractively with CO at all distances, leading to a crossing with
+the repulsive quintet curve, at an energy Erel(MECP) of 2.4 kcal mol1 above the reactants. This
+suggests that geminate recombination of CO is slow in myoglobin for an intrinsic, electronic,
+reason: the need to cross from quintet to singlet introduces an energy barrier. In this model, the fact
+that diﬀerent protein conformations undergo recombination at diﬀerent rates is due to the protein
+matrix modulating an already existent barrier. To put this conclusion on a ﬁrmer footing, we hereby
+present two extensions to this earlier work. First of all, we have modelled the rate coeﬃcient, and
+its temperature dependence, for geminate recombination. For this, we use a modiﬁed form of our
+non-adiabatic transition-state code, and our computed potential energy surfaces for the model
+cluster system, including information on the MECP. Next, we have used a hybrid QM/MM
+method to provide a preliminary description of the potential energy surfaces involved in carbon
+monoxide geminate recombination in the full myoglobin system.
+Fig. 3
+Qualitative singlet and quintet potential energy surfaces for geminate recombination of carbon-
+monoxymyoglobin, as derived from ref. 47.
+168
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+Computational details
+The QM calculations of vibrational frequencies have been carried out using the Jaguar program
+code,48 and with the FeC24N6OH16 cluster model of the haem active site of carbonmonoxy-
+myoglobin shown in Fig. 1. The standard B3LYP density functional method is used in all calcu-
+lations, with restricted ‘‘wavefunctions’’ in all cases, i.e. RB3LYP for closed-shell systems and
+ROB3LYP for open-shell systems. The basis set used is the same as used in our earlier study: the
+standard Los Alamos ECP on Fe, together with the Jaguar48 triple-zeta basis set (LACV3P),
+the standard 6-311G* basis on the CO ligand, and the ﬁve coordinating nitrogen atoms, and the
+6-31G* basis (with ﬁve spherical harmonic d polarization functions) on all other atoms.
+QM/MM calculations in essence involve two calculations: one QM calculation, and one MM
+calculation, whose results need to be combined in a speciﬁc way. This formal structure is reﬂected
+in the way we carry out our calculations, using three separate programs. First of all, the completely
+standard Jaguar QM code is used to calculate the QM energy, with the electronic polarization
+induced by the MM region represented using an array of point charges. Next, the TINKER MM
+code49 with the CHARMM27 all atom forceﬁeld50 is used to calculate the MM energy and carry
+out geometry optimisation of the MM atoms. In this case, the native Fortran code has been slightly
+edited for better compatibility with the QM/MM program itself. This ﬁnal component is our own
+new interface, called QoMMMa, which will be described in detail elsewhere.51 In brief, like our
+previous code for locating crossing point between potential energy surfaces,12,13 it is designed to
+interact in as ﬂexible a way as possible with existing, unmodiﬁed, QM (and MM) codes, and
+resembles in this respect some other QM/MM codes.52,53 It is made up of a suite of Unix shell
+scripts and Fortran 90 programs, which create input for the QM and MM codes, run QM and MM
+jobs, analyze and integrate the results from the output, compute the QM/MM total energy and
+gradients, and optimise the geometry of the QM part. The QM/MM implementation is very similar
+to those described by others. Polarization eﬀects on the QM atoms (the charge-charge part of the
+QM/MM Hamiltonian) are included by inserting point charges corresponding to the MM atoms in
+the QM Hamiltonian. The steric QM/MM interactions are also included, using standard van der
+Waals radii for the QM atoms as included in the MM force-ﬁeld.50
+The covalent bonds between the QM and MM atoms are treated using the link atom method54 in
+a version similar to that suggested by Field et al.55 Speciﬁcally, in the MM energy expression, all
+terms including only QM atoms are deleted, whilst all those in which at least one atom is MM are
+conserved. Capping H atoms are introduced in the QM calculation at positions situated along the
+XQ–XM bond of the full system, and at a distance deﬁned by the ratio of the ideal XQ–H and XQ–
+XM bond lengths. These atoms interact with the MM charged atoms, but the MM charge on the
+link atom and some close-lying MM atoms is set to zero to avoid non-physical eﬀects; this is done
+in such a way as to treat the QM region with an integer charge state, and to conserve the total
+charge in the MM region. The QM gradient on the capping atom is spread over the XQ and XM
+atoms based simply on the geometric deﬁnition of the capping atom’s position, and the position of
+the capping atom is not explicitly optimised. Optimisation of the QM region is performed using a
+BFGS method, whereas the MM atoms are fully optimised (to within an RMS gradient of 0.1 kcal
+mol1 A
+˚ 1) at each QM geometry.
+In principle, these MM ‘‘micro-iterations’’ would require a large number of computations of the
+QM contribution to the QM/MM energy gradient for the MM atoms. This is avoided in a way
+similar to that already suggested in the literature:56,57 this gradient is approximated by that induced
+by a set of point charges positioned at the QM centers, with a correction term given by the dif-
+ference between the exact gradient term at the initial geometry, and this simple electric ﬁeld con-
+tribution. As discussed in the literature,56,57 this approximation becomes exact as one approaches a
+stationary point. For convenience, in our implementation, Mulliken charges are used to represent
+the QM region (with the charge on the capping H atoms added to that on the QM atom to which
+they are bonded); tests show that even this crude representation gives a fairly good description
+of the electrostatic potential, which is more than adequate given that this term is only used as
+a correction, and vanishes at the optimized geometry.
+Non-adiabatic TST calculations were carried out using a modiﬁcation of our existing codes.11,13
+Vibrational densities of state within the harmonic approximation were computed using the steepest
+descent method.58,59
+Faraday Discuss., 2004, 127, 165–177
+169
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+Non-adiabatic transition state theory (NA-TST)
+Our transition state theory method, which is based on that of Lorquet,60 and similar in some
+respects to other non-adiabatic rate theories,61–64 has been described in detail in previous work,11,13
+and only the key features need to be mentioned here. Our approach is also similar in spirit to that
+part of the previous theoretical work on the CO recombination rate which models it as involving a
+change in spin.44–46,65–67 The key diﬀerence with previous work is that we use the ab initio MECP
+from our previous work47 as the critical geometry, and include a full dimensional treatment of all
+degrees of freedom. As in the previous work on CO reaction with iron tetracarbonyl,11 the
+topology of the potential energy surfaces involved in the reaction is relatively simple (there are no
+intermediates), see Fig. 3, such that we only need to consider the rate coeﬃcient for the forward
+reaction, addition of CO to the haem iron atom. Also, the MECP and its surrounding crossing
+hyperline can be taken to represent the critical surface, so that variational methods are not needed.
+For these reasons, we can use the following simple expression for the thermal rate constant:
+k T
+ð Þ ¼
+1
+hQR T
+ð Þ
+Z
+1
+0
+NMECP E
+ð Þ expðE=kBTÞdE
+In this equation, h is Planck’s constant, NMECP(E) is an eﬀective number of states at the MECP,
+including non-adiabatic eﬀects (see below for a discussion of this term), for a given energy E
+relative to the zero-point level of the reactants, and kB is Boltzmann’s constant. QR(T ) is the
+reactant partition function, including in the present case the vibrational degrees of freedom of the
+quintet haem fragment, computed here at the B3LYP level of theory, and the rotational, vibra-
+tional, and translational degrees of freedom of the carbon monoxide co-reactant. Vibrational and
+rotational contributions to the partition function are treated in the normal ways, from harmonic
+frequencies and rotational constants obtained from the quantum mechanical calculations. For the
+translational degrees of freedom, however, we adopt a diﬀerent approach. Thus, geminate
+recombination is not a straightforward bimolecular reaction, since CO is ‘‘imprisoned’’ in the distal
+pocket of the protein in the reactant state. The reaction can be better described as being a
+unimolecular process, in which some of the nuclear degrees of freedom of the single ‘‘reactant’’ are
+extremely unconstrained. We consider that CO can rotate more or less freely in the distal cavity–
+hence the inclusion of a rotational partition function, as mentioned above. The translational
+motion could be described either using three very loose harmonic oscillators, or using the particle
+in a box expression. The latter approach has been used here, with the size of the box chosen,
+slightly arbitrarily, to be 3 A
+˚ cubed.
+As mentioned, NMECP(E) is an eﬀective number of states at the MECP, which is given as:
+NMECP E
+ð Þ ¼
+ZE
+0
+rMECP E  Eh
+ð
+Þ psh Eh
+ð
+ÞdEh
+This equation involves an integration over Eh , the part of the total energy E which is in the
+coordinate orthogonal to the seam of crossing between the two surfaces. For each value of this
+energy, the contribution to the integrated sum of states NMECP(E) is obtained as a product of the
+density of states within the crossing seam rMECP(E  Eh), and a probability for hopping from one
+surface to the other, psh(Eh). The ﬁrst of these terms is similar to the traditional density of states
+term used within the dividing surface around a saddle-point: the crossing seam deﬁnes a sub-space
+within which the available energy E  Eh may be distributed in many diﬀerent ways amongst the
+available vibrational degrees of freedom. Although it is possible to compute eﬀective harmonic
+vibrational frequencies within the seam of crossing,12 we have chosen here to approximate this set
+of frequencies in the following way: the frequencies for the quintet reactant fragment were used
+unchanged, as well as the free CO vibrational frequency, and four frequencies equal to 50 cm1, to
+represent the two rotational and two translational degrees of freedom of the carbon monoxide lost
+upon going from the reactants to the MECP. The choice of this value of 50 cm1 is arbitrary but
+reasonable: the equivalent set of transitional frequencies at the Fe(CO)4–CO MECP, which were
+computed elsewhere,11 lie between 40 and 200 cm1, and the present MECP is slightly ‘‘looser’’,
+170
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+with r(Fe–C) ¼ 2.33 A
+˚ vs. 2.24 A
+˚ for the Fe(CO)4 case. Note that one of the CO translational
+degrees of freedom becomes the reaction coordinate at the MECP.
+The term psh is the probability for hopping from one surface to another upon passing the
+crossing seam between the two zeroth order potential energy surfaces. This is calculated using
+either Landau–Zener theory or from WKB theory (using an expression given by Delos68). The
+Landau–Zener expression gives a ﬁnite hopping probability only for energies above the crossing
+point energy (which was found to be 2.38 kcal mol1 above the reactants,47 2.66 kcal mol1 after
+correction for zero-point energy), whereas the WKB expression allows for tunnelling from one
+surface to another below the crossing. Both give similar values for energies above the crossing.
+Whichever expression is used, psh depends upon the square of the electronic coupling term V12
+between the two surfaces, due to spin–orbit coupling. In the present case, this term is not known,
+but has been estimated67 to be of the order of 10 cm1, which is the value used here. psh also
+depends on the slopes of the two surfaces along the coordinate orthogonal to the crossing seam, in
+the vicinity of the MECP, and on the reduced mass in this direction. These latter terms are obtained
+from the gradients on the two surfaces at the MECP, which were obtained in our previous study.47
+Thus, the reduced mass is of 15.9 u, the slope on the singlet surface has a magnitude of 0.0497 Eh
+a0
+1, and that on the quintet surface has a magnitude of 0.0144 Eh a0
+1, and is oriented in the
+opposite direction.
+With these parameters, we compute the unimolecular rate coeﬃcients shown in Fig. 4, using both
+the Landau–Zener and WKB variants of the non-adiabatic transition state theory. Also shown in
+Fig. 4 is the rate computed for the hypothetical adiabatic process (i.e. where psh ¼ 1.0 for energies
+above the barrier), using the computed and estimated MECP properties for the transition state.
+As can be seen, the Arrhenius plot for both the adiabatic and Landau–Zener computed rates are
+almost linear. The apparent activation energy for the Landau–Zener case is of 3.0 kcal mol1, i.e.
+very slightly more than the energy barrier after correction for zero-point energy. The WKB non-
+adiabatic rate, which, unlike the two others, allows for tunnelling below the barrier, has positive
+curvature at low temperatures, which is in qualitative agreement with experimental observations on
+Fig. 4
+Arrhenius plot of log k (in s1) versus inverse T, computed for non-adiabatic geminate recombination
+of CO with haem in globin proteins.
+Faraday Discuss., 2004, 127, 165–177
+171
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+this process.18 At higher temperatures, the WKB and Landau–Zener expressions lead to very
+similar computed rates.
+The overall rate is diﬃcult to compare with experiment, as the geminate recombination reaction
+occurs at diﬀerent rates in diﬀerent systems. Nevertheless, the lifetime for recombination at room
+temperature is observed to be ca. 1 ms for myoglobin,45,46 which corresponds to a rate coeﬃcient of
+roughly 106 s1, in good agreement with our computed rates of 2.2  105 and 2.8  105 s1,
+respectively, with the Landau–Zener and WKB expressions. As discussed below, however, it should
+be realized that this agreement is in part fortuitous; the error on the calculated rate is certainly of
+one order of magnitude. Nevertheless, the fact that the values obtained are of the right order of
+magnitude, with a reasonable choice of parameters, is very encouraging.
+Most importantly, in the present context, is that it lends a certain amount of conﬁdence to one of
+the key conclusions derived from the rate calculations, namely that the process is severely non-
+adiabatic. The ratio of the computed rates using the adiabatic and non-adiabatic theories is of ca.
+300, which provides a measure of the average frequency with which the reactive system, upon
+passing the crossing seam, hops from the quintet diabatic curve to the singlet one. This probability
+is less than 1%, indicating that the behaviour is very diabatic, as expected given the low spin–orbit
+coupling. This conclusion is in contrast to that reached in several other works, which suggest
+instead that CO recombination is close to being adiabatic,44,67 and careful tests will be needed to
+establish which theory gives a more accurate rendering of the non-adiabatic behaviour.
+The computed rates are obviously dependent on many of the parameters and assumptions used
+in the TST calculations. For example, given the cubic dependence of the particle in a box partition
+function on the box length, changing the latter to 2 or 4 A
+˚ respectively increases or decreases all
+rates by roughly a factor of three. Equally, the treatment of CO rotational motion as free could
+have a severe impact on the rate: the rotational partition function at room temperature is about
+100, and this value could be much decreased if rotation were considered to be hindered. This would
+lead to an equivalent increase in the computed rate. Changing the spin–orbit coupling matrix
+element V12 by a factor of two from the chosen67—and highly arbitrary!—value of 10 cm1 changes
+the computed non-adiabatic rates by a factor of four. This thereby changes the relative value of the
+adiabatic and non-adiabatic rates; however, V12 needs to be increased to more than 50 cm1 for the
+non-adiabatic rate to become only ten times smaller than the adiabatic one. This order of
+magnitude of the coupling seems unlikely, given that this is a two-electron spin change. For
+example, even the one-electron spin-coupling matrix element calculated11 for the Fe(CO)4 þ CO
+system is only 30–60 cm1, depending on the geometry considered, so the present coupling must be
+smaller. The use of assumed frequencies of 50 cm1 for the transitional modes at the MECP adds
+another point of uncertainty. Increasing all of these to 100 cm1, or decreasing them to 25 cm1
+leads to a decrease or an increase respectively in the computed rates by as much as an order of
+magnitude. Finally, the computed rate is sensitive to the barrier height: increasing or decreasing it
+by 1 kcal mol1 leads to a decrease or increase, respectively, of the computed rate at 300 K by
+roughly a factor of four. As discussed below in the context of the QM/MM calculations, the
+protein environment is certainly likely to modulate the height of the MECP, and as in the
+Fe(CO)4 þ CO system, the uncertainties over the accuracy of the DFT description of the shape of
+singlet and quintet potential energy surfaces, and more pertinently of their relative energetics,69
+certainly also mean that the true barrier height might be somewhat diﬀerent from that used here.
+Bearing in mind these uncertainties, the agreement with experiment is pleasing, although it
+should be emphasised that joint changes in V12 , the MECP frequencies, and the particle in a
+box/free rotor treatment of CO, could lead to the same computed rate.
+QM/MM computations on myoglobin
+In this part of the work, the aim is to understand whether the simpliﬁed, cluster, treatment of
+geminate recombination, in which the rate is estimated from properties of the reactants and of the
+MECP for a very small model is realistic. In fact, it is immediately clear that this model is not
+appropriate. As discussed in the Introduction, it is known that at low temperatures, diﬀerent
+conformations or substates of myoglobin exist, which interconvert more slowly than they undergo
+geminate recombination, and which undergo the latter process at diﬀerent rates.17,18 This shows
+172
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+that conformations of the protein chain around the haem centre do have an inﬂuence on the singlet
+and quintet potential energy surfaces, and hence on the rate of recombination. To examine this
+question, it is therefore necessary to obtain potential energy surfaces for the whole protein. This is
+computationally rather diﬃcult or impossible at the DFT level of theory, so we have instead used a
+hybrid QM/MM approach for this part of the work. Our results focus at ﬁrst on the geometry and
+relative energy of the three key points on the potential energy surfaces for recombination, namely
+the carbonmonoxy- singlet, and the deoxy- quintet and singlet.
+Given the importance of obtaining a consistent conformation for the diﬀerent points considered,
+a systematic procedure is used to generate the initial geometries for all optimisations. First of all,
+crystallographic structure 1A6G of carbonmonoxy-myoglobin (obtained70 at a resolution of 1.15
+A
+˚ ) was downloaded in PDB format from the Protein Database. It was then converted to Tinker
+XYZ format, which has the side-eﬀect of deleting the haem prosthetic group, all the waters of
+crystallization, and the two sulfate counter-ions. The coordinates of the haem group were manually
+retrieved from the PDB ﬁle and added to the Tinker XYZ ﬁle, with appropriate hydrogens. The
+histidine residue in the distal pocket was treated as being protonated on the Nd atom, so that the
+nitrogen oriented towards the iron atom and the CO ligand is unprotonated. Other polar residues
+were treated as protonated or deprotonated in the standard way.
+Using Tinker, a box of 900 TIP3P water molecules was constructed then equilibrated at 300 K
+for 5 ps. A sphere of radius 16 A
+˚ was selected from the resulting structure, and superimposed on the
+myoglobin structure, centred on the iron atom, using the ‘‘Soak’’ routine in Tinker, so that water
+molecules overlapping with atoms on the protein are deleted. The water molecules were then
+equilibrated for 5 ps at 300 K, during which time they were prevented from ‘‘boiling oﬀ’’ by
+applying a harmonic restraining potential beyond an Fe–O(water) distance of 20 A
+˚ . During this
+equilibration, the whole of the protein was maintained frozen. The ﬁnal structure contained ﬁve
+water molecules in or very near either the proximal or the distal cavities around the haem group,
+and these were then manually deleted. This leaves a system with a total of 3032 atoms, including
+170 water molecules, and 2522 protein atoms. Then the whole structure was minimised to within a
+gradient of 0.05 kcal mol1 A
+˚ 1, in a stepwise manner designed to preserve the overall features of
+the crystallographical structure. First, the position of all the hydrogen atoms was optimised whilst
+keeping the heavy atoms ﬁxed, then the water molecules were optimised holding the protein ﬁxed,
+and ﬁnally, all atoms except the iron atom, the CO ligand, the ﬁve coordinating nitrogen atoms,
+and the 1504 atoms situated more than 15 A
+˚ from the iron atom, were optimised. For all these
+manipulations, a cutoﬀdistance of 8 A
+˚ was used for non-bonded interactions. No cutoﬀs were used
+in the QM/MM calculations. The CHARMM27 all-atom forceﬁeld50 was used throughout.
+The QM subsystem was composed of the porphyrin ring, with four methyl and two vinyl side-
+chains but without the two propionate side-chains, the iron atom, the CO ligand, and the imidazole
+ring part of the proximal histidine ligand, bonded to iron through the Ne atom. Three link atom
+connections were used: between the Cb of the porphyrin ring and the ﬁrst carbon atom of the two
+propionate side-chains, and between the carbon atom of the imidazole ring and the b carbon of the
+proximal histidine. This corresponds, in the case of the carbonyl complex, to a QM system with the
+formal composition C32FeH28N6O, i.e. 68 atoms, including 3 capping hydrogen atoms. For the
+dissociated state, we have simply removed the CO atoms from the initial structure for the car-
+bonmonoxy- system, and carried out optimisation under the same conditions. In all QM/MM
+optimisations, the 1504 distant atoms referred to above were frozen in position. The QM subsystem
+of the optimised structure of the carbomonoxy-myoglobin is shown in Fig. 5.
+Our results for the optimised geometries are rather similar to those described elsewhere.39,40 For
+the carbonmonoxy- complex, as shown in Fig. 5, the CO ligand is almost orthogonal to the
+porphyrin plane, with an Fe–C–O angle of 169, and N–Fe–C angles all close to 90. The Fe–C and
+Fe–N distances are similar to those found both in model systems and in QM/MM calculations.
+For the quintet fragment, we ﬁnd that the iron atom does not move very far out of plane, only by
+0.17 A
+˚ , versus 0.29 A
+˚ in the model system.47 Sigfridsson and Ryde40 found in their study that the
+distance out of the plane of the iron atom depends quite strongly on the orientation and
+protonation state of the distal histidine residue. With the Nd-protonated case, like the one we use
+here, the distance is quite small (0.34 A
+˚ ), but it is much larger with the tautomeric Ne-protonated
+histidine (0.50 A
+˚ ). The singlet fragment, which does not appear to have been considered in previous
+studies, adopts a geometry rather similar to that of the quintet fragment.
+Faraday Discuss., 2004, 127, 165–177
+173
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+Of more interest here is the energetics of these three situations. Because we have modelled the
+dissociated fragments without the CO molecule, we can only calculate bond energies relative to
+the gas phase CO. This should not be very diﬀerent to the bond energy for the geminate system, as
+the non-polar carbon monoxide does not interact strongly with the residues lining the distal cavity.
+Using the full QM/MM energies, we calculate a bond energy BDE(Fe–CO) of 11.7 kcal mol1 for
+dissociation of CO to give the quintet deoxy- state, and the singlet state of the deoxy- fragment is
+computed to lie a further 1.7 kcal mol1 higher (DE(1,5)). The values obtained with the model
+compound are quite diﬀerent, at respectively 17.7 and 5.8 kcal mol1.47 The model compound bond
+energy, in particular, seemed to agree very well with an experimental bond energy for myoglobin,
+reported as being 19  2 kcal mol1,71 so the present QM/MM energy appears to be much less
+accurate.
+We note that Sigfridsson and Ryde have also computed the bond energy with respect to the
+quintet fragment using the B3LYP QM/MM method,40 and obtain a value much closer to their
+(and our) gas-phase model values. With the Nd-protonated distal histidine, i.e. the system closest to
+the one we have used, their BDE(Fe–CO) is 21.7 kcal mol1. The diﬀerence with our results may be
+due to diﬀerences in basis sets or in the choice of QM subsystem (compared to ours, this addi-
+tionally includes the imidazole part of the distal histidine, but includes less side-chains on the
+porphyrin ring). More important is clearly the deﬁnition of the QM/MM bond energy. Our value
+uses the full QM/MM energy, including the full MM energy for all MM atoms, the QM energy
+(including the charge-charge and polarisation terms arising from the inclusion of the MM charges
+in the one-electron Hamiltonian), the link atom terms, and the QM/MM van der Waals interac-
+tions. This is the energy term which is optimised in our method. Sigfridsson and Ryde instead use
+only the ‘‘QM’’ part, i.e. the QM total energies in the presence of the ﬁeld of MM charges.
+QoMMMa also outputs these energies as part of the full calculation, and, using them, we obtain a
+BDE(Fe–CO) of 18.1 kcal mol1, and a DE(1,5) of 4.4 kcal mol1. Whilst these energies are much
+closer to the gas-phase, cluster model, QM values, there is no particular reason why one should
+include only the QM part of the QM/MM interaction in calculations (for a discussion of this
+question, see ref. 72).
+In any case, as pointed out by Sigfridsson and Ryde,40 QM/MM energetics need to be treated
+with caution, as small changes in the system setup can have quite a strong eﬀect on computed total
+energies. ‘‘Experimental’’ energies are often in fact heavily dependent on a model to convert
+observed rates or equilibria into energies. Also, the present QM/MM results are only preliminary,
+and considerably more information is needed on the eﬀect of considering the other tautomer of the
+distal histidine, other protein substates, etc. It may also be desirable to consider other QM
+methods. Whilst B3LYP is certainly one of the most accurate functionals for the small G2 test set
+of main-group compounds,73 and has been robustly argued to yield very accurate energetics in
+a wide range of bioinorganic systems,74,75 it is not clear that it does always give quantitative
+accuracy, especially where bonding to transition metals is concerned. For example, in our work on
+Fig. 5
+QM region of the QM/MM optimized structure of carbonmonoxy-myoglobin. The three capping
+hydrogen atoms corresponding to the C–C bonds bridging the QM and MM regions are shown with a slightly
+increased size.
+174
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+Fe(CO)5 ,11 we found that B3LYP underestimated the ﬁrst CO dissociation energy. Other func-
+tionals, such as B3PW91, gave larger values for the bond energy, which were in better agreement
+with accurate ab initio computations and with experiment, although, as with bioinorganic systems,
+both the ab initio and the experimental values do need to be treated with caution. It is however
+conceivable that the agreement between the experimental, myoglobin BDE(Fe–CO)71 and the
+computational, model compound value, is fortuitous, and that there really is a diﬀerence between
+the gas-phase and the protein bond energy, which cancels out with some error in the B3LYP
+description. Note that it is also uncertain whether B3LYP can be trusted to reproduce the spin-
+state splitting accurately, although experience with other systems suggests that it should not be
+badly wrong in the present case.69,76
+Despite these caveats, the present computed very small value for the singlet/quintet spin-state
+splitting is thought-provoking. The decrease in the energy splitting compared to the QM model
+calculations could be due to the additional side-chains present in the QM/MM calculation,
+although this seems unlikely, to artefacts in the QM/MM model, or to subtle eﬀects arising from
+the interaction between the preferred geometries of the two states and the protein environment.
+Certainly, if the splitting really is this small in the present system, it is likely that the MECP also lies
+lower than in the gas-phase model, which would lead to higher recombination rates. It will be
+highly interesting to compare the relative energetics obtained with e.g. the tautomer of the distal
+histidine, in the presence of dissociated CO, and for other substates generated by sampling diﬀerent
+geometries from molecular dynamics simulations of both the carbonmonoxy- and deoxy- forms of
+the protein. Previous work using molecular mechanics66 suggests that rather diﬀerent energetics for
+the two states and the crossing point should be found in such cases.
+Conclusions
+In this work, we present two extensions to our earlier work on the intrinsic barrier to geminate
+recombination of CO in haem proteins. First, we use non-adiabatic transition state theory to model
+the rate for recombination using a combination of computed properties of the MECP between
+singlet and quintet surfaces in a model of the haem centre, and some reasonable assumptions
+concerning other parameters. This leads to a computed rate in fair agreement with experiment, and
+to the conclusion that CO recombination at room temperature is highly non-adiabatic, with the
+probability for spin-ﬂip at the MECP estimated to be less than 1% on average. This conclusion,
+based on potential energy surfaces for a model system, will need to be revisited based on the
+surfaces present in the full protein. As a ﬁrst step towards obtaining the latter, we present QM/
+MM computations of the geometry and energetics of carbonmonoxy- and deoxymyoglobin, using
+a new QM/MM code, QoMMMa. The bond energy and singlet/quintet spin-state splitting are
+found to be smaller than in the gas-phase model, although only one conformational substate has
+been considered so far.
+Acknowledgements
+The author warmly acknowledges the many helpful discussions he has had on QM/MM methods
+with Drs Adrian J. Mulholland and Frederick R. Manby. He also thanks Dr Jay W. Ponder for
+providing him with the Tinker molecular modelling package, and the EPSRC for the award of an
+Advanced Research Fellowship.
+References
+1
+M. Bixon and J. Jortner, in Electron Transfer—from Isolated Molecules to Biomolecules, Wiley, New York,
+1999.
+2
+A. V. Barzykin, P. A. Frantsuzov, K. Seki, and M. Tachiya, in Solvent eﬀects in Nonadiabatic
+Electron-transfer Reactions: Theoretical Aspects, Wiley, New York, 2002.
+3
+S. Hayashi, E. Tajkhorshid and K. Schulten, Biophys. J., 2003, 85, 1440.
+4
+A. Cembran, F. Bernardi, M. Olivucci and M. Garavelli, J. Am. Chem. Soc., 2003, 125, 12 509.
+5
+K. M. Smith, R. Poli and J. N. Harvey, New J. Chem., 2000, 24, 77.
+6
+J. N. Harvey, in Spin-forbidden Reactions in Transition-Metal Chemistry, ed. T. R. Cundari, Marcel
+Dekker, New York, Basel, 2001.
+Faraday Discuss., 2004, 127, 165–177
+175
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+7
+K. M. Smith, R. Poli and J. N. Harvey, Chem. – Eur. J., 2001, 7, 1679.
+8
+J. C. Green, J. N. Harvey and R. Poli, J. Chem. Soc. Dalton Trans., 2002, 1861.
+9
+R. Poli and J. N. Harvey, Chem. Soc. Rev., 2003, 32, 1.
+10
+J. N. Harvey, R. Poli and K. M. Smith, Coord. Chem. Rev., 2003, 238, 347.
+11
+J. N. Harvey and M. Aschi, Faraday Discuss., 2003, 124, 129.
+12
+J. N. Harvey, M. Aschi, H. Schwarz and W. Koch, Theor. Chem. Acc., 1998, 99, 95.
+13
+J. N. Harvey and M. Aschi, Phys. Chem. Chem. Phys., 1999, 1, 5555.
+14
+S. Shaik, S. P. de Visser, F. Ogliaro, H. Schwarz and D. Schroder, Curr. Opin. Chem. Biol., 2002, 6, 556.
+15
+R. Prabhakar, P. E. M. Siegbahn, B. F. Minaev and H. Agren, J. Phys. Chem. B, 2002, 106, 3742.
+16
+H. Frauenfelder, B. H. McMahon and P. W. Fenimore, Proc. Natl. Acad. Sci. USA, 2003, 100, 8615.
+17
+R. H. Austin, K. W. Beeson, L. Eisenstein, H. Frauenfelder and I. C. Gunsalus, Biochemistry, 1975, 14,
+5355.
+18
+P. J. Steinbach, A. Ansari, J. Berendzen, D. Braunstein, K. Chu, B. R. Cowen, D. Ehrenstein,
+H. Frauenfelder, J. B. Johnson, D. C. Lamb, S. Luck, J. R. Mourant, G. U. Nienhaus, P. Ormos, R.
+Philipp, A. H. Xie and R. D. Young, Biochemistry, 1991, 30, 3988.
+19
+V. S
+ˇrajer, T. Y. Teng, T. Ursby, C. Pradervand, Z. Ren, S. Adachi, W. Schildkamp, D. Bourgeois,
+M. Wulﬀand K. Moﬀat, Science, 1996, 274, 1726.
+20
+V. S
+ˇrajer, Z. Ren, T. Y. Teng, M. Schmidt, T. Ursby, D. Bourgeois, C. Pradervand, W. Schildkamp,
+M. Wulﬀand K. Moﬀat, Biochemistry, 2001, 40, 13 802.
+21
+D. Bourgeois, B. Vallone, F. Schotte, A. Arcovito, A. E. Miele, G. Sciara, M. Wulﬀ, P. Anﬁnrud and
+M. Brunori, Proc. Natl. Acad. Sci. USA, 2003, 100, 8704.
+22
+B. D. Olafson and W.A. Goddard, Proc. Natl. Acad. Sci. USA, 1977, 74, 1315.
+23
+D. A. Case, B. H. Huynh and M. Karplus, J. Am. Chem. Soc., 1979, 101, 4433.
+24
+A. Dedieu, M. M. Rohmer, H. Veillard and A. Veillard, Nouv. J. Chim., 1979, 3, 653.
+25
+M. Zerner, M. Gouterman and H. Kobayashi, Theor. Chim. Acta, 1966, 6, 363.
+26
+A. Waleh and G. H. Loew, J. Am. Chem. Soc., 1982, 104, 2346.
+27
+A. Waleh and G. H. Loew, J. Am. Chem. Soc., 1982, 104, 2352.
+28
+P. M. Kozlowski, T. G. Spiro, A. Berces and M. Z. Zgierski, J. Phys. Chem. B, 1998, 102, 2603.
+29
+Y. K. Choe, T. Nakajima, K. Hirao and R. Lindh, J. Chem. Phys., 1999, 111, 3837.
+30
+A. Ghosh, B. J. Persson and P. R. Taylor, J. Biol. Inorg. Chem., 2003, 8, 507.
+31
+K. Pierloot, Mol. Phys., 2003, 101, 2083.
+32
+T. G. Spiro, M. Z. Zgierski and P. M. Kozlowski, Coord. Chem. Rev., 2001, 219, 923.
+33
+T. G. Spiro and P. M. Kozlowski, Acc. Chem. Res., 2001, 34, 137.
+34
+A. Dreuw, B. D. Dunietz and M. Head-Gordon, J. Am. Chem. Soc., 2002, 124, 12 070.
+35
+B. D. Dunietz, A. Dreuw and M. Head-Gordon, J. Phys. Chem. B, 2003, 107, 5623.
+36
+C. Rovira, K. Kunc, J. Hutter, P. Ballone and M. Parrinello, J. Phys. Chem. A, 1997, 101, 8914.
+37
+E. Sigfridsson and U. Ryde, J. Biol. Inorg. Chem., 1999, 4, 99.
+38
+C. Rovira, J. Mol. Struct. (THEOCHEM), 2003, 632, 309.
+39
+C. Rovira, B. Schulze, M. Eichinger, J. D. Evanseck and M. Parrinello, Biophys. J., 2001, 81, 435.
+40
+E. Sigfridsson and U. Ryde, J. Inorg. Biochem., 2002, 91, 101.
+41
+U. Ryde and K. Nilsson, J. Mol. Struct. (THEOCHEM), 2003, 632, 259.
+42
+Q. Cui and M. Karplus, J. Phys. Chem. B, 2000, 104, 3721.
+43
+Q. Cui and M. Karplus, J. Chem. Phys., 2000, 112, 1133.
+44
+B. H. McMahon, B. P. Stojkovic, P. J. Hay, R. L. Martin and A. E. Garcia, J. Chem. Phys., 2000, 113,
+6831.
+45
+S. Franzen, Proc. Natl. Acad. Sci. USA, 2002, 99, 16 754.
+46
+S. Franzen, J. Phys. Chem. B, 2002, 106, 4533.
+47
+J. N. Harvey, J. Am. Chem. Soc., 2000, 122, 12 401.
+48
+Jaguar, 4.0, Schro
+¨dinger, Inc., Portland, Oregon, 1996–2001.
+49
+J. W. Ponder, TINKER: Software Tools for Molecular Design, v4.0, Saint Louis, MO, 2003.
+50
+A. D. MacKerell, D. Bashford, M. Bellott, R. L. Dunbrack, J. D. Evanseck, M. J. Field, S. Fischer, J. Gao,
+H. Guo, S. Ha, D. Joseph-McCarthy, L. Kuchnir, K. Kuczera, F. T. K. Lau, C. Mattos, S. Michnick,
+T. Ngo, D. T. Nguyen, B. Prodhom, W. E. Reiher, B. Roux, M. Schlenkrich, J. C. Smith, R. Stote,
+J. Straub, M. Watanabe, J. Wiorkiewicz-Kuczera, D. Yin and M. Karplus, J. Phys. Chem. B, 1998, 102,
+3586.
+51
+J. N. Harvey, unpublished work.
+52
+U. Ryde and M. H. M. Olsson, Int. J. Quantum Chem., 2001, 81, 335.
+53
+P. Sherwood, A. H. de Vries, M. F. Guest, G. Schreckenbach, C. R. A. Catlow, S. A. French, A. A. Sokol,
+S. T. Bromley, W. Thiel, A. J. Turner, S. Billeter, F. Terstegen, S. Thiel, J. Kendrick, S. C. Rogers, J. Casci,
+M. Watson, F. King, E. Karlsen, M. Sjovoll, A. Fahmi, A. Schafer and C. Lennartz, J. Mol. Struct.
+(THEOCHEM), 2003, 632, 1.
+54
+N. Reuter, A. Dejaegere, B. Maigret and M. Karplus, J. Phys. Chem. A, 2000, 104, 1720.
+55
+M. J. Field, M. Albe, C. Bret, F. Proust-De Martin and A. Thomas, J. Comput. Chem., 2000, 21, 1088.
+56
+R. B. Murphy, D. M. Philipp and R. A. Friesner, J. Comput. Chem., 2000, 21, 1442.
+57
+T. Vreven, K. Morokuma, O. Farkas, H. B. Schlegel and M. J. Frisch, J. Comput. Chem., 2003, 24, 760.
+176
+Faraday Discuss., 2004, 127, 165–177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online
+58
+W. Forst, Theory of Unimolecular Reactions, Academic Press, 1973.
+59
+T. Baer and W. L. Hase, Unimolecular Reaction Dynamics, Oxford University Press, 1996.
+60
+J. C. Lorquet and B. Leyhnihant, J. Phys. Chem., 1988, 92, 4778.
+61
+Q. Cui, K. Morokuma, J. M. Bowman and S. J. Klippenstein, J. Chem. Phys., 1999, 110, 9469.
+62
+K. Morokuma, Q. Cui and Z. W. Liu, Faraday Discuss., 1998, 71.
+63
+A. J. Marks, J. Chem. Phys., 2001, 114, 1700.
+64
+N. E. Henriksen and F. Y. Hansen, Phys. Chem. Chem. Phys., 2002, 4, 5995.
+65
+J. Jortner and J. Ulstrup, J. Am. Chem. Soc., 1979, 101, 3744.
+66
+C. Zheng, V. Makarov and P. G. Wolynes, J. Am. Chem. Soc., 1996, 118, 2818.
+67
+H. Frauenfelder and P. G. Wolynes, Science, 1985, 229, 337.
+68
+J. B. Delos, J. Chem. Phys., 1973, 59, 2365.
+69
+J. N. Harvey, Struct. Bonding, 2004, in press.
+70
+J. Vojtechovsky, K. Chu, J. Berendzen, R. M. Sweet and I. Schlichting, Biophys. J., 1999, 77, 2153.
+71
+R. J. D. Miller, Acc. Chem. Res., 1994, 27, 145.
+72
+A. J. Turner, V. Moliner and I. H. Williams, Phys. Chem. Chem. Phys., 1999, 1, 1323.
+73
+C. W. Bauschlicher and H. Partridge, J. Chem. Phys., 1995, 103, 1788.
+74
+P. E. M. Siegbahn, Q. Rev. Biophys., 2003, 36, 91.
+75
+P. E. M. Siegbahn, Faraday Discuss., 2003, 124, 289.
+76
+O. Salomon, M. Reiher and B. A. Hess, J. Chem. Phys., 2002, 117, 4729.
+Faraday Discuss., 2004, 127, 165–177
+177
+Published on 27 April 2004. Downloaded by University of Warsaw on 28/10/2014 15:23:19. 
+View Article Online

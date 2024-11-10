@@ -1,0 +1,337 @@
+element not found
+
+The Journal of Physical Chemistry CVol 116/Issue 10Article
+Cite
+Share
+Jump to
+Expand
+ARTICLEFebruary 15, 2012
+Molecular Dynamics Simulation of Chemical Vapor Deposition Graphene Growth on Ni (111) Surface
+Lijuan Meng†Qing Sun†Jinlan Wang*†Feng Ding*‡
+View Author Information
+View Author Information
+Open PDF
+Supporting Information (2)
+Abstract
+Grasping the fundamentals of graphene growth is vital for graphene synthesis. By employing classical molecular dynamics with the ReaxFF potential, we have investigated the evolution of carbon structures and the growth kinetics of graphene on Ni(111) surface at different temperatures. Our results showed that low C concentration leads to the dissolution of C atoms into Ni only, whereas high C concentration leads to the formation of graphene island. By efficient defect annealing at the optimal temperature of ∼1000 K, the quality of graphene island can be significantly improved. Furthermore, a graphene island can grow larger by capturing the deposited C atoms and form more hexagons on the edge with its self-healing capability during the growth. These underlying observations and understandings are instructive for the control of the CVD growth of graphene.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2012 American Chemical Society
+Subjects
+what are subjects
+Chemical Structure
+Chemical Vapor Deposition
+Defects
+Oligomers
+Two Dimensional Materials
+I Introduction
+Graphene has surged a new knowledge of science and technology owing to its excellent mechanical, (1-3) thermal, (4-6) optical, (7-9) and electronic properties. (10-13) These intriguing properties make graphene the most promising candidate for various applications in many fields, (14-18) such as material science and microelectronics. To realize these potential applications, the synthesis of high-quality graphene in large quantity is a prerequisite. Experimentally, there are many methods of synthesizing graphene, including mechanical peeling, (19, 20) high-temperature sublimation of SiC, (21-23) chemically functionalized graphene reduction, (24, 25) and transition metal (TM)-catalyzed chemical vapor deposition (CVD). (26-30) Presently, CVD is considered the most promising, low-cost approach to synthesize high-quality large-area graphene. (31, 32) Controlling the growth of graphene on TM surface requires a primary understanding of its mechanism at the atomic level.
+Current experimental techniques are unable to provide the atomic details of graphene growth. To achieve the high quality and large scale graphene, extensive theoretical efforts have been made to understand the details of graphene nucleation and growth. Loginova et al. have found that graphene grows by adding C clusters to the edge rather than the insertion of C monomers. (33) Chen et al. have studied the formation of C dimers on different TM terraces or near a step edge and predicted that the nucleation behavior of graphene depends on the type of the metal substrate. (34) Gao et al. have systematically explored graphene nucleation on TM terrace and near the step edge. (35) They further investigated C clusters supported on Ni (111) surfaces and found that graphene islands with one to three 5-membered rings (MRs) are energetically more favorable than those with only hexagons. (36) Cheng et al. have studied the structure, energetics, and mobility of C aggregates up to 10 atoms on the Ni (111) surface and proposed a homogeneous nucleation mechanism. (37) Using tight-binding Monte Carlo simulation, Amara et al. have examined the nucleation of graphene on a Ni(111) surface (38) and revealed that the substrate metal is beneficial to the defect healing during graphene growth. (39) These theoretical studies have mainly employed static models. Nevertheless, the graphene growth is typical a kinetic and nonequilibrium process. Molecular dynamics (MD) is a powerful tool to explore such process at the atomic level. Up to date, there is only very limited theoretical work concentrating on the dynamics of graphene growth. (40)
+In CVD experiments, the evolution of graphene structures is driven by C atom addition. What are the preferred configurations of C aggregates on TM surface at different C concentrations and temperatures? How do the C atoms nucleate on catalysts? Can defects formed during C addition be healed efficiently? In this work, we studied the impact of C concentration and temperature on graphene growth. Our results showed that (i) high C concentration may induce the formation of graphene island directly, (ii) the quality of graphene island can be significantly improved by efficient defect healing at 1000 K, and (iii) a graphene island can grow larger by capturing the deposited C atoms around to form more hexagons.
+II Models and Methods
+Our MD simulations were based on the reactive force-field (ReaxFF) (41) potential energy surface, which parameters are recently developed for the C/Ni system. (42) It was found that energies, transition states, reaction paths and reactive events calculated by ReaxFF are consistent with those obtained by quantum mechanical calculations. (42-44) Certainly, despite the ReaxFF was validated reasonable, it is less accurate than the quantum methods. In our MD simulation, the velocity Verlet algorithm (45) with a time step of 0.25 fs was used. The relatively small time step ensures the energy conservation at the temperatures of T ∼ 1000 K. The system temperature was maintained by a Berendsen thermostat (46) with a damping constant of 100 fs.
+A four-layer slab model of Ni (111) surface, which contains 256 Ni atoms in total or 64 per layer, was built to represent the catalyst surface. The axis x is along the [110] direction, and axis y is along the [1̅12] direction. We adopted a 20 Å thick vacuum along the z axis and applied periodic boundary conditions along the other directions. Atoms in the bottom layer of the slab were fixed to mimic the semi-infinite large surface. 16, 32, and 64 C atoms (i.e., 1/8, 1/4, and 1/2 of pristine monolayer graphene laying over the metal surface) were randomly deposited on the Ni (111) surface, respectively. Four different annealing temperatures, T = 800, 1000, 1200, and 1400 K, were considered in the simulations. Each combination of C concentration and temperature is named as Cn@T, where n denotes the number of C atoms and T is the simulation temperature in K.
+III Results and Discussion
+1 C Structure Evolution at Different Concentrations
+In a CVD experiment of graphene growth, the C concentration is raised gradually with the dissociation of the C precursor on the TM surface. To investigate the effect of C concentration on the nucleation of graphene, we considered three different C concentrations with 16, 32, and 64 C atoms, namely 1/8, 1/4, and 1/2 monolayer. The initial and final structures obtained in 100 ps MD trajectories at 1000 K are presented in Figure 1.
+Figure 1
+Figure 1. Initial and final structures obtained in 100 ps MD simulations at 1000 K for C16 (a, b), C32 (c, d), and C64 (e, f). Cyan and orange spheres represent Ni and C atoms, respectively.
+In the case of 16 C atoms, C monomers are readily to enter into the subsurface. This is due to the low barrier from surface adatom to subsurface one, only 0.6 eV. (37) Such a small barrier can be overcome easily at 1000 K. As C monomer preferentially adsorbs on the subsurface, it is difficult to observe the formation of dimer on the Ni (111) surface. In contrast, C dimers and trimers on the surface are energetically more stable at 1000 K. Trajectories show that the surface Ni atoms between two C dimers or trimers will first be lift out of the substrate by the strong C–Ni interaction, forming stable bridging-metal structures. Similar results were observed in previous DFT calculation, (47) which provides a strong support of the validity of the force field employed in this work. Thus, the diffusion barrier of these dimers or trimers must be quite large owing to the strong C–Ni interaction. This dramatically hampers the diffusion and coalescence of C atoms on Ni (111) surface. As the annealing proceeds, more C atoms penetrate gradually into the subsurface and some Ni atoms are kicked out of the surface to form adatom defects. As a result, the substrate surface becomes very disordered.
+For the case of 32 C atoms, the initial structure was built with a little coincidence that all atoms are bonded together (Figure 1c). Because of the increase of the C concentration, the C atoms tend to form long C chains or large polygonal rings in which many C atoms are sp1-hybridized. A long chain (red ellipse of Figure 1c) has two “arms”, and the two “arms” may easily form a C–C bond between them, which eventually leads to the formation of a 6-MR. Similarly, the polygonal ring containing 11 C atoms (black ellipse of Figure 1c) ultimately turns into a 6-MR and a 7-MR. In addition, short chains with five or six C atoms can evolve directly into a 5-MR or a 6-MR (yellow ellipse of Figure 1d). After a 100 ps annealing, nearly all these chains and rings eventually form a 2D sp2 network of pentagons, hexagons, and heptagons (Figure 1d). It can be seen that the dome-like graphene island is very defective, which contains a number of 5- and 7-MRs, in good agreement with the results reported in the literature. (36, 40)
+As the C concentration further increases, taking 64 C atoms as an example, the initial C structure contains a monomer, a dimer, a trimer, many chains, and rings. Similar to the case of C16, the monomer preferentially occupies the subsurface site after a short period of annealing. Both the C dimer and trimer favor to locate on the surface, but they do not coalesce with the large framework because of the lack of diffusion. For chains or rings, they are apt to interact with each other to form 5-, 6-, or 7-MR, as the case of C32. It is observed that majority of 5-, 6-, or 7-MRs forms within the first 10 ps in the MD simulation. On the other hand, once a 2D sp2 C network forms, it is very stable because of the enhanced C–C interaction. (38)
+From above description, we conclude that low C concentration does not allow the formation of large sp2 network, and high concentration is required to induce the formation of graphene island.
+Now, let us turn to the C structure evolution at different temperatures. The initial and final structures obtained by a 100 ps MD simulation at 1200 and 1400 K are depicted in Figures S1 and S2 in the Supporting Information, respectively. It is noticeable that the quality of final C structures highly depends on the temperature. Taking C32 as an example, at 1000 K, the final C structure contains four 5-MRs, three 6-MRs, and two 7-MRs, whereas the numbers are 3, 2, and 2, respectively, at 1200 K. An explicit discussion about the effect of temperature on the evolution of C structures is shown in the next section.
+2 Defect Healing at Different Temperatures
+Experimentally, the quality of graphene strongly depends on the growth temperature. Here, taking the high C concentration with 64 C atoms as an example, we studied the effect of temperature variations on the defect healing in graphene growth. The starting structure and the final configurations after 100 ps MD trajectories at four different temperatures (800, 1000, 1200, and 1400 K) are presented in Figure 2 (top and side views). Table 1 summarizes the numbers of i-MRs (i = 3, 4, ..., 9) in the C structures formed at different temperatures.
+Figure 2
+Figure 2. Equilibrium configurations at (a) 0, (b) 800, (c) 1000, (d) 1200, and (f) 1400 K. Color captions are the same as that in Figure 1.
+Table 1. Numbers of Various Polygons in the Initial and Final Configurations Annealed at Various Temperatures
+T (K) 3-MR 4- MR 5- MR 6- MR 7- MR 8- MR 9- MR
+0 6 3 1 2 1 0 1
+800 1 0 2 3 2 1 1
+1000 1 1 2 8 1 1 0
+1200 1 0 2 5 1 0 0
+1400 0 0 4 3 1 1 1
+As clearly shown in Table 1, the numbers of 3- and 4-MRs are greatly reduced at high temperature, indicating that they are very unstable. While 5-MRs are very stable and the only 5-MR in the initial structure has never been healed at the temperature up to 1400 K. Furthermore, due to the thermal activation, some new pentagons are formed via the interaction of the C chains; the number of the 5-MRs increases at high temperature. This is in agreement with the previous result revealed by ab initio calculations that a graphene island should be stabilized by the incorporation of a few pentagons. (35, 36, 48) Similar to the 5-MR, the 7-MR in the initial structure is also very stable and not be healed. The 9-MR remains present at 800 K but is transformed into a 5-MR and a 6-MR at 1000 and 1200 K. Different from the results obtained by Monte Carlo simulation (39) that the quality of graphene became better at higher temperature, the number of 6-MR reaches the maximum at 1000 K and decreases as the temperature further increases in our MD simulations. At the temperature higher than 1000 K, the surface Ni atoms between C chains become so active that some diffuse out of the surface and the substrate becomes very disordered, which heavily hinders the defect healing of the C structures. A trajectory of 64 C atoms at 1000 K is shown in Movie S1 of the Supporting Information. It clearly shows that two 3-MRs and one 4-MR form a new 6-MR. A 10-MR turns into two 6-MRs. Two adjacent chains move closely and form a 5-MR and a 6-MR. Therefore, we can conclude that the quality of graphene growth depends on the temperature and the optimal growth temperature of graphene should be around 1000 K, as most CVD experiments of graphene growth were applied. (49, 50)
+3 Growth of Graphene Island by Adding C Atoms
+With the deposition of C atoms, a graphene island acts as a nucleation center and will grow large by the continuous addition of C atoms. Here we take the annealed configuration of 32 C atoms at 1000 K (Figure 1d) as an initial seed and randomly place 8 C atoms near it. Figure 3 presents a few snapshots of the trajectories of the island growth by adsorbing those added C atoms. Clearly, the graphene island grows larger with the appearance of new polygons, most of which are hexagons (Figure 3f). Here, we focus on the formation of new hexagons. When a deposited C atom (atom 1) is captured by a 5-MR of the island edge, atom 1 tends to form two bonds with atoms 2 and 3 and, simultaneously, the bond between atoms 2 and 3 is broken, which leads to a 6-MR formation (red ellipse of Figure 3c). Atom 4 falls in the vicinity of a polygonal C chain and is captured by atoms 5 and 6, resulting in the formation of another 6-MR (black ellipse of Figure 3c). A dimer that is composed of atoms 7 and 8 moves gradually and ultimately incorporates into a new 6-MR with the edge atoms of the island (yellow ellipse of Figure 3e). As discussed above, the 5-MR is very stable and difficult to be healed. However, it can be easily healed to be a 6-MR once it captures another C atom. It is noted that, as the newly added C atoms mainly interact with the edge atoms of an island, the addition of C atoms only affects the edge structure of the island.
+Figure 3
+Figure 3. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1000 K. Color captions are the same as those in Figure 1. Green spheres represent newly added carbon atoms.
+The growth of graphene island by adding C monomers and a dimer at 1200 and 1400 K are further explored. The snapshots of trajectories are shown in Figures 4 and 5, respectively. From Figure 4, one can see that atoms 1 and 4 contribute to the formation of two new 6-MRs, the same as that at 1000 K. At 1200 K, the vibration motion of the dimer is promoted and the adjacent 7-MR is opened (red ellipse of Figure 4d). This is expected and probably provides a pathway to the healing of heptagon defect via the continuous addition of C atoms. The newly added atom 11 moves slowly toward atom 3, forming a new 6-MR (black ellipse of Figure 4f). This is significantly different from the case of 1000 K, where the atom 11 interacts with the island edged atoms and forms a 4-MR (purple ellipse of Figure 3d). Furthermore, a new 5-MR is formed and ascribed to the presence of atom 9 at 1200 K (yellow ellipse of Figure 4f), which is readily transformed into a 6-MR in the subsequent growth process, which is similar to the formation of the 6-MR involved atom 1 and is not shown here.
+Figure 4
+Figure 4. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1200 K. Color captions are the same as in Figure 3.
+For the case of T = 1400 K, it is also evident from Figure 5 that atoms 1 and 4 are incorporated into the formation of two 6-MRs at ca. 0.09 ps. Different from the cases at 1000 and 1200 K, however, atom 9 bonded with atom 5 diffuses closely to atom 4 to form a triangle at 0.32 ps. The triangle is unstable and the bond between atom 4 and 5 is broken after 0.19 ps, thereby leading to the conversion of a 6-MR into a 7-MR (red ellipse of Figure 5e). At 1400 K, the incoming atom 11 breaks a 7-MR. Contrary to our expectation, the two moving chains eventually form a new 7-MR by the reformation of C–C bonds (black ellipse of Figure 5d). Owing to the relatively high temperature (T = 1400 K), the activity of Ni atoms is enhanced. The two Ni atoms nearby the dimer (yellow ellipse of Figure 5f) move out of the surface and become adatoms, which actually stonewalls the motion of the dimer. Thus, the dimer neither joins in the formation of a 6-MR nor breaks the connected 7-MR.
+Figure 5
+Figure 5. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1400 K. Color captions are the same as in Figure 3.
+On the basis of the discussion above, we can conclude that the graphene island growth possesses the capacity of defect healing. The graphene island is a sp2 C structure with substantive defects which are uniformly called nonhexagonal rings here. We find among these defects 5-MRs or 7-MRs are hard to be healed by raising temperature. Surprisingly, the defect healing of graphene island can be achieved during the growth by the continuous breaking and reformation of C–C bonds. The efficiency of defect healing of the growing graphene island depends on the temperature. The medium high temperature (1200 K) is most optimal for the rearrangement of the growing sp2 C network, leading to more hexagons formed by defect healing.
+IV Conclusions
+In summary, we have investigated the influence of C concentration and temperature on the kinetics of graphene growth on Ni (111) surface using classical molecular dynamics approach. Lower C concentration leads to the dissolution of C atoms into Ni and part of surface Ni atoms are kicked out of the surface. Consequently, the substrate surface becomes disordered, and thus it is unfavorable for the formation of sp2 graphene island. In the opposite, high C concentration induces the formation of graphene island whose C atoms mostly are three coordinated. The study on the defect healing of C structures at four temperatures (800, 1000, 1200, and 1400 K) shows that the quality of C structures at 1000 K is the highest, and thus the optimal growth temperature of graphene on Ni (111) surface should be around 1000 K. Furthermore, we have also explored the growth of graphene island by adding C atoms around. By capturing the deposited C atoms, graphene island grows larger and larger and defect formed by the addition of C atoms can be efficiently healed. The deeply insightful understanding on the kinetic process of graphene growth is expected to guide the synthesis of high-quality graphene in CVD experiments.
+Supporting Information
+Initial and final structures obtained following 100 ps MD simulation at 1200 and 1400 K for C16, C32, and C64 (Figures S1 and S2); the defect healing process of C64 at 1000 K (Movie S1). This material is available free of charge via the Internet at http://pubs.acs.org.
+jp212149c_si_001.pdf (233.34 kb)
+jp212149c_si_002.avi (15.11 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+Corresponding Authors
+Jinlan Wang - Department of Physics & School of Chemistry and Chemical Engineering, Southeast University, Nanjing 211189, China;  Email: jlwang@seu.edu.cn tcfding@inet.polyu.edu.hk
+Feng Ding - Institute of Textiles and Clothing, Hong Kong Polytechnic University, Kowloon, Hong Kong, China;  Email: jlwang@seu.edu.cn tcfding@inet.polyu.edu.hk
+Authors
+Lijuan Meng - Department of Physics & School of Chemistry and Chemical Engineering, Southeast University, Nanjing 211189, China
+Qing Sun - Department of Physics & School of Chemistry and Chemical Engineering, Southeast University, Nanjing 211189, China
+Notes
+The authors declare no competing financial interest.
+Acknowledgment
+This work is supported by NBRP (2011CB302004 and 2010CB923401), the NSF (21173040 and 11074035), SRFDP (20090092110025), and Peiyu Foundation of SEU. The authors thank the computational resource at Department of Physics, SEU, and National Supercomputing Center in Tianjin.
+References
+This article references 50 other publications.
+1Lee, C.; Wei, X. D.; Kysar, J. W.; Hone, J. Science 2008, 321, 385
+Google Scholar
+2Bunch, J. S.; Verbridge, S. S.; Alden, J. S.; van der Zande, A. M.; Parpia, J. M.; Craighead, H. G.; McEuen, P. L. Nano Lett. 2008, 8, 2458
+Google Scholar
+3Zhu, L. Y.; Wang, J. L.; Zhang, T. T.; Ma, L.; Lim, C. W.; Ding, F.; Zeng, X. C. Nano Lett. 2010, 10, 494
+Google Scholar
+4Balandin, A. A.; Ghosh, S.; Bao, W. Z.; Calizo, I.; Teweldebrhan, D.; Miao, F.; Lau, C. N. Nano Lett. 2008, 8, 902
+Google Scholar
+5Mingo, N.; Broido, D. A. Phys. Rev. Lett. 2005, 95, 096105
+Google Scholar
+6Ghosh, S.; Calizo, I.; Teweldebrhan, D.; Pokatilov, E. P.; Nika, D. L.; Balandin, A. A.; Bao, W.; Miao, F.; Lau, C. N. Appl. Phys. Lett. 2008, 92, 151911
+Google Scholar
+7Yang, L.; Deslippe, J.; Park, C. H.; Cohen, M. L.; Louie, S. G. Phys. Rev. Lett. 2009, 103, 186802
+Google Scholar
+8Chen, Z. F.; Wang, X. Q. Phys. Rev. B 2011, 83, 081405
+Google Scholar
+9Chen, J. H.; Jang, C.; Xiao, S. D.; Ishigami, M.; Fuhrer, M. S. Nat. Nanotechnol. 2008, 3, 206
+Google Scholar
+10Bostwick, A.; Ohta, T.; McChesney, J. L.; Seyller, T.; Horn, K.; Rotenberg, E. Eur. Phys. J.: Spec. Top. 2007, 148, 5
+Google Scholar
+11Geim, A. K.; Novoselov, K. S. Nat. Mater. 2007, 6, 183
+Google Scholar
+12Zhu, L. Y.; Hu, H.; Chen, Q. A.; Wang, S. D.; Wang, J. L.; Ding, F. Nanotechnology. 2011, 22, 185202
+Google Scholar
+13Ma, L. A.; Hu, H.; Zhu, L. Y.; Wang, J. L. J. Phys. Chem. C 2011, 115, 6195
+Google Scholar
+14Stankovich, S.; Dikin, D. A.; Dommett, G. H. B.; Kohlhaas, K. M.; Zimney, E. J.; Stach, E. A.; Piner, R. D.; Nguyen, S. T.; Ruoff, R. S. Nature 2006, 442, 282
+Google Scholar
+15Ohno, Y.; Maehashi, K.; Yamashiro, Y.; Matsumoto, K. Nano Lett. 2009, 9, 3318
+Google Scholar
+16Li, X. S.; Zhu, Y. W.; Cai, W. W.; Borysiak, M.; Han, B. Y.; Chen, D.; Piner, R. D.; Colombo, L.; Ruoff, R. S. Nano Lett. 2009, 9, 4359
+Google Scholar
+17Stoller, M. D.; Park, S. J.; Zhu, Y. W.; An, J. H.; Ruoff, R. S. Nano Lett. 2008, 8, 3498
+Google Scholar
+18Stander, N.; Huard, B.; Goldhaber-Gordon, D. Phys. Rev. Lett. 2009, 102, 026807
+Google Scholar
+19Novoselov, K. S.; Jiang, D.; Schedin, F.; Booth, T. J.; Khotkevich, V. V.; Morozov, S. V.; Geim, A. K. Proc. Natl. Acad. Sci. U. S. A. 2005, 102, 10451
+Google Scholar
+20Novoselov, K. S.; Geim, A. K.; Morozov, S. V.; Jiang, D.; Zhang, Y.; Dubonos, S. V.; Grigorieva, I. V.; Firsov, A. A. Science 2004, 306, 666
+Google Scholar
+21Berger, C.; Song, Z. M.; Li, X. B.; Wu, X. S.; Brown, N.; Naud, C.; Mayou, D.; Li, T. B.; Hass, J.; Marchenkov, A. N.; Conrad, E. H.; First, P. N.; de Heer, W. A. Science 2006, 312, 1191
+Google Scholar
+22Sutter, P. Nat. Mater. 2009, 8, 171
+Google Scholar
+23Ohta, T.; Bostwick, A.; Seyller, T.; Horn, K.; Rotenberg, E. Science 2006, 313, 951
+Google Scholar
+24Stankovich, S.; Dikin, D. A.; Piner, R. D.; Kohlhaas, K. A.; Kleinhammes, A.; Jia, Y.; Wu, Y.; Nguyen, S. T.; Ruoff, R. S. Carbon 2007, 45, 1558
+Google Scholar
+25Choucair, M.; Thordarson, P.; Stride, J. A. Nat. Nanotechnol. 2009, 4, 30
+Google Scholar
+26Sutter, P. W.; Flege, J. I.; Sutter, E. A. Nat. Mater. 2008, 7, 406
+Google Scholar
+27Pletikosic, I.; Kralj, M.; Pervan, P.; Brako, R.; Coraux, J.; N’Diaye, A. T.; Busse, C.; Michely, T. Phys. Rev. Lett. 2009, 102, 056808
+Google Scholar
+28Reina, A.; Jia, X. T.; Ho, J.; Nezich, D.; Son, H. B.; Bulovic, V.; Dresselhaus, M. S.; Kong, J. Nano Lett. 2009, 9, 30
+Google Scholar
+29Lee, Y.; Bae, S.; Jang, H.; Jang, S.; Zhu, S. E.; Sim, S. H.; Song, Y. I.; Hong, B. H.; Ahn, J. H. Nano Lett. 2010, 10, 490
+Google Scholar
+30Marchini, S.; Gunther, S.; Wintterlin, J. Phys. Rev. B 2007, 76, 075429
+Google Scholar
+31Li, X. S.; Cai, W. W.; An, J. H.; Kim, S.; Nah, J.; Yang, D. X.; Piner, R.; Velamakanni, A.; Jung, I.; Tutuc, E.; Banerjee, S. K.; Colombo, L.; Ruoff, R. S. Science 2009, 324, 1312
+Google Scholar
+32Bae, S.; Kim, H.; Lee, Y.; Xu, X. F.; Park, J. S.; Zheng, Y.; Balakrishnan, J.; Lei, T.; Kim, H. R.; Song, Y. I.; Kim, Y. J.; Kim, K. S.; Ozyilmaz, B.; Ahn, J. H.; Hong, B. H.; Iijima, S. Nat. Nanotechnol. 2010, 5, 574
+Google Scholar
+33Loginova, E.; Bartelt, N. C.; Feibelman, P. J.; McCarty, K. F. New J. Phys. 2008, 10, 093626
+Google Scholar
+34Chen, H.; Zhu, W. G.; Zhang, Z. Y. Phys. Rev. Lett. 2010, 104, 186101
+Google Scholar
+35Gao, J. F.; Yip, J.; Zhao, J. J.; Yakobson, B. I.; Ding, F. J. Am. Chem. Soc. 2011, 133, 5009
+Google Scholar
+36Gao, J. F.; Yuan, Q. H.; Hu, H.; Zhao, J. J.; Ding, F. J. Phys. Chem. C 2011, 115, 17695
+Google Scholar
+37Cheng, D. J.; Barcaro, G.; Charlier, J. C.; Hou, M.; Fortunelli, A. J. Phys. Chem. C 2011, 115, 10537
+Google Scholar
+38Amara, H.; Bichara, C.; Ducastelle, F. Phys. Rev. B 2006, 73, 113404
+Google Scholar
+39Karoui, S.; Amara, H.; Bichara, C.; Ducastelle, F. ACS Nano 2010, 4, 6114
+Google Scholar
+40Wang, Y.; Page, A. J.; Nishimoto, Y.; Qian, H. J.; Morokuma, K.; Irle, S. J. Am. Chem. Soc. 2011,  DOI: 10.1021/ja2064654
+Google Scholar
+41van Duin, A. C. T.; Dasgupta, S.; Lorant, F.; Goddard, W. A. J. Phys. Chem. A 2001, 105, 9396
+Google Scholar
+42Mueller, J. E.; van Duin, A. C. T.; Goddard, W. A. J. Phys. Chem. C 2010, 114, 4939
+Google Scholar
+43Mueller, J. E.; van Duin, A. C. T.; Goddard, W. A. J. Phys. Chem. C 2010, 114, 5675
+Google Scholar
+44Mueller, J. E.; van Duin, A. C. T.; Goddard, W. A. J. Phys. Chem. C 2010, 114, 20028
+Google Scholar
+45Swope, W. C.; Andersen, H. C.; Berens, P. H.; Wilson, K. R. J. Chem. Phys. 1982, 76, 637
+Google Scholar
+46Berendsen, H. J. C.; Postma, J. P. M; Vangunsteren, W. F.; Dinola, A.; Haak, J. R. J. Chem. Phys. 1984, 81, 3684
+Google Scholar
+47Wu, P.; Zhang, W. H.; Li, Z. Y.; Yang, J. L.; Hou, J. G. J. Chem. Phys. 2010, 133, 071101
+Google Scholar
+48Yuan, Q. H.; Gao, J. F.; Shu, H. B.; Zhao, J. J.; Chen, X. S.; Ding, F. J. Am. Chem. Soc. 2011,  DOI: 10,1021/ja2050875
+Google Scholar
+49Zhang, Y.; Gomez, L.; Ishikawa, F. N.; Madaria, A.; Ryu, K.; Wang, C. A.; Badmaev, A.; Zhou, C. W. J. Phys. Chem. Lett. 2010, 1, 3101
+Google Scholar
+50Li, X. S.; Cai, W. W.; Colombo, L.; Ruoff, R. S. Nano Lett. 2009, 9, 4268
+Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+5
+Mentioning
+106
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 104 publications.
+Ashutosh Kumar Verma, Bharat Bhushan Sharma. Experimental and Theoretical Insights into Interfacial Properties of 2D Materials for Selective Water Transport Membranes: A Critical Review. Langmuir 2024, 40 (15) , 7812-7834. https://doi.org/10.1021/acs.langmuir.4c00061
+Sen Xu, Liling Wu, Yi Fan, Yufeng Liu, Xiongzhi Zeng, Zhenyu Li. Hydrocarbon Species on the Cu(111) Surface Studied with a Neural Network Potential. The Journal of Physical Chemistry C 2024, 128 (13) , 5697-5707. https://doi.org/10.1021/acs.jpcc.3c08138
+Shandeng Chen, Qingshun Bai, Hongfei Wang, Wanmin Guo, Yuhao Dou. Nickel-Mediated In Situ Growth Mechanism of Top-Layered Graphene in the Vicinity of Diamond Grain Boundary: A Theoretical Study. The Journal of Physical Chemistry C 2022, 126 (43) , 18411-18420. https://doi.org/10.1021/acs.jpcc.2c04409
+Jichen Dong, Leining Zhang, Bin Wu, Feng Ding, Yunqi Liu. Theoretical Study of Chemical Vapor Deposition Synthesis of Graphene and Beyond: Challenges and Perspectives. The Journal of Physical Chemistry Letters 2021, 12 (33) , 7942-7963. https://doi.org/10.1021/acs.jpclett.1c02316
+Zan Lian, Chaowei Si, Faheem Jan, ShuaiKe Zhi, Bo Li. Coke Deposition on Pt-Based Catalysts in Propane Direct Dehydrogenation: Kinetics, Suppression, and Elimination. ACS Catalysis 2021, 11 (15) , 9279-9292. https://doi.org/10.1021/acscatal.1c00331
+Leining Zhang, Jichen Dong, Feng Ding. Strategies, Status, and Challenges in Wafer Scale Single Crystalline Two-Dimensional Materials Synthesis. Chemical Reviews 2021, 121 (11) , 6321-6372. https://doi.org/10.1021/acs.chemrev.0c01191
+Haoyuan Wang, Hai-Bei Li, Na Lin, Jingjing Wang, Ran Xu, Xian Zhao. Morphology Effects of Graphene Seeds on the Quality of Graphene Nucleation: Quantum Chemical Molecular Dynamics Simulations. The Journal of Physical Chemistry C 2021, 125 (9) , 5056-5065. https://doi.org/10.1021/acs.jpcc.0c10749
+Weiwei Zhang, Adri C. T. van Duin. Atomistic-Scale Simulations of the Graphene Growth on a Silicon Carbide Substrate Using Thermal Decomposition and Chemical Vapor Deposition. Chemistry of Materials 2020, 32 (19) , 8306-8317. https://doi.org/10.1021/acs.chemmater.0c02121
+Yifan Li, Yan Wu, Yi Zhou, Jie Li, Yunrui Duan, Tao Li, Zhenyang Zhao, and Hui Li . Diffusion, Nucleation, and Self-Optimization in the Forming Process of Graphene in Annealed Nickel–Carbon Alloy. The Journal of Physical Chemistry C 2017, 121 (38) , 21001-21010. https://doi.org/10.1021/acs.jpcc.7b06620
+Junfeng Gao, Gang Zhang, and Yong-Wei Zhang . The Critical Role of Substrate in Stabilizing Phosphorene Nanoflake: A Theoretical Exploration. Journal of the American Chemical Society 2016, 138 (14) , 4763-4771. https://doi.org/10.1021/jacs.5b12472
+Shisheng Lin, Shengjiao Zhang, Xiaoqiang Li, Wenli Xu, Xiaodong Pi, Xiaoyi Liu, Fengchao Wang, Hengan Wu, and Hongsheng Chen . Quasi-Two-Dimensional SiC and SiC2: Interaction of Silicon and Carbon at Atomic Thin Lattice Plane. The Journal of Physical Chemistry C 2015, 119 (34) , 19772-19779. https://doi.org/10.1021/acs.jpcc.5b04113
+Menggai Jiao, Kai Li, Ying Wang, and Zhijian Wu . Quantum Chemical Molecular Dynamics Studies of Bilayer Graphene Growth on a Ni(111) Surface. The Journal of Physical Chemistry C 2015, 119 (22) , 12643-12650. https://doi.org/10.1021/acs.jpcc.5b00340
+Rizal Arifin, Yasushi Shibuta, Kohei Shimamura, Fuyuki Shimojo, and Shu Yamaguchi . Ab Initio Molecular Dynamics Simulation of Ethylene Reaction on Nickel (111) Surface. The Journal of Physical Chemistry C 2015, 119 (6) , 3210-3216. https://doi.org/10.1021/jp512148b
+Kai Li, Chaozheng He, Menggai Jiao, Ying Wang, Jingyao Liu, and Zhijian Wu . Theoretical Insights on the C2Hy Formation Mechanism During CH4 Dissociation on Cu(100) Surface. The Journal of Physical Chemistry C 2014, 118 (31) , 17662-17669. https://doi.org/10.1021/jp5041025
+Yucheng Huang, Jinyan Du, Tao Zhou, Chongyi Ling, Sufan Wang, and Baoyou Geng . Role of Au in Graphene Growth on a Ni Surface. ACS Catalysis 2014, 4 (3) , 892-902. https://doi.org/10.1021/cs401135g
+Lijuan Meng, Jian Jiang, Jinlan Wang, and Feng Ding . Mechanism of Metal Catalyzed Healing of Large Structural Defects in Graphene. The Journal of Physical Chemistry C 2014, 118 (1) , 720-724. https://doi.org/10.1021/jp409471a
+Hangyao Wang, Heather A. G. Stern, Debashis Chakraborty, Hua Bai, Vincent DiFilippo, Jitendra S. Goela, Michael A. Pickering, and Julian D. Gale . Computational Study of Surface Deposition and Gas Phase Powder Formation during Spinel Chemical Vapor Deposition Processes. Industrial & Engineering Chemistry Research 2013, 52 (44) , 15270-15280. https://doi.org/10.1021/ie400502u
+Lijuan Meng, Zilu Wang, Jian Jiang, Yonghong Yang, and Jinlan Wang . Defect Healing of Chemical Vapor Deposition Graphene Growth by Metal Substrate Step. The Journal of Physical Chemistry C 2013, 117 (29) , 15260-15265. https://doi.org/10.1021/jp312802e
+Shijun Yuan, Lijuan Meng, and Jinlan Wang . Greatly Improved Methane Dehydrogenation via Ni Adsorbed Cu(100) Surface. The Journal of Physical Chemistry C 2013, 117 (28) , 14796-14803. https://doi.org/10.1021/jp400944c
+Alister J. Page, Ying Wang, Hai-Bei Li, Stephan Irle, and Keiji Morokuma . Nucleation of Graphene Precursors on Transition Metal Surfaces: Insights from Theoretical Simulations. The Journal of Physical Chemistry C 2013, 117 (28) , 14858-14864. https://doi.org/10.1021/jp404326d
+Tao Liang, Bryce Devine, Simon R. Phillpot, and Susan B. Sinnott . Variable Charge Reactive Potential for Hydrocarbons to Simulate Organic-Copper Interactions. The Journal of Physical Chemistry A 2012, 116 (30) , 7976-7991. https://doi.org/10.1021/jp212083t
+Zhaoyu Yu, Cheng Zhu, Yunfei Zhang, Kuan Li, Meng Xie, Weidong Xia, Cheng Wang. Effects of quenching rate on the plasma gas-phase synthesis of graphene: Insight from the experiments and ReaxFF studies. Carbon 2024, 229 , 119490. https://doi.org/10.1016/j.carbon.2024.119490
+Alexander J. Sredenschek, David Emanuel Sanchez, Jiayang Wang, Yu Lei, Susan B. Sinnott, Mauricio Terrones. Heterostructures coupling ultrathin metal carbides and chalcogenides. Nature Materials 2024, 23 (4) , 460-469. https://doi.org/10.1038/s41563-024-01827-x
+Congli Zhang. Recent progress on chemical vapor deposition growth of 2D materials. Journal of Computational Methods in Sciences and Engineering 2023, 23 (5) , 2595-2608. https://doi.org/10.3233/JCM-226864
+Shandeng Chen, Qingshun Bai, Hongfei Wang, Sanchuan Wang. Unveiling the site-dependent characteristics and atomic mechanism of graphene growth on the polycrystalline diamond: Insight from the experiments and ReaxFF studies. Carbon 2023, 213 , 118303. https://doi.org/10.1016/j.carbon.2023.118303
+Nadire Nayir, Qian Mao, Tao Wang, Malgorzata Kowalik, Yuwei Zhang, Mengyi Wang, Swarit Dwivedi, Ga-Un Jeong, Yun Kyung Shin, Adri van Duin. Modeling and simulations for 2D materials: a ReaxFF perspective. 2D Materials 2023, 10 (3) , 032002. https://doi.org/10.1088/2053-1583/acd7fd
+Jianxin Li, Hongwei Zhang, Zhengrong Guo, Jin-Wu Jiang, Tienchong Chang. Thermal stability of twin graphene: A Reaxff molecular dynamics study. Applied Surface Science 2023, 623 , 157038. https://doi.org/10.1016/j.apsusc.2023.157038
+Julia A. Baimova, Stepan A. Shcherbinin. Metal/Graphene Composites: A Review on the Simulation of Fabrication and Study of Mechanical Properties. Materials 2023, 16 (1) , 202. https://doi.org/10.3390/ma16010202
+Xin Li, Guilin Wu, Leining Zhang, Deping Huang, Yunqing Li, Ruiqi Zhang, Meng Li, Lin Zhu, Jing Guo, Tianlin Huang, Jun Shen, Xingzhan Wei, Ka Man Yu, Jichen Dong, Michael S. Altman, Rodney S. Ruoff, Yinwu Duan, Jie Yu, Zhujun Wang, Xiaoxu Huang, Feng Ding, Haofei Shi, Wenxin Tang. Single-crystal two-dimensional material epitaxy on tailored non-single-crystal substrates. Nature Communications 2022, 13 (1) https://doi.org/10.1038/s41467-022-29451-w
+Fengning Liu, Pai Li, Hao An, Peng Peng, Ben McLean, Feng Ding. Achievements and Challenges of Graphene Chemical Vapor Deposition Growth. Advanced Functional Materials 2022, 32 (42) https://doi.org/10.1002/adfm.202203191
+Shandeng Chen, Qingshun Bai, Hongfei Wang, Yuhao Dou, Wanmin Guo. Controlled growth of large-area monolayer graphene on Ni (110) facet: Insight from molecular dynamics simulation. Physica E: Low-dimensional Systems and Nanostructures 2022, 144 , 115465. https://doi.org/10.1016/j.physe.2022.115465
+Shiwen Wu, Dezhao Huang, Haoliang Yu, Siyu Tian, Arif Malik, Tengfei Luo, Guoping Xiong. Molecular understanding of the effect of hydrogen on graphene growth by plasma-enhanced chemical vapor deposition. Physical Chemistry Chemical Physics 2022, 24 (17) , 10297-10304. https://doi.org/10.1039/D1CP04510E
+Yanjie Yang, Mabao Liu, Jianxun Du, Wei Zhang, Shiqi Zhou, Weijia Ren, Qihang Zhou, Lan Shi. Construction of graphene network in Ni matrix composites: A molecular dynamics study of densification process. Carbon 2022, 191 , 55-66. https://doi.org/10.1016/j.carbon.2022.01.044
+Sayan Bhowmik, Ananth Govind Rajan. Chemical vapor deposition of 2D materials: A review of modeling, simulation, and machine learning studies. iScience 2022, 25 (3) , 103832. https://doi.org/10.1016/j.isci.2022.103832
+Deborah Schwarcz, Stanislav Burov. Self-assembly of two-dimensional, amorphous materials on a liquid substrate. Physical Review E 2022, 105 (2) https://doi.org/10.1103/PhysRevE.105.L022601
+Rajesh Kumar. Reactive Forcefield (ReaxFF): Application to Predict 2D Nanomaterials Synthesis. 2022, 205-215. https://doi.org/10.1007/978-981-19-3092-8_10
+Krishnendu Nath, Suman Kumar Ghosh, Narayan Chandra Das. Electrical and electronic applications of polymer-graphene composites. 2022, 343-377. https://doi.org/10.1016/B978-0-12-821639-2.00002-1
+Shandeng Chen, Qingshun Bai, Hongfei Wang, Yuhao Dou, Wanmin Guo. Controlled Growth of Large-Area Monolayer Graphene on Ni (110) Facet: Insight from Molecular Dynamics Simulation. SSRN Electronic Journal 2022, 18 https://doi.org/10.2139/ssrn.4133353
+Shan-Deng Chen, Qing-Shun Bai, Yu-Hao Dou, Wan-Min Guo, Hong-Fei Wang, Yun-Long Du, . Simulation research on nucleation mechanism of graphene deposition assisted by diamond grain boundary. Acta Physica Sinica 2022, 71 (8) , 086103. https://doi.org/10.7498/aps.71.20211981
+Xiao Kong, Jianing Zhuang, Liyan Zhu, Feng Ding. The complementary graphene growth and etching revealed by large-scale kinetic Monte Carlo simulation. npj Computational Materials 2021, 7 (1) https://doi.org/10.1038/s41524-020-00489-y
+M. Hadian, K.A. Buist, A.N.R. Bos, J.A.M. Kuipers. Single catalyst particle growth modeling in thermocatalytic decomposition of methane. Chemical Engineering Journal 2021, 421 , 129759. https://doi.org/10.1016/j.cej.2021.129759
+Anh-Vu Pham, Te-Hua Fang, Van-Thuc Nguyen, Tao-Hsing Chen. Effect of incidence and size of graphite particle on the formation of graphene on Ni surfaces. Vacuum 2021, 187 , 110092. https://doi.org/10.1016/j.vacuum.2021.110092
+Lijuan Meng, Jinlian Lu, Yujie Bai, Lili Liu, Jingyi Tang, Xiuyun Zhang. Graphene adlayer growth between nonepitaxial graphene and the Ni(111) substrate: a theoretical study. Physical Chemistry Chemical Physics 2021, 23 (3) , 2222-2228. https://doi.org/10.1039/D0CP04667A
+Bohdan Kulyk, Alexandre F. Carvalho, António J.S. Fernandes, Florinda M. Costa. Millimeter sized graphene domains through in situ oxidation/reduction treatment of the copper substrate. Carbon 2020, 169 , 403-415. https://doi.org/10.1016/j.carbon.2020.08.002
+Zi-Le Wang, Zhirong Liu, Zhi-Feng Huang, Wenhui Duan. Minimal phase-field crystal modeling of vapor-liquid-solid coexistence and transitions. Physical Review Materials 2020, 4 (10) https://doi.org/10.1103/PhysRevMaterials.4.103802
+Ruipeng Zhong, Ruoyu Hong. Continuous preparation and formation mechanism of few-layer graphene by gliding arc plasma. Chemical Engineering Journal 2020, 387 , 124102. https://doi.org/10.1016/j.cej.2020.124102
+Zhe Wang, Tao Du, N. M. Anoop Krishnan, Morten M. Smedskjaer, Mathieu Bauchy. On the equivalence of vapor-deposited and melt-quenched glasses. The Journal of Chemical Physics 2020, 152 (16) https://doi.org/10.1063/5.0006590
+Qing-Shun Bai, Yu-Hao Dou, Xin He, Ai-Min Zhang, Yong-Bo Guo, . Deposition and growth mechanism of graphene on copper crystal surface based on molecular dynamics simulation. Acta Physica Sinica 2020, 69 (22) , 226102. https://doi.org/10.7498/aps.69.20200781
+Deborah Schwarcz, Stanislav Burov. The effect of disordered substrate on crystallization in 2D. Journal of Physics: Condensed Matter 2019, 31 (44) , 445401. https://doi.org/10.1088/1361-648X/ab29c3
+Yingyou He, Hong Wang, Shaoji Jiang, Yunjie Mo. A first-principles study of the effect of surface oxygen during the early stage of graphene growth on a Cu(1 1 1) surface. Computational Materials Science 2019, 168 , 17-24. https://doi.org/10.1016/j.commatsci.2019.05.046
+Jie Yang, PingAn Hu, Gui Yu. Design of carbon sources: starting point for chemical vapor deposition of graphene. 2D Materials 2019, 6 (4) , 042003. https://doi.org/10.1088/2053-1583/ab31bd
+Li Chen, Yawen Meng. Liquid-phase exfoliation of fluorinated graphite to produce high-quality graphene sheets. Journal of Vacuum Science & Technology B, Nanotechnology and Microelectronics: Materials, Processing, Measurement, and Phenomena 2019, 37 (3) https://doi.org/10.1116/1.5081961
+Xiaowei Li, Aiying Wang, Kwang-Ryeol Lee. Transformation of amorphous carbon to graphene on low-index Ni surfaces during rapid thermal processing: a reactive molecular dynamics study. Physical Chemistry Chemical Physics 2019, 21 (5) , 2271-2275. https://doi.org/10.1039/C8CP06218H
+Junfeng Gao, Ziwei Xu, Shuai Chen, Madurai S. Bharathi, Yong‐Wei Zhang. Computational Understanding of the Growth of 2D Materials. Advanced Theory and Simulations 2018, 1 (11) https://doi.org/10.1002/adts.201800085
+C Patrick Royall, Francesco Turci, Soichi Tatsumi, John Russo, Joshua Robinson. The race to the bottom: approaching the ideal glass?. Journal of Physics: Condensed Matter 2018, 30 (36) , 363001. https://doi.org/10.1088/1361-648X/aad10a
+Nguyen Hoang Giang, Tran Thi Thu Hanh, Le Nhu Ngoc, Nguyen To Nga, Vo Van Hoang. Formation of graphene on BN substrate by vapor deposition method and size effects on its structure. Physica B: Condensed Matter 2018, 534 , 26-33. https://doi.org/10.1016/j.physb.2017.12.066
+Mohammad Rezwan Habib, Tao Liang, Xuegong Yu, Xiaodong Pi, Yingchun Liu, Mingsheng Xu. A review of theoretical study of graphene chemical vapor deposition synthesis on metals: nucleation, growth, and the role of hydrogen and oxygen. Reports on Progress in Physics 2018, 81 (3) , 036501. https://doi.org/10.1088/1361-6633/aa9bbf
+Eugene Zakar, A. Glen Birdwell, Kevin Hauri, Richard X. Fu, Cheng Tan, Madan Dubey. Controlling defects in fine-grained sputtered nickel catalyst for graphene growth. Journal of Vacuum Science & Technology B, Nanotechnology and Microelectronics: Materials, Processing, Measurement, and Phenomena 2018, 36 (2) https://doi.org/10.1116/1.4998441
+K. L. M. Elder, M. Seymour, M. Lee, M. Hilke, N. Provatas. Two-component structural phase-field crystal models for graphene symmetries. Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences 2018, 376 (2113) , 20170211. https://doi.org/10.1098/rsta.2017.0211
+Baoyang Tian, Tianhui Liu, YanYan Yang, Kai Li, Zhijian Wu, Ying Wang. CH4 dissociation in the early stage of graphene growth on Fe–Cu(100) surface: Theoretical insights. Applied Surface Science 2018, 427 , 953-960. https://doi.org/10.1016/j.apsusc.2017.09.088
+G M Galiullina, N D Orekhov, V V Stegailov. Nanostructures nucleation in carbon–metal gaseous phase: A molecular dynamics study. Journal of Physics: Conference Series 2018, 946 , 012110. https://doi.org/10.1088/1742-6596/946/1/012110
+Yuan Dong, Martha T Gahl, Chi Zhang, Jian Lin. Computational study of precision nitrogen doping on graphene nanoribbon edges. Nanotechnology 2017, 28 (50) , 505602. https://doi.org/10.1088/1361-6528/aa9727
+Fei Huang, Hongyang Liu, Dangsheng Su. Graphitized nanocarbon-supported metal catalysts: synthesis, properties, and applications in heterogeneous catalysis. Science China Materials 2017, 60 (12) , 1149-1167. https://doi.org/10.1007/s40843-017-9160-7
+Rikizo Hatakeyama. Nanocarbon materials fabricated using plasmas. Reviews of Modern Plasma Physics 2017, 1 (1) https://doi.org/10.1007/s41614-017-0009-y
+Domenico Borzacchiello, Jose Vicente Aguado, Francisco Chinesta. Reduced order modelling for efficient numerical optimisation of a hot-wall chemical vapour deposition reactor. International Journal of Numerical Methods for Heat & Fluid Flow 2017, 27 (7) , 1602-1622. https://doi.org/10.1108/HFF-04-2016-0153
+Lan Zhang, Yongchao Zhu, Wenrui Teng, Tian Xia, Yan Rong, Na Li, Huizhong Ma. A molecular dynamics simulation of the graphene growth on Cu(1 1 1) surface. Computational Materials Science 2017, 130 , 10-15. https://doi.org/10.1016/j.commatsci.2016.12.043
+Xiaodan Xu, Lu Cai, Xiaoli Zheng, Qun Xu. Molecular dynamics simulations of solvent-exfoliation and stabilization of graphene with the assistance of compressed carbon dioxide and pyrene–polyethylene glycol. Physical Chemistry Chemical Physics 2017, 19 (24) , 16062-16070. https://doi.org/10.1039/C7CP01277B
+Mathew J. Cherukara, Badri Narayanan, Henry Chan, Subramanian K. R. S. Sankaranarayanan. Silicene growth through island migration and coalescence. Nanoscale 2017, 9 (29) , 10186-10192. https://doi.org/10.1039/C7NR03153J
+Yuan Dong, Sean C. Rismiller, Jian Lin. Molecular dynamic simulation of layered graphene clusters formation from polyimides under extreme conditions. Carbon 2016, 104 , 47-55. https://doi.org/10.1016/j.carbon.2016.03.050
+R Arifin, Y Shibuta, K Shimamura, F Shimojo. First principles molecular dynamics simulation of graphene growth on Nickel (111) surface. IOP Conference Series: Materials Science and Engineering 2016, 128 , 012032. https://doi.org/10.1088/1757-899X/128/1/012032
+Eunkoo Lee, Kwang-Ryeol Lee, M. I. Baskes, Byeong-Joo Lee. A modified embedded-atom method interatomic potential for ionic systems: 2 NNMEAM + Qeq . Physical Review B 2016, 93 (14) https://doi.org/10.1103/PhysRevB.93.144110
+A. K. Kesarwani, O. S. Panwar, S. R. Dhakate, R. K. Rakshit, V. N. Singh, Atul Bisht, Ashish Kumar. Growth of single and bilayer graphene by filtered cathodic vacuum arc technique. Journal of Vacuum Science & Technology A: Vacuum, Surfaces, and Films 2016, 34 (2) https://doi.org/10.1116/1.4936258
+Leining Zhang, Weikang Wu, Yi Zhou, Hongru Ren, Jichen Dong, Hui Li. Electronic transport properties of ultra-thin Ni and Ni–C nanowires. Physical Chemistry Chemical Physics 2016, 18 (7) , 5336-5343. https://doi.org/10.1039/C5CP07641B
+Ziwei Xu, Tianying Yan, Guiwu Liu, Guanjun Qiao, Feng Ding. Large scale atomistic simulation of single-layer graphene growth on Ni(111) surface: molecular dynamics simulation based on a new generation of carbon–metal potential. Nanoscale 2016, 8 (2) , 921-929. https://doi.org/10.1039/C5NR06016H
+Menggai Jiao, Wei Song, Hu-Jun Qian, Ying Wang, Zhijian Wu, Stephan Irle, Keiji Morokuma. QM/MD studies on graphene growth from small islands on the Ni(111) surface. Nanoscale 2016, 8 (5) , 3067-3074. https://doi.org/10.1039/C5NR07680C
+Shuang Chen, Wei Xiong, Yun Shen Zhou, Yong Feng Lu, Xiao Cheng Zeng. An ab initio study of the nickel-catalyzed transformation of amorphous carbon into graphene in rapid thermal processing. Nanoscale 2016, 8 (18) , 9746-9755. https://doi.org/10.1039/C5NR08614K
+Erik C. Neyts, Kostya (Ken) Ostrikov. Nanoscale thermodynamic aspects of plasma catalysis. Catalysis Today 2015, 256 , 23-28. https://doi.org/10.1016/j.cattod.2015.02.025
+Feng He, Kai Li, Guangyou Xie, Ying Wang, Menggai Jiao, Hao Tang, Zhijian Wu. Theoretical insights on the influence of doped Ni in the early stage of graphene growth during the CH4 dissociation on Ni–Cu(111) surface. Applied Catalysis A: General 2015, 506 , 1-7. https://doi.org/10.1016/j.apcata.2015.08.033
+A J Page, F Ding, S Irle, K Morokuma. Insights into carbon nanotube and graphene formation mechanisms from molecular simulations: a review. Reports on Progress in Physics 2015, 78 (3) , 036501. https://doi.org/10.1088/0034-4885/78/3/036501
+Yujie Lu, Xiaoning Yang. Molecular simulation of graphene growth by chemical deposition on nickel using polycyclic aromatic hydrocarbons. Carbon 2015, 81 , 564-573. https://doi.org/10.1016/j.carbon.2014.09.091
+Haibo Shu, Xiao-Ming Tao, Feng Ding. What are the active carbon species during graphene chemical vapor deposition growth?. Nanoscale 2015, 7 (5) , 1627-1634. https://doi.org/10.1039/C4NR05590J
+A. E. Galashev, O. R. Rakhmanova. Formation of a copper film on the graphene surface: A molecular dynamic study. Russian Journal of Physical Chemistry B 2014, 8 (6) , 893-899. https://doi.org/10.1134/S1990793114110165
+Kai Li, Chaozheng He, Menggai Jiao, Ying Wang, Zhijian Wu. A first-principles study on the role of hydrogen in early stage of graphene growth during the CH4 dissociation on Cu(111) and Ni(111) surfaces. Carbon 2014, 74 , 255-265. https://doi.org/10.1016/j.carbon.2014.03.030
+Yasushi Shibuta, Rizal Arifin, Kohei Shimamura, Tomoya Oguri, Fuyuki Shimojo, Shu Yamaguchi. Low reactivity of methane on copper surface during graphene synthesis via CVD process: Ab initio molecular dynamics simulation. Chemical Physics Letters 2014, 610-611 , 33-38. https://doi.org/10.1016/j.cplett.2014.06.058
+Ping Wu, Wenhua Zhang, Zhenyu Li, Jinglong Yang. Mechanisms of Graphene Growth on Metal Surfaces: Theoretical Perspectives. Small 2014, 10 (11) , 2136-2150. https://doi.org/10.1002/smll.201303680
+Vo Van Hoang. ‘Graphenization’ of 2D simple monatomic liquids. Journal of Physics: Condensed Matter 2014, 26 (20) , 205101. https://doi.org/10.1088/0953-8984/26/20/205101
+Choon-Ming Seah, Siang-Piao Chai, Abdul Rahman Mohamed. Mechanisms of graphene growth by chemical vapour deposition on transition metals. Carbon 2014, 70 , 1-21. https://doi.org/10.1016/j.carbon.2013.12.073
+R. Rasuli, Kh. Mostafavi, J. Davoodi. Molecular dynamics simulation of graphene growth on Ni(100) facet by chemical vapor deposition. Journal of Applied Physics 2014, 115 (2) https://doi.org/10.1063/1.4862164
+Haibo Shu, Xiaoshuang Chen, Feng Ding. The edge termination controlled kinetics in graphene chemical vapor deposition growth. Chem. Sci. 2014, 5 (12) , 4639-4645. https://doi.org/10.1039/C4SC02223H
+Yingfeng Li, Meicheng Li, Tai Wang, Fan Bai, Yang-Xin Yu. DFT study on the atomic-scale nucleation path of graphene growth on the Cu(111) surface. Physical Chemistry Chemical Physics 2014, 16 (11) , 5213. https://doi.org/10.1039/c3cp54275k
+Zilu Wang, Liyan Zhu, Jinlan Wang, Feng Ding. A multiscale approach to determine binding energy distribution on a strained surface. Nanoscale 2014, 6 (9) , 4857. https://doi.org/10.1039/c3nr04497a
+Tao Liang, Yun Kyung Shin, Yu-Ting Cheng, Dundar E. Yilmaz, Karthik Guda Vishnu, Osvalds Verners, Chenyu Zou, Simon R. Phillpot, Susan B. Sinnott, Adri C.T. van Duin. Reactive Potentials for Advanced Atomistic Simulations. Annual Review of Materials Research 2013, 43 (1) , 109-129. https://doi.org/10.1146/annurev-matsci-071312-121610
+Lei Wang, Guang Mu, Chungui Tian, Li Sun, Wei Zhou, Peng Yu, Jie Yin, Honggang Fu. Porous Graphitic Carbon Nanosheets Derived from Cornstalk Biomass for Advanced Supercapacitors. ChemSusChem 2013, 6 (5) , 880-889. https://doi.org/10.1002/cssc.201200990
+Yasushi Shibuta, Rizal Arifin, Kohei Shimamura, Tomoya Oguri, Fuyuki Shimojo, Shu Yamaguchi. Ab initio molecular dynamics simulation of dissociation of methane on nickel(1 1 1) surface: Unravelling initial stage of graphene growth via a CVD technique. Chemical Physics Letters 2013, 565 , 92-97. https://doi.org/10.1016/j.cplett.2013.02.038
+Junfeng Gao, Jijun Zhao. Carbon clusters near the step of Rh surface: implication for the initial stage of graphene nucleation. The European Physical Journal D 2013, 67 (3) https://doi.org/10.1140/epjd/e2013-30538-3
+Chong Wang, Yi-hong Ding. Catalytically healing the Stone–Wales defects in graphene by carbon adatoms. J. Mater. Chem. A 2013, 1 (5) , 1885-1891. https://doi.org/10.1039/C2TA00736C
+Qiang Wang, Li Wei, Michael Sullivan, Shuo-Wang Yang, Yuan Chen. Graphene layers on Cu and Ni (111) surfaces in layer controlled graphene growth. RSC Advances 2013, 3 (9) , 3046. https://doi.org/10.1039/c2ra23105k
+Xian Tang, Zhiyong Xie, Teng Yin, Ji-Wei Wang, Piaopiao Yang, Qizhong Huang. Classical molecular dynamics simulations of carbon nanofiber nucleation: the effect of carbon concentration in Ni carbide. Physical Chemistry Chemical Physics 2013, 15 (38) , 16314. https://doi.org/10.1039/c3cp52972j
+Shumin Wang, Liang Qiao, Cuimei Zhao, Xiaoming Zhang, Jianli Chen, Hongwei Tian, Weitao Zheng, Zhengbo Han. A growth mechanism for graphene deposited on polycrystalline Co film by plasma enhanced chemical vapor deposition. New Journal of Chemistry 2013, 37 (5) , 1616. https://doi.org/10.1039/c3nj41136b
+Erik C. Neyts, Adri C. T. van Duin, Annemie Bogaerts. Formation of single layer graphene on nickel under far-from-equilibrium high flux conditions. Nanoscale 2013, 5 (16) , 7250. https://doi.org/10.1039/c3nr00153a
+Load all citations
+Download PDF
+Get e-Alerts
+The Journal of Physical Chemistry C
+Cite this: J. Phys. Chem. C 2012, 116, 10, 6097–6102
+https://doi.org/10.1021/jp212149c
+Published February 15, 2012
+Copyright © 2012 American Chemical Society
+Request reuse permissions
+Article Views
+4831
+Altmetric
+11
+Citations
+104
+Learn about these metrics
+Recommended Articles
+ReaxFF:  A Reactive Force Field for Hydrocarbons
+September 22, 2001The Journal of Physical Chemistry A
+Adri C. T. van Duin, Siddharth Dasgupta, Francois Lorant
+Development and Validation of ReaxFF Reactive Force Field for Hydrocarbon Chemistry Catalyzed by Nickel
+February 26, 2010The Journal of Physical Chemistry C
+Jonathan E. Mueller, Adri C. T. van Duin, and William A. Goddard III
+Show more
+recommended articles
+Figures
+References
+Supporting Info
+Abstract
+Figure 1
+Figure 1. Initial and final structures obtained in 100 ps MD simulations at 1000 K for C16 (a, b), C32 (c, d), and C64 (e, f). Cyan and orange spheres represent Ni and C atoms, respectively.
+Figure 2
+Figure 2. Equilibrium configurations at (a) 0, (b) 800, (c) 1000, (d) 1200, and (f) 1400 K. Color captions are the same as that in Figure 1.
+Figure 3
+Figure 3. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1000 K. Color captions are the same as those in Figure 1. Green spheres represent newly added carbon atoms.
+Figure 4
+Figure 4. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1200 K. Color captions are the same as in Figure 3.
+Figure 5
+Figure 5. Snapshots of trajectories of an island growing larger by adding C monomers and a dimer at 1400 K. Color captions are the same as in Figure 3.

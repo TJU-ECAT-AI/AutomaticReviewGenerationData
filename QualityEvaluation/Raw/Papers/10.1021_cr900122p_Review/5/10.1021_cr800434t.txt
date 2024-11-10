@@ -1,0 +1,749 @@
+element not found
+
+Chemical ReviewsVol 109/Issue 5Article
+Cite
+Share
+Jump to
+Expand
+REVIEWMarch 20, 2009
+Electron Tomography for Heterogeneous Catalysts and Related Nanostructured Materials
+Heiner Friedrich*†Petra E. de Jongh†Arie J. Verkleij‡Krijn P. de Jong*†
+View Author Information
+View Author Information
+Open PDF
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2009 American Chemical Society
+Subjects
+what are subjects
+Catalysts
+Charge Transfer
+Metal Nanoparticles
+Nanoparticles
+Transmission Electron Microscopy
+1 Introduction
+The full potential in catalyst development will only be realized if characterization techniques are available that can probe materials with subnanometer resolution. One of the most employed techniques to image heterogeneous catalysts at the nanometer and subnanometer scale is transmission electron microscopy (TEM). As suggested by the name, TEM uses electrons transmitted through the object for imaging. Since the interaction between electrons and matter is very strong, only thin parts, commonly much less than a micron in thickness, are imaged. Since heterogeneous catalysts are, in most cases, structured on a much smaller length scale, the sample thickness can be reduced to TEM requirements by appropriate preparation techniques and is, therefore, no limitation.
+The major advantage of electron microscopy is that a variety of modes to probe the sample can be employed, of which conventional TEM (TEM), diffraction mode, scanning TEM (STEM), and spatially resolved elemental analysis are only a few examples. For a detailed description of available TEM techniques, we refer to the books by Williams and Carter, (1) Reimer, (2) and Yao and Wang. (3) Focusing on the use of electron microscopy in heterogeneous catalysis, the book by Gai and Boyes (4) provides a wealth of information. Shorter reviews focusing on catalysis-related applications of TEM, (5-10) environmental TEM, (11) and electron energy-loss spectroscopy (12) are also available.
+The principal beam paths for imaging in TEM and STEM mode are sketched in Figure 1. In TEM, the sample is probed by a parallel electron beam, resulting in a bright-field image. Electrons that are scattered onto the contrast-forming objective aperture blade are removed from the beam and will not be recorded in the image. Thus, thick objects and objects of high mass-density will appear dark in such an image (scattering or absorption contrast). In STEM, a focused electron beam is rastered across the sample. The electrons recorded at each point of the raster then form the image. When a ring detector (annular dark-field detector) is used to collect deflected electrons, thick objects and objects of high mass-density will appear bright in such images. This scheme explains the most basic connection between contrast in an image and the imaged structure. Other sources of contrast, which may dominate depending on the nature of the specimen, include diffraction contrast (associated with the orientation of a crystalline specimen with respect to the electron beam) and TEM phase contrast (tunable by defocusing). When going from nanometer resolution to atomic details, only accurate control of beam condition, sample orientation, and defocus setting yields interpretable results.
+Figure 1
+Figure 1. Schematic beam path in TEM and STEM. The images below, acquired in the corresponding imaging mode, show SBA-15 particles on a carbon support film with 5 nm gold spheres attached.
+The above paragraph already hints toward one of the difficulties when interpreting TEM and STEM images. Since images are a two-dimensional (2D) representation of an originally three-dimensional (3D) structure, it is hard to distinguish between thick objects and objects of high mass-density (e.g., metals). Nevertheless, in some cases it is possible to extract sample thickness or chemical information. (12) This should not distract from the fact that the resolution in the third dimension is usually not better than the thickness of the sample, which might be several hundred nanometers. Thus, from a single image, the position of a metal particle with respect to its support, e.g., on the surface or in the inside, can only be inferred in rare cases. To overcome the issue, two or more images (13-15) or serial sectioning of the sample by microtomy (16) have been applied. Recent developments in optical sectioning by aberration-corrected STEM, which is, in a way, similar to confocal optical microscopy, hold great promise for the future. (17) For samples with a periodic architecture, electron crystallography can elucidate the 3D structure accurately. (5, 7, 18, 19)
+A general approach to 3D imaging of complex materials with a nonperiodic 3D structure is provided by electron tomography (ET). The growing importance of ET has been previously reviewed with emphasis on materials science (20, 21) and biological sciences, (22-25) as well as in context with other nanotomographic techniques. (26, 27) This review presents, after introducing the technical aspects of ET, a comprehensive overview to the rapidly emerging field of ET for the study of heterogeneous catalysts and related nanostructured materials. Sections are organized following the materials classes of zeolites, ordered mesoporous materials, disordered oxide supported catalysts, carbon materials, and miscellaneous materials (ceramics, polymers, and nanocomposites).
+2 Technical Aspects
+In ET, a series of 2D images (commonly 50−150 images) is collected by tilting the specimen in the electron beam and recording an image at each tilt step. Subsequently, the series of images (tilt series) is aligned with respect to a common origin and tilt axis. Finally, the 3D morphology of the object is reconstructed using numerical algorithms. Details of the workflow, from data acquisition to visualization of results, are given in section .
+2.1 Basic Principle
+The mathematical framework underlying tomography was developed by Johan Radon and forms the basis for what has come to be known as the Radon transform. (28) It applies to many situations where it is practicable to determine structural properties of an object from data that leave the object complete, e.g., by using transmitted waves or particles. (29) Applications range from X-ray tomography (30, 31) to electron tomography in catalysis. (32, 33) The Radon transform maps a real space object by its projections, which is equivalent to probing of a sample by a transmitted signal such as an electron beam. From these projections, the object structure can be reconstructed by applying the inverse Radon transform. To which extent TEM and STEM images can be considered to be projections will be discussed in section .
+For a more intuitive understanding, a connection between the information in a series of projections and the 3D object structure is needed. To highlight this connection, we make use of the close relationship between the probably better known Fourier transform and the Radon transform. It can be shown that the Fourier transform of a 2D projection is equal to a central slice through the 3D Fourier transform of the object. For a detailed discussion of this theorem, the Projection-Slice theorem, we refer to the book by Deans. (29) A schematic representation of the tomographic reconstruction using the Projection-Slice theorem is depicted in Figure 2. By combining multiple projections, i.e., multiple central slices at different tilts, the 3D Fourier space of the object is sampled, and an inverse Fourier transform reconstructs the 3D object.
+Figure 2
+Figure 2. ET reconstruction scheme using the Projection-Slice theorem. FT denotes the Fourier transform, and IFT denotes the inverse Fourier transform. By combining projections recorded at multiple tilts (here shown for single-axis tilting around X), the 3D FT of the object is probed. An inverse Fourier transform then reconstructs the 3D object.
+First strides toward tomography using electron micrographs date back to 1968. (34-36) Historically, the application of ET has been the domain of biology, where it is used to image the 3D structure from molecules to entire cells. (22-24) In the past decade, the range of materials studied by ET has extended dramatically. Enabling factors include the availability of large-area charge-coupled device (CCD) cameras and microscope automation. (37) Nowadays, a number of academic and commercial tools for automated data acquisition exist, such as UCSF tomography, (38) SerialEM, (39) TOM software toolbox, (40) EMMenu (TVIPS GmbH, Gauting, Germany), Xplore3D (FEI company, Eindhoven, The Netherlands), TEMography (JEOL Ltd., Tokyo, Japan), and Digital Micrograph 3D ET (Gatan Inc., Pleasanton, CA).
+With the increasing diversity of samples examined by ET, imaging modes other than bright-field TEM gain importance. Which mode to choose, e.g., TEM versus STEM, will depend upon the combination of material and scientific questions. A comprehensive list of imaging modes that have been used for tomographic reconstruction is given in section . At present, mainly bright-field (BF) TEM tomography and high-angle annular dark-field (HAADF) STEM tomography are applied for studying catalysis-related nanostructured materials.
+2.2 Resolution
+In principle, electron tomograms can be reconstructed from any set of projections taken along different directions. However, mechanical and technical constraints prevent accurate and reproducible sample movement with six degrees of freedom, thus limiting the variety of practicable data-acquisition schemes. At this point, it has to be noted that the applied data-acquisition scheme largely determines the obtainable resolution. Here, we will restrict the discussion to single-axis tilting, although alternative approaches, such as conical tilting (41) and dual-axis tilting, (42, 43) are also employed.
+In single-axis tilting, the object is tilted in increments about the rotation axis of the microscope goniometer from one extreme of the tilt range to the other, e.g., from −70° to +70°. Assuming a perfect alignment, the resolution along the rotation axis (x-axis in Figure 2) is equal to the resolution in the original micrographs. The resolution in the direction perpendicular to the holder and beam axis (y-axis in Figure 2) is determined by the number of projections, N, and the diameter, D, of the reconstructed volume: (44)
+(1)
+The above expression, referred to as Crowther criterion, assumes that the images are acquired over a range of ±90°. The resolution parallel to the beam direction (z-axis in Figure 2) is further affected as a result of the limited tilt range of the microscope goniometer or shadowing of the imaged area by the sample holder at high tilt angles. Angular limitations lead to a “missing wedge” of information that causes an elongation (eyz) of the reconstruction point-spread function. The elongation factor can be estimated (45) from the maximum tilt angle (α) as follows:
+(2)
+On the basis of the above equations and Figure 2, it becomes clear that increasing the tilt range while decreasing the tilt increment will improve the resolution. A graphical representation of the effect of tilt increment and maximum tilt angle on reconstruction results is given in Figure 3. In practice, resolutions better than predicted by the Crowther criterion have been obtained but not understood. (20, 46-49)
+Figure 3
+Figure 3. Effects of maximum tilt angle and tilt increment on the tomographic reconstruction. In general, increasing the maximum tilt angle and decreasing the tilt increment improves results. Bright zones to the left and right of dark objects result from the reconstruction point spread function (weighted backprojection), and dark zones on the bottom and top are caused by the limited maximum tilt angle.
+Alternatively to geometrical considerations as brought forward in the Crowther criterion, progress is made by defining standards for resolution estimation. (50-52) Unfortunately, a straightforward quantitative verification of resolution is not available for electron tomography. (25)
+2.3 Workflow
+First, a few comments about sample holders and sample preparation are necessary. As a result of the high tilts required for ET, typically ±70°, a high-tilt sample holder and a suitably prepared sample have to be used. The high-tilt sample holder allows for tilting of the specimen in the microscope to high angles without touching the objective lens pole piece or the objective aperture blade. Its construction also prevents shadowing of the viewable grid area by the holder edges. Single-tilt and tilt-rotate holders are commercially available.
+The specimen grid should be chosen such that shadowing of the viewable area by the grid bars is minimal. In general, large-mesh grids or parallel-bar grids are best suited. In the first step, colloidal gold particles of 5−15 nm size, depending on the desired magnification, are deposited onto the TEM grid. The gold particles serve as markers and aid in the alignment of the tilt series. Gold markers are not mandatory but have proven to be a successful and straightforward approach. (53) In the second step, the sample material is placed on the (carbon) support film in form of a fine powder or an ultramicrotome section. Powders are commonly applied by ethanol suspension in an ultrasonic bath, subsequent application of a droplet of the suspension onto the grid, and then drying. For ET samples, dilute suspensions are favorable since a lower density of particles on the support film prevents shadowing by neighboring structures at high tilts. For microtome sections, tilting to high angles causes the effective beam path through the sample to increase. One should keep in mind while cutting the sections that the effective path length at 70° tilt is ∼3 times the section thickness.
+Once the sample is ready, further steps and parameters from tilt-series acquisition to visualization of the final results are outlined in Figure 4. Acquisition is aided by automated corrections for specimen drift and focus during tilting. (38-40, 54) As discussed in section , increasing the tilt range while decreasing the tilt increment will improve results. For acquisition of the tilt series, three main parameters are important: tilt range (∼±70° or higher), tilt increments (∼1−3°), and electron dose, commonly controlled by the image-acquisition time (∼1−4 s in TEM and 10−80 s in STEM). Since beam settings (e.g., spot size, condenser aperture, etc.) may differ significantly between TEM and STEM, a comparison of applied electron doses based on the acquisition times alone is inappropriate. In fact, one has to calculate for the given settings the total number of electrons imparted on the sample per unit area throughout tilt-series acquisition.
+Figure 4
+Figure 4. Workflow scheme.
+The limiting factor for acquisition, in many cases, is electron-beam-induced damage to the specimen. (55, 56) Care has to be taken that changes in the specimen are negligible and do not hamper the reconstruction. This does, however, not preclude ET from being applied to beam-sensitive materials such as frozen-hydrated (cryo) samples in life sciences. As pointed out by Hegerl and Hoppe in the dose-fractionation theorem, the electron dose required to detect structural features at a given level of statistical significance and resolution is the same for 2D and 3D imaging. (57) More recent computer simulations confirmed that the theorem is applicable to realistic experimental conditions. (58) For a more detailed discussion of Cryo-ET, we refer to the recent literature. (25, 59)
+To conclude the comments on acquisition, a cautioning remark on the amount of data that is acquired and will have to be processed seems appropriate. One tilt series recorded on a 2048 × 2048 pixel CCD camera over an angular range of ±70° at 1° increments will have a file size of approximately 1.1 GB (8 MB × 141 images).
+While automated data collection is able to compensate for the major movements during acquisition, accurate alignment of the set of 2D images to a common origin and rotation axis has to be performed after data collection. Preceding alignment, TEM images are commonly corrected for pixels with unusually high values—“hot pixel”—that can be attributed to X-rays. (60) The two principal approaches to align a tilt series are alignment by cross-correlation (61) and alignment by tracking fiducial markers, i.e., colloidal gold. (53) In the case that the tilt-axis direction is known or can be determined, cross-correlation is a straightforward means for translational alignment. It is based on an overall match between image features common to two projections. To optimize results, appropriate numerical filters are employed to enhance image features that can be easily cross-correlated to each other and to reduce noise sensitivity. (21, 61)
+Alignment by tracking fiducial markers determines both translational alignment and the tilt-axis direction. (53) For a set of gold markers, commonly 10−30, a fiducial model is generated by tracking their centers either manually or by automated procedures throughout the entire image series. This model is then used to determine relative shifts and rotations between images, by applying least-squares minimization. (53) In general, fiducial models from automated tracking have to be refined. Finally, by applying the translational and rotational corrections, an aligned tilt series is obtained, from which the tomogram can be reconstructed.
+Common academic and commercial software packages for alignment and reconstruction of ET data include IMOD, (62) TOM software toolbox, (40) EMMenu (TVIPS GmbH, Gauting, Germany), Inspect3D (FEI company, Eindhoven, The Netherlands), TEMography (JEOL Ltd., Tokyo, Japan), and Digital Micrograph 3D ET (Gatan Inc., Pleasanton, CA). Tomographic reconstruction is carried out using numerical algorithms of which weighted backprojection techniques (WBPs) are most common. (63) With increasing processing speed of desktop computers, iterative methods gain importance. (64-70) For a detailed discussion of reconstruction algorithms, we refer to the literature. (29, 71)
+The last step in the workflow is the visualization of 3D results. This is a rather broad topic, and approaches will differ depending on the structures under investigation or the imaging technique used. In general, the tomogram will contain intensity variations that are interpretable as variations in imaged object property, e.g., mass density. Common ways of presenting 3D data include the display of consecutive numerical cross sections as a movie, rendering of a surface belonging to a specific intensity value, and rendering of the object volume with a color scheme where each color represents a certain range of intensities. While most of the above-mentioned alignment and reconstruction software packages include tools for visualization, often dedicated programs such as UCSF Chimera (72) and Amira (Mercury Computer Systems, Inc., Chelmsford, MA) are utilized.
+Another very interesting and relevant approach, which provides quantitative structural information from ET data, is image analysis by segmentation. (73-75) Image segmentation is the process of dividing an image (here the tomogram) into its parts for further analysis. The type of analysis applied will differ depending on the scientific question but can include the particle-size distribution, (49, 76) the particle location, (77, 78) and the local curvature of surfaces, (56, 79) of which examples will be given later in the article.
+2.4 Imaging Modes
+Electron microscopy provides a variety of modes to probe the sample, and as a result, there are a considerable number of possible ET modes, too. For a comprehensive overview, tested approaches are listed corresponding to the two most distinct modes for forming an image, i.e., parallel (TEM) or convergent (STEM) illumination, as outlined in Figure 1. For parallel illumination, bright-field (BF) ET, (32, 33, 49, 78, 80) annular dark-field (ADF) ET, (81) energy-filtered (EF) ET, (20, 82-86) holographic ET, (87-89) weak-beam dark-field (WBDF) ET, (90) and diffraction ET (91, 92) are reported in the literature. Using convergent illumination high-angle hollow-cone dark-field (HADF) ET, (93) annular dark-field (ADF) ET, (94, 95) energy-dispersive X-ray (EDX) ET, (83) and high-angle annular dark-field (HAADF) ET (20, 96) have been applied. In the following, we will restrict our discussion to BF TEM ET and HAADF STEM ET, since they are the most common techniques for studying catalysts. An example of EF TEM ET will be given in section .
+For application to inorganic materials, care has to be taken that the images of the tilt series fulfill the projection requirement mentioned in section . A detailed assessment of the validity for BF TEM ET is given by Hawkes. (97) It is concluded that, for weakly scattering materials where mass thickness (absorption) is the dominant contrast mechanism, electron microscope images are essentially projections on which a tomographic reconstruction can be based. Alternatively, phase-contrast images are used for very weakly scattering objects, such as unstained life science specimens and polymers. However, in the case of crystalline materials, where Bragg diffraction significantly contributes to image formation, BF ET has been suggested to be of only limited value. (20, 98) In contrast, many successful applications of BF ET to crystalline materials are reported in the literature. (99-102) The observation that orientation, i.e., diffraction condition, dependent contrast does not strongly effect the tomographic reconstruction can be rationalized by the fact that diffraction contrast is only present in a few images of the tilt series, while ET averages over a much larger number of images. An evaluation of the effect of Bragg diffraction on the reconstruction quality of BF TEM ET is given by Feng et al., (103) and a direct comparison of TEM and STEM reconstructions of a crystalline object is given by Friedrich et al. (94) As a rule of thumb, crystalline domains should be small to prevent, e.g., thickness fringes and bend contours, and use of an objective aperture reduces the occurrence of displaced diffracted images and also the spatial resolution. In summary, it can be concluded that, for weakly scattering crystalline materials (zeolites) or highly scattering small crystallites (supported catalysts), BF TEM ET provides reliable 3D structural information. (47)
+For 3D imaging of crystalline materials, predominantly incoherent signals, such as HAADF STEM and EF TEM, improve the projection relationship between mass density and image intensity. (20, 83) HAADF STEM images (Z-contrast images) are formed by electrons scattered close to the nucleus of the atom. This causes the scattering cross section for Z-contrast to approach the unscreened Rutherford potential, (96) which is approximately proportional to the square of the atomic number Z. (2) To avoid effects from Bragg scattered electrons, the required inner collection angle of the detector can be estimated from the atomic thermal vibrations, which gives ∼40 mrad for silicon at 200 kV. (26, 104) In addition, dynamical channeling effects may lead to changes in image intensity. The main advantage of HAADF STEM to be exceptionally sensitive to high-Z elements leads, on the other hand, to difficulties when imaging high and low-Z elements together. In HAADF STEM ET, optimized for reducing the Bragg effects of high-Z elements, low-Z elements are hard to detect, since they almost do not scatter electrons into large angles. For imaging of metal particles and carbon supports, combined approaches utilizing the bright-field and low-angle annular dark-field signals in addition to HAADF have been suggested. (95)
+If one keeps the limitations of each technique in mind, in context with the composition and structure of the studied material as well as the scientific question, electron images are in first-approximation projections suitable for tomographic reconstruction. As a guide, low-Z materials containing small high-Z crystalline domains can be readily imaged in 3D by BF TEM and HAADF STEM ET. Furthermore, HAADF STEM ET increases the contrast for high-Z elements and reduces diffraction effects for large crystallites.
+3 Applications
+Applications of ET to catalyst materials are very broad, and the following sections are organized corresponding to the materials classes of zeolites, ordered mesoporous materials, disordered oxide supported catalysts, carbon materials, and miscellaneous materials.
+3.1 Zeolites
+Zeolites are crystalline microporous materials that are widely applied as catalysts in the chemical industry. (105) The first applications of ET to a zeolite system, and the first to heterogeneous catalysts in general, were published by Koster et al. (32, 106) Characterization of an Ag/NaY crystal in 3D showed unequivocally the location of 10−40 nm Ag particles inside and outside the NaY structure. In addition, the first results on the viability of 3D imaging of mesopores in zeolites are given. (32) The special interest in imaging of mesopores can be concluded from recent reviews. (107, 108) For applications like cracking of heavy oil fractions, cumene production, alkane hydroisomerization, and, more recently, fine chemicals synthesis, the shape and connectivity of mesopores in zeolite crystals is of major importance. The mesopores ensure an optimal accessibility and transport of reactants and products, while the zeolite micropores induce the preferred shape-selective properties.
+ET has been used to study various strategies to introduce mesopores in zeolites, namely, steaming, acid leaching, base leaching, and secondary templating during synthesis. Main objectives of these studies were to determine how the post- or pretreatments effect the three-dimensional location, shape, and connectivity of the mesopores. In two papers from our group, a detailed formation mechanism of mesopores was proposed by studying a series of steam-treated and acid-leached zeolite Y. (80, 109) The tomograms in Figure 5 directly show that steaming and acid-leaching treatments are successful to obtain highly mesoporous zeolite Y crystals. It was concluded that mild treatments result in many cavities inside the crystals (parts a and b of Figure 5), while more severe treatments cause a loss of crystallinity and a decrease of micropore volume. After a special hydrothermal treatment (U.S. Patent 5601798 (PQ Corp)), zeolite Y crystals with very high mesopore volumes (Figure 5c) and networks consisting predominantly of interconnected cylindrical mesopores were obtained.
+Figure 5
+Figure 5. Slices through 3D reconstructions of steamed zeolite Y (a), steamed and acid-leached zeolite Y (b), and high-meso zeolite Y (c) showing the formation and connectivity of mesopores.
+An alternative approach, first studied by Jacobsen et al., utilizes a secondary carbon template for creating intracrystalline mesopores during zeolite synthesis. (110) ET results showed that both carbon nanofibers and carbon black aggregates were capable to act as a template for cylindrical mesopores that start at the external surface of the zeolite crystals. (111) The tortuosity of the mesopores templated by the carbon black aggregates was much higher than the cylindrical mesopores templated by the carbon nanofibers.
+The most recent approach introduces mesoporosity in zeolites by desilication, also referred to as base leaching. (112) In a study on the controlled desilication of ZSM-5, details of obtained 3D structures are reported. (113) While Al gradients lead to a rather uniform mesoporosity development in the interior of the crystal, the outer Al-rich surface remained relatively unaffected. Desilication coupled to ET is seen as a suitable tool to elucidate aluminum gradients, which in the future will enable the fabrication of highly porous particles with tunable void volumes, sizes, and accessibility.
+As a last example, we would like to highlight the quantitative structural analysis of mesopores inside single zeolite crystals. (114) The results of the image analysis, displayed in Figure 6, confirm that quantization from ET is possible and agreed well with physisorption measurements of the bulk material. (109) While physisorption methods prevail in the characterization of the bulk mesopore properties, analysis of individual objects by ET does not assume a specific pore shape, which makes both approaches complementary.
+Figure 6
+Figure 6. Mesopore size distributions of steamed zeolite Y (USY) and steamed and acid-leached zeolite Y (XVUSY) obtained by image analysis of electron tomograms (a) and 3D representation of steamed and acid-leached zeolite Y (b) showing the mesopores through the transparent surface of the particle.
+The results presented in this section illustrate that bright-field TEM ET provides reliable 3D structural information of low-Z crystalline materials. Detailed insight into shape and connectivity of mesopores will contribute to enable a rational design of zeolite-based systems that display improved catalytic properties.
+3.2 Ordered Mesoporous Materials
+The introduction of ordered mesoporous materials (OMMs) has opened up a completely new field of research. (115, 116) OMMs show great potential for applications ranging from chromatography (117) over drug delivery, (118) to catalysis. (119) OMM self-assembly is carried out by sol−gel synthesis in aqueous solution with various surfactants or polymer templates to allow a wide range of pore sizes, pore morphologies, and chemical compositions.
+Structural elucidation of OMMs, commonly carried out by model-based analysis of electron micrographs, X-ray diffraction (XRD), and physisorption data, can be aided by ET, in particular for complex nonrepeating morphologies that deviate from ideal geometry. To illustrate this point, in Figure 7 the pore structure of the two most prominent ordered mesoporous silicas (OMSs), namely, MCM-41 and SBA 15, are shown. While both OMSs expose a 2D hexagonal pore ordering (115, 116) (Figure 7a), MCM-41 mesopores (Figure 7b) can have a hexagonal-to-round pore shape, (120, 121) and SBA-15 mesopores (Figure 7c) are corrugated and interconnected. (122-124) In particular, the pore corrugation of SBA-15 requires a local description, which was recently provided by combining ET and image analysis. (125) Pore corrugation was modeled in terms of a locally variable pore radius and center, and results compared well with the corona model used to analyze XRD and physisorption data. Also, the mesoscopic ordering of SBA-15 pore has been examined by ET. (126) Although a 2D hexagonal lattice of mesopores existed on a microscopic scale, irregularly curved pores (U-shaped) on the mesoscopic length scale were also observed. Thus, the diffusion path length in curved pores may be much larger than commonly estimated from the particle size. A second example in this field revealed the local morphology of submicron Michigan State Univerity (MSU)-type particles. (127) It could be shown that the structure was composed of folded ribbons of hexagonally packed mesoporous silica, enclosing cavities inside the particle. The material (consisting of small particles, large pores, and cavities) was found to have very similar separation properties to those of commercial powders used in high-performance liquid chromatography. A detailed quantitative analysis of the 3D pore structure of chromatographic adsorbents can be found in the paper by Yao et al. (128)
+Figure 7
+Figure 7. Model of 2D hexagonal pore ordering in MCM-41 and SBA-15 (a), TEM image of MCM-41 with a hexagonal pore shape (b), numerical cross section through reconstruction of SBA-15 showing corrugated mesopore walls in dark gray and pore connections by arrows (c).
+More recent studies investigated macroporous ordered siliceous foams (MOSFs), (129) chiral mesoporous silica (CMS), (130) silica possessing a concentric circular mesostructure, (131) cage-type mesoporous silica FDU-12, (132) and periodic mesoporous organosilicas (PMOs). (133) The MOSFs form a honeycomb structure where each silica vesicle (∼100 nm diameter) is a hexagonal prism linked with three adjacent cells from the next layer. (129) For the CMS, prepared from achiral cationic surfactants, mesopores running spiral within the particle could be visualized. Particle morphology and the helical pitch could be systematically controlled by varying the ammonia concentration during preparation, and ET indicated that a particle can be composed of two helical rods of opposite handedness. (130) In contrast, silica with a concentric circular mesostructure was composed of hexagonally ordered pores without helical pitch, thus forming closed rings. (131) For the ordered cage-type mesoporous silica FDU-12, intergrowth between cubic and hexagonal close-packed structures was observed, and ET enabled the direct visualization of stacking faults. (132) Also in the PMO material, stacking faults could be visualized, but, most interestingly, changes in pore length and ordering could be tuned by the acidity of the reaction mixture. (133)
+While the above examples utilized bright-field TEM ET, OMM materials can also be imaged using HAADF STEM ET as shown by the Midgley group. In an approach, referred to as real-space crystallography, the MCM-48 lattice structure was modeled. (134) ET results of the complex gyroid-like 3D pore network were consistent with the proposed space group of Ia3d (135) but showed differences along the [111] zone axis. On the basis of the findings, a new pore model was suggested. Most notably, a grain boundary could be imaged in the MCM-48 particle, since ET resolves nonperiodic structures. This should not distract from the fact that electron crystallography of OMMs, pioneered by the Terasaki group, is an increasingly important technique in the field. (7, 136, 137)
+For applications in catalysis, the ordered pore arrangement in combination with a very narrow pore-size distribution makes OMMs excellent model supports for active phases and reference systems to study catalyst preparation. (138) In particular for MCM-41, the first representative of ordered mesoporous silica (OMS), isomorphous substitution of metal ions into the silica framework or deposition of metal particles onto the mesopore surfaces have been extensively studied. (139) Not surprisingly, first applications of ET to this field dealt with MCM-41-supported metal particles. In a series of studies by the Midgley group, the dispersions of Pd6Ru6 (20, 96, 140) and Ru10Pt2 (141) in MCM-41 were studied. An account of the catalytic performance of bimetallic nanoparticles for hydrogenations is given by Thomas. (142) ET results of the Pd6Ru6 system proved that the mesoporous structure of the silica could be faithfully reconstructed with little sign of beam damage. The bimetallic particles did have a definite size distribution as a result of coalescence, with larger particles present outside the mesopores and the smaller ones present inside. For Ru10Pt2/MCM-41, a high particle density combined with good dispersion of the bimetallic phase inside the mesopores was observed (Figure 8). (141) Moreover, the local catalyst loading was calculated to be 1.4 × 10−5 g m−2 by counting the number of Ru10Pt2 particles and measuring the internal surface of the silica inside a subvolume of the reconstruction. From the fact that imaging of 12 atom clusters, known to be <1 nm in diameter, was successful, a tomographic resolution of ∼1 nm in all three dimensions could be inferred. (140, 141) This value exceeds the resolution predicted by the Crowther criterion discussed in section .
+Figure 8
+Figure 8. Two perpendicular voxel projections of MCM-41 supported Pt/Ru nanoparticles (a, b), and surface render of single mesopore segment with two nanoparticles inside (c). Reprinted with permission from ref 141. Copyright 2004 American Chemical Society.
+Although MCM-41 has quite unique structural properties, its thin pore walls are prone to collapse in boiling water. In contrast, SBA-15 exhibits better hydrothermal stability as a result of its thicker silica walls. (116) Thus, SBA-15 can be applied over a larger range of reactions conditions and, therefore, is a suitable support material for heterogeneous catalysts. In a series of studies by our group, structural properties of SBA-15 model catalysts containing ZrO2, (143) Au, (46, 143) and NiO (49, 144) particles were investigated. ET provided unequivocal information on the location and size of the metal (oxide) particles inside of the support. Microscopic observations, namely, blocking of mesopores by incorporated particles, could be directly correlated with features in the desorption isotherm of N2-physisorption experiments. (143, 144) For all guest phases (ZrO2, Au, NiO), a nonuniform distribution of particles in the mesopores of the support was found. While in some pores many particles were present, other pores did not contain any particles.
+The effect of an inhomogeneous distribution on the local loading in filled pores was studied in detail for NiO/SBA-15 model catalyst. (49) Quantification by image analysis showed that, locally, a loading twice the average bulk loading was present (Figure 9). The ET-derived NiO particle-size distribution was in agreement with the diameter obtained by XRD, and statistical analysis of the nearest-neighbor distances is only one possibility to utilize the information provided by ET for the study of catalysts. Additional examples for the quantitative analysis of electron tomograms are given by Ersen et al. (145)
+Figure 9
+Figure 9. Local NiO loading in one SBA-15 mesopore (a), surface view of NiO crystallites in mesopore (b), and volume of crystallites plotted vs position along the mesopore (c). Reprinted with permission from ref 49. Copyright 2007 American Chemical Society.
+The presented examples show that ET has become an indispensable technique for the 3D structural investigation of OMMs and OMM-based heterogeneous catalysts. It is also expected to facilitate understanding of OMS-templated nanostructures, (146) such as gold nanorods with tunable aspect ratios synthesized in SBA-15 by a seed-mediated growth. (147) Here, we also would like to mention applications of ET to nanostructures formed by alternative routes, such as Pt fibers grown by guided deposition of nanoparticles in a physically confined self-assembly of surfactants, (148) nanoporous gold fabricated by chemically dealloying AuAg films, (149) heterostructured GaP−GaAs nanowires grown by metal−organic vapor-phase epitaxy, (150) and helical or zigzagged GaN, ZnGa2O4, and Zn2SnO4 nanowires grown by the vapor−liquid−solid mechanism. (151)
+3.3 Disordered Oxide Supported Catalysts
+Disordered oxide-supported catalysts are often applied in industry since they combine a relatively high dispersion (amount of active surface) with a high degree of thermostability of the catalytically active component. In this section, silica and alumina supports are discussed, while other ceramics (ceria, zirconia, and titania) are presented in section . The first example in this section investigated the 3D localization of Pd particles in two Pd/SiO2 cogelled catalysts. (76) Structural differences were quantified by image analysis, and an illustration of the results are presented in Figure 10. For a Pd loading of 1.1 wt %, an earlier simplified geometrical model could be confirmed, in which the Pd particles (4.4 ± 1.1 nm diameter) are located in the center of the primary silica particles (12.5 ± 4.8 nm diameter). When the Pd loading increased to 3.1 wt %, the diameter of the Pd particles increased slightly (4.8 ± 1.3 nm diameter), while the diameter of the silica skeleton decreased (10.3 ± 4.8 nm). ET proved that, for the higher loading, a significant fraction of the metal was also located outside the silica.
+Figure 10
+Figure 10. Quantitative analysis of 1.1 wt % Pd on SiO2 cogelled catalyst by Voronoi tessellation of the silica skeleton. Each colored region corresponds to the silica shell around a specific Pd nanoparticle. Outer surface of the silica skeleton (a), and three numerical cross sections showing Pd particles in white (b). Reprinted with permission from ref 76. Copyright 2005 American Chemical Society.
+Alternatively to cogellation deposition of the active metal phase inside the silica, deposition of a catalyst precursor on the silica surface (i.e., by impregnation with a precursor-containing solution followed by drying and calcination) is also extensively used in catalyst preparation. In a case study by the Midgley group, ET was applied to image the dispersion in a highly effective Ru5PtSn/SiO2 catalyst for single-step hydrogenation. (152) The Ru5PtSn phase had a tendency to be evenly distributed, mainly close to the surface of the silica particles, and no sintering occurred during exothermic hydrogenation. Further work of the same group focused on the dispersion of Ru8Pt2C2 in silica gel combined ET with image analysis. (79) By determining the location of catalyst particles as a function of the local curvature of the support, as seen in Figure 11, preferential sites were classified. Nanoparticles within the interior preferred the saddle-shaped surfaces of the support, while nanoparticles at the support exterior were mainly located in saddlelike and cuplike regions. Such detailed 3D analysis of the metal particle location is key in improving the properties of hierarchically ordered systems.
+Figure 11
+Figure 11. Region of the exterior silica surface colored according to its local curvature and Ru/Pt particles shown in red (a, b). The metal particles appear to be situated preferentially in positions with saddle to cuplike geometry. Reprinted with permission from ref 79. Copyright 2007 American Chemical Society.
+Alternatively to silica, alumina is one of the most commonly used supports for preparation of, e.g., oil refining or Fischer−Tropsch (FT) catalysts. Two ET examples of oil refining catalysts are given by Kübel et al. (47) The studied catalysts were composed of a high surface area alumina support with well-dispersed small MoO3 or Pt particles inside the structure. For the Pt-containing system, the resolution in the reconstruction was sufficient to analyze the Pt particle-size distribution by means of line profiles. Pt particles had a diameter between 1 and 3 nm with a distribution maximum at ∼1.8 nm. Further work by our group extended the use of ET to a commercial, sulfided Ni−Mo/γ-Al2O3 hydrotreating catalyst. (153) As seen in Figure 12, the MoS2 particles in the pores of the support were imaged with sufficient accuracy to resolve the 0.6 nm spaced MoS2 crystal planes. The MoS2 particles form a complex interconnected structure within the mesopores, and their individual shape largely deviates from simple models as derived from studies on model catalysts. Without a doubt, such information is extremely valuable to aid in first-principle modeling of sulfide catalysts. (154) This includes recent strides toward atomic resolution tomography of MoS2-based fullerene-like nanostructure by the combination of low-voltage electron microscopy with aberration-corrected phase-contrast imaging. (155)
+Figure 12
+Figure 12. TEM image of a MoS2/γ-Al2O3 catalyst with 5 nm gold particle (dark spots) attached to the thin section (a), slice through reconstruction showing the 0.6 nm spaced MoS2 crystal planes (b), and voxel projection displaying only the complex interconnected MoS2 network (c). Reprinted with permission from ref 153. Copyright 2006 American Chemical Society.
+The last example in this section deals with catalysts for the Fischer−Tropsch (FT) process that receive much attention in both academia and industry. In work by Arslan et al., the structure of two unreduced Re-promoted Co3O4/alumina FT catalysts was investigated. (156) It was concluded that the less C5+ selective catalyst consisted of fully interlocking metaloxide/γ-alumina aggregates. When a Ni impregnated and high-temperature heat-treated γ-alumina support is used, a fine distribution of Ni aluminate within a coarser α alumina skeleton is observed. In this catalyst the Co3O4 shows a preference to form nanocages around the Ni aluminate. After reduction, the metallic Co might display a more open local environment, which is believed to be responsible for the higher C5+ selectivity of this catalyst. The case studies cited in this section illustrate the potential of ET for investigating systems with a complexity approaching industrial catalysts at (sub)-nanometer resolution.
+3.4 Carbon Materials
+Carbon materials are widely used as catalyst supports, absorbents, and additives in the chemical, pharmaceutical, food, and agricultural industries because of their high surface area, low cost, and good chemical stability in liquid media. The most commonly used structures are activated carbons, carbon black, graphite, and carbon fibers/tubes. One of the advantages of carbon-based catalysts relates to the facile reclaim of noble metals simply by combusting the carbon. Since ET studies of nonfunctionalized carbon materials are sparse, existing examples will be given prior to the functionalized structures. At the end of this section, carbon nanotube/polymer composites and the morphology of carbon black emissions, in context with its environmental impact, will be discussed.
+The first ET studies of carbon-based catalysts were carried out by the Midgley group using HAADF STEM ET on a Pd/C system. (67, 157) The carbon support (400−600 nm in diameter) and the Pd nanoparticle aggregates larger than 6−10 nm could be successfully resolved in 3D. In some instances, clear clustering of the 1−20 nm sized particles was observed. Further work of the same group on a Pt/C system showed that, down to a size of 5 nm, the shape and size of the Pt particles was well-resolved. (158) However, characterization of the carbon matrix by HAADF STEM ET was difficult, and a combination with low-angle annular dark imaging was suggested to improve results (see also section ). (95)
+Two additional examples of ET to study the 3D structure of Pt/C catalysts are given by Wikander et al. (159) and Abrosimov et al. (48) In the former case ∼3 nm sized Pt particles on an ordered mesoporous carbon (KIT 6 replica) were imaged, and in the latter, ∼2−4 nm sized Pt particles on a poorly crystallized carbon support (Sibunit) were imaged. In both instances, ET confirmed that the particles were distributed at both the interior and exterior surfaces of the support and some larger agglomerates were present. For the Sibunit support (hollow carbon globules), BF TEM ET resolved a gap of 15 nm in the globule structure, rationalizing dispersion of the Pt particles in the inside.
+Applications of Pd/C and Pt/C systems range from hydrogenations (160) to electrodes in fuel cells. (161) In a polymer electrolyte membrane (PEM)-type fuel cell, a polymer electrolyte (commonly Nafion) separates the two carbon electrodes. The Pd or Pt nanoparticulate catalyst is deposited inside the pores of the carbon. Therefore, efficient penetration of the pores by the polymer electrolyte, and hence effective electrical contact, is essential for the fuel cell performance. An ET study linked the performance of the PEM-type fuel cell to the Pt and the Nafion distribution. (162) It could be shown that an autoclave treatment promoted the penetration of the Nafion into carbon black pores smaller than 100 nm, where 90% of the Pt was located, thus improving utilization of the catalyst. Such detailed insight can also aid in evaluating the long-term stability of fuel cell systems. (163)
+In context of mobile power sources, we also would like to mention ET results on carbon nanospheres (CNSs) used in Li-ion battery cathodes. An important strategy to improve the charge/discharge rate of the batteries is to interpenetrate the negative electrode and electrolyte on the nanoscale, thus increasing the effective interface area. An ET study showed that CNSs can have a heterogeneous core−shell structure. (164) In combination with high-resolution TEM, it was concluded that the outside consisted of a series of ∼10 nm thick faceted carbon walls, while the inside did not show graphitic ordering. Structure defects seemed to be concentrated along the ridgelines of the CNS particles and are possibly the ion paths causing improved battery performance. Application of ET to study the 3D structure of batteries has been suggested previously, (165) and now, with the first application showing success, a more extensive use can be expected.
+Another carbon structure with great potential as catalyst support (166) are carbon nanotubes (CNTs). (167) In the first ET study of CNTs, the hollow core could be resolved in 3D, which until then was only inferred from 2D imaging. (168) In a recent paper by Bals et al., the morphology and composition of bamboolike CNTs including the catalyst particle were investigated. (169) ET results showed that the hollow compartments had a conelike 3D structure and that cavities were present in the catalyst particle. Intensity variations between different parts of the catalyst particle indicated an inhomogeneous composition, which was identified to be Cu and Cu2O by EF TEM. Reconstruction of the 3D structure was carried out by an algorithm that combines reconstruction and segmentation, which allowed quantitative information on the individual phases to be obtained in a straightforward manner.
+From an application point of view, interfaces between nanotubes and metals are of considerable interest. In work by the Muller group, the buried interfaces between nanotubes and the metal were studied by ET. (170) Samples were prepared by electron-beam evaporation of metals onto commercially purchased nanotubes. Gold was found to deform the nanotubes, creating flat contact surfaces. As one goes from poorly wetting gold to a gold−palladium alloy to palladium and finally to strongly wetting titanium, a decreasing tendency for nanotube deformation was observed.
+Alternatively to outer surface functionalization, deposition of an active metallic phase inside CNTs could open up new possibilities in catalysis as a result of a synergetic confinement effect. (171) In this context, locating the position of the deposited particles with respect to the tube wall is crucial. In work by Ersen et al. the filling of multiwall CNTs by Pd particles (prepared from a nitrate precursor using aqueous impregnation) was investigated. (78) As seen in Figure 13, acid-treated tubes of 30 nm inner diameter had more than 50% of the Pd particles located on the inside. At 10 wt % loading, a homogeneous deposition on the inside of the multiwall (MW) CNT by 3−4 nm Pd particles with a density of 0.13 particles per nanometer tube length was derived. When decreasing the inner tube diameter to 15 nm, almost exclusive deposition on the outside was found. Interestingly, the diameter of the palladium particles was not affected by their location, i.e., inside or outside of the nanotube. Further work of the same author on CoFe2O4/CNTs related preparation effects (incipient wetness impregnation followed by calcination) to the average crystallite size and position in the CNT. (172) An example of the 3D morphology of a carbon-nanofiber-supported Fischer−Tropsch catalyst can be found in ref 173.
+Figure 13
+Figure 13. Palladium nanoparticles on the inside and outside of a multiwalled carbon nanotube. TEM image from the tilt series (A) and numerical cross sections through reconstruction (B−D). The presence of an amorphous phase (from suspension in ethanol for TEM sample preparation) wetting both the inside and the outside could be observed. The 10 nm sized spots on the outside are colloidal gold particles deposited to aid in alignment of the data set. Reprinted with permission from ref 78. Copyright 2007 American Chemical Society.
+The next paragraph leaves catalysis-related applications and turns briefly to CNT/polymer composites. Despite their unique properties, research on CNTs is complicated by their strong cohesive nature, which limits dispersability. When wrapping single-wall CNTs with a water-soluble polymer, the dispersability increases, facilitating purification. Also from an application point of view, good dispersability is highly desired, since addition of a relatively small concentration of nanotubes to polymers significantly increases the electrical, thermal, and mechanical properties of the composite material. In a study on the wrapping of CNTs, it could be concluded that the polymer (in this case, polysaccharide) existed as a uniform layer around the CNTs. (174) An ET example on the incorporation of sodium dodecyl sulfate coated MWCNTs in a polystyrene matrix showed no CNT aggregation. (175) A potential problem when trying to image such composites is the similar contrast between the two carbon-based components. To enhance the contrast, EF TEM tomography can be employed. (85) Ratio images of the energy-filtered tomographic reconstructions clearly differentiate the MWCNT and the polymer (nylon) region. Low-loss spectra extracted from the bulk nylon, the nylon surface, a hole in the nylon, and the CNT hinted toward subtle differences in the corresponding electronic structure. One can envision further developments to obtain 3D information on the local bonding, which would be highly desired for catalytic applications. Additional studies utilizing EF TEM ET can be found in the references of section .
+The end of this section dedicated to carbon materials deals with a topic of general interest closely related to catalysis, namely, air pollution generated from automotive engines. Despite the great improvements that fuel producers, car manufacturers, and legislation have made toward the abatement of pollution, certain limitations of combustion engines are hard to overcome. One important aspect is the incomplete combustion of fossil fuels, which in turn creates soot particles that are emitted in large quantities, ∼8 Tg/year. (176) It was estimated that the overall contribution of soot to global warming may be second only to that of CO2. (177, 178) Soot typically aggregates into clusters (also referred to as mass fractals) that consist of numerous small primary particles. ET studies by the Buseck group investigated the 3D shapes of soot aggregates. (179, 180) Two examples are displayed in Figure 14. It could be shown that morphological parameters (fractal dimension, radius of gyration, surface area) captured in 3D more accurately then 2D TEM values estimate atmospheric lifetimes utilized in global distribution models. Most importantly, the light-scattering properties of the complex aggregates were found to be up to 30 times larger than the values of unaggregated spheres commonly assumed to model the climate impact of soot. (180) In the future, such results are expected to be applied not only to improve climate models but also to minimize high-impact pollution.
+Figure 14
+Figure 14. Stereo pairs (wide-eyed) of soot aggregates produced by incomplete combustion of biomass (a, b) and from a diesel engine (c, d), illustrating the complex fractal geometry of the structures. The vertical red bar in the top pair is the support for TEM imaging. Scale bars are 200 nm. Reproduced with permission from American Geophysical Union from ref 179. Copyright 2005 American Geophysical Union.
+3.5 Miscellaneous Materials
+In this section, other materials like ceramics, polymers, and nanocomposites that have been investigated by ET are reviewed. While ceramic supports are often supposed to be inert (section ), they can also expose catalytic properties. (181, 182) Titanium dioxide in the anatase form, for example, is a photocatalyst under ultraviolet light (UV). A combined ET, in situ TEM, and electron energy loss spectroscopy (EELS) study observed structural changes from single-crystalline TiO2 to polycrystals during photocatalytic oxidation of hydrocarbons. (183) When introducing extrinsic metals, UV-activated decomposition of organic and inorganic pollutants can be improved. To determine the 3D morphology of an Ag/TiO2 catalyst manufactured by spray pyrolysis, ET was employed. (184) It could be shown that silver particles of <10 nm were uniformly dispersed on the inside and on the outside of the titania agglomerate. The spherical titania agglomerate, with a diameter of 150 nm, was composed of 10−20 nm titania particles.
+Also, ceria and zirconia show properties that go beyond an inert support. (185, 186) The application of ceria−zirconia mixed oxides to the three-way catalysts considerably reduced pollution by increasing the oxygen storage capacity and thermal stability of the system. (187) Enhanced redox properties can be induced by severe reduction followed by a mild oxidation. (188) This process has been associated with a transition from rounded crystallites to well-faceted oxide particles. (189) ET revealed a final particle shape very close to that of an octahedron. The observed change in morphology was also accompanied by an increase of Zr-rich, {111}-type surfaces, which could be key factors in understanding the distinct chemical behavior of the ceria−zirconia nanocrystals. (189) Further studies investigated the 3D structure of ceria nanocrystals in the context of their application as oxygen conductors in solid oxide fuel cells. (190) Crystals prepared by hydrothermal synthesis predominantly exposed {200} cubic facets, which offer the largest number of active sites. In combination with an average particle size of 6.7 nm, ensuring a high surface area, a high activity is expected. (190) To conclude the field of ceramics, we also would like to mention a recent materials science example in which ET was used to explore the morphology of ceria nanodendrites in an alkali−borosilcate glass matrix following a glass melting and annealing procedure. (191)
+The next class of materials discussed in this section are polymers. Their main application in catalysis is as supports, e.g., for immobilization of homogeneous catalysts to improve catalyst recovery. (192, 193) From a structural point of view, block copolymers, which self-organize into microphase-separated nanostructures, are of particular interest. ET studies of diblock copolymers show assembly into 3D structures composed of hexagonally stacked cylinders (194-196) and lamellar structures. (197-199) Triblock copolymers have been shown to form microdomain structures composed of cylinders with polygonal cross sections packed in square lattices (200) and in hexagonal lattices. (201) Porous supports can be obtained from the microphase-separated block copolymer by selective degradation of one of the microdomain phases. (202) A detailed 3D structural analysis of a porous polymer support containing Pd particles was carried out by Jinnai et al. (77) ET results unambiguously resolved the porous polymer network with most of the Pd particles located at the polymer/pore interface (Figure 15). Using image analysis, quantitative structural information such as the number of Pd particles per surface area (490 μm−2), the Pd particle size distribution (∼4.2 nm radius), and the penetration of the Pd particles into the surface (∼1.2 nm) could be obtained. For a detailed account on the 3D structural characterization of polymers, we refer to a recent review. (55)
+Figure 15
+Figure 15. Surface visualization of porous polymer (A), Pd nanoparticles (B), superposition of porous polymer and Pd (C), and close-up view (D) of the region boxed in (C). Reprinted with permission from ref 77. Copyright 2006 John Wiley and Sons, Inc. and The Japan Chemical Forum.
+Closely related to many of the above materials is the field of nanocomposites, which was already discussed for carbon nanotubes in section . Nanocomposites are created by introducing nanoparticulate fillers into a matrix material to tune electrical, thermal, and mechanical properties of the resulting system. Here we would like to mention ET studies on polymer nanocomposites containing silica, (203, 204) carbon black, (204) carbon nanotubes, (85, 175) and ceramics (205, 206) as a few examples from the literature.
+4 Conclusions and Outlook
+The controlled assembly of functional materials on the nanoscale has been a major focus of research across many scientific disciplines over the last few decades. (115, 116, 167, 207, 208) These developments were in part fueled by the availability of characterization techniques, such as TEM, that can probe obtained structures with high spatial resolution. With the increasing complexity of nanomaterials and to gain precision in synthesis and assembly, elucidation of their full 3D morphology becomes more and more important. (33, 209) Facilitated by automated ET data collection systems and high-performance desktop computing, ET is now used as a tool for the 3D structural characterization of inorganic materials. (20, 32) At present, mainly bright-field TEM ET and high-angle annular dark-field STEM ET are applied, depending on sample composition, degree of crystallinity, and crystallite size. With the advent of aberration correctors for electron microscopy, (210, 211) new opportunities for materials characterization arise, (212) potentially providing 3D information at atomic resolution. (17, 155, 213) In this review, we have given a number of examples that highlight the importance of ET in the field of catalysis. When studying hierarchical materials, such as mesoporous zeolites or supported catalysts, accurate knowledge of the 3D morphology significantly aids in understanding their physicochemical properties. To obtain unbiased quantitative structural information, image analysis can be considered as the next key step. (49, 56, 76, 78, 79, 156) However, one cannot emphasize enough the linking of ET-derived results to bulk characterization techniques to ensure that statistically significant sample properties are described. Now the first examples using image segmentation (measuring porosity, particle-size distributions, or tortuosity) provide a microscopic explanation for bulk properties. With a wealth of nanostructural data at hand, the challenge ahead lies in relating this information to the catalytic properties of materials. ET delivers fundamental insights into the 3D structure of complex hierarchical materials and is expected to contribute significantly to rational catalyst design in the future.
+Author Information
+Corresponding Authors
+Heiner Friedrich - Inorganic Chemistry and Catalysis, Debye Institute for Nanomaterials Science, Utrecht University, Sorbonnelaan 16, 3584 CA, Utrecht, The Netherlands, and Molecular Cell Biology, Utrecht University, Padualaan 8, 2584 CH, Utrecht, The Netherlands;  Email: h.friedrich@uu.nl k.p.dejong@uu.nl
+Krijn P. de Jong - Inorganic Chemistry and Catalysis, Debye Institute for Nanomaterials Science, Utrecht University, Sorbonnelaan 16, 3584 CA, Utrecht, The Netherlands, and Molecular Cell Biology, Utrecht University, Padualaan 8, 2584 CH, Utrecht, The Netherlands;  Email: h.friedrich@uu.nl k.p.dejong@uu.nl
+Authors
+Petra E. de Jongh - Inorganic Chemistry and Catalysis, Debye Institute for Nanomaterials Science, Utrecht University, Sorbonnelaan 16, 3584 CA, Utrecht, The Netherlands, and Molecular Cell Biology, Utrecht University, Padualaan 8, 2584 CH, Utrecht, The Netherlands
+Arie J. Verkleij - Inorganic Chemistry and Catalysis, Debye Institute for Nanomaterials Science, Utrecht University, Sorbonnelaan 16, 3584 CA, Utrecht, The Netherlands, and Molecular Cell Biology, Utrecht University, Padualaan 8, 2584 CH, Utrecht, The Netherlands
+Biographies
+Heiner Friedrich received his M.Sc. (2001) in Physics from the University of Dresden, working in the field of electron optics at the Triebenberg Laboratory for High-Resolution Electron Microscopy and Holography. Between 2002 and 2005, he joined Arizona State University (U.S.A.) as a research scientist to implement and apply electron tomography at the John M. Cowley Center for High-Resolution Electron Microscopy. Since 2005, his research, under the supervision of Prof. K. P. de Jong, Prof. A. J. Verkleij, and Dr. P. E. de Jongh, has focused on the quantitative three-dimensional characterization of nanostructured materials by electron tomography. His current interests include image analysis and structure modeling.
+Petra E. de Jongh obtained her Ph.D. (Hons) in Physical Chemistry in 1999 from Utrecht University (The Netherlands). She then worked as a senior scientist at Philips Electronics on functional thin films for applications in batteries, thermochromic materials, and magnetic, optic, and electrical fingerprint coatings, resulting in about 10 patents. In 2004, she joined the Department of Inorganic Chemistry and Catalysis at Utrecht University as an assistant Professor. Her main interest is using advanced techniques to prepare and characterize nanostructured inorganic materials (typically nanoparticles in mesoporous supports) and gain insight into the impact of particle size, confinement, and pore structure on the functionality of these materials for applications in catalysis and hydrogen storage.
+Arie J. Verkleij obtained his M.Sc. (1970) and Ph.D. (1975) in biology from the University of Utrecht. Since then he has occupied different positions: 1975−1985, Assistant Professor at the Institute of Molecular Biology University of Utrecht; from 1986 onwards, Professor in Cell Biology and Electron Microscopy, University of Utrecht; 1988−1993, President of the Dutch Society for Electron Microscopy; 1991−2004, Scientific Director of the Institute for Biomembranes, University of Utrecht; 2004 onwards, vice-dean Life Sciences, Faculty of Science, University of Utrecht. His current research interests include (i) signal transduction and cell cycle regulation, (ii) ischaemia and reactive oxygen species, and (iii) innovative solutions for structure analysis based on light and electron microscopy. He has published more than 300 scientific papers.
+Krijn P. de Jong (1954) obtained his B.Sc. (1976), M.Sc. (1978), and Ph.D. (1982) degrees in chemistry, all degrees cum laude and at Utrecht University. In 1987, he also obtained an M.Sc. degree in chemical engineering from Twente University. From 1982−1997, he was with Shell Research working on catalyst preparation, heavy oil conversion, environmental processes, zeolite catalysis, and synthesis gas production and conversion. In 1997, he was appointed as full professor of inorganic chemistry and catalysis at Utrecht University. His current research interests are catalyst preparation, nanostructured catalysts, hydrocarbon conversions over zeolites, catalysts for fine chemicals manufacture, conversion of synthesis gas, and hydrogen storage. He has published about 120 scientific papers and more than 20 patents.
+Acknowledgment
+H.F. and K.P.d.J. acknowledge financial support by the National Research School Combination Catalysis.
+References
+This article references 213 other publications.
+1Williams, D. B. and Carter, C. B. Transmission electron microscopy: A textbook for materials science; Springer Science + Business Media, Inc., A Division of Plenum Publishing Corporation: New York, 1996.
+Google Scholar
+2Reimer, L. Transmission Electron Microscopy, 4th ed.; Springer-Verlag: Berlin, 1997.
+Google Scholar
+3Yao, N. and Wang, Z. L., Eds.; Handbook of Microscopy for Nanotechnology; Kluwer (now Springer): Boston, MA, 2005.
+Google Scholar
+4Gai, P. L. and Boyes, E. D. Electron Microscopy in Heterogeneous Catalysis; Institute of Physics Publishing: Bristol, U.K., 2003.
+Google Scholar
+5Thomas, J. M. and Terasaki, O. Top. Catal. 2002, 21, 155
+Google Scholar
+6Datye, A. K. J. Catal. 2003, 216, 144
+Google Scholar
+7Anderson, M. W., Ohsuna, T., Sakamoto, Y., Liu, Z., Carlsson, A., and Terasaki, O. Chem. Commun. 2004, 907
+Google Scholar
+8Thomas, J. M. and Midgley, P. A. Chem. Commun. 2004, 1253
+Google Scholar
+9Stroud, R. M., Long, J. W., Pietron, J. J., and Rolison, D. R. J. Non-Cryst. Solids 2004, 350, 277
+Google Scholar
+10Diaz, I., Alfredsson, V., and Sakamoto, Y. Curr. Opin. Colloid Interface Sci. 2006, 11, 302
+Google Scholar
+11Gai, P. L. Top. Catal. 2002, 21, 161
+Google Scholar
+12Egerton, R. F. Top. Catal. 2002, 21, 185
+Google Scholar
+13Arbiol, J., Rossinyol, E., Cabot, A., Peiro, F., Cornet, A., Morante, J. R., Chen, F. L., and Liu, M. L. Electrochem. Solid-State Lett. 2004, 7, J17
+Google Scholar
+14Heinrichs, B., Geus, J. W., Lambert, S., and Pirard, J.-P. J. Catal. 2006, 241, 229
+Google Scholar
+15Li, F., Wang, Z., Ergang, N. S., Fyfe, C. A., and Stein, A. Langmuir 2007, 23, 3996
+Google Scholar
+16Bovin, J. O., Alfredsson, V., Karlsson, G., Carlsson, A., Blum, Z., and Terasaki, O. Ultramicroscopy 1996, 62, 277
+Google Scholar
+17Borisevich, A. Y., Lupini, A. R., and Pennycook, S. J. Proc. Natl. Acad. Sci. U.S.A. 2006, 103, 3044
+Google Scholar
+18Sakamoto, Y., Kaneda, M., Terasaki, O., Zhao, D. Y., Kim, J. M., Stucky, G., Shin, H. J., and Ryoo, R. Nature 2000, 408, 449
+Google Scholar
+19Dorset, D. L., Roth, W. J., and Gilmore, C. J. Acta Crystallogr., Sect. A 2005, 61, 516
+Google Scholar
+20Midgley, P. A. and Weyland, M. Ultramicroscopy 2003, 96, 413
+Google Scholar
+21Midgley, P. A., Weyland, M., and Stegmann, H. Applications of Electron Tomography. In Advanced Tomographic Methods in Materials Research and Engineering; Banhard, J., Ed.; Oxford University Press: Oxford, U.K., 2008; p 335.
+Google Scholar
+22Koster, A. J., Grimm, R., Typke, D., Hegerl, R., Stoschek, A., Walz, J., and Baumeister, W. J. Struct. Biol. 1997, 120, 276
+Google Scholar
+23Lucic, V., Förster, F., and Baumeister, W. Annu. Rev. Biochem. 2005, 74, 833
+Google Scholar
+24McIntosh, R., Nicastro, D., and Mastronarde, D. Trends Cell Biol. 2005, 15, 43
+Google Scholar
+25Koster, A. J. and Barcena, M. Cryotomography: Low-dose Automated Tomography of Frozen-Hydrated Specimens. In Electron Tomography: Methods for Three-Dimensional Visualization of Structures in the Cell; Frank, J., Ed.; Springer Science + Business Media, LLC: New York, 2006; p 113.
+Google Scholar
+26Midgley, P. A., Ward, E. P. W., Hungria, A. B., and Thomas, J. M. Chem. Soc. Rev. 2007, 36, 1477
+Google Scholar
+27Möbus, G. and Inkson, B. J. Mater. Today 2007, 10, 18
+Google Scholar
+28Radon, J. Ber. Sächs. Akad. Wiss. Leipzig, Math.-Phys. Kl. 1917, 69, 262
+Google Scholar
+29Deans, S. R. The Radon Transform and Some of Its Applications; John Wiley & Sons, Inc.: New York, 1983; p vii.
+Google Scholar
+30Hounsfield, G. N. Science 1980, 210, 22
+Google Scholar
+31Withers, P. J. Mater. Today 2007, 10, 26
+Google Scholar
+32Koster, A. J., Ziese, U., Verkleij, A. J., Janssen, A. H., and de Jong, K. P. J. Phys. Chem. B 2000, 104, 9368
+Google Scholar
+33de Jong, K. P. and Koster, A. J. ChemPhysChem 2002, 3, 776
+Google Scholar
+34Hart, R. G. Science 1968, 159, 1464
+Google Scholar
+35Hoppe, W., Langer, R., Knesch, G., and Poppe, C. Naturwissenschaften 1968, 55, 333
+Google Scholar
+36de Rosier, D. J. and Klug, A. Nature 1968, 217, 130
+Google Scholar
+37Bonetta, L. Nat. Methods 2005, 2, 139
+Google Scholar
+38Zheng, Q. S., Braunfeld, M. B., Sedat, J. W., and Agard, D. A. J. Struct. Biol. 2004, 147, 91
+Google Scholar
+39Mastronarde, D. N. J. Struct. Biol. 2005, 152, 36
+Google Scholar
+40Nickell, S., Forster, F., Linaroudis, A., Net, W. D., Beck, F., Hegerl, R., Baumeister, W., and Plitzko, J. M. J. Struct. Biol. 2005, 149, 227
+Google Scholar
+41Radermacher, M.Ph.D. Thesis, Department of Physics, University of Munich, Munich, Germany, 1980.
+Google Scholar
+42Penczek, P. A., Marko, M., Buttle, K., and Frank, J. Ultramicroscopy 1995, 60, 393
+Google Scholar
+43Mastronarde, D. N. J. Struct. Biol. 1997, 120, 343
+Google Scholar
+44Crowther, R. A., de Rosier, D. J., and Klug, A. Proc. R. Soc. London, Ser. A 1970, 317, 310
+Google Scholar
+45Radermacher, M. and Hoppe, W.Proc. 7th Eur. Congr. Electr. Micr., den Haag, The Netherlands, 1980; p 132.
+Google Scholar
+46Ziese, U., de Jong, K. P., and Koster, A. J. Appl. Catal., A 2004, 260, 71
+Google Scholar
+47Kübel, C., Voigt, A., Schoenmakers, R., Otten, M., Su, D., Lee, T. C., Carlsson, A., and Bradley, J. Microsc. Microanal. 2005, 11, 378
+Google Scholar
+48Abrosimov, O. G., Moroz, E. M., and Chuvilin, A. L. Kinet. Catal. 2006, 47, 464
+Google Scholar
+49Friedrich, H., Sietsma, J. R. A., de Jongh, P. E., Verkleij, A. J., and de Jong, K. P. J. Am. Chem. Soc. 2007, 129, 10249
+Google Scholar
+50Penczek, P. A. J. Struct. Biol. 2002, 138, 34
+Google Scholar
+51Unser, M., Sorzano, C. O. S., Thevenaz, P., Jonic, S., El-Bez, C., De Carlo, S., Conway, J. F., and Trus, B. L. J. Struct. Biol. 2005, 149, 243
+Google Scholar
+52Cardone, G., Grunewald, K., and Steven, A. C. J. Struct. Biol. 2005, 151, 117
+Google Scholar
+53Lawrence, M. C. Least-Squares Method of Alignment using Markers. In Electron Tomography: Three-Dimensional Imaging with the Transmission Electron Microscope; Frank, J., Ed.; Plenum Press: New York, 1992; p 197.
+Google Scholar
+54Ziese, U., Janssen, A. H., Murk, J. L., Geerts, W. J. C., Van der Krift, T., Verkleij, A. J., and Koster, A. J. J. Microsc. (Oxford) 2002, 205, 187
+Google Scholar
+55Luther, P. K. Sample Shrinkage and Radiation Damage. In Electron Tomography: Three-Dimensional Imaging with the Transmission Electron Microscope; Frank, J., Ed.; Plenum Press: New York and London, 1992; p 39.
+Google Scholar
+56Jinnai, H., Nishikawa, Y., Ikehara, T., and Nishi, T. Adv. Polym. Sci. 2004, 170, 115
+Google Scholar
+57Hegerl, R. and Hoppe, W. Z. Naturforsch., A: Phys. Sci. 1976, 31, 1717
+Google Scholar
+58McEwan, B. F., Downing, K. H., and Glaeser, R. M. Ultramicroscopy 1995, 60, 357
+Google Scholar
+59Plitzko, J. M. and Baumeister, W. Cryoelectron Tomography (CET). In Science of Microscopy; Hawkes, P. W. and Spence, J. C. H., Eds.; Springer Science + Business Media, LLC: New York, 2007; Vol. 1, p 535.
+Google Scholar
+60Downing, K. H. and Hendrickson, F. M. Ultramicroscopy 1999, 75, 215
+Google Scholar
+61Frank, J. and McEwan, B. F. Alignment by Cross-Correlation. In Electron Tomography: Three-Dimensional Imaging with the Transmission Electron Microscope; Frank, J., Ed.; Plenum Press: New York, 1992; p 205.
+Google Scholar
+62Kremer, J. R., Mastronarde, D. N., and McIntosh, J. R. J. Struct. Biol. 1996, 116, 71
+Google Scholar
+63Radermacher, M. Weighted Back-Projection Methods. In Electron Tomography: Three-Dimensional Imaging with the Transmission Electron Microscope; Frank, J., Ed.; Plenum Press: New York, 1992; p 91.
+Google Scholar
+64Gilbert, P. J. Theor. Biol. 1972, 36, 105
+Google Scholar
+65Gordon, R., Bender, R., and Herman, G. T. J. Theor. Biol. 1970, 29, 471
+Google Scholar
+66Skoglund, U., Ofverstedt, L.-G., Burnett, R. M., and Bricogne, G. J. Struct. Biol. 1996, 117, 173
+Google Scholar
+67Weyland, M. Top. Catal. 2002, 21, 175
+Google Scholar
+68Batenburg, K. J. Electr. Notes Discrete. Math. 2005, 20, 247
+Google Scholar
+69Tong, J., Arslan, I., and Midgley, P. A. J. Struct. Biol. 2006, 153, 55
+Google Scholar
+70Bilbao-Castro, J. R., Merino, A., Garcia, I., Carazo, J. M., and Fernandez, J. J. Parallel Comput. 2007, 33, 250
+Google Scholar
+71Kuba, A. and Herman, G. T. Some Mathematical Concepts for Tomographic Reconstructions. In Advanced Tomographic Methods in Materials Research and Engineering; Banhard, J., Ed.; Oxford University Press: Oxford, U.K., 2008; p 19.
+Google Scholar
+72Pettersen, E. F., Goddard, T. D., Huang, C. C., Couch, G. S., Greenblatt, D. M., Meng, E. C., and Ferrin, T. E. J. Comput. Chem. 2004, 25, 1605
+Google Scholar
+73Ribeiro, E. and Shah, M. Mach. Vision Appl. 2006, 17, 147
+Google Scholar
+74Sandberg, K. Method. Cell Biol. 2007, 79, 769
+Google Scholar
+75Ohser, J. and Schladitz, K. Visualization, Processing and Analysis of Tomographic Data. In Advanced Tomographic Methods in Materials Research and Engineering; Banhard, J., Ed.; Oxford University Press: Oxford, U.K., 2008; p 37.
+Google Scholar
+76Gommes, C. J., de Jong, K., Pirard, J. P., and Blacher, S. Langmuir 2005, 21, 12378
+Google Scholar
+77Jinnai, H., Kaneko, T., Nishioka, H., Hasegawa, H., and Nishi, T. Chem. Rec. 2006, 6, 267
+Google Scholar
+78Ersen, O., Werckmann, J., Houlle, M., Ledoux, M. J., and Pham-Huu, C. Nano Lett. 2007, 7, 1898
+Google Scholar
+79Ward, E. P. W., Yates, T. J. V., Fernandez, J. J., Vaughan, D. E. W., and Midgley, P. A. J. Phys. Chem. C 2007, 111, 11501
+Google Scholar
+80Janssen, A. H., Koster, A. J., and de Jong, K. P. Angew. Chem., Int. Ed. 2001, 40, 1102
+Google Scholar
+81Bals, S., Van Tendeloo, G., and Kiesielowski, C. Adv. Mater. 2006, 18, 892
+Google Scholar
+82Möbus, G. and Inkson, B. J. Appl. Phys. Lett. 2001, 79, 1369
+Google Scholar
+83Möbus, G., Doole, R. C., and Inkson, B. J. Ultramicroscopy 2003, 96, 433
+Google Scholar
+84Weyland, M., Yates, T. J. V., Dunin-Borkowski, R. E., Laffont, L., and Midgley, P. A. Scripta Mater. 2006, 55, 29
+Google Scholar
+85Gass, M. H., Koziol, K. K. K., Windle, A. H., and Midgley, P. A. Nano Lett. 2006, 6, 376
+Google Scholar
+86Yurtsever, A., Weyland, M., and Muller, D. A. Appl. Phys. Lett. 2006, 89, 151920
+Google Scholar
+87Lai, G., Hirayama, T., Ishizuka, K., Tanji, T., and Tonomura, A. Appl. Opt. 1994, 33, 829
+Google Scholar
+88Lai, G., Hirayama, T., Fukuhara, A., Ishizuka, K., Tanji, T., and Tonomura, A. J. Appl. Phys. 1994, 75, 4593
+Google Scholar
+89Twitchett-Harrison, A. C., Yates, T. J. V., Newcomb, S. B., Dunin-Borkowski, R. E., and Midgley, P. A. Nano Lett. 2007, 7, 2020
+Google Scholar
+90Barnard, J. S., Sharp, J., Tong, J., and Midgley, P. A. Science 2006, 313, 319
+Google Scholar
+91Kolb, U., Gorelik, T., Kübel, C., Otten, M. T., and Hubert, D. Ultramicroscopy 2007, 107, 507
+Google Scholar
+92Kolb, U., Gorelik, T., and Otten, M. T. Ultramicroscopy 2008, 108, 763
+Google Scholar
+93Kakibayashi, H., Nakamura, K., Tsuneta, R., and Mitsui, Y. Jpn. J. Appl. Phys., Part 1 1995, 34, 5032
+Google Scholar
+94Friedrich, H., McCartney, M. R., and Buseck, P. R. Ultramicroscopy 2005, 106, 18
+Google Scholar
+95Cervera Gontard, L., Dunin-Borkowski, R. E., Chong, R. K. K., Ozkaya, D., and Midgley, P. A. J. Phys: Conf. Ser. 2006, 26, 203
+Google Scholar
+96Weyland, M., Midgley, P. A., and Thomas, J. M. J. Phys. Chem. B 2001, 105, 7882
+Google Scholar
+97Hawkes, P. W. The Electron Microscope as a Structure Projector. In Electron Tomography: Three-Dimensional Imaging with the Transmission Electron Microscope; Frank, J. E., Ed.; Plenum Press: New York, 1992; p 17.
+Google Scholar
+98Thomas, J. M., Midgley, P. A., Yates, T. J. V., Barnard, J. S., Raja, R., Arslan, I., and Weyland, M. Angew. Chem., Int. Ed. 2004, 43, 6745
+Google Scholar
+99Stegmann, H., Engelmann, H. H., and Zschech, E. Microelectron. Eng. 2003, 65, 171
+Google Scholar
+100Kaneko, K., Nagayama, R., Inoke, K., Noguchi, E., and Horita, Z. Sci. Technol. Adv. Mater. 2006, 7, 726
+Google Scholar
+101Park, J. B., Lee, J. H., and Choi, H. R. Appl. Phys. Lett. 2007, 90, 093111
+Google Scholar
+102Zhang, H. B., Zhang, X. L., Wang, Y., and Takaoka, A. Rev. Sci. Instrum. 2007, 78, 013701
+Google Scholar
+103Feng, R.-J., Watanabe, T., and Takaoka, A. Proc. Int. Microsc. Conf. 16 (Sapporo, Japan) 2006, 698
+Google Scholar
+104Howie, A. J. Microsc. (Oxford) 1979, 117, 11
+Google Scholar
+105Corma, A. Chem. Rev. 1995, 95, 559
+Google Scholar
+106Koster, A. J., Ziese, U., Verkleij, A. J., de Graaf, J., Geus, J. W., and de Jong, K. P. Stud. Surf. Sci. Catal. 2000, 130, 329
+Google Scholar
+107van Donk, S., Janssen, A. H., Bitter, J. H., and de Jong, K. P. Catal. Rev.—Sci. Eng. 2003, 45, 297
+Google Scholar
+108Tao, Y. S., Kanoh, H., Abrams, L., and Kaneko, K. Chem. Rev. 2006, 106, 896
+Google Scholar
+109Janssen, A. H., Koster, A. J., and de Jong, K. P. J. Phys. Chem. B 2002, 106, 11905
+Google Scholar
+110Jacobsen, C. J. H., Madsen, C., Houzvicka, J., Schmidt, I., and Carlsson, A. J. Am. Chem. Soc. 2000, 122, 7116
+Google Scholar
+111Janssen, A. H., Schmidt, I., Jacobsen, C. J. H., Koster, A. J., and de Jong, K. P. Microporous Mesoporous Mater. 2003, 65, 59
+Google Scholar
+112Ogura, M., Shinomiya, S. Y., Tateno, J., Nara, Y., Kikuchi, E., and Matsukata, H. Chem. Lett. 2000, 29, 882
+Google Scholar
+113Groen, J. C., Bach, T., Ziese, U., Paulaime-van Donk, A. M., de Jong, K. P., Moulijn, J. A., and Perez-Ramirez, J. J. Am. Chem. Soc. 2005, 127, 10792
+Google Scholar
+114Ziese, U., Gommes, C. J., Blacher, S., Janssen, A. H., Koster, A. J., and de Jong, K. P. Stud. Surf. Sci. Catal. 2005, 158, 633
+Google Scholar
+115Kresge, C. T., Leonowicz, M. E., Roth, W. J., Vartuli, J. C., and Beck, J. S. Nature 1992, 359, 710
+Google Scholar
+116Zhao, D. Y., Feng, J. L., Huo, Q. S., Melosh, N., Fredrickson, G. H., Chmelka, B. F., and Stucky, G. D. Science 1998, 279, 548
+Google Scholar
+117Grün, M., Kurganov, A. A., Schacht, S., Schüth, F., and Unger, K. K. J. Chromatogr., A 1996, 740, 1
+Google Scholar
+118Mal, N. K., Fujiwara, M., and Tanaka, Y. Nature 2003, 421, 350
+Google Scholar
+119Corma, A. Chem. Rev. 1997, 97, 2373
+Google Scholar
+120Schacht, S., Janicke, M., and Schüth, F. Microporous Mesoporous Mater. 1998, 22, 485
+Google Scholar
+121Muroyama, N., Ohsuna, T., Ryoo, R, Kubota, Y., and Terasaki, O. J. Phys. Chem. C 2006, 110, 10630
+Google Scholar
+122Kruk, M., Jaroniec, M., Ko, C. H., and Ryoo, R. Chem. Mater. 2000, 12, 1961
+Google Scholar
+123Ryoo, R., Ko, C. H., Kruk, M., Antochshuk, V., and Jaroniec, M. J. Phys. Chem. B 2000, 104, 11465
+Google Scholar
+124Liu, Z., Terasaki, O., Ohsuna, T., Hiraga, K., Shin, H. J., and Ryoo, R. ChemPhysChem 2001, 2, 229
+Google Scholar
+125Gommes, C. J., Friedrich, H., Wolters, M., de Jongh, P. E., and de Jong, K. P.Chem. Mater. 2009, accepted for publication.
+Google Scholar
+126Janssen, A. H., Van Der Voort, P., Koster, A. J., and de Jong, K. P. Chem. Commun. 2002, 1632
+Google Scholar
+127Martines, M. U., Yeong, E., Persin, M., Larbot, A., Voorhout, W. F., Kübel, C. K. U., Kooyman, P., and Prouzet, E. C. R. Chim. 2005, 8, 627
+Google Scholar
+128Yao, Y., Czymmek, K. J., Pazhianur, R., and Lenhoff, A. M. Langmuir 2006, 22, 11148
+Google Scholar
+129Wang, H., Zhou, X., Yu, M., Wang, Y., Han, L., Zhang, J., Yuan, P., Auchterlonie, G., Zou, J., and Yu, C. J. Am. Chem. Soc. 2006, 128, 15992
+Google Scholar
+130Han, Y., Zhao, L., and Ying, J. Y. Adv. Mater. 2007, 19, 2454
+Google Scholar
+131Yuan, P., Liu, N., Zhao, L. Z., Zhou, X. F., Zhou, L., Auchterlonie, G. J., Yao, X. D., Drennan, J., Lu, G. Q., Zou, J., and Yu, C. Z. Angew. Chem., Int. Ed. 2008, 47, 6670
+Google Scholar
+132Ersen, O., Parmentier, J., Solovyov, L. A., Drillon, M., Pham-Huu, C., Werckmann, J., and Schultz, P. J. Am. Chem. Soc. 2008, 130, 16800
+Google Scholar
+133Vercaemst, C., Friedrich, H., de Jongh, P. E., Neimark, A. V., Goderis, B., Verpoort, F., and van der Voort, P.J. Phys. Chem. C 2009, accepted for publication.
+Google Scholar
+134Yates, T. J. V., Thomas, J. M., Fernandez, J. J., Terasaki, O., Ryoo, R., and Midgley, P. A. Chem. Phys. Lett. 2006, 418, 540
+Google Scholar
+135Sakamoto, Y., Kim, T. W., Ryoo, R., and Terasaki, O. Angew. Chem., Int. Ed. 2004, 43, 5231
+Google Scholar
+136Garcia-Bennett, A. E., Che, S. N., Miyasaka, K., Sakamoto, Y., Ohsuna, T., Liu, Z., and Terasaki, O. Stud. Surf. Sci. Catal. 2005, 156, 11
+Google Scholar
+137Gao, C. B., Sakamoto, Y., Sakamoto, K., Terasaki, O., and Che, S. N. Angew. Chem., Int. Ed. 2006, 45, 4295
+Google Scholar
+138Sietsma, J. R. A., de Jongh, P. E., van Dillen, A. J., and de Jong, K. P. Stud. Surf. Sci. Catal. 2006, 162, 95
+Google Scholar
+139Ciesla, U. and Schüth, F. Microporous Mesoporous Mater. 1999, 27, 131
+Google Scholar
+140Midgley, P. A., Weyland, M., Thomas, J. M., and Johnson, B. F. G.Chem. Commun. 2001, 907.
+Google Scholar
+141Midgley, P. A., Thomas, J. M., Laffont, L., Weyland, M., Raja, R., Johnson, B. F. G., and Khimyak, T. J. Phys. Chem. B 2004, 108, 4590
+Google Scholar
+142Thomas, J. M., Raja, R., Johnson, B. F. G., Hermans, S., Jones, M. D., and Khimyak, T. Ind. Eng. Chem. Res. 2003, 42, 1563
+Google Scholar
+143Janssen, A. H., Yang, C. M., Wang, Y., Schuth, F., Koster, A. J., and de Jong, K. P. J. Phys. Chem. B 2003, 107, 10552
+Google Scholar
+144Sietsma, J. R. A., Friedrich, H., Broersma, A., Versluijs-Helder, M., van Dillen, A. J., de Jongh, P. E., and de Jong, K. P. J. Catal. 2008, 260, 227
+Google Scholar
+145Ersen, O., Hirlimann, C., Drillon, A., Werckmann, J., Tihay, F., Pham-Huu, C., Crucifix, C., and Schultz, P. Solid State Sci. 2007, 9, 1088
+Google Scholar
+146Thiruvengadathan, R., Levi-Kalisman, Y., and Regev, O. Curr. Opin. Colloid Interface Sci. 2005, 10, 280
+Google Scholar
+147Li, Z., Kübel, C., Parvulescu, V. I., and Richards, R. ACS Nano 2008, 2, 1205
+Google Scholar
+148Yamauchi, Y., Takai, A., Nagaura, T., Inoue, S., and Kuroda, K. J. Am. Chem. Soc. 2008, 130, 5426
+Google Scholar
+149Fujita, T., Qian, L. H., Inoke, K., Erlebacher, J., and Chen, M. W. Appl. Phys. Lett. 2008, 92, 251902
+Google Scholar
+150Verheijen, M. A., Algra, R. E., Borgström, M. T., Immink, G., Sourty, E., van Enckevort, W. J. P., Vlieg, E., and Bakkers, E. P. A. M. Nano Lett. 2007, 7, 3051
+Google Scholar
+151Kim, H. S., Hwang, S. O., Myung, Y., Park, J., Bae, S. Y., and Ahn, J. P. Nano Lett. 2008, 8, 551
+Google Scholar
+152Hungria, A. B., Raja, R., Adams, R. D., Captain, B., Thomas, J. M., Midgley, P. A., Golovko, V., and Johnson, B. F. G. Angew. Chem., Int. Ed. 2006, 45, 4782
+Google Scholar
+153de Jong, K. P., van den Oetelaar, L. C. A., Vogt, E. T. C., Eijsbouts, S., Koster, A. J., Friedrich, H., and de Jongh, P. E. J. Phys. Chem. B 2006, 110, 10209
+Google Scholar
+154Raybaud, P. Appl. Catal., A 2007, 322, 76
+Google Scholar
+155Bar Sadan, M., Houben, L., Wolf, S. G., Enyashin, A., Seifert, G., Tenne, R., and Urban, K. Nano Lett. 2008, 8, 891
+Google Scholar
+156Arslan, L., Walmsley, J. C., Rytter, E., Bergene, E., and Midgley, P. A. J. Am. Chem. Soc. 2008, 130, 5716
+Google Scholar
+157Midgley, P. A., Weyland, M., Thomas, J. M., Gai, P. L., and Boyes, E. D. Angew. Chem., Int. Ed. 2002, 41, 3804
+Google Scholar
+158Cervera Gontard, L., Dunin-Borkowski, R. E., Ozkaya, D., Hyde, T., Midgley, P. A., and Ash, P. J. Phys: Conf. Ser. 2006, 26, 367
+Google Scholar
+159Wikander, K., Hungria, A. B., Midgley, P. A., Palmqvist, A. E. C., Holmberg, K., and Thomas, J. M. J. Colloid Interface Sci. 2007, 305, 204
+Google Scholar
+160Gallezot, P. and Richard, D. Cat. Rev.—Sci. Eng. 1998, 40, 81
+Google Scholar
+161Liu, Z. L., Hong, L., Tham, M. P., Lim, T. H., and Jiang, H. X. J. Power Sources 2006, 161, 831
+Google Scholar
+162Uchida, H., Song, J. M., Suzuki, S., Nakazawa, E., Baba, N., and Watanabe, M. J. Phys. Chem. B 2006, 110, 13319
+Google Scholar
+163Drennan, J., Webb, R., Nogita, K., Knibbe, R., Auchterlonie, G., Tatenuma, K., and Hunter, J. Solid State Ionics 2006, 177, 1649
+Google Scholar
+164Yoshizawa, N., Tanaike, O., Hatori, H., Yoshikawa, K., Kondo, A., and Abe, T. Carbon 2006, 44, 2558
+Google Scholar
+165Long, J. W., Dunn, B., Rolison, D. R., and White, H. S. Chem. Rev. 2004, 104, 4463
+Google Scholar
+166Ebbesen, T. W. Properties: Experimental Results. In Carbon Nanotubes, Preparation and Properties; Ebbesen, T. W., Ed.; CRC Press: New York, 1997; p 225.
+Google Scholar
+167Iijima, S. Nature 1991, 354, 56
+Google Scholar
+168Kizuka, T., Sumi, T., Bansho, S., and Saito, T. Jpn. J. Appl. Phys., Part 2 2001, 40, L56
+Google Scholar
+169Bals, S., Batenburg, K. J., Verbeeck, J., Sijbers, J., and Van Tendeloo, G. Nano Lett. 2007, 7, 3669
+Google Scholar
+170Cha, J. J., Weyland, M., Briere, J. F., Daykov, I. P., Arias, T. A., and Muller, D. A. Nano Lett. 2007, 7, 3770
+Google Scholar
+171Pan, X. L., Fan, Z. L., Chen, W., Ding, Y. J., Luo, H. Y., and Bao, X. H. Nat. Mater. 2007, 6, 507
+Google Scholar
+172Ersen, O., Begin, S., Houlle, M., Amadou, J., Janowska, I., Greneche, J.-M., Crucifix, C., and Pham-Huu, C. Nano Lett. 2008, 8, 1033
+Google Scholar
+173Jacoby, M. Chem. Eng. News 2008, 86, 31
+Google Scholar
+174Numata, M., Asai, M., Kaneko, K., Bae, A. H., Hasegawa, T., Sakurai, K., and Shinkai, S. J. Am. Chem. Soc. 2005, 127, 5875
+Google Scholar
+175Yu, J. R., Lu, K. B., Sourty, E., Grossiord, N., Konine, C. E., and Loos, J. C. Carbon 2007, 45, 2897
+Google Scholar
+176Bond, T. C., Streets, D. G., Yarber, K. F., Nelson, S. M., Woo, J. H., and Klimont, Z. J. Geophys. Res. 2004, 109, D14203
+Google Scholar
+177Hansen, J., Sato, M., Ruedy, R., Lacis, A., and Oinas, V. Proc. Natl. Acad. Sci. U.S.A. 2000, 97, 9875
+Google Scholar
+178Jacobson, M. Z. J. Geophys. Res. 2001, 106, 1551
+Google Scholar
+179van Poppel, L. H., Friedrich, H., Spinsby, J., Chung, S. H., Seinfeld, J. H., and Buseck, P. R. Geophys. Res. Lett. 2005, 32, L24811
+Google Scholar
+180Adachi, K., Chung, S. H., Friedrich, H., and Buseck, P. R. J. Geophys. Res. 2007, 112, D14202
+Google Scholar
+181Coronas, J. and Santamaria, J. Catal. Today 1999, 51, 377
+Google Scholar
+182Keane, M. A. J. Mater. Sci. 2003, 38, 4661
+Google Scholar
+183Yoshida, K., Nanbara, T., Yamasaki, J., and Tanaka, N. J. Appl. Phys. 2006, 99, 084908
+Google Scholar
+184Kaneko, K., Nagayama, R., Inoke, K., Noguchi, E., and Horita, Z. Sci. Technol. Adv. Mater. 2006, 7, 726
+Google Scholar
+185Reddy, B. M., Thrimurthulu, G., Saikia, P., and Bharali, P. J. Mol. Catal., A: Chem. 2007, 275, 167
+Google Scholar
+186Simonsen, S. B., Dahl, S., Johnson, E., and Helveg, S. J. Catal. 2008, 255, 1
+Google Scholar
+187Kaspar, J., Fornasiero, P., and Hickey, N. Catal. Today 2003, 77, 419
+Google Scholar
+188Fornasiero, P., Montini, T., Graziani, M., Kaspar, J., Hungria, A. B., Martinez-Arias, A., and Conesa, J. C. Phys. Chem. Chem. Phys. 2002, 4, 149
+Google Scholar
+189Hernandez, J. C., Hungria, A. B., Perez-Omil, J. A., Trasobares, S., Bernal, S., Midgley, P. A., Alavi, A., and Calvino, J. J. J. Phys. Chem. C 2007, 111, 9001
+Google Scholar
+190Kaneko, K., Inoke, K., Freitag, B., Hungria, A. B., Midgley, P. A., Hansen, T. W., Zhang, J., Ohara, S., and Adschiri, T. Nano Lett. 2007, 7, 421
+Google Scholar
+191Xu, X., Saghi, Z., Yang, G., Hand, R. J., and Möbus, G. Cryst. Growth Des. 2008, 8, 1102
+Google Scholar
+192Bergbreiter, D. E. Curr. Opin. Drug Discovery Dev. 2001, 4, 736
+Google Scholar
+193van de Coevering, R., Gebbink, R. J. M. K., and van Koten, G. Prog. Polym. Sci. 2005, 30, 474
+Google Scholar
+194Spontak, R. J., Williams, M. C., and Agard, D. A. Polymer 1988, 29, 387
+Google Scholar
+195Radzilowski, L. H., Carragher, B. O., and Stupp, S. I. Macromolecules 1997, 30, 2110
+Google Scholar
+196Sugimori, H., Nishi, T., and Jinnai, H. Macromolecules 2005, 38, 10226
+Google Scholar
+197Spontak, R. J., Fung, J. C., Braunfeld, M. B., Sedat, J. W., Agard, D. A., Ashraf, A., and Smith, S. D. Macromolecules 1996, 29, 2850
+Google Scholar
+198Ikehara, T., Jinnai, H., Kaneko, T., Nishioka, H., and Nishi, T. J. Polym. Sci., Part B: Polym. Phys. 2007, 45, 1122
+Google Scholar
+199Kato, M., Ito, T., Aoyama, Y., Sawa, K., Kaneko, T., Kawase, N., and Jinnai, H. J. Polym. Sci., Part B: Polym. Phys. 2007, 45, 677
+Google Scholar
+200Yamauchi, K., Takahashi, K., Hasegawa, H., Iatrou, H., Hadjichristidis, N., Kaneko, T., Nishikawa, Y., Jinnai, H., Matsui, T., Nishioka, H., Shimizu, M., and Furukawa, H. Macromolecules 2003, 36, 6962
+Google Scholar
+201Takano, A., Wada, S., Sato, S., Araki, T., Hirahara, K., Kazama, T., Kawahara, S., Isono, Y., Ohno, A., Tanaka, N., and Matsushita, Y. Macromolecules 2004, 37, 9941
+Google Scholar
+202Hashimoto, T., Tsutsumi, K., and Funaki, Y. Langmuir 1997, 13, 6869
+Google Scholar
+203Schneider, G. J., Fink, S. A., Rachel, R., and Goritz, D. Kautsch. Gummi Kunstst. 2005, 58, 461
+Google Scholar
+204Jinnai, H., Shinbori, Y., Kitaoka, T., Akutagawa, K., Mashita, N., and Nishi, T. Macromolecules 2007, 40, 6758
+Google Scholar
+205Nishioka, H., Niihara, K. I., Kaneko, T., Yamanaka, J., Inoue, T., Nishi, T., and Jinnai, H. Compos. Interface 2006, 13, 589
+Google Scholar
+206Kawase, N., Kato, M., Nishioka, H., and Jinnai, H. Ultramicroscopy 2007, 107, 8
+Google Scholar
+207Treacy, M. M. J. and Newsam, J. M. Nature 1988, 332, 249
+Google Scholar
+208Lin, Y., Boker, A., He, J. B., Sill, K., Xiang, H. Q., Abetz, C., Li, X. F., Wang, J., Emrick, T., Long, S., Wang, Q., Balazs, A., and Russell, T. P. Nature 2005, 434, 55
+Google Scholar
+209Arslan, I., Yates, T. J. V., Browning, N. D., and Midgley, P. A. Science 2005, 309, 2195
+Google Scholar
+210Haider, M., Uhlemann, S., Schwan, E., Rose, H., Kabius, B., and Urban, K. Nature 1998, 392, 768
+Google Scholar
+211Krivanek, O. L., Dellby, N., and Lupini, A. R. Ultramicroscopy 1999, 78, 1
+Google Scholar
+212Smith, D. J. Microsc. Microanal. 2008, 14, 2
+Google Scholar
+213Jinschek, J. R., Batenburg, K. J., Calderon, H. A., Kilaas, R., Radmilovic, V., and Kisielowski, C. Ultramicroscopy 2008, 108, 589
+Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+2
+Mentioning
+201
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 227 publications.
+Eric Prates da Costa, Xiaohui Huang, Christian Kübel, Xiaoyin Cheng, Katja Schladitz, Alexander Hofmann, Ulrich Göbel, Bernd M. Smarsly. Tuning Mesopore Accessibility of Ce0.18Zr0.64Y0.15La0.03O2−δ by Hydrothermal Post-treatment─A Case Study for Ceria-Based Oxidation Storage Materials. Langmuir 2023, 39 (49) , 17664-17679. https://doi.org/10.1021/acs.langmuir.3c02067
+Frédéric A. Perras, Uddhav Kanbur, Alexander L. Paterson, Puranjan Chatterjee, Igor I. Slowing, Aaron D. Sadow. Determining the Three-Dimensional Structures of Silica-Supported Metal Complexes from the Ground Up. Inorganic Chemistry 2022, 61 (2) , 1067-1078. https://doi.org/10.1021/acs.inorgchem.1c03200
+Tsuyoshi Nagasawa, Kai Matsumoto, Naoya Minegishi, Hidenori Kosaka. Structural Characterization of Ceria-Supported Pt Nanoparticles by Flame-Assisted Spray Pyrolysis Using a Burner Diffusion Flame. Energy & Fuels 2021, 35 (15) , 12380-12391. https://doi.org/10.1021/acs.energyfuels.1c01296
+Elifkübra Özkan, Alexander Hofmann, Martin Votsmeier, Wu Wang, Xiaohui Huang, Christian Kübel, Felix Badaczewski, Kevin Turke, Sebastian Werner, Bernd M. Smarsly. Comprehensive Characterization of a Mesoporous Cerium Oxide Nanomaterial with High Surface Area and High Thermal Stability. Langmuir 2021, 37 (8) , 2563-2574. https://doi.org/10.1021/acs.langmuir.0c02747
+Ana T. F. Batista, Walid Baaziz, Anne-Lise Taleb, Johan Chaniot, Maxime Moreaud, Christèle Legens, Antonio Aguilar-Tapia, Olivier Proux, Jean-Louis Hazemann, Fabrice Diehl, Céline Chizallet, Anne-Sophie Gay, Ovidiu Ersen, Pascal Raybaud. Atomic Scale Insight into the Formation, Size, and Location of Platinum Nanoparticles Supported on γ-Alumina. ACS Catalysis 2020, 10 (7) , 4193-4204. https://doi.org/10.1021/acscatal.0c00042
+Jianye Fu, Jinqing Jiao, Hao Song, Zhengying Gu, Yang Liu, Jing Geng, Kevin S. Jack, Ai Du, Jie Tang, Chengzhong Yu. Fractal-in-a-Sphere: Confined Self-Assembly of Fractal Silica Nanoparticles. Chemistry of Materials 2020, 32 (1) , 341-347. https://doi.org/10.1021/acs.chemmater.9b03864
+Johannes Becher, Thomas L. Sheppard, Yakub Fam, Sina Baier, Wu Wang, Di Wang, Satishkumar Kulkarni, Thomas F. Keller, Mikhail Lyubomirskiy, Dennis Brueckner, Maik Kahnt, Andreas Schropp, Christian G. Schroer, Jan-Dierk Grunwaldt. Mapping the Pore Architecture of Structured Catalyst Monoliths from Nanometer to Centimeter Scale with Electron and X-ray Tomographies. The Journal of Physical Chemistry C 2019, 123 (41) , 25197-25208. https://doi.org/10.1021/acs.jpcc.9b06541
+Siddardha Koneti, Joel Borges, Lucian Roiban, Marco S. Rodrigues, Nicolas Martin, Thierry Epicier, Filipe Vaz, Philippe Steyer. Electron Tomography of Plasmonic Au Nanoparticles Dispersed in a TiO2 Dielectric Matrix. ACS Applied Materials & Interfaces 2018, 10 (49) , 42882-42890. https://doi.org/10.1021/acsami.8b16436
+Stefan-Johannes Reich, Artur Svidrytski, Alexandra Höltzel, Justyna Florek, Freddy Kleitz, Wu Wang, Christian Kübel, Dzmitry Hlushkou, Ulrich Tallarek. Hindered Diffusion in Ordered Mesoporous Silicas: Insights from Pore-Scale Simulations in Physical Reconstructions of SBA-15 and KIT-6 Silica. The Journal of Physical Chemistry C 2018, 122 (23) , 12350-12361. https://doi.org/10.1021/acs.jpcc.8b03630
+Nikolay Kosinov, Chong Liu, Emiel J. M. Hensen, Evgeny A. Pidko. Engineering of Transition Metal Catalysts Confined in Zeolites. Chemistry of Materials 2018, 30 (10) , 3177-3198. https://doi.org/10.1021/acs.chemmater.8b01311
+Hao Song, Meihua Yu, Yao Lu, Zhengying Gu, Yannan Yang, Min Zhang, Jianye Fu, and Chengzhong Yu . Plasmid DNA Delivery: Nanotopography Matters. Journal of the American Chemical Society 2017, 139 (50) , 18247-18254. https://doi.org/10.1021/jacs.7b08974
+Yang Liu, Hongwei Zhang, Hao Song, Owen Noonan, Changhao Liang, Xiaodan Huang, and Chengzhong Yu . Single-Layered Mesoporous Carbon Sandwiched Graphene Nanosheets for High Performance Ionic Liquid Supercapacitors. The Journal of Physical Chemistry C 2017, 121 (43) , 23947-23954. https://doi.org/10.1021/acs.jpcc.7b08777
+Prasanna Lakshmi Abbaraju, Anand Kumar Meka, Hao Song, Yannan Yang, Manasi Jambhrunkar, Jun Zhang, Chun Xu, Meihua Yu, and Chengzhong Yu . Asymmetric Silica Nanoparticles with Tunable Head–Tail Structures Enhance Hemocompatibility and Maturation of Immune Cells. Journal of the American Chemical Society 2017, 139 (18) , 6321-6328. https://doi.org/10.1021/jacs.6b12622
+Qin Yue, Yu Zhang, Yongjian Jiang, Jialuo Li, Hongwei Zhang, Chengzhong Yu, Ahmed A. Elzatahry, Abdulaziz Alghamdi, Yonghui Deng, and Dongyuan Zhao . Nanoengineering of Core–Shell Magnetic Mesoporous Microspheres with Tunable Surface Roughness. Journal of the American Chemical Society 2017, 139 (13) , 4954-4961. https://doi.org/10.1021/jacs.7b01464
+Linfang Lu, Renhong Li, Kazuaki Fujiwara, Xiaoqing Yan, Hisayoshi Kobayashi, Wuzhong Yi, and Jie Fan . Cyanide Radical Chemisorbed Pt Electrocatalyst for Enhanced Methanol-Tolerant Oxygen Reduction Reactions. The Journal of Physical Chemistry C 2016, 120 (21) , 11572-11580. https://doi.org/10.1021/acs.jpcc.6b02993
+Hao Song, Yusilawati Ahmad Nor, Meihua Yu, Yannan Yang, Jun Zhang, Hongwei Zhang, Chun Xu, Neena Mitter, and Chengzhong Yu . Silica Nanopollens Enhance Adhesion for Long-Term Bacterial Inhibition. Journal of the American Chemical Society 2016, 138 (20) , 6455-6462. https://doi.org/10.1021/jacs.6b00243
+D. A. Matthijs de Winter, Florian Meirer, and Bert M. Weckhuysen . FIB-SEM Tomography Probes the Mesoscale Pore Space of an Individual Catalytic Cracking Particle. ACS Catalysis 2016, 6 (5) , 3158-3167. https://doi.org/10.1021/acscatal.6b00302
+Cedric J. Gommes, Gonzalo Prieto, and Petra E. de Jongh . Small-Angle Scattering Analysis of Empty or Loaded Hierarchical Porous Materials. The Journal of Physical Chemistry C 2016, 120 (3) , 1488-1506. https://doi.org/10.1021/acs.jpcc.5b09556
+Hongwei Zhang, Meihua Yu, Hao Song, Owen Noonan, Jun Zhang, Yannan Yang, Liang Zhou, and Chengzhong Yu . Self-Organized Mesostructured Hollow Carbon Nanoparticles via a Surfactant-Free Sequential Heterogeneous Nucleation Pathway. Chemistry of Materials 2015, 27 (18) , 6297-6304. https://doi.org/10.1021/acs.chemmater.5b01993
+Dang Sheng Su, Bingsen Zhang, and Robert Schlögl . Electron Microscopy of Solid Catalysts—Transforming from a Challenge to a Toolbox. Chemical Reviews 2015, 115 (8) , 2818-2882. https://doi.org/10.1021/cr500084c
+Pei Yuan, Jie Yang, Hongwei Zhang, Hao Song, Xiaodan Huang, Xiaojun Bao, Jin Zou, and Chengzhong Yu . New Insight into Ordered Cage-Type Mesostructures and Their Pore Size Determination by Electron Tomography. Langmuir 2015, 31 (8) , 2545-2553. https://doi.org/10.1021/la504474z
+Zhenyu Bo, Todd R. Eaton, James R. Gallagher, Christian P. Canlas, Jeffrey T. Miller, and Justin M. Notestein . Size-Selective Synthesis and Stabilization of Small Silver Nanoparticles on TiO2 Partially Masked by SiO2. Chemistry of Materials 2015, 27 (4) , 1269-1277. https://doi.org/10.1021/cm504243f
+Mozaffar Shakeri, Lucian Roiban, Vital Yazerski, Gonzalo Prieto, Robertus J. M. Klein Gebbink, Petra E. de Jongh, and Krijn P. de Jong . Engineering and Sizing Nanoreactors To Confine Metal Complexes for Enhanced Catalytic Performance. ACS Catalysis 2014, 4 (10) , 3791-3796. https://doi.org/10.1021/cs500777q
+James J. Spivey, Katla Sai Krishna, Challa S.S.R. Kumar, Kerry M. Dooley, John C. Flake, Louis H. Haber, Ye Xu, Michael J. Janik, Susan B. Sinnott, Yu-Ting Cheng, Tao Liang, David S. Sholl, Thomas A. Manz, Ulrike Diebold, Gareth S. Parkinson, David A. Bruce, and Petra de Jongh . Synthesis, Characterization, and Computation of Catalysts at the Center for Atomic-Level Catalyst Design. The Journal of Physical Chemistry C 2014, 118 (35) , 20043-20069. https://doi.org/10.1021/jp502556u
+Yasuhiro Sakamoto, Yoshiyuki Kuroda, Susumu Toko, Takuji Ikeda, Toshiyuki Matsui, and Kazuyuki Kuroda . Electron Microscopy Study of Binary Nanocolloidal Crystals with ico-AB13 Structure Made of Monodisperse Silica Nanoparticles. The Journal of Physical Chemistry C 2014, 118 (27) , 15004-15010. https://doi.org/10.1021/jp501504c
+Arun Devaraj, Robert Colby, François Vurpillot, and Suntharampillai Thevuthasan . Understanding Atom Probe Tomography of Oxide-Supported Metal Nanoparticles by Correlation with Atomic-Resolution Electron Microscopy and Field Evaporation Simulation. The Journal of Physical Chemistry Letters 2014, 5 (8) , 1361-1367. https://doi.org/10.1021/jz500259c
+Lan Ling and Wei-xian Zhang . Reactions of Nanoscale Zero-Valent Iron with Ni(II): Three-Dimensional Tomography of the “Hollow Out” Effect in a Single Nanoparticle. Environmental Science & Technology Letters 2014, 1 (3) , 209-213. https://doi.org/10.1021/ez4002054
+Delei Chen, Heiner Friedrich, and Gijsbertus de With . On Resolution in Electron Tomography of Beam Sensitive Materials. The Journal of Physical Chemistry C 2014, 118 (2) , 1248-1257. https://doi.org/10.1021/jp409185u
+Dang Sheng Su, Siglinda Perathoner, and Gabriele Centi . Nanocarbons for the Development of Advanced Catalysts. Chemical Reviews 2013, 113 (8) , 5782-5816. https://doi.org/10.1021/cr300367d
+Xiaoqing Yan, Xiaojuan Wang, Yu Tang, Guicen Ma, Shihui Zou, Renhong Li, Xiaogang Peng, Sheng Dai, and Jie Fan . Unusual Loading-Dependent Sintering-Resistant Properties of Gold Nanoparticles Supported within Extra-large Mesopores. Chemistry of Materials 2013, 25 (9) , 1556-1563. https://doi.org/10.1021/cm303816g
+Jovana Zečević, Ad M. J. van der Eerden, Heiner Friedrich, Petra E. de Jongh, and Krijn P. de Jong . Heterogeneities of the Nanostructure of Platinum/Zeolite Y Catalysts Revealed by Electron Tomography. ACS Nano 2013, 7 (4) , 3698-3705. https://doi.org/10.1021/nn400707p
+Mark P. Boneschanscher, Wiel H. Evers, Weikai Qi, Johannes D. Meeldijk, Marjolein Dijkstra, and Daniel Vanmaekelbergh . Electron Tomography Resolves a Novel Crystal Structure in a Binary Nanocrystal Superlattice. Nano Letters 2013, 13 (3) , 1312-1316. https://doi.org/10.1021/nl400100c
+Pei Yuan, Jie Yang, Xiaojun Bao, Dongyuan Zhao, Jin Zou, and Chengzhong Yu . Highly Ordered Cubic Mesoporous Materials with the Same Symmetry but Tunable Pore Structures. Langmuir 2012, 28 (47) , 16382-16392. https://doi.org/10.1021/la303187d
+Tamara M. Eggenhuisen, Gonzalo Prieto, Herre Talsma, Krijn P. de Jong, and Petra E. de Jongh . Entrance Size Analysis of Silica Materials with Cagelike Pore Structure by Thermoporometry. The Journal of Physical Chemistry C 2012, 116 (44) , 23383-23393. https://doi.org/10.1021/jp3070213
+Rowan Leary, Paul A. Midgley, and John Meurig Thomas . Recent Advances in the Application of Electron Tomography to Materials Chemistry. Accounts of Chemical Research 2012, 45 (10) , 1782-1791. https://doi.org/10.1021/ar3001102
+David J. Flannigan and Ahmed H. Zewail . 4D Electron Microscopy: Principles and Applications. Accounts of Chemical Research 2012, 45 (10) , 1828-1839. https://doi.org/10.1021/ar3001684
+Rowan Leary, Zineb Saghi, Marc Armbrüster, Gregor Wowsnick, Robert Schlögl, John Meurig Thomas, and Paul A. Midgley . Quantitative High-Angle Annular Dark-Field Scanning Transmission Electron Microscope (HAADF-STEM) Tomography and High-Resolution Electron Microscopy of Unsupported Intermetallic GaPd2 Catalysts. The Journal of Physical Chemistry C 2012, 116 (24) , 13343-13352. https://doi.org/10.1021/jp212456z
+M. Simona Moldovan, Hervé Bulou, Yannick J. Dappe, Izabela Janowska, Dominique Bégin, Cuong Pham-Huu, and Ovidiu Ersen . On the Evolution of Pt Nanoparticles on Few-Layer Graphene Supports in the High-Temperature Range. The Journal of Physical Chemistry C 2012, 116 (16) , 9274-9282. https://doi.org/10.1021/jp2124235
+T. M. Eggenhuisen, Jovana Zečević, H. Talsma, K. P. de Jong, and P. E. de Jongh . Quantitative Assessment of Pore Blockage in Supported Catalysts: Comparing Differential Scanning Calorimetry and Physisorption. The Journal of Physical Chemistry C 2012, 116 (13) , 7480-7490. https://doi.org/10.1021/jp300604b
+Xin Huang, Buyi Li, Luo Li, Hui Zhang, Irfan Majeed, Irshad Hussain, and Bien Tan . Facile Preparation of Highly Blue Fluorescent Metal Nanoclusters in Organic Media. The Journal of Physical Chemistry C 2012, 116 (1) , 448-455. https://doi.org/10.1021/jp209662n
+Roman Grothausmann, Gerald Zehl, Ingo Manke, Sebastian Fiechter, Peter Bogdanoff, Iris Dorbandt, Andreas Kupsch, Axel Lange, Manfred P. Hentschel, Gerhard Schumacher, and John Banhart . Quantitative Structural Assessment of Heterogeneous Catalysts by Electron Tomography. Journal of the American Chemical Society 2011, 133 (45) , 18161-18171. https://doi.org/10.1021/ja2032508
+Hendrik Schulenburg, Bernhard Schwanitz, Nicolas Linse, Günther G. Scherer, and A. Wokaun , Julijana Krbanjevic , Roman Grothausmann and Ingo Manke . 3D Imaging of Catalyst Support Corrosion in Polymer Electrolyte Fuel Cells. The Journal of Physical Chemistry C 2011, 115 (29) , 14236-14243. https://doi.org/10.1021/jp203016u
+Filip Zasada, Witold Piskorz, Paweł Stelmachowski, Andrzej Kotarba, Jean-François Paul, Tomasz Płociński, Krzysztof J. Kurzydłowski, and Zbigniew Sojka . Periodic DFT and HR-STEM Studies of Surface Structure and Morphology of Cobalt Spinel Nanocrystals. Retrieving 3D Shapes from 2D Images. The Journal of Physical Chemistry C 2011, 115 (14) , 6423-6432. https://doi.org/10.1021/jp200581s
+Ifat Kaplan-Ashiri, Eric J. Titus, and Katherine A. Willets . Subdiffraction-Limited Far-Field Raman Spectroscopy of Single Carbon Nanotubes: An Unenhanced Approach. ACS Nano 2011, 5 (2) , 1033-1041. https://doi.org/10.1021/nn102498h
+Pei Yuan, Junliang Sun, Hongyi Xu, Liang Zhou, Jizi Liu, DaLiang Zhang, Yunhua Wang, Kevin S. Jack, John Drennan, Dongyuan Zhao, Gaoqing Lu, Xiaodong Zou, Jin Zou, and Chengzhong Yu . Extensive Inspection of an Unconventional Mesoporous Silica Material at All Length-Scales. Chemistry of Materials 2011, 23 (2) , 229-238. https://doi.org/10.1021/cm1028436
+Paresh Chandra Ray. Size and Shape Dependent Second Order Nonlinear Optical Properties of Nanomaterials and Their Application in Biological and Chemical Sensing. Chemical Reviews 2010, 110 (9) , 5332-5365. https://doi.org/10.1021/cr900335q
+Hiroshi Jinnai, Richard J. Spontak and Toshio Nishi . Transmission Electron Microtomography and Polymer Nanostructures. Macromolecules 2010, 43 (4) , 1675-1688. https://doi.org/10.1021/ma902035p
+Christophe Coperet. C−H Bond Activation and Organometallic Intermediates on Isolated Metal Centers on Oxide Surfaces. Chemical Reviews 2010, 110 (2) , 656-680. https://doi.org/10.1021/cr900122p
+Yasuhiro Marui, Toshiyuki Kida and Mitsuru Akashi. Facile Morphological Control of Cyclodextrin Nano- and Microstructures and Their Unique Organogelation Ability. Chemistry of Materials 2010, 22 (2) , 282-284. https://doi.org/10.1021/cm903407e
+Thanh-Dinh Nguyen, Cao-Thang Dinh, Dinh-Tuyen Nguyen and Trong-On Do . A Novel Approach for Monodisperse Samarium Orthovanadate Nanocrystals: Controlled Synthesis and Characterization. The Journal of Physical Chemistry C 2009, 113 (43) , 18584-18595. https://doi.org/10.1021/jp907129t
+Heiner Friedrich, Cedric J. Gommes, Karin Overgaag, Johannes D. Meeldijk, Wiel H. Evers, Bart de Nijs, Mark P. Boneschanscher, Petra E. de Jongh, Arie J. Verkleij, Krijn P. de Jong, Alfons van Blaaderen and Daniel Vanmaekelbergh . Quantitative Structural Analysis of Binary Nanocrystal Superlattices by Electron Tomography. Nano Letters 2009, 9 (7) , 2719-2724. https://doi.org/10.1021/nl901212m
+Edward D. Boyes, Pratibha L. Gai. Visualizing Dynamic Single Atom Catalysis. Advanced Materials 2024, 36 (31) https://doi.org/10.1002/adma.202314121
+J. S. Valente, H. Armedáriz-Herrera, R. Quintana-Solórzano, M. Aouine, A. Malchere, L. Roiban, J. M. M. Millet. Study of super-efficient defective MoVSbO catalysts used for ethane oxidative dehydrogenation by HAADF-STEM and of their thermal evolution by environmental electron microscopy and tomography. Catalysis Science & Technology 2024, 14 (15) , 4154-4165. https://doi.org/10.1039/D4CY00499J
+Bastian Beitzinger, Paul Walther, Mika Lindén. Pore Analysis of Dendritic Mesoporous Silica Nanoparticles by STEM Tomography and Nitrogen Sorption. Microporous and Mesoporous Materials 2024, 23 , 113247. https://doi.org/10.1016/j.micromeso.2024.113247
+Chyan Kyung Song, Younhwa Kim, Jungwon Park. In situ electron microscopy revealing dynamic structure–function relationship of heterogeneous catalyst. MRS Communications 2024, 14 (3) , 248-260. https://doi.org/10.1557/s43579-024-00567-y
+Xinyu Li, Tao Zhang, Ying Chen, Ming Li, Haitao Yu, Pengcheng Xu, Xinxin Li. Quantitative measurement of catalytic performance of zeolites for gas sensing using in situ temperature-programmed desorption technique. Sensors and Actuators B: Chemical 2024, 407 , 135465. https://doi.org/10.1016/j.snb.2024.135465
+Bastian Beitzinger, P. Walter, Mika Lindén. Pore Analysis of Dendritic Mesoporous Silica Nanoparticles by Stem Tomography and Nitrogen Sorption. 2024https://doi.org/10.2139/ssrn.4814370
+Alessia Broccoli, Luca Carnevale, Rafael Mayorga González, Joren M. Dorresteijn, Bert M. Weckhuysen, Wouter Olthuis, Mathieu Odijk, Florian Meirer. Accessibility study of porous materials at the single-particle level as evaluated within a microfluidic chip with fluorescence microscopy. Chem Catalysis 2023, 3 (11) , 100791. https://doi.org/10.1016/j.checat.2023.100791
+Xueer Wei, Jiawei Cheng, Yubing Li, Kang Cheng, Fanfei Sun, Qinghong Zhang, Ye Wang. Bimetallic clusters confined inside silicalite-1 for stable propane dehydrogenation. Nano Research 2023, 16 (8) , 10881-10889. https://doi.org/10.1007/s12274-023-5953-y
+Ann-Katrin Beurer, Sonja Dieterich, Helena Solodenko, Elif Kaya, Naǧme Merdanoǧlu, Guido Schmitz, Yvonne Traa, Johanna R. Bruckner. Comparative study of lattice parameter and pore size of ordered mesoporous silica materials using physisorption, SAXS measurements and transmission electron microscopy. Microporous and Mesoporous Materials 2023, 354 , 112508. https://doi.org/10.1016/j.micromeso.2023.112508
+Ayesha Kausar. Sensing Materials: Nanocomposites. 2023, 305-315. https://doi.org/10.1016/B978-0-12-822548-6.00048-0
+Johannes Becher, Thomas Sheppard, Jan-Dierk Grunwaldt. X-Ray Microscopy and Tomography. 2023, 689-738. https://doi.org/10.1007/978-3-031-07125-6_32
+Guanna Li, Evgeny A. Pidko. Metal containing nanoclusters in zeolites. 2023, 112-147. https://doi.org/10.1016/B978-0-12-823144-9.00022-4
+ThiagoA.L. Burgo, Gabriel Kalil Rocha Pereira, Bernardo Almeida Iglesias, Kelly S. Moreira, Luiz Felipe Valandro. AFM advanced modes for dental and biomedical applications. Journal of the Mechanical Behavior of Biomedical Materials 2022, 136 , 105475. https://doi.org/10.1016/j.jmbbm.2022.105475
+Yang Zhang, Xuewei Yang, Shu‐Na Zhao, Yalong Zhai, Xinchang Pang, Jun Lin. Recent Developments of Microscopic Study for Lanthanide and Manganese Doped Luminescent Materials. Small 2022, 18 (50) https://doi.org/10.1002/smll.202205014
+Srashtasrita Das, Reihaneh Pashminehazar, Shweta Sharma, Sebastian Weber, Thomas L. Sheppard. New Dimensions in Catalysis Research with Hard X‐Ray Tomography. Chemie Ingenieur Technik 2022, 94 (11) , 1591-1610. https://doi.org/10.1002/cite.202200082
+Ruirui Yun, Tuanhui Li, Beibei Zhang, Lei He, Shoujie Liu, Can Yu, Zheng Chen, Shizhong Luo. Amino induced high-loading atomically dispersed Co sites on N-doped hollow carbon for efficient CO 2 transformation. Chemical Communications 2022, 58 (46) , 6602-6605. https://doi.org/10.1039/D2CC01941H
+Mohammad Soleimani, Sten J. J. van den Broek, Rick R. M. Joosten, Laura S. van Hazendonk, Sai P. Maddala, Lambert C. A. van Breemen, Rolf A. T. M. van Benthem, Heiner Friedrich. Investigating the Morphology and Mechanics of Biogenic Hierarchical Materials at and below Micrometer Scale. Nanomaterials 2022, 12 (9) , 1549. https://doi.org/10.3390/nano12091549
+Sean M. Collins. Electron tomography. 2022, 305-332. https://doi.org/10.1016/B978-0-12-823015-2.00012-1
+Chulwan Lim, Woong Hee Lee, Jong Ho Won, Young‐Jin Ko, Sangkuk Kim, Byoung Koun Min, Kwan‐Young Lee, Won Suk Jung, Hyung‐Suk Oh. Enhancement of Catalytic Activity and Selectivity for the Gaseous Electroreduction of CO 2 to CO: Guidelines for the Selection of Carbon Supports. Advanced Sustainable Systems 2021, 5 (12) https://doi.org/10.1002/adsu.202100216
+S Mitra, V K Sharma, R Mukhopadhyay. Diffusion of confined fluids in microporous zeolites and clay materials. Reports on Progress in Physics 2021, 84 (6) , 066501. https://doi.org/10.1088/1361-6633/abf085
+Martin Hartmann, Matthias Thommes, Wilhelm Schwieger. Hierarchically‐Ordered Zeolites: A Critical Assessment. Advanced Materials Interfaces 2021, 8 (4) https://doi.org/10.1002/admi.202001841
+Ulrich Tallarek, Janika Hochstrasser, Felix Ziegler, Xiaohui Huang, Christian Kübel, Michael R. Buchmeiser. Olefin Ring‐closing Metathesis under Spatial Confinement: Morphology−Transport Relationships. ChemCatChem 2021, 13 (1) , 281-292. https://doi.org/10.1002/cctc.202001495
+Nelly Couzon, Laurence Bois, Clémentine Fellah, Cristian Loestean, Fernand Chassagneux, Rodica Chiriac, François Toche, Lhoussain Khrouz, Arnaud Brioude, Ovidiu Ersen, Lucian Roiban. Manganese oxidation states repartition in a channel-like mesoporous zirconium oxide. Journal of Porous Materials 2020, 27 (6) , 1823-1835. https://doi.org/10.1007/s10934-020-00962-5
+Sebastian Weber, Ken L. Abel, Ronny T. Zimmermann, Xiaohui Huang, Jens Bremer, Liisa K. Rihko-Struckmann, Darren Batey, Silvia Cipiccia, Juliane Titus, David Poppitz, Christian Kübel, Kai Sundmacher, Roger Gläser, Thomas L. Sheppard. Porosity and Structure of Hierarchically Porous Ni/Al2O3 Catalysts for CO2 Methanation. Catalysts 2020, 10 (12) , 1471. https://doi.org/10.3390/catal10121471
+Peng Peng, Xiong-Hou Gao, Zi-Feng Yan, Svetlana Mintova. Diffusion and catalyst efficiency in hierarchical zeolite catalysts. National Science Review 2020, 7 (11) , 1726-1742. https://doi.org/10.1093/nsr/nwaa184
+Barnali Waugh, Sharon G. Wolf, Deborah Fass, Eric Branlund, Zvi Kam, John W. Sedat, Michael Elbaum. Three-dimensional deconvolution processing for STEM cryotomography. Proceedings of the National Academy of Sciences 2020, 117 (44) , 27374-27380. https://doi.org/10.1073/pnas.2000700117
+Andreas J. Fijneman, Maurits Goudzwaard, Arthur D.A. Keizer, Paul H.H. Bomans, Tobias Gebäck, Magnus Palmlöf, Michael Persson, Joakim Högblom, Gijsbertus de With, Heiner Friedrich. Local quantification of mesoporous silica microspheres using multiscale electron tomography and lattice Boltzmann simulations. Microporous and Mesoporous Materials 2020, 302 , 110243. https://doi.org/10.1016/j.micromeso.2020.110243
+Jose M. Obrero, Alejandro N. Filippin, Maria Alcaire, Juan R. Sanchez-Valencia, Martin Jacob, Constantin Matei, Francisco J. Aparicio, Manuel Macias-Montero, Teresa C. Rojas, Juan P. Espinos, Zineb Saghi, Angel Barranco, Ana Borras. Supported Porous Nanostructures Developed by Plasma Processing of Metal Phthalocyanines and Porphyrins. Frontiers in Chemistry 2020, 8 https://doi.org/10.3389/fchem.2020.00520
+Yasmine Guefrachi, Geetu Sharma, Dandan Xu, Gaurav Kumar, Katherine P. Vinter, Omar A. Abdelrahman, Xinyu Li, Saeed Alhassan, Paul J. Dauenhauer, Alexandra Navrotsky, Wei Zhang, Michael Tsapatsis. Steam‐Induced Coarsening of Single‐Unit‐Cell MFI Zeolite Nanosheets and Its Effect on External Surface Brønsted Acid Catalysis. Angewandte Chemie 2020, 132 (24) , 9666-9672. https://doi.org/10.1002/ange.202000395
+Yasmine Guefrachi, Geetu Sharma, Dandan Xu, Gaurav Kumar, Katherine P. Vinter, Omar A. Abdelrahman, Xinyu Li, Saeed Alhassan, Paul J. Dauenhauer, Alexandra Navrotsky, Wei Zhang, Michael Tsapatsis. Steam‐Induced Coarsening of Single‐Unit‐Cell MFI Zeolite Nanosheets and Its Effect on External Surface Brønsted Acid Catalysis. Angewandte Chemie International Edition 2020, 59 (24) , 9579-9585. https://doi.org/10.1002/anie.202000395
+Mitchell Juneau, Renjie Liu, Yikang Peng, Akhilesh Malge, Zhiqiang Ma, Marc D. Porosoff. Characterization of Metal‐zeolite Composite Catalysts: Determining the Environment of the Active Phase. ChemCatChem 2020, 12 (7) , 1826-1852. https://doi.org/10.1002/cctc.201902039
+Shaik Afzal, Anuj V. Prakash, Patrick Littlewood, Tobin J. Marks, Eric Weitz, Peter C. Stair, Nimir O. Elbashir. Controlling the rate of change of Ni dispersion in commercial catalyst by ALD overcoat during dry reforming of methane. International Journal of Hydrogen Energy 2020, 45 (23) , 12835-12848. https://doi.org/10.1016/j.ijhydene.2020.03.008
+Ethan L. Lawrence, Barnaby D.A. Levin, Benjamin K. Miller, Peter A. Crozier. Approaches to Exploring Spatio-Temporal Surface Dynamics in Nanoparticles with In Situ Transmission Electron Microscopy. Microscopy and Microanalysis 2020, 26 (1) , 86-94. https://doi.org/10.1017/S1431927619015228
+George Farid, Prashun G. Roy, Michal Kruk. Characterization of micelle-templated silica nanotubes and nanotube bundles using tilt-series transmission electron microscopy. Microporous and Mesoporous Materials 2020, 293 , 109760. https://doi.org/10.1016/j.micromeso.2019.109760
+Harald Brune, Alexa Courty, Christophe Petit, Vincent Repain. Self-Assembly of Nanoalloys. 2020, 451-487. https://doi.org/10.1016/B978-0-12-819847-6.00018-8
+Loïc Sorbier, Maxime Moreaud, Séverine Humbert. Small-angle X-ray scattering intensity of multiscale models of spheres. Journal of Applied Crystallography 2019, 52 (6) , 1348-1357. https://doi.org/10.1107/S1600576719013839
+Jianye Fu, Zhengying Gu, Yang Liu, Jun Zhang, Hao Song, Yannan Yang, Yang Yang, Owen Noonan, Jie Tang, Chengzhong Yu. Bottom-up self-assembly of heterotrimeric nanoparticles and their secondary Janus generations. Chemical Science 2019, 10 (44) , 10388-10394. https://doi.org/10.1039/C9SC02961C
+Hao Song, Yannan Yang, Jing Geng, Zhengying Gu, Jin Zou, Chengzhong Yu. Electron Tomography: A Unique Tool Solving Intricate Hollow Nanostructures. Advanced Materials 2019, 31 (38) https://doi.org/10.1002/adma.201801564
+Wu Wang, Artur Svidrytski, Di Wang, Alberto Villa, Horst Hahn, Ulrich Tallarek, Christian Kübel. Quantifying Morphology and Diffusion Properties of Mesoporous Carbon From High-Fidelity 3D Reconstructions. Microscopy and Microanalysis 2019, 25 (4) , 891-902. https://doi.org/10.1017/S1431927619014600
+Yuchao Chai, Weixiang Shang, Weijie Li, Guangjun Wu, Weili Dai, Naijia Guan, Landong Li. Noble Metal Particles Confined in Zeolites: Synthesis, Characterization, and Applications. Advanced Science 2019, 6 (16) https://doi.org/10.1002/advs.201900299
+Lisa Joss, Ronny Pini. 3D Mapping of Gas Physisorption for the Spatial Characterisation of Nanoporous Materials. ChemPhysChem 2019, 20 (4) , 524-528. https://doi.org/10.1002/cphc.201801148
+Teng Li, Hanglong Wu, Johannes Ihli, Zhiqiang Ma, Frank Krumeich, Paul H. H. Bomans, Nico A. J. M. Sommerdijk, Heiner Friedrich, Joseph P. Patterson, Jeroen A. van Bokhoven. Cryo-TEM and electron tomography reveal leaching-induced pore formation in ZSM-5 zeolite. Journal of Materials Chemistry A 2019, 7 (4) , 1442-1446. https://doi.org/10.1039/C8TA10696G
+Rowan K. Leary, Paul A. Midgley. Electron Tomography in Materials Science. 2019, 1279-1329. https://doi.org/10.1007/978-3-030-00069-1_26
+Yang Zhang, Sara Bals, Gustaaf Van Tendeloo. Understanding CeO 2 ‐Based Nanostructures through Advanced Electron Microscopy in 2D and 3D. Particle & Particle Systems Characterization 2019, 36 (1) https://doi.org/10.1002/ppsc.201800287
+W. Wan, J. Su, X. D. Zou, T. Willhammar. Transmission electron microscopy as an important tool for characterization of zeolite structures. Inorganic Chemistry Frontiers 2018, 5 (11) , 2836-2855. https://doi.org/10.1039/C8QI00806J
+Wu Wang, Alberto Villa, Christian Kübel, Horst Hahn, Di Wang. Tailoring the 3D Structure of Pd Nanocatalysts Supported on Mesoporous Carbon for Furfural Hydrogenation. ChemNanoMat 2018, 4 (11) , 1125-1132. https://doi.org/10.1002/cnma.201800308
+A. Prakash, S. Sandfeld. Chances and Challenges in Fusing Data Science with Materials Science. Practical Metallography 2018, 55 (8) , 493-514. https://doi.org/10.3139/147.110539
+Chao Liu, Xiaodan Huang, Jing Wang, Hao Song, Yannan Yang, Yang Liu, Jiansheng Li, Lianjun Wang, Chengzhong Yu. Hollow Mesoporous Carbon Nanocubes: Rigid‐Interface‐Induced Outward Contraction of Metal‐Organic Frameworks. Advanced Functional Materials 2018, 28 (6) https://doi.org/10.1002/adfm.201705253
+Ying Jiang, Zhengfei Zhang, Wentao Yuan, Xun Zhang, Yong Wang, Ze Zhang. Recent advances in gas-involved in situ studies via transmission electron microscopy. Nano Research 2018, 11 (1) , 42-67. https://doi.org/10.1007/s12274-017-1645-9
+Load more citations
+Download PDF
+Get e-Alerts
+Chemical Reviews
+Cite this: Chem. Rev. 2009, 109, 5, 1613–1629
+https://doi.org/10.1021/cr800434t
+Published March 20, 2009
+Copyright © 2009 American Chemical Society
+Request reuse permissions
+Article Views
+8425
+Altmetric
+-
+Citations
+227
+Learn about these metrics
+Recommended Articles
+Recent Developments in the Synthesis of Supported Catalysts
+June 19, 2015Chemical Reviews
+Peter Munnik, Petra E. de Jongh, and Krijn P. de Jong*
+Recent Advances in the Application of Electron Tomography to Materials Chemistry
+August 17, 2012Accounts of Chemical Research
+Rowan Leary*, Paul A. Midgley*, and John Meurig Thomas*
+Show more
+recommended articles
+Figures
+References
+Figure 1
+Figure 1. Schematic beam path in TEM and STEM. The images below, acquired in the corresponding imaging mode, show SBA-15 particles on a carbon support film with 5 nm gold spheres attached.
+Figure 2
+Figure 2. ET reconstruction scheme using the Projection-Slice theorem. FT denotes the Fourier transform, and IFT denotes the inverse Fourier transform. By combining projections recorded at multiple tilts (here shown for single-axis tilting around X), the 3D FT of the object is probed. An inverse Fourier transform then reconstructs the 3D object.
+Figure 3
+Figure 3. Effects of maximum tilt angle and tilt increment on the tomographic reconstruction. In general, increasing the maximum tilt angle and decreasing the tilt increment improves results. Bright zones to the left and right of dark objects result from the reconstruction point spread function (weighted backprojection), and dark zones on the bottom and top are caused by the limited maximum tilt angle.
+Figure 4
+Figure 4. Workflow scheme.
+Figure 5
+Figure 5. Slices through 3D reconstructions of steamed zeolite Y (a), steamed and acid-leached zeolite Y (b), and high-meso zeolite Y (c) showing the formation and connectivity of mesopores.
+Figure 6
+Figure 6. Mesopore size distributions of steamed zeolite Y (USY) and steamed and acid-leached zeolite Y (XVUSY) obtained by image analysis of electron tomograms (a) and 3D representation of steamed and acid-leached zeolite Y (b) showing the mesopores through the transparent surface of the particle.
+Figure 7
+Figure 7. Model of 2D hexagonal pore ordering in MCM-41 and SBA-15 (a), TEM image of MCM-41 with a hexagonal pore shape (b), numerical cross section through reconstruction of SBA-15 showing corrugated mesopore walls in dark gray and pore connections by arrows (c).
+Figure 8
+Figure 8. Two perpendicular voxel projections of MCM-41 supported Pt/Ru nanoparticles (a, b), and surface render of single mesopore segment with two nanoparticles inside (c). Reprinted with permission from ref 141. Copyright 2004 American Chemical Society.
+Figure 9
+Figure 9. Local NiO loading in one SBA-15 mesopore (a), surface view of NiO crystallites in mesopore (b), and volume of crystallites plotted vs position along the mesopore (c). Reprinted with permission from ref 49. Copyright 2007 American Chemical Society.
+Figure 10
+Figure 10. Quantitative analysis of 1.1 wt % Pd on SiO2 cogelled catalyst by Voronoi tessellation of the silica skeleton. Each colored region corresponds to the silica shell around a specific Pd nanoparticle. Outer surface of the silica skeleton (a), and three numerical cross sections showing Pd particles in white (b). Reprinted with permission from ref 76. Copyright 2005 American Chemical Society.
+Figure 11
+Figure 11. Region of the exterior silica surface colored according to its local curvature and Ru/Pt particles shown in red (a, b). The metal particles appear to be situated preferentially in positions with saddle to cuplike geometry. Reprinted with permission from ref 79. Copyright 2007 American Chemical Society.
+Figure 12
+Figure 12. TEM image of a MoS2/γ-Al2O3 catalyst with 5 nm gold particle (dark spots) attached to the thin section (a), slice through reconstruction showing the 0.6 nm spaced MoS2 crystal planes (b), and voxel projection displaying only the complex interconnected MoS2 network (c). Reprinted with permission from ref 153. Copyright 2006 American Chemical Society.
+Figure 13
+Figure 13. Palladium nanoparticles on the inside and outside of a multiwalled carbon nanotube. TEM image from the tilt series (A) and numerical cross sections through reconstruction (B−D). The presence of an amorphous phase (from suspension in ethanol for TEM sample preparation) wetting both the inside and the outside could be observed. The 10 nm sized spots on the outside are colloidal gold particles deposited to aid in alignment of the data set. Reprinted with permission from ref 78. Copyright 2007 American Chemical Society.
+Figure 14
+Figure 14. Stereo pairs (wide-eyed) of soot aggregates produced by incomplete combustion of biomass (a, b) and from a diesel engine (c, d), illustrating the complex fractal geometry of the structures. The vertical red bar in the top pair is the support for TEM imaging. Scale bars are 200 nm. Reproduced with permission from American Geophysical Union from ref 179. Copyright 2005 American Geophysical Union.
+Figure 15
+Figure 15. Surface visualization of porous polymer (A), Pd nanoparticles (B), superposition of porous polymer and Pd (C), and close-up view (D) of the region boxed in (C). Reprinted with permission from ref 77. Copyright 2006 John Wiley and Sons, Inc. and The Japan Chemical Forum.
+Heiner Friedrich
+Heiner Friedrich received his M.Sc. (2001) in Physics from the University of Dresden, working in the field of electron optics at the Triebenberg Laboratory for High-Resolution Electron Microscopy and Holography. Between 2002 and 2005, he joined Arizona State University (U.S.A.) as a research scientist to implement and apply electron tomography at the John M. Cowley Center for High-Resolution Electron Microscopy. Since 2005, his research, under the supervision of Prof. K. P. de Jong, Prof. A. J. Verkleij, and Dr. P. E. de Jongh, has focused on the quantitative three-dimensional characterization of nanostructured materials by electron tomography. His current interests include image analysis and structure modeling.
+Petra E. de Jongh
+Petra E. de Jongh obtained her Ph.D. (Hons) in Physical Chemistry in 1999 from Utrecht University (The Netherlands). She then worked as a senior scientist at Philips Electronics on functional thin films for applications in batteries, thermochromic materials, and magnetic, optic, and electrical fingerprint coatings, resulting in about 10 patents. In 2004, she joined the Department of Inorganic Chemistry and Catalysis at Utrecht University as an assistant Professor. Her main interest is using advanced techniques to prepare and characterize nanostructured inorganic materials (typically nanoparticles in mesoporous supports) and gain insight into the impact of particle size, confinement, and pore structure on the functionality of these materials for applications in catalysis and hydrogen storage.
+Arie J. Verkleij
+Arie J. Verkleij obtained his M.Sc. (1970) and Ph.D. (1975) in biology from the University of Utrecht. Since then he has occupied different positions: 1975−1985, Assistant Professor at the Institute of Molecular Biology University of Utrecht; from 1986 onwards, Professor in Cell Biology and Electron Microscopy, University of Utrecht; 1988−1993, President of the Dutch Society for Electron Microscopy; 1991−2004, Scientific Director of the Institute for Biomembranes, University of Utrecht; 2004 onwards, vice-dean Life Sciences, Faculty of Science, University of Utrecht. His current research interests include (i) signal transduction and cell cycle regulation, (ii) ischaemia and reactive oxygen species, and (iii) innovative solutions for structure analysis based on light and electron microscopy. He has published more than 300 scientific papers.
+Krijn P. de Jong
+Krijn P. de Jong (1954) obtained his B.Sc. (1976), M.Sc. (1978), and Ph.D. (1982) degrees in chemistry, all degrees cum laude and at Utrecht University. In 1987, he also obtained an M.Sc. degree in chemical engineering from Twente University. From 1982−1997, he was with Shell Research working on catalyst preparation, heavy oil conversion, environmental processes, zeolite catalysis, and synthesis gas production and conversion. In 1997, he was appointed as full professor of inorganic chemistry and catalysis at Utrecht University. His current research interests are catalyst preparation, nanostructured catalysts, hydrocarbon conversions over zeolites, catalysts for fine chemicals manufacture, conversion of synthesis gas, and hydrogen storage. He has published about 120 scientific papers and more than 20 patents.

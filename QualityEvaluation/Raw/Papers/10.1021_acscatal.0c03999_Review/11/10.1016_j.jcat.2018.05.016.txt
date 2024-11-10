@@ -1,0 +1,1927 @@
+Dioxygen activation routes in Mars-van Krevelen redox cycles catalyzed
+by metal oxides
+Stephanie Kwon a, Prashant Deshlahra b, Enrique Iglesia a,⇑
+a Department of Chemical Engineering, University of California at Berkeley, Berkeley, CA 94720, United States
+b Department of Chemical and Biological Engineering, Tufts University, Medford, MA 02155, United States
+a r t i c l e
+i n f o
+Article history:
+Received 23 February 2018
+Revised 23 April 2018
+Accepted 17 May 2018
+Keywords:
+Oxidative dehydrogenation
+Redox cycle
+Oxidation catalysis
+Dioxygen activation
+Density functional theory
+Polyoxometalate
+Epoxidation
+a b s t r a c t
+Catalytic redox cycles involve dioxygen activation via peroxo (OO⁄) or H2O2 species, denoted as inner-
+sphere and outer-sphere routes respectively, for metal-oxo catalysts solvated by liquids. On solid oxides,
+O2 activation is typically more facile than the reduction part of redox cycles, making kinetic inquiries dif-
+ﬁcult at steady-state. These steps are examined here for oxidative alkanol dehydrogenation (ODH) by
+scavenging OO⁄ species with C3H6 to form epoxides and by energies and barriers from density functional
+theory. Alkanols react with O-atoms (O⁄) in oxides to form vicinal OH pairs that eliminate H2O to form
+OO⁄ at O-vacancies formed or react with O2 to give H2O2. OO⁄ reacts with alkanols to re-form O⁄ via steps
+favored over OO⁄ migrations, otherwise required to oxidize non-vicinal vacancies. C3H6 epoxidizes by
+reaction with OO⁄ with rates that increase with C3H6 pressure, but reach constant values as all OO⁄ spe-
+cies react with C3H6 at high C3H6/alkanol ratios. Asymptotic epoxidation/ODH rate ratios are smaller than
+unity, because outer-sphere routes that shuttle O-atoms via H2O2(g) are favored over endoergic vacancy
+formation required for inner-sphere routes. The relative contributions of these two routes are inﬂuenced
+by H2O, because vacancies, required to form OO⁄, react with H2O to form OH pairs and H2O2. OO⁄-
+mediated routes and epoxidation become favored at low coverages of reduced centers, prevalent for less
+reactive alkanols and lower alkanol/O2 ratios, because H2O2 then reacts preferentially with O⁄ (forming
+OO⁄), instead of vacancies (forming O⁄/H2O). Such kinetic shunts between two routes compensate for
+lower barriers required to form H2O2 than OO⁄. These re-oxidation routes prefer molecular donor
+(H2O2) or acceptor (alkanol) to perform stepwise two-electron oxidations by dioxygen, instead of kinet-
+ically demanding O-atom migrations. The quantitative descriptions, derived from theory and experiment
+on Mo-based polyoxometalate clusters with known structures, bring together the dioxygen chemistry in
+liquid-phase oxidations, including electro-catalysis and monooxygenase enzymes, and oxide surfaces
+into a common framework, while suggesting a practical process for epoxidation by kinetically coupling
+with ODH reaction.
+ 2018 Elsevier Inc. All rights reserved.
+1. Introduction
+The oxidative dehydrogenation (ODH) and the selective oxida-
+tion or epoxidation of organic molecules provide essential routes
+to convert undervalued streams into marketable chemicals of
+higher values [1,2]. ODH reactions proceed via Mars-van Krevelen
+catalytic cycles on reducible metal oxides; these cycles couple the
+reduction and the re-oxidation of the oxide catalyst via sequences
+such as the one depicted in Scheme 1 [3,4]. The reduction part
+involves the abstraction of H-atoms from organic substrates by
+lattice O-atoms (O*) and typically limits ODH turnover rates for
+alkane [4–7] and alkanol [8,9] reactants. These reduction steps
+form two-electron reduced centers consisting of vicinal hydroxyl
+groups (H/OH*), which can dehydroxylate and lead to reduced cen-
+ters in the form of O-vacancies (*) in the oxide lattice; both types of
+reduced centers can react with O2 to re-form oxidized centers (O*),
+thus completing a catalytic turnover. Re-oxidation steps are fast
+and thus kinetically-irrelevant in most catalytic oxidations, but
+can
+inﬂuence
+the
+selectivity
+of
+these
+reactions,
+because
+O2-derived intermediates formed during re-oxidation steps can
+react with organic reactants or products to form undesired side
+products [10,11]. They are also of fundamental interest in electro-
+catalysis [12–14] and monooxygenase enzyme systems [15–18],
+https://doi.org/10.1016/j.jcat.2018.05.016
+0021-9517/ 2018 Elsevier Inc. All rights reserved.
+⇑Corresponding author.
+E-mail address: iglesia@berkeley.edu (E. Iglesia).
+Journal of Catalysis 364 (2018) 228–247
+Contents lists available at ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+which use activated forms of O2-derived species in the epoxidation
+of alkenes and the selective oxidation of alkanes.
+The fast nature of these re-oxidation pathways renders their
+dynamics inaccessible to direct experimental inquiry from the
+kinetic behavior of steady-state ODH catalysis [3]. Re-oxidation
+rate constants can be indirectly probed through their in-situ UV–
+visible spectra during the transient formation and consumption
+of reduced centers in response to changes in reductant to oxidant
+ratios in the reactant streams [19]. Previous studies of propane
+ODH on supported VOx-based catalysts indicate that re-oxidation
+ﬁrst-order rate constants are 103–105 times larger than for the
+kinetically-relevant reduction steps [19]; as a result, reduced cen-
+ters are present as minority species during ODH catalysis, consis-
+tent with the observed insensitivity of ODH rates to O2 pressure
+[5–9]. The low surface densities of two-electron reduced centers
+[19] and their energetically-unfavorable pairing [11] lead to the
+isolation
+of
+such
+centers
+during
+ODH
+reactions.
+Their
+re-
+oxidation by a four-electron oxidant such as O2 thus requires the
+kinetic coupling of two elementary events, each involving one O-
+atom (and two electrons). Such coupling requires, in turn, the
+migration of one of the O-atoms in O2, either via lattice diffusion
+or via molecular carriers, to react with another reduced center or
+the decomposition of the O2-derived species via reactions with
+gas-phase reductants, a requirement imposed by the prevalence
+of reduced centers that reside at distances
+beyond atomic
+dimensions.
+Mechanistic proposals for re-oxidation steps typically invoke
+bound peroxo (OO*) intermediates formed via O2 activation at O-
+vacancies (*) with concurrent two-electron re-oxidation of the
+reduced centers [11,20]. Several sequential diffusional hops by
+one O-atom in the OO* intermediates formed can bring OO* species
+near another O-vacancy (*) and re-oxidize the reduced center (*) to
+form another lattice O-atom (O*), thus completing the required
+four-electron re-oxidation process using O2 [11,20]. Such steps
+involve the cleavage and formation of metal-oxygen (MAO) bonds,
+in processes that have been denoted ‘‘inner sphere” O2 activation
+routes in homogeneous systems [14,21,22]. Peroxo-type (OO*) spe-
+cies exhibit detectable UV–visible [23] and Raman [24] features
+that have been detected during the re-oxidation of reduced
+CeO2-based solids by O2. The detection of bound OO* species, how-
+ever, is infeasible during ODH catalysis, because reduced centers
+and O2-derived species are present as minority bound species
+[3,25].
+An alternate ‘‘outer sphere” O2 activation mechanism circum-
+vents the need for MAO bond cleavage by effecting re-oxidation
+through coupled proton-electron-transfer from reduced centers
+(H/OH*) to O2(g) to form H2O2 [12,14,26,27]. Such routes lead to
+the appearance of the 17O-atoms in 17O2(g) within H2O2 and H2O
+molecules, but not in WAO bonds, during the re-oxidation of aque-
+ous W-polyoxometalate anions [14]. The relative contributions of
+inner and outer O2 activation routes are quite consequential for
+alkane
+ODH
+selectivity
+because
+peroxo
+(OO*)
+intermediates,
+involved in inner sphere O2 activation routes, can mediate O-
+insertion reactions and convert primary alkene products to reac-
+tive epoxides that can undergo fast subsequent oxidation to CO
+and CO2 [10,11,28,29]. The involvement of OO* species in the re-
+oxidation steps in Mars-van Krevelen ODH cycles and their role
+in determining product selectivities, however, remain speculative
+and, for the most part, inaccessible to direct experimental inquiries
+[10,11].
+Here, we provide experimental and theoretical evidence for par-
+allel inner and outer sphere O2 activation routes during re-
+oxidation of reduced Mo-based Keggin-type polyoxometalate
+(POM) clusters and for the presence of OO* species. Such species
+form during the re-oxidation part of Mars-van Krevelen redox
+cycles and react with alkenes in O-insertion epoxidation reactions.
+The contributions of these parallel re-oxidation routes are quanti-
+tatively assessed by scavenging the OO* species with C3H6 during
+alkanol ODH catalysis and by density functional theory (DFT) treat-
+ments of the relevant intermediates and transition states. Mo-
+based POM clusters are chosen here as exemplary catalysts
+because their well-known structure minimizes model uncertain-
+ties in benchmarking theory and experiment [3,30], but the meth-
+ods applied in this work seem general for other redox active metal
+oxides that involve parallel inner and outer sphere O2 activation
+routes. CH3OH and C2H5OH dehydrogenation are used as illustra-
+tive reactions to form reduced centers, leading to the conclusion
+that the number, but not the type, of reduced centers depends on
+the identity and reactivity of the reductants. The analysis and evi-
+dence shown here also demonstrate that re-oxidation occurs via
+inner and outer sphere routes that exhibit much lower activation
+barriers than conventional mechanisms mediated by diffusional
+hops of an O-atom in OO* intermediates. The combined use of
+experiment and theory shown in this work provides a method to
+investigate the kinetic networks for re-oxidation of reduced metal
+oxides via heterogeneous O2 activation routes and their connec-
+tions to homogeneous oxidation catalysis and electro-catalytic
+and enzymatic systems. These alkanol ODH and alkene epoxidation
+reactions also uncover a strategy to kinetically couple ODH and
+epoxidation reactions to form two valuable products, without
+requiring expensive oxidants such as H2O2 molecules that convert
+to H2O as a sacriﬁcial reaction [29,31].
+2. Methods
+2.1. Experimental methods
+Supported Mo-based Keggin-type POM clusters (H3PMo12O40)
+were prepared by incipient wetness method using SiO2 (Cab-O-
+Sil; 304 m2 g1; 1.5 cm3 g1 pore volume) as a mesoporous sup-
+port. SiO2 support was rinsed three times with 1 M HNO3 (10
+cm3 g-SiO2
+1) to remove any impurities and then treated in ﬂowing
+dry air (UHP Praxair, 0.83 cm3 g1 s1) at 383 K for 12 h and at 573
+K for 5 h before impregnation with aqueous solutions of H3PMo12-
+O40 (99.99%, Sigma-Aldrich) to give samples with 25.4% wt. POM,
+corresponding to a surface density of 0.4 POM nm2. Impregnated
+samples were kept in closed vials at ambient temperature for 24 h
+and then treated in ﬂowing He (99.999%, Praxair, 0.83 cm3 g1 s1)
+at 323 K for 24 h. The powders were then pressed into pellets,
+crushed, and sieved to retain 106–180 lm aggregates. Transmis-
+sion electron microscopy showed that POM clusters after synthesis
+(and also after CH3OH ODH reactions) were predominantly present
+Scheme 1. A Mars-van Krevelen redox cycle involving the reduction of lattice
+O-atoms (O*) in Mo-based oxide domains via alkanol dehydrogenation steps and
+re-oxidation of reduced centers (H/OH*) via O2 activation steps.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+229
+as isolated clusters with two-dimensional structures present only
+as minority species [3]; their intact Keggin structure was con-
+ﬁrmed by 31P NMR [3].
+C3H6 and CH3OH consumption rates and product selectivities
+were measured on samples (0.05–0.15 g) held within a U-shaped
+tubular quartz reactor (4 mm inner diameter). The inlet molar rates
+of O2 (99.999% or 25% O2/He, Praxair), He (99.999%, Praxair) and
+C3H6 (99.95%, Praxair) were metered electronically by mass ﬂow
+controllers (Porter Instrument) in order to maintain desired reac-
+tant concentrations and residence times. Liquid CH3OH (99.9%,
+Fisher Scientiﬁc), C2H5OH (99.5% anhydrous, Sigma-Aldrich), and
+H2O (doubly-distilled and deionized) were delivered to the reac-
+tant streams using syringe pumps (Cole Parmer, 60,061 Series)
+by vaporizing the liquids at 393 K into the ﬂowing gas stream
+(O2/He or O2/He/C3H6).
+Reaction temperatures were maintained using a resistively-
+heated furnace equipped with an electronic controller (Watlow,
+Series 988) and were measured with a K-type thermocouple
+(Omega) placed at a dimple on the outer wall of the quartz reactor.
+Temperatures of all transfer lines were kept above 393 K in order
+to prevent condensation of reactants or products. Before contact
+with reactants, samples were treated in O2-H2O (20 kPa O2 and 2
+kPa H2O; 0.8 cm3 s1) during temperature ramp (0.083 K s1) and
+for 0.5 h after reaching reaction temperature (453 K). The reactor
+efﬂuent was analyzed by gas chromatography using a methyl sili-
+cone capillary column (HP-1, 25 m  0.32 mm  1.05 lm) con-
+nected to a ﬂame ionization detector (Agilent 6890 GC) and
+Poraplot Q and Mol Sieve 5A columns connected to a thermal con-
+ductivity detector (Agilent 3000A).
+Mo-POM (H3PMo12O40) clusters contain protons (H+) that act as
+Brønsted acids and lattice O-atoms (O*) that act as redox sites.
+Reactions of alkanols (CH3OH or C2H5OH) and O2 mixtures form
+dehydration products on the acid sites and dehydrogenation prod-
+ucts on the redox sites (Scheme S1, Supporting Information) [3].
+The POM protons were irreversibly titrated with NH3 (1%, Praxair)
+at 453 K using NH3-pulses (4 lmol per pulse; He as a carrier gas,
+1.6 cm3 s1) during alkanol-O2-H2O reactions (4 kPa alkanol, 20
+kPa O2, 2 kPa H2O) in order to focus this study on redox properties
+of Mo-POM, without the molecular complexity and side reactions
+brought forth by the formation of ethers or alkenes via acid catal-
+ysis. NH3 pulses were introduced until alkanol dehydration rates
+became undetectable (< 0.1% of initial rates), indicative of the
+essential removal of Brønsted acid sites. The changes in dehydra-
+tion and dehydrogenation rates as a function of NH3 doses are
+shown in Supporting Information (Fig. S1). These NH3-titrated
+samples were used for all alkanol-O2 reactions with and without
+C3H6 co-reactants after removal of all traces of NH3(g) with He
+(1.6 cm3 s1) for 0.2 h. These samples are hereinafter denoted as
+NH4-POM. Dehydration rates on NH4-POM remained at nearly
+undetectable levels throughout all experiments, as expected from
+the strong binding of NH3 at POM protons at 453 K. For compar-
+ison, CH3OH ODH rates were also measured on H-POM samples
+with acidic protons.
+CH3OH, C2H5OH, and C3H6 conversions were kept below 3% to
+maintain constant axial concentrations along the bed and to min-
+imize any effects of the H2O formed on rates or selectivities. No
+conversion of alkanols or C3H6 was detected on the SiO2 support.
+No detectable amounts of CO and CO2 were formed at any of the
+reaction conditions used. CH3OH ODH turnover rates (rODH; per
+POM cluster) are deﬁned as the sum of formaldehyde (HCHO),
+methylformate (MF) and dimethoxymethane (DMM) molar forma-
+tion rates (rODH = rHCHO + rMF + rDMM), because MF and DMM are
+formed as secondary products, each from one HCHO molecule
+(detailed pathways in Scheme S1) [8]. The ODH product selectivity
+to HCHO on NH4-POM remained high (> 60%) at typical reaction
+conditions (Fig. S2). Acetaldehyde was the only product of
+C2H5OH ODH reactions and C2H5OH ODH rates are reported as
+acetaldehyde molar formation rates. C3H6 epoxidation rates (rEpox;
+per POM cluster) are reported as the sum of the formation rates of
+propene epoxide (PE) and acetone (Ace) (rEpox = rPE + rAce), because
+acetone is formed only via secondary isomerization of propene
+oxide [32] in the absence of co-fed H2O (residence time studies dis-
+cussed in Section 3.2).
+2.2. Computational methods
+Plane-wave DFT calculations were performed using Perdew-
+Wang exchange-correlation functionals (PW91) [33] within the
+generalized gradient approximation (GGA) as implemented in the
+Vienna ab initio simulation package (VASP) [34–36]. The valence-
+core interactions were represented by projector-augmented wave
+(PAW) methods [37,38], and integer band occupancies were spec-
+iﬁed in all calculations to properly capture localized-orbital nature
+of bands for non-periodic system (POM clusters) in periodic plane-
+wave calculations. An energy cutoff of 400 eV was used to create
+the plane-wave basis set and a Monkhorst-Pack [39] k-point sam-
+pling of 1  1  1 was used. Electronic structures were minimized
+self-consistently until the energies between iteration steps differed
+by less than 1  106 eV and forces on all atoms were less than
+0.05 eV Å1.
+The structures and energies of Keggin POM clusters, bound
+intermediates and transition states on POM clusters, and gaseous
+molecules were calculated by placing them at the center of 2  2
+ 2 nm cubic cell in order to avoid interactions among adsorbates
+or transition states in adjacent cells; larger cubic cells (3  3  3
+nm) gave the same value for CH3OH adsorption energies on O*
+sites. The central P atom in each POM cluster was ﬁxed to prevent
+net translation of structures, but all other atoms were relaxed dur-
+ing geometry and energy optimizations. Long-range interactions
+among atoms located in neighboring unit cells were corrected
+using dipole and quadrupole moments calculated by taking the
+center of the unit cell as the center of charge distributions [40].
+The lowest energy electronic structures for each reaction interme-
+diate were determined by comparing energies obtained with
+singlet (spin-restricted and spin-polarized) and triplet spin multi-
+plicities. The minimum energy paths (MEPs) connecting reaction
+intermediates were obtained using nudged elastic band (NEB)
+methods [41] with structures converged to energies within
+1  105 eV and forces within 0.1 eV Å1. The NEB calculations
+were performed on both singlet and triplet potential energy sur-
+faces to identify crossing points of the MEP connecting intermedi-
+ates of different multiplicities. The structures near the maximum of
+an MEP or at the crossing points were used to locate the transition
+states using the Henkelman’s Dimer method [42] with the conver-
+gence criteria of <1  107 eV for energies and <0.05 eV Å1 for
+forces on atoms. Transition state searches near the spin-crossing
+points were performed in an open-shell singlet state using Dimer
+calculations, and their energies were compared to those for the sin-
+glet (closed-shell) and triplet states.
+Vibrational frequencies were calculated by diagonalizing the
+Hessian matrix of second derivatives of the energy with respect
+to atomic positions in order to estimate their contribution to ther-
+modynamic properties of intermediates and transition states.
+Enthalpies and free energies include contributions from electronic
+energies (E0), zero-point vibrational energies (ZPVE) and ﬁnite
+temperature contributions from vibrations and, for gaseous spe-
+cies, translations and rotations;
+H ¼ E0 þ ZPVE þ Hvib þ Htrans þ Hrot
+ð1Þ
+G ¼ E0 þ ZPVE þ Gvib þ Gtrans þ Grot
+ð2Þ
+230
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+Low-frequency modes (less than 150 cm1) of weakly bound
+adsorbates and transition states lead to signiﬁcant errors in entro-
+pies and free energies, and therefore, their contributions are
+instead substituted by a fraction (0.7) of the translational and rota-
+tional entropies of relevant gas phase molecules [43], unless other-
+wise stated.
+DFT-derived free energies are used to estimate kinetic constants
+for elementary steps using the formalism of transition state theory;
+k ¼ kBT
+h
+exp
+DGz
+RT
+ 
+!
+ð3Þ
+where DG represents the difference in free energies between the
+transition state (TS) and its relevant precursor. kB is Boltzmann’s
+constant, h is Planck’s constant, and R is the gas constant. Thermo-
+dynamic constants of equilibrated steps are related to their stan-
+dard free energy changes for the reaction (DG£);
+K ¼ exp
+DG£
+RT
+ 
+!
+ð4Þ
+3. Results and discussion
+3.1. CH3OH-O2 reactions on H-POM and NH4-POM
+CH3OH ODH rates increased linearly with CH3OH pressure (<1
+kPa CH3OH) on both H-POM and NH4-POM (i.e., before and after
+titration of protons by NH3), but became less sensitive to CH3OH
+pressure with increasing pressure (0.1–4 kPa; 453 K; Fig. 1a).
+ODH rates were independent of O2 pressure at all O2 pressures
+(1–35 kPa; 453 K; Fig. 1b). These trends are consistent with those
+in previous studies [3,9] and with H-abstraction from adsorbed
+CH3OH by lattice O-atoms (O*) as the sole kinetically-relevant step
+in ODH turnovers (step 2; Scheme 2); such turnovers are com-
+pleted by fast re-oxidation steps.
+This mechanistic proposal is consistent with the rate equation
+[3];
+rODH ¼
+k
+0
+ODHPCH3OH
+1 þ KCH3OHPCH3OH
+ð5Þ
+Here, KCH3OH denotes the equilibrium constant for molecular
+adsorption of CH3OH onto O* (step 1a; Scheme 2) and depends
+on the free energy of CH3OH adsorbed on O* (CH3OH-O*) with
+respect to its CH3OH(g) and O* precursors. The k0ODH (=kODHKCH3OH)
+Fig. 1. CH3OH ODH rates (per POM-ks) measured from CH3OH-O2 mixtures on H-POM (N) and NH4-POM (r) at 453 K as a function of (a) CH3OH pressure (0.1–4 kPa) at 20
+kPa O2 and (b) O2 pressure (1–35 kPa) at 4 kPa CH3OH. Dashed curves represent the best regression ﬁts to the functional form of Eq. (5).
+Scheme 2. Proposed elementary steps for adsorptions of gaseous species and
+CH3OH dehydrogenation on lattice O-atoms (O*) in Mo-based NH4-POM clusters.
+Quasi-equilibrated steps are denoted by oval symbols superimposed over double
+arrows. Nomenclatures for reaction intermediates are shown in parentheses under
+each structure.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+231
+term is the ﬁrst-order rate constant for CH3OH ODH on O* and
+reﬂects the free energy of a kinetically-relevant H-abstraction TS
+(step 2; Scheme 2) with respect to its CH3OH(g) and O* precursors.
+The two denominator terms reﬂect the relative coverages of O* and
+CH3OH-O*. ODH rates become zero-order in CH3OH at high CH3OH
+pressures, indicative of a shift from O* to CH3OH-O* as the most
+abundant surface intermediate (MASI) with increasing CH3OH
+pressure. The functional form of Eq. (5) accurately describes mea-
+sured CH3OH ODH rates (Fig. 1) and the regression of these data to
+the functional form of Eq. (5) gives the k0ODH and KCH3OH values on
+these catalysts (Table S1, SI).
+Measured k0ODH values were ten-fold smaller on NH4-POM (0.5
+± 0.1 (kPa POM ks)1) than on H-POM (5 ± 1 (kPa POM ks)1), as a
+result of a decrease in the H-atom abstraction ability of lattice O-
+atoms (O*) when the replacement of H+ with NH4
++ leads to a
+higher electron density in the oxide clusters [3]. Such H-atom
+abstraction ability of O* is determined by the stability of *OAH
+bonds that are nearly formed at the H-abstraction TS [3,9]; the
+strength of these *OAH bonds is given by DFT-derived H-atom
+addition energy (HAE) (detailed calculation methods described
+in SI, Section S2) [3]. Reactivity-averaged HAE values (hHAEi) [3]
+over all accessible O-atoms in POM clusters become less negative
+upon titration of protons by NH3 (303 kJ mol1 on H-POM and
+292 kJ mol1 on NH4-POM; Table S1, SI), consistent with O-
+atoms that are weaker H-abstractors in NH4-POM than in H-
+POM clusters and with the lower ODH turnover rates observed
+on NH4-POM clusters.
+DFT treatments of intermediates and transition states in the
+reduction (Scheme 2) and re-oxidation (Scheme 3) sequences of
+elementary steps were carried out at a speciﬁc location within
+the POM clusters, consisting of a vicinal bridging O-atoms pair
+(Ob1 and Ob2; atom locations indicated in Fig. 2) that exhibits one
+of the most negative HAE values. Such values make this pair a
+likely location for ODH turnovers [3]. The shift in hHAEi toward less
+negative values upon replacement of H+ with NH4
++ (303 to 292
+kJ mol1) leads to increase in DFT-derived free energy barriers for
+the kinetically-relevant H-abstraction step (step 2; Scheme 2) from
+111 to 139 kJ mol1 (453 K, 1 bar CH3OH; Table S1). Measured
+KCH3OH values were similar on H and NH4 forms of POM clusters
+(0.8 ± 0.3 kPa1 and 0.4 ± 0.1 for H-POM and NH4-POM, respec-
+tively; Table S1). Their similar and near unity values are consistent
+with DFT-derived CH3OH adsorption free energies, which were 1
+and 2 kJ mol1 on Ob1 in H-POM and NH4-POM, respectively (453
+K, 1 bar CH3OH; Table S1).
+ODH rates were not affected by O2 pressure (Fig. 1b), reﬂecting
+the prevalence of O* species and presence of reduced centers and
+O2-derived intermediates as minority species. Such kinetic trends
+are consistent with facile re-oxidation events but do not provide
+any insights into the nature or rates of the O2 activation pathways.
+Consequently, inferences about the mechanism and the identity
+and reactive properties of O2-derived intermediates require their
+reactive scavenging to form speciﬁc products during ODH reac-
+tions. Here, C3H6 alkene is used as a probe molecule during CH3OH
+and C2H5OH ODH (Sections 3.2 and 3.4) in order to detect the pres-
+ence of bound O2-derived minority species formed in re-oxidation
+pathways without disturbing the nature or turnover rates of ODH
+pathways. In doing so, we demonstrate a generalized method of
+inquiry
+into
+the
+kinetically-irrelevant
+re-oxidation
+part
+of
+Mars-van
+Krevelen
+catalytic
+cycles
+by
+scavenging
+reactive
+O-derived species through chemical reactions that form speciﬁc
+detectable products. The conclusions reached are conﬁrmed by
+DFT-derived free energy estimates for plausible elementary steps,
+which account for the identity of O2-derived species derived from
+scavenging reactions by C3H6 and for the rate of their formation
+and consumption (Sections 3.3 and 3.5).
+3.2. CH3OH-O2-C3H6 reactions on NH4-POM clusters
+The use of NH4-POM clusters (instead of H-POM) prevents
+alkene oligomerization and alkanol elimination and condensation
+reactions that occur readily on Brønsted acids; these side reac-
+tions form oligomers that block active sites of protons (H+) and
+lattice O-atoms (O*) in H-POM clusters, especially when C3H6 is
+added to CH3OH-O2 reactants (Fig. S3). In contrast with CH3OH-
+O2-C3H6 reactions on H-POM clusters, CH3OH ODH and C3H6
+epoxidation on NH4-POM did not show detectable deactivation
+(Fig. S4). The titration of protons by NH3 also inhibited C3H6
+hydration to 2-propanol, which can subsequently dehydrogenate
+on O* sites to form acetone, a molecule that can also be formed
+via hydride shifts in propene oxide, the primary product in pro-
+pene epoxidation.
+C3H6 epoxidation products were detected on NH4-POM only
+when CH3OH was also present in O2-C3H6 mixtures at 453 K, indi-
+cating that lattice O-atoms (O*) in NH4-POM clusters on their own
+cannot catalyze epoxidation turnovers. Epoxidation events require
+that CH3OH molecules dehydrogenate at O* sites and form reduced
+centers, which can then react with O2 to form the electrophilic
+dioxygen species that are required for inserting an O-atom into
+the C@C bonds of C3H6. Such O2 activation routes have been
+Scheme 3. Proposed elementary steps for the re-oxidation of reduced Mo-based
+NH4-POM clusters by O2(g) and the decomposition of bound peroxo (OO*) species
+and gaseous H2O2 molecules. Quasi-equilibrated steps are denoted by oval symbols
+superimposed over double arrows. Nomenclatures for reactive species are shown in
+parentheses under each structure. Recombinative desorption of H2O from H/OH*
+generates * (step 3). Inner and outer sphere O2 activation routes on * and H/OH* lead
+to form OO* and H2O2(g), respectively (steps 4a and 4b). Reactions of OO* with
+CH3OH or C3H6 regenerate O* (steps 5a and 5b). H2O2 reacts with a reduced center
+(* or H/OH*) to regenerate O* and release H2O, or with O* to form OO* and H2O
+(steps 6a and 6b).
+232
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+proposed to involve bound peroxo (OO*) species [11,20,29] and are
+denoted as ‘‘inner sphere O2 activation routes” [14,21], because
+they require the formation of metal-oxygen (MAO) bonds via
+OO* intermediates.
+The primary epoxidation product, propene epoxide, subse-
+quently isomerizes to acetone [32], leading to acetone to propene
+epoxide molar ratios that increase linearly with increasing C3H6
+conversion but extrapolate to zero values as conversion decreases
+(Fig. S5). Epoxidation rates (rEpox) are thus given by the combined
+molar formation rates of propene epoxide (rPE) and acetone (rAce).
+The effects of C3H6, H2O, CH3OH, and O2 pressures on CH3OH
+ODH and C3H6 epoxidation rates are examined next in the context
+of plausible O2 activation elementary steps.
+3.2.1. Effect of C3H6 on CH3OH ODH and C3H6 epoxidation rates
+CH3OH ODH rates were essentially unaffected by changes in
+C3H6 pressure (0–35 kPa; 453 K; Fig. 3a), indicating that C3H6-
+derived bound species are present at low coverages on O* (step
+1c; Scheme 2). Thus, C3H6 epoxidation rates can be used to identify
+the involvement of bound O2-derived intermediates during re-
+oxidation events and their reactivity for O-insertion reactions,
+without disturbing the ODH pathways that form reduced centers.
+Epoxidation rates were much lower than ODH rates at low C3H6
+pressures, but increased with increasing C3H6 pressure and
+approached a constant value above 8 kPa C3H6 (Fig. 3a); this con-
+stant value corresponds to maximum epoxidation rates that are
+about ten-fold smaller than ODH reaction rates.
+Schemes 2 and 3 show plausible routes for the reduction [3,44]
+and re-oxidation [11,14,21,44] of NH4-POM clusters during CH3OH
+ODH occurring via Mars-van Krevelen redox cycles. Re-oxidation
+routes also include a step accounting for the scavenging of bound
+O2-derived species via C3H6 epoxidation [29,45]. In the NH4-POM
+reduction steps, the molecular adsorption of CH3OH on lattice O-
+atoms (O*; step 1a; Scheme 2) precedes the kinetically-relevant
+H-abstraction step to form HCHO and a vicinal hydroxyl pair (H/
+OH*; step 2; Scheme 2) [3,44]. H2O and C3H6 molecules can also
+adsorb and occupy active O* species (steps 1b and 1c; Scheme 2),
+thus possibly inhibiting ODH rates.
+Reduced centers consisting of H/OH* formed via step 2 in
+Scheme 2 must be re-oxidized by O2 to regenerate the oxidized
+centers (O*), required for subsequent ODH turnovers. The discus-
+sion that follows provides a formalism to probe two speciﬁc
+branching points along the re-oxidation sequences shown in
+Scheme 3. At one juncture, O2 activation occurs via either inner
+and outer sphere routes to form O2-derived species with concur-
+rent two-electron re-oxidization of reduced NH4-POM clusters
+(steps 4a and 4b; Scheme 3). At the other branching point, OO* con-
+sumption can occur via parallel reactions with either CH3OH or
+C3H6 (steps 5a and 5b; Scheme 3). The kinetic responses of epoxi-
+dation and ODH rates and their ratios to C3H6 pressure are dis-
+cussed in the context of the contributions of the parallel routes
+at these two branching points.
+Inner sphere routes involve recombinative H2O desorption from
+H/OH* to form O-vacancies (*) (step 3; Scheme 3). Subsequent O2
+Fig. 2. DFT-derived structures for (NH4)3PMo12O40 (NH4-POM) Keggin type poly-
+oxometalate clusters. O-atoms labeled as b1 to b3 are used for probing energetics of
+elementary steps involved in redox cycles.
+Fig. 3. C3H6 epoxidation and CH3OH ODH rates (per POM-ks) measured on NH4-POM at 453 K as a function of (a) C3H6 pressure (1–35 kPa; 1 kPa CH3OH and 20 kPa O2) and
+(b) H2O pressure (0.01–0.45 kPa; 1 kPa CH3OH, 20 kPa O2, 35 kPa C3H6,). Dashed curves represent the best regression ﬁts to the functional form of rate equations for C3H6
+epoxidation and CH3OH ODH in Scheme 4.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+233
+activation at * forms bound peroxo (OO*) species (step 4a;
+Scheme 3), which can be scavenged by C3H6 to form epoxide with
+the regeneration of one O* (step 5b; Scheme 3). The rate of epoxi-
+dation (rEpox) via OO* species is given by:
+rEpox ¼ kEpoxPC3H6 OO
+½
+;
+ð6Þ
+where kEpox denotes the ﬁrst-order rate constant for C3H6 epoxida-
+tion on OO* (step 5b; Scheme 3) and depends on the free energy dif-
+ference between a kinetically-relevant O-insertion TS and its
+C3H6(g) and OO* precursors. When C3H6 epoxidation accounts for
+all OO* consumption events, the pseudo-steady-state concentration
+of OO* species is given by the ratio of their formation rate (rOO*) to
+kEpoxPC3H6;
+OO
+½
+ ¼
+rOO
+kEpoxPC3H6
+;
+ð7Þ
+which upon substitution into Eq. (6) would lead to rEpox values that
+are independent of C3H6 pressure and equal to rOO* at all pressures.
+Measured epoxidation rates, however, initially increased with
+increasing
+C3H6
+pressure
+before
+reaching
+a
+constant
+value
+(Fig. 3a). These trends are indicative of the involvement of alternate
+OO* consumption routes that compete with epoxidation events and
+which must occur in order to complete the re-oxidation pathways
+in the absence of C3H6. DFT calculations suggest that such routes
+may involve OO* decomposition via reactions with CH3OH (step
+5a; Scheme3), ultimately leading to the regeneration of O* along
+with a formation of HCHO and H2O (Section 3.5.1).
+The initial increase in epoxidation rates with C3H6 pressure (<8
+kPa; Fig. 3a) is consistent with larger contributions from epoxida-
+tion routes (step 5b; Scheme 3) than from alternate routes (step
+5a; Scheme 3) to OO* consumption rates as the C3H6 to CH3OH
+ratio increases. The epoxidation rates become less sensitive to
+C3H6 pressure (>8 kPa) as most of the OO* species are scavenged
+by C3H6 instead of CH3OH and reach asymptotic values that reﬂect
+epoxidation rates that become equal to those for OO* formation
+(rOO*, Eqs. (6) and (7)). The rates of NH4-POM reduction by CH3OH
+dehydrogenation (step 2; Scheme 2) must be equal to the re-
+oxidation rates at steady-state; therefore, these asymptotic values
+would equal the CH3OH ODH rates when all reduced centers
+formed via ODH steps are re-oxidized via the formation of OO*
+intermediates. Asymptotic epoxidation rates, however, are much
+lower than the ODH rates (Fig. 3a), indicative of the involvement
+of alternate re-oxidation routes that exclude OO* intermediates.
+Such conclusions are also evident from the ratio of the rates of
+epoxidation and ODH (rEpox/rODH), shown as a function of C3H6
+pressure (0–35 kPa; 453 K) in Fig. 4. The asymptotic (rEpox/rODH)
+ratios (for C3H6/CH3OH > 8) reﬂect conditions for which OO* con-
+sumption via epoxidation routes is dominant (i.e., without contri-
+butions
+from
+step
+5a
+in
+Scheme
+3);
+therefore,
+ODH
+rates
+exclusively reﬂect the reduction rates of NH4-POM clusters that
+must equal their re-oxidation rates at steady-state. Thus, asymp-
+totic rEpox/rODH values represent the fraction of re-oxidation events
+that occur through OO* intermediates. These fractions are much
+smaller than unity (<0.1; Fig. 4), consistent with the prevalent
+involvement of re-oxidation pathways other than OO*-mediated
+routes to re-oxidation rates.
+These
+alternate
+re-oxidation
+routes
+may
+involve
+proton-
+coupled electron-transfer from vicinal OH pairs (H/OH*) at reduced
+centers to gaseous or weakly-bound O2, leading to the formation of
+H2O2 (step 4b; Scheme 3). These processes are known to occur in
+liquid media and are denoted as ‘‘outer sphere” routes, because
+they do not disturb the inner coordination sphere of the metal cen-
+ters or the covalent MAO bonds [12,14]. The H2O2 formed in these
+two-electron re-oxidation steps can diffuse and re-oxidize another
+two-electron reduced center (* or H/OH*; step 6a; Scheme 3) [12],
+thus completing the four-electron re-oxidation process required
+for O2(g) to act as the stoichiometric oxidant in Mars-van Krevelen
+cycles. The involvement of parallel inner and outer sphere O2 acti-
+vation routes (steps 4a and 4b; Scheme 3) is consistent with DFT-
+derived activation free energies, as shown by detailed assessments
+of energies for intermediates and transition states involved in
+these two O2 activation paths (Section 3.3).
+3.2.2. Effects of H2O on CH3OH ODH and C3H6 epoxidation rates
+The re-oxidation steps in Scheme 3 include parallel inner and
+outer sphere O2 activation routes mediated by O2 reactions with
+either * or H/OH* to form OO* or H2O2, respectively (steps 4a and
+4b; Scheme 3). As a result, their relative contributions depend on
+the ratio of * and H/OH* coverages ([*]/[H/OH*]), which decreases
+with increasing H2O pressure as a consequence of the equilibration
+of step 3 (Scheme 3). These effects of H2O are probed here by mea-
+suring (rEpox/rODH) ratios at different H2O pressures and high C3H6/
+CH3OH ratios to ensure that OO* species exclusively react with
+C3H6 to form epoxidation products (step 5b; Scheme 3) instead
+of reacting with CH3OH (step 5a; Scheme 3).
+CH3OH ODH rates (without added C3H6) decreased with
+increasing H2O pressure (Fig. S6) because of competitive adsorp-
+tion of H2O with CH3OH on O* (steps 1a and 1b; Scheme 2) [3];
+rODH ¼
+k
+0
+ODHPCH3OH
+1 þ KCH3OHPCH3OH þ KH2OPH2O
+ð8Þ
+Here, KCH3OH and KH2O are the equilibrium constants for molec-
+ular adsorption of CH3OH and H2O on O*, respectively (steps 1a and
+1b; Scheme 2), and k’ODH (=KCH3OH kODH) denotes the ﬁrst-order rate
+constant for CH3OH ODH (step 2; Scheme 2). The functional form of
+Eq. (8) accurately describes all rate data (Fig. S6) with larger
+regressed values for KH2O (8 ± 4 kPa1) than for KCH3OH (0.4 ± 01
+kPa1).
+CH3OH ODH and C3H6 epoxidation rates are shown in Fig. 3b as
+a function of H2O pressure (0.01–0.45 kPa; 453 K). Acetone can be
+formed via propene oxide isomerization but also via C3H6 hydra-
+tion when H2O is co-fed; such contributions were excluded from
+Fig. 4. Ratios of C3H6 epoxidation and CH3OH ODH rates (rEpox/rODH) as a function of
+C3H6 pressure (., 1–35 kPa; 1 kPa CH3OH, 20 kPa O2) and H2O pressure (d, 0.01–
+0.45 kPa; 1 kPa CH3OH, 20 kPa O2, 35 kPa C3H6) on NH4-POM at 453 K. Dashed
+curves represent the best regression ﬁts of the rate data in Fig. 3 to the functional
+form of rate equations for C3H6 epoxidation and CH3OH ODH in Scheme 4.
+234
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+C3H6 conversion rates by subtracting acetone formation rates mea-
+sured with O2-C3H6-H2O mixtures from those measured with CH3-
+OH-O2-C3H6-H2O reactants (details in SI, Section S4). ODH rates
+decreased with increasing H2O pressure, but epoxidation rates
+decreased even more strongly (Fig. 3b), as evident from (rEpox/rODH)
+ratios that decreased with increasing H2O pressure (Fig. 4). These
+rEpox/rODH ratios reﬂect the fraction of re-oxidation events occur-
+ring via OO*-mediated inner sphere routes. Consequently, these
+data are consistent with a shift from * to H/OH* via the equilibra-
+tion of step 3 (Scheme 3) and with a concomitant preference for
+outer sphere routes as H2O concentrations increase (step 4b;
+Scheme 3).
+The formation of C3H6 epoxidation products from CH3OH-O2-
+C3H6 reactions, but not from O2-C3H6 reactions, indicates that inner
+sphere routes mediated by bound peroxo (OO*) species are
+involved in the re-oxidation of reduced NH4-POM by O2, as also
+proposed in O2 activation during homogeneous oxidations [12–
+14], because such O2-derived species are active for insertion of
+O-atoms into alkenes [46,47]. These reaction routes are also found
+in monooxygenase enzymes that form electrophilic peroxo (OO*)
+species via O2 reactions with two-electron reduced centers to per-
+form O-insertions into C@C or CAH bonds in alkanes, alkenes and
+arenes [15]. These mechanisms, demonstrated here for oxidation of
+gaseous substrates on solid catalysts, offer strategies for using
+alkanols as sacriﬁcial reductants to form bound peroxo (OO*) spe-
+cies for propene epoxidation, while forming alkanals as useful co-
+products. Therefore, these epoxidation routes using sacriﬁcial
+reductants, after appropriate optimization, may provide alterna-
+tives to H2O2 and organic peroxides as epoxidation reagents, an
+approach considered in homogeneous systems [46,47].
+OO*-mediated inner sphere routes, however, account for only a
+fraction of the re-oxidation events (<0.1; Fig. 4). Their contribu-
+tions become even smaller when H2O was added (Fig. 4) because
+the conversion of reduced centers from * to H/OH* (step 3;
+Scheme 3) favors outer sphere routes (step 4b; Scheme 3). The
+mechanistic features and redox properties that control the relative
+rates of inner and outer sphere re-oxidation routes are thus essen-
+tial to choose catalysts and conditions that favor the inner sphere
+routes that lead to epoxidation turnovers. Such inquiries of provid-
+ing details of elementary steps and the quantitative assessment of
+the two O2 activation routes during ODH turnovers are achieved
+using DFT calculations on relevant intermediates and transition
+states involved in re-oxidation steps, which are discussed next.
+3.3. Density functional theory assessment of intermediates and rates
+for inner and outer sphere O2 activation routes
+Inner sphere O2 activation routes involve quasi-equilibrated
+recombinative desorption of H2O from vicinal OH groups (H/OH*)
+to form O-vacancies (*) and the subsequent irreversible O2 activa-
+tion on * to form OO* (steps 3 and 4a; Scheme 3). Their rate (rin) is
+given by:
+rin ¼ kinPO2 
+½  ¼
+kin
+KwPH2O
+PO2 H=OH
+½
+ ¼ k
+0
+in
+PH2O
+PO2 H=OH
+½
+
+ð9Þ
+Kw denotes the equilibrium constant for the interconversion of H/
+OH* to form * (step 3; Scheme 3) and kin denotes the ﬁrst-order rate
+constant for O2 activation on * to form OO* (step 4a; Scheme 3). The
+rate of outer sphere routes (rout) to form H2O2(g) via irreversible O2
+activation on H/OH* species (steps 4b; Scheme 3) is given by:
+rout ¼ koutPO2 H=OH
+½
+
+ð10Þ
+where kout denotes the ﬁrst-order rate constant for O2 activation on
+H/OH* to form H2O2(g) (step 4b; Scheme 3).
+Efﬁcient epoxidation events during CH3OH ODH turnovers
+require the catalytic system to preferentially re-oxidize via OO*-
+mediated inner sphere routes. The contributions from inner and
+outer sphere O2 activation are given by their rate ratios (rin/rout,
+deﬁned as v);
+v ¼ rin
+rout
+¼
+kinPO2 
+½ 
+koutPO2 H=OH
+½
+ ¼
+k
+0
+in
+koutPH2O
+;
+ð11Þ
+which depends on the ratio of the respective rate parameters
+(k0in/kout) and on the H2O pressure. These rate parameters, k0in
+(=kin/Kw) and kout, reﬂect in turn the free energies of formation of
+the transition states for inner and outer sphere O2 activation routes
+from common O2(g) and H/OH* precursors; their values are exam-
+ined next using DFT methods.
+3.3.1. Mechanistic details of inner and outer sphere O2 activation
+routes
+Gaseous O2 in its most stable triplet ground state (two unpaired
+p-electrons) reacts with reduced centers (* or H/OH*) to form O2-
+derived species (OO* or H2O2) that are more stable in their singlet
+states (no unpaired electrons) [11]. Consequently, their respective
+singlet and triplet potential energy surfaces (PES) must cross along
+their interconversion reaction coordinate, potentially leading to
+broken-symmetry singlet states at the crossing point; these elec-
+tronic structures can have lower energies than singlet or triplet
+states because of spin-orbit coupling [10]. The spin-crossings are
+examined here by calculating minimum energy paths (MEPs) for
+both singlet and triplet states using nudge elastic band (NEB)
+methods [41]; the existence of broken-symmetry transition states
+near
+the
+crossing-points
+is
+examined
+by
+performing
+spin-
+unrestricted Dimer calculations [42] with singlet multiplicity.
+The evidence for symmetry-breaking in converged transition states
+becomes apparent from the existence of non-degenerate energy
+levels for electrons of opposite spins, in spite of their singlet states,
+and from their lower energies compared to those derived from
+spin-restricted-singlet and triplet calculations.
+The spin crossing for inner sphere O2 activation routes on NH4-
+POM clusters (step 4a; Scheme 3) is shown in Fig. 5. Fig. 5a shows a
+MEP connecting a triplet O2(g) to a triplet OO* species, together
+with singlet state (spin-polarized) unrelaxed single-point energies
+of all structures in this MEP. Fig. 5b shows a MEP for singlet states
+(spin-polarized) together with corresponding triplet single-point
+energies. Both versions of these calculations (Fig. 5a and 5b) show
+that the reactant O2(g) is more stable in its triplet state, while the
+bound peroxo (OO*) product is more stable in the singlet state. The
+initial O2 adsorption goes through a local maximum energy on the
+triplet path before a spin-crossing that occurs at a lower energy
+than this maximum and leads to a singlet OO* species with even
+lower energy. Taken together, these trends show that the maxi-
+mum in the combined MEP occurs on the triplet PES, instead of
+the singlet-triplet crossing point. This maximum corresponds to a
+triplet TS obtained using Dimer method [42] (denoted TSin,
+Fig. 5), which has an electronic energy of 141 kJ mol1 before ZPVE
+corrections relative to O2(g) and H/OH* precursors.
+O2 reactions with transition-metals can lead to peroxo species
+(OO*) through either concerted [22,48] or sequential [49,50] trans-
+fer of two electrons to dioxygen. In the stepwise mechanism, the
+ﬁrst electron transfer to O2 forms g1-superoxo intermediates,
+which convert to g2-superoxo species via subsequent electron-
+transfer, at which point the triplet-to-singlet crossing occurs
+[49,50]. Such mechanism was previously suggested for O2 activa-
+tion on transition-metal complexes of Pd [49], Co [50], Ir [50],
+and Ru [50]. An analogous stepwise mechanism is suggested by
+the MEP for inner sphere O2 activation routes on NH4-POM clusters
+(Fig. 5) with TSin representing that for the ﬁrst electron-transfer
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+235
+step to form g1-superoxo. The O2 moiety in TSin (Fig. 6f) assumes
+an end-on (g1) geometry with an O@O bond distance of 0.125
+nm, which lies between the bond distances in O2(g) (0.123 nm)
+and in g1-superoxo complexes of transition metals (0.128–0.130
+nm) [51,52]. The O2 moiety at TSin also acquires a negative charge
+that is much smaller than for a full electron (0.12 e). The under-
+coordinated O-atom in TSin (O00-atom; Fig. 6f) reacts with the Mo
+center and converts to the g2-peroxo products (Fig. 6 g) via a
+kinetically-irrelevant second electron-transfer step; no other bar-
+rier was found between TSin and g2-superoxo product (Fig. 5).
+The bound peroxo (OO*) product state on NH4-POM clusters has
+an O = O bond length (0.143 nm; Fig. 6 g) similar to that for side-
+on g2-peroxo-Mo complexes (0.148 nm) [52] and a negative
+charge slightly greater than a full electron (1.1 e) at the O2
+moiety.
+The MEP for outer sphere O2 activation routes, involving H2O2
+formation via O2 reactions with H/OH* (step 4b; Scheme 3),
+includes a sequential transfer of two H-atoms in H/OH* to O2(g).
+They are shown in Fig. 5c and 5d for the triplet and singlet (spin-
+polarized) NEB calculations, respectively. The ﬁrst H-atom transfer
+to O2(g) forms a bound OOH intermediate in the triplet state via a
+TS (TSout (a)) also in the triplet state (Fig. 5c). The OOH intermedi-
+ate exhibits a radical-like character (∙OOH), evidenced by its
+energy more stable in triplet state than in singlet state, because
+charged HOO- species would exist in its singlet form. Its radical
+nature is also evident from spin density maps that indicate the
+presence of unpaired electrons in OOH (Fig. S9). The singlet and tri-
+plet MEP curves cross as the second H-atom is transferred, leading
+to H2O2 products in their stable singlet state. A dimer calculation
+starting with the structure at the crossing point gave a broken-
+symmetry TS (TSout (b); Fig. 5d), as evident from its energy lower
+than both spin-restricted singlet and triplet states [10]. The TS
+for the ﬁrst H-atom transfer (TSout (a); Fig. 6i) lies at the highest
+energy point along the MEP with a 14 kJ mol1 barrier (electronic
+energy without ZPVE corrections) relative to O2(g) and H/OH* pre-
+cursors. The TS for the second H-atom transfer (TSout (b); Fig. S10)
+exhibits a slightly lower barrier (9 kJ mol1, electronic energy
+without ZPVE corrections), indicating that the second H-atom
+transfer step is faster and thus kinetically-irrelevant. DFT-derived
+MEP curves show that two-electron O2 activation routes on NH4-
+POM clusters involve a stepwise mechanism for both inner and
+outer sphere routes, with the ﬁrst step exhibiting the higher barrier
+and limiting the reactions.
+3.3.2. Gibbs free energies of intermediates and transition states
+involved in O2 activation via inner and outer sphere routes
+A more rigorous assessment of the relative contributions of
+these
+two
+O2
+activation
+routes
+requires
+accurate
+estimates
+of Gibbs free energies, which are discussed next for all intermedi-
+ates and transition states involved in inner and outer sphere
+O2 activation routes (steps 3, 4a and 4b; Scheme 3). Free
+energies are calculated at 453 K and 1 bar of gaseous species for
+both routes.
+Inner sphere routes require the recombination of two hydroxyl
+groups in H/OH* (Fig. 6a) to form H2O* (Fig. 6c). This step is endo-
+ergic with a free energy change of 59 kJ mol1 and involves a TS
+Fig. 5. Minimum energy path (MEP) for (a, b) inner and (c, d) outer sphere O2 activation routes (steps 4a and 4b; Scheme 3) on NH4-POM. Panels (a) and (c) show MEP curves
+on triplet potential energy surfaces with singlet (spin-polarized) state single-point energies of each structure shown for comparison. Panels (b) and (d) show converged
+singlet state (spin-polarized) MEP curves with triplet state single-point energies of structures. Transition states energies (N; TSin, TSout (a) and TSout (b)) are calculated using
+dimer calculations started from the images at the highest MEP (TSin, TSout (a); triplet state) or at the singlet-triplet crossing point (TSout (b); spin-polarized singlet state). All
+energies are referenced to common O2(g) and H/OH* precursors.
+236
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+(TSw, Fig. 6b) with a free energy barrier of 70 kJ mol1. The subse-
+quent desorption of H2O forms an O-vacancy (*; Fig. 6d), which is
+slightly endoergic (DGdes = 5 kJ mol1) in spite of the entropy
+gained upon H2O desorption, indicative of the enthalpic instability
+of O-vacancies (electronic energies, entropies, enthalpies, and free
+energies for all species; Table S2; SI). Molecular adsorption of O2 on
+O-vacancies (*) is also endoergic (DGads = 21 kJ mol1) because of
+weak binding and of the loss of translational entropy upon O2 bind-
+ing. Bound O2 species at * (*AO2; Fig. 6e) react via a TS (TSin; Fig. 6f)
+and this step has a free energy barrier of 22 kJ mol1 (referenced to
+bound O2 and *) to form OO* species (Fig. 6g). This O2 activation
+step imposes the highest barrier (step 4a; Scheme 3) along the
+inner sphere reaction coordinate, suggesting that the formation
+of * and H2O(g) from H/OH* is quasi-equilibrated (step 3;
+Scheme 3). Such equilibration is consistent with the decrease in
+rEpox/rODH ratios upon adding H2O due to a shift in the * and H/
+OH* equilibrium towards the latter (Fig. 4).
+In the outer sphere routes (step 4b; Scheme 3), O2(g) adsorbs
+weakly on H/OH* (DGads = 22 kJ mol1; H/OH*-O2, Fig. 6h). Bound
+O2 species react with surface OAH bonds to form H2O2 and O*
+(O*-H2O2; Fig. 6j) via a TS (TSout Fig. 6i), and this O2 activation step
+has a free energy barrier of 56 kJ mol1, referenced to bound O2
+and H/OH*. H2O2 molecules bound on O* desorb in an exoergic step
+(DGdes = 10 kJ mol1).
+The kinetic relevance of inner and outer sphere O2 activation
+routes during re-oxidation events can be assessed by their rate
+ratios (rin/rout, deﬁned as v; Eq. (11)), which depends on the ratio
+of the respective rate parameters (k0in/kout) and on the H2O pres-
+sure. These rate parameters, k0in (kin/Kw) and kout, reﬂect the free
+energies of O2 activation transition states that are referenced to
+the common precursors of O2(g) and H/OH*, as shown in Fig. 6
+(107 and 78 kJ mol1 for TSin and TSout, respectively). The values
+of v, calculated using these DFT-derived free energies, and their
+comparisons to experimental values are discussed next.
+Fig. 6. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and optimized structures of intermediates and transition states involved in O2 activation on NH4-POM via inner and
+outer sphere routes (steps 3, 4a and 4b; Scheme 3). Gibbs free energies are referenced to the common precursors of H/OH* and O2(g).
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+237
+3.3.3. DFT-derived assessment of the relative contributions of inner
+and outer sphere O2 activation routes
+DFT-derived electronic energies, enthalpies, entropies and free
+energies for O2 activation via inner and outer sphere routes are
+shown in Table 1. Uncertainties in calculating low-frequency vibra-
+tional modes (less than 150 cm1) of weakly bound adsorbates
+and transition states can lead to signiﬁcant errors in thermody-
+namic properties. Therefore, zero-point energies, enthalpy and
+entropy values are obtained by substituting the contributions of
+low-frequency modes with 0.7 times the translational and rota-
+tional modes of O2(g), inspired by the experimental data suggest-
+ing that weakly adsorbed molecules on oxide surfaces retain 0.7
+of entropy of corresponding gaseous molecules [43]. At the limit
+where O2 moiety in transition states does not retain any transla-
+tional and rotational degree of freedom, these low-frequency
+modes can be fully removed from vibrational partition functions,
+and thermodynamic properties calculated using such treatments
+are also shown in Table 1 for comparison. The ratio of re-
+oxidation rates via inner and outer sphere routes (v = rin/rout)
+based on these two different sets of assumptions are shown in
+Fig. 7a. At a given temperature, the removal of low-frequency
+vibrations (the dashed line; Fig. 7a) leads to much smaller v values
+than their substitution by translations and rotations (the solid line;
+Fig. 7a), suggesting that the transition state for the inner sphere
+route has greater entropy contributions from weak surface modes.
+The slopes of trends with temperature (Fig. 7a), however, were
+similar for both types of calculations, consistent with small effects
+of such treatments on enthalpies. The experimental rate ratio (v =
+rin/rout) is obtained by regressing the rate data in Figs. 3 and 9 to
+the functional form of the rate equations for ODH and epoxidation
+(rate equations and estimated parameters in Scheme 4), derived
+from the elementary steps in Schemes 2 and 3 (derivation in Sec-
+tion S10, SI). Its value (0.1 at 0.01 kPa H2O, 453 K) lies within the
+two sets of DFT-derived values for the two different assumptions
+about low-frequency vibrational modes (0.01 < v < 4.4; 0.01 kPa
+H2O; 453 K; Fig. 7a).
+The v values increase with increasing temperature (Fig. 7b),
+indicating that inner sphere routes become more prevalent at
+higher temperatures, consistent with the higher activation enthal-
+pies for the inner sphere route (Table 1). Higher H2O pressures
+favor the outer sphere routes and lead to lower v values, because
+of a concomitant preference for H/OH* over * species, as also evi-
+dent from measured rEpox/rODH ratios that decrease with increasing
+H2O pressures (Fig. 4). High operating temperatures with low H2O
+contents favor OO*-mediated inner sphere routes and thus lead to
+larger ratios of epoxidation to ODH rates. The v values (=rin/rout)
+are also inﬂuenced by the composition of oxide catalysts, with a
+greater preference for inner sphere routes on the more reducible
+Mo-V based POM clusters than on W-POM clusters [14]. Such
+effects of redox properties of oxides on inner and outer sphere
+O2 activation transition states, and their concomitant inﬂuences
+on rate constant ratios (k0in/kout; Eq. (11)) and v values are the sub-
+ject to on-going studies, the results of which will be published at a
+later time.
+3.4. Effects of the concentrations of reduced centers on re-oxidation
+routes
+The relative contributions from inner and outer sphere O2 acti-
+vation routes (steps 4a and 4b; Scheme 3) do not depend on the
+Table 1
+DFT-derived electronic energies (DE), enthalpies (DH), entropies (DS), and Gibbs
+free energies (DG) of the transition states for inner and outer sphere O2 activation
+routes (steps 4a and 4b; Scheme 3) referenced to common H/OH* and O2(g)
+precursors on NH4-POM. DFT-derived structures of transition states are shown in
+Fig. 6.
+Inner sphere route
+(steps 4a; Scheme 3)
+Outer sphere route
+(step 4b; Scheme 3)
+DE (kJ mol1)a
+141
+14
+DH (kJ mol1)b
+131 (134)
+9 (10)
+DS (J mol1 K1)b
+54 (9)
+152 (140)
+DG (kJ mol1)b
+107 (92)
+78 (73)
+a At 0 K in vacuum, without zero-point vibrational energy corrections.
+b Determined at 453 K and 1 bar of gaseous molecules. Values inside and outside
+parentheses are calculated by removal of low-frequency vibrations and by their
+substitution with 0.7 of translations and rotations of O2(g), respectively.
+Fig. 7. DFT-derived v values (v = rin/rout; Eq. (11)) on NH4-POM as a function reciprocal temperature at (a) 0.01 kPa H2O and (b) 0.01 to 10 kPa H2O. The dashed lines in (a)
+represent values obtained by removing the contributions of low-frequency vibrational modes while the solid lines are obtained by substituting such contributions with a 0.7
+fraction of translational and rotational degrees of freedom of O2(g) (values in Table 1). Differences between v values from these two treatments are shaded. The symbol (j)
+represents the measured v value (0.01 kPa H2O, 453 K) determined by regressing the rate data in Figs. 3 and 9 to the functional form of the rate equation in Scheme 4. The
+shaded region in (b) represents v values less than unity.
+238
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+total number of reduced centers present during steady-state ODH
+catalysis because both routes require one reduced center (* or H/
+OH*) for O2 activation (Eq. (11)). They depend only on the chem-
+ical state of these reduced centers, because [*]/[H/OH*] ratios and
+thus * and H/OH* concentrations are set by the equilibrium con-
+stant (Kw; step 3; Scheme 3) and the prevalent H2O pressure.
+The completion of re-oxidation steps by O2 during each ODH
+turnover, however, requires the ultimate consumption of these
+O2-derived species (OO* and H2O2) in subsequent re-oxidation
+steps.
+H2O2 molecules formed via outer sphere O2 activation routes
+(step 4b; Scheme 3) can desorb and react with another reduced
+(* or H/OH*) or oxidized (O*) center in NH4-POM clusters. Homoge-
+neous H2O2 decomposition rates are undetectable below 723 K
+[53] and thus do not contribute at the conditions used in this study.
+H2O2 can react with either type of reduced centers (* or H/OH*) in
+NH4-POM to form H2O (one or two molecules from * or H/OH*,
+respectively) and re-oxidize these centers by forming O* species
+(step 6a; Scheme 3) [12]. The sequential re-oxidation events via
+steps 4b and 6a in Scheme 3 complete the four-electron oxidation
+by O2, using H2O2 as the molecular shuttle for the second O-atom
+in O2. These routes circumvent epoxidation reactions by prevent-
+ing the formation of electrophilic bound OO* species and represent
+the predominant re-oxidation route, as evident from epoxidation
+to ODH rate ratios (repox/rODH) that remain much smaller than unity
+even at high C3H6/CH3OH ratios (Fig. 4). In contrast, H2O2 reactions
+with oxidized centers (O*) can form OO* and H2O (step 6b;
+Scheme 3), as proposed for alkene epoxidation with H2O2 on
+POM clusters [29,45–47]. This H2O2 consumption route leads to a
+kinetic ‘‘crossing point” between otherwise parallel outer and
+inner sphere O2 activation routes (steps 4a and 4b; Scheme 3),
+because H2O2 formed in outer sphere route forms the same OO*
+species derived from inner sphere routes.
+H2O2 consumption via reactions with reduced or oxidized cen-
+ters (steps 6a and 6b; Scheme 3) inﬂuences rEpox/rODH ratios
+because reactions with reduced centers avoid the formation of
+OO* and thus epoxidation. The ratio of the rates of these two
+H2O2 reactions (r6a/r6b, deﬁned as c) is given by:
+c ¼ r6a
+r6b
+¼ k6a PH2O2 
+½ þk6a H=OHPH2O2 H=OH
+½
+
+k6bPH2O2 O
+½
+
+¼
+k6a 
+KwPH2O þ k6a H=OH
+
+
+k6b
+H=OH
+½
+
+O
+½
+
+¼ a H=OH
+½
+
+O
+½
+
+ð12Þ
+k6a_*, k6a_H/OH* and k6b represent the ﬁrst-order rate constants for
+H2O2 reactions with *, H/OH* and O* species, respectively (steps
+6a and 6b; Scheme 3). The rate ratios, c (= r6a/r6b), depend on the
+value of a (=(k6a_*/KwPH2O + k6a_H/OH*)/k6b) and on [H/OH*]/[O*] ratios.
+When the contributions by OO*-mediated routes to re-oxidation
+events are minor, [H/OH*]/[O*] ratios are given by (detailed deriva-
+tion in Section S10):
+H=OH
+½
+
+O
+½
+
+¼ k
+0
+ODHPalkanol
+2koutPO2
+;
+ð13Þ
+which applies, in general, for ODH reactions of different alkanols.
+The factor of two in the denominator reﬂects the two reduced cen-
+ters that are re-oxidized by each O2. The k0ODH values depend on the
+free energy of a kinetically-relevant H-abstraction TS respect to its
+gaseous alkanol and O* precursors. The substitution of Eq. (13) into
+Eq. (12) gives a value for c (=r6a/r6b):
+c ¼ r6a
+r6b
+¼ ak
+0
+ODHPalkanol
+2koutPO2
+ð14Þ
+Next, we vary these c values by using more reactive alkanols
+(C2H5OH; larger k0ODH value) and different CH3OH/O2 reactant
+ratios.
+3.4.1. Effects of alkanol reactivity on ODH and C3H6 epoxidation rates
+Alkanol ODH and C3H6 epoxidation rates, measured with two
+different alkanols (C2H5OH and CH3OH), are shown in Fig. 8a at dif-
+ferent C3H6 pressures (1–35 kPa; 453 K). C2H5OH ODH rates were
+about three-fold larger than for CH3OH, as expected from the
+weaker
+CAH
+bonds
+in
+C2H5OH
+[10,54].
+Epoxidation
+rates
+approached constant asymptotic values with increasing C3H6 pres-
+sure for both alkanols, but these values were larger for C2H5OH
+than CH3OH. These trends reﬂect higher OO* formation rates
+Scheme 4. Rate equations for CH3OH ODH and C3H6 epoxidation derived from steps proposed in Schemes 2 and 3 and rate parameters estimated from measured data on
+NH4-POM at 453 K Details of the derivations are in Section S10. Rate parameters are estimated by ﬁtting the rate data in Figs. 3 and 9 to the functional form of rate equations
+for C3H6 epoxidation and CH3OH ODH. Uncertainties reﬂect 95% conﬁdence intervals.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+239
+resulting from a higher concentration of reduced centers (* and H/
+OH*) for the alkanol with larger ODH rate constant (k0ODH; Eq. (13)).
+Asymptotic epoxidation rates are much smaller than ODH rates for
+both alkanols, indicating that re-oxidation routes that exclude OO*
+intermediates remain the predominant re-oxidation path for both
+reactants.
+These asymptotic rEpox/rODH ratios reﬂect the fraction of re-
+oxidation events mediated by OO* intermediates, either via inner
+sphere O2 activation or via H2O2 (formed in outer sphere routes)
+reactions with O*. C2H5OH reductants, which lead to larger cover-
+ages of reduced centers than CH3OH, led to smaller rEpox/rODH ratios
+and to the less prevalent involvement of OO*-mediated routes
+(Fig. 8b). These data indicate that more abundant reduced centers
+(* or H/OH*) lead to a higher probability of H2O2 reactions with
+such centers, thus forming O*, instead of reacting with O* to form
+OO* (steps 6a and 6b; Scheme 3), leading to the higher c values
+observed for the more reactive alkanol (Eq. (14)).
+3.4.2. Effects of CH3OH and O2 pressures on CH3OH ODH and C3H6
+epoxidation rates
+Both CH3OH ODH and C3H6 epoxidation rates increased with
+increasing CH3OH pressure (<1 kPa; Fig. 9a), because reduced
+centers formed via CH3OH dehydrogenation (step 2; Scheme 2)
+act as intermediates for epoxidation events by activating O2 as
+OO* species. The (rEpox/rODH) ratios decreased with increasing
+CH3OH pressure (Fig. 10), indicating that OO*-mediated re-
+oxidation routes become less prevalent as the concentration of
+reduced centers (* or H/OH*) increases. As in the case of the
+Fig. 8. (a) Measured rates (per POM-ks) of CH3OH (N) and C2H5OH (.) ODH and C3H6 epoxidation (r and j, measured with CH3OH and C2H5OH, respectively) and (b) the
+ratio of epoxidation to ODH rates for CH3OH (d) or C2H5OH (►) reactants as a function of C3H6 pressure (1–35 kPa) on NH4-POM at 453 K (1 kPa alkanol, 20 kPa O2). Dashed
+curves represent regression of the rate data to the functional form of rate equations in Scheme 4. Differences between the measurements with CH3OH and C2H5OH are shaded.
+Fig. 9. C3H6 epoxidation and CH3OH ODH rates (per POM-ks) measured on NH4-POM at 453 K as a function of (a) CH3OH pressure (0.1–4 kPa; 20 kPa O2, 35 kPa C3H6) and (b)
+O2 pressure (1–25 kPa; 1 kPa CH3OH, 35 kPa C3H6). Dashed curves represent best regression ﬁts of the rate data to the functional form of rate equations in Scheme 4.
+240
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+more reactive alkanol, this reﬂects H2O2 reactions with reduced
+centers (* or H/OH*), which circumvent OO* formation via H2O2
+reactions with O*.
+The number of reduced centers also increases as the O2 pressure
+decreases (Eq. (13)). Epoxidation rates increased slightly with O2
+pressure, even though ODH rates remained unchanged (Fig. 9b).
+These trends are evident in (rEpox/rODH) ratios that decreased
+monotonically with the reciprocal of O2 pressures (Fig. 10), indica-
+tive of a concomitant increase in c values (Eq. (14)).
+The effects of alkanol reactivity and CH3OH/O2 ratios on (rEpox/
+rODH) values indicate that H2O2 formed via outer sphere O2 activa-
+tion routes react with reduced or oxidized centers (steps 6a and
+6b; Scheme 3) at rates proportional to the relative concentrations
+of these centers (Eqs. (12)–(14)). These steps are mediated by the
+diffusive shuttling of H2O2(g), which allows the second two-
+electron oxidation to occur at reduced or oxidized centers present
+beyond molecular distances. In contrast, bound peroxo (OO*) spe-
+cies can access non-vicinal reduced centers only via the activated
+migration of one of its O-atoms throughout oxide surfaces; such
+OO* hopping routes, however, impose signiﬁcant kinetic hurdles.
+As a result, they cannot account for the fast nature of re-
+oxidation routes during ODH turnovers. OO* species can decom-
+pose instead by two-electron oxidation of a gaseous reductant,
+either an alkanol (step 5a; Scheme 3) or an alkene (step 5b;
+Scheme3), thus completing the four-electron oxidation by O2. In
+what follows, theoretical treatments are used to examine the
+routes by which O2-derived species (OO* or H2O2) react in subse-
+quent steps to complete the reduction-oxidation cycles required
+for catalytic oxidation turnovers.
+3.5. DFT-derived free energies of intermediates and transition states
+involved in the reactions of O2-derived species
+3.5.1. Decomposition routes of bound peroxo (OO*) species
+3.5.1.1. OO* reactions with a distant reduced center. During ODH
+catalysis, reduced centers are present as minor species, as
+evidenced from the zero-order dependence of ODH rates on O2
+pressure (Figs. 1b and 3b) and from in-situ UV–vis studies [19].
+The unfavorable thermodynamics also lead these centers (i.e.
+O-vacancies) to be isolated, consistent with much higher energy
+(by 117 kJ mol1) of the H-POM cluster with vicinal O-vacancies
+than with isolated O-vacancies (located at Ob2 and Ob3 versus
+Ob2 and Ob4; Fig. S11). This is also evident from DFT-derived HAE
+values, which become much less negative (by 50–70 kJ mol1)
+for O-atoms near a reduced center (H/OH*) than for distant O-
+atoms, indicative of the unlikely formation of proximal reduced cen-
+ters (Fig. S11). The decomposition of bound peroxo (OO*) species via
+reactions with another reduced center (OO* + * ? 2O*)[11,20] thus
+requires sequential ‘‘OO* hopping” steps to reach a non-vicinal
+reduced center, where the migrating species must traverse signiﬁ-
+cant distances at such low prevalent concentrations of reduced cen-
+ters. Fig. 11 shows DFT-derived free energies (453 K, 1 bar) and the
+structures of the intermediates and transition states involved in OO*
+decomposition via hopping to non-vicinal reduced center. Free ener-
+gies are referenced to OO* and non-vicinal H/OH*, which represent
+the ‘‘reactants” in such migration events.
+An O-vacancy (*) forms from H/OH* species via recombinative
+desorption of H2O (step 3; Scheme 2; Section 3.3.2). The reaction
+of this vacancy with non-vicinal OO* must involve a migration of
+an O-atom in OO* to a vicinal O*. This O-hopping step involves a
+TS (TSO_hopping; Fig. 11a) that represents the highest barrier (DG
+= +151 kJ mol1) along the OO* decomposition reaction coordinate;
+this step must occur several times in order to reach a remote
+vacancy.
+Once
+OO*
+reaches
+a
+location
+vicinal
+to
+*
+(OO*_*;
+Fig. 11b), it reacts to form two O* species via a TS (TSAct_OO*;
+Fig. 11c) with a free energy barrier much lower than the O-
+hopping step.
+DFT-derived activation barriers for OO* hopping steps (DG =
+151 kJ mol1) are much higher than OO* formation steps via inner
+or outer sphere O2 activation routes (steps 3, 4a and 4b; Scheme 3;
+107 and 78 kJ mol1; Section 3.3.2). These barriers are also higher
+than the kinetically-relevant H-abstraction step (step 2; Scheme 2;
+139 kJ mol1) and thus inconsistent with re-oxidation rate con-
+stants that are much larger than for reduction steps [19], and with
+the presence of reduced centers as minority species during ODH
+reactions. Therefore, we conclude that OO* migrations and reac-
+tions with another reduced center do not contribute detectably
+to re-oxidation events in Mars-van Krevelen redox cycles for these
+oxide systems.
+3.5.1.2. OO* reactions with alkanols. The dearth of vicinal reduced
+centers and the high OO* hopping barriers indicate that more facile
+OO* decomposition routes must be involved. OO* can react with
+reactant alkanols to form alkanals and H2O, regenerating O* (step
+5a; Scheme 3). Fig. 12 shows DFT-derived structures and free ener-
+gies (453 K, 1 bar) of intermediates and transition states involved
+in such routes.
+CH3OH adsorbs weakly on OO* (DG = 4 kJ mol1; Fig. 12a) and
+reacts via a CAH activation TS (TSODH_OO*; Fig. 12b) with a free
+energy of 94 kJ mol1, referenced to its CH3OH(g) and OO* precur-
+sors. This CAH activation can lead to OOH* and a bound CH2OH
+species, which forms HCHO (Fig. 12c) via a sequential OAH activa-
+tion step by a vicinal O*; the free energy of this OAH cleavage TS
+(DG = 14 kJ mol1, referenced to CH3OH(g) and OO*; Fig. S12) is
+much lower than the CAH activation TS. The OOH* species and vic-
+inal OH* formed react to release H2O and re-form O* via a dehydra-
+tion TS (TSDehyd; Fig. 12d), which also present much lower
+activation barrier than the CAH activation step. Alternatively, the
+CAH activation can be followed by an insertion of an O-atom in
+OO*
+into the
+CAH
+bond in
+CH3OH
+to
+form
+methane
+diol
+(Fig. 12e), which dehydrates to form HCHO and H2O via a H-
+atom transfer TS (TS0
+Dehyd; Fig. 12f) with a free energy much lower
+Fig. 10. Ratios of epoxidation to ODH rates (rEpox/rODH) as a function of CH3OH
+pressure (d, 0.1–4 kPa, 20 kPa O2, 35 kPa C3H6) and the reciprocal of O2 pressure (N,
+1–25 kPa, 1 kPa CH3OH, 35 kPa C3H6) on NH4-POM at 453 K. Dashed curves
+represent best regression ﬁts of the rate data to the functional form of rate
+equations in Scheme 4.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+241
+Fig. 11. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and structures of intermediates and transition states involved in OO* decomposition routes on NH4-POM via
+O-atom migration and reaction with another reduced center. Free energies of OO* and H/OH* are taken as reference.
+Fig. 12. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and structures of intermediates and transition states on NH4-POM involved in OO* reactions with CH3OH(g) to form
+O*, HCHO(g) and H2O(g) (step 5a; Scheme 3). Two plausible reaction routes, one involving sequential CAH and OAH activations and another inserting O-atom into CAH bond
+are considered. Free energies of OO* and CH3OH(g) are taken as reference.
+242
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+than the CAH activation TS. In both cases, OO* decomposes to re-
+form O* by reacting with CH3OH(g), ultimately leading to form
+HCHO and H2O.
+The ratio of the rates for OO* decomposition via oxidation of
+non-vicinal reduced centers (*) to that for its oxidation of CH3OH
+(g) reactants (d = r*_OO*/rODH_OO*) is given by:
+d ¼
+r OO
+rODH OO ¼ ðk OO=ðKwPH2OÞ OO
+½
+ H=OH
+½
+
+kODH OO OO
+½
+PCH3OH
+ð15Þ
+Here, kODH_OO* reﬂects the ﬁrst-order rate constant for OO* reac-
+tion with CH3OH(g) and depends on the free energy of a CAH acti-
+vation TS (TSODH_OO*; Fig. 12b), relative to its CH3OH(g) and OO*
+precursors. K*_OO*/Kw denotes the rate parameter for OO* reaction
+with a non-vicinal reduced center (H/OH*) and depends on the free
+energy of a OO* hopping TS (TSO_hopping; Fig. 11a), relative to OO*
+and a non-vicinal H/OH*. The (k*_OO*/(KwkODH_OO*)) value calculated
+from DFT-derived free energies is 3x107 (453 K; 1 bar), which,
+taken together with the presence of reduced centers as minority
+intermediate species, indicates that d values are much less than
+unity and that CH3OH reactions with OO* are much faster than
+OO* hopping routes.
+3.5.1.3. OO* reactions with alkenes. C3H6 molecules introduced in
+CH3OH-O2 streams can also react with OO* to form propene oxides
+(step 5b; Scheme 3), as shown by their formation from such reac-
+tant mixtures (Figs. 3 and 9). Fig. 13 shows DFT-derived free ener-
+gies (453 K; 1 bar) and structures for the intermediates and
+transition states involved in OO*-C3H6 reactions. C3H6 adsorbs
+weakly on OO* with a reaction free energy of 22 kJ mol1
+(Fig. 13a) and forms propene oxide via an O-insertion transition
+state (TSEpox; Fig. 13b) with an activation free energy of 103 kJ
+mol1, referenced to its OO* and C3H6(g) precursors.
+The effects of C3H6 pressure on epoxidation rates (<8 kPa C3H6;
+Fig. 3a) reﬂect competitive CH3OH and C3H6 reactions with OO*
+(steps 5a and 5b; Scheme 3) as discussed in Section 3.2.1. The ratio
+of these two OO* decomposition rates (e = rEpox/rODH_OO*) is:
+e ¼
+rEpox
+rODH OO ¼
+kEpox½OOPC3H6
+kODH OO½OOPCH3OH
+¼ b PC3H6
+PCH3OH
+ð16Þ
+Here, kODH_OO* is the ﬁrst-order rate constant for OO* reaction
+with CH3OH(g) (step 5a; Scheme 3) and depends on the free energy
+of the CAH activation TS (TSODH_OO*; Fig. 12b), relative to its CH3OH
+(g) and OO* precursors. The kEpox term denotes the ﬁrst-order rate
+constant for the reaction of OO* with C3H6(g) (step 5b; Scheme 3),
+which reﬂects the free energy of an O-insertion TS (TSD_Epox;
+Fig. 13b), referenced to C3H6(g) and OO*. The value of b (=kEpox/
+kODH_OO*) derived from DFT calculations (0.12) is smaller than
+unity, indicating that equimolar C3H6-CH3OH reactants would
+preferentially decompose OO* via reactions with CH3OH instead
+of
+C3H6.
+Such
+conclusions
+are
+consistent
+with
+epoxidation
+rates that increase with increasing C3H6 pressure and reach con-
+stant values only for C3H8/CH3OH ratios much larger than unity
+(Fig. 3a).
+These OO*-mediated routes account for only a small fraction
+(<0.1) of all re-oxidation events during CH3OH ODH on NH4-POM
+clusters, as shown by asymptotic (rEpox/rODH) ratios much smaller
+than unity (<0.1; Fig. 4). The alternate and predominant routes
+mediated by H2O2 molecules are discussed next.
+3.5.2. H2O2 decomposition routes
+3.5.2.1. H2O2 reactions with reduced centers. H2O2 molecules formed
+via outer sphere O2 activation at H/OH* species (step 4b; Scheme 3)
+can re-oxidize another reduced center (* or H/OH*) to re-form O*
+(step 6a; Scheme 3), thus acting as the O-atom shuttle between
+two reduced centers located beyond molecular distances. Fig. 14
+shows DFT-derived free energies (453 K, 1 bar) and structures for
+the intermediates and transition states that mediate these H2O2
+decomposition on * or H/OH*. Free energies in both cases are refer-
+enced to H2O2(g) and H/OH* species to allow a rigorous comparison
+based on their rate ratios.
+H2O2 decomposition on O-vacancies (*) involves molecular
+adsorption of H2O2 (DGads = 3 kJ/mol; *_H2O2; Fig. 14a) and reac-
+tions with a vicinal O* via a H-transfer TS (DG = 70 kJ mol1, refer-
+enced to H2O2(g) and H/OH*; TS6a; Fig. 14b) to form vicinal OOH*
+and OH* (OOH/H*; Fig. 14c). These two species then recombine to
+form H2O(g) and O* via a H2O elimination TS (TSDehyd; Fig. 14d)
+with a free energy much less than TS6a.
+The decomposition of H2O2 on H/OH* without intervening
+vacancy formation involves weak H2O2 adsorption (DGads = 35 kJ
+mol1; H/OH*_H2O2; Fig. 14e) and a TS (DG = 84 kJ mol1, refer-
+enced to H2O2(g) and H/OH*; TS0
+6a; Fig. 14f) that leads to form
+two adsorbed H2O molecules at vicinal O* species (O*_2H2O;
+Fig. 14g). This route avoids the formation or cleavage of Mo-O
+bonds, as in the case of outer sphere O2 activation on H/OH* species
+(step 4a; Scheme 3).
+Fig. 13. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and structures of intermediates and transition states on NH4-POM involved in OO* reactions with C3H6 to form O*
+and propene oxide (step 5b; Scheme 3). Free energies of OO* and C3H6(g) are taken as reference.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+243
+The relative rates for H2O2 reactions with * and H/OH* depend
+on the ratios of their rate constants and on the relative abundance
+of two centers; the ([*]/[H/OH*]) ratio is determined by the water
+adsorption equilibrium constant on * (Kw) and the H2O pressure.
+H2O2 reactions with * and H/OH* ultimately re-oxidize one reduced
+center to form O*, thus completing a four-electron re-oxidation
+using one O2 molecule without involving OO* intermediates; these
+two H2O2 decomposition routes are shown together as step 6a in
+Scheme 3.
+3.5.2.2. H2O2 reactions with O* and the kinetic crossing between outer
+and inner sphere O2 activation routes. DFT-derived free energies
+(453 K; 1 bar) and structures of intermediates and transition states
+involved in H2O2 reactions with O* to form OO* and H2O (step 6b;
+Scheme 3) are shown in Fig. 15. Weakly-adsorbed H2O2 on O*
+(DGads = 10 kJ mol1; O*-H2O2; Fig. 15a) forms vicinal hydroperoxo
+(O-OOH) and OH* (denoted as O-OOH/H*; Fig. 15c) species in a step
+mediated by a TS in which one H-atom is abstracted from H2O2 by
+O* (TS6b_1; Fig. 15b). The free energy barrier is 140 kJ mol1 when
+referenced to H2O2(g) and O*. These O-OOH/H* species form bound
+peroxo species (OO*) and H2O via an O-insertion TS (TS6b_2;
+Fig. 15d) with a free energy barrier of 158 kJ mol1 (referenced to
+H2O2(g) and O*), which exhibits the highest free energy along the
+reaction coordinate. This route creates a kinetic shunt between
+inner and outer sphere O2 activation routes through the formation
+of OO* species, typically associated with inner sphere routes (step
+4a; Scheme 3), using the reaction of H2O2, formed in outer sphere
+routes (step 4b; Scheme 3), with O* (step 6b; Scheme 3). Such
+kinetic shunt leads, in turn, to an increase in (rEpox/rODH) ratios as
+reduced centers become less prevalent and H2O2 preferentially
+react with O* to form OO* species required for epoxidation events
+(Section 3.4).
+Asymptotic rEpox/rODH ratios much smaller than unity (<0.1;
+Fig. 4) reﬂect the minor contributions by OO*-mediated routes to
+re-oxidation events at typical ODH conditions. This suggests, in
+turn, that the H2O2 molecules formed in the predominant O2 acti-
+vation route (step 4a; Scheme 3) react predominantly with reduced
+centers (* or H/OH*) instead of with O*, even when re-oxidation
+events are facile and reduced centers are present as minority spe-
+cies during ODH catalysis. Indeed, DFT-derived free energy barriers
+for H2O2 reactions with O* to form OO* (156 kJ mol1) are much
+higher than for H2O2 reactions with * (70 kJ mol1) or H/OH* (84
+kJ mol1) to form O* and H2O, when referenced to the same
+H2O2(g) precursor and to the respective surface species (O* or H/
+OH*).
+The OO* species involved in epoxidation events are formed via
+inner sphere O2 activation (step 4a; Scheme 3) and via outer sphere
+O2 activation and successive H2O2 reactions with O* (steps 4b and
+Fig. 14. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and structures of intermediates and transition states on NH4-POM involved in H2O2 reactions with a reduced center
+(* or H/OH*) to form O* and H2O (step 6a; Scheme 3). The panel (a) involves the reaction with * (blue dash lines), while the panel (b) shows the reaction with H/OH * (black
+solid lines). Free energies are referenced to the common H2O2(g) and H/OH* precursors.
+244
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+6b; Scheme 3). A preference for OO*-mediated re-oxidation routes
+is required for high epoxidation selectivities during ODH reactions,
+which can be achieved by increasing rin/rout ratios (v; Eq. (11)) and
+decreasing r6a/r6b ratios (c; Eq. (14)). An increase in rin/rout ratios
+(v; Eq. (11)) leads to a larger fraction of reduced centers forming
+to OO* species (instead of H2O2(g)) and can be achieved by operat-
+ing at higher temperatures or lower H2O contents (Section 3.3.3). A
+decrease in r6a/r6b ratios (c; Eq. (14)) also leads to a greater prefer-
+ence for OO*-mediated routes by increasing the fraction of H2O2
+molecules reacting with O* to form OO* species (and H2O) instead
+of with reduced centers to form O* (and H2O). Lower * and H/OH*
+coverages minimize H2O2 decomposition on such centers and lead
+to the higher (r6a/r6b) ratios observed for less reactive alkanols and
+or at lower CH3OH/O2 ratios (Eq. (14)).
+3.6. Kinetic rate equations for CH3OH ODH and C3H6 epoxidation
+Schemes 2 and 3 summarize plausible routes for the reduction
+and re-oxidation parts of ODH cycles and for the scavenging reac-
+tions of OO* intermediates via C3H6 epoxidation. The rate equations
+for CH3OH ODH and C3H6 epoxidation are derived here, in order to
+compare their consistency with kinetic data in Figs. 3 and 9 and to
+estimate rate parameters for the elementary steps.
+The steps in Schemes 2 and 3, taken together with the assump-
+tions about their reversibility, discussed in detail in the previous
+sections, lead to rate equations for CH3OH ODH and C3H6 epoxida-
+tion (listed in Scheme 4). The derivation of the rate equations is
+discussed here. Steps 2 (Scheme 2) and 5a (Scheme 3) both form
+ODH products, leading to a combined ODH rate (rODH) given by:
+rODH ¼ k
+0
+ODHPCH3OH O
+½
+ þ kODH OOPCH3OH OO
+½
+
+ð17Þ
+k0ODH and kODH_OO* denote ﬁrst-order rate constants for step 2
+(Scheme 2) and step 5a (Scheme 3), respectively. C3H6 epoxidation
+rates (rEpox) depend on the rate constant (kEpox) for step 5b
+(Scheme 3), the C3H6 pressure, and the concentration of OO* species
+(Eq. (6)). The steady-state [OO*] concentration is given by (deriva-
+tion in Section S10):
+OO
+½
+ ¼
+kin
+KwPH2O þ
+kout
+1þa
+k0
+ODHPCH3OH
+2koutPO2
+0
+@
+1
+A k0
+ODHPCH3OH
+2kout
+kODH OOPCH3OH þ kEpoxPC3H6
+O
+½
+;
+ð18Þ
+for the case of re-oxidation predominantly mediated via steps 4b
+and 6a (Scheme 3), as is evident from the small asymptotic rEpox/
+rODH values at high C3H8/CH3OH ratios (Fig. 4). Here, KW denotes
+the equilibrium constant for step 3 (Scheme 3) and kin and kout
+are the ﬁrst-order rate constants for inner and outer sphere O2 acti-
+vation route (steps 4a and 4b; Scheme 3). The ratio of rate constants
+for H2O2 reactions with reduced and oxidized centers is given by a
+(Eq. (12)). When reduced centers and bound O2-derived species are
+present as minority surface species, the site balance gives an
+expression for [O*]:
+O
+½
+ ¼
+1
+1 þ KCH3OHPCH3OH þ KH2OPH2O þ KC3H6PC3H6
+ð19Þ
+The denominator terms reﬂect the relative surface concentra-
+tions of (O*), (CH3OH-O*), (H2O-O*), (C3H6-O*), in the order that
+they appear.
+The substitution of Eqs. (18) and (19) into Eqs. (17) and (6) leads
+to ODH and epoxidation rate equations (Scheme 4). The regression
+of the kinetic data in Figs. 3 and 9 to the functional form of these
+rate equations gives the groups of equilibrium and rate constants
+listed in Scheme 4. These CH3OH ODH and C3H6 epoxidation rate
+equations accurately describe all rate data, as shown by the dashed
+curves in Figs. 3 and 9. Parity plots for ODH and epoxidation rates
+are shown in Fig. S13. Without C3H6 co-reactants, the CH3OH ODH
+rate equation (Scheme 4) simpliﬁes to Eq. (5) when re-oxidation
+events predominantly occur via steps 4b and 6a (Scheme 3).
+4. Conclusions
+C3H6 molecules are used to scavenge bound O2-derived species
+formed during the re-oxidation part of Mars-van Krevelen catalytic
+cycles for alkanol ODH on solid oxides. The effects of C3H6, H2O,
+CH3OH, and O2 pressures and the reactivity of alkanols on alkanol
+ODH and C3H6 epoxidation rates and their rate ratios are analyzed
+to provide insights on kinetic networks and elementary steps
+involved in re-oxidation routes and on the involvement of O2-
+derived species for O-insertion reactions. Such experiments are
+combined with DFT treatments of free energies of relevant inter-
+mediates and transition states to address the types of O2-derived
+species mediating re-oxidation routes and the relative rates of
+their formations and decompositions.
+C3H6 epoxidation products are detected in O2-C3H6 mixtures
+only when alkanols are also present in reactant streams and they
+undergo ODH reactions. Such coupling of ODH and epoxidation
+reactions suggests that reduced centers formed via alkanol ODH
+act as reactants for O2 activation that leads to the formation of
+Fig. 15. DFT-derived free energies (kJ mol1; 453 K, 1 bar) and structures of intermediates and transition states on NH4-POM involved in H2O2 reactions with an oxidized
+center (O*) to form OO* and H2O(g) (step 6b; Scheme 3). Free energies of H2O2(g) and O* are taken as reference.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+245
+electrophilic dioxygen species required for epoxidation. These
+mechanistic interpretations are consistent with inner sphere O2
+activation routes mediated by bound peroxo (OO*) species, which
+are ubiquitous in homogeneous POM catalysis, electro-catalysis
+and bio-catalysis with monooxygenase enzymes. The contributions
+of these OO*-mediated routes to re-oxidation events, however, are
+minor for Mo-based NH4-POM clusters, as evidenced by epoxida-
+tion to ODH rate ratios that were much less than unity (<0.1) at
+all relevant conditions.
+The alternative and predominant re-oxidation routes involve
+proton-coupled electron-transfers from reduced centers (H/OH*)
+to O2 to form H2O2, which can easily desorb and re-oxidize another
+reduced center (* or H/OH*) to form O* (and H2O). The H2O2 mole-
+cules can also react with an oxidized center (O*) to form OO* spe-
+cies (and H2O), creating a kinetic shunt between inner and outer
+sphere O2 activation routes; this shunt leads to higher epoxidation
+to ODH rate ratios at lower reduced center concentrations.
+Unlike H2O2 molecules, which can desorb and act as a molecular
+shuttle to carry extra O-atoms between surface species that pre-
+sent at distances larger than molecular dimensions, reactions of
+bound OO* species with non-vicinal reduced centers require kinet-
+ically demanding O-hopping steps that must occur several times to
+reach an O* center vicinal to the reduced center. OO* species
+instead can react with a gas-phase reactant, alkanol (CH3OH) and
+alkene (C3H6), to ultimately re-form O* and form ODH and epoxida-
+tion products; these routes present much lower activation barriers
+than conventional O-hopping mechanisms.
+Kinetic analyses on the ODH and scavenging epoxidation reac-
+tions, and their seamless combination with DFT calculations of
+their elementary steps construct a general conceptual framework
+for the analysis of redox reactions that have been refractory to
+probes of re-oxidation mechanisms. In doing so, we show the re-
+oxidation routes that prefer molecular donor (H2O2) or acceptor
+(CH3OH and C3H6) to perform sequential two-electron oxidation
+events occurring at distant locations, instead of the kinetically-
+demanding O-hopping routes. Epoxidation routes uncovered in
+this work also open possibilities of kinetically coupling two oxida-
+tion reactions, alkanol ODH and epoxidation, to utilize both of the
+O-atoms in O2 molecule. Such routes, upon further optimization,
+may provide an economic process to perform epoxidation without
+requiring expensive oxidants, such as H2O2 and organic peroxides.
+Acknowledgements
+The authors thank Drs. Gina Noh and Yongchun Hong for their
+thoughtful discussions and proofreading of the manuscript. This
+work is supported by the U.S. Department of Energy (DOE), Ofﬁce
+of Science, Ofﬁce of Basic Energy Sciences (Contract Number
+DE-AC05-76RL0-1830). DFT calculations were performed using
+computer resources provided by Environmental Molecular Science
+Laboratory
+(EMSL)
+at
+Paciﬁc
+Northwest
+National
+Laboratory
+(PNNL), a DOE Ofﬁce of Science User Facility under the project
+number of 48772, and by Extreme Science and Engineering
+Discovery Environment (XSEDE), which is supported by the
+National Science Foundation under the grant allocation numbers
+of CTS150005, CTS160011 and CHE140066.
+Appendix A. Supplementary material
+Reaction networks of alkanol-O2 reactions on bifunctional cata-
+lysts; effects of NH3 titrations of acid sites on CH3OH dehydration
+and ODH rates; time-on-stream CH3OH dehydration and ODH rates
+before and after introduction of C3H6 co-feed on H-POM; time-on-
+stream CH3OH ODH, and C3H6 epoxidation rates on NH4-POM;
+CH3OH ODH product selectivities on NH4-POM as a function of
+CH3OH conversions; the values of rate and equilibrium constants
+for
+CH3OH
+ODH,
+DFT-derived
+reactivity-averaged
+HAE,
+H-
+abstraction free energy barriers and CH3OH adsorption free energy
+changes on H-POM and NH4-POM; product selectivities of C3H6
+conversions during CH3OH-O2-C3H6 reactions as a function of
+C3H6 conversions; effects of H2O on CH3OH ODH rates; acetone for-
+mation rates from O2-C3H6-H2O reactions on NH4-POM; C3H6 con-
+version and epoxidation rates from CH3OH-O2-C3H6-H2O reactions
+on NH4-POM; spin density maps for the OOH intermediate; DFT-
+derived structures of transition states involved in outer sphere O2
+activation routes; DFT-derived HAE on two-electron reduced H-
+POM cluster; DFT-derived structures of transition states involved
+in reactions of OO* with CH3OH; DFT-derived entropies, enthalpies,
+and Gibbs free energies for intermediates and transition states
+involved re-oxidation steps in Scheme 3; derivations of rate equa-
+tions for CH3OH ODH and C3H6 epoxidation; a comparison of CH3-
+OH ODH and C3H6 epoxidation rates from the model and
+experiment. Supplementary data associated with this article can
+be found, in the online version, at https://doi.org/10.1016/j.jcat.
+2018.05.016.
+References
+[1] T. Punniyamurthy, S. Velusamy, J. Iqbal, Recent advances in transition metal
+catalyzed oxidation of organic substrates with molecular oxygen, Chem. Rev.
+105 (2005) 2329–2363, https://doi.org/10.1021/cr050523v.
+[2] H.H. Kung, Oxidative dehydrogenation of light (C2 to C4) alkanes, Adv. Catal.
+40 (1994) 1–38, https://doi.org/10.1016/S0360-0564(08)60655-0.
+[3] P. Deshlahra, R.T. Carr, S.-H. Chai, E. Iglesia, Mechanistic details and reactivity
+descriptors in oxidation and acid catalysis of methanol, ACS Catal. 5 (2015)
+666–682, https://doi.org/10.1021/cs501599y.
+[4] K. Chen, E. Iglesia, A.T. Bell, Isotopic tracer studies of reaction pathways for
+propane oxidative dehydrogenation on molybdenum oxide catalysts, J. Phys.
+Chem. B. 105 (2001) 646–653, https://doi.org/10.1021/jp002100x.
+[5] H. Feng, J.W. Elam, J.A. Libera, M.J. Pellin, P.C. Stair, Oxidative dehydrogenation
+of cyclohexane over alumina-supported vanadium oxide nanoliths, J. Catal.
+269 (2010) 421–431, https://doi.org/10.1016/j.jcat.2009.11.026.
+[6] Z. Skoufa, E. Heracleous, a.a. Lemonidou, On ethane ODH mechanism and
+nature of active sites over NiO-based catalysts via isotopic labeling and
+methanol sorption studies, J. Catal 322 (2015) 118–129, https://doi.org/
+10.1016/j.jcat.2014.11.014.
+[7] M.D. Argyle, K. Chen, C. Resini, C. Krebs, A.T. Bell, E. Iglesia, Extent of reduction
+of vanadium oxides during catalytic oxidation of alkanes measured by in-situ
+UVvisible spectroscopy, J. Phys. Chem. B. 108 (2004) 2345–2353, https://doi.
+org/10.1021/jp030989m.
+[8] H. Liu, E. Iglesia, Selective oxidation of methanol and ethanol on supported
+ruthenium oxide clusters at low temperatures, J. Phys. Chem. B. 109 (2005)
+2155–2163, https://doi.org/10.1021/jp0401980.
+[9] P. Deshlahra, E. Iglesia, Methanol oxidative dehydrogenation on oxide
+catalysts: molecular and dissociative routes and hydrogen addition energies
+as descriptors of reactivity, J. Phys. Chem. C 118 (2014) 26115–26129, https://
+doi.org/10.1021/jp507922u.
+[10] P. Deshlahra, E. Iglesia, Reactivity and selectivity descriptors for the activation
+of C-H bonds in hydrocarbons and oxygenates on metal oxides, J. Phys. Chem.
+C 120 (2016) 16741–16760, https://doi.org/10.1021/acs.jpcc.6b04604.
+[11] X. Rozanska, E. Kondratenko, J. Sauer, Oxidative dehydrogenation of propane:
+differences between N2O and O2 in the reoxidation of reduced vanadia sites
+and consequences for selectivity, J. Catal. 256 (2008) 84–94, https://doi.org/
+10.1016/j.jcat.2008.03.002.
+[12] Y.V. Geletii, C.L. Hill, R.H. Atalla, I.A. Weinstock, Reduction of O2 to superoxide
+anion (O2
+) in water by heteropolytungstate cluster-anions, J. Am. Chem. Soc.
+128 (2006) 17033–17042, https://doi.org/10.1021/ja064244g.
+[13] M. Kim, I.A. Weinstock, Y.V. Geletii, C.L. Hill, Oxidation of reduced Keggin
+heteropolytungstates by dioxygen in water catalyzed by Cu(II), ACS Catal. 5
+(2015) 7048–7054, https://doi.org/10.1021/acscatal.5b01771.
+[14] D.C. Duncan, C.L. Hill, Mechanism of reaction of reduced polyoxometalates
+with O2 evaluated by 17O NMR, J. Am. Chem. Soc. 119 (1997) 243–244, https://
+doi.org/10.1021/ja9627860.
+[15] M.H. Sazinsky, S.J. Lippard, Correlating structure with function in bacterial
+multicomponent monooxygenases and related diiron proteins, Acc. Chem. Res.
+39 (2006) 558–566, https://doi.org/10.1021/ar030204v.
+[16] H. Basch, K. Mogi, D.G. Musaev, K. Morokuma, Mechanism of the methane ?
+methanol conversion reaction catalyzed by methane monooxygenase: a
+density functional study, J. Am. Chem. Soc. 121 (1999) 7249–7256, https://
+doi.org/10.1021/ja9906296.
+[17] C.H. Kjaergaard, M.F. Qayyum, S.D. Wong, F. Xu, G.R. Hemsworth, D.J. Walton,
+et al., Spectroscopic and computational insight into the activation of O2 by the
+mononuclear Cu center in polysaccharide monooxygenases, Proc. Natl. Acad.
+Sci. 111 (2014) 8797–8802, https://doi.org/10.1073/pnas.1408115111.
+246
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+[18] J. Cho, R. Sarangi, J. Annaraj, S.Y. Kim, M. Kubo, T. Ogura, et al., Geometric and
+electronic structure and reactivity of a mononuclear side-on nickel(iii)-peroxo
+complex, Nat. Chem. 1 (2009) 568–572, https://doi.org/10.1038/nchem.366.
+[19] M.D. Argyle, K. Chen, E. Iglesia, A.T. Bell, In situ UV-visible spectroscopic
+measurements of kinetic parameters and active sites for catalytic oxidation of
+alkanes on vanadium oxides, J. Phys. Chem. B. 109 (2005) 2414–2420, https://
+doi.org/10.1021/jp040166c.
+[20] A. Goodrow, A.T. Bell, A theoretical investigation of the selective oxidation of
+methanol to formaldehyde on isolated vanadate species supported on silica, J.
+Phys. Chem. C 111 (2007) 14753–14761, https://doi.org/10.1021/jp072627a.
+[21] R. Neumann, M. Levin, Aerobic oxidative dehydrogenations catalyzed by the
+mixed-addenda heteropolyanion PV2Molo0405-: a kinetic and mechanistic
+study,
+J.
+Am.
+Chem.
+Soc.
+114
+(1992)
+7278–7286,
+https://doi.org/
+10.1021/ja00044a044.
+[22] D.C. Ashley, D.W. Brinkley, J.P. Roth, Oxygen isotope effects as structural and
+mechanistic probes in inorganic oxidation chemistry, Inorg. Chem. 49 (2010)
+3661–3675, https://doi.org/10.1021/ic901778g.
+[23] M. Iwasaki, E. Iglesia, Mechanistic assessments of NO oxidation turnover rates
+and active site densities on WO3-promoted CeO2 catalysts, J. Catal. 342 (2016)
+84–97, https://doi.org/10.1016/j.jcat.2016.07.011.
+[24] Z. Wu, M. Li, J. Howe, H.M. Meyer, S.H. Overbury, Probing defect sites on CeO2
+nanocrystals with well-deﬁned surface planes by Raman spectroscopy and O2
+adsorption,
+Langmuir
+26
+(2010)
+16595–16606,
+https://doi.org/10.1021/
+la101723w.
+[25] J.E. Molinari, L. Nakka, T. Kim, I.E. Wachs, Dynamic surface structures and
+reactivity of
+vanadium-containing
+molybdophosphoric
+acid
+(H3+xPMo12–
+xVxO40) Keggin catalysts during methanol oxidation and dehydration, ACS
+Catal. 1 (2011) 1536–1548, https://doi.org/10.1021/cs2001362.
+[26] H. Weiner, R.G. Finke, An All-Inorganic, Polyoxometalate-based catechol
+dioxygenase that exhibits >100,000 catalytic turnovers, J. Am. Chem. Soc.
+121 (1999) 9831–9842, https://doi.org/10.1021/ja991503b.
+[27] R. Neumann, Activation of molecular oxygen, polyoxometalates, and liquid-
+phase catalytic oxidation, Inorg. Chem. 49 (2010) 3594–3601, https://doi.org/
+10.1021/ic9015383.
+[28] N. Mizuno, H. Weiner, R.G. Finke, Co-oxidative epoxidation of cyclohexene
+with molecular oxygen, isobutyraldehyde reductant, and the polyoxoanion-
+supported catalyst precursor [(n-C4H9)4N]5Na3[(1,5-COD)IrP2W15Nb3O62], J.
+Mol. Catal. A Chem. 114 (1996) 15–28, https://doi.org/10.1016/S1381-1169
+(96)00301-9.
+[29] D.C. Duncan, R.C. Chambers, E. Hecht, C.L. Hill, Mechanism and dynamics in the
+H-3[Pw12O40]-catalyzed selective epoxidation of terminal oleﬁns by H2O2 -
+formation, reactivity, and stability of (Po4[Wo(O-2)(2)](4))(3-), J. Am. Chem.
+Soc. 117 (1995) 681–691, https://doi.org/10.1021/ja00107a012.
+[30] J.R. Rustad, J.S. Loring, W.H. Casey, Oxygen-exchange pathways in aluminum
+polyoxocations, Geochim. Cosmochim. Acta. 68 (2004) 3011–3017, https://doi.
+org/10.1016/j.gca.2003.12.021.
+[31] N. Mizuno, K. Kamata, Catalytic oxidation of hydrocarbons with hydrogen
+peroxide by vanadium-based polyoxometalates, Coord. Chem. Rev. 255 (2011)
+2358–2370, https://doi.org/10.1016/j.ccr.2011.01.041.
+[32] T. Imanaka, Y. Okamoto, S. Teranishi, The isomerization of propylene oxide on
+zeolite catalysts, Bull. Chem. Soc. Jpn. 45 (1972) 3251–3254, https://doi.org/
+10.1246/bcsj.45.3251.
+[33] J.P. Perdew, J.A. Chevary, S.H. Vosko, K.A. Jackson, M.R. Pederson, D.J. Singh,
+et al., Atoms, molecules, solids, and surfaces: applications of the generalized
+gradient approximation for exchange and correlation, Phys. Rev. B. 46 (1992)
+6671–6687, https://doi.org/10.1103/PhysRevB.48.4978.2.
+[34] G. Kresse, J. Hafner, Ab initio molecular-dynamics simulation of liquid-metal-
+amorphous-semiconductor transition in germanium, Phys. Rev. B. 49 (1994)
+14251–14269.
+[35] G. Kresse, J. Furthmüller, Efﬁcient iterative schemes for ab initio total-energy
+calculations using a plane-wave basis set, Phys. Rev. B 54 (1996) 11169–
+11186. http://www.ncbi.nlm.nih.gov/pubmed/9984901.
+[36] G. Kresse, J. Furthmüller, Efﬁciency of ab-initio total energy calculations for
+metals and semiconductors using a plane-wave basis set, Comput. Mater. Sci. 6
+(1996) 15–50.
+[37] P.E. Blöchl, Projector augmented-wave method, Phys. Rev. B. 50 (1994) 17953–
+17979.
+[38] G. Kresse, D. Joubert, From ultrasoft pseudopotentials to the projector
+augmented-wave method, Phys. Rev. B. 59 (1999) 1758–1775.
+[39] H.J. Monkhorst, J.D. Pack, Special points for Brillouin-zone integrations, Phys.
+Rev. B. 13 (1976) 5188–5192.
+[40] G. Makov, M.C. Payne, Periodic boundary conditions in ab initio calculations,
+Phys. Rev. B. 51 (1995) 4014–4022, https://doi.org/10.1103/PhysRevB.51.4014.
+[41] G. Henkelman, B.P. Uberuaga, H. Jonsson, A climbing image nudged elastic
+band method for ﬁnding saddle points and minimum energy paths, J. Chem.
+Phys. 113 (2000) 9901–9904.
+[42] G. Henkelman, H. Jónsson, A dimer method for ﬁnding saddle points on high
+dimensional potential surfaces using only ﬁrst derivatives, J. Chem. Phys. 111
+(1999) 7010–7022, https://doi.org/10.1063/1.480097.
+[43] C.T. Campbell, J.R.V. Sellers, Enthalpies and entropies of adsorption on well-
+deﬁned oxide surfaces: experimental measurements, Chem. Rev. 113 (2013)
+4106–4135, https://doi.org/10.1021/cr4003853.
+[44] V. Shapovalov, T. Fievez, A.T. Bell, A theoretical study of methanol oxidation
+catalyzed by isolated vanadia clusters supported on the (101) surface of
+anatase, J. Phys. Chem. C 116 (2012) 18728–18735, https://doi.org/10.1021/
+jp302862q.
+[45] N. Mizuno, K. Yamaguchi, K. Kamata, Epoxidation of oleﬁns with hydrogen
+peroxide catalyzed by polyoxometalates, Coord. Chem. Rev. 249 (2005) 1944–
+1956, https://doi.org/10.1016/j.ccr.2004.11.019.
+[46] R. Prabhakar, K. Morokuma, C.L. Hill, D.G. Musaev, Insights into the mechanism
+of selective oleﬁn epoxidation catalyzed by [gamma-(SiO4)W10O32H4]4. A
+computational study, Inorg. Chem. 45 (2006) 5703–5709, https://doi.org/
+10.1021/ic060725p.
+[47] Y. Leng, J. Wang, D. Zhu, M. Zhang, P. Zhao, Z. Long, et al., Polyoxometalate-
+based amino-functionalized ionic solid catalysts lead to highly efﬁcient
+heterogeneous epoxidation of alkenes with H2O2, Green Chem. 13 (2011)
+1636, https://doi.org/10.1039/c1gc15302a.
+[48] M.P. Lanci, D.W. Brinkley, K.L. Stone, V.V. Smirnov, J.P. Roth, Structures of
+transition states in metal-mediated O2-activation reactions, Angew. Chem. Int.
+Ed. Engl. 44 (2005) 7273–7276, https://doi.org/10.1002/anie.200502096.
+[49] B.V. Popp, J.E. Wendlandt, C.R. Landis, S.S. Stahl, Reaction of molecular oxygen
+with
+an
+NHC-coordinated
+Pd0
+complex:
+computational
+insights
+and
+experimental implications, Angew. Chem. – Int. Ed. 46 (2007) 601–604,
+https://doi.org/10.1002/anie.200603667.
+[50] H. Yu, Y. Fu, Q. Guo, Z. Lin, DFT studies on reactions of transition metal
+complexes with O2, Organometallics 28 (2009) 4443–4451, https://doi.org/
+10.1021/om9002957.
+[51] N.N. Greenwood, A. Earnshaw, Chemistry of the Elements, second ed.,
+Butterworth Heinemann, Burlington, MA, 2002.
+[52] M.H. Dickman, M.T. Pope, Peroxo and superoxo complexes of chromium,
+molybdenum, and tungsten, Chem. Rev. 94 (1994) 569–584, https://doi.org/
+10.1021/cr00027a002.
+[53] C.N. Satterﬁeld, T.W. Stein, Decomposition of hydrogen peroxide vapor on
+relatively inert surfaces, Ind. Eng. Chem. 49 (1957) 1173–1180.
+[54] Y.-R. Luo, Comprehensive Handbook of Chemical Bond Energies, CRC Press,
+Boca Raton, FL, 2007.
+S. Kwon et al. / Journal of Catalysis 364 (2018) 228–247
+247
