@@ -1,0 +1,747 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+research papers
+632
+doi:10.1107/S0909049508023327
+J. Synchrotron Rad. (2008). 15, 632640
+Journal of
+Synchrotron
+Radiation
+ISSN 0909-0495
+Received 28 June 2007
+Accepted 29 July 2008
+# 2008 International Union of Crystallography
+Printed in Singapore  all rights reserved
+Implementation of a combined SAXS/WAXS/
+QEXAFS set-up for time-resolved in situ
+experiments
+Sergey Nikitenko,a Andrew M. Beale,b Ad M. J. van der Eerden,b
+Simon D. M. Jacques,c Olivier Leynaud,c Matthew G. OBrien,b
+Dirk Detollenaere,d Reinier Kaptein,e Bert M. Weckhuysenb and Wim Brasf*
+aKU Leuven, DUBBLE CRG/ESRF, F-38043 Grenoble, France, bInorganic Chemistry and Catalysis,
+Debye Institute for NanoMaterials Science, Utrecht University, Sorbonnelaan 16, 3584 CA, Utrecht,
+The Netherlands, cIndustrial Materials Group, Christopher Ingold Laboratories, Department of
+Chemistry, University College London, London WC1H 0AJ, UK, dUniversity of Gent DUBBLE@-
+ESRF, F-38043 Grenoble, France, eUniversity of Groningen Physics Department, Nijenborgh 4,
+9747 AG Groningen, The Netherlands, and fNetherlands Organization for Scientific Research
+(NWO), DUBBLE@ESRF, F-38043 Grenoble, France. E-mail: wim.bras@esrf.fr
+It has previously been shown that there are many benefits to be obtained in
+combining several techniques in one in situ set-up to study chemical processes in
+action. Many of these combined set-ups make use of two techniques, but in some
+cases it is possible and useful to combine even more. A set-up has recently been
+developed that combines three X-ray-based techniques, small- and wide-angle
+X-ray scattering (SAXS/WAXS) and quick-scanning EXAFS (QEXAFS), for
+the study of dynamical chemical processes. The set-up is able to probe the same
+part of the sample during the synthesis process and is thus able to follow changes
+at the nanometre to micrometre scale during, for example, materials self-
+assembly, with a time resolution of the order of a few minutes. The practicality of
+this kind of experiment has been illustrated by studying zeotype crystallization
+processes and revealed important new insights into the interplay of the various
+stages of ZnAPO-34 formation. The flexibility of this set-up for studying other
+processes and for incorporating other additional non-X-ray-based experimental
+techniques has also been explored and demonstrated for studying the stability/
+activity of iron molybdate catalysts for the anaerobic decomposition of
+methanol.
+Keywords: XAFS; SAXS; WAXS.
+1. Introduction
+There are distinct advantages to be found in combining
+several independent analytical techniques to study chemical
+processes as they occur. This is well illustrated in situations
+where either the time resolution is so high that the results
+of independent experiments are difficult to synchronize or
+in cases where the sample environment is complicated and
+the experiments might be difficult to reproduce exactly. In
+addition, simultaneously performed experiments often enable
+a more detailed understanding of the temporal behaviour
+and interplay of, for instance, chemical species present
+during solid formation, catalytic reactions etc. If one is
+therefore interested in a sequence of events such as phase
+transitions, changes in local chemical environments, crystal-
+lization etc., the simultaneous acquisition of data from
+combined multiple techniques can be rather useful and in
+some cases crucial.
+In synchrotron radiation research the above principles have
+been implemented by, for instance, using X-ray absorption
+spectroscopy (XAFS) and diffraction (Sankar et al., 1993) or
+the combination of small- and wide-angle X-ray scattering
+(SAXS and WAXS) (Bark et al., 1992; Bras et al., 1993).
+Obviously this principle can be extended to the combination
+of synchrotron radiation techniques with non-X-ray-based
+techniques such as differential scattering calorimetry (DSC)
+and SAXS/WAXS (Bras, Derbyshire, Devine et al., 1995), light
+scattering/SAXS/WAXS (Zachmann & Wutz, 1993), Raman
+scattering/SAXS/WAXS (Bryant et al., 1998), SAXS/FTIR
+(Fourier transform infrared spectroscopy) (Bras, Derbyshire,
+Bogg et al., 1995), XAFS/FTIR (Newton et al., 2004), UVVis/
+Raman/XAFS for both gas and liquid phase heterogeneous
+catalysis (Beale et al., 2005; Briois et al., 2005) etc (Bras &
+Ryan, 1998).
+The choice of when it is sensible to use a combination of
+simultaneous techniques is something that has to be carefully
+weighed up since in most cases this approach results in the loss
+of some data quality in at least one of the techniques. There
+has to be a serious advantage in collecting the data simulta-
+neously instead of utilizing optimized independent techniques.
+An example of the loss of data quality is, for instance, in the
+over- and under-focus of the X-ray beam in a combined
+SAXS/WAXS experiment in the SAXS and WAXS detectors,
+respectively. Also, the combination of, for instance, DSC with
+EXAFS suffers from this since the requirement that the
+sample should be accessible by X-rays is contradictory to the
+requirement that the thermal environment of the sample
+should be completely isolated. Notwithstanding these limita-
+tions, there are cases where the synergy between the techni-
+ques is obvious and which go beyond the simple circumvention
+of the need to repeat identical experimental conditions for
+separate measurements, which is, although seemingly a trivial
+point, far from easy to achieve experimentally.
+The wish to be able to follow crystallization and chemical
+processes from the very early stage (where the structures have
+not yet developed into sizes that can be studied with diffrac-
+tion and scattering techniques) to the later stage where crys-
+talline morphologies have formed and the subsequent growth
+process could be characterized with respect to growth kinetics
+have influenced the design of the XAFS beamline placed in
+BM26A at the ESRF. We have developed equipment that
+makes use of the QEXAFS (quick-scanning EXAFS) tech-
+nique (Frahm, 1989, 1988) and have combined this with both
+SAXS as well as WAXS. The equipment is designed to be able
+to follow processes for which a time resolution of approxi-
+mately 10 frames min1 is sufficient. If one wants to study
+faster processes with spectroscopic techniques, this equipment
+is not suitable and one should use either fast sequential
+energy-scanning QEXAFS monochromators (Frahm et al.,
+2004) or energy-dispersive techniques,
+even though this means that, for the
+latter, the samples are exposed to a
+rather high temporal X-ray dose and
+might suffer from radiation damage or,
+for instance, chemical reactions might
+be influenced by the X-rays (Mesu et al.,
+2005).
+In order to completely describe the
+whole process it will be clear that one
+has to start from a well characterized
+sample and that the final product again
+should be well characterized, maybe not
+only with the techniques used in the
+experiment
+but
+also
+by
+additional
+techniques that can render extra infor-
+mation such as microscopy (scanning
+and transmission electron microscopy
+etc.). There are numerous research
+fields where the application of the
+above-mentioned techniques could be rather useful. For
+instance, in glass ceramics (Bras, 1998; Bras et al., 2005),
+porous
+materials
+like
+heteroatom-substituted
+alumino-
+phosphates (MeAPO) (Sankar et al., 1995), cement setting
+(Scheidegger et al., 2000, 2001) and bone mineralization
+(Savarino et al., 1998) are just some of the examples for which
+the experimental techniques that are combined in our set-up
+can render useful information.
+As an example of the usefulness of the applied method we
+show data on the crystallization of CoAPO. This system was
+studied previously by in situ diffuse reflectance spectroscopy
+and electron spin resonance (Weckhuysen et al., 2000), and
+more recently by independent in situ XAFS and SAXS/WAXS
+techniques (Grandjean et al., 2005), but since these results
+were not obtained during one combined measurement it was
+difficult to understand exactly how changes in each technique
+corresponded to each other, so the finer details of the crys-
+tallization process could not be understood.
+2. Beamline and experimental set-up
+The experiments were carried out on the Dutch Belgian
+beamline BM26A at the ESRF (Borsboom et al., 1998). The
+optical layout of the beamline is represented in Fig. 1. The
+radiation source is the 0.4 T ESRF bending magnet. The
+beamline receives 2 mrad of the radiation fan. The optics set-
+up contains two mirrors: an (optional) upward-cooled colli-
+mation mirror (1200  150  50 mm) with horizontal surface
+grooves filled with a GaIn alloy on the surface parallel to the
+X-ray beam, and a second focusing mirror which has the same
+dimensions and specifications as the first although there are no
+cooling grooves on the surface. For the collimation mirror
+a cooling blade can be inserted into the grooves so that
+side-cooling is achieved without unnecessary mechanical
+constraint, which could affect the required bending accuracy.
+The mirror has, besides the bare Si surface, a Pt-coated strip
+along the length of the mirror. Depending on the energy, a
+research papers
+J. Synchrotron Rad. (2008). 15, 632640
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+633
+Figure 1
+Optical layout of the BM26A beamline at ESRF. The optical elements are an (optional) collimating
+mirror, a double-crystal sagittal focusing monochromator and a vertically focusing mirror. Both
+mirrors have a strip with a bare silicon surface as well as a strip with a Pt coating. Depending on the
+energy range and the requirement for higher harmonic rejection, one of the strips can be brought
+into the beam by a sideways translation.
+sideways translation can bring into the beam the appropriate
+surface for higher harmonic rejection without needing to
+change the mirror inclination. The determined factor of the
+higher harmonic suppression is better than 105 using two
+mirrors. The surface roughness is 1.5 A
+ (r.m.s.) and the slope
+error is less than 1.5 mrad over the whole surface. A Si(111)
+monochromator was used for these experiments which has
+the option of sagittal focusing, although for time-resolved
+measurements this was not employed owing to the length of
+time taken to bend the second crystal with respect to the time
+resolution needed to perform QEXAFS measurements. The
+second, focusing, mirror has the same dimensions and speci-
+fications as the collimating mirror, apart from the cooling
+grooves on the surface.
+The layout of the experimental hutch for combined SAXS/
+WAXS/EXAFS experiments is shown in Fig. 2. For the spec-
+troscopy experiments we have the choice between a trans-
+mission and a fluorescence configuration. The ionization
+chambers used in the transmission geometry are low-noise
+Oxford (Oxford-Danfysik) chambers designed specially for
+XAS measurements and are read out by low-noise current
+preamplifiers (manufactured by NOVELEC SA) having
+voltage/frequency converters (operating from 0 to 1 MHz) on
+the output connected to the scaler. The amplifiers have a
+dynamical range for the input current from 0.1 mA to 10 nA
+with six decades of magnitude. For fluorescence experiments
+we utilize a nine-element monolithic Ge fluoresence detector
+with digital XPRESS-XRay signal-processing electronics
+(Derbyshire et al., 1999; Farrow et al., 1995).
+The addition of SAXS to the already existing combined
+XAFS/diffraction set-up is somewhat complicated since a long
+kapton-windowed (two windows both 40 mm thick) vacuum
+chamber has to be inserted between the sample and the SAXS
+detector. However, the transmitted intensity also has to be
+measured to a high accuracy and the presence of the SAXS
+flight tube and the requirement to preserve the SAXS data
+quality prevents the use of a conventionally used ion chamber.
+Still, an ion chamber can be used by mounting it on a trans-
+lation stage parallel to a He-filled flight tube and driving it into
+position when the spectroscopy data is collected. Unfortu-
+nately this adds several moving components to the system. The
+alternative is to mount an accurate photodiode on the position
+of the SAXS beam stop. The latter option is only possible with
+a somewhat larger beam stop and a very stable beam.
+All the data discussed in this work have been obtained by
+using a photodiode ODD-15W (15 mm2 active area) from
+Opto Diode.
+The SAXS/WAXS data were recorded simultaneously using
+a combination of two detectors. For the SAXS data a gas-filled
+quadrant detector positioned at a distance of 1.8 m from the
+sample was used. This detector has the advantage of a larger
+active area that a two dimensional detector offers, but avoids
+the requirement of post-processing the data via a radial inte-
+gration (Gabriel & Dauvergne, 1982).
+For the WAXS data a position-sensitive curved gaseous
+INEL CPS 590 detector was used (Bras et al., 1993). Both
+these detectors are intrinsically count-rate limited. However,
+this does not pose a problem with the time resolution that can
+be achieved with this method/set-up since the largest part of
+the duty cycle is taken up by the scanning of the mono-
+chromator which is mechanically limited (with a maximum
+scanning speed of 1 s1). In a data collection period of 24 s
+acceptable scattering data can be obtained.
+The time-resolved experiments were performed in the
+QEXAFS mode in which the monochromator is scanned
+rapidly
+(non-stop)
+around
+a
+specific
+absorption
+edge
+research papers
+634
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+J. Synchrotron Rad. (2008). 15, 632640
+Figure 2
+Combined SAXS/WAXS/XAFS experimental set-up (a) and accompa-
+nying photograph (b). The small vacuum tube between the main flight
+tube to the SAXS detector and the sample can be replaced by a
+translation stage with both an ionization chamber and He-filled tube
+which can alternately be put into the X-ray path. 6: quadrant gas-type
+SAXS detector; 7: the photodiode as a second XAFS detector mounted in
+front of the beam stop (It); 8: feedthrough flange for the photodiode
+input/output; 9: evacuated or He-filled tube.
+(minimum entire spectrum collection time of 60 s and a
+typical energy resolution of 1.7 eV point1) in combination
+with (quasi-)simultaneous WAXS and SAXS data collection at
+a fixed energy (typical data collection time 20 s frame1). In
+Fig. 3 we show the timephoton-energy profile that we have
+used in these experiments. As can be seen from the figure, the
+X-ray diffraction/scattering data is acquired while the mono-
+chromator is kept in a fixed position from a minimum of 2 s
+(depending on the required sampling data statistics) before a
+subsequent energy scan is started, during which the XAFS
+data are collected.
+Depending on the required energy scan range this can last
+from 10 to 60 s, though the photon flux on the sample is
+sufficient to achieve even higher time resolutions. After the
+XAFS scan is complete, the monochromator is rotated back to
+the starting energy and the whole process is started again. In
+principle, this method is straightforward; however, complica-
+tions can arise owing to the fact that one prefers to acquire the
+scattering data at energies between 8 and 15 keV while the
+X-ray absorption edge of interest falls outside this range. The
+reason for the preferred energy range for scattering data
+collection is that the extent of the parasitic scattering cone
+is photon-energy-independent, but the scattering pattern
+becomes rather compressed with regard to scattering vector
+range at higher photon energies. In this case the low angle
+resolution, and therefore the advantage of performing this
+technique combination, is lost.
+In theory one could also collect scattering data during the
+energy scan, making use of the rapid change in X-ray scat-
+tering cross section to perform anomalous SAXS and WAXS
+measurements. Thus far we have not attempted this seriously
+since the issues regarding detector calibrations and the data
+quality are not simple to solve.
+The data acquisition software was developed at the SRS
+Daresbury Laboratory and adapted to be able to control the
+motor and detector systems of the BM26A beamline.
+Depending on the design of the sample cell, it is feasible to
+also collect data using non-X-ray-based techniques; in the case
+where optical methods are employed, the implementation is
+fairly straightforward.
+The advantage of using energy-dispersive schemes is a
+better time-resolution up to the millisecond scale, but the
+disadvantage is a high risk of the beam influence on the
+processes in the sample because of extremely high photon
+density in the beam spot. For example, the polychromatic
+photon density at an energy-dispersive beamline at ESRF is
+1012 photons s1 in a 20 mm beam spot and there are some
+indications that the beam actually induces damage to the
+liquid samples we have used in our measurements (Mesu et al.,
+2005). In a comparison of the XAFS data obtained with an
+energy-dispersive beamline we found indications that the
+X-ray beam influences the reaction mixture in the cuvette
+whereas some previous measurements on BM26A using a
+standard scanning set-up with the same samples demonstrate
+that the radiation damage was negligible. Also, the compli-
+cation would arise that from the pink beam we would obtain a
+quasi-Laue pattern while the SAXS data would have to be de-
+smeared. These problems do not inhibit all experiments, but if
+not required on the basis of time-resolution it is evident that
+one is better off using the QEXAFS scheme.
+In our set-up we used a beam spot of 0.5 mm  0.5 mm
+and the photon flux was 109 photons s1; then the photon
+density was less by a factor 105106 in comparison with the
+energy-dispersive set-up at ESRF.
+2.1. Experimental conditions
+Illustrating the possibilities and the usefulness of the
+combined approach, we discuss here the results obtained from
+two different types of experiment: a study of the crystallization
+of a microporous Zn2+-doped aluminium phosphate and an
+iron molybdate catalyst during anaerobic decomposition of
+methanol. In a typical synthesis of ZnAPO with 2.5 wt% Zn,
+the following chemicals were used: 0.131 g Zn(NO3)3.4H2O
+(Acros Organics 99%), 69 ml H3PO4 (Acros Organics 85 wt%
+in water), 1.04 ml triethylamine (Acros Organics 99%) and
+0.658 g pseudobohemite alumina CATAPAL B 73.6 wt%
+Al2O3 (Sasol North America Inc.). The white amorphous
+precursor gel used in the experiments possessed the stoi-
+chiometry
+ZnxAl1xPO4
+where
+x
+=
+0.05
+(zinc
+content
+2.5 wt%) and a pH of 3.5 (Christensen et al., 1998). The
+preparation of an iron molybdate catalyst is described else-
+where (Beale et al., 2008). Since such processes normally take
+place over a number of hours, the time resolution was
+accordingly adapted to the process and set to 5 min frame1.
+Thus a total cycle time of 5 min was employed for both sets of
+experiments to collect this data (3 min for XAS and 2 min for
+SAXS/WAXS which includes a 10 s dead-time to move the
+monochromator back to the start position and a further 10 s to
+move the It photodiode into/out of the beam). The in situ
+zeotype formation study was performed using a hydrothermal
+reactor cell which allows for the measurement of X-ray data in
+transmission mode. XAFS data were recorded at the Zn K-
+edge (9.66 keV), while the corresponding SAXS/WAXS data
+research papers
+J. Synchrotron Rad. (2008). 15, 632640
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+635
+Figure 3
+Time frame diagram for combined SAXS/WAXS/XAFS data collection.
+The scattering/diffraction data are collected during a brief period where
+the monochromator position is fixed. A QEXAFS scan is started
+subsequently. After this scan the monochromator is rotated back to the
+position/energy where the scattering data are collected.
+were collected below this energy at 9.465 keV (1.3098 A
+ )
+during temperature ramping at 1 K min1 to a temperature of
+448 K. Using this set-up, analysable EXAFS data were
+obtainable up to 12 A
+ , along with WAXS data over a 2 range
+of 45 using the INEL detector (although useable data
+extended from 12 to 27 owing to the need to avoid the
+contaminant Bragg peaks from the mica windows) whereas
+the SAXS data covered a q-range 0.3 < q < 2 nm1.
+In the catalytic study the potential of a novel one-dimen-
+sional iron molybdate type catalyst [Mo:Fe (3:1)] normally
+used for the production of formaldehyde (Soares & Portela,
+2005) was studied during temperature ramping to 523 K in a
+methanol/helium flow using a classical heated capillary as a
+simulation of a packed bed reactor (Clausen et al., 1991). A
+0.7 mm-diameter quartz capillary was used to contain the
+sample (sieved to 3040 mesh size) whilst MeOH/He mix was
+supplied to the sample using a bubbler (based on the vapour
+pressure of methanol at 294 K the methanol saturation in the
+gas stream was estimated to be 15%) whilst air grade zero
+was used in an attempt to perform oxidative regeneration. The
+rate of both gases was controlled using mass flow devices,
+triggered by 5 V TTL pulses from outside the experimental
+hutch. Online product analysis was also performed using a
+European Spectrometry Systems ecoSys-P Man-Portable mass
+spectrometer with a capillary inlet and heated inlet tube in
+order to understand further possible structure/function rela-
+tionships. XAFS studies were performed at the Mo K-edge
+(20000 eV)
+whilst
+SAXS/WAXS
+measurements
+were
+performed below the Mo K-edge at 17658.98 eV ( =
+0.702104 A
+ ).
+3. Results
+3.1. In situ study of microporous aluminophosphate
+crystallization
+Previously it has been shown through the use of both
+scattering and spectroscopic techniques that the formation
+process of pure and metal-substituted (Co)AlPOs can be
+described as a three-step process, consisting of an initial
+reaction between the reactants to form a gel followed by
+gradual aggregation and then crystallization (Scheidegger et
+al., 2000). The salient points from this previous work were (i)
+the formation of initial aggregates of size 8 nm which
+already contained a majority of tetrahedral Al3+/P5+ species
+(as observed by XAFS and Raman spectroscopy); (ii) heating
+of these gels (from 303433 K) caused the aggregates to grow
+until a size of 40 nm was reached before crystallization (as
+determined by the emergence of Bragg peaks seen in both the
+SAXS and WAXS detectors) of the final microporous alumi-
+nophosphate phase began at temperatures of 433 K; (iii)
+transition metals such as Co2+ changed their coordination
+state from octahedral to tetrahedral during the aggregation
+(slowly) and crystallization steps (fast); (iv) the last measur-
+able aggregates observed by SAXS possessed a similar size to
+that of the first crystallites as determined from peak profiling;
+(v) analysis of the growth of the peaks revealed that the
+mechanisms of crystallization were similar and indicated that
+the materials crystallized via either (i) a one-dimensional
+growth with a constant nucleation rate or (ii) a one-dimen-
+sional
+growth
+phase-boundary-controlled
+crystallization
+process (Hulbert, 1969). Despite the amount of detailed
+insight gleaned from such a multiple technique approach there
+remained questions regarding the interplay between the steps
+and how this leads to the formation of the final crystalline
+sample.
+The XAFS and WAXS data indicated that the initial
+synthesis gel contains predominantly tetrahedral Zn2+ (XAFS
+edge position 9.666 keV) and appears diffraction amor-
+phous. This behaviour contrasted with that of Co2+ and
+suggested that the initial Zn2+ species formed interactions with
+the AlOP species before heating began. The SAXS scat-
+tering profile did not appear to contain any marked features,
+which could be associated with the presence of clear primary
+units. However, the intensity I(q) closely follows a power-law
+decay qn (where n  2), which is slower than the asymptotic
+behaviour of I(q) with n  4 predicted by the Porod law for
+compact particles with sharp interfaces, indicating that this
+system was more complex. However, by focusing on the q
+range from 0.025 to 0.1 nm1 and after removing the leading
+q2 decay, the I(q)  q2 dependence, the plots exhibit a broad
+maximum (q max) which can be fitted with a Gaussian func-
+tion and approximated to the inverse of the typical size of
+possible gel aggregates/precursors leading to AlPO crystal-
+lites. This analysis revealed that the Zn2+-containing gel
+contained slightly larger particles (11.5 nm) than those seen in
+AlPO-5 crystallization which were observed to grow to
+12 nm before the onset of crystallization [determined
+through both the appearance of a number of reflections
+consistent with ZnAPO-34 as well as small changes in the first
+EXAFS oscillation and the presence of a multiple-scattering
+feature at 9.685 keV in the XANES (feature A in Fig. 4(a)] at
+the comparatively low temperature of 369 K. The Avrami
+Erofeev analysis of the ZnAPO-34 crystallization appears
+consistent with a phase-boundary-controlled three-dimen-
+sional growth process with a decreasing nucleation rate.
+Interestingly the Avrami exponents obtained from profiling
+reflect the dimensionality of the final microporous material
+(Beale et al., 2006). As with the crystallization of the AlPO-5
+phase, the initial crystallite sizes were very similar to the size
+of the average aggregates seen in the gel immediately before
+the crystalline material began to form.
+In Fig. 4 we show the raw XAFS, SAXS and WAXS data
+collected during the heating (at a rate of 1 K min1 up to a
+temperature of 453 K) of the zinc-doped aluminophosphate
+gel.
+The implication for the similarity of the average SAXS
+aggregate size to that of the first crystallite is that a type of gel
+reorganization precedes the formation of crystalline AlPO-5
+and ZnAPO-34 phases. Further support for this notion can be
+found from a further analysis of the SAXS data. An initial
+observation that can be made here is that in the SAXS I(q)
+versus q data there are only small changes visible. However,
+the most sensitive parameter to changes in the sample
+research papers
+636
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+J. Synchrotron Rad. (2008). 15, 632640
+morphology is the invariant defined for a two-phase system by
+Porod (Porod, 1951),
+Q 
+R
+Iq dV 
+R
+q  1
+q  0
+Iqq2 dq  hnei212;
+in which hnei2 is the electron density difference between two
+phases, and i are the volume fractions for the two compo-
+nents. This equation can be generalized to a multi-component
+system (Goodisman & Brumberger, 1971). In Fig. 5 we plot
+the development of the invariant versus time during the
+crystallization process. The striking observation is that there
+is hardly any change in the invariant whilst the WAXS
+data clearly indicate that crystallization occurs on reaching
+369 K. It has been shown that the invariant is a more
+sensitive parameter to the occurrence of crystallization than
+the WAXS peak intensities are (Bras et al., 2003). Therefore
+the lack of change in the invariant can be interpreted in two
+ways: either the change in electron density contrast between
+the two phases is offset by the changes in the respective
+volume fractions, or both the electron density contrast and the
+volume fractions remain unchanged. The latter option would
+entail that large amorphous domains are already present. The
+physical process that takes place during the crystallization is
+therefore a rearrangement of the components from an amor-
+phous state to a crystalline state. The surrounding matrix is not
+influenced by this, neither is the density of the newly formed
+crystalline state changed.
+research papers
+J. Synchrotron Rad. (2008). 15, 632640
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+637
+Figure 5
+Development of the invariant as a function of temperature (time). The
+dashed line represents a linear fit to the data. The maximum deviation of
+the data to this linear fit is 4%. The variation of the linearly fitted data
+over this temperature range is about 1%.
+Figure 4
+Combined in situ XANES (a), SAXS (b) [with accompanying Gaussian fits to the data (c)] and WAXS (d) data collected during the hydrothermal
+crystallization of ZnAlPO-34. Note that the additional oscillations observed in the pre-edge region of the XANES data are artefacts caused by sample
+movement. The feature highlighted A in (a) illustrates the appearance of a feature at 9.685 keV, appearing at the onset of crystallization. Although the
+variations in the SAXS data are not very large, the change in the shape of the curves is evident.
+3.2. Catalytic investigation of the behaviour of iron
+molybdate catalyst for methanol dehydrogenation
+As mentioned previously, combined SAXS/WAXS/XAFS
+experiments have also been performed to study hetero-
+geneous catalytic reactions in the gas phase. As can be seen in
+Fig. 6, the initial starting FeMo phase contained only a few
+weak reflections and a broad hump between 11 and 15 2, but
+has been previously identified as possessing a structure similar
+to that of poorly crystalline Mo5O14 (Beale et al., 2008).
+However, as heating began, dramatic changes in all three
+techniques (SAXS/WAXS/XAFS) occurred, which suggested
+that the initial FeMoO phase was unstable up to a certain
+temperature. More specifically, the peaks and broad hump
+ascribable to the initial Mo5O14-type phase were observed to
+disappear with time resulting in an essentially featureless
+WAXS
+pattern
+as
+the
+temperature
+approached
+623 K
+(60 min). On switch over to air, in order to regenerate the
+catalyst, new Bragg reflections appeared in the X-ray
+diffraction pattern at 11.70, 12.30, 15.15 and 23.40 2
+which can be ascribed to the (
+214), (
+402), (122=
+322) and
+(
+116=420=204=
+516) reflections of Fe2(MoO4)3 as well as a peak
+at 11.95 2 owing to the strongest reflection of -FeMoO4. At
+the same time the 1s4d transition [marked B in Fig. 6(a)] at
+research papers
+638
+Sergey Nikitenko et al.
+ Combined SAXS/WAXS/QEXAFS
+J. Synchrotron Rad. (2008). 15, 632640
+Figure 6
+Combined Mo K-edge XANES (a) with combined temperature/time profile (b), raw SAXS data (c) with analysis of gradient versus time (d), WAXS (e)
+and mass spectrometry data (f) recorded during the heating of a FeMo catalyst under MeOH/He and in air conditions. Feature B in (a) highlights the 1s
+4d peak at the Mo K-edge.
+20001.74 eV, which is known to be sensitive to both the
+oxidation and coordination state of Mo (Beale & Sankar,
+2003), was observed to first decrease in intensity as the
+temperature approached 623 K (60 min), before disap-
+pearing entirely after 130 min of reaction. Such changes would
+be consistent with the reduction of the initial octahedral
+Mo5/6+ species to a lower oxidation state. On regeneration with
+air (after 130 min) the 1s4d transition reappeared, although
+this time was much more intense and appeared at a slightly
+lower position in energy (20000.5 eV). Most likely the
+increased intensity of this feature originates from a pinhole
+effect in the sample and subsequent detector saturation. In the
+SAXS data a feature at q = 0.12 A
+ was also observed to begin
+to form after 2328 min of reaction (427451 K) and
+continue to increase in intensity for a further 40 min. Such a
+feature would be consistent with the formation and growth
+(proposed from an analysis of the change in slope) of parti-
+culate species although it is not clear whether this was related
+to the phase changes observed in the WAXS or maybe the
+formation of something on the catalyst surface, e.g. coke.
+Interestingly, no evidence could be observed for the formation
+of formaldehyde (m/z = 31) from the mass spectrometer trace
+during reaction (Fig. 6f), although the catalyst proved active
+for CO production (and, although not shown here, H2); initi-
+ally in small(er) amounts as the temperature approached
+623 K (65 min) although later (after 110 min) in much larger
+quantities. The sudden increase in CO production after
+110 min is difficult to explain, although it may be related to the
+formation of a particularly active reduced phase for methanol
+breakdown. Further studies and analysis of the data is in
+progress. In summary, from this initial study it is possible to
+propose that the initial Mo5O14-type phase undergoes a
+number of significant changes during heating in methanol,
+including both reduction and a phase change, eventually
+leading to a catalyst which is active for methanol breakdown.
+Such observations have important implications when deter-
+mining the stability and activity of this catalyst under reaction
+conditions. However, it is worth emphasizing at this point that
+the instrumentation that has been developed is sufficiently
+versatile that not only X-ray-based data can be collected
+but also that the system is flexible enough to incorporate
+complicated sample environments as well as additional non-
+X-ray-based spectroscopic techniques.
+4. Conclusions
+The experiments carried out demonstrate the feasibility of a
+three-technique set-up to obtain in situ correlated data at the
+nanometre to micrometre scale, enabling new insight into
+materials self-assembly and catalytic processes. Further
+geometrical and optical optimization is possible, which will
+result in improved SAXS/WAXS data quality, and the planned
+software development will result in better time resolution.
+These future developments will make the set-up suitable for
+performing experiments which show changes at the 2030 s
+time scale. This sort of time resolution will mean that the
+set-up will be applicable for studying many chemical/physical
+processes in the chemical industries, but there are also many
+examples (e.g. formation of nanoparticles, polymers etc.)
+where more fundamental research can benefit from the
+availability of such experimental equipment. The equipment
+is unlikely to be applicable yet for the study of very fast
+processes (with subsecond changes). This obviously remains
+the preserve of energy-dispersive techniques or fast sequential
+energy-scanning EXAFS set-ups (Frahm et al., 2004). On the
+other hand, the method that we have developed has the big
+advantage that the instantaneous radiation dose received by
+the sample is much lower than compared with energy-
+dispersive techniques which means that the sample has a
+chance of surviving much longer.
+The authors would like to thank NWO/FWO for beam time.
+Nicolas Vilaphiou, Florian Meneau and Harry van der Wal are
+thanked for their technical assistance, Andre Gabriel and
+Michel Koch for the help with the gas-filled detectors. Paul
+Stephenson of Daresbury Laboratory is thanked for his help
+in the implementation and development of the data-acquisi-
+tion software. Piet Lassing is acknowledged for the technical
+drawings. BM26A is part of the DUBBLE project which is co-
+funded by the Dutch and Flemish research councils (NWO/
+FWO). The editor and independent reviewers are thanked for
+their helpful and constructive comments.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do CO and H2 chemisorption techniques compare in their effectiveness for characterizing bimetallic catalysts, including their respective methodologies, applications in determining active metal sites and metal dispersion, advantages, limitations, and key considerations for data interpretation and normalization of reaction rates?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

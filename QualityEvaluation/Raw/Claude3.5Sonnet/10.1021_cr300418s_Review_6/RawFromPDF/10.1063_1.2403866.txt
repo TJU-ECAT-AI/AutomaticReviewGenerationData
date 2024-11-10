@@ -1,0 +1,620 @@
+Erratum: “Screened hybrid density functionals applied to solids” [J. Chem. Phys. 124, 154709 (2006)]
+J. Paier;
+M. Marsman;
+K. Hummer;
+G. Kresse;
+I. C. Gerber;
+J. G. Ángyán
+Author & Article Information
+J. Chem. Phys. 125, 249901 (2006)
+https://doi.org/10.1063/1.2403866
+Article history
+element not found
+为了改善您的体验，在您同意我们所有网站和应用的情况下，我们（和我们的合作伙伴）在您连接的终端上存储和/或访问您终端上的信息（cookie或对应信息）。
+我们的网站可能会将这些cookie用于：
+不通过资料收集而判定我们网站上广告的受众
+根据您的导航和个人资料展示个性化广告
+根据您的导航个性化我们的编辑内容
+允许您在我们网站上的社交网络或平台上分享内容
+根据您的位置向您发送广告
+隐私政策
+设定偏好
+全部接受
+全部拒绝
+All Content
+AIP Publishing Portfolio
+The Journal of Chemical Physics
+                             Advanced Search
+|
+Citation Search
+Institutional Accounts
+Sign In
+HOME
+BROWSE
+COLLECTIONS
+PUBLISH WITH US
+ABOUT
+Volume 125, Issue 24
+28 December 2006
+Previous Article
+  REFERENCES
+ERRATUM| DECEMBER 22 2006
+Erratum: “Screened hybrid density functionals applied to solids” [J. Chem. Phys. 124, 154709 (2006)]
+J. Paier;
+M. Marsman;
+K. Hummer;
+G. Kresse;
+I. C. Gerber;
+J. G. Ángyán
+Author & Article Information
+J. Chem. Phys. 125, 249901 (2006)
+https://doi.org/10.1063/1.2403866
+Article history
+Connected Content
+This is a correction to: Screened hybrid density functionals applied to solids
+Split-Screen
+Views
+PDF
+Share
+Tools
+In a recent erratum, Heyd, Scuseria and Ernzerhof (HSE) report that the original GAUSSIAN1 implementation of the HSE03 (or
+ω
+PBE) functional has accidentally used different screening parameters for the semilocal density functional and nonlocal Fock-components of the exchange energy.2 Since the density functional part of our implementation3 in the VASP package relied on the original subroutines of Heyd,4 we have carefully scrutinized our program by comparing the exchange energies for a set of densities to reference values provided by the group of Scuseria.5 It turned out that our screened density functional implementation missed a conversion factor from Ångström to Bohr units. This disparity of the density functional and Fock components of the exchange energy has led to an error similar to that of the HSE implementation. Although our results are only slightly affected by this error, we report here the lattice constants and bulk moduli (Table I), atomization energies (Table II), heats of formation (Table III), and band gaps (Table IV) using the corrected implementation. Furthermore, Krukau et al.6 have found recently that the optimal value of the screening parameter
+ω
+⁠, appearing in the correct implementation of the HSE functional, is
+ω
+=
+0.11
+a
+.
+u
+.
+−
+1
+=
+0.207
+Å
+−
+1
+instead of the earlier suggested value of
+ω
+=
+0.15
+a
+.
+u
+.
+−
+1
+=
+0.3
+Å
+−
+1
+⁠. To avoid confusion, Krukau et al. proposed to maintain the name HSE03 to designate the earlier incoherent but reproducible implementation with two distinct values of
+ω
+⁠, while the correct implementation with the single
+ω
+=
+0.11
+a
+.
+u
+.
+−
+1
+=
+0.207
+Å
+−
+1
+will be called HSE06. Tables I–IV report results obtained with both
+ω
+=
+0.207
+Å
+−
+1
+⁠, corresponding to the HSE06 functional, and
+ω
+=
+0.3
+Å
+−
+1
+⁠. Although this latter value is the same as the one cited in papers using HSE03, our results, obtained by the consistent application of a single screening parameter to the local and nonlocal exchange components, cannot be compared directly with the Gaussian HSE03 ones.
+Table I.
+Lattice constants,
+a
+0
+(
+Å
+)
+and bulk moduli,
+B
+0
+(GPa), obtained from HSE calculations, using two different exchange screening parameters,
+ω
+=
+0.300
+Å
+−
+1
+and
+ω
+=
+0.207
+Å
+−
+1
+⁠, as well as experimental results. Technical details as in Ref. 3. This table replaces Table VI in Ref. 3.
+  HSE Expt.
+  ω
+=
+0.300
+ω
+=
+0.207
+    Solid
+a
+0
+B
+0
+a
+0
+B
+0
+a
+0
+B
+0
+Li  3.458  13.6  3.460  13.6  3.477  13.0 
+Na  4.225  8.09  4.225  8.01  4.225  7.5 
+Al  4.025  81.1  4.022  82.0  4.032  79.4 
+BN
+  3.601  401  3.600  402  3.616  400 
+BP
+  4.523  172  4.521  173  4.538  165 
+C  3.550  466  3.549  467  3.567  443 
+Si  5.439  96.5  5.435  97.7  5.430  99.2 
+SiC
+  4.350  229  4.348  230  4.358  225 
+β
+-
+GaN
+  4.497  194  4.494  196  4.520  210 
+GaP
+  5.468  85.3  5.462  86.6  5.451  88.7 
+GaAs
+  5.696  69.5  5.687  70.9  5.648  75.6 
+LiF
+  4.018  72.7  4.018  72.7  4.010  69.8 
+LiCl
+  5.117  33.0  5.115  33.1  5.106  35.4 
+NaF
+  4.651  49.2  4.650  49.3  4.609  51.4 
+NaCl
+  5.661  24.5  5.659  24.5  5.595  26.6 
+MgO
+  4.212  168  4.210  169  4.207  165 
+Cu  3.640  125  3.638  126  3.603  142 
+Rh  3.786  285  3.783  288  3.798  269 
+Pd  3.923  159  3.921  161  3.881  195 
+Ag  4.146  85.1  4.142  85.9  4.069  109 
+All solids: 
+MEa  0.012 
+−
+2.6
+  0.010 
+−
+1.6
+  ⋯
+  ⋯
+  MAEb  0.024  8.5  0.023  8.6 
+⋯
+  ⋯
+  rmsc  0.031  12.9  0.030  12.8 
+⋯
+  ⋯
+  Without metals: 
+MEa  0.010  0.41  0.007  1.4 
+⋯
+  ⋯
+  MAEb  0.022  5.7  0.021  5.8 
+⋯
+  ⋯
+  rmsc  0.028  8.4  0.027  8.5 
+⋯
+  ⋯
+  a
+Mean error (compared to experiment).
+b
+Mean absolute error (compared to experiment).
+c
+Root mean square error (compared to experiment).
+Table II.
+Atomization energies obtained from PBE, PBE0, and HSE calculations for the exchange screening parameters,
+ω
+=
+0.3
+and
+0.207
+Å
+−
+1
+⁠, respectively. Note, that the energy values are not corrected for zero-temperature vibration effects. All energies are given in eV/atom. This table replaces Table VIII in Ref. 3.
+    HSE    
+Solid PBE
+ω
+=
+0.300
+ω
+=
+0.207
+PBE0 Expt.
+Li  1.605  1.566  1.555  1.516  1.63 
+Na  1.079  1.042  1.032  0.985  1.13 
+Al  3.434  3.438  3.425  3.385  3.39 
+BN
+  6.928  6.826  6.829  6.811  6.68 
+BP
+  5.287  5.265  5.266  5.247  5.04 
+C  7.706  7.604  7.608  7.592  7.37 
+Si  4.556  4.542  4.582  4.555  4.63 
+SiC
+  6.403  6.378  6.407  6.387  6.34 
+β
+-
+GaN
+  4.389  4.318  4.324  4.371  4.48 
+GaP
+  3.484  3.517  3.515  3.542  3.56 
+GaAs
+  3.151  3.157  3.149  3.125  3.26 
+LiF
+  4.327  4.230  4.229  4.215  4.40 
+LiCl
+  3.358  3.364  3.363  3.347  3.55 
+NaF
+  3.824  3.709  3.708  3.690  3.90 
+NaCl
+  3.087  3.091  3.090  3.069  3.31 
+MgO
+  5.013  4.921  4.929  4.924  5.15 
+Cu  3.484  3.086  3.078  3.046  3.49 
+Rh  5.724  4.658  4.586  4.205  5.75 
+Pd  3.706  3.008  2.954  2.882  3.89 
+Ag  2.518  2.374  2.368  2.329  2.95 
+All solids: 
+MEa 
+−
+0.042
+  −
+0.190
+  −
+0.195
+  −
+0.234
+  ⋯
+  MAEb  0.136  0.259  0.267  0.295 
+⋯
+  MAREc  3.4  6.6  6.8  7.6 
+⋯
+  a
+Mean error.
+b
+Mean absolute error.
+c
+Mean absolute relative error (%).
+Table III.
+The theoretical heats of formation for six insulators obtained using the PBE, PBE0, and HSE functionals. For the HSE case, the values for the screening parameters
+ω
+=
+0.300
+Å
+−
+1
+and
+ω
+=
+0.207
+Å
+−
+1
+are given. Technical details as in Ref. 3. All values in kJ/mol. This table replaces Table IX in Ref. 3.
+    HSE    
+Solid PBE
+ω
+=
+0.300
+ω
+=
+0.207
+PBE0 Expt.c
+LiF
+  −
+568.5
+  −
+589.3
+  −
+590.5
+  −
+592.3
+  −
+614
+  LiCl
+  −
+356.2
+  −
+372.3
+  −
+373.5
+  −
+374.1
+  −
+408
+  NaF
+  −
+522.1
+  −
+539.0
+  −
+540.4
+  −
+542.2
+  −
+573
+  NaCl
+  −
+354.7
+  −
+370.1
+  −
+371.2
+  −
+371.9
+  −
+411
+  MgO
+  −
+521.2
+  −
+538.5
+  −
+541.1
+  −
+543.5
+  −
+597
+  SiC
+  −
+52.4
+  −
+58.8
+  −
+60.0
+  −
+60.2
+  −
+71
+  MEa  49.8  34.3  32.9  31.7 
+⋯
+  MAREb  13.6  10.5  9.8  8.5 
+⋯
+  Mean error.
+Mean absolute relative error (%).
+Reference 7.
+Table IV.
+Direct and indirect gaps (eV) for
+GaAs
+⁠, Si, C,
+MgO
+⁠,
+NaCl
+⁠, and Ar for the
+Γ
+-,
+X
+-, and
+L
+-points using the PBE, PBE0, and HSE functionals. For the HSE calculations two different exchange screening parameters,
+ω
+=
+0.300
+Å
+−
+1
+and
+ω
+=
+0.207
+Å
+−
+1
+⁠, were used. This table replaces Table X in Ref. 3.
+    HSE    
+  PBE
+ω
+=
+0.300
+ω
+=
+0.207
+PBE0 Expt.
+GaAs
+  Γ
+1
+c
+  0.56  1.30  1.45  2.01  1.52a 
+X
+1
+c
+  1.46  1.88  2.02  2.67  1.90a 
+L
+1
+c
+  1.02  1.61  1.76  2.37  1.74a 
+Si 
+Γ
+15
+c
+  2.57  3.16  3.32  3.97  3.34–3.36,b 3.05c 
+X
+1
+c
+  0.71  1.14  1.29  1.93  1.13d, 1.25c 
+L
+1
+c
+  1.54  2.08  2.24  2.88  2.06(3)e, 2.40(15)f 
+C 
+Γ
+15
+  5.59  6.74  6.97  7.69  7.3a 
+X
+1
+c
+  4.76  5.68  5.91  6.66    
+L
+1
+c
+  8.46  9.77  10.02  10.77    
+MgO
+  Γ
+15
+  4.75  6.24  6.50  7.24  7.7g 
+X
+4
+′
+  9.15  10.66  10.92  11.67    
+L
+1
+  7.91  9.39  9.64  10.38    
+NaCl
+  Γ
+15
+  5.20  6.31  6.55  7.26  8.5h 
+X
+4
+′
+  7.60  8.70  8.95  9.66    
+L
+1
+  7.32  8.43  8.67  9.41    
+Ar 
+Γ
+15
+  8.68  10.07  10.34  11.09  14.2i 
+a
+Reference 8.
+b
+Reference 9.
+c
+Reference 10.
+d
+References 9 and 11.
+e
+Ref.erence 12.
+f
+Reference 13.
+g
+Reference 14.
+h
+Reference 15.
+i
+Reference 16.
+We find that the lattice parameters, atomization energies, and heats of formation vary only little, if the screening parameter is changed from 0.3 to
+0.207
+Å
+−
+1
+⁠. The band gaps are more strongly affected, with the HSE06 functional
+(
+ω
+=
+0.207
+Å
+−
+1
+)
+yielding consistently larger values than the HSE functional using
+ω
+=
+0.3
+Å
+−
+1
+⁠. As also reported by Krukau et al.,6 the values for the HSE06 functional are in slightly better agreement with experiment. We finally stress that all conclusions in our original publication remain valid, although, for the lattice constants and energetics, the present HSE implementation yields values closer to the PBE0 functional than in our original work.
+REFERENCES
+1.M. J. Frisch, G. W. Trucks, H. B. Schlegel et al, GAUSSIAN, Development Version, Revision C.01, Gaussian, Inc., Pittsburgh PA, 2003.
+2.J. Heyd, G. E. Scuseria, and M. Ernzerhof, J. Chem. Phys. https://doi.org/10.1063/1.2204597 124, 219906 (2006).
+Google ScholarCrossref  
+3.J. Paier, M. Marsman, K. Hummer, G. Kresse, I. C. Gerber, and J. G. Ángyán, J. Chem. Phys. https://doi.org/10.1063/1.2187006 124, 154709 (2006).
+Google ScholarCrossref PubMed 
+4.J. Heyd, Ph.D. thesis, Rice University, 2004.
+5.O. A. Vydrov (private communication).
+6.A. V. Krukau, O. A. Vydrov, A. F. Izmaylov, and G. E. Scuseria, J. Chem. Phys. (to be published).
+7.NIST-JANAF Thermochemical Tables, edited by M. W. Chase, Jr. (AIP, New York, 1998).
+Google Scholar 
+8.Numerical Data and Functional Relationships in Science and Technology, edited by K.-H. Hellwege, O. Madelung, M. Schulz, and H. Weiss, Landolt-Börnstein, New Series, Group III, Vols. 17 & 22, Pt. a (Springer Verlag, New York, 1982).
+Google Scholar 
+9.M. Walkowsky and R. Braunstein, Phys. Rev. B https://doi.org/10.1103/PhysRevB.5.497 5, 497 (1972).
+Google ScholarCrossref  
+10.J. E. Ortega and F. J. Himpsel, Phys. Rev. B https://doi.org/10.1103/PhysRevB.47.2130 47, 2130 (1993).
+Google ScholarCrossref  
+11.R. R. Zucca, J. P. Walter, Y. R. Shen, and M. L. Cohen, Solid State Commun. https://doi.org/10.1016/0038-1098(70)90163-8 8, 627 (1970).
+Google ScholarCrossref  
+12.R. Hulthén and N. G. Nilsson, Solid State Commun. https://doi.org/10.1016/0038-1098(76)90973-X 18, 1341 (1976).
+Google ScholarCrossref  
+13.D. Straub, L. Ley, and F. J. Himpsel, Phys. Rev. Lett. https://doi.org/10.1103/PhysRevLett.54.142 54, 142 (1985).
+Google ScholarCrossref PubMed 
+14.S. Adachi, Optical Properties of Crystalline and Amorphous Semiconductors: Numerical Data and Graphical Information (Kluwer Academic, Dordrecht, 1999).
+Google ScholarCrossref  
+15.R. T. Poole, J. Liesegang, R. C. G. Leckey, and J. G. Jenkin, Phys. Rev. B https://doi.org/10.1103/PhysRevB.11.5190 11, 5190 (1975).
+Google ScholarCrossref  
+16.R. J. Magyar, A. Fleszar, and E. K. U. Gross, Phys. Rev. B https://doi.org/10.1103/PhysRevB.69.045111 69, 045111 (2004).
+Google ScholarCrossref  
+View Original Article
+© 2006 American Institute of Physics.
+View Metrics
+Citing Articles Via
+Web Of Science (1354)
+Google Scholar
+CrossRef (348)
+Submit your article
+  Sign up for alerts
+Most Read
+Most Cited
+Special Topic Preface: Nucleation—Current understanding approaching 150 years after Gibbs
+Pablo G. Debenedetti, Yi-Yeoun Kim, et al.
+Energy landscapes—Past, present, and future: A perspective
+J. C. Schön
+DeePMD-kit v2: A software package for deep potential models
+Jinzhe Zeng, Duo Zhang, et al.
+Online ISSN 1089-7690 Print ISSN 0021-9606
+Resources
+For Researchers
+For Librarians
+For Advertisers
+Our Publishing Partners 
+Explore
+Journals
+Physics Today
+Conference Proceedings
+Books
+Special Topics
+Publishers
+pubs.aip.org
+About
+User Guide
+Contact Us
+Register
+Help
+Privacy Policy
+Terms of Use
+Connect with AIP Publishing
+Facebook
+LinkedIn
+Twitter
+YouTube
+© Copyright 2024 AIP Publishing LLC

@@ -1,0 +1,78 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+5 Conclusions and Future Research Opportunities
+ARTICLE SECTIONSJump To
+The examples in the current review illustrate the unique catalytic properties of bimetallic surfaces and catalysts. Several examples, such as the hydrogenation of CC and CO bonds over Pt3d bimetallic materials, also demonstrate a strong correlation between model surfaces and supported catalysts, showing the promise of designing catalysts using first principles on model surfaces. The main reason for such strong correlations is that the desirable bimetallic structures for hydrogenation reactions, with subsurface 3d atoms underneath the surface Pt layer, are thermodynamically stable both in UHV environment and under hydrogenation reaction conditions.
+In comparison, for other types of reactions, such as dehydrogenation and reforming, the desirable Pt3d bimetallic structures should be the 3d-terminated surfaces. However, it is less clear whether these structures are present under dehydrogenation and reforming reaction conditions. Similarly, more studies are needed to determine the structures and their stability in other Pt-based bimetallic catalysts. Such understanding is critical in extending the design of bimetallic catalysts from hydrogenation to other types of reactions. Below are some opportunities for future research in the area of bimetallic catalysis:
+(1) Characterization of bimetallic catalysts under in situ reaction conditions. Because bimetallic structures would most likely change during reactions, it is critical to identify the atomic arrangement of bimetallic catalysts under temperatures, pressures, and reaction media (vapor phase or aqueous phase) relevant to catalytic reactions. One promising in situ technique is EXAFS, which allows measurements of the coordination numbers of monometallic and bimetallic bonds under in situ conditions. Recently in situ EXAFS and XRD have been combined to determine the short-range bonding environment of metal catalysts and the long-range order of oxide supports, respectively, under reaction conditions. (414, 415) These techniques should provide important information on the bimetallic structures and their stability under reaction conditions, which would in turn provide critical input for constructing relevant model surfaces in DFT calculations and UHV studies. To truly achieve the rational design of catalysts from first principles, it is essential that the model systems are as close as possible to those under reaction conditions. This is especially true for bimetallic catalysts due to the adsorbate-induced segregation and diffusion of metal atoms.
+(2) Synthesis of stable bimetallic structures. The prevention of metal segregation and diffusion is a challenge under reaction conditions. For example, for the Pt3d bimetallic catalysts, ideally one would design Pt-terminated surfaces for hydrogenation reactions and 3d-terminated catalysts for reforming reactions. Although the synthesis of well-defined coreshell bimetallic catalysts has been demonstrated for Pt3d bimetallic electrocatalysts, (407) it is unlikely that such well-defined coreshell structures, in particular the maintenance of Pt or 3d as the surface atoms, would survive the relatively harsh conditions of calcination and reduction treatment in typical heterogeneous catalysis. One possibility to prevent the metal movement is to increase the activation barriers of segregation/diffusion by anchoring one or both metal atoms by the catalyst supports, although the strong metalsupport interaction might change the electronic and catalytic properties of the bimetallic catalysts.
+(3) Metal carbides as substrates in bimetallic catalysts. Another possibility is to replace Pt with a metal-like substrate that prevents the diffusion of the 3d metals. For example, Ni-terminated PtNi surfaces are identified as effective catalysts for the reforming of alcohols and polyols. However, under reduction conditions or higher temperatures the surface Ni atoms would diffuse into bulk Pt, losing the high reforming activity. Recently, tungsten carbide (WC) was utilized to replace Pt because WC often shows catalytic properties similar to Pt (416) and is an effective diffusion barrier layer for surface metal atoms. (417) A comparative DFT and UHV study confirms that monolayer NiPt and NiWC surfaces show nearly identical reforming activity for ethanol. (261) A recent study also demonstrates that other carbides, including W2C and Mo2C, can be used to replace Pt to support monolayer metals. (418-421) Synthesis efforts to extend these model surfaces to powder catalysts will lead to the production of alternative bimetallic catalysts with higher stability and lower cost.
+(4) Correlation between model systems and catalytic reactions through theory. In addition to experimental efforts, calculations through multiscale modeling offer additional opportunities to correlate results on model surfaces to catalytic performance over supported catalysts. For example, recently Vlachos and co-workers have demonstrated the feasibility of creating activity maps to predict catalytic activity and selectivity of several Pt-based bimetallic catalysts using a combination of DFT calculations, linear energy correlations, and microkinetic modeling. (252, 422, 423) These types of calculations, coupled with parallel experimental efforts, will offer fruitful opportunities for the rational design of bimetallic catalysts with desirable activity, selectivity, and stability.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the thermodynamic stability of specific bimetallic structures, particularly in Pt-3d systems with subsurface 3d atoms, contribute to the strong correlation between model surfaces and supported catalysts in hydrogenation reactions, and what are the implications of this correlation for designing more effective catalysts using first principles on model surfaces?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

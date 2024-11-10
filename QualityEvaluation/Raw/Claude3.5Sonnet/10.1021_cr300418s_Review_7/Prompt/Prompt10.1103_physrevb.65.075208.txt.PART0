@@ -1,0 +1,1185 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Electronic structure and hyperfine parameters of substitutional Al and P impurities in silica
+J. Lgsgaard1 and K. Stokbro2
+1Research Center for Communication, Optics, and Materials (COM), Technical University of Denmark,
+Building 349, DK-2800 Lyngby, Denmark
+2Mikroelektronik Centret, Technical University of Denmark, Building 345 East, DK-2800 Lyngby, Denmark
+Received 11 December 2000; revised manuscript received 14 March 2001; published 31 January 2002!
+The electronic structure of substitutional Al and P impurities in silica is investigated using supercell calcu-
+lations within the framework of density functional theory DFT!. Evaluation of hyperfine matrices for the
+magnetic nuclei facilitates comparison to experimental data. It is found that the unpaired spin state of substi-
+tutional P is well described by the theory, while the unpaired spin state found for substitutional Al is severely
+at variance with the experimental data. Cluster calculations using both the DFT and the Hartree-Fock approxi-
+mation indicate that the problem is not caused by the supercell approach but rather by the residual self-
+interactions present in the DFT energy functionals. A simple model discussion serves to illustrate why DFT
+succeeds for P but fails for Al: First, it is argued that DFT self-interactions are larger for holes than for
+electrons. Second, there is an asymmetry between electrons and holes in the electronic states of the silica
+network: The hole present at the Al impurity goes into a nonbonding O orbital while the extra electron present
+at the P impurity goes into a P-O antibonding state.
+DOI: 10.1103/PhysRevB.65.075208
+PACS numbers!: 61.72.Hh, 71.20.Ps, 76.30.Lh
+I. INTRODUCTION
+Doped silica glass is a key material for optical communi-
+cation technology, and there is currently great interest in im-
+proving the fundamental understanding of impurity chemis-
+try in silica. Two of the technologically most important
+dopants are the horizontal neighbors of Si in the periodic
+table, Al and P. P doping has been used extensively to modify
+the elastic properties and refractive index of silica glasses,
+and it has been shown that implantation of P ions can sig-
+nificantly
+enhance
+the
+nonlinear
+parts
+of
+the
+optical
+susceptibility.1 Both Al and P doping have been found to
+enhance the solubility of rare-earth-metal ions in silica
+which is essentially zero in the absence of such codoping!,
+and this effect is of great practical importance in the fabrica-
+tion of, e.g., light-amplifying optical devices.
+A number of experimental investigations have been per-
+formed in order to clarify the properties of Al and P impuri-
+ties in both crystalline and amorphous silica,111 but the ex-
+perimental techniques employed usually only yield indirect
+information about the geometry and electronic structure of
+the impurities and their local environments. Thus there is a
+need to complement the experimental investigations by the-
+oretical studies that may provide a link between the funda-
+mental impurity properties and the experimentally acces-
+sible quantities e.g., results from optical or magnetic
+resonance spectroscopies!. Two theoretical techniques have
+in recent years proven succesful for investigations of defects
+and impurities in silica. One approach1217 is based on tradi-
+tional quantum-chemical methods using cluster models and a
+basis set consisting of local orbitals usually Gaussians!, and
+a variety of energy functionals such as Hartree-Fock, second-
+order Moller-Plesset MP2!, and various approximations to
+density functional theory DFT!.1820 The other 2129 is based
+on repeated supercell models and DFT energy functionals,
+which are in most cases evaluated using a plane-wave repre-
+sentation of the Kohn-Sham wave functions and non- or
+semilocal pseudopotentials to describe the electronic states
+close to the nuclei in an efficient manner. We have recently
+presented a study of implanted and substitutional Al and P
+impurities in silica using a DFT-based supercell method.29
+The purpose of the present work is to extend the study of the
+substitutional impurities through a calculation of the hyper-
+fine matrices for the magnetic nuclei
+27Al,
+29Si,
+31P, and
+17O.
+Several theoretical studies of substitutional Al impurities
+have been reported earlier,12,13,2729 but the results from
+Hartree-Fock cluster calculations12,13 have not been consis-
+tent with those of DFT-based supercell approaches.2729 Re-
+cently, two independent works have compared results of
+cluster calculations using a DFT-like functional to those ob-
+tained with the Hartree-Fock method30,31 and in one case also
+the MP2 functional.30 The DFT geometries were similar to
+those obtained in supercells, and the hyperfine parameters
+were in clear disagreement with experimental results, indi-
+cating that the choice of an energy functional free of self-
+interaction is decisive for describing the physics of this sys-
+tem correctly. In the present paper we show that, while the
+supercell DFT calculations for the substitutional Al impurity
+as expected yields hyperfine parameters in strong disagree-
+ment with experiment, the method accounts well for the hy-
+perfine parameters of substitutional P. Thus, the DFT is ap-
+propriate for describing the behavior of a single electron in
+the silica conduction bands, but fails in the description of a
+single hole in the valence band. It is argued that this is partly
+due to the different nature of the silica valence and conduc-
+tion bands and partly to the DFT self-interaction error being
+larger for holes than for electrons.
+The remainder of the paper is organized as follows: In
+Sec. II we briefly review the calculation of hyperfine matri-
+ces within the framework of ultrasoft pseudopotential US-
+PP! theory. In Sec. III our numerical results are presented
+and discussed, while Sec. IV summarizes our conclusions.
+II. THEORETICAL APPROACH
+When evaluating hyperfine matrices it is important to de-
+scribe the wave function correctly close to the nuclei, which
+PHYSICAL REVIEW B, VOLUME 65, 075208
+0163-1829/2002/657!/07520810!/$20.00
+2002 The American Physical Society
+65 075208-1
+is difficult within traditional norm-conserving pseudopoten-
+tial approaches. It has recently been shown,32 however, that
+the ultrasoft pseudopotential US-PP! scheme originally in-
+troduced by Vanderbilt33 can be viewed as an approximation
+to the projector-augmented-wave PAW! all-electron method
+developed by Blo
+chl.34 In this method the wave function is
+expanded in a basis of plane waves augmented by atomic
+orbitals inside spheres centered around the ions on the lat-
+tice:
+Cnks5C
+ nks1(
+i
+C
+ nksubi&fi2f
+ i!.
+1!
+Here s is a spin index, which we, for convenience, shall take
+to assume the values 61. The functions fi and f
+ i are
+atomic orbitals i.e., a radial function times a spherical har-
+monic! centered on a particular site in the crystal, and are
+chosen to be identical outside the augmentation spheres, im-
+plying that Cnks and C
+ nks are also identical in this region. i
+is to be understood as a combined orbital, spin, and site
+index. The fi functions are solutions of the all-electron
+Kohn-Sham equations19 in the free atom, at chosen energies
+usually the atomic eigenvalues are included!, while the f
+ i
+are soft pseudo-orbitals. The functions bi are a set of duals to
+the pseudo-orbitals, i.e.,
+b juf
+ i&5dij .
+2!
+Under the assumption of pseudocompleteness, by
+which we shall understand fulfillment of the requirement
+C
+ nks5(
+i
+C
+ nksubi&f
+ i
+3!
+and thereby
+Cnks5(
+i
+C
+ nksubi&fi
+4!
+within the augmentation spheres, the charge density may be
+written as34
+nr,s!5(
+nks fnks2mc!$uC
+ nksr!u21(
+ij C
+ nksubi&
+3b juC
+ nks&Qijr2ti!%,
+5!
+Qijr!5fi
+*r!f jr!2f
+ i
+*r!f
+ jr!.
+6!
+ti is the position vector of the augmentation sphere contain-
+ing orbital i we assume nonoverlapping spheres so that the
+ij sum can be restricted to orbital pairs belonging to the
+same sphere!. f is the Fermi function and mc the chemical
+potential. Usually only spd orbitals are included in the fi ,f
+ i
+basis set.
+In both the PAW and US-PP methods it is convenient to
+introduce smooth pseudodensities, n
+ and n
+ aug, given by
+n
+r,s!5(
+nks fnks2mc!uC
+ nksr!u2,
+7!
+n
+ augr,s!5n
+r,s!1(
+nks fnks2mc!(
+ij C
+ nksubi&
+3b juC
+ nks&Q
+ ijr2ti!.
+8!
+Q
+ ij is a set of pseudoaugmentation charges, determined so as
+to preserve the lowest moments of the Qijs. In this way, the
+long-range electrostatic interactions are correctly described
+by the pseudo-charge-density, and the pseudo-Hartree and
+exchange-correlation xc! energy terms need only be cor-
+rected inside the atomic spheres. This is conveniently done
+by a nonlocal potential term.34,33 In the PAW method the
+correction is exact, so in this approach the DFT energy func-
+tional corresponding to the density in Eq. 5! is minimized
+with the pseudo-wave-functions C
+ nks as variational param-
+eters. In the US-PP method the correction is approximate,
+based on a linearization around the free-atom occupancies.32
+In practice, the two methods yield results in good agreement
+with each other. Assuming that the US-PP C
+ nks is not too
+different from the corresponding PAW quantity, it follows
+that a good approximation to the all-electron wave function
+may be constructed on the basis of a US-PP calculation by
+use of Eq. 1!. In the context of calculating hyperfine param-
+eters this approach was originally introduced by Van de
+Walle and Blo
+chl,35 and we shall proceed along similar lines.
+The interaction between an unpaired electron spin and a
+magnetic nucleus can formally be written as
+I
+•A
+ •S
+.
+9!
+Here I
+ and S
+ are the quantum-mechanical vector! operators
+for the nuclear and electronic spins, respectively, while A
+ is
+the hyperfine matrix. This may in turn be evaluated from the
+electronic spin density as
+A
+ 5AisoI
+1A
+
+an,
+10!
+Aiso5
+2
+3 m0bebInspin0!,
+11!
+Aan
+mn5
+m0
+4p bebIE dr nspinr!
+3xmxn2dmnr2
+r5
+,
+12!
+taking the nucleus to be at the origin of coordinates. Here m0
+is the vacuum permeability, while be and bI are the mag-
+netic moments of the electron and nucleus, respectively. nspin
+is the electronic spin density and I
+ the unit matrix. Using the
+augmented pseudodensity, n
+ aug(r,s) given by Eq. 8!, and its
+Fourier transform n
+ aug(G,s), it is a straightforward exercise
+to show that
+nspin0!5(
+s sn
+0,s!1(
+nks fnks2mc!(
+ij sC
+ nksubi&
+3b juC
+ nks&Qij0!,
+13!
+J. LAEGSGAARD AND K. STOKBRO
+PHYSICAL REVIEW B 65 075208
+075208-2
+E dr nspinr!
+3xmxn2dmnr2
+r5
+5(
+s sH (
+G0
+4p
+3 n
+ augG,s!
+3GmGn2dmnG2
+G2
+1(
+nk fnks2mc!(
+ij C
+ nksubi&b juC
+ nks&
+3E
+0
+rcdr@Qijr!2Q
+ ijr!#
+3xmxn2dmnr2
+r5
+J .
+14!
+A similar result was recently reported by Blo
+chl.36 Notice
+that since n
+ aug correctly reproduces the multipole moments
+of n in the neighboring spheres we only need to include
+augmentation corrections in the sphere containing the mag-
+netically active nucleus.
+These formulas summarize the contribution to the hyper-
+fine matrix from the valence electrons. The presence of a
+nonzero valence electron spin density will modify the shape
+of the core wave functions and create an additional contribu-
+tion to the spin density at the nucleus, which in some cases
+can be important. To account for this effect, we solve the
+radial Schro
+dinger equation for the core states, treating the
+spherically averaged spin-dependent contribution to the
+Kohn-Sham potential from the valence electron density as a
+fixed external potential. Nonspherical perturbations of the
+core states are neglected, and the spin polarization of the
+core states therefore only affects the isotropic part of the
+hyperfine matrix.
+III. NUMERICAL RESULTS AND DISCUSSION
+We have previously calculated the electronic and geomet-
+ric structure of substitutional Al and P impurities in silica,29
+and the present investigation is based on these results. The
+FIG. 1. Simplified level schemes for substitutional impurities in
+silica. In a!, a level diagram for pure silica is shown: The Si 3sp
+levels hybridize to the O 2p levels to form occupied bonding, and
+unoccupied antibonding states, separated by a set of occupied non-
+bonding orbitals derived from O 2p states. In b! the levels at an Al
+impurity site are depicted: The Al level leads to new bonding states
+B2!, and antibonding states buried in the conduction bands. An
+unpaired hole is present in the top of the valence bands. In c! we
+show the corresponding levels at a P impurity. Here, the lower
+position of the P 3sp levels compared to those of Si gives rise to a
+gap level holding an unpaired electron. The P-O bonding states are
+situated at the bottom of the Si-O bonding-state bands.
+ELECTRONIC STRUCTURE AND HYPERFINE . . .
+PHYSICAL REVIEW B 65 075208
+075208-3
+essence of the electronic structures found is summarized in
+Fig. 1. In pure silica, the top of the valence band is formed
+by a set of nonbonding O states, lying above the Si-O bond-
+ing states. The conduction band is formed by antibonding
+Si-O states. As the Al 3sp levels lie slightly above the Si
+ones, the Al-O bonding states of a substitutional Al impurity
+will appear in the gap between bonding Si-O and nonbond-
+ing O states, whereas the Al-O antibonding states will be
+buried in the Si-O conduction bands. Al has one electron less
+than Si, so a hole will be present in the top of the valence
+band, that is, in the nonbonding O bands. In the case of
+substitutional P, on the other hand, the impurity 3sp levels
+lie below those of Si, so the bonding P-O states appears at
+the lower edge of the Si-O ones, while the antibonding states
+falls below the conduction band and forms a gap state. One
+spin channel of this gap state is occupied, since P has one
+electron more than Si. Thus, the hole introduced by Al sub-
+stitution moves in an orbital space that is quite different from
+that which is accessible to the electron introduced by P sub-
+stitution, a fact that will be shown to have important conse-
+quences for the reliability of the DFT approach.
+A. 31P hyperfine parameters
+To investigate the accuracy of the pseudopotential ap-
+proach to calculation of hyperfine parameters described
+above,
+31P hyperfine matrices were calculated using P
+pseudopotentials with a different number of augmentation
+orbitals in the various angular-momentum shells. The results
+are shown in Table I. It can be seen that the uncertainties
+associated with the atomic orbital basis set are on the order
+of 1%, which is less than the errors commonly encountered
+when comparing theoretical values of hyperfine matrices to
+experiment. The present calculation gives a good reproduc-
+tion of the anisotropic part of the hyperfine matrix, whereas
+the isotropic part is ;25% off. It is well known from other
+studies that the isotropic term is the most difficult to
+reproduce,35 presumably because of the approximate descrip-
+tion of relativistic and exchange-correlation effects close to
+the nucleus. Core polarization effects were found to add
+about 1% to the total isotropic shift in this case. The high
+accuracy of the calculated anisotropic terms suggests that it
+is only the wave function very close to the nucleus that is
+inadequately described by the present theory. The principal
+directions of the hyperfine matrix calculated with the
+pseudopotential labeled PP1 in Table I! are compared to the
+experimentally determined ones in Table II. The variation of
+these directions between the different pseudopotentials was
+found to be on the order of 1%. Again, the agreement be-
+tween theory and experiment is quite good, apart from an
+interchange of two eigenvectors. Uchida and co-workers3
+found the eigenvector of the lowest eigenvalue to lie ap-
+proximately along the line connecting the two oxygen atoms,
+which would be short-bonded to the substitutional P if no
+structural relaxations occurred compared to pure silica. How-
+ever, in our calculation we find that the order of long and
+short bonds is interchanged around P, i.e., the short-bonded
+O atoms around an Si atom become the long-bonded O at-
+oms around the substitutional P impurity. Thus, while the
+conclusion of Uchida et al. that the lowest eigenvalue is in
+the direction of the short bonds is upheld, this direction is
+changed relative to the crystal axes by the structural relax-
+ations. As the difference between long and short bonds in
+a-quartz is very small (;0.004 Å ), the most likely expla-
+nation of the discrepancy, compared to experiment, in the
+eigenvector ordering then seems to be that the calculation for
+some reason perhaps the finite size of the supercell! errone-
+ously interchanges the order of long and short bonds.
+In Table III the predicted hyperfine parameters for the Si
+and O atoms closest to P are listed. It can be seen that a
+substantial part of the unpaired spin is found on the O atoms
+that have the longer bonds to P, while the spin density is
+much reduced on the short-bonded O atoms in accordance
+with the analysis of the density of states DOS! presented in
+Ref. 29. Core polarization effects were found to increase the
+isotropic coupling constant by ;1% for Si and decrease it
+by ;4% for O. No experimental values for the 17O hyper-
+fine matrices have, to our knowledge, been reported. The
+TABLE II. Principal directions for the eigenvectors of the 31P
+hyperfine tensor in spherical polar coordinates. u measures the
+angle between the vector Pi and the c direction, while f measures
+the rotation with respect to one of the C2 symmetry axes of the
+crystal. The vectors are ordered according to decreasing principal
+values.
+Theory
+Experiment Ref. 3!
+u deg!
+f deg!
+u deg!
+f deg!
+P1
+90.0
+0.0
+90.0
+0.0
+P2
+30.0
+270
+64.8
+90.0
+P3
+60.0
+90
+25.2
+270
+TABLE III. Principal values of the 17O and 29Si hyperfine ten-
+sors in mT! for the nearest O and Si neighbors of a substitutional P
+impurity. O1! are the long-bonded to P! O neighbors, and O2! the
+short-bonded ones. Si1! and Si2! are neighbors of O1! and O2!,
+respectively.
+Aiso
+Aan principal values
+O1!
+-8.47
+1.28
+1.19
+-2.36
+O2!
+-1.73
+0.28
+0.26
+-0.54
+Si1!
+-1.80
+0.14
+0.14
+-0.28
+Si2!
+-0.37
+0.03
+0.01
+-0.04
+TABLE I. Principal values of the 31P hyperfine tensor in mT!
+for different P pseudopotentials. PP1 has two atomic orbitals in
+each of the sp channels and one in the d channel; PP2, PP3, and
+PP4 have an extra orbital in the s, p, and d channels, respectively.
+Aiso
+Aan principal values
+PP1
+140.8
+9.77
+-4.55
+-5.23
+PP2
+140.8
+9.77
+-4.55
+-5.23
+PP3
+142.8
+9.66
+-4.52
+-5.13
+PP4
+141.8
+9.76
+-4.54
+-5.22
+Expt. Ref. 3!
+112.9
+9.91
+-4.36
+-5.54
+J. LAEGSGAARD AND K. STOKBRO
+PHYSICAL REVIEW B 65 075208
+075208-4
+spin density on the neighboring Si atoms is very small, as
+can be inferred from the smallness of the hyperfine param-
+eters. In fact, even for the Si atoms neighboring the long-
+bonded to P! O atoms, the integrated spin density within the
+Si augmentation spheres, as estimated using Eq. 4!, corre-
+sponds to only 0.015 electrons. Experimentally, a hyperfine
+doublet with a splitting of 0.16 mT with the magnetic field in
+the z direction was assigned to interactions with 29Si nuclei,
+suggesting that the present calculation does not provide an
+accurate description of very small spin concentrations. Simi-
+lar problems have been reported by Van de Walle and
+Blo
+chl.35 In conclusion, the supercell DFT calculation seems
+to provide a fairly accurate description of the electronic
+structure around a substitutional P impurity.
+B. Hyperfine parameters around an Al impurity
+The unpaired spin state around the substitutional Al im-
+purity is situated at the top of the valence band, that is, in the
+O nonbonding states. Put in another way, the hole introduced
+on Al is transferred to one or more neighboring O atoms.
+There is abundant evidence from EPR experiments on irra-
+diated a-quartz crystals that the spin is in fact localized on
+one of the long-bonded O neighbors: Signals from six differ-
+ent g-tensor orientations can be discerned in EPR spectra,
+corresponding to holes sitting at each of the two long-bonded
+O neighbors to the three symmetry-equivalent Al positions
+available.37,38 Cross-relaxation experiments and dielectric
+loss measurements have indicated that the hole may hop
+back and forth between the two long-bonded O atoms.39 The
+apparent confinement of the unpaired spin on one of two
+symmetry-related O atoms indicates a dynamical localization
+effect: The presence of the hole on one of the equivalent O
+neighbors creates a polarization cloud in the surrounding
+lattice, and this cloud impedes hole hopping between O
+atoms.40 Thus, in the theoretical calculations we should ex-
+pect to see either a preference for structural distortions cre-
+ating a localized hole state, or at least a tendency for the hole
+to localize quickly if a distortion is enforced. However, we
+have not observed any of these effects in the supercell cal-
+culations. On the contrary, if the structure is allowed to fully
+relax, the Al-O bonds end up being pairwise equivalent, and
+with very small differences in bond length between pairs.29
+This structure is stable towards distortions. A similar result
+was found by Magagnini et al. using the local spin density
+approximation LSDA!.28 The spin densities on the short-
+and long-bonded O atoms differ by less than 10%. If a struc-
+tural distortion is enforced, only a slow variation in the spin
+densities is seen, and the energy penalty quickly rises. That
+the spin distribution associated with the theoretical optimum
+geometry is not consistent with the experimental results for
+17O hyperfine matrices41 can be seen at a glance from Table
+IV. Given the accuracy of the theoretical 31P hyperfine pa-
+rameters reported above and the large spin population on the
+O atoms, it is unlikely that the large deviations from experi-
+ment are merely caused by basis set inaccuracies. It must be
+concluded that the spin density distribution found by the su-
+percell method in conjunction with DFT is incorrect, and that
+the picture of this impurity state put forward in Refs. 28 and
+29 is thereby invalidated.
+To clarify the reason for these inaccuracies a new inves-
+tigation of the substitutional Al impurity within the cluster
+approximation was performed. The calculations were per-
+formed using either the Hartree-Fock energy functional or
+the hybrid Hartree-FockDFT functional B3LYP proposed
+by Becke,42 which has proven highly accurate for a variety
+of chemical systems. The calculational procedures and some
+of the results were presented in Ref. 31, and similar work has
+independently been reported by Pacchioni et al.30 It was
+found that there is a qualitative difference between the re-
+sults of the two energy functionals considered: While the
+Hartree-Fock approximation favors a structural distortion
+with one Al-O bond becoming ;14% longer than the other
+three, the B3LYP energy functional does not lead to such a
+distortion but rather to a restoration of the C2 symmetry of
+the cluster, which was explicitly broken in the initial con-
+figuration. The bond lengths obtained in this calculation are
+close to the supercell Perdew-Wang 1991 PW91! result.43
+The differences in structure are reflected in the Mulliken
+populations: Using the B3LYP functional, spin densities re-
+sembling those arising in the supercell calculations are ob-
+tained, while in the Hartree-Fock case, the unpaired spin is
+almost completely localized on the long-bonded O atom.
+These results indicate that the removal of the periodic Al
+images has no significant effect on the electronic structure of
+the impurity, whereas the choice of an energy functional
+Hartree-Fock! with exact self-interaction cancellation is de-
+cisive in obtaining agreement with the experimental picture.
+The calculated hyperfine parameters are reported in Table
+V. The results obtained within the Hartree-Fock approxima-
+tion are in good agreement with the experimental values,
+especially for the anisotropic tensor, while the B3LYP results
+are closer to those obtained in the supercell PW91 calcula-
+tion, and in clear disagreement with experiment. In the
+Hartree-Fock equilibrium geometry both energy functionals
+have been applied, and it can be seen that the Hartree-Fock
+approximation still provides the best description of the an-
+isotropic couplings, although the B3LYP results are not too
+far from the experimental values in this case. For the isotro-
+pic 17O coupling constant the situation is reversed: Here, the
+B3LYP approximation provides the better description. In our
+view, this improvement is most likely to be accidential:
+While the anisotropic hyperfine tensor is roughly propor-
+tional to the O 2p weight of the hole wave function on the O
+atom in question, the isotropic coupling is only dependent on
+the s component, which is very small. Furthermore, the iso-
+TABLE IV. Isotropic and anisotropic contributions to the hyper-
+fine coupling tensors around a neutral substitutional Al impurity in
+mT!, as calculated using the PW91 energy functional in a 54-atom
+repeated-cell geometry.
+Aiso
+Aan principal values
+27Al theory
+-1.018
+0.010
+-0.001
+-0.010
+27Al expt. Ref. 41!
+-0.578
+0.074
+-0.034
+-0.034
+17O(1) theory
+-1.372
+1.145
+1.117
+-2.262
+17O(2) theory
+-1.601
+1.271
+1.242
+-2.513
+17O expt. Ref. 41!
+-2.594
+4.382
+4.121
+-8.504
+ELECTRONIC STRUCTURE AND HYPERFINE . . .
+PHYSICAL REVIEW B 65 075208
+075208-5
+tropic coupling is only determined by the wave function very
+close to the nucleus, which is difficult to describe using a
+Gaussian basis set, and where relativistic effects not ac-
+counted for in the calculation may lead to further inaccura-
+cies. Therefore, the calculation of the isotropic coupling con-
+stant is more prone to technical errors than the anisotropic
+tensor, as was also evident in the supercell results for substi-
+tutional P.
+To investigate the implications of the spurious self-
+interaction on the total energy some additional calculations
+have been performed, the results of which are summarized in
+Table VI. First, we have calculated the energy difference
+between the HF and B3LYP equilibrium geometries within
+each of the two approximations. To focus attention on the
+effect of relaxations around the Al ion, we have subtracted
+the energy difference between HF and B3LYP equilibrium
+geometries for a pure neutral SiO2 cluster. With this correc-
+tion, the penalty within B3LYP for going from the B3LYP to
+the HF equlibrium geometry is 0.15 eV, whereas the penalty
+within HF for going the other way is 2.23 eV. Since the
+results for the hyperfine matrices show that the true equilib-
+rium geometry must be close to the HF geometry, this indi-
+cates that the magnitude of the B3LYP error is at least on the
+order of 0.2 eV. However, the large energy difference within
+the HF approximation suggests that the error could be much
+more severe.
+To shed more light on this question we have also calcu-
+lated the charging energy of the impurity cluster within the
+two approximations. In contrast to the neutral cluster, only
+small differences between unrestricted HF and B3LYP equi-
+librium geometries are found in this case. In both approxi-
+mations, the cluster goes into a C2 symmetric configuration,
+as would be expected with all valence bands filled up. The
+Al-O equilibrium bond lengths are 1.727 Å and 1.741 Å in
+the HF versus 1.742 Å and 1.756 Å in the B3LYP geom-
+etries. We find the negatively charged cluster to be stable in
+both approximations, with a trapping energy i.e., the differ-
+ence between total energies in the charged and neutral re-
+laxed configurations! of 5.29 eV in HF and 6.33 eV in the
+B3LYP approximation. Note that these energies represent
+trapping from the vacuum into a small cluster, and may be
+substantially different from the trapping energies for elec-
+trons trapped from the conduction band of an extended solid.
+Assuming that the B3LYP method describes the charged con-
+figuration correctly, we should expect the B3LYP trapping
+energy to be too high, as the method fails to capture the
+energy gain from the structural relaxation in the neutral clus-
+ter. On the other hand, the HF trapping energy is probably
+too low, as electron correlations, which are left out of the HF
+approximation, are usually more important in negatively
+charged systems. For instance, Pacchioni and Mazzeo44
+found a difference in trapping potential of ;1.5 eV between
+the HF and B3LYP approximations for a substitutional Ge
+impurity in silica using computational methods similar to
+ours. Also in this case, the B3LYP approximation provided
+the deeper potential, although there was no qualitative differ-
+ence in the atomic geometries between the different approxi-
+mations. Thus, the result for the charging energy place a
+more stringent upper bound of around 1 eV on the total-
+energy error arising from the wrong B3LYP geometry, and it
+seems likely that the error is, in fact, somewhat smaller than
+this.
+C. Discussion: Validity of the PW91 and related approaches
+The results presented above show that the PW91 approxi-
+mation adequately describes the electronic structure of a neu-
+tral substitutional P impurity in a-quartz but fails dramati-
+cally for the corresponding Al impurity. In the present case,
+both impurities have been reliably identified and their EPR
+properties have been characterized in great detail. This is not,
+however, generally the case for impurity states in silica, or
+other materials for that matter, and an important role of an
+impurity theory is to provide reliable information that may
+aid the identification of various impurities from the available
+experimental information usually from optical or magnetic
+resonance spectroscopies!. As the DFT in most cases consti-
+tutes an improvement over Hartree-Fock theory, it is impor-
+TABLE V. Isotropic and anisotropic contributions to the hyper-
+fine coupling tensors around a neutral substitutional Al impurity in
+mT!, as calculated using the Hartree-Fock and B3LYP energy func-
+tionals in an AlSi16O16H36 cluster geometry. The results denoted
+HF-B3LYP were calculated in the Hartree-Fock equilibrium geom-
+etry using the B3LYP energy functional. In all cases, O1! denotes
+the O neighbor with the longest bond to Al.
+Aiso
+Aan principal values
+27Al Hartree-Fock
+-0.587
+0.066
+-0.032
+-0.034
+27Al HF-B3LYP
+-0.498
+0.062
+-0.024
+-0.038
+27Al B3LYP
+-0.791
+0.028
+-0.002
+-0.025
+27Al expt. Ref. 41!
+-0.578
+0.075
+-0.034
+-0.035
+17O(1) Hartree-Fock
+-4.247
+4.475
+4.461
+-8.935
+17O(1) HF-B3LYP
+-2.231
+3.617
+3.605
+-7.221
+17O(1) B3LYP
+-0.548
+0.924
+0.910
+-1.834
+17O expt. Ref. 41!
+-2.594
+4.382
+4.121
+-8.504
+TABLE VI. Total energies in hartree units! of the cluster configurations investigated. B3LYP/HF denotes
+a B3LYP calculation in a Hartree-Fock equilibrium geometry, etc.
+Neutral SiO2
+Neutral SiO2:Al
+Charged SiO2:Al
+B3LYP/B3LYP
+-6147.8842
+-6100.7166
+-6100.9493
+B3LYP/HF
+-6147.8690
+-6100.6962
+-
+HF/B3LYP
+-6131.7217
+-6084.5123
+-
+HF/HF
+-6131.7227
+-6084.5954
+-6084.7897
+J. LAEGSGAARD AND K. STOKBRO
+PHYSICAL REVIEW B 65 075208
+075208-6
+tant to clarify the reasons for its failure in the present case, in
+order to determine when this theoretical approach can and
+cannot be applied.
+1. Localization barriers for holes and electrons
+The main chemical difference between the substitutional
+Al and P impurities is that Al donates a hole to the top of the
+SiO2 valence band, while P donates an electron to the bottom
+of the conduction band. These two bands are, however, of a
+quite different nature, as seen from Fig. 1. The top of the
+valence bands consists of O 2p nonbonding states, while the
+bottom of the conduction bands is made up of Si-O antibond-
+ing orbitals. Thus, the injected hole will move in a space of
+weakly coupled as they do not point towards each other!,
+nearly degenerate O 2p orbitals surrounding the Al impurity
+to which the hole is bound for electrostatic reasons!, while
+the injected electron will move in a space consisting of the P
+3sp hybrid orbitals and the O 2p orbitals pointing towards
+the P atom. These orbitals have strong overlaps, meaning that
+the effective Hamiltonian for the electron is not sensitive to a
+small residual self-interaction in the DFT energy functional.
+For the hole moving in the nonbonding O 2p orbitals, on the
+other hand, even a small residual self-interaction may out-
+weigh the O 2p level differences caused by structural distor-
+tions, thus preventing the hole from localizing on the orbital
+of highest energy, which in turn makes the distortion less
+favorable.
+To formalize the argument, we set up a minimal model for
+the hole energy functional in the different approximations.
+Focusing attention on the electrons in the minority spin chan-
+nel that need to be accommodated in the nonbonding O 2p
+orbitals surrounding the Al impurity, we assume that the in-
+teraction with the other electrons in the system may be well
+represented by suitably chosen orbital energies, and that the
+coupling to other orbitals is sufficiently weak that these do
+not need to be incorporated in the basis. Furthermore, we
+neglect the overlap between the different O 2p orbitals to
+keep the effective Hamiltonian simple, although it should be
+kept in mind that a small overlap does in fact exist. The
+total-energy functional may then be written as31
+E5C1(
+i
+irii1
+1
+2 (
+ij Uijriir jj1Exc@r#,
+15!
+where r is the density matrix of the minority spin electrons,
+and i,j indexes the nonbonding O 2p states on different
+sites. i collects all terms linear in r except those arising
+from the xc energy, and C denotes the r-independent terms.
+The Uij parameters are the Coulomb integrals between 2p
+charge distributions on sites i and j. The different total-
+energy approximations are distinguished by different choices
+of Exc. In the HF approach the exact exchange energy is the
+only contribution retained, while in DFT the xc energy is
+usually a complicated local functional of the total electron
+density and possibly its gradient. Thus, we may write
+Exc
+UHF@r#52
+1
+2 (
+ij rijr jiUij ,
+Exc
+DFT@r#5(
+i
+Elocrii!,
+16!
+assuming that there is no difference between the form of the
+basis orbitals on the different O sites in question.
+In the HF approximation, as is well known, the present
+case of a single hole moving in a filled band is formally
+equivalent to that of a single electron moving in an empty
+band, and both cases are free of self-interaction, as one can
+easily verify from Eqs. 15! and 16!. In DFT, both the ex-
+plicit self-interaction cancellation and the electron-hole sym-
+metry is lost. For the approximate xc functionals commonly
+employed, it has been found that the Hartree part of the
+self-interaction dominates the xc part such that an unphysical
+localization barrier is present. Considering the energy func-
+tional in Eq. 15! with N equivalent orbitals, we can define
+the localization barrier as the energy difference between the
+case of a particle electron or hole! localized on a single
+orbital and one that is evenly distributed over all orbitals:
+Eloc
+e 2Edeloc
+e
+[dN
+e .
+17!
+For large N, the result is well known:45
+d
+e 5
+U
+2 1Eloc1!.
+18!
+Since Edeloc goes to zero for an extended state, d
+e represents
+an upper limit on the localization barrier. Note that d
+e is
+entirely specified by the shape of the local orbital and the xc
+functional used. Typical values for real atomic orbitals are on
+the order of 0.11 eV.45,46 For a hole, one derives the general
+result @for a local xc functional as in Eq. 16!#:
+dN
+h 2dN
+e 5N22!Eloc1!1NFElocS
+1
+ND 2ElocS 12
+1
+NDG.
+19!
+The individual values of dN
+e and dN
+h cannot be estimated
+without making assumptions about the atomic geometry due
+to the long-range part of the Hartree interaction. The above
+formula reflects the fact that the Hartree energy functional
+preserves electron-hole symmetry so that the difference be-
+tween hole and electron localization energies is entirely de-
+termined by the xc terms. In the large-N limit one derives31
+d
+h 5V
+ H1V
+ xc&2d
+e ,
+20!
+V
+ H and V
+ xc being the Hartree and xc potential operators, and
+the expectation value being over a single orbital. The expec-
+tation value of the potentials can be an order of magnitude
+larger than d
+e .4547 However, in a typical impurity problem,
+the hole is restricted to move in a finite number of orbitals,
+and it is therefore important to investigate the behavior of
+Eq. 19! for this situation. To this end, we have performed a
+local spin density LSD! calculation for a neutral isolated O
+atom. The functional Eloc appearing in Eq. 19! is then ob-
+tained by evaluating the LSD energy functional on the result-
+ing self-consistent O 2p orbital assuming a fully spin-
+polarized density!. The result for dN
+h 2dN
+e is shown in Fig. 2.
+Of course, this should only be considered a rough estimate of
+the actual localization barrier, as interactions with other or-
+bitals and relaxation effects upon changes
+ELECTRONIC STRUCTURE AND HYPERFINE . . .
+PHYSICAL REVIEW B 65 075208
+075208-7
+in occupancy have been neglected. Still, it is interesting to
+notice, that whereas d
+e comes out as ;0.27 eV, the differ-
+ence between the hole and electron barriers is on the order of
+an eV, even for small N. On the other hand, the asymptotic
+limit indicated by a dashed line in the inset! is approached
+very slowly. This means that Eq. 20! does not necessarily
+constitute a good starting point for deriving realistic self-
+interaction corrected hole energy functionals within the
+framework of DFT.
+2. Validity of models with self-interaction
+To shed more light on the importance of residual self-
+interactions in various physical problems we shall investigate
+their consequences for different level separations and hop-
+ping integrals in a very simplified model: Consider a single
+particle in this case an electron! moving in a space of two
+orbitals, with an energy separation of D and a hopping pa-
+rameter t. Introducing the density matrix of the electron rij
+for i,jP$1,2%) we write the energy functional as
+E5Dr1112tr121Ur11
+2 1r22
+2 !.
+21!
+U thus represents the residual self-interaction present in the
+model. The density matrix may be expressed in terms of a
+single parameter,
+r115y,
+r22512y,
+r1252sgnt!Ay12y!, 22!
+and the energy functional can thus be written
+E5Dy22utuAy12y!1U2y222y11!.
+23!
+In Fig. 3 we show the values of y minimizing the energy
+for U51 and U50 no self-interaction!. The results are
+plotted as a function of t for various values of D. It can be
+seen that the self-interaction term is of limited consequence
+as long as it is a few times or more smaller than D or t,
+whereas serious discrepancies develop if U dominates the
+other parameters. Thus, to assess the validity of DFT meth-
+ods in a single-particle-like problem one must estimate the
+magnitude of the DFT self-interaction and compare it to the
+level differences and hopping matrix elements of the relevant
+orbitals. In the present cases, the hole bound to the substitu-
+tional Al impurity is moving in a space of nonbonding O 2p
+orbitals. The hopping matrix element between these states
+was estimated to be ;0.06 eV in Ref. 31. In comparison,
+the hole localization barrier resulting from unphysical self-
+interactions was estimated above to be on the order of 1 eV,
+an order of magnitude larger than the hopping matrix ele-
+ment. In this regime, serious discrepancies due to self-
+interaction errors can be expected, as is clearly seen from
+Fig. 3. For the electron bound to the substitutional P impurity
+the situation is very different: This electron primarily moves
+in the space of antibonding P-O orbitals and is found to
+localize in one pair of these through a lattice distortion. The
+self-interaction for an electron in these states must be ex-
+pected to be much lower than the 0.27 eV estimated for an O
+2p state since the antibonding P-O states are more extended.
+The hopping matrix elements between the states can be esti-
+mated from the matrix element between the phosporous sp3
+hybrids, which is given by ' 1
+4 (s2p);22 eV.48 The
+P-O antibonding states have most of their weight on the P
+atom, and thus a hopping matrix element of magnitude 12
+eV. This estimate is in good agreement with the splitting of
+;3 eV between occupied and unoccupied antibonding
+states seen in Fig. 1b! of Ref. 29. Therefore, in the case of
+substitutional P, the hopping terms of the effective Hamil-
+tonian for the unpaired spin are at least 4 times larger than
+the unphysical localization barrier. It is evident from Fig. 3
+that this will not cause major inaccuracies in the resulting
+electron distribution.
+3. The eigenvalue spectrum
+The remarkable agreement between the experimental hy-
+perfine matrices and the Hartree-Fock values reported in
+Table V is an indication that our assumption of a hole mov-
+FIG. 2. The difference between hole and electron localization
+barriers as a function of the orbital degeneracy evaluated using an
+LSD energy functional on a self-consistent O 2p orbital from an
+atomic calculation. The inset shows the behavior for a large number
+of orbitals. Note that the asymptotic result dashed line in inset! is
+approached very slowly.
+FIG. 3. Optimum y parameters at U50 solid lines! and U51
+dashed lines! as a function of t for different values of D. The
+parameters are defined in the text.
+J. LAEGSGAARD AND K. STOKBRO
+PHYSICAL REVIEW B 65 075208
+075208-8
+ing in a restricted space of O 2p nonbonding orbitals is well
+justified, since the Hartree-Fock approximation is exact for a
+single hole in a finite orbital space. A further test of the
+model can be done by considering the effective single-
+particle Hamiltonian in the different approximations. In the
+restricted orbital space, this is given by
+Hij5
+dE@r#
+drij
+.
+24!
+We consider an energy functional that is a linear combination
+of DFT and Hartree-Fock energies,
+E5C1(
+i
+irii1
+1
+2 (
+ij Uijriir jj2xrijr ji!
+112x!(
+i
+Elocrii!,
+25!
+which leads to the Hamiltonian
+Hij5F i112x!
+dElocr!
+dr U
+r5rii
+1(
+k
+UikrkkGdij
+2xUijr ji .
+26!
+The important point to notice is, that the magnitude of the
+off-diagonal matrix elements is controlled by the parameter x
+as long as the hopping integrals can be neglected. Therefore,
+with a purely local xc energy functional, the Hamiltonian
+will be strictly diagonal, and if the hole is to be distributed
+over the available sites this must imply that the one-particle
+levels are degenerate at self-consistency. This is not neces-
+sarily the case when off-diagonal matrix elements are intro-
+duced, as will be the case for the Hartree-Fock and B3LYP
+energy functionals, but we would expect the energy differ-
+ences of the eigenstates to follow the magnitude of the off-
+diagonal couplings. Therefore, our model Hamiltonian pre-
+dicts that the difference in energy between the highest
+occupied and lowest unoccupied state should vanish when
+using a purely local/semilocal xc energy functional, and that
+the Hartree-Fock gap should be larger than that found using
+B3LYP. In Ref. 29 this prediction was found to be fulfilled in
+the PW91 supercell calculation: The lowest unoccupied band
+states are just the top of the uppermost valence band. In the
+cluster calculations, we find that the Hartree-Fock gap in the
+minority spin channel is 10.9 eV while the B3LYP calcula-
+tion in the same atomic geometry yields a gap of 1.02 eV.
+This is a further indication that the assumptions behind our
+approximative hole energy functional, in particular, the ne-
+glect of hopping matrix elements, are sound, and also that
+the examination of HF and DFT eigenvalue spectra may re-
+veal the presence of a self-interaction problem. It is interest-
+ing to notice that a difference between Hartree-Fock and
+DFT eigenvalues similar to the one described here was re-
+cently found by Kotomin et al. for a K vacancy in KNbO3.49
+Also in this case, a large difference in the magnitude of
+structural relaxations was found between HF and DFT ap-
+proaches.
+IV. CONCLUSION
+In conclusion, we have undertaken a theoretical investiga-
+tion of the electronic and atomistic structure and hyperfine
+parameters of neutral substitutional Al and P impurities in
+a-quartz. For the P impurity, we find that DFT in a repeated-
+supercell geometry using the PW91 approximation yields re-
+sults in good agreement with available experimental data. In
+the case of Al, the DFT approach is shown to fail qualita-
+tively in describing the geometric and electronic structure of
+the impurity, both when using PW91 in a supercell, or when
+using the B3LYP functional in a cluster geometry. We have
+shown, that the Hartree-Fock approximation applied to the
+model cluster gives hyperfine parameters in excellent agree-
+ment with experiment, and argue that the failure of the DFT
+methods for this problem is a consequence of the incomplete
+self-interaction cancellation usually present in density func-
+tional theories.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the Mars-van Krevelen mechanism operate in oxide-catalyzed oxidation reactions, and what is the significance of the energy required for oxygen vacancy formation (ΔEv) in determining both the catalytic activity and the oxidizing ability of the oxide surface?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

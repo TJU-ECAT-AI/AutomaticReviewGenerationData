@@ -1,0 +1,81 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Regular Article
+Propane Dehydrogenation on Chromia/Silica and Chromia/Alumina Catalysts
+Abstract
+The catalytic activity of CrOx/SiO2 (SC, 0.08 to 0.99% chromium by weight), CrOx/Al2O3 (AC, 0.16 to 1.55%), and α-Cr2O3 for the dehydrogenation of propane has been investigated at 723 to 823 K in a flow apparatus. Before catalytic experiments, SC and AC samples were activated with oxygen at 773 K (s.o. treatment) followed or not followed by reduction with CO or H2 at 623 K. Occasionally, SC samples were dehydrated under vacuum at 1023 K before the s.o. treatment. Assuming all chromium to be in the +6 state after s.o., the average oxidation number of chromium (
+) is
+ 2 in SC samples reduced with CO and
+ 3 with H2. In AC catalysts,
+values progressively increase in consecutive reduction experiments, from
+= 2.2 to
+= 4.2. All catalysts are highly selective to propene and undergo a deactivation process during time on stream. The s.o. treatment completely restores the activity. The reduction mode does not influence the catalytic activity. Surface species formed upon adsorption at room temperature (RT) of CO or NO were studied by IR spectroscopy on CrOx/SiO2 submitted to treatments analogous to those used before catalytic experiments. In SC catalysts reduced with CO, the formation of carbonyls and nitrosyls of three different CrII species was confirmed. Interestingly, all these species were absent when the sample was (i) reduced with H2 at 773 K, or (ii) heated with H2O after reduction with CO, or (iii) exposed to propane after reduction with either CO or H2. After treatments (i) through (iii), a carbonyl and a dinitrosyl of CrIII were the only species formed on CO or NO adsorption at RT. Relying on (i) the dependence of the activity on chromium content, (ii) IR results. and (iii) ESR data, it is suggested that mononuclear CrIII with two coordinative vacancies is the active site for the dehydrogenation of propane. The catalytic activity of CrOx/SiO2, CrOx/Al2O3, and α-Cr2O3 is compared with that of CrOx/ZrO2, measured previously. Possible reasons for the substantially higher activity of CrOx/ZrO2 are discussed.
+element not found
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How have chromium oxide-based catalysts evolved since their discovery in 1933, and what are the key industrial applications and research focus areas (such as structure, active sites, support materials, promoters, and reaction mechanisms) that have contributed to their significance in dehydrogenation processes?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

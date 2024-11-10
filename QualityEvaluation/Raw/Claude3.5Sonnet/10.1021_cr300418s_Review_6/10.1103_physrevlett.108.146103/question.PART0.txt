@@ -1,0 +1,770 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Density-Functional Theory with Screened van der Waals Interactions for the Modeling
+of Hybrid Inorganic-Organic Systems
+Victor G. Ruiz,1 Wei Liu,1 Egbert Zojer,2 Matthias Scheffler,1 and Alexandre Tkatchenko1
+1Fritz-Haber-Institut der Max-Planck-Gesellschaft, Faradayweg 4-6, 14195, Berlin, Germany
+2Institute of Solid State Physics, Graz University of Technology, Petersgasse 16, A-8010 Graz, Austria
+(Received 15 November 2011; published 6 April 2012)
+The electronic properties and the function of hybrid inorganic-organic systems (HIOS) are intimately
+linked to their interface geometry. Here we show that the inclusion of the many-body collective response
+of the substrate electrons inside the inorganic bulk enables us to reliably predict the HIOS geometries and
+energies. This is achieved by the combination of dispersion-corrected density-functional theory (the
+DFT van der Waals approach) [Phys. Rev. Lett. 102, 073005 (2009)], with the Lifshitz-Zaremba-Kohn
+theory for the nonlocal Coulomb screening within the bulk. Our method yields geometries in remarkable
+agreement ( 0:1 
+A) with normal incidence x-ray standing wave measurements for the 3, 4, 9,
+10-perylene-tetracarboxylic acid dianhydride (C24O6H8, PTCDA) molecule on Cu(111), Ag(111), and
+Au(111) surfaces. Similarly accurate results are obtained for xenon and benzene adsorbed on metal
+surfaces.
+DOI: 10.1103/PhysRevLett.108.146103
+PACS numbers: 68.35.p, 68.43.h, 73.20.Mf
+Hybrid inorganic-organic systems (HIOS) are essential
+ingredients
+of
+a wide
+range
+of
+emerging
+devices.
+Applications in which such interfaces play a crucial role
+include (opto)-electronics (e.g., transistors, light-emitting
+diodes), organic photovoltaics, and sensors [1]. The inter-
+face geometry of HIOS plays a crucial role in the determi-
+nation of their electronic properties, and the accurate
+prediction of interface structure and stability is essential
+for controlling the function and quality of these highly
+sought-after technologies.
+Within the possible variety of HIOS, 3,4,9,10-perylene-
+tetracarboxylic acid dianhydride (C24O6H8, PTCDA) on
+coinage metals is one of the best experimentally and
+theoretically
+characterized
+systems.
+The
+adsorption
+geometry of PTCDA on Cu(111), Ag(111), and Au(111),
+has been accurately determined by means of the normal
+incidence x-ray standing wave (NIXSW) technique [24],
+making these systems a suitable choice for testing the
+predictive power of theoretical methods.
+The reliable prediction of the equilibrium structure and
+dynamic properties of HIOS from first principles represent
+a great challenge to the state-of-the-art theoretical methods
+due to the interplay of covalent interactions, electron trans-
+fer processes, van der Waals (vdW) interactions, and Pauli
+repulsion. In particular, vdW interactions are fundamental
+in determining the structure and stability of organic mole-
+cules on solid surfaces [511]. Romaner et al. studied the
+adsorption of PTCDA on coinage metals [12], and
+concluded that a more accurate approach to include vdW
+interactions is needed.
+To illustrate the problem, we start by comparing the
+performance of existing theoretical methods for the inter-
+action of PTCDA with Ag(111) in Fig. 1. The average
+adsorption distance (2.86 A
+ ) is reliably known from a
+number of NIXSW studies for the ordered monolayer at
+room temperature (see Ref. [4] and references therein).
+There is also an estimate of the adsorption energy of
+2.4 eV by extrapolation from the 1,4,5,8-naphtalene-
+tetracarboxylic acid dianhydride (C14O6H4, NTCDA)
+FIG. 1 (color online).
+Adsorption energy Eads as a function of
+vertical distance d for PTCDA on Ag(111) employing different
+theoretical approaches. The estimated adsorption energy for the
+system (2:4  0:1 eV [10]) and the experimental adsorption
+distance (2:86  0:05 
+A [4]) are indicated by shaded intervals.
+These error bars correspond to typical experimental error
+estimates.
+Published by the American Physical Society under the terms of
+the Creative Commons Attribution 3.0 License. Further distri-
+bution of this work must maintain attribution to the author(s) and
+the published articles title, journal citation, and DOI.
+PRL 108, 146103 (2012)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+6 APRIL 2012
+0031-9007=12=108(14)=146103(5)
+146103-1
+Published by the American Physical Society
+molecule, which is closely related to PTCDA and experi-
+mentally accessible to temperature-programmed desorp-
+tion [10,13]. Using standard density-functional theory
+(DFT) with the Perdew-Burke-Ernzerhof (PBE) [14]
+functional results in no visible minimum in the binding
+curve [10]. The local-density approximation (LDA) under-
+estimates the binding distance ( 2:65 
+A), although it
+(fortuitously) yields a better adsorption energy [15]. The
+inclusion of vdW interactions using the vdW-DF nonlocal
+functional [16] leads to far off results both for the binding
+distance and the binding energy [10,12]. Interatomic pair-
+wise PBE-D correction by Grimme [17] appears to be
+closer to the experimental binding distance; the calculated
+binding energy is, however, by 1 eV larger than the above
+mentioned estimate. The interatomic pairwise PBE  vdW
+correction scheme [18], where the vdW coefficients and
+radii are determined nonempirically from the electron
+density, leads to a better prediction for the energy but it
+still overestimates the equilibrium distance by about
+0.25 A
+ . Even the computationally most expensive calcu-
+lations using exact exchange with electron correlation
+treated in the random-phase approximation (with some
+additional approximations to make these calculations fea-
+sible) yield a 0.2 A
+ overestimation in the equilibrium
+distance of PTCDA on Ag(111) [19].
+In this Letter, we propose a method that extends standard
+pairwise vdW corrections [17,18] to the modeling of
+adsorbates on surfaces. Here, this is achieved by combin-
+ing the DFT  vdW scheme [18] with the Lifshitz-
+Zaremba-Kohn (LZK) theory for the vdW interaction
+between an atom and a solid surface [20,21]. In our
+approach (DFT  vdWsurf), the vdW energy correction to
+the DFT total energy is given by a sum of Cab
+6 R6
+ab terms,
+where Rab are the distances between atoms a and b, in
+analogy to the DFT-D and DFT  vdW methods. By
+employing the LZK theory, however, we include the
+many-body collective response (screening) of the substrate
+electrons in the determination of the C6 coefficients and
+vdW radii, going effectively beyond the pairwise descrip-
+tion. Interface polarization effects are accounted for via the
+inclusion of semilocal hybridization due to the dependence
+of the Cab
+6 interatomic coefficients on the electron density
+in the DFT  vdW method. We show that nonlocal screen-
+ing reduces the vdW C6 coefficients by up to a factor of 4
+for coinage metals. As indicated by the solid blue (light
+gray) line in Fig. 1 for the PTCDA/Ag(111) interface,
+DFT  vdWsurf indeed provides the most accurate results
+for the binding distance and energy when compared to all
+other theoretical methods. Similarly accurate results are
+found for PTCDA adsorbed on other coinage metals as
+well as for Xe and benzene on a range of metallic surfaces.
+Beyond the region of orbital overlap, the vdW interac-
+tion of an atom a with a solid B is given by EvdW 
+CaB
+3 =Z  Z03, where Z is the distance from the vdW
+image plane Z0, and the CaB
+3
+is the corresponding vdW
+interaction coefficient [2022]. Zaremba and Kohn derived
+this formula starting from quantum mechanics, obtaining
+the following expression for the CaB
+3
+coefficient [20,21]
+CaB
+3
+ @
+4
+Z 1
+0 d!i! "Bi!  1
+"Bi!  1 ;
+(1)
+where i! is the polarizability of the atom a, and "Bi!
+is the dielectric function of the solid B. Equation (1)
+incorporates screening effects inside the bulk as it is evi-
+dent from its dependence on the dielectric function "Bi!.
+A convenient approach to recover the LZK formula
+[22,23], is to determine the vdW interaction of an atom a
+with a solid B by a summation of Cab
+6 =R6
+ab pair potentials
+between the atom a and the atoms b in the infinite half-
+space of the solid B. In this case, the image-plane position
+is given as Z0  d=2, where d is the interlayer distance,
+and the CaB
+3
+coefficient is obtained as
+CaB
+3
+ ns
+6
+Cab
+6;LZK;
+(2)
+where ns is the number of atoms per unit volume in the
+bulk.
+Combining Eqs. (1) and (2), the screened Cab
+6;LZK coeffi-
+cient is derived. It effectively inherits the many-body
+screening effects contained in CaB
+3
+from Eq. (1). The next
+step is to disentangle the heteronuclear Cab
+6;LZK interaction
+coefficient into homonuclear Caa
+6 and Cbb
+6;LZK coefficients.
+For this purpose, we adopt a Pade
+-approximant model for
+the atomic polarizability as in the DFT  vdW method
+[18]. The Pade
+-approximant model allows us to perform
+analytic frequency integration, leading to a simple combi-
+nation rule for Cab
+6;LZK
+Cab
+6;LZK 
+2Caa
+6 Cbb
+6;LZK
+b
+LZK
+a
+0 Caa
+6 
+a
+0
+b
+LZK Cbb
+6;LZK
+:
+(3)
+The a
+0 and b
+LZK correspond to the adsorbate atom and the
+effective atom-in-a-solid static polarizabilities, respec-
+tively. In the context of LZK theory, the frequency-
+dependent polarizability of the adsorbed atom is equivalent
+to the one of the free atom in the gas phase. Since accurate
+a
+0 and Caa
+6 values are known for the free atoms [24], the
+two parameters to be determined in Eq. (3) are b
+LZK and
+Cbb
+6;LZK. We obtained them by solving a system of two
+equations [Eq. (3)] using any two atoms from the list: H,
+C, Ne, Ar, and Kr for a given solid B. The dielectric
+function "Bi! was calculated in terms of the absorptive
+part of the dielectric function "2 at real frequencies by the
+Kramers-Kronig relation. The data were taken from the
+reflection energy-loss spectroscopy (REELS) experiments
+by Werner et al. [25]. The LZK dispersion coefficients
+along with b
+LZK for an atom b inside the bulk correspond-
+ing to Cu, Ag, Au, Pd, and Pt metals, obtained with the
+above procedure, are shown in Table I. For comparison, the
+PRL 108, 146103 (2012)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+6 APRIL 2012
+146103-2
+free atomic parameters are also displayed. The screened
+dispersion coefficients for atoms in the bulk are reduced by
+a factor of 1.5, 2, and 4 for Pd, Au, and Cu, respectively,
+and 3 for Ag and Pt compared to their free atom counter-
+parts. This clearly illustrates the sensitive dependence of
+the dielectric screening on the inorganic substrate. We note
+that both LZK parameters are essentially invariant to the
+nature of the adsorbed atom. Thus, they can be considered
+as intrinsic properties of the bulk.
+The LZK theory is exact for atom-surface distances
+beyond orbital overlap. However, it does not include
+effects due to rapid spatial variations (interface polariza-
+tion) in the dielectric function close to the surface. We
+effectively include these contributions through the linkage
+of the LZK theory with the DFT  vdW method. Once the
+b
+LZK, Cbb
+6;LZK, and Rb
+LZK are computed, the reference
+DFT  vdWsurf polarizability, C6, and vdW radius for the
+bulk atoms are set to those values. Nevertheless, these
+parameters change with the definition of a dimensionless
+effective volume vi
+eff for species i, in terms of the Hirshfeld
+partitioning of the electron density [26,27],
+vi
+eff 
+R r3wirnrd3r
+R r3nref
+i rd3r
+;
+(4)
+where wir is the Hirshfeld atomic partitioning weight of
+the species i, r3 is the cube of the distance from the nucleus
+of an atom i, nr is the total electron density, and nref
+i r is
+the reference electron density. For the solid, the reference
+corresponds to the spherical electron density of an atom in
+the bulk, and for a molecule, it corresponds to the free atom
+electron density. The effective Cii
+6;eff coefficient is deter-
+mined as Cii
+6;eff  vi
+eff2Cii
+6;ref, the effective polarizability
+as i
+eff  vi
+effi
+ref, and the effective vdW radius, which
+determines the onset of the damping function, is calculated
+as Ri
+eff  i
+eff=i
+ref1=3Ri
+ref [18]. Significant interface po-
+larization is observed in the DFT  vdWsurf method when
+organic molecules are adsorbed on metals. For example,
+for the PTCDA molecule located at the experimental equi-
+librium position on Ag(111), the molecular C6;eff coeffi-
+cient is increased by 9% compared to the gas-phase
+PTCDA, while for the surface atoms it is decreased by
+4% compared to the atoms inside the bulk (C6;ref).
+To further benchmark the DFT  vdWsurf approach, we
+next calculated the binding energy curves for a rigid
+PTCDA molecule on Cu(111) and Au(111) surfaces.
+These are shown together with the experimentally deter-
+mined average adsorption distances in Fig. 2 (Calculation
+details are included in the Supplemental Material [28].)
+The data for PTCDA on Ag(111) from Fig. 1 is also
+included for the sake of comparison. The first interesting
+observation comes from comparing the PBE  vdW and
+PBE  vdWsurf binding curves for PTCDA/Ag(111) in
+Fig. 1. The LZK correction leads to a reduced C6 coeffi-
+cient (see Table I), and yields significantly smaller long-
+range vdW energy. However, the vdW radii of Ag(111)
+atoms are also reduced, amounting to a larger vdW con-
+tribution at shorter range. These two effects modify the
+binding curve for PTCDA/Ag(111), leading to a reduced
+adsorption energy and a reduced adsorption distance com-
+pared to PBE  vdW. The same conclusions hold for the
+other coinage metals. As shown in Fig. 2, the equilibrium
+distances agree very well with the NIXSW results and also
+the adsorption energies reproduce the trend in the binding
+strength inferred from experiment: EadsCu > EadsAg >
+EadsAu [4].
+It is well known that the PTCDA molecule is signifi-
+cantly distorted upon adsorption on Ag(111) and Cu(111).
+Seeking to understand whether PBE  vdWsurf can also
+accurately reproduce the vertical distortion, we carried out
+structural relaxations of the PTCDA/Me(111) systems,
+where we allowed the atoms in the PTCDA molecules
+and in the top metal layer to relax. Figure 3 shows the
+TABLE I.
+Screened C6 coefficients (hartree  bohr6), polariz-
+ability (in bohr3), and vdW radii (in bohr). Free atomic parame-
+ters as used in the DFT  vdW method are also shown for
+comparison.
+Substrate
+Cbb
+6;LZK
+b
+LZK
+Rb
+LZK
+Cbb
+6;free
+b
+free
+Rb
+free
+Cu
+59
+10.9
+2.40
+253
+42.0
+3.76
+Ag
+122
+15.4
+2.57
+339
+50.6
+3.82
+Au
+134
+15.6
+2.91
+298
+36.5
+3.86
+Pd
+102
+13.9
+3.06
+158
+23.7
+3.66
+Pt
+120
+14.5
+2.80
+347
+39.7
+3.92
+FIG. 2 (color online).
+Adsorption energy Eads as a function of
+vertical distance d for PTCDA on Cu(111), Ag(111) and
+Au(111) employing the DFT  vdWsurf method. The distance
+d is evaluated with respect to the position of the unrelaxed
+topmost metal layer. The experimental adsorption distances are
+2:66  0:05, 2:86  0:05, and 3:34  0:05 
+A corresponding to
+Cu [2], Ag [4], and Au [3], respectively. They are indicated by
+shaded
+regions.
+Calculation
+details
+are
+included
+in
+the
+Supplemental Material [28].
+PRL 108, 146103 (2012)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+6 APRIL 2012
+146103-3
+average bonding distances of the carbon atoms and the
+carboxylic and anhydride oxygens for the relaxed geome-
+tries and compares them to experimental data where avail-
+able. The adsorption distance of the C backbone after
+relaxation agrees remarkably well with the experimental
+data to better than 0.1 A
+ for Cu(111) and Ag(111), while an
+underestimation of  0:1 
+A is observed for Au(111). The
+slightly larger discrepancy observed for Au can be attrib-
+uted to the Au(111) surface reconstruction [29,30].
+The position of the carboxylic oxygen (Oc) for PTCDA/
+Ag(111) agrees with experiment to better than 0.1 A
+ . Our
+calculations reproduce a distortion in the Oc of 0.13 A
+ with
+respect to the C backbone due to the attraction to the
+surface, while the position of the anhydride oxygen (Oa)
+is underestimated by around 0.15 A
+ . With respect to
+PTCDA/Cu(111), we observe that the oxygen atoms are
+placed at an averaged position of 2.62 A
+ ; i.e., they reside
+below the C backbone, opposite to the findings of Gerlach
+et al. [2]. In addition, the Oc is located below the C back-
+bone, while the Oa is located above it. Our calculations for
+different monolayer structures show that the vertical posi-
+tion of the oxygen atoms in PTCDA/Cu(111) is sensitive to
+the lateral placement of the molecules in the unit cell, and
+we will present further analysis in forthcoming work [31].
+Nonetheless, the overall agreement between the geome-
+tries derived from NIXSW data and DFT  vdWsurf is
+within 0.1 A
+ .
+In order to test the applicability of the DFT  vdWsurf
+method to systems other than PTCDA/Me(111), we calcu-
+lated the relaxed geometry for Xe and benzene on a variety
+of metallic surfaces. Also for these systems, the DFT 
+vdWsurf approach leads to a good agreement in the adsorp-
+tion distances and interaction energies compared to avail-
+able data as shown in Table II. In the case of Xe/Me(111),
+we find that the top and fcc hollow adsorption sites are
+practically degenerate. For Xe/Pt(111), measurements
+show that, at low coverage, the diffussion barrier for lateral
+movement of the Xe atoms on the surface is less than
+10 meV [40]. We report the Xe-surface distance for the
+top site because it is experimentally determined as the most
+stable one. For Xe/Pt(111), the PBE  vdWsurf method
+also yields an accurate vibrational energy of 3.4 meV
+compared to the experimental value of 3.7 meV [41].
+Detailed analysis of this problem will be presented in a
+forthcoming publication [42].
+In summary, we have combined the DFT  vdW
+method with the Lifshitz-Zaremba-Kohn theory, leading
+to a promising method (DFT  vdWsurf) that can accu-
+rately describe the structure and energetics of HIOS. For
+nonmetals, the DFT  vdWsurf theory is equivalent to
+using screened reference parameters for an atom in a
+solid as recently presented by some of us [43]. The
+DFT  vdWsurf method has the same cost as the under-
+lying DFT calculation, and does not depend on the nature
+of the surface, being equally applicable to insulators, semi-
+conductors, and metals.
+We are grateful for support from the FP7 Marie Curie
+Actions of the European Commission, via the Initial
+Training Network SMALL (MCITN-238804). A. T. is
+supported by a grant from the European Research
+Council (ERC Starting Grant VDW-CMAT). The authors
+FIG. 3 (color online).
+Comparison between the experimental
+binding distances [3,4] (with typical error bars shown in paren-
+theses) and the calculated distances in the present work for
+PTCDA on Cu(111) (a), Ag(111) (b) and Au(111) (c). The
+distances are measured as an average over the constituent atoms
+of the two molecules in the unit cell (carbon, anhydride oxygen,
+and carboxylic oxygen) with respect to the unrelaxed topmost
+metallic layer. The structure of PTCDA is also displayed in (d).
+PTCDA/Cu(111) shows a distortion in the carboxylic oxygen
+atom, which is in agreement with a low coherent fraction for the
+carboxylic oxygen atom as reported for the NIXSW experiment
+in [2]. Calculation details are included in the Supplemental
+Material [28].
+TABLE II.
+Comparison of equilibrium distance dAdsSub and
+adsorption energy between PBE  vdWsurf and experiment for
+Xe/Me(111) [32,33] and C6H6=Me111 systems [3439].
+Except for C6H6=Pt111, we are not aware of experimental
+results for the equilibrium distance of the C6H6=Me111
+systems. For the Xe/Me(111) systems, we report the dAdsSub
+distance for the top adsorption site. The distances are referenced
+to the relaxed topmost metallic layer. Calculation details are
+included in the Supplemental Material [28].
+Substrate
+dAds-Sub [A
+ ]
+Eads [eV]
+This work
+Exp.
+This work
+Exp.
+Xe=Cu
+3.46
+3:60  0:08
+0.24
+0.170.20
+Xe=Ag
+3.57
+3:60  0:05
+0.21
+0.200.23
+Xe=Pt
+3.46
+3:40  0:10
+0.20
+0.260.28
+Xe=Pd
+3.10
+3:07  0:06
+0.29
+0.310.33
+C6H6=Cu
+2.68
+-
+0.91
+0.680.81
+C6H6=Ag
+2.93
+-
+0.81
+0.660.80
+C6H6=Pt
+2.08
+2:02  0:02
+2.18
+1.842.25
+C6H6=Pd
+2.10
+-
+2.11
+-
+PRL 108, 146103 (2012)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+6 APRIL 2012
+146103-4
+acknowledge Dr. Lorenz Romaner and Dr. Oliver Hofmann
+for helpful discussions.
+[1] L. Kronik and N. Koch, MRS Bull. 35, 417 (2010).
+[2] A. Gerlach, S. Sellner, F. Schreiber, N. Koch, and J.
+Zegenhagen, Phys. Rev. B 75, 045401 (2007).
+[3] S. K. M. Henze, O. Bauer, T.-L. Lee, M. Sokolowski, and
+F.S. Tautz, Surf. Sci. 601, 1566 (2007).
+[4] A. Hauschild, R. Temirov, S. Soubatch, O. Bauer, A.
+Scho
+ll, B. C. C. Cowie, T.-L. Lee, F. S. Tautz, and M.
+Sokolowski, Phys. Rev. B 81, 125432 (2010).
+[5] N. Atodiresei, V. Caciuc, P. Lazic
+, and S. Blu
+gel, Phys.
+Rev. Lett. 102, 136809 (2009).
+[6] G. Mercurio et al., Phys. Rev. Lett. 104, 036102 (2010).
+[7] D. Stradi et al., Phys. Rev. Lett. 106, 186102 (2011).
+[8] T. Olsen, J. Yan, J. J. Mortensen, and K. S. Thygesen,
+Phys. Rev. Lett. 107, 156401 (2011).
+[9] E. McNellis, Ph.D. thesis, FritzHaberInstitut der
+MPG, 2010.
+[10] A. Tkatchenko, L. Romaner, O. T. Hofmann, E. Zojer, C.
+Ambrosch-Draxl, and M. Scheffler, MRS Bull. 35, 435
+(2010).
+[11] M.-T. Nguyen, C. A. Pignedoli, M. Treier, R. Fasel, and D.
+Passerone, Phys. Chem. Chem. Phys. 12, 992 (2010).
+[12] L. Romaner, D. Nabok, P. Puschnig, E. Zojer, and C.
+Ambrosch-Draxl, New J. Phys. 11, 053010 (2009).
+[13] U. Stahl, D. Gador, A. Soukopp, R. Fink, and E. Umbach,
+Surf. Sci. 414, 423 (1998).
+[14] J. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett.
+77, 3865 (1996).
+[15] M. Rohlfing, R. Temirov, and F. Tautz, Phys. Rev. B 76,
+115421 (2007).
+[16] M. Dion, H. Rydberg, E. Schro
+der, D. C. Langreth, and
+B. I. Lundqvist, Phys. Rev. Lett. 92, 246401 (2004).
+[17] S. Grimme, J. Comput. Chem. 27, 1787 (2006).
+[18] A. Tkatchenko and M. Scheffler, Phys. Rev. Lett. 102,
+073005 (2009).
+[19] M. Rohlfing and T. Bredow, Phys. Rev. Lett. 101, 266106
+(2008).
+[20] E. M. Lifshitz, Sov. Phys. JETP 2, 73 (1956).
+[21] E. Zaremba and W. Kohn, Phys. Rev. B 13, 2270 (1976).
+[22] L. W. Bruch, M. W. Cole, and E. Zaremba, Physical
+Adsorption: Forces and Phenomena (Oxford University
+Press, Oxford, 1997).
+[23] S. H. Patil, K. T. Tang, and J. P. Toennies, J. Chem. Phys.
+116, 8118 (2002).
+[24] X. Chu and A. Dalgarno, J. Chem. Phys. 121, 4083
+(2004).
+[25] W. Werner, K. Glantschnig, and C. Ambrosch-Draxl, J.
+Phys. Chem. Ref. Data 38, 1013 (2009).
+[26] F. L.
+Hirshfeld,
+Theor.
+Chim.
+Acta
+44,
+129
+(1977).
+[27] E. R. Johnson and A. D. Becke, J. Chem. Phys. 123,
+024101 (2005).
+[28] See
+Supplemental
+Material
+at
+http://link.aps.org/
+supplemental/10.1103/PhysRevLett.108.146103
+for
+de-
+tails of the DFT calculations and the employed structures
+for HIOS.
+[29] S. Mannsfeld, M. Toerker, T. Schmitz-Hu
+bsch, F. Sellam,
+T.
+Fritz,
+and
+K.
+Leo,
+Org.
+Electron.
+2,
+121
+(2001).
+[30] L. Killian, E. Umbach, and M. Sokolowski, Surf. Sci. 600,
+2633 (2006).
+[31] V. G. Ruiz, D. Egger, L. Romaner, E. Zojer, M. Scheffler,
+and A. Tkatchenko (to be published).
+[32] R. D. Diehl, Th. Seyller, M. Caragiu, G. S. Leatherman, N.
+Ferralis, K. Pussi, P. Kaukasoina, and M. Lindroos, J.
+Phys. Condens. Matter 16, S2839 (2004).
+[33] G. Vidali, G. Ihm, H-Y. Kim, and M. W. Cole, Surf. Sci.
+Rep. 12, 135 (1991).
+[34] S. Lukas, S. Vollmer, G. Witte, and Ch. Wo
+ll, J. Chem.
+Phys. 114, 10123 (2001).
+[35] M. Xi, M. X. Yang, S. K. Jo, B. E. Bent, and P. Stevens, J.
+Chem. Phys. 101, 9122 (1994).
+[36] R. Caputo, B. P. Prascher, V. Staemmler, P. S. Bagus, and
+C. Wo
+ll, J. Phys. Chem. A 111, 12778 (2007).
+[37] J. Jalkanen and F. Zerbetto, J. Phys. Chem. B 110, 5595
+(2006).
+[38] J. M. Gottfried, E. K. Vestergaard, P. Bera, and C. T.
+Campbell, J. Phys. Chem. B 110, 17539 (2006).
+[39] A. Wander, G. Held, R. Q. Hwang, G. S. Blackman, M. L.
+Xu, P. de Andres, M. A. Van Hove, and G. A. Somorjai,
+Surf. Sci. 249, 21 (1991).
+[40] J. Ellis, A. P. Graham, and J. P. Toennies, Phys. Rev. Lett.
+82, 5072 (1999).
+[41] L. W. Bruch, A. P. Graham, and J. P. Toennies, Mol. Phys.
+95, 579 (1998).
+[42] W. Liu et al. (to be published).
+[43] G. X. Zhang, A. Tkatchenko, J. Paier, H. Appel, and M.
+Scheffler, Phys. Rev. Lett. 107, 245501 (2011).
+PRL 108, 146103 (2012)
+P H Y S I C A L
+R E V I E W
+L E T T E R S
+week ending
+6 APRIL 2012
+146103-5
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do computational methods, particularly density functional theory (DFT) and cluster models, enhance our ability to predict, analyze, and understand the catalytic activity of doped oxide catalysts in alkane activation, and what are the key considerations, challenges, and potential benefits of these approaches in terms of accuracy, efficiency, and the exploration of new catalytic materials?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

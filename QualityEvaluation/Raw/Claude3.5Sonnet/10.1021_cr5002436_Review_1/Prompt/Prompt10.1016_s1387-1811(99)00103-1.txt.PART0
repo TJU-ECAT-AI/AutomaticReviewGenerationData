@@ -1,0 +1,190 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Microporous and Mesoporous Materials 29 (1999) 433434
+Author Index
+Akporiaye, D., 159, 185
+Gu
+nschel, H., 145
+Guth, J.-L., 311
+Andersen, A., 159
+Aramend
+a, M.A., 319
+Avile
+s, Y., 319
+Holmen, A., 191
+Howe, R.F., 91
+Hunnius, M., 389
+Bao, S., 383
+Hutchings, G.J., 67
+Barger, P., 117
+Bartelmehs, K.L., 219
+Bauer, F., 109
+Ikeda, T., 329
+Beaunier, P., 291
+Ben
+tez, J.A., 319
+Jiang, X.-Z., 91
+Bo
+hringer, W., 127
+Jime
+nez, C., 319
+Boisen Jr, M.B., 219
+Jones, C.W., 339
+Borau, V., 319
+Bre
+geault, J.-M., 291
+Kamalakar, G., 283
+Keil, F.J., 49
+Campbell, S.M., 91
+Kiyozumi, Y., 329
+Can
+izares, P., 267
+Kodaira, T., 329
+Chen, D., 191
+Kolboe, S., 173
+Chen, F., 305
+Kos
+cielniak, P., 369
+Chopin, T., 311
+Kulkarni, S.J., 283
+Cichocki, A., 369
+Legrand, A.-P., 291
+Dago, A., 361
+Li, C., 383
+Dahl, I.M., 159, 185
+Li, Q., 305, 351
+Davis, M.E., 339
+Lu
+cke, B., 145
+de la Cruz Alcaz, J., 361
+de las Pozas, C., 361
+Maier, W.F., 389
+Durand, B., 311
+Manoli, J.-M., 291
+Marinas, J.M., 319
+Ensuque, A., 291
+Martin, A., 145
+Matijasic, A., 405
+Mikkelsen, ., 173
+Fougerit, J.M., 79
+Miyazawa, K., 329
+Fu, Z., 351
+Molina, C.B., 267
+Fuglerud, T., 159, 191
+Moljord, K., 191
+Mo
+ller, K.P., 127
+Geidel, E., 109
+Mostad, H., 159, 185
+Geyer, W., 109
+Gibbs, G.V., 219
+Nowak, S., 145
+Gnep, N.S., 79
+Go
+mez, A., 361
+Gonza
+lez, J.G., 361
+OConnor, C.T., 127
+OKeeffe, M., 219
+Guisnet, M., 79
+434
+Author Index / Microporous and Mesoporous Materials 29 (1999) 433434
+Patarin, J., 405
+Urbano, F.J., 319
+Peuker, C., 109
+Vale
+ro, R., 311
+Piquemal, J.-Y., 291
+Valverde, J.L., 267
+van Steen, E., 127
+Raghavan, K.V., 283
+Ruf
+nska, A., 389
+Watson, G.W., 67
+Ruiz, J.R., 319
+Wei, M., 205
+Ruiz-Salvador, A.R., 361
+Wendelbo, R., 159, 185
+Willock, D.J., 67
+Wilson, S., 117
+Schnitzler, A.E., 127
+Schulz, H., 205
+Xu, Q., 383
+Song, F., 305
+Sto
+cker, M., 3
+Yin, D., 351
+Sun Kou, M.R., 267
+Zhang, A., 383
+Tougne, P., 291
+Zhang, L., 351
+Zhang, Y., 351
+Tsuji, K., 339
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the noble metal-based catalysts (particularly Platinum) and metal oxide-based catalysts (such as CrOx, gallium, indium, vanadium, zinc, and molybdenum oxides) used in the nonoxidative dehydrogenation of light olefins. Discuss their compositions, effectiveness, industrial applications, recent developments, and potential advantages in the field.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

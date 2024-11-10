@@ -1,0 +1,572 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Oxide Surface Science
+Ulrike Diebold,1 Shao-Chun Li,1 and Michael Schmid2
+1Department of Physics, Tulane University, New Orleans, Louisiana 70118;
+email: diebold@tulane.edu
+2Institut f
+ur Allgemeine Physik, T
+echnische Universit
+at Wien, A-1040 Vienna, Austria
+Annu. Rev. Phys. Chem. 2010. 61:12948
+First published online as a Review in Advance on
+October 21, 2009
+The Annual Review of Physical Chemistry is online at
+physchem.annualreviews.org
+This articles doi:
+10.1146/annurev.physchem.012809.103254
+Copyright c
+2010 by Annual Reviews.
+All rights reserved
+0066-426X/10/0505-0129$20.00
+Key Words
+surface chemistry, catalysis, surface crystallography, nanostructures
+Abstract
+Most metals are oxidized under ambient conditions, and metal oxides show
+interesting and technologically promising properties. This has motivated
+much recent research on oxide surfaces. The combination of scanning
+tunneling microscopy with first-principles density functional theorybased
+computational techniques provides an atomic-scale view of the properties
+of metal-oxide materials. Surface polarity is a key concept for predicting
+the stability of oxide surfaces and is discussed using ZnO as an example.
+This review also highlights the role of surface defects for surface reactivity,
+and their interplay with defects in the bulk, for the case of TiO2. Ultrathin
+metal-oxide films, grown either through reactive evaporation on metal sin-
+gle crystals or through oxidation of metal alloys (such as Al2O3/NiAl), have
+gained popularity as supports for planar model catalysts. The surface oxides
+that form upon oxidation on Pt-group metals (e.g., Ru, Rh, Pd, and Pt) are
+considered as model systems for CO oxidation.
+129
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+Click here for quick links to 
+Annual Reviews content online, 
+including:
+• Other articles in this volume
+• Top cited articles
+• Top downloaded articles
+• Our comprehensive search
+Further
+ANNUAL
+REVIEWS
+UHV: ultrahigh
+vacuum (typically a
+pressure range of less
+than 1010 mbar)
+STM: scanning
+tunneling microscopy
+DFT: density
+functional theory
+1. INTRODUCTION
+Surface science is the study of solid surfaces under well-controlled conditionsusually single
+crystals and often in ultrahigh vacuum (UHV), i.e., in a background pressure in the range of
+1010 mbar. Since its inception in the late 1960s, surface scientists have developed techniques that
+allow insights into the atomic-scale properties of solid surfaces with exquisite precision (1). The
+invention of scanning tunneling microscopy (STM) and its offspring, atomic force microscopy,
+has especially broadened the reach of the field. Real-space images with atomic resolution are now
+routinely achieved with commercial instruments and, in combination with area-averaging spec-
+troscopic techniques, allow one to obtain a truly atomic-scale picture of clean surfaces, and their
+modification with adsorbed entities. In lockstep with these experimental advances, computational
+approaches have been developed, in particular first-principles calculations based on density func-
+tional theory (DFT). New functionals (24) have improved the accuracy of theoretical predictions,
+and in combination with the expansion of computing power and efficient, user-friendly codes (5),
+sufficiently large systems can now be modeled so that theory has become invaluable in interpreting
+experimental data and often guides experiments.
+During the past 15 years or so, there has been a shift in the type of systems that surface scientists
+have investigated: Whereas the initial focus was predominantly on metals and semiconductors,
+there is a growing body of work that deals with metal-oxide surfaces, the topic of this review.
+It is easy to see why one would want to study metal-oxide surfaces. After all, almost every metal
+is oxidized in the ambient. Hence it is often the surface of the oxide, rather than that of the metal
+itself, that deserves our interest. In addition, the range of physical and chemical properties of bulk
+oxide materials is overwhelming. Among metal oxides are superconductors and the best insulators;
+some oxides are inert enough to act as corrosion protection layers, whereas others are chemically
+active as catalysts. Some of the most interesting magnetic, optical, and electronic properties are
+found within this class of materials. Not surprisingly, oxides are at the heart of many established
+and emerging technologies, and, in many instances, their surfaces or their interfaces with other
+materials are key to device functioning. Understanding the surface properties of oxidestheir
+geometric and electronic structure, their reaction with adsorbed entities such as molecules or
+nanoparticles, and the formation of interfacesis of key interest in many technological areas.
+Metal-oxide surfaces are inherently complex systems: Often they can assume a variety of stoi-
+chiometries, and even for one particular chemical composition several structural phases can exist.
+Defects in various forms are prevalent, which adds to their complexity. In fact, the development
+of sample preparation procedures for appropriate model systems was one of the major roadblocks
+that had to be overcome before the surface science of metal oxides could develop into the bur-
+geoning field it is today. The systems being investigated can roughly be divided into three classes.
+The first class contains oxide single crystals, cut or cleaved to expose surfaces of various crystallo-
+graphic orientations. Most of the bulk oxides that have been thoroughly investigated to date [e.g.,
+TiO2 (6), ZnO (7), and SnO2 (8)] have a band gap of approximately 3 eV and are semiconductors,
+owing to doping with either intrinsic defects (e.g., oxygen deficiencies in reduced TiO2 samples)
+or impurities [e.g., hydrogen in ZnO (9)]. Many important oxides are good insulators (e.g., Al2O3,
+SiO2, or MgO), which hampers the applicability of most experimental surface techniques. Often,
+these are then synthesized as ultrathin films, i.e., with a thickness of a few atomic layers. Ultrathin
+oxide films represent the second class of materials that has been investigated quite extensively. Last,
+but not least, the oxide that forms on top of the metal itself is of high interest. This is especially
+true for catalytically relevant late transition metals. On their surfaces, it can be the surface oxide,
+rather than adsorbed oxygen on the bulk metal, that is the catalytically active phase in oxidation
+reactions.
+130
+Diebold· Li· Schmid
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+Surface polarity:
+surfaces with a
+vanishing dipole
+moment are nonpolar
+and generally stable;
+surfaces with a dipole
+moment are often
+unstable, except when
+present in the form of
+nanostructures, or
+when stabilized by
+various modifications
+Surface defects: key
+reactive sites on oxides;
+often-investigated
+defects include oxygen
+vacancies, cation
+interstitials, and line
+defects
+Surface oxides: form
+as ultrathin films on
+top of metals under
+oxidizing conditions;
+their structure and/or
+thickness is often
+determined by kinetics
+Rather than presenting a comprehensive review of all the different systems and phenomena
+that have been investigated and discovered, we discuss a few fundamental concepts that have
+emerged as important. We do this by using some of the most investigated and best-understood
+model systems as examples.
+In the first part of this review, we use ZnO as an example of how to consider an oxide structure
+from a surface point of view. We introduce the concept of surface polarity, which is useful for
+judging whether a surface is likely stable. It has been recognized early on (10) that defects determine
+much of the interesting properties of oxide surfaces. In particular they play important roles as
+adsorption and reaction sites for molecules. These include surface oxygen vacancies, hydroxyls,
+and line defects such as domain boundaries and step edges, as well as excess cations in the subsurface
+regions, which may diffuse to the surface at elevated temperatures. STM, as a probe for local
+electronic structure, is an ideal tool for investigating surface defects. We discuss this aspect in the
+second part of this review, using the TiO2(110) surface as an example. We then turn our attention
+to ultrathin metal-oxide films. These form naturally when a reactive metal is exposed to oxygen,
+but only in rare circumstances do the resulting oxides become well ordered, flat, and epitaxial. For
+better structural and compositional control, ultrathin metal-oxide films are often synthesized on
+metallic substrates through evaporation/oxidation, or via oxygen-induced segregation on metal
+alloys (often used to prepare aluminum oxides on Al-containing alloys). These ultrathin oxide films
+do not necessarily have the same structure as their bulk counterparts. The same basic building
+blocks are certainly present, however. Even more importantly from a physical chemistry point of
+view is that the electronic properties are greatly affected by the underlying metal substrate; hence
+the reactivity is not the same as their bulk counterparts, and they may exhibit unique properties.
+The next section of this review is devoted to the oxidation of late transition metals that are
+important for catalysis. The structure and stability range of two-dimensional surface oxides, and
+whether these represent the active phase in the oxidation of CO, are briefly discussed. We then end
+with a brief outlook of issues that are expected to be even more relevant in the futurefor example,
+more complex (e.g., doped) oxides and the evolving, rich, and interesting field of perovskites.
+2. ZINC OXIDE: EXAMPLE FOR A BULK OXIDE AND POLAR SURFACES
+Our first example is ZnO, a material of significant importance in catalysis and optoelectronics.
+It is a wide-band-gap (3.2-eV) semiconductor, and single crystals are readily available. A good
+overview of the surface chemistry of ZnO has been given by W
+oll (7). Interestingly, ZnO can also
+be grown in the form of nanostructures (11) with fascinating shapes. These small single crystals
+have well-developed facets, and their promising and exciting properties are often surface-driven
+or -dominated.
+Cox (12) presents a good introduction to the bulk properties of transition metal oxides. Most
+metal oxides are predominantly ionic in their structural features (12). The bulk lattice con-
+sists of (formally) doubly ionized O2anions, surrounded by metal cations. The ionic radius of
+O2is much larger than that of the cations, and the oxygen sublattice typically forms a hexago-
+nally close-packed structure with either an fcc or an hcp-type stacking sequence. The metal cations
+then reside in the interstices of the close-packed oxygen layers, most often in an octahedral or a
+tetrahedral configuration, i.e., with either sixfold (6c) or fourfold (4c) coordination, respectively.
+Alternatively, one can also picture the bulk structure as comprising such octahedral and tetrahedral
+units that connect in various ways, sharing an edge, a side, or a corner. The example discussed here,
+ZnO, crystallizes in the wurtzite structure (Figure 1a). The oxygen sublattice forms hexagonally
+closed-packed layers with hcp-type stacking, and the Zn ions are located in tetrahedral interstices;
+the tetrahedral units are corner sharing (Figure 1a).
+www.annualreviews.org • Oxide Surface Science
+131
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+a
+b
+O2
+σ σ
+σ σ
+σ σ
+Zn2+
+(0001)-Zn
+[0001]
+[1010]
+(0001)-O
+(1010)
+R2
+R1
+E (4πσ)
+V
+4πσR1
+Figure 1
+(a) Schematic of the wurtzite crystal structure of ZnO, which can be viewed as a stack of hexagonally
+close-packed layers of oxygen atoms (running in the vertical direction), with zinc atoms in tetrahedral
+interstices. The top layer represents the nonpolar ZnO(10
+10) surface; it contains threefold coordinated O
+and Zn atoms. The (000
+1) and (0001) planes at the left and right sides, respectively, represent the polar ZnO
+surfaces. They contain exclusively O (left) and Zn (right) surface atoms. As shown in panel b, such a crystal
+with uncompensated polar surfaces can be viewed as a sequence of capacitors with surface charges σ, which
+results in an internal field that diverges with crystal thickness and leads to an energetically unstable situation.
+Panel b redrawn from Reference 14, with permission from IOP Publishing Limited.
+Creating a surface always costs energy, and the minimization of the surface free energy is
+what drives the energetics of virtually every system. For ionic compounds such as metal oxides,
+surface polarity is a key concept. T
+asker (13) first discussed the surface stability of ionic crystals
+in a seminal article. A more refined and complete review was provided by Noguera (14) and was
+recently updated by Goniakowski et al. (15).
+Based on purely electrostatic arguments, T
+asker classified the surfaces of ionic crystals into
+three types. He viewed the lattice as comprising charge-neutral layers that lie parallel to the
+surface and argued that an energetically unstable situation would result if the dipole moment of
+such a stacking sequence does not vanish.
+T
+ype 1 surfaces consist of layers of mixed stoichiometry. These layers carry no dipole moment,
+and the resulting nonpolar surfaces are often quite stable. For example, the top layer of the ZnO
+structure in Figure 1a [the (10
+10) plane] contains an equal amount of Zn and O ions and has no
+dipole moment. Indeed, the ZnO(10
+10) surface is the lowest-energy facet of a ZnO crystal (16).
+We note that the surface Zn and O atoms on ZnO(10
+10) are both threefold coordinated (3c),
+providing adsorption sites for molecules. For example, water adsorbs strongly at this surface (17).
+The oxygen atom of the water molecule is bound to a Zn3c atom, and a dative hydrogen bond to
+an undercoordinated surface O atom provides additional stabilization.
+T
+asker type 2 surfaces comprise trilayers containing the same total number of positive and
+negative charges, but with an excess of one type of charge on each side of the trilayer structure.
+This results in two opposing dipole moments, which cancel each other. The resulting surfaces
+are also often quite stable; the classic example is the CaF2(111) structure, which, for an oxide, is
+manifested in CeO2(111). The TiO2(110) surface discussed in the context of Figure 3 (discussed
+in Section 3) is such a T
+asker type 2 surface.
+Type 3 or polar surfaces consist of stacks of bilayers, each one with a dipole moment. For
+example, the ZnO structure can also be viewed as parallel layers of O anions and Zn cations. In
+132
+Diebold· Li· Schmid
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+Figure 1a these layers run in the vertical direction (the structure terminates with an O layer on
+the left-hand side and a Zn layer on the right-hand side). Indeed, each ZnO crystal that is cut
+parallel to the basal plane has two surfaces with distinctly different chemical properties (18).
+An (0001)-oriented ZnO crystal plate with Zn termination, referred to as a ZnO(0001)-Zn
+surface, at one side and O termination, ZnO(000
+1)-O, at the opposite side can be viewed as a
+series of charged capacitors, as sketched in the equivalent circuit diagram in Figure 1b (14). The
+electrostatic potential, and thus the self-energy of a crystal with ionic charges, would diverge with
+thickness. Instead, type 3 polar surfaces undergo a stabilization, which provides a macroscopic
+depolarization field (14). The form of the stabilization mechanism strongly depends on the sys-
+tem (15). For the case of the ZnO(0001)-Zn surface, many small, triangular islands and holes
+form (Figure 2a) (19, 20). These islands have a height of half a unit cell (2.6 
+A), and each step
+edge contains only oxygen atoms. This provides excess negative charge on the Zn-terminated
+b
+20 nm
+a
+10 nm
+Oxygen
+Zinc
+ZnO(0001)-Zn
+ZnO(0001)-O
+[1010]
+[0110]
+[1210]
+[1100]
+[0001]
+[1010]
+[0110]
+[1100]
+[1210]
+[0001]
+2.6 Å
+5.2 Å
+Figure 2
+The polar ZnO surfaces. Scanning tunneling micrographs (top panels) and schematic models (bottom panels) of
+(a) ZnO(0001)-Zn and (b) ZnO(000
+1)-O. Figure adapted from Reference 25.
+www.annualreviews.org • Oxide Surface Science
+133
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+Ultrathin films: films
+with a thickness of a
+few atomic layers;
+often used as
+experimental model
+systems for highly
+insulating oxides
+surface and stabilizes the surface for a wide range of oxygen chemical potentials (20). On the
+ZnO(000
+1)-O surface, a different stabilization mechanism is operational. The surface is flatter;
+the islands are hexagonal; and most step edges are one unit cell high (5.2 
+A) and contain both Zn
+and O atoms (Figure 2b). There are strong indications that a (1×1) terminated ZnO(0001)-O
+surface is fully covered with hydrogen (7, 21). It was also suggested that a clean, hydroxyl-free
+ZnO(0001)-O surface exhibits a (1×3) reconstruction, although this issue has remained controver-
+sial (22). As pointed out by Goniakowski et al. (15, 23), the rules for surfaces polarity compensation
+are lifted in the case of ultrathin films and nanostructures. Indeed, ultrathin ZnO films grown on
+Ag(111) have a depolarized, flat (graphitic) structure (24).
+Clearly, the stabilization mechanism dramatically affects the surface chemistry of the polar
+ZnO surfaces. For example, the cation-anion pairs at the many step edges on the ZnO(0001)-Zn
+side provide active sites for the dissociation of Brnsted acids (25, 26), and a fully hydroxylated
+(1×1) ZnO(000
+1)-OH surface is quite different from an H-free (reconstructed) one.
+3. TITANIUM DIOXIDE: EXAMPLE FOR SURFACE AND BULK DEFECTS
+Our next example is TiO2, more specifically the (110) surface of rutile, the thermodynamically
+most stable structural TiO2 polymorph. Diebold (6) reviewed the surface science of TiO2 in 2003,
+and Pang et al. (27) present a more recent account, focusing exclusively on the surface chemistry
+of TiO2(110). The TiO2(110) surface has received significant attention in the surface-science
+literature. Again, it is the versatility of this material, and the multitude of its applications [e.g.,
+in photocatalysis (28)], that makes its surfaces so interesting. Surface-science studies have also
+been motivated by the fascinating observation that nanosized Au clusters are capable of catalyzing
+oxidation reactions at low temperatures (29). TiO2 is the prototypical support for such nanostruc-
+tured Au clusters, and it is a challenging and rewarding puzzle for surface scientists to disentangle
+how each component of the systemthe cluster (e.g., its size, shape, and electronic structure),
+the support, and the interface between the twocontributes to the catalytic process. TiO2 is rel-
+atively easy to handle experimentally, which has contributed considerably to its popularity as a
+model system. Many vendors provide rutile single crystals, and standard UHV sample prepara-
+tion procedures (i.e., sputter-cleaning with rare-gas ions and annealing) can be used to prepare flat
+surfaces with wide terraces. This treatment results in an oxygen-deficient (or Ti-rich) bulk, easily
+recognized by a color change from transparent-yellowish to blue (30). On the one hand, this pro-
+vides a considerable practical advantage, as reduced samples have high electrical conductivity and
+are amenable to all surface analytical techniques involving charged particles. On the other hand,
+the fact that the bulk contains defects that might migrate to the surface needs to be considered
+when studying the surface properties of TiO2 (3033).
+A model of the TiO2(110) surface is shown in Figure 3a. It terminates in a (1×1) structure with
+some relaxations as predicted by DFT calculations and as confirmed by recent diffraction studies
+(34, 35). The surface consists of rows of Ti5c atoms, running along the [001] direction, separated
+by twofold coordinated (or bridge-bonded) surface O2c atoms. (Although O3c atoms also reside
+on the selvedge, they are not considered surface atoms as they have the same coordination as in
+the bulk.) The Ti5c atoms act as (Lewis) acid sites for the adsorption of lone-pair molecules and
+the O2c atoms as Brnsted bases, which can accept an H atom from an adsorbate.
+The STM image of the TiO2(110) surface shown in Figure 3b was taken in the constant-
+current mode by tunneling into empty states. This imaging mode is typical for n-type semicon-
+ducting oxides. The bright and dark lines along the [001] direction are located at the position of
+the Ti5c and O2c sites, respectively. The image contrast is dominated by electronic effects: The
+134
+Diebold· Li· Schmid
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+a
+b
+[001]
+c
+Clean
+Hydroxylated
+Binding Energy (eV)
+EF
+[001]
+[110]
+[110]
+Ti5c
+O3c
+O2c
+Ovac
+OH
+Ovac
+OH
+OH
+14
+12
+10
+14
+12
+10
+8
+6
+2
+4
+0
+3
+2
+0
+1
+Figure 3
+The TiO2(110) surface with O vacancies (Ovac) and OH groups. (a) Geometric model. The OH group with
+the green O atom stems from the water molecule that has filled a vacancy, and the red one represents a lattice
+O2c atom that has received a proton upon water dissociation. (b) Scanning tunneling micrograph (100 
+A ×
+100 
+A, Vsample = +1.48 V, Itunnel = 0.08 nA). (c) Photoemission spectrum taken with a photon energy of
+47 eV. The right and left insets show the gap state and the region of the OH 3σ states, respectively, and the
+dashed blue line marks the position of the valence band maximum.
+conduction band consists mostly of Ti states, and the Ti5c atoms appear higher in the STM, even
+though they do not stick out of the surface as far as the O2c atoms (Figure 3a) (36). STM is, after
+all, a technique that foremost probes the local electronic structure.
+On vacuum-prepared TiO2(110) surfaces, a few percent of the bridging O2c atoms are typically
+missing. The resulting vacancies appear as the (fainter) bright spots on the dark rows in STM.
+That O vacancies can be observed so readily, and that defect-mediated reactions can be monitored
+directly with atomic-scale resolution (3740), is one of the attractive features of TiO2 as a model
+system for surface reactions. For example, water dissociates at the vacancies, resulting in two
+hydroxyls (3742) as shown schematically in Figure 3a. [It seems that these two hydroxyls should
+be equivalent, although STM results indicate a different diffusivity (40).] The OH groups usually
+appear a little brighter than the O vacancies in STM images (38). It has long been known that
+water adsorbs on TiO2(110) with a sticking probability of unity up to very high temperatures (43)
+and that good vacuum conditions are needed to observe nonhydroxylated O vacancies. This fact,
+www.annualreviews.org • Oxide Surface Science
+135
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+which was pointed out early on (42, 44), has been overlooked in some cases (45), leading to much
+initial confusion about defect motion and chemistry on TiO2 (45, 46).
+Defects modify the electronic structure of TiO2. This can clearly be observed with spectro-
+scopic techniques, for example, in the photoemission spectrum in Figure 3c. The binding energy
+scale in Figure 3c is referenced to the Fermi level (EF), which is located close to the lower
+edge of the conduction band in this n-type semiconductor. The valence band maximum is lo-
+cated at approximately 3 eV, consistent with the band gap of TiO2. [The exact position of the
+valence band maximum depends on the photoemission geometry in this indirect semiconductor
+(47).] The feature at approximately 1-eV binding energy, a Ti-3d-derived (48) band gap state,
+is only present on nonstoichiometric TiO2 surfaces. When such a slightly defective surface is
+exposed to water at room temperature, the gap state increases a little in intensity and shifts to
+somewhat higher binding energies. Features that are indicative of surface hydroxyls appear as
+well, i.e., the 3σ state at approximately 11-eV binding energy and a 1π state within the valence
+band.
+It seems quite straightforward to interpret the gap state as coming from O vacancies and hydrox-
+yls on the clean and water-dosed surface, respectively. There have been some recent controversies
+about this assignment, however (49, 50). Based on DFT with the revised Perdew-Burke-Ernzerhof
+functional (51), it has been claimed that O vacancies do not cause a gap state, and that Ti intersti-
+tials, residing in the near-surface region, are responsible for the gap state and for surface chemical
+reactions observed with STM (49). In these authors opinion, it is probably both O vacancies and
+Ti interstitials that contribute to this state. DFT calculations using standard functionals do not
+show a clearly separated band gap feature and tend to delocalize the extra electrons across the slab
+rather than localizing it at the position of the O vacancy. The difficulties of treating correlation
+effects in metal oxides with standard DFT have been pointed out by Ganduglia-Pirovano et al.
+(52). Calculations using Hartree-Fock or hybrid DFT methods result in a gap state for both an O
+vacancy and a hydroxylated O2c atom (53).
+As briefly mentioned above, that Ti interstitials reside in the TiO2 lattice has long been recog-
+nized as an important feature of TiO2 surface chemistry. In a series of elegant experiments, using
+isotopically labeled Ti and O, Henderson (54) demonstrated that Ti interstitials diffuse much
+more readily than O vacancies. This has to be considered, for example, when reduced TiO2 is
+annealed in an oxygen atmosphere (3133), in which reoxidation processes can result in metastable
+surface structures or in other oxidation reactions that occur at somewhat elevated temperature
+(55). It is good to see the renewed interest in this issue.
+Several interesting aspects of TiO2 surfaces deserve further investigation. For example, the
+structure of another rutile surface orientation, the TiO2 (011)-(2×1) surface, has recently been
+resolved (56, 57). This surface is quite stable with a fairly low surface energy. With a large unit cell
+and high corrugation, it is well-suited for STM studies (58). Different from the TiO2(110) surface,
+TiO2(011)-2×1 is hydrophobic in the absence of defects (59); hydroxyls nucleate the growth of
+one-dimensional, H-bonded water clusters. That linear arrays of O vacancies can be produced by
+electron bombardment (60) should be an attractive feature for controlling defect-mediated surface
+chemistry at the atomic level.
+The anatase polymorph of TiO2 is also a promising subject for further surface investigations
+(61). Anatase is used in most technical applications, and most nano-TiO2 is of the anatase form.
+Interestingly, the surface oxygen vacancies that are so prevalent on rutile tend to migrate to
+subsurface sites on TiO2 anatase (101) (62, 63). This could be particularly relevant for defect-
+mediated surface chemistry, as subsurface vacancies may survive in ambient conditions, outside of
+a vacuum chamber. Also, important adsorbates such as water form unique and interesting structures
+(64) on TiO2 anatase (101).
+136
+Diebold· Li· Schmid
+Annu. Rev. Phys. Chem. 2010.61:129-148. Downloaded from www.annualreviews.org
+by University of Sussex on 06/25/12. For personal use only.
+Vapor deposition:
+the growth of films or
+nanoclusters by
+evaporating a material
+onto an appropriate
+substrate
+4. ULTRATHIN OXIDE FILMS
+4.1. Reactive Evaporation
+Ultrathin metal oxides have been produced by vapor deposition of a metal on an appropriate
+(mostly metallic, and often refractory) single-crystalline substrate and by oxidation of the resulting
+overlayer either during or after deposition. Ideally, this produces an epitaxial film that has a known,
+reproducible structure and that is thin enough to avoid charging problems in STM and surface
+spectroscopies. Metal nanoclusters are often deposited on top of these ultrathin metal-oxide films,
+and the resulting samples are used as planar model catalysts (65). The supported nanoclusters are
+again grown by simply vapor depositing a metalthe low surface energy of most metal oxides
+and the low interface energy (weak binding) between the oxide and late transition metals lead to
+the formation of three-dimensional clusters. Systems include MgO (66, 67) and SiO2 (68), as well
+as many transition metal oxides such as iron oxides (69), titanium oxides (70), vanadium oxides
+(7173) (Figure 4), and cobalt oxides (74). For a more extensive discussion, the reader is referred
+to several excellent review articles on this topic (e.g., see 65, 71, 75, 76).
+Many different oxide phases and structures are formed upon reactive evaporation; such phases
+can often coexist. This is especially true for transition metals, which are stable in various oxidation
+states. Some phases are similar to bulk structures, whereas others exist only as ultrathin films
+and may exhibit special electronic or magnetic properties. In addition to the exact preparation
+parameters (e.g., temperature, O2 pressure, and growth rate), the substrate is also important; the
+same metal-oxide film, prepared with similar experimental parameters, often exhibits a different
+structure depending on the type of metal used. A nice example is vanadium oxides, which have
+been investigated extensively by the Netzer group (71, 72) (see Figure 4).
+a
+50 nm
+b
+O
+V
+Rh
+1 nm
+Figure 4
+(a) Scanning tunneling microscopy (STM) image of a vanadium oxide film, grown by reactive evaporation on
+Rh(111). (b) STM image showing star-like V6O12 clusters that form upon further oxidation of the film. The
+inset shows the geometry obtained by density functional theory. Figure adapted with permission from
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the Mars-van Krevelen mechanism operate in oxide-catalyzed oxidation reactions, and what is the significance of the energy required for oxygen vacancy formation (ΔEv) in determining both the catalytic activity and the oxidizing ability of the oxide surface?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

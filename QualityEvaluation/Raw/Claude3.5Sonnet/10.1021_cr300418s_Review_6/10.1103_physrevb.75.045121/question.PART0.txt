@@ -1,0 +1,1115 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Hybrid functionals applied to rare-earth oxides: The example of ceria
+Juarez L. F. Da Silva,* M. Vernica Ganduglia-Pirovano, and Joachim Sauer
+Institut fr Chemie, Humboldt-Universitt zu Berlin, Unter den Linden 6, D-10099 Berlin, Germany
+Veronika Bayer
+Institut fr Physikalische Chemie, Universitt Wien, Sensengasse 8/12, A-1090 Wien, Austria
+Georg Kresse
+Institut fr Materialphysik, Universitt Wien, Sensengasse 8/12, A-1090 Wien, Austria
+Received 21 July 2006; revised manuscript received 23 October 2006; published 22 January 2007;
+publisher error corrected 26 January 2007
+We report periodic density functional theory DFT calculations for CeO2 and Ce2O3 using the Perdew-
+Burke-Ernzerhof PBE0 and Heyd-Scuseria-Ernzerhof HSE hybrid functionals that include nonlocal Fock
+exchange. We study structural, electronic, and magnetic ground state properties. Hybrid functionals correctly
+predict Ce2O3 to be an insulator as opposed to the ferromagnetic metal predicted by the local spin density
+LDA and generalized gradient GGA approximations. The equilibrium volumes of both structures are in
+very good agreement with experiments, improving upon the description of the LDA and GGA. The calculated
+CeO2 O 2pCe 5d and Ce2O3 Ce 4f-5d4f band gaps are larger by up to 45% PBE0 and 15% HSE than
+found in experiments. Furthermore, we calculate atomization energies, heats of formation, and the reduction
+energy of 2CeO2Ce2O3+1/2O2. The latter is underestimated by 0.40.9 eV with respect to available
+experimental data at room temperature. We compare our results with the more traditional DFTU LDA+U
+and PBE+U approach and discuss the role played by the Hubbard U parameter.
+DOI: 10.1103/PhysRevB.75.045121
+PACS numbers: 71.15.Mb, 74.25.Bt, 71.23.An
+I. INTRODUCTION
+Cerium oxides CeO2x, 0x1/2 are interesting com-
+pounds with important applications in industrial catalysis,
+e.g., in automotive catalytic converters to decrease pollutants
+from combustion exhausts.1 They are believed to be key ma-
+terials in the future hydrogen production technology,2,3 in
+particular for the water-gas-shift reaction and the conversion
+of ethanol and ethanol-water mixtures into dihydrogen. The
+beneficial role of cerium oxides in catalysis has been mainly
+attributed to their oxygen storage capacity, i.e., their ability
+to easily take up and release oxygen under oxidizing and
+reducing conditions, respectively.1,4,5 Thus, having a theoret-
+ical approach that is able to describe the changes in the oxi-
+dation state of the multivalent cerium atoms appears desir-
+able. In terms of the electronic structure, partially reduced
+ceria represents an intermediate case between CeO2 and
+Ce2O3, on which the present work focuses.
+The quantitive prediction of the chemical and physical
+properties of systems containing multivalent metals, in par-
+ticular lanthanide species, requires an accurate description of
+the f states and has been a challenge to density functional
+theory DFT calculations. The local density LDA and gen-
+eralized gradient GGA approximations to the exchange-
+correlation XC energy functional often yield a qualitatively
+incorrect behavior for the case in which the f-orbital over-
+laps are small, the bands narrow, and the electrons nearly
+localize.6 In Ce2O3, the cerium atoms are in a trivalent con-
+figuration 4f1, the 4f orbital localizes, and the material
+behaves like a typical antiferromagnetic AF Mott-Hubbard
+insulator.7,8 The dioxide, on the other hand, is an insulator
+and the Ce atoms are tetravalent 4f0.9 Existing first-
+principles calculations1013 have been only partly successful
+in providing a unified description of the ground state prop-
+erties of both cerium oxides.
+Two different approximations for modeling the Ce2O3 and
+CeO2 oxides are often adopted in DFT. The Ce 4f states are
+treated either as part of the core or explicitly as valence
+states. The former approach describes Ce2O3 as an insulator
+by construction, but it is not applicable to CeO2. The ap-
+proach that treats the Ce 4f states as valence states resulted
+in the expected insulating ground state for CeO2, but a fer-
+romagnetic FM metallic ground state for Ce2O3. A likely
+reason for this failure is the incomplete cancellation of the
+Coulomb self-interaction in the density functionals used,
+which stabilizes delocalized solutions. As a result, the elec-
+tronic structure of magnetic materials with strongly localized
+electrons is generally not correctly reproduced.14,15
+Pragmatic approaches that have been developed to over-
+come the limitations of the LDA and GGA functionals, such
+as
+the
+self-interaction
+correction16
+and
+the
+DFT+U
+approach,6 have been recently applied to cerium oxides. 11,17
+But subtle details of the actual implementation can strongly
+influence the results. For DFT+U, the band gaps and the
+energetics depend on the Hubbard U parameter, the choice of
+the
+localized
+orbitals,
+and
+the
+underlying
+exchange-
+correlation functional LDA or GGA.
+A different possibility to reduce the improper self-
+interaction is the use of hybrid functionals in which a fixed
+amount of nonlocal Fock exchange is added to local LDA
+or semilocal GGA XC functionals. Despite the important
+impact of hybrid functionals in molecular quantum chemis-
+try, B3LYP in particular,18 their applications to periodic sol-
+ids used to be linked to Gaussian basis sets.15,1924 The rea-
+son is the large computational effort to evaluate the nonlocal
+Fock exchange in extended periodic systems using a plane-
+wave basis set. Due to the progress in plane-wave-based
+PHYSICAL REVIEW B 75, 045121 2007
+1098-0121/2007/754/04512110
+2007 The American Physical Society
+045121-1
+algorithms25,26 and computer speed, hybrid functionals such
+as the Heyd-Scuseria-Ernzerhof27,28 HSE and the Perdew-
+Burke Ernzerhof2931 PBE0 functionals have been recently
+implemented in widely used plane-wave basis set codes.3234
+In this work, we report a hybrid functional study of bulk
+CeO2 and Ce2O3 using the PBE0 and HSE hybrid functionals
+within the framework of the plane-wave projector augmented
+wave PAW formalism,3537 and compare with the LDA, the
+Perdew, Burke, and Ernzerhof GGA from now on referred
+to as PBE, LDA+U, and PBE+U descriptions of these sys-
+tems. We calculate the ground state structural, electronic, and
+magnetic properties as well as atomization energies and heats
+of formation. We also present results for the reduction energy
+of 2CeO2Ce2O3+ 1
+2O2. Selected PBE calculations were
+performed using the full-potential linearized augmented
+plane-wave plus local orbitals FPL/APW+LO method.38
+II. THEORETICAL APPROACH AND COMPUTATIONAL
+DETAILS
+Spin-polarized calculations were performed using differ-
+ent XC energy functionals. The hybrid PBE0 Refs. 2931
+and HSE Refs. 27 and 28 functionals were used. In both
+cases 75% of the well-known PBE exchange39 is combined
+with 25% of the nonlocal Fock exchange, and the correlation
+functional corresponds to that in the PBE functional. The
+HSE and PBE0 functionals differ in the treatment of the
+long-range part of the Fock exchange interaction with the
+former being computationally advantageous. The HSE func-
+tional cuts off the long-range tail of the Coloumb 1/r kernel
+using the complementary error function, allowing for a
+coarse k-point sampling of the nonlocal exchange kernel.33
+Since this cutoff also slightly reduces the formally 25%
+Fock exchange experienced by the electrons, the HSE and
+PBE0 functionals give similar, but not identical, descriptions
+for solid state systems. Generally band gaps tend to be
+slightly smaller using the HSE functional, whereas the ener-
+getics are very similar for both functionals.33 We note that
+the use of 25% nonlocal Fock exchange has been justified
+using
+the
+adiabatic-connection
+fluctuation
+dissipation
+theorem,29 and there is ample evidence that this value gives
+accurate results for a large class of materials, including
+metals.28,33 In the present case, the parameter  in the HSE
+functional was set to 0.3 Å=0.158 a.u. for both the local
+density part as well as the nonlocal Fock part. These are the
+parameters originally suggested for the HSE03 functional,
+but differ from those actually applied in Refs. 27 and 28 see
+also Ref. 40.
+The LDA Ref. 41 and PBE Ref. 39 functionals were
+also employed. Furthermore, a Hubbard U term was added to
+the plain LDA and PBE functionals6 LDA+U and PBE+U
+employing the rotationally invariant approach proposed by
+Dudarev et al.,42 in which only the difference Ueff=UJ
+between the Coulomb U and exchange J parameters enters.
+Values of Ueff=5.30 and 4.50 eV were used in the LDA+U
+and PBE+U calculations, respectively, which were calculated
+self-consistently by Fabris et al.13 using the linear-response
+approach of Cococcioni and de Gironcoli.43
+The Kohn-Sham equations were solved using the projec-
+tor augmented wave method,3537 as implemented in the Vi-
+enna ab initio simulation package VASP.44,45 The calcula-
+tions use a yet unreleased version, which includes the
+nonspherical one-center contributions to the PBE potential
+and hybrid functionals. For comparison, selected PBE calcu-
+lations were made using another full-potential approach,
+namely, the full-potential L/APW+LO method38 as imple-
+mented in the WIEN2k program,46,47 which is a combination
+of the linearized augmented plane-wave method48 and the
+augmented plane-wave plus local orbitals method.49
+In the PAW method, the interaction between the ions and
+electrons is described by the standard frozen-core potentials
+provided within the VASP package, which were generated ac-
+cording to the procedure outlined in Ref. 36. We treated the
+Ce 4f ,5s,5p,5d,6s and O 2s,2p electrons as valence
+states, while the remaining electrons were kept frozen as core
+states. A plane-wave cutoff energy of 400 eV was used. The
+augmentation charges were evaluated using an additional
+grid, which contained eight times more points than the grid
+for the wave functions determined from the cutoff energy.
+The projection operators were evaluated in reciprocal space.
+In the mixed L/APW+LO method, the L/APW+LO wave
+functions inside the atomic spheres with radius of 1.16 and
+0.74 Å for Ce and O atoms, respectively, are composed by a
+combination of APW+LO basis functions l=0,1,2,3 for Ce
+and l=0,1 for O and LAPW basis functions for all higher
+angular momenta up to 12. Furthermore, local orbitals were
+set to specifically treat the Ce 5s, 5p, and 5d orbitals, as well
+as the O 2s orbital. The L/APW+LO wave functions in the
+interstitial region were represented using plane waves with
+kinetic energy up to 250 eV, whereas for the potential rep-
+resentation in the interstitial region, plane waves with kinetic
+energy up to 3500 eV were considered. Inside of the atomic
+spheres, the representation of the potential considered terms
+with angular momentum up to 6. Furthermore, nonspherical
+matrix Hamiltonian elements are considered up to l=6.
+The Brillouin-zone integrations were performed using
+Monkhorst-Pack grids.50 The hybrid calculations were car-
+ried out using a 666 mesh for both systems, whereas
+for the remaining calculations, 101010 and 1010
+5 meshes were employed for CeO2 and Ce2O3, respec-
+tively. We note that the hybrid functional calculations are
+converging rapidly with the k-point grid, since both systems
+become wide band gap insulators. Thus results using a
+666 mesh are virtually identical to those obtained us-
+ing a 444 grid.
+III. RESULTS
+A. Equilibrium volumes
+Bulk CeO2 and Ce2O3 have fluorite-type face-centered
+cubic, Fm3
+m and sesquioxide A-type hexagonal, P3
+m1
+structures, respectively, with one formula unit per primitive
+unit cell see Fig. 1. In CeO2, the Ce and O atoms are eight-
+and four-fold coordinated, respectively, with an experimental
+Ce-O bond length of 2.34 Å.5154 In Ce2O3 the Ce atoms are
+seven-fold coordinated with experimental Ce-O bond lengths
+of 32.34, 12.43, and 32.69 Å,8,55 while two of the O
+atoms are four-fold coordinated and the third O atom is six-
+DA SILVA et al.
+PHYSICAL REVIEW B 75, 045121 2007
+045121-2
+fold coordinated. All atomic positions in the fluorite-type
+structure are fully constrained by the space group symmetry,
+while in the hexagonal structure there are two free internal
+parameters uCe,uO in addition to the two lattice constants
+a0,c0.
+The LDA, PBE, LDA+U, PBE+U, PBE0, and HSE equi-
+librium volumes V0 were calculated by minimizing the stress
+tensor and all internal degrees of freedom. To avoid prob-
+lems resulting from the basis set change upon changing the
+volume Pulay stress, the cutoff energy was increased to
+800 eV LDA, PBE, LDA+U, and PBE+U or a uniform
+correction to the stress tensor was applied PBE0 and HSE.
+The bulk moduli B0 were obtained by fitting the calculated
+total ground state energies for selected relaxed structures
+with fixed volumes to Murnaghans equation of state.56 The
+high computational cost of the hybrid computations pre-
+cluded energy minimization at various volumes; hence no
+bulk moduli are reported for the hybrid functionals. In Tables
+I and II our calculated bulk properties are compared to avail-
+able experimental data.
+The hybrid PBE0 and HSE functionals yield the same
+equilibrium volume V0=a0
+3/4 for CeO2, which is underes-
+timated by only 1.1% compared to the experimental
+volume.51,52,54 For Ce2O3, the equilibrium volume V0
+=3a0
+2c0/2 of the AF spin configuration is also underesti-
+mated by about 1% in the PBE0 and HSE calculations com-
+pared to the experimental volume.55 The general agreement
+between the lattice constants of both oxides and experiment
+is very satisfactory. Our hybrid functional results are in line
+with the tendency of hybrid functional calculations to under-
+estimate equilibrium volumes recently observed for selected
+metallic, semiconducting, and simple oxide systems.28,33
+The LDA and PBE results for CeO2 reflect the expected
+underestimation by 2.2% and overestimation by 3.3% of
+the equilibrium volume, respectively, which are characteris-
+tics of these functionals see, e.g., Refs. 57 and 58. The
+agreement between the PAW and the FP-L/APW+LO calcu-
+lations is excellent, both for the lattice constants, as well as
+for the bulk moduli, and the comparison to experiment is
+fairly decent. The combination of overestimated equilibrium
+volumes and underestimated bulk moduli, typical of PBE,
+can be seen as well in Table I.
+Yet, in contrast to CeO2, the equilibrium volumes ob-
+tained for Ce2O3 using the LDA and PBE are far from being
+satisfactory. Both LDA and PBE underestimate V0 by 8.9%
+and 2.7%, respectively. We note that our LDA and PBE re-
+sults for both the equilibrium lattice constants and the bulk
+modulus are in good agreement with most of the previous
+first-principles calculations.10,11,13,59,60
+Thus, the PBE0 and HSE results are in much better agree-
+ment with experiment than the LDA and PBE ones. The
+improvement of the hybrid calculations over local and
+semilocal functionals goes beyond the lattice constants as
+discussed in the next section. The improvement is particu-
+larly noticeable for the Ce2O3 case. For the hybrid function-
+als, the equilibrium volume usually lies in between the LDA
+and GGA values, but for Ce2O3 the volume increases from
+the GGA to HSE and PBE0 results. As shown below, a single
+electron localizes in a Ce 4f state per Ce atom for the hybrid
+functionals, effectively removing any hybridization with the
+conduction and valence bands. In the local and semilocal
+functionals, the Ce 4f states below the Fermi level are delo-
+calized and show spurious bonding interactions with the oxy-
+gen 2p states leading to a much too small equilibrium vol-
+ume. This is a first hint that the description of the bonding
+properties is much improved using the hybrid functionals.
+For the DFT+U case, the calculated CeO2 and Ce2O3
+equilibrium volumes depend significantly on the description
+of the standard DFT part LDA versus PBE. The LDA+U
+scheme underestimates V0 by 0.6% and 3.2% for CeO2 and
+Ce2O3, respectively, whereas, the corresponding PBE+U vol-
+umes deviate by +4.5% and +3.6%. Hence the inclusion of U
+in either LDA or PBE changes the volume only little for
+CeO2 by up to +2%, but strongly increases the volume of
+Ce2O3 +6%. This is similar to the hybrid functionals and
+suggests that the LDA+U approach gives a reasonable ac-
+count of the electron localization. It is noteworthy that the
+LDA+U values appear to be closer to experiment and the
+hybrid approaches than the PBE+U results. A recent publi-
+cation of Fabris et al.61 also indicated a better performance
+of LDA+U than PBE+U for the description of reduced ceria
+surfaces.
+As usual, the volume V0 depends on the parameter Ueff, as
+shown in Fig. 2. The results were obtained by minimizing the
+FIG. 1. Color online Fluorite-type structure face-centered cu-
+bic, Fm3
+m of CeO2 left and the sesquioxide A-type structure
+hexagonal, P3
+m1 of Ce2O3 right, respectively. Large blue and
+small red balls indicate Ce and O atoms, respectively.
+TABLE I. Bulk properties of CeO2 in the fluorite-type structure.
+Equilibrium lattice constant a0, bulk modulus B0, and atomization
+energy Eat, per formula unit.
+Method
+XC
+a0 Å
+B0 Mbar
+Eat eV
+PAWa
+PBE0
+5.39
+19.13
+PAWa
+HSE
+5.40
+19.70
+PAWa
+LDA
+5.37
+2.01
+24.55
+PAWa
+PBE
+5.47
+1.72
+21.04
+L/APW+LOa
+PBE
+5.47
+1.70
+21.15
+PAWa
+LDA+U
+5.40
+2.10
+PAWa
+PBE+U
+5.49
+1.80
+Expt.
+5.406b
+2.30b
+Expt.
+5.411c,e
+2.04,d 2.20e
+aPresent work.
+bReference 51.
+cReference 52.
+dReference 53.
+eReference 54.
+HYBRID FUNCTIONALS APPLIED TO RARE-EARTH
+PHYSICAL REVIEW B 75, 045121 2007
+045121-3
+stress tensor. Both the LDA+U and PBE+U lattice constants
+increase almost linearly with Ueff for both cerium oxides.
+The slope of the curve is significantly steeper for Ce2O3
+note the different scale. Only the LDA+U curves approach
+or intersect the experimental line at a value of roughly Ueff
+=8.0 eV. This value is, however, larger than the effective
+Ueff determined by perturbation theory 5.30 eV,13 and its
+use would worsen other materials properties, in particular,
+formation energies see below.
+B. Electronic structure
+Although optical properties and band gaps are not ground
+state properties, it has become a common practice to com-
+pare DFT one-electron energies with experimentally mea-
+sured quasiparticle spectra. In Fig. 3, we present results for
+the CeO2 and Ce2O3 spin-projected total and local density of
+states DOS. In CeO2, all valence Ce states, including the 4f
+states, are empty and the system is a wide gap insulator with
+a measured fundamental band gap62 Eg of 6.0 eV between
+the valence and conduction bands, which are formed pre-
+dominantly by O 2p and Ce 5d states, respectively. The va-
+cant 4f states lie in the gap. In Ce2O3, on the other hand, one
+electron per Ce atom populates a Ce 4f state, resulting in a
+single occupied Ce 4f peak, which lies in the Eg gap, 2.4 eV
+Eg-f below the conduction band,7 which is formed to a large
+extent by Ce 5d+4f states. As Eg-f, we denote the energy
+difference between the lowest 4f state and the vacant con-
+duction band. This 4f state is empty lowest unoccupied for
+CeO2 and occupied by a single electron for Ce2O3.
+FIG. 2. Color online Equilibrium lattice constants of CeO2 and
+Ce2O3 as a function of Ueff. The lattice constants are given in per-
+centages with respect to the experimental values a0=5.41 Å for
+CeO2; a0=3.89 Å, c0=6.06 Å for Ce2O3. The stars indicated the
+results obtained with the calculated Ueff using the linear-response
+approach of Ref. 43.
+TABLE II. Bulk properties of Ce2O3 in the sesquioxide A-type structure. Equilibrium lattice constants
+a0,c0, internal parameters uCe,uO, bulk modulus B0, the total magnetic moment per unit cell per cerium
+atom in parentheses, and atomization energy Eat, per formula unit. FM and AF indicate ferromagnetic and
+antiferromagnetic spin configurations, respectively.
+Method
+XC
+Spin
+a0 Å
+c0 Å
+uCe
+uO
+B0 Mbar
+m B
+Eat eV
+PAWa
+PBE0
+FM
+3.87
+6.06
+0.2460
+0.6459
+2.00 1.00
+32.44
+PAWa
+PBE0
+AF
+3.87
+6.07
+0.2459
+0.6455
+0.00 0.99
+32.45
+PAWa
+HSE
+FM
+3.87
+6.07
+0.2459
+0.6459
+2.00 1.00
+33.54
+PAWa
+HSE
+AF
+3.87
+6.08
+0.2459
+0.6454
+0.00 0.99
+33.55
+PAWa
+LDA
+FM
+3.77
+5.88
+0.2429
+0.6413
+1.38
+2.00 0.87
+40.41
+PAWa
+LDA
+AF
+3.73
+5.93
+0.2430
+0.6354
+1.38
+0.00 0.15
+40.35
+PAWa
+PBE
+FM
+3.83
+6.08
+0.2459
+0.6430
+1.14
+2.00 0.89
+34.80
+PAWa
+PBE
+AF
+3.85
+6.10
+0.2484
+0.6419
+1.01
+0.00 0.76
+34.72
+L/APW+LOa
+PBE
+FM
+3.85
+6.04
+0.2459
+0.6435
+1.13
+2.00 0.85
+34.60
+PAWa
+LDA+U
+FM
+3.87
+5.93
+0.2441
+0.6463
+2.00 0.97
+PAWa
+LDA+U
+AF
+3.86
+5.96
+0.2446
+0.6456
+1.30
+0.00 0.97
+PAWa
+PBE+U
+FM
+3.92
+6.18
+0.2471
+0.6448
+2.00 0.97
+PAWa
+PBE+U
+AF
+3.92
+6.18
+0.2473
+0.6447
+1.11
+0.00 0.97
+Expt.b
+3.89
+6.06
+0.245
+0.647
+Expt.
+0.251c
+0.648d
+2.17d
+aPresent work.
+bReference 55.
+cReference 8; results obtained at a temperature of 4.2 K.
+dReference 8.
+DA SILVA et al.
+PHYSICAL REVIEW B 75, 045121 2007
+045121-4
+For CeO2, the local, semilocal, and hybrid functionals
+yield an insulating solution, which is in agreement with spec-
+troscopic and optical reflectivity measurements.9,62,63 The
+empty Ce 4f states can be identified in the band gap see Fig.
+3. A slight admixture of Ce d and Ce f character into the
+predominantly O 2p valence band can be observed see also
+Ref. 9. As usual, LDA and PBE results show the typical
+underestimation of band gaps, namely, 5.61 LDA and
+5.64 eV PBE. These values correspond to the energy dif-
+ference between the highest occupied and the lowest unoc-
+cupied band located above the Ce 4f states in the gap.
+The hybrid functionals instead, overestimate the band
+gap, specifically, 7.93 PBE0 and 6.96 eV HSE. The
+1 eV larger value for the PBE0 case is in line with previ-
+ous studies33 and related to the use of a screened exchange
+interaction in the HSE functional as opposed to the bare
+Coloumb kernel in the PBE0 case.
+For the magnetic Ce2O3 system, PBE0 and HSE yield an
+AF insulating ground state driven by the ordering of the
+partially occupied Ce 4f orbitals in the band gap. This order-
+ing is consistent with magnetic susceptibility measurements.8
+The AF solution is by 6 PBE0 and 5 meV HSE lower in
+energy than the FM insulating solution. By inspecting the
+local DOS, we found an occupation of the Ce 4f states by
+almost one electron, which gives rise to a magnetic moment
+of 1.0B per Ce atom, in good agreement with the experi-
+mental value of 1.085B.8 The calculated magnetic moments
+are given in Table II. We also found that, similarly to CeO2,
+the PBE0 functional overestimates the Ce2O3Eg-f band gap,
+wheres the HSE results are in excellent agreement with ex-
+periment 3.5 PBE0 and 2.5 eV HSE with the experimen-
+tal value being 2.4 eV.
+The DOS in Fig. 3 indicates that local and semilocal func-
+tionals yield a metallic solution for the ground state of
+Ce2O3; however, a careful analysis of the band structure
+shows a semi-metallic character with a mini-band-gap of
+10 meV Eg-f in the PBE case. The FM solution has a
+magnetic moment of 2.0B per formula unit, which is 60
+LDA and 110 meV PBE lower in energy than the AF
+solution. We note that the mini-band-gap vanishes in the
+LDA using reliable all-electron methods PAW and FP-L/
+APW+LO, as reported recently by Kresse et al.12 Fabris et
+al. incorrectly calculated a large Eg-f gap for Ce2O3 even
+using the LDA functional but this result was an artifact of an
+inaccurate pseudopotential.12,13
+The pragmatic DFT+U approach works again reasonably
+well for Ce2O3 and gives results similar to the hybrid func-
+tional. An AF insulating ground state is obtained with the AF
+solution being 3 LDA+U and 2 meV PBE+U lower in
+energy than the FM configuration. We found that the precise
+structure and volume play a significant role in the magnitude
+by which the AF solution is preferred. For instance, using the
+experimental Ce2O3 structure, the AF-FM energy difference
+increases by one order of magnitude to about 50 meV.
+A major difference between the hybrid functional and
+DFT+U approach arises for the size of the Eg and Eg-f band
+gaps see Fig. 3. Specifically, the CeO2 band gap Eg
+=5.3 eV in DFT+U is smaller than the experimental one
+6.0 eV and much smaller than the PBE0 and HSE values
+7.9 and 7.0 eV. In the case of Ce2O3, the deviations are less
+severe. In particular, the DFT+U Eg-f gap equals 2.4 LDA
++U and 2.6 eV PBE+U, while the experimental value and
+HSE values are 2.4 and 2.5 eV, respectively. One could ar-
+gue that in order to improve the agreement with experiment
+different values of Ueff should be used. However, from the
+calculated band gaps at the  point see Fig. 4 as a function
+of Ueff, we conclude that the fundamental gap Eg in CeO2 is
+FIG. 3. Color online Total and local density of states TDOS and LDOS calculated with different XC energy functionals. Zero in the
+energy x axis indicates the top of the occupied valence band. All DOSs are calculated at the optimized geometries. For Ce2O3, only the
+spin-up component of the AF spin solution is shown.
+HYBRID FUNCTIONALS APPLIED TO RARE-EARTH
+PHYSICAL REVIEW B 75, 045121 2007
+045121-5
+roughly constant. This is not particularly astonishing, since
+the Ueff acts on the Ce 4f states only, and the valence and
+conduction bands have predominantly O 2p and Ce 5d char-
+acter. The position of the 4f states cf. Fig. 4, reported as
+Eg-fthe difference between the eigenvalue of the lowest 4f
+state and the lowest unoccupied band at the  pointis
+strongly affected by Ueff in Ce2O3. For Ce2O3, an increase of
+Ueff shifts the occupied Ce 4f state away from the conduc-
+tion band, as expected. In CeO2 an increasing Ueff shifts the
+empty f states toward the conduction band, in turn reducing
+the values of Eg-f.
+C. Thermodynamic properties
+At zero temperature, the heats of formation Hf of bulk
+CeO2 and Ce2O3 are defined by
+Hf
+CeO2 = Etot
+CeO2 Etot
+bulk Ce Etot
+O2,
+1
+Hf
+Ce2O3 = Etot
+Ce2O3 2Etot
+bulk Ce 3/2Etot
+O2,
+2
+and the reduction energy of CeO2 to Ce2O3 2CeO2
+Ce2O3+ 1
+2O2 is given by
+HCeO2Ce2O3 = Etot
+Ce2O3 + 1/2Etot
+O2 2Etot
+CeO2.
+3
+Etot
+CeO2/Ce2O3/bulk Ce/O2 indicates the total energies of CeO2,
+Ce2O3, bulk Ce, and O2 per formula unit, respectively. Fur-
+thermore, we calculate also the atomization energies Eat. For
+CeO2, Eat=Etot
+Ce+2Etot
+O Etot
+CeO2, where Etot
+Ce/O indicates the total
+energies of the free Ce and O atoms, respectively. Thus, Eqs.
+13 can be rewritten using the atomization energies, in
+which
+Etot
+CeO2/Ce2O3/bulk Ce/O2
+should
+be
+replaced
+by
+Eat
+CeO2/Ce2O3/bulk Ce/O2.
+Metallic nonmagnetic -Ce has been considered in the
+face-centered cubic structure,64 while the spin-polarized cal-
+culation for the O2 molecule was performed in an ortho-
+rhombic box 121314 Å3. For the calculation of the
+atomization energies we evaluated the spin-polarized total
+energy of the free O and Ce atoms using the same ortho-
+rhombic box. For both the Ce and O atoms, no constraint
+was imposed on the one-electron occupation. For the particu-
+lar case of O2 a hard oxygen PAW potential with a cutoff
+energy of 1000 eV was employed. The atomization energies
+are reported in Tables I, II, and IV. Zero-point vibrational
+energy contributions are not included. The heats of formation
+and reduction energy are summarized in Table IV along with
+the experimental results at room temperature 298 K.
+Table III shows satisfactory agreement between the PAW
+and L/APW+LO methods. The poorer performance of LDA
+with respected to PBE is as expected.57,58 Table III also
+shows that hybrid PBE0 and HSE functionals significantly
+diminish the characteristic overestimation of the O2 atomiza-
+tion energy by the LDA and GGA functionals. 32,39,65,66 How-
+ever, for bulk Ce, hybrid functionals underestimate the at-
+omization energy with respect to experiment and perform
+much worse than PBE. Similar problems have been recently
+reported for the atomization energy of d metals. It has been
+argued that these discrepancies are related to the overestima-
+tion of the exchange splitting in d atoms, with a simultaneous
+increase of the spin-polarization energy.33 Thus, the spin-
+polarized free atom is overstabilized compared to an artificial
+non-spin-polarized one. Note that errors in the atomic Ce
+energies will not affect the formation energies reported be-
+low. We furthermore note that the HSE and PBE0 functionals
+FIG. 4. Color online CeO2 and Ce2O3 band gap Eg and posi-
+tion of the Ce 4f states see text Eg-f at the  point, calculated as a
+function of Ueff. Results are obtained for the theoretical equilibrium
+volumes. The stars indicate the results obtained with the calculated
+Ueff.
+TABLE III. Lattice constant of Ce metal in the face-centered
+cubic structure and O2 molecule bond length, and atomization en-
+ergies per Ce atom and per O2 molecule.
+-Ce metal
+O2
+Method
+XC
+a0
+Eat
+d0
+Eat
+Å
+eV
+Å
+eV
+PAWa
+PBE0
+4.67
+2.61
+1.19
+5.37
+PAWa
+HSE
+4.66
+3.29
+1.19
+5.41
+PAWa
+LDA
+4.51
+5.51
+1.22
+7.55
+PAWa
+PBE
+4.73
+4.58
+1.22
+6.22
+L/APW+LOa
+PBE
+4.72
+4.41
+1.22
+6.21
+Expt.
+4.83b
+4.32c
+1.21d
+5.25d
+aPresent work.
+bReference 64; -Ce a0=5.16 Å for -Ce.
+cReference 67.
+dReference 68.
+DA SILVA et al.
+PHYSICAL REVIEW B 75, 045121 2007
+045121-6
+tend to overestimate the spin-polarization energy of magnetic
+-Ce, making it too stable compared to -Ce, whereas
+semilocal functionals predict -Ce to be too unstable com-
+pared to -Ce. Thus the face transition from - to-Ce is not
+satisfactorily described by any of the mean-field ap-
+proaches used in the present work.
+The results for the heats of formation and reaction energy
+are summarized in Table IV. A major problem is that the
+heats of formation are very difficult to measure experimen-
+tally, which is related to difficulties in preparing defect-free
+ceria with a well-defined oxidation state. The most recent
+experimental values are found in the last row, and they differ
+from all previous values by up to 1 eV. This uncertainty
+makes it difficult to put any firm statement on the reliability
+of the PBE and hybrid functionals for the relative energetics
+of cerium oxides.
+Tentatively, it is, however, clear that the PBE functional
+underestimates the formation energies and overestimates the
+reduction energy HCeO2Ce2O3 albeit only slightly. In all
+likelihood, the good agreement for HCeO2Ce2O3 is related
+to a fortuitous cancellation of errors. A recent investigation
+of a large number of oxidation reactions for 3d metals and
+simple metals MOx+ yx
+2 O2MOy has found that the GGA
+underestimates the reaction energies of oxidation systemati-
+cally by roughly 1.36 eV/O2.70 One can correct for this er-
+ror, by shifting the O2 reference energy by 0.68 eV per 1/2
+O2, i.e., by making O2 less favorable. Applying such a cor-
+rection brings the absolute formation energies 11.60 eV
+CeO2, 18.34 eVCe2O3 indeed into closer agreement with
+recent experiments, but it also increases the reaction energy
+HCeO2Ce2O3 to an unrealistically large value of 4.86 eV.
+Although such considerations are necessarily rather specula-
+tive, they demonstrate that the agreement on the PBE level is
+fortuitous and not related to a proper description of the un-
+derlying bonding properties of CeO2 and Ce2O3.
+Using the latest experimental values as a point of refer-
+ence, the hybrid functionals seem to perform better for the
+absolute formation energies, but the reduction energy of
+CeO2 into Ce2O3 is underestimated and predicted to be only
+3.14 eV PBE0 and 3.16 eV HSE. We have recently cal-
+culated the heat of formation of a large number of
+oxides,33,71 finding that hybrid functionals consistently un-
+derestimate the Hf values, as the PBE functional does; but
+for the hybrid functionals the error amounts only to roughly
+0.3 eV per 1/2 O2. Correcting for this systematic error yields
+a reaction energy of about 3.45 eV in reasonable agreement
+with the experimental estimates, but admittedly such a cor-
+rection worsens the absolute formation energies slightly. It is
+fairly obvious that none of the present functionals is able to
+give a consistent and completely satisfactory picture of the
+relative formation energies of ceria.
+Turning now to the DFT+U approach, we find that LDA
++U
+and
+PBE+U
+underestimate
+the
+reduction
+energy
+HCeO2Ce2O3 see Table IV. In the latter case the deviations
+are fairly large about 1.31.7 eV with respect to the most
+recent experimental data69, whereas the LDA+U method
+performs better with an underestimation similar to that of the
+hybrid functionals 0.51.0 eV. We reemphasize here that
+the DFT+U results depend not only strongly on the chosen
+values of Ueff and on the choice of the underlying functional,
+but also on the nature of the projection orbitals. From the
+calculated reduction energies as a function of Ueff see Fig.
+5, we conclude that the magnitude of HCeO2Ce2O3 linearly
+increases with decreasing Ueff values, which is in agreement
+with previously reported DFT+U studies by Fabris et al.13 It
+is discouraging that the Ueff value 3.25 eV that corrects
+the LDA+U reduction energy would yield, for example, a
+worse smaller Eg-f Ce2O3 gap and smaller Ce2O3 equilib-
+rium volume see Fig. 2. For the PBE+U case, the situation
+is similar.
+Fabris et al.13 have shown that the linear dependence on
+the value of Ueff can be removed by applying the U term to
+localized Wannier-Boys functions. Their DFT+U reduction
+TABLE IV. Reaction energy of 2CeO2Ce2O3+1/2O2 and
+heat of formation of cerium oxides in eV.
+Method
+XC
+HCeO2Ce2O3
+Hf
+CeO2
+Hf
+Ce2O3
+PAWa
+PBE0
+3.14
+11.15
+19.18
+PAWa
+HSE
+3.16
+11.00
+18.85
+PAWa
+LDA
+4.92
+11.49
+18.07
+PAWa
+PBE
+4.18
+10.24
+16.30
+L/APW+LOa
+PBE
+4.24
+10.35
+16.47
+PAWa
+LDA+U
+3.04
+PAWa
+PBE+U
+2.29
+USPPb
+LDA+U
+2.40
+USPPb
+PBE+U
+1.74
+USPPc
+LDA+U
+5.94
+USPPc
+PBE+U
+4.72
+Expt.d 298 K
+3.57
+10.62
+17.70
+Expt.e 298 K
+4.03
+11.30
+18.58
+aPresent work.
+bReference 13; using atomiclike functions.
+cReference 13; using Wannier-Boys functions.
+dReference 5.
+eReference 69.
+FIG. 5. Color online Reaction energy of reduction 2CeO2
+Ce2O3+1/2O2 as a function of Ueff. Energies are determined at
+the optimized geometries. The stars indicated the results obtained
+with the calculated Ueff. The horizontal dashed line corresponds to
+the most recent experimental result in Ref. 69.
+HYBRID FUNCTIONALS APPLIED TO RARE-EARTH
+PHYSICAL REVIEW B 75, 045121 2007
+045121-7
+energies for the same values of Ueff as in this work with
+both types of orbitals are reproduced in Table IV. Those
+calculated with the atomiclike functions are in reasonable
+agreement with our values; discrepancies are possibly related
+to the use of ultrasoft pseudopotentials compared to the PAW
+potentials. The deviations of values obtained with the
+Wannier-Boys orbitals are considerably large, for the LDA
+U in particular. Reportedly the values obtained with the
+Wannier-Boys orbitals do not depend on Ueff.
+IV. DISCUSSION
+We have reported hybrid DFT Hartree-Fock calculations
+on CeO2 and Ce2O3 bulk phases with periodic boundary con-
+ditions and a plane-wave basis set, and we have compared
+the results with the standard LDA and PBE cases, as well as
+the DFT+U approach. The hybrid functionals yield equilib-
+rium volumes in quantitative agreement with experiment,
+and thus represent a pronounced improvement over the LDA
+and PBE functionals. For the structural properties, this con-
+cerns particularly Ce2O3 for which the volume increases
+from the PBE to the hybrid functionals, opposite to the usual
+volume decrease from semilocal to hybrid functionals.28,33
+This unusual behavior is related to the localization of a
+single Ce 4f electron in Ce2O3 for hybrid functionals, over-
+coming the failure of semilocal density functionals that in-
+correctly describe the 4f electron as delocalized in Ce2O3.
+Therefore, the increase in volume is closely linked to the
+proper description of the electronic structure.
+In general, the HSE functional gives the most balanced
+description of the electronic properties, with fundamental
+band gaps and the position of the 4f states being close to
+experimental values. The local and semilocal functionals fail
+to yield a sizable band gap between the occupied 4f state and
+the conduction band in Ce2O3. Anyway, a comparison be-
+tween one-electron energies and the measured quasiparticle
+spectra must be done with some caution, since generalized
+Kohn-Sham one-electron energies are not related to quasipar-
+ticle energies.
+For the prediction of thermochemical properties, the hy-
+brid functionals do not appear to provide a clear-cut im-
+provement over the standard PBE functional, although com-
+parison with experiments is rather difficult, since the
+experimental formation energies are not known very accu-
+rately. Most notably, the hybrid functionals underestimate the
+reduction energy H2CeO2Ce2O3+ 1
+2O2 by roughly
+0.9 eV. On the other hand, the formation energy of CeO2 is
+predicted very accurately, and that of Ce2O3 is overestimated
+only slightly by 2%, whereas the PBE functional leads to an
+underestimation by roughly 9% and 12%, respectively. It
+seems that this is mostly related to a different description of
+the binding in the O2 molecule for the hybrid and PBE func-
+tionals cf. Table III. We have furthermore argued that the
+good agreement of the reduction energy for PBE 4.28 eV
+with experiment 4.03 eV is due to a fortunate error cancel-
+lation, and not in line with other simple and transition metal
+oxides.70
+Comparison of the PBE0 and HSE, local, and semilocal
+functionals with the DFT+U results shows that DFT+U
+gives rather controversial results. Our calculations indicate
+that LDA+U and PBE+U yield a better account than LDA
+or PBE for most properties. However, as always, the results
+depend on the U parameter. The equilibrium lattice con-
+stants, the position of the occupied or unoccupied 4f states
+in the band gap, and the reduction energy vary linearly with
+the effective Hubbard U values. Certainly the DFT+U
+method does not possess any predictive capabilities, and
+worse, in the present case, there is no unique U that gives a
+reasonable account of structural parameters, the relative en-
+ergies of different oxides, and spectroscopic properties. If
+one is forced to make a choice, then our calculations suggest
+that for PBE a very small value of Ueff 2.0 eV would give
+the best overall description for the energetics, lattice con-
+stants, and magnetic ordering in Ce2O3, instead of the calcu-
+lated value of 4.50 eV.13 For LDA, the Ueff should be chosen
+around 3.04.0 eV.
+We finally note that a recent publication by Hay et al.72
+gives very similar results for the structural and electronic
+properties of CeO2 and Ce2O3 using the LDA, PBE, and
+HSE functionals. These calculations were carried out using
+periodic boundary conditions and Gaussian-type orbitals, but
+did not discuss the thermodynamic properties. Hay et al. find
+a 0.2% underestimated CeO2 equilibrium volume for the
+HSE functional. Their LDA and PBE results show the antici-
+pated underestimation by 2.8% and overestimation by
+3.2% of the equilibrium volume, respectively. In this study
+we find 0.6% HSE, 2.2% LDA, and +3.3% PBE de-
+viations. For Ce2O3, the agreement is similar, namely, 2.0%
+HSE, 8.9% LDA, and 2.0% PBE compared to our
+0.7% HSE, 8.9% LDA, and 2.7% PBE data. We
+observe that in the study by Hay et al. the c/a ratio for
+Ce2O3 was held fixed at the experimental value for the HSE
+functional. The overestimation of the CeO2 O 2pCe 5d
+band gap by 1 eV for the HSE functional, has been as-
+serted by both Hay et al. and the present work. For Ce2O3,
+the HSE predicted Eg-f Ce 4f-5d 4f band gap is by 0.8
+Hay et al. and 0.1 eV this work overestimated. We note
+that the screening parameter  in the HSE functional used in
+the work by Hay et al. might differ from the one 
+=0.158 a.u. used in the HSE implementation employed in
+this work.40
+V. SUMMARY
+In summary, the hybrid HSE functional seems to provide
+a reasonably balanced description of CeO2 and Ce2O3. Most
+noticeably, the lattice constants can be predicted with
+roughly 1% precision, and the localization of a single 4f
+electron in Ce2O3 is well described, with the energy of the 4f
+states even matching measured spectra. It is, however, also
+clear that significant shortcomings remain, in particular, in
+the description of the relative energetics. The quest for im-
+proved functionals is still open, although it must be empha-
+sized that the present study focuses on one of the most dif-
+ficult elemental oxides in the periodic table.
+DA SILVA et al.
+PHYSICAL REVIEW B 75, 045121 2007
+045121-8
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do computational methods, particularly density functional theory (DFT) and cluster models, enhance our ability to predict, analyze, and understand the catalytic activity of doped oxide catalysts in alkane activation, and what are the key considerations, challenges, and potential benefits of these approaches in terms of accuracy, efficiency, and the exploration of new catalytic materials?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

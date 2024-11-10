@@ -1,0 +1,1293 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+Ethane hydrogenolysis over platinum
+Selection and estimation of kinetic parameters
+R.D. Cortright, R.M. Watwe, J.A. Dumesic
+Department of Chemical Engineering, University of Wisconsin-Madison, Madison, WI 53706, USA
+Received 2 February 2000; accepted 8 May 2000
+Abstract
+Kinetic models are formulated to describe the essential surface chemistry involved in ethane hydrogenolysis over platinum
+catalysts, through consolidation of results obtained from first principles calculations and reaction kinetics studies. Quantum
+chemical calculations based on density functional theory (DFT) were conducted to probe the structures and energetics of
+various adsorbed C2Hx species on platinum, as well as activated complexes involved in cleavage of the CC bond. De
+Donder relations were used to identify kinetic coefficients that minimize complications from unintentional compensation
+effects. Results from DFT calculations and kinetic analyses suggest that the most abundant surface species during ethane
+hydrogenolysis are adsorbed atomic hydrogen and highly dehydrogenated hydrocarbon species (e.g. ethylidyne species),
+whereas the primary reaction pathways for cleavage of the CC bond on Pt take place through transition states that are more
+highly hydrogenated (e.g. C2H5 and CHCH3 species). The results from DFT calculations indicate that C2Hx adsorbed species
+and transition states interact more strongly with Pt(2 1 1) than with Pt(1 1 1) surfaces, in agreement with the known structure
+sensitivity of ethane hydrogenolysis over Pt catalysts.  2000 Elsevier Science B.V. All rights reserved.
+Keywords: Kinetic analysis; DFT; Ethane hydrogenolysis; Platinum; De Donder
+1. Introduction
+Catalytic processes on surfaces take place through
+sequences of elementary reactions involving adsorbed
+reactants, products, and reaction intermediates associ-
+ated with active sites on the catalyst surface. Studies
+of chemical kinetics of catalytic processes, thus, typ-
+ically involve analyses of reaction schemes, with the
+aim of describing the rate of the overall reaction in
+terms of contributions from individual elementary
+steps. While in the most general case it is desirable
+to determine pre-exponential factors and activation
+energies for each of these elementary steps, there
+Corresponding author. Tel.: +1-608-262-1095;
+fax: +1-608-262-5434.
+is usually not sufficient information to extract the
+values of all kinetic parameters. Accordingly, there
+is an information-deficit that requires a compromise
+between the desire to include chemical detail in the
+reaction scheme and the realization that the observed
+reaction kinetics is controlled by a limited number
+of kinetic parameters. In this respect, several issues
+become important. For example, what elementary
+steps are kinetically important, and how many ki-
+netic parameters are required to capture the observed
+chemistry of a given catalytic process?
+During the past several years, significant advances
+have been made in the applications of quantum
+chemical techniques to identify the geometries, en-
+ergetics and vibrational modes of chemical species
+interacting with catalytic sites consisting of clusters
+1381-1169/00/$  see front matter  2000 Elsevier Science B.V. All rights reserved.
+PII: S1381-1169(00)00402-7
+92
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+or periodic arrangements of atoms [1,2]. In addi-
+tion, considerable information about the properties
+of chemical species on catalyst surfaces is avail-
+able from experimental studies [3,4]. This increasing
+availability of energetic and entropic information
+obtained from theoretical and experimental studies
+is invaluable in kinetic analyses to minimize the
+information-deficit and to help determine which of the
+kinetic parameters are important in controlling catalyst
+performance.
+An important consequence of conducting kinetic
+analyses in conjunction with results from quantum
+chemical calculations and experimental studies of
+surface species is that quantitative knowledge about
+the catalytic process is built at the molecular level
+into the kinetic model. In fact, one of the difficulties
+encountered when trying to utilize reaction kinetic
+data collected for a particular catalyst system to as-
+sist in the development of another catalyst system
+is that a common basis for comparison between the
+systems cannot be identified. For example, the ac-
+tive sites may have different structures; the reaction
+sequences may involve different reaction intermedi-
+ates; the surface coverage regimes may be different.
+Without a means to account for the key differences
+between the catalyst systems, it is not possible to take
+advantage of the similarities that these systems may
+possess. However, by extracting information about
+the catalyst system at the molecular level, it may be
+possible to identify the common factors that control
+the nature and the strength of the chemical bonding
+in both catalyst systems. This process of extracting
+fundamental knowledge from experimental informa-
+tion, therefore, provides a molecular-level basis for
+comparison between catalyst systems, and it provides
+unifying principles for the design of new catalyst
+systems.
+In the present paper, the combined results from
+experimental and theoretical investigations are con-
+solidated with the aim of interpreting the observed
+reaction kinetics data for ethane hydrogenolysis over
+platinum. Ethane hydrogenolysis has been a bell-
+wether probe reaction to investigate the reactivities
+of hydrocarbons over metal catalysts [514]. To this
+day, investigators have conducted analyses of kinetic
+data for ethane hydrogenolysis using models based
+on the following two-step reaction scheme proposed
+by Cimino et al. [15]:
+C2H6
+C2Hx(ads) +
+6 x
+2
+H2
+C2Hx(ads) + H2 CH4
+where the first step is quasi-equilibrated and the
+second step is irreversible. This scheme leads to a
+rate expression of the power-law form:
+rate = kPn
+EP 1na
+H
+(1)
+where a is equal to (6 x)/2 and PE and PH are the
+partial pressures of ethane and dihydrogen, respec-
+tively. Over the years, this two-step mechanism has
+been modified to incorporate such features such as
+competitive adsorption of hydrogen and cleavage of
+the CC bond through interaction with either gaseous
+dihydrogen, surface atomic hydrogen, or vacant sur-
+face sites (as reviewed by Shang and Kenney [13]).
+However, two main features of the model have been
+maintained: (1) the most abundant reactive interme-
+diate is formed in quasi-equilibrium with gas-phase
+ethane and dihydrogen, and (2) this same reactive in-
+termediate is involved in the rate-limiting CC bond
+cleavage step. In this paper, we show that the reactive
+intermediates are not necessarily the most abundant
+surface intermediates.
+The present paper begins with a detailed reaction
+scheme to describe the results of a previously re-
+ported kinetic study of ethane hydrogenolysis over
+platinum [14], and uses recent results from quantum
+chemical calculations employing density functional
+theory (DFT) [16] to provide initial guesses for the
+kinetic parameters of this system. In addition, the
+present paper uses reaction schemes involving the
+quasi-equilibrated formation of reaction intermediates
+and transitions states from gaseous ethane and dihy-
+drogen, as identified using the concepts of De Donder
+[1721]. Moreover, the use of De Donder relations
+provides a simple means to determine the number of
+kinetic parameters required to calculate the overall
+reaction rate from a reaction scheme.
+2. Kinetic analyses
+2.1. De Donder analyses
+According to the De Donder relation, we write the
+net rate for elementary step i in terms of the forward
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+93
+rate of the step, 
+ri, and the affinity for the step, Ai:
+ri = 
+ri
+1 exp
+Ai
+RT
+(2)
+where the affinity is equal to minus the change in the
+Gibbs free energy with respect to the extent of reaction
+(i.e. equal to the difference in the Gibbs free energies
+of the reactants and products of the elementary step
+at the reaction temperature and at the corresponding
+partial pressure for each reactant, product, and reaction
+intermediate). In general, the affinity, Ai, is expressed
+in terms of the standard state Gibbs free energies, Go
+j,
+and the activities, aj, of the j reactants and products
+of the step
+Ai = 
+X
+j
+υijGj = 
+X
+j
+υij[Go
+j + RT ln(aj)]
+(3)
+where υij are the stoichiometric coefficients for the j
+reactants and products of step i. This expression can
+be written in terms of the equilibrium coefficient for
+the step, Kieq:
+exp
+Ai
+RT
+=
+Q
+ja
+υij
+j
+Kieq
+(4)
+since the equilibrium coefficient is determined by the
+change in the standard state Gibbs free energies:
+Kieq = exp
+"
+P
+jυijGo
+j
+RT
+#
+(5)
+For convenience, we define a dimensionless variable,
+zi, equal to the exponential of Ai/RT:
+zi = exp
+Ai
+RT
+=
+Q
+ja
+υij
+j
+Kieq
+(6)
+The value of zi approaches zero as step i becomes
+irreversible, and as zi approaches unity as step i be-
+comes quasi-equilibrated; therefore, this value of zi
+may be termed the reversibility of step i. We note
+that the definition of the reversibility, zi, is simply
+a transform of the affinity, Ai, in the De Donder re-
+lation for step i. We also note that the value of zi
+remains bounded between 0 and 1 provided that step
+i proceeds in the forward direction. If step i changes
+direction, then the value of zi becomes >1. In such
+cases, it may be convenient to rewrite the step in the
+opposite direction so that the value of zi remains <1.
+This above approach can now be used to analyze the
+following reaction scheme for ethane hydrogenolysis
+over Pt:
+1. CH3CH3 + 2CH2CH3 +H
+2. CH2CH3 +2CH2CH2 2 +H
+3. CH2CH2 2 +2CHCH2 3 +H
+4. CHCH2 3 +2CCH2 4 +H
+5. CH2CH22 CHCH32
+6. CHCH23 CCH33
+7. CH2CH3 +2CH2 2 +CH3
+8. CH2CH2 2 +2CH2 2 +CH22
+9. CHCH3 2 +2CH3 +CH3
+10. CHCH2 3 +2CH3 +CH22
+11. H2 + 22H
+where represents a vacant surface site. Steps 14
+are dehydrogenation processes, steps 5 and 6 are iso-
+merization processes, steps 79 are CC bond cleav-
+age steps, and step 11 is the adsorption of dihydrogen
+on the surface. Note that isomerization steps 5 and 6
+may, in fact, involve hydrogenation-dehydrogenation
+steps, i.e. CHCH32 may be formed by dehydrogena-
+tion of CH2CH22 to form CHCH23, followed by
+hydrogenation of CHCH23 to from CHCH32. The
+above reaction scheme involves four possible routes
+for ethane hydrogenolysis, since CC bond cleavage
+may occur in four separate adsorbed species. Our pre-
+vious work has shown that the activation barrier for a
+fifth possible route for CC bond cleavage involving
+adsorbed CCH2 species is considerably higher than
+the barriers for the other four routes, and hence, we
+do not include that route [16]. In this reaction scheme,
+we allow for the possibility that the most abundant
+adsorbed C2Hx surface species is not necessarily the
+primary species that undergoes CC bond cleavage.
+Finally, it is assumed for simplicity that mono-carbon
+species CHxare rapidly converted to methane, mak-
+ing steps 710 irreversible.
+This 11-step reaction scheme involves seven re-
+versible steps and four irreversible steps, giving rise
+to 18 rate coefficients, ki. We note that each rate co-
+efficient is composed of a pre-exponential factor and
+an activation energy, giving rise to two kinetic para-
+meters for each rate coefficient. Next, we address the
+factors controlling the number of rate coefficients that
+must be known to conduct reaction kinetics analyses
+using this reaction scheme.
+At steady state, the rates of formation are equal
+to the rates of consumption for each surface species.
+94
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+The net rates of steps 4 and 6 are zero, since ethyli-
+dyne species, CCH33, and di-s/p vinylidene species,
+CCH24, do not readily undergo CC bond cleavage,
+i.e. these species are spectator species on the catalyst
+surface. Accordingly, z4 and z6 are equal to one.
+Using De Donder relations, the following seven
+relations may be written for the fractional surface cov-
+erages by the various adsorbed species:
+θH =
+p
+K11eqz11PH2θ
+(7)
+θCH2CH3 = K1eqz1
+PCH3CH3
+pK11eqz11PH2
+θ
+(8)
+θCH2CH2 = K1eqK2eqz1z2
+PCH3CH3
+K11eqz11PH2
+θ2
+(9)
+θCHCH3 = K1eqK2eqK5eqz1z2z5
+PCH3CH3
+K11eqz11PH2
+θ2
+(10)
+θCHCH2 = K1eqK2eqK3eqz1z2z3
+PCH3CH3
+K3/2
+11eqz3/2
+11 P 3/2
+H2
+θ3
+(11)
+θCCH3 = K1eqK2eqK3eqK6eqz1z2z3
+×
+PCH3CH3
+K3/2
+11eqz3/2
+11 P 3/2
+H2
+θ3
+(12)
+θCCH2 = K1eqK2eqK3eqK4eqz1z2z3
+×
+PCH3CH3
+K2
+11eqz2
+11P 2
+H2
+θ4
+(13)
+Note that these relations for the surface coverages
+by C2Hx species involve products of equilibrium
+coefficients, Kieq, that can be grouped into lumped
+equilibrium coefficients, Cieq:
+θCH2CH3 = C1eqz1
+PCH3CH3
+p
+z11PH2
+θ
+(14)
+θCH2CH2 = C2eqz1z2
+PCH3CH3
+z11PH2
+θ2
+(15)
+θCHCH3 = C3eqz1z2z5
+PCH3CH3
+z11PH2
+θ2
+(16)
+θCHCH2 = C4eqz1z2z3
+PCH3CH3
+z3/2
+11 P 3/2
+H2
+θ3
+(17)
+θCCH3 = C5eqz1z2z3
+PCH3CH3
+z3/2
+11 P 3/2
+H2
+θ3
+(18)
+θCCH2 = C6eqz1z2z3
+PCH3CH3
+z2
+11P 2
+H2
+θ4
+(19)
+θH = C7eq
+p
+z11PH2θ
+(20)
+These coefficients Cieq correspond to equilibrium
+coefficients for the following overall reactions:
+Lumped reactions that control surface coverages,
+θC2Hx, and θH:
+S1. CH3CH3 + CH2CH3 + 1
+2H2
+S2. CH3CH3 + 2CH2CH2 2 +H2
+S3. CH3CH3 + 2CHCH3 2 +H2
+S4. CH3CH3 + 3CHCH2 3 + 3
+2H2
+S5. CH3CH3 + 3CCH3 3 + 3
+2H2
+S6. CH3CH3 + 4CCH2 4 +2H2
+S7. H2 + 22H
+The non-zero net rates of the elementary steps are
+given by
+r1 = k1PCH3CH3θ2
+(1 z1)
+(21)
+r2 = k2K1eqz1
+PCH3CH3
+pK11eqz11PH2
+θ3
+(1 z2)
+(22)
+r3 = k3K1eqK2eqz1z2
+PCH3CH3
+K11eqz11PH2
+θ4
+(1 z3)
+(23)
+r5 = k5K1eqK2eqz1z2
+PCH3CH3
+K11eqz11PH2
+θ2
+(1 z5)
+(24)
+r7 = k7K1eqz1
+PCH3CH3
+pK11eqz11PH2
+θ3
+(25)
+r8 = k8K1eqK2eqz1z2
+PCH3CH3
+K11eqz11PH2
+θ4
+(26)
+r9 = k9K1eqK2eqK5eqz1z2z4
+PCH3CH3
+K11eqz11PH2
+θ4
+(27)
+r10 = k10K1eqK2eqK3eqz1z2z3
+PCH3CH3
+K3/2
+11eqz3/2
+11 P 3/2
+H2
+θ5
+(28)
+r11 = k11K11eqz11PH2θ2
+(1 z11)
+(29)
+Once again, it is recognized that a product of rate and
+equilibrium coefficients can be replaced by a single,
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+95
+lumped coefficient; therefore, the non-zero net rates
+of steps 111 are written in terms of nine lumped
+coefficients, Ci:
+r1 = C1PCH3CH3θ2
+(1 z1)
+(30)
+r2 = C2z1
+PCH3CH3
+p
+z11PH2
+θ3
+(1 z2)
+(31)
+r3 = C3z1z2
+PCH3CH3
+z11PH2
+θ4
+(1 z3)
+(32)
+r5 = C4z1z2
+PCH3CH3
+z11PH2
+θ2
+(1 z5)
+(33)
+r7 = C5z1
+PCH3CH3
+p
+z11PH2
+θ3
+(34)
+r8 = C6z1z2
+PCH3CH3
+z11PH2
+θ4
+(35)
+r9 = C7z1z2z5
+PCH3CH3
+z11PH2
+θ4
+(36)
+r10 = C8z1z2z3
+PCH3CH3
+z3/2
+11 P 3/2
+H2
+θ5
+(37)
+r11 = C9z11PH2θ2
+(1 z11)
+(38)
+Finally, a site balance may be written to express θin
+terms of fractional surface coverages by C2Hx species
+(assuming that surface coverages by mono-carbon
+species CHx species are negligible):
+1 = θ+ θH + θCH2CH3 + 2θCH2CH2 + 2θCHCH3
++3θCHCH2 + 3θCCH3 + 4θCCH2
+(39)
+At steady state, the rates of formation are equal to the
+rates of consumptions for each surface species, leading
+to the following relations:
+dθCH2CH3
+dt
+= r1 r2 r7 = 0
+(40)
+dθCH2CH2
+dt
+= r2 r3 r5 r8 = 0
+(41)
+dθCHCH2
+dt
+= r3 r6 r10 = 0
+(42)
+dθCHCH3
+dt
+= r5 r9 = 0
+(43)
+dθH
+dt = r1 + r2 + r3 + r4 3r7 4r8 4r9
+5r10 + 2r11 = 0
+(44)
+To solve the kinetic model, we now have six equations
+(e.g. five steady state relations involving non-zero rates
+(Eqs. (40)(44)) and one site balance (Eq. (39)) and
+six unknowns (z1, z2, z3, z5, z11 and θ).
+It can now be seen that the maximum number of
+kinetic coefficients required for the analysis is equal
+to nine (corresponding to C1 through C9), plus one
+additional coefficient (Cieq) for each species that is
+non-negligible in the site balance. For example, the
+maximum number of kinetic coefficients is equal to
+11, if Hand CCH33 are the most abundant surface
+species.
+The number of kinetic coefficients required for
+kinetic analyses decreases further if various steps be-
+come quasi-equilibrated. For example, if we assume
+that Hand CCH33 remain the most abundant surface
+species, then the number of significant kinetic coeffi-
+cients decreases from 11 to 7 if the hydrogenation
+dehydrogenation steps and the dihydrogen desorption
+step are assumed to be quasi-equilibrated. The num-
+ber of significant kinetic coefficients decreases from
+seven to six if the isomerization step 5 is also as-
+sumed to be quasi-equilibrated. Finally, the number of
+kinetically significant coefficients decreases from six
+to three if only one of the CC bond cleavage routes
+(e.g. cleavage of CHCH32 species) is important.
+According to transition state theory, we may express
+the forward rate coefficient for a given step in terms
+of an equilibrium relation between the reactants and
+the activated complex for that step. Therefore, kinetic
+coefficients C5 through C8 can be expressed in terms
+of quasi-equilibrium coefficients, K
+C2H
+x
+:
+C5 = k7K1eq
+pK11eq
+= νK
+CH2CH
+5
+(45)
+C6 = k8K1eqK2eq
+K11eq
+= νK
+CH2CH
+2
+(46)
+C7 = k9K1eqK2eqK5eq
+K11eq
+= νK
+CHCH
+3
+(47)
+C8 = k10K1eqK2eqK3eq
+K3/2
+11eq
+= νK
+CHCH
+3
+(48)
+96
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+where ν is a frequency factor, equal to kBT/h, where
+kB is Boltzmann constant, T is temperature, and h is
+Plancks constant. The four coefficients K
+C2H
+x
+refer to
+quasi-equilibrium coefficients for the following overall
+reactions:
+Lumped quasi-equilibria that control the rate of CC
+bond cleavage
+T1. CH3CH3 + 3CH2CH
+3 3 1
+2H2
+T2. CH3CH3 + 4CH2CH
+2 4 H2
+T3. CH3CH3 + 4CHCH
+3 4 +H2
+T4. CH3CH3 + 5CHCH
+2 5 + 3
+2H2
+Temperature effects may be taken into account for the
+lumped kinetic coefficients (Ci and Cieq) by writing
+these coefficients in terms of the standard entropy and
+enthalpy changes for the formation of stable species
+and activated complexes:
+Ci = exp
+1So
+i
+R
+exp
+1Hi
+RT
+(49)
+For example, the standard entropy changes for the for-
+mation of stable species (S1S7) and activated com-
+plexes (T1T4) can be expressed in terms of standard
+entropies of gaseous ethane and dihydrogen and stan-
+dard entropies of the appropriate surface species and
+activated complexes. Similarly, the enthalpy changes
+for these steps may be written in terms of known
+gaseous enthalpies of ethane and dihydrogen and
+enthalpies of the appropriate surface species. An im-
+portant advantage of using lumped kinetic coefficients
+(Ci and Cieq) to conduct analyses of reaction schemes
+is that these coefficients minimize complications from
+unintentional compensation effects. For example, we
+consider the situation where step 11 (adsorption of
+H2) is quasi-equilibrated, and the equilibrium surface
+coverage by atomic hydrogen is low (low pressures
+of H2 and/or high temperatures). In this case, the
+lumped quasi-equilibria identified by De Donder
+analyses show that rate of ethane hydrogenolysis is
+independent of the properties of adsorbed H atoms. If
+the kinetic model had been formulated in terms of the
+individual rate coefficients for the elementary steps,
+then it would appear that the rates of specific steps
+might depend on the strength of interaction of atomic
+hydrogen with the surface, e.g. the reverse rate coeffi-
+cients for steps 14 would be expected to decrease as
+the strength of interaction of hydrogen atoms with the
+surface increases. However, this decrease in reverse
+rate coefficients would be compensated by changes
+in the surfaces coverages by Hand C2Hxspecies,
+such that the net rates of steps 14 are independent
+of the properties of adsorbed atomic hydrogen. Ac-
+cordingly, the use of the proper lumped kinetic coeffi-
+cients provides a more direct approach for identifying
+the factors controlling the kinetics of the catalytic
+process.
+Another unintentional compensation effect would
+be introduced into the kinetic model by expressing
+the activation barrier for cleavage of the CC bond
+in terms of the energy of the corresponding stable,
+adsorbed C2Hx species. If this stable adsorbed C2Hx
+species remains in low concentration on the surface,
+then we recognize from De Donder relations that the
+kinetic parameters controlling the surface coverage by
+this species are not significant. However, these kinetic
+parameters can appear to be significant if we relate the
+properties of the transition states to the properties of
+this stable, adsorbed species.
+2.2. Application of theoretical results
+Computational methods using density functional
+theory (DFT) have rapidly progressed owing to ad-
+vances in computational speed, along with the de-
+velopment of new algorithms. For example, DFT
+methods have proven to be useful to predict accurate
+geometries and reasonable energetics for molecules
+containing transition metals [1,2,16,2124]. The re-
+sults of quantum chemical calculations, therefore,
+complement the results of experimental investiga-
+tions of stable adsorbed species. Furthermore, these
+calculations can be used to predict the energetics of
+highly reactive intermediates and transition states that
+cannot be observed experimentally. Recent DFT com-
+putational studies have address the factors controlling
+the rate of ethane hydrogenolysis over Pt catalysts
+[16,25]. These DFT studies involved calculations to
+investigate the interactions of C2Hx species with Pt10
+clusters and Pt(1 1 1) and Pt(2 1 1) slabs.
+Detailed descriptions about these DFT calculations
+can be found elsewhere [16]. Density functional the-
+ory calculations for Pt clusters were carried out with
+Jaguar software (Schrodinger, Inc.) [26]. The chosen
+density functional uses a hybrid method employing
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+97
+Beckes three-parameter approach, B3LYP. The basis
+set employed in all calculations uses an effective core
+potential on all Pt atoms. The C and H atoms have
+been treated with the 631Gbasis set, with all elec-
+trons being considered explicitly. Slab calculations
+[27] were conducted for both Pt(1 1 1) and Pt(2 1 1)
+surfaces. Calculations were performed on both two
+and three layer slabs, which were periodically repeated
+in a super cell geometry with four equivalent layers
+of vacuum between any two successive metal slabs. A
+2×2 unit cell was used to study the adsorption of vari-
+ous species, corresponding to 1/4 monolayer coverage.
+Ionic cores are described by ultra-soft pseudopoten-
+tials, and the KohnSham one-electron valence states
+are expanded in a basis of plane waves with kinetic en-
+ergies below 25 Ry. The surface Brillouin zone is sam-
+pled at 18 special k-points. The exchange-correlation
+energy and potential are described by the generalized
+gradient approximation (PW-91).
+These DFT calculations were used to determine the
+binding energies of experimentally observed surface
+species, such as di-s bonded ethylene, ethylidyne
+species, and di-s/p vinylidene species as well as the
+binding energies of the other unobserved species,
+such as ethyl, ethylidene and vinyl species, that are
+postulated to be reactive intermediates in surface
+[16,25]. Furthermore, these calculations predicted ac-
+tivation energies for CC bond dissociation of various
+Table 1
+Summary of DFT calculation results [16] for reactions of ethane over Pt(1 1 1) and Pt(2 1 1) surfacesa
+Reaction
+1Eelectronic (kJ/mol)
+1H (kJ/mol)
+1So (J/mol/K)
+1Go (kJ/mol)
+(1 1 1)
+(2 1 1)
+(1 1 1)
+(2 1 1)
+(1 1 1)
+(2 1 1)
+S1. C2H6+
+C2H5+0.5H2
+51
+6
+46
+1
+92
+103
+58
+S2. C2H6+
+C2H4+H2
+70
+1
+53
+18
+43
+80
+9
+S3. C2H6+
+CHCH3+H2
+104
+19
+77
+8
+33
+98
+13
+S4. C2H6+
+CHCH2+1.5H2
+128
+80
+97
+49
+18
+86
+38
+S5. C2H6+
+CCH3+1.5H2
+58
+45
+30
+17
+35
+8
+5
+S6. C2H6+
+CCH2+2H2
+157
+138
+119
+100
+86
+65
+46
+S7. H2+2
++2H
+85
+146
+91
+119
+17
+T1. C2H6+
+C2H
+5 +0.5H2
+224
+108
+213
+97
+107
+280
+164
+T2. C2H6+
+C2H
+4 +H2
+192
+168
+40
+193
+T3. C2H6+
+CHCH
+3 +H2
+210
+182
+187
+159
+43
+214
+186
+T4. C2H6+
+CHCH
+2 +1.5H2
+288
+241
+253
+206
+16
+242
+196
+a Thermodynamic properties (1H, 1So, and 1Go) determined at 623 K and 1 atm. The calculated standard entropies (1 atm, 623 K) for
+gaseous ethane and dihydrogen are 278 and 152 J/mol/K, respectively.
+adsorbed C2Hx species. Importantly, it was shown
+that the bonding energies are dependent on the geom-
+etry of the surface, leading to the observed structure
+sensitivity of ethane hydrogenolysis [16].
+The results from our DFT calculations for various
+stable C2Hx species and transitions states on Pt(1 1 1)
+and Pt(2 1 1) surfaces are summarized in Table 1. This
+table also shows entropy changes for the various steps,
+as estimated from DFT calculations of the vibrational
+frequencies for the various C2Hx species and transi-
+tion states on 10-atom Pt clusters [16]. In addition,
+Table 1 shows estimates of the standard Gibbs free
+energy changes for the formation of stable C2Hx sur-
+face species and activated complexes responsible for
+CC bond cleavage at 623 K. These estimates were
+made by combining the energetic information ob-
+tained from DFT calculations involving C2Hx species
+on Pt slabs, with entropic information obtained from
+DFT calculations involving C2Hx species on Pt clus-
+ters. In can be seen in Table 1 that the processes with
+the most favorable changes in Gibbs free energies are
+steps S7 and S5, i.e. the formation of atomic hydrogen
+and ethylidyne species (CCH3) on Pt. In contrast,
+the lowest Gibbs free energy barrier for cleavage
+of the CC bond is through the activated complex
+based on ethyl species (C2H
+5 ). Additionally, Table 1
+shows that the calculated values of the activation bar-
+riers are significantly lower on Pt(2 1 1) compared to
+98
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+Pt(1 1 1), illustrating the structure sensitivity of ethane
+hydrogenolysis over platinum-based materials.
+The results of our DFT calculations predict that the
+primary pathways for CC bond cleavage involve ac-
+tivated complexes that are more highly hydrogenated
+(e.g. adsorbed CHCH3 and C2H5 species) compared
+to the most abundant surface intermediates (e.g.
+adsorbed CCH3). Accordingly, the adsorbed C2Hx
+reactive species that are responsible for CC bond
+cleavage are not necessarily the most abundant surface
+intermediates that can be observed spectroscopically.
+However, the most abundant surface intermediates
+(e.g. adsorbed atomic hydrogen and CCH3) still play
+an important role in the reaction kinetics by determin-
+ing the fraction of the surface that is available for cat-
+alytic reaction (i.e. they participate in site blocking).
+2.3. Reaction scheme for ethane hydrogenolysis
+Based on the results from our DFT calculations, we
+have employed the reaction scheme shown in Table 2
+to describe our reaction kinetic data for ethane hydro-
+genolysis over Pt. This reaction scheme incorporates
+the quasi-equilibrated formation of C2Hx species with
+2 x 5 and CC bond cleavage of C2Hx species
+with 3 x 5. As shown above, the surface cover-
+ages by stable C2Hx species and activated complexes
+for CC cleavage of C2Hx species are expressed in
+Table 2
+Fitted parameters for ethane hydrogenolysis over Pt/SiO2 at 623 K
+Reaction
+1So (J/mol/K)
+1H (kJ/mol)
+1Go (kJ/mol)
+1Go Differencef (kJ/mol)
+S1. C2H6+
+C2H5+0.5H2
+47b
+1d
+30
+28
+S2. C2H6+
+C2H4+H2
+9b
+4  6
+2
+7
+S5. C2H6+
+CCH3+1.5H2
+69b
+44  11
+1
+6
+S6. C2H6+
+CCH2+2H2
+110b
+100d
+31
+15
+S7. H2+2
++2H
+68a (constrained)
+54  6.4
+12
+5
+T1. C2H6+
+C2H
+5 +0.5H2
+120c
+82  14
+159
+5
+T3. C2H6+
+CHCH
+3 +H2
+55c
+109e (constrained)
+143
+43
+T4. C2H6+
+CHCH
+2 +1.5H2
+7c
+156e (constrained)
+151
+44
+a Value constrained such that adsorbed hydrogen does not exceed 2of translational mobility.
+b Fitted parameter is ratio of surface entropy to the DFT-predicted entropy for the adsorbed species. The value of this parameter was
+found to be 1.41  0.15.
+c Fitted parameter is ratio of surface entropy of the activated complex to the DFT-predicted entropy for that activated complex. The
+value of this parameter was found to be 0.86  0.13.
+d Parameters maintained at values predicted by DFT calculations (see Table 1).
+e Value constrained to be within 50 kJ/mol of theoretical value.
+f Difference between theoretical 1Go (see Table 1) and the fitted 1Go of this table.
+terms of quasi-equilibrium coefficients and the partial
+pressures of ethane and dihydrogen.
+2.4. Parameterization of the kinetic model
+In view of the present accuracy of quantum chem-
+ical calculations, it is typically necessary to adjust
+the initial estimates of the potential energy surface
+to describe the observed kinetics of a catalytic pro-
+cess. Accordingly, the theoretical results presented in
+Table 1 provide initial guesses for the entropies and
+enthalpies of the stable species and reactive intermedi-
+ates involved in ethane hydrogenolysis over platinum.
+In the present kinetic analysis, the entropies of surface
+species were adjusted by two fitting parameters: (1)
+a multiplicative factor applied to the DFT-predicted
+entropies for stable C2Hx species; and (2) a multi-
+plicative factor applied to the DFT-predicted entropies
+of activated complexes. Additionally, the enthalpy
+changes for the eight quasi-equilibrated steps shown
+in Table 2 were varied. For the stable adsorbed
+species, we have used the energetic properties corre-
+sponding to the most favorable Gibbs free energy for
+a given stoichiometry. For example, we have included
+the coverage of di-s bonded ethylene species, C2H4,
+instead of the vinylidene species, CHCH3. However,
+the transition state for cleavage of the CC bond
+in adsorbed C2H4 species has a higher Gibbs free
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+99
+energy than the transition state for adsorbed CHCH3
+species. Therefore, we have expressed CC bond
+cleavage through the activated vinylidene species
+rather than the activated di-s bonded ethylene.
+2.5. Results of the kinetic analysis
+Values for the fitted parameters were determined
+using Athena Visual Workbench [28]. This software
+employs a general regression analysis of the reaction
+kinetics data with the reactor treated as a continuous
+stirred-tank reactor. All values of the parameters were
+estimated at the average reactor temperature of 623 K.
+Figs. 1 and 2 show comparisons of the predicted
+(depicted by the solid lines) versus experimentally
+Fig. 1. Dihydrogen pressure dependencies for ethane hydrogenolysis at (a) 0.0066 atm and (b) 0.033 atm ethane pressures (experimental
+results: (s) 573 K; (h) 623 K; and (e) 673 K). Predicted rates given by solid line.
+observed rates of ethane hydrogenolysis over Pt/SiO2.
+These figures show the change of the methane produc-
+tion rate with respect to the ethane and hydrogen pres-
+sures at 573, 623, and 673 K. Tests were conducted at
+replicate conditions to track possible changes in cata-
+lyst reactivity (e.g. deactivation). Data points for these
+replicate tests are shown in Figs. 1 and 2. The experi-
+mental error determined from these points was <6%.
+Fig. 1 shows negative hydrogen pressure dependencies
+at higher hydrogen pressures and lower temperatures.
+Furthermore, this figure shows that the hydrogen or-
+ders become less negative at lower hydrogen pressures
+and higher temperatures. Fig. 2 shows that the ethane
+pressure dependence decreases from ca. 1.0 to 0.0
+as the temperature increases from 573 to 673 K for
+100
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+Fig. 2. Ethane pressure dependencies for ethane hydrogenolysis at (a) 0.13 atm and (b) 0.46 atm dihydrogen pressure (experimental results:
+(s) 573 K; (h) 623 K; and (e) 673 K). Predicted rates given by solid line.
+a hydrogen pressure of 0.13 atm. In contrast, this figure
+shows that the ethane kinetic orders are near unity at
+all temperatures at the higher hydrogen pressure of
+0.46 atm.
+Table 2 lists the values of the fixed and fitted param-
+eters, along with 95% confidence limits for the fitted
+parameters. The surface coverages of the stable C2H5
+and CCH2 adsorbed species are predicted to be low;
+therefore, the overall rate was not sensitive to the en-
+thalpy changes to form these surface species, and the
+values for these enthalpy changes were maintained at
+the theoretically predicted values. In this simulation,
+the surface entropy for adsorbed hydrogen was con-
+strained to not exceed a value corresponding to two
+degrees of translational freedom (mobile adsorption).
+The resulting enthalpy change for hydrogen adsorp-
+tion was fitted to a value of 54 kJ/mol. The kinetic
+analyses predict that the surface should be largely
+covered with atomic hydrogen (fractional coverage
+of 0.55). Results from previous microcalorimetric
+studies of hydrogen adsorption on silica-supported
+platinum indicate that the fitted standard entropy and
+enthalpy changes are reasonable at this average cover-
+age [2932]. Furthermore, Table 2 shows comparisons
+between the theoretically predicted and the fitted free
+energy changes. For the adsorption of hydrogen, this
+free energy comparison shows good agreement be-
+tween the predicted value and fitted value. Similarly,
+Table 2 shows good agreement between theory and
+the fitted values for the free energy changes involved
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+101
+in the formation of stable CCH3 and C2H4 species
+on the surface. The results in Table 2 indicate that the
+mobilities for the stable adsorbed C2Hx species are
+higher than the predicted values, since the value of
+the multiplicative factor applied to the standard sur-
+face entropies of these stable species was found to be
+1.41. This multiplicative factor results in fitted values
+for the surface entropies of the stable species that
+correspond to species with one degree of translational
+freedom on the surface. Table 2 also indicates that the
+fit of the kinetic data utilizes slightly lower entropies
+for the transition states compared to theoretical pre-
+dictions, since the multiplicative factor applied to the
+standard surface entropies of these transition states
+was found to be 0.86. These results indicate that the
+transition states are essentially immobile species.
+The largest differences between the theoretical pre-
+dictions and the results of the kinetic analysis are in
+the enthalpy changes to form the transition states from
+gas-phase ethane. The theoretically predicted enthalpy
+changes for the formation of C2Hx transition states
+were too large to achieve the measured rate of ethane
+hydrogenolysis. Accordingly, these enthalpy changes
+were allowed to decrease, but they were constrained
+to remain within 50 kJ/mol of the theoretical values.
+The results of the DFT calculations predict that the
+preferred reaction pathway for cleavage of the CC
+bond involves adsorbed C2H5 species, while the re-
+sults from kinetic analyses suggest that the preferred
+reaction pathway involves adsorbed CHCH3 species.
+Importantly, the results from DFT calculations and
+the kinetic analyses agree that CC bond cleavage
+takes place through C2Hx species that are more hy-
+drogenated than the most abundant C2Hx species on
+the surface.
+3. Discussion
+The results from De Donder analyses of a general
+reaction scheme for ethane hydrogenolysis indicate
+that the rate of the overall reaction can be described
+in terms of a series of lumped reaction steps involving
+the formation of stable C2Hx adsorbed species and
+transition states from gas-phase ethane and dihydro-
+gen. Over Pt catalysts, these lumped reactions to form
+stable C2Hx adsorbed species are quasi-equilibrated,
+since deuterium tracing experiments show that ex-
+change reactions between ethane and deuterium to
+yield deuterated ethane occur at higher rates than
+the rate of the hydrogenolysis reaction. In particular,
+Zaera and Somorjai [33] showed that the deuterium
+exchange rates were three orders of magnitude faster
+than the rate of ethane hydrogenolysis over Pt(1 1 1)
+at temperatures between 475 and 625 K.
+The formation of surface intermediates in quasi-
+equilibrium with gas-phase ethane and dihydrogen
+was proposed by Cimino et al. [15]. As mentioned
+above, this mechanism involves the quasi-equilibrated
+formation of a most abundant reactive intermediate
+that undergoes CC bond cleavage. Sinfelt [7,8] used
+a variation of this mechanism to analyze kinetic data
+for ethane hydrogenolysis over a variety of metal
+catalysts, and estimated values of x for the adsorbed
+C2Hx reactive intermediates on these metals. Results
+from kinetic analyses by Sinfelt over Pt suggested
+that the rate-limiting step involved a highly dehydro-
+genated C2Hx intermediate [7]. The results of DFT
+calculations presented in Table 1 suggest that the
+most abundant stable C2Hx surface species are not
+necessarily the most reactive species. In particular, the
+most abundant species on the surface are predicted
+to be atomic hydrogen and CCH3 species, whereas
+CC bond cleavage is predicted to take place through
+C2H5 species, with contributions also from CHCH3
+and/or C2H3 species. While the most abundant sur-
+face species (e.g. adsorbed atomic hydrogen and
+ethylidyne species) are not directly involved in the
+primary reaction pathways, they affect the observed
+kinetic rates through blocking of sites.
+More recent results of NMR investigations con-
+ducted by Klug et al. [34] in conjunction with Sinfelt
+suggest that the CC bond breaking step may involve
+an adsorbed C2Hx species with x = 3 over platinum.
+In this more recent investigation, it was demonstrated
+that ethylidyne (CCH3) species form upon adsorption
+of acetylene on platinum, and it was suggested that
+these ethylidyne species may play a role in the CC
+bond scission of acetylene [34]. Our kinetic model for
+ethane hydrogenolysis over Pt, based on lumped re-
+actions identified by De Donder analysis and utilizing
+initial guesses for kinetic parameters from results of
+DFT calculations, provides a good description of the
+reaction kinetics data collected over a wide range of
+reaction conditions. The primary difference between
+the values of the final kinetic parameters used in the
+102
+R.D. Cortright et al. / Journal of Molecular Catalysis A: Chemical 163 (2000) 91103
+model and the initial values obtained from DFT cal-
+culations was that the fitted enthalpy changes for the
+formation of C2Hx transition states involved in cleav-
+age of the CC bond were lower than the initial values
+predicted from DFT calculations. This difference may
+be caused by the observed structure sensitivity of the
+ethane hydrogenolysis over metals. In fact, Table 1
+shows significant differences between the binding en-
+ergies on Pt(1 1 1) and Pt(2 1 1) for various adsorbates
+and transition states. In general, the hydrocarbon
+species and transition states are held more strongly on
+the step edge of the Pt(2 1 1) surface compared to the
+Pt(1 1 1) surface, leading to higher reactivity of defect
+sites like the step edge of Pt(2 1 1). Accordingly, the
+studied Pt catalyst may contain Pt surface atoms with
+even higher reactivity than the sites present on the
+Pt(2 1 1) surface. It must also be noted that the errors
+involved in the DFT calculations may contribute to
+the differences in the predicted and experimental val-
+ues. For example, the calculated bonding energetics
+are dependent on the functional used to describe the
+effects of electron exchange and correlation.
+Finally, the kinetic analyses presented in this study
+were based on the assumption of a uniform surface
+that follows Langmuiran kinetics. This simplification
+may not be completely justified, since the kinetic anal-
+yses suggest that the surface is highly covered with
+adsorbed hydrogen atoms and/or hydrocarbon species.
+Furthermore, this analysis involves intermediates and
+transition states that interact with three, four, or five
+Pt atoms to explain the observed variations in the
+overall rate with respect to the dihydrogen and ethane
+pressures. Accordingly, the next step for the analysis
+of this system may be to use the results from DFT
+calculations in conjunction with Monte Carlo calcu-
+lations to predict the observed reaction kinetics data.
+4. Conclusions
+The principles of De Donder can be applied to
+a general reaction scheme of elementary steps for
+ethane hydrogenolysis over Pt to identify a set of
+kinetic coefficients that explain the observed reaction
+kinetics. These kinetic coefficients are expressed in
+terms of lumped reaction steps involving the formation
+of stable adsorbed species and transition states from
+gaseous ethane and dihydrogen. Values for the stan-
+dard entropy and enthalpy changes for these steps are
+predicted from DFT calculations of the interactions
+of the appropriate species with Pt(1 1 1) and Pt(2 1 1)
+slabs. The results of these DFT calculations suggest
+that the primary pathways for CC bond cleavage
+may take place through activated complexes that are
+more highly hydrogenated (e.g. C2H5 and CHCH3)
+compared to the most abundant surface intermediates
+(e.g. CCH3). Accordingly, the reactive species that are
+responsible for CC bond cleavage are not necessar-
+ily the most abundant surface intermediates that can
+be observed spectroscopically. However, these most
+abundant surface intermediates still play an important
+role in the reaction kinetics by determining the frac-
+tion of the surface that is available for catalytic reac-
+tion (i.e. they participate in site blocking). The initial
+values for most of the kinetic parameters obtained
+from DFT calculations provide a good description
+for the reaction kinetics data collected over a wide
+range of reaction conditions. The primary difference
+between the values of the final kinetic parameters
+used in the model and the initial values obtained from
+DFT calculations was that the fitted enthalpy changes
+for the formation of C2Hx transition states involved
+in cleavage of the CC bond were lower than the
+initial values predicted from DFT calculations. This
+difference may be explained by the structure sensi-
+tivity of the system and/or the inherent error of the
+DFT calculations. The analyses of this study provide
+a description at the molecular-level of the catalytic
+chemistry involved in ethane hydrogenolysis over Pt,
+and this description may be useful for further studies
+of hydrocarbon reactions on metal surfaces.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do light olefins, such as propylene and ethylene, contribute to the chemical industry in terms of their applications and market trends, and what are the key production methods and thermodynamic challenges associated with their synthesis, particularly in relation to temperature, pressure, and alkane chain length effects?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

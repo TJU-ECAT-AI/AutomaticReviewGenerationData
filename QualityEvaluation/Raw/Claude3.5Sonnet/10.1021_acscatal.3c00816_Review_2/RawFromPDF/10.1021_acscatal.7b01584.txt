@@ -1,0 +1,612 @@
+element not found
+
+ACS CatalysisVol 7/Issue 11Article
+Cite
+Share
+Jump to
+Expand
+RESEARCH ARTICLESeptember 15, 2017
+The Positive Role of Hydrogen on the Dehydrogenation of Propane on Pt(111)
+Stephanie Saerens†Maarten K. Sabbe*†Vladimir V. Galvita†Evgeniy A. Redekop†‡Marie-Françoise Reyniers†Guy B. Marin†
+View Author Information
+View Author Information
+Open PDF
+Supporting Information (1)
+Abstract
+Propane dehydrogenation on a Pt-based catalyst can be accelerated by cofeeding hydrogen. An extensive reaction network for propane dehydrogenation on Pt(111), including side reactions and deep dehydrogenation reactions, is proposed to explain the effect of cofeeding hydrogen. Simulations at 873 K and 1 bar total pressure reproduce the experimental trends at increasing H2/C3H8 inlet ratios and allow exploration of the origin of the positive effect of cofeeding hydrogen. Increasing hydrogen pressure leads to a lower coverage of deeply dehydrogenated coke precursors on the surface: in particular, CCH3 (ethylidyne) and CH (methylidyne). In addition, it increases hydrogen coverage, which decreases the propylene adsorption strength while the energy barriers for the further dehydrogenation of propylene increase. The combined effect of a decreasing coke precursor coverage, facilitated propylene desorption, and increasing deep dehydrogenation barriers explains the higher catalytic activity when hydrogen is cofed.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2017 American Chemical Society
+Subjects
+what are subjects
+Adsorption
+Alkyls
+Chemical Reactions
+Hydrogen
+Organic Reactions
+Keywords
+what are keywords
+Propane Dehydrogenation
+Propylene
+Platinum Catalyst
+Pt(111) Surface
+Density Functional Theory
+Hydrogen Cofeeding
+Propane Activation
+1 Introduction
+The demand for propylene is growing rapidly because of an increased demand for polypropylene and many other propylene derivatives such as acrylonitrile and cumene. (1) The yield of propylene from the conventional production route, i.e., steam cracking of naphtha, is rather limited (13–17 wt %) and is coupled to the ethylene yield. (2) On-purpose propylene production technologies, such as catalytic propane dehydrogenation (PDH), can make up for the shortage of propylene supply by conventional cracking. (3-5)
+Propane dehydrogenation is an endothermic equilibrium-limited reaction that is typically carried out at 500–700 °C in the presence of a catalyst. Catalysts for this process are metal oxides, typically chromia, CrxOy, and Pt-based catalysts. (5-7) Currently, there is an increasing interest in Pt-based catalysts due to rapid coking and sintering of chromia-based catalysts and the significant health risk in the case of chromium spilling or exposure. (8-11) However, Pt-based catalysts suffer also from fast deactivation due to coke formation and sintering at the applied high temperatures. (12) This is particularly the case for the dehydrogenation of small alkanes, which is more endothermic than the dehydrogenation of larger alkanes and therefore requires higher temperatures to obtain a favorable equilibrium. (6) The faster deactivation will require a more frequent time- and energy-consuming regeneration of the catalyst. (13)
+Improving Pt-based propane dehydrogenation catalysts has been the subject of numerous studies. (14-16) The use of a promoting element, such as Sn, Ga, or In, reduces the tendency to form coke. (3, 7, 17-30) Recently, the efficacious use of a ZnO/Al2O3 catalyst modified with traces of platinum was described. (11) Furthermore, coke deposition can be drastically reduced by using a different support: e.g., with little to no Brønsted acidity. (3, 31-34) Finally, changes in reaction conditions, such as cofeeding steam, hydrogen, O2, or CO2 can also have a positive effect on catalyst activity and selectivity toward propylene. (7, 14-16, 18, 35-39) Historically, the positive effect of cofeeding H2 on the activity has been described for catalytic re-forming, in particular for dehydrocyclization and hydrogenolysis reactions. (40, 41) Experimentally, it was shown that cofeeding of H2 in the dehydrocyclization and hydrogenolysis reactions has a positive effect on activity and reduces the coking behavior. (42, 43) More recent experiments show that also for alkane dehydrogenation cofeeding hydrogen has the counterintuitive effect of increasing activity on a Pt-based catalyst. (18, 38, 44) An increasing turnover frequency (TOF) of propylene during propane dehydrogenation is observed at increasing H2/C3H8 inlet ratios, reaching a maximum at a ratio of 1.25. (38) However, the exact reason for the positive effect of hydrogen cofeeding on catalytic activity is still under debate. Several explanations are suggested: (1) hydrogen reduces the coverage of coke precursors, (15, 45, 46) (2) reaction energies and barriers depend on hydrogen coverage in a beneficial way, (15, 45, 47, 48) (3) an alternative and energetically favorable reaction pathway exists at increased hydrogen coverage, (44) and (4) subsurface hydrogen that could be present at high hydrogen coverage has an effect. (49)
+Cofeeding of hydrogen can suppress the formation and accumulation of deeply dehydrogenated species leading to coke, thereby increasing the number of free sites and consequently the catalytic activity. Furthermore, an increased hydrogen coverage is likely to lower the adsorption strength of propylene on the surface, allowing it to desorb more easily from the surface. (50, 51) In addition, an increased hydrogen coverage will typically increase dehydrogenation barriers and decrease hydrogenation barriers, (50-52) which will hinder deep dehydrogenation of propylene, though this can also reduce the propane to propene dehydrogenation rate. At high hydrogen coverage it is possible that hydrogen on the surface actively participates in a reaction mechanism in which adsorbed hydrogen abstracts a β-hydrogen from a hydrocarbon species on the surface. The existence of such a preferential reaction step, i.e., a hydrogen-assisted β-H abstraction with low reaction barrier, could increase the catalytic activity. At very high H2/C3H8 inlet ratios, hydrogen can migrate to subsurface sites of the Pt surface, which can alter the energetics on the surface, leading to easier dehydrogenation toward propylene. (53)
+In this work possible explanations for the positive effect of hydrogen cofeeding on activity are investigated using periodic density functional theory (DFT) calculations on a Pt(111) surface. Furthermore, kinetic simulations in a reactor model are performed using an extensive reaction scheme based on the calculated thermodynamic and kinetic data on Pt(111). Until now, not much effort has been done to establish and evaluate a complete and reliable kinetic model under reaction conditions and take into consideration side reactions and catalyst deactivation. (3, 25, 46, 47, 54, 55) Li et al., Gómez-Quero et al., Sahebdelfar et al., Lobera et al., and Miraboutalebi et al. performed kinetic simulations using a basic kinetic model with model parameters fitted to experiments on the basis of a Langmuir–Hinshelwood mechanism. (46, 55-59) However, their models could not capture the positive hydrogen cofeeding effect (55, 58) or did not include all relevant side reactions. (46, 55-57, 59) Knowledge of the detailed reaction mechanism can give a better insight into the effect of reaction conditions on the catalyst activity and selectivity. In a first step, simulations are performed with thermodynamics and kinetics determined at low hydrogen coverage, since these data are more easily obtained and have been assessed for the full reaction network. In a second step, the data set is extended with coverage-dependent thermodynamics and kinetics for the most relevant reaction steps. Both steps are necessary to yield an overall picture of the effect of cofeeding hydrogen on catalyst performance. Finally, various possible mechanisms including the direct involvement of hydrogen in the reaction mechanism and the effect of subsurface hydrogen are investigated.
+2 Computational Methodology
+2.1 Electronic Energy Calculations
+To calculate geometries and energies at 0 K periodic DFT calculations were performed using the Vienna ab initio simulation package (VASP 5.3.3). (60-63) The calculations were performed with pseudopotentials and plane-wave basis sets using the projector augmented wave method (PAW) (64, 65) with a 400 eV cutoff kinetic energy. The first-order Methfessel–Paxton method was applied to describe the partial occupancies close to the Fermi level, applying a smearing width of 0.2 eV.
+The unit cell consists of a 4 × 2 Pt(111) unit cell (8 Pt surface atoms), which represents the most stable and abundant plane for an fcc (face-centered cubic) metal. (66) A working catalyst nanoparticle consists of multiple facets and defects with a highly complex structure that depends on many factors. (67) Previous studies, however, have shown that preferential blocking by coke occurs of the most active, low-selective sites for dehydrogenation. (68) As shown in other studies, these preferentially blocked sites most likely pertain to low-coordinated sites (e.g., modeled by a Pt(211) surface), leaving only the terrace sites available for reaction. (7, 14, 69, 70) This was confirmed experimentally in the study of Wu et al., in which it was shown that, in some cases, the coke deposits formed at steps induce deep restructuring of the nanoparticles, thereby assisting in further nucleation and growth of multiple carbon layers. (67) DFT calculations using a 3 × 2 Pt(211) unit cell supporting this hypothesis are discussed in section S1 in the Supporting Information. Furthermore, the seeding work of Boudart et al. on structure sensitivity (71) considered dehydrogenation reactions to be structure insensitive in the steady state, justifying the use of a Pt(111) surface model in this work.
+Brillouin-zone integration for surface slab calculations was done on a 3 × 5 × 1 Monkhorst–Pack grid. (72) The fractional coverage θX of species X is defined as the number of adsorbate molecules X per number of Pt surface atoms. For example, a coverage of 0.125 C3H6 and 0.25 H means that there is one C3H6 molecule per eight Pt surface atoms and two H atoms per eight Pt surface atoms. The maximal experimental coverage of C3H6 on Pt(111) equals 0.2. (73, 74) Using a 4 × 2 Pt(111) unit cell on which adsorption of one hydrocarbon species is considered ensured that the coverage was lower than the maximum propylene coverage (approximately 65% of the experimental maximum). The unit cell is composed of four Pt layers: the two top layers were allowed to fully relax during geometry optimization, together with the adsorbed species, while the two bottom layers were fixed to the bulk structure. The bulk structure was determined by optimizing the Pt fcc bulk unit cell (using a 15 × 15 × 15 Monkhorst–Pack grid for Brillouin-zone integration), and a lattice parameter of 3.988 Å was obtained. In the unit cell, a vacuum layer of 12 Å and an artificial dipole layer were introduced to avoid interactions between periodic images. Gas-phase species were calculated in a 20 × 20 × 20 Å3 box using only the Γ point for the Brillouin-zone integration. The Pt(111) surface is nonmagnetic, and consequently spin-unpolarized calculations were performed. (75)
+The opt-PBE vdW-DF functional implemented in VASP by Klimeš et al. (76, 77) has been used to properly account for long-range interactions. This is in contrast to previous literature, in which the less advanced PW91 and PBE functional were used. (25, 47, 51) The opt-PBE vdW-DF functional is more appropriate to describe π-bound unsaturated hydrocarbons such as propylene, and it gives the lowest mean absolute deviations (MAD) for the adsorption energies of different adsorbates such as ethane, ethylene, benzene, and hydrogen on a Pt(111) surface. (78) Furthermore, to correctly describe the physisorption of e.g. propane on a Pt(111) surface, weak van der Waals interactions need to be included, which requires appropriate functionals such as vdW-DF functionals. (79) Nykänen et al. showed in their study that the physisorption of C3H8 cannot be described correctly using the RPBE functional, which excludes nonlocal interactions, leading to positive adsorption energies, and that more advanced functionals such as the revPBE vdW-DF functional, which includes nonlocal correlations, are necessary to describe physisorption correctly. (79) Finally, previous studies have shown that the opt-PBE vdW-DF functional is suited to describe reaction barriers more accurately for reactions on metal surfaces (80, 81) in comparison to the traditional LDA/GGA functionals, which are known to systematically underestimate reaction barriers. (82)
+The iterative solution of the Kohn–Sham equations in the electronic minimization was performed using the quasi-Newton RMM-DIIS algorithm, and the molecular geometry was optimized using the conjugate-gradient algorithm for geometries far from the minimum. The electronic convergence criterion was 10–8 eV, while the force criterion applied for geometry relaxation was 0.015 eV Å–1 for all forces. These two criteria need to be satisfied to obtain strictly optimized geometries that are sufficiently converged to perform the subsequent frequency analyses accurately. For all adsorbate species, the most stable adsorption site has been considered. An overview of the calculated adsorption sites of the various adsorbates and their respective energies can be found in section S2 in the Supporting Information.
+2.2 Calculation of Reaction Enthalpies and Entropies
+The propane dehydrogenation reaction typically occurs at atmospheric pressure and temperatures between 500 and 700 °C. (6) On the basis of the DFT calculations, enthalpies and entropies for all intermediates and transition states can be obtained at these temperatures using statistical thermodynamics. (83) To calculate the reaction enthalpies and entropies, reaction products have been calculated in separate unit cells. Strictly optimized species are necessary to avoid artifactual imaginary frequencies. In this work, the vibrational frequencies of the Pt atoms in the two top layers were calculated together with those of the adsorbates. To numerically calculate the vibrational frequencies, the harmonic oscillator approach (HO) was used on the basis of finite differences with a displacement of 0.015 Å. Even for strictly optimized geometries, the frequency analysis can lead to unavoidable imaginary frequencies (typically for the physisorbed species) or very low wavenumbers (below 30 cm–1). Since both imaginary and very low frequencies will lead to anomalies in the resulting reaction thermodynamics, these were replaced by a common value that was generally obtained for large-amplitude motions in geometries without imaginary frequencies (corresponding wavenumber of 30 cm–1). Details on the calculation of enthalpies and entropies can be found in section S3 in the Supporting Information.
+It is important that the thermodynamics of the overall gas-phase reactions are conserved in order to simulate properly the approach to equilibrium. The calculated gas-phase reaction enthalpies, and to a lesser extent the entropies, do not correspond well to those calculated from National Institute of Standards and Technology (NIST) reference values. (84) Therefore, the adsorption enthalpies and entropies of the products propylene, methane, ethane, ethylene, and hydrogen have been adapted in such a way that the overall calculated gas-phase reaction equilibrium is consistent with that derived from NIST reference values. The thermodynamics of the elementary reaction steps that take place on the surface were left unaltered. Furthermore, the adsorption–desorption equilibria of the gas-phase species were maintained, since the backward rate coefficient was calculated from the forward rate coefficient and equilibrium coefficient (see eq 1). More details on the NIST calculations can be found in section S4 in the Supporting Information.
+(1)
+2.3 Calculation of Rate Coefficients
+To determine the transition state, the nudged elastic band (NEB) method was employed first. This method allows construction of the minimal energy path between a pair of stable states. Subsequently, the dimer method was applied starting from the point with highest energy along the NEB path, which allows location of the saddle point along the reaction path.
+Vibrational analyses have been performed to verify the transition state: the movement of this vibration needs to correspond to the reaction coordinate of the studied reaction step. The presence of a single imaginary frequency in the transition state has been verified and is present for all transition states. Arrhenius activation energies Ea and pre-exponential factors A for the reaction steps were calculated from conventional transition-state theory (TST). (83) Detailed information on the calculation of the rate coefficients for the elementary reaction steps and adsorption and desorption steps can be found in section S5 in the Supporting Information.
+2.4 Microkinetic and Reactor Model
+Mathematical expressions were implemented to describe the adsorption and desorption of gas-phase species and the coverage changes of adsorbates in the extensive reaction network. The net adsorption rate ri of gas-phase species i was calculated according to eq 2:
+(2)
+where pi is the gas phase pressure of species i, θ* the fraction of free sites, θi the fractional coverage of species i as defined in section 2.1, and ki,ads/des the rate coefficient for adsorption and desorption. For H2 adsorption, eq 2 has twice θ2 instead of θ since H2 adsorbs dissociatively on the surface. For alkanes (C3H8, C2H6, and CH4) physisorption is assumed to be equilibrated and the physisorption is lumped with the consecutive dissociative adsorption steps. Detailed information is found in section S5 of the Supporting Information. The rate rj of every surface reaction (eq 3) is described using eq 4:
+(3)
+(4)
+Furthermore, the sum of all fractional surface coverages amounts to 1, as shown in eq 5:
+(5)
+Simulating activities using a microkinetic model only would involve fixed reactant pressures. Therefore, the microkinetic model is coupled to a reactor model which allows to account for the change in gas phase composition while the reaction proceeds. An ideal plug flow reactor (PFR) model has been chosen to model the reactor since this reactor type was also used in experimental studies. (38) The plug flow reactor model is solved for the flow rates of the gas-phase species i:
+(6)
+with Fi being the molar flow of gas phase species i, W the catalyst mass, and Ri the net rate of production of species i per catalyst unit mass. To guarantee a stable steady-state solution, the combined microkinetic and reactor models were solved transiently until steady state was reached. The ordinary differential equations have been integrated using the LSODA differential equation integration routines from the ODEPACK Fortran library, (85) as implemented in the Python package SciPy.
+The combined microkinetic and reactor model have outlet flows of the gas-phase species as output. From these flows, selectivities can be calculated as shown in eq 7:
+(7)
+in which FCxHy,out stands for the molar outlet flow of gas phase species CxHy, FC3H8,in and FC3H8,out stand for the inlet and outlet flow of C3H8, respectively, and x stands for the number of carbon atoms in the species. The selectivity to coke is calculated from the formation rate of coke per second over the whole reactor (mol s–1).
+As a result of the combined microkinetic and reactor model, the site time yields (STYs) of the products C3H6, CH4, C2H4, and C2H6 were obtained. STY is defined as the number of molecules of a specified product produced per Pt surface atom and per unit time over the whole reactor. (86) In contrast, a turnover frequency (TOF), which has the same units (s–1), is defined as the number of revolutions of the catalytic cycle per unit time at fixed point conditions in the reactor. (86) The difference is that the use of TOFs can only be justified at fixed gas-phase pressures, which is not the case in a not differentially operated plug flow reactor such as that used in the reference experiments. (38) The use of STY stresses that the activity derived from the experiment is an average over the whole catalyst bed, rather than the TOF in a specific point in the reactor. The STY is calculated as follows in the paper:
+(8)
+in which FC3H6,out stands for the outlet flow of C3H6, nPt stands for the number of Pt surface sites, and STY is given in units of molproduct molsurf Pt sites–1 s–1. Furthermore, the simulation results in this work are compared to experimental data that are easily converted to STY instead of TOF. (38)
+3 Extensive Reaction Mechanism
+The most commonly used mechanism to describe catalytic dehydrogenation is the reverse Horiuti–Polanyi mechanism, which was proposed in 1934. (87) In this mechanism, the dehydrogenation of alkanes is considered to consist of three steps: (i) dissociative alkane adsorption in which one hydrogen atom is removed, (ii) β-hydrogen abstraction of the adsorbed hydrocarbon species and formation of the double bond, and (iii) desorption of the alkene species and H2. (87) Horiuti and Polanyi also described the possibility of side reactions of the adsorbed alkene species on the surface by deep dehydrogenation reactions. However, a detailed understanding of the reaction mechanism is still elusive. (3) Furthermore, the rate-determining step in the reaction network is still a topic of debate. Some authors propose the dissociative adsorption as the rate-determining step, while other authors suggest the β-hydrogen abstraction as the rate-determining step. (44, 46, 68, 88-92) Additionally, the exact mechanism for coke formation is ambiguous. (3, 47, 50, 93-95) Valcárcel et al. neglect C–C scission reactions and assume that small hydrocarbon species cannot be formed on the surface, (47) while Yang et al. consider C–C scission reactions, but only for C3 species and not C2 species. (50) Other authors claim that the rate-determining step for coke formation is coke precursor formation through propylene oligomerization, such as Li et al., who include both C–C scission reactions and oligomerization reactions in their kinetic model on a Pt–Sn catalyst. (46, 93, 94)
+In this work, an extensive reaction mechanism consisting of 42 surface reaction steps and 6 adsorption and desorption steps (see Table 1) is considered that contains the deep dehydrogenation reactions that could possibly explain the experimental trends observed for an increasing H2/C3H8 inlet ratio. The elementary steps included in the network are based on a combination of literature and chemical intuition. (47, 54, 96) The gas-phase species considered in this work are the reactants C3H8 and H2, the product C3H6, and the side products CH4, C2H6, and C2H4. Propyne (C3H4) is strongly adsorbed on the surface with a calculated adsorption enthalpy of −239.5 kJ mol–1 and is not likely to desorb from the surface. The inclusion of propyne adsorption and desorption into the microkinetic model leads to a propyne selectivity below 0.010% and does not change the simulation results in comparison to the model without implemented propyne adsorption/desorption. The major reaction types covered in the network are (i) adsorption and desorption of gas-phase species, (ii) dehydrogenation reactions in which a hydrogen atom is removed from a hydrocarbon species on the surface, (iii) C–C scission reactions in which two hydrocarbon species are formed on the surface, (iv) isomerization reactions in which simultaneously the bond with the surface is changed and an intramolecular hydrogen transfer occurs, (v) a deep dehydrogenation reactions in which a hydrogen atom is abstracted from a hydrocarbon species which is propylene or beyond propylene (i.e., lower H/C ratio), and (vi) an irreversible graphitic coke formation reaction. This last reaction (vi) is based on the experimental observation that, when carbon is formed on the catalyst surface, the carbon gradually shifts away from the metal sites to the support to form graphitic species on the support. (69, 97) The time scale of carbon formation is slow (minutes to hours) in comparison to the time scale of the surface reactions, (69) but if the carbon is not removed it covers the whole surface at steady state, leading to a carbon-poisoned inactive metal surface. Furthermore, the true coke formation mechanism is very complex and too elaborate to include in an ab initio network, as also discussed in the work of Zhao et al. (7) Therefore, graphitic coke formation is modeled as a single reaction step starting from atomic carbon, and the rate coefficient of this reaction is fitted to match experimental observations of graphitic coke formation. (38)
+Table 1. Calculated Thermodynamic and Kinetic Data at 900 K for All Reaction Steps in the Extensive Reaction Network (see Section S5 in the Supporting Information for the Full Reaction Scheme) on a 4 × 2 Pt(111) Surface Using the opt-PBE vdW-DF Functionala
+  elementary step reaction type ΔHr° ΔSr° Ea(f) Af kf Keq
+(1) C3H8(physisorbed) ⇌ CH2CH2CH3 (1-propyl) + H dehydrogenation –14 –45 72 1.3 × 1011 9.2 × 106 3.1 × 10–2
+(2) C3H8(physisorbed) ⇌ CH3CHCH3 (2-propyl) + H dehydrogenation –22 –55 58 2.0 × 1010 8.4 × 106 2.6 × 10–2
+(3) C3H8(physisorbed) ⇌ CH3 (methyl) + CH2CH3 (ethyl) C–C scission –24 –86 179 9.9 × 1010 4.0 × 100 7.7 × 10–4
+(4) CH2CH2CH3 (1-propyl) ⇌ CHCH2CH3 (1-propylidene) + H dehydrogenation –1 –12 74 2.6 × 1012 1.3 × 108 2.8 × 10–1
+(5) CH2CH2CH3 (1-propyl) ⇌ CH2CHCH3 (propylene) + H dehydrogenation –30 –29 71 9.6 × 1012 7.5 × 108 1.7 × 100
+(6) CH2CH2CH3 (1-propyl) ⇌ CH2 (methylidene) + CH2CH3 (ethyl) C–C scission 11 –37 165 1.9 × 1013 4.7 × 103 2.9 × 10–3
+(7) CH3CHCH3 (2-propyl) ⇌ CH3CCH3 (2-propylidene) + H dehydrogenation 7 –1 84 4.7 × 1012 6.0 × 107 3.5 × 10–1
+(8) CH3CHCH3 (2-propyl) ⇌ CH2CHCH3 (propylene) + H dehydrogenation –22 –19 75 1.7 × 1013 7.0 × 108 2.1 × 100
+(9) CH3CHCH3 (2-propyl) ⇌ CHCH3 (ethylidene) + CH3 (methyl) C–C scission 10 –10 181 9.6 × 1012 3.1 × 102 7.9 × 10–2
+(10) CH2CH2CH3 (1-propyl) ⇌ CH3CHCH3 (2-propyl) isomerization –8 –10 195 5.6 × 1013 2.6 × 102 8.4 × 10–1
+(11) CHCH2CH3 (1-propylidene) ⇌ CH2CHCH3 (propylene) isomerization –29 –17 148 1.1 × 1015 2.8 × 106 6.2 × 100
+(12) CH3CCH3 (2-propylidene) ⇌ CH2CHCH3 (propylene) isomerization –30 –18 175 1.1 × 1015 7.3 × 104 5.9 × 100
+(13) CH2CHCH3 (propylene) ⇌ CHCHCH3 (1-propenyl) + H deep dehydr 11 9 82 1.2 × 1013 2.2 × 108 6.5 × 10–1
+(14) CH2CHCH3 (propylene) ⇌ CH2CCH3 (2-propenyl) + H deep dehydr –2 14 73 1.3 × 1013 7.6 × 108 6.2 × 100
+(15) CH2CHCH3 (propylene) ⇌ CH2 (methylidene) + CHCH3 (ethylidene) C–C scission 53 13 208 5.7 × 1013 4.6 × 101 4.4 × 10–3
+(16) CHCH2CH3 (1-propylidene) ⇌ CCH2CH3 (1-propylidyne) + H deep dehydr –73 5 38 2.8 × 1013 1.8 × 1011 3.0 × 104
+(17) CHCH2CH3 (1-propylidene) ⇌ CH (methylidyne) + CH2CH3 (ethyl) C–C scission –42 –25 117 5.3 × 1012 8.4 × 105 1.4 × 101
+(18) CH3CCH3 (2-propylidene) ⇌ CCH3 (ethylidyne) + CH3 (methyl) C–C scission –70 –5 137 1.7 × 1013 1.9 × 105 6.0 × 103
+(19) CHCH2CH3 (1-propylidene) ⇌ CHCHCH3 (1-propenyl) + H deep dehydr –18 –8 64 3.3 × 1012 6.4 × 108 4.1 × 100
+(20) CH3CCH3 (2-propylidene) ⇌ CH2CCH3 (2-propenyl) + H deep dehydr –31 –5 59 3.9 × 1012 1.4 × 109 3.7 × 101
+(21) CCH2CH3 (1-propylidyne) ⇌ CCHCH3 (propenylidene) + H deep dehydr 22 –7 107 8.6 × 1012 5.5 × 106 2.4 × 10–2
+(22) CCH2CH3 (1-propylidyne) ⇌ C (atomic carbon) + CH2CH3 (ethyl) C–C scission 81 –22 182 7.0 × 1012 2.0 × 102 1.5 × 10–6
+(23) CHCHCH3 (1-propenyl) ⇌ CHCCH3 (propyne) + H deep dehydr –19 9 80 5.4 × 1013 1.2 × 109 3.6 × 101
+(24) CH2CCH3 (2-propenyl) ⇌ CHCCH3 (propyne) + H deep dehydr –6 4 78 7.5 × 1012 2.2 × 108 3.8 × 100
+(25) CHCCH3 (propyne) ⇌ CCHCH3 (propenylidene) isomerization –14 –2 226 1.1 × 1015 8.0 × 101 4.9 × 100
+(26) CHCCH3 (propyne) ⇌ CCH3 (ethylidyne) + CH (methylidyne) C–C scission –67 –1 111 2.7 × 1013 1.0 × 107 6.7 × 103
+(27) CH2CH3 (ethyl) ⇌ CH2 (methylidene) + CH3 (methyl) C–C scission 23 8 177 7.0 × 1014 3.9 × 104 1.2 × 10–1
+(28) CHCH3 (ethylidene) ⇌ CH (methylidyne) + CH3 (methyl) C–C scission –42 –13 134 1.2 × 1013 1.9 × 105 6.2 × 101
+(29) CCH3 (ethylidyne) ⇌ C (atomic carbon) + CH3 (methyl) C–C scission 81 –8 185 2.9 × 1013 5.1 × 102 7.6 × 10–6
+(30) CH3 (methyl) ⇌ CH2 (methylidene) + H deep dehydr 20 4 86 1.2 × 1013 1.2 × 108 1.1 × 10–1
+(31) CH2 (methylidene) ⇌ CH (methylidyne) + H deep dehydr –54 0 24 4.7 × 1012 1.9 × 1011 1.4 × 103
+(32) CH (methylidyne) ⇌ C (atomic carbon) + H deep dehydr. 50 8 123 1.9 × 1013 1.4 × 106 3.2 × 10–3
+(33) CH2CH3 (ethyl) ⇌ CHCH3 (ethylidene) + H deep dehydr 12 21 88 1.2 × 1014 9.4 × 108 2.6 × 100
+(34) CHCH3 (ethylidene) ⇌ CCH3 (ethylidyne) + H deep dehydr –73 4 22 2.7 × 1012 1.6 × 1011 2.6 × 104
+(35) C (atomic carbon) → graphitic coke formation coke formationb         3.1 × 103  
+(36) CH3 (methyl) + H ⇌ CH4(physisorbed) hydrogenation 18 105 91 2.9 × 1014 1.5 × 109 2.8 × 104
+(37) CH2CH3 (ethyl) + H ⇌ CH3CH3(physisorbed) hydrogenation 28 91 90 5.4 × 1014 3.1 × 109 1.3 × 103
+(38) CH2CH3 (ethyl) ⇌ CH2CH2 (ethylene) + H dehydrogenation –14 15 92 1.0 × 1015 4.8 × 109 3.8 × 101
+(39) CCH3 (ethylidyne) ⇌ CCH2 (vinylidene) + H dehydrogenationc 35 –9 148 8.3 × 1013 2.1 × 105 3.0 × 10–3
+(40) CCH2 (vinylidene) ⇌ CCH (ethynyl) + H dehydrogenation 97 34 148 8.3 × 1013 2.1 × 105 1.3 × 10–4
+(41) CCH2 (vinylidene) ⇌ C (atomic carbon) + CH2 (methylidene) C–C scission 66 5 234 8.1 × 1013 2.1 × 100 2.8 × 10–4
+(42) CCH (ethynyl) ⇌ C (atomic carbon) + CH (methylidyne) C–C scission –85 –28 75 4.1 × 1011 1.8 × 107 3.1 × 103
+(a) C3H8(g) ⇌ C3H8(physisorbed) adsorptiond –34 –84     1.3 × 108 3.9 × 10–3
+(b) C3H6(g) ⇌ C3H6(chemisorbed) adsorptiond –109 –185     1.4 × 108 4.6 × 10–4
+(c) H2(g) ⇌ 2H adsorptiond –101 –114     2.0 × 108 8.1 × 10–1
+(d) CH4(g) ⇌ CH4(physisorbed) adsorptiond –18 –20     2.2 × 108 1.0 × 100
+(e) C2H6(g) ⇌ C2H6(physisorbed) adsorptiond –27 –60     1.6 × 108 2.7 × 10–2
+(f) C2H4(g) ⇌ C2H4(chemisorbed) adsorptiond –111 –156     1.7 × 108 2.0 × 10–2
+aThe data are applicable in case of low hydrogen coverage on the surface (no H coadsorbed in the unit cell). Forward reaction rates have been defined from left to right in the reaction equation. For brevity, the bonds with the surface have been omitted for the species in the reaction equations. The standard reaction enthalpy ΔHr° and forward activation energy Ea(f) are given in kJ mol–1, the standard reaction entropy ΔSr° is given in J mol–1 K–1, the pre-exponential factor A and rate coefficient k (at 900 K) are given in bar–1 s–1 or in s–1, and the equilibrium coefficient K (at 900 K) is given in bar–1 or is dimensionless for adsorption and surface reactions, respectively.
+bThe determination of this rate coefficient is discussed in section 4
+cTransition state calculations for this reaction were difficult, and kinetic data from the very similar reaction (40) were assumed.
+dAdsorption enthalpy and entropy values have been adapted for the gas phase reaction enthalpies and entropies to be consistent with the experimental NIST reference values (see Section 2.2 and Supporting Information Section S3).
+Table 1 describes all elementary reaction steps, and these are also illustrated in Figure 1, in which only those reaction steps are shown for which the microkinetic model predicts a turnover frequency (TOF) of >23 s–1 under reactor outlet conditions (reactor inlet pressures equal to experimental conditions of Siddiqi et al., (38) discussed in section 4). Physisorption of C3H8, CH4, and C2H6 (reaction steps (a), (d), and (e)) is shown in the network, but in the microkinetic model these steps are lumped with the consecutive dissociative adsorption steps as discussed in section 2.4. In addition, the graphitic coke formation reaction (reaction (35) in Figure 1) is shown. The remainder of the reaction steps (for which the TOF is <2 s–1) are left out for purposes of clarity. The full reaction network can be found in section S6 in the Supporting Information.
+Figure 1
+Figure 1. Simplified reaction scheme for propane dehydrogenation showing only the reaction steps with a turnover frequency >23 s–1 and the coke formation reaction (35) (discussed in section 4) (for θH,0 = 0). Calculated thermodynamic and kinetic data can be retrieved in Table 1. “phys” stands for the physisorbed species. The species that provide the link between the top and the bottom schemes are shown in boxes.
+4 Catalyst Performance at Low H Coverage
+The thermodynamic and kinetic data reported in Table 1 have been determined at low hydrogen coverage: i.e., no hydrogen coadsorbed in the unit cell. These data are used to perform simulations under experimentally relevant reaction conditions.
+4.1 Validation of the Microkinetic and Reactor Model
+The reaction conditions for the reactor simulations in this work are taken from the work of Siddiqi et al., who performed experiments on propane dehydrogenation on a Pt/Mg(Al)O catalyst in a plug flow reactor. (38) In these experiments, a catalyst mass of 0.025 g was used at a reaction temperature of 873 K with 20 vol % propane in the feed at a total pressure of 1.013 bar. Balance He (inert) was added to obtain a total feed inlet flow rate of 1.0 mL/s. Assuming that the gas-phase species behave as ideal gases, an inlet flow rate of 8.06 × 10–6 mol/s propane is calculated. The H2/C3H8 inlet ratio has been varied from 0 to 2.5 (38) by keeping the propane flow rate constant while the inert flow rate changes accordingly to amount to the same total flow rate. The number of Pt surface sites has been calculated from the experimentally reported catalyst loading and dispersion and equals 0.03 mol/kgcat; (38, 98) details can be found in section S7 in the Supporting Information. In the experiments, a conversion of 11.5% was obtained after 5 min time on stream (TOS) using an inlet H2/C3H8 ratio of 1.25 (see also the Supporting Information). This specific H2/C3H8 inlet ratio is used in this work as a reference, since this ratio leads to the highest experimentally observed activity. (38) The experimental selectivity toward propylene at this point amounts to 79%. An overview of experimental input and output data can be found in Tables 2 and 3, respectively.
+Table 2. Input Values for the Simulation Based on the Reaction Conditions Used in Experimental Literature on a Pt/Mg(Al)O Catalysta, (38, 98)
+temperature 873 K
+total pressure 1.013 bar
+catalyst mass 0.025 g
+molar inlet flow rate  
+C3H8 8.06 × 10–6 mol/s
+H2 1.03 × 10–5 mol/s
+He 2.25 × 10–5 mol/s
+active sites 0.03 molsurf.Pt-sites/kgcat
+Pt dispersion 84%
+Pt in catalyst 0.696 wt %
+aMolar flow rates have been derived from the reported 20 vol % C3H8 in feed, H2/C3H8 = 1.25, and balance He for a total flow rate of 60 mL/min. (38, 98) Details can be found in section S6 in the Supporting Information.
+Table 3. Comparison among the Output of the Experiment (38) (0.025 g of Catalyst), Low-Coverage Simulation (See Section 4, 2.94 × 10–5 g of Catalyst), and the Coverage-Dependent Simulation (see Section 5, 9.09 × 10–5 g of Catalyst) at a H2/C3H8 Inlet Ratio of 1.25 after 5 min Time on Stream (TOS)
+  experiment (38) simulated at low coverage simulated coverage dependent
+coke formed (molC molsurf Pt sites–1) 32.0 31.2 9.3
+site time yield C3H6 (molC3H6 molsurf Pt sites–1 s–1) 1.0 791.5 310.5
+conversion (%) 11.5 11.5 11.6
+selectivity C3H6 (%) 79.0 74.1 89.1
+The simulation has been performed using the input conditions as discussed above at an inlet H2/C3H8 ratio of 1.25 (see Table 3). Varying the catalyst mass under constant inlet conditions leads to the conversion–selectivity profile shown in Figure 2. For a fair comparison between theory and experiment, the results should be evaluated at the same conversion as observed in experiment, i.e., 11.5% (see Table 3), since these correspond to the same reactant and product pressures above the catalyst surface. To simulate 11.5% conversion, the simulation only requires 2.94 × 10–5 g of catalyst (see section S8 in the Supporting Information). The overprediction of the experimental activity is partially due to the coverage independence of the calculated kinetic parameters. (52) In addition, the graphitic coke formation reaction, which was introduced to avoid complete poisoning of the catalyst surface by carbon (reaction (35) in Figure 1), assumes that all formed graphitic coke migrates immediately to the support, while in reality part of this graphitic coke will remain on the surface and block the surface metal sites. This assumption may therefore lead to simulated activities higher than those experimentally observed. The overly high activity could also possibly be related to the opt-PBE vdW-DF functional that is said to overestimate the binding strength of some adsorbates on metal surfaces, (99, 100) but since the functional is shown to be well-suited for ethane, ethylene, and hydrogen, we do not assume this to be the main source for the overestimation. (78)
+Figure 2
+Figure 2. Selectivity toward C3H6, CH4, C2H6, and C2H4 as a function of propane conversion for the simulation at low H coverage. At a conversion of 11.5% (vertical gray line) a catalyst mass of 2.94 × 10–5 g is used. At this point the selectivity toward C3H6 is 74%, to CH4 11%, to C2H6 7%, and to C2H4 8%.
+In Table 3 the amount of coke formed after 5 min TOS is also reported. Experimentally, this amount was reported to be 32.0 molC molPt surface–1. (38) The rate coefficient for graphitic coke formation (reaction (35) in Figure 1) is adjusted to match the experimentally observed amount of coke formed, leading to a rate coefficient k35 of 3.06 × 103 s–1, resulting in a simulated coke formation of 31.2 molC molsurf Pt sites–1. The overall catalyst activity and selectivity are not sensitive to the exact value of k35 (see section S9 in the Supporting Information for details).
+At a simulated conversion of 11.5%, the experiment and simulation can be compared (see Table 2). At this conversion, the simulated selectivity is 74% toward C3H6, 11% to CH4, 7% to C2H6, and 8% to C2H4. This compares reasonably well with experiment, in which a selectivity to C3H6 of 79% is obtained at a sufficiently large time on stream (5 min) at which the highly active but unselective undercoordinated (step) sites are deactivated due to coke formation. (7, 14, 68-70) A mixture of the other side products, i.e., CH4, C2H4, and C2H6, is also observed in experiment. (38, 68) The most important adsorbates at the reactor outlet are hydrogen, methylidyne (CH), and ethylidyne (CCH3) (see section S10 in the Supporting Information). The last two species are formed from reaction (26) (see Figure 1): i.e., the first kinetically relevant C–C scission of a dehydrogenated C3 intermediate in the reaction network that is responsible for side product formation (see Section 4.3).
+4.2 Effect of Variation of H2 Feed Pressure
+Using the simulation model validated in the previous paragraph, the H2/C3H8 inlet ratio can now be varied to analyze its effect on the activity and selectivity at low hydrogen coverage. The H2/C3H8 inlet ratio is varied from 0 to 4 by keeping the propane flow rate and total inlet flow rate constant while varying the H2 and inert flow rate only, similar to experiment. (38) The results for the site time yields (STY) of C3H6, CH4, C2H4, and C2H6 are shown in Figure 3.
+Figure 3
+Figure 3. Site time yields (STY) of C3H6 (maximum shown with ●), CH4, C2H6, and C2H4 as a function of H2/C3H8 ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) performed at low H coverage. Input conditions as given in Table 2 are used.
+The simulation shows that increasing the H2/C3H8 inlet ratio has a positive effect on the STY of C3H6, CH4, C2H4, and C2H6, and consequently also the catalytic activity, as is also seen experimentally. (38) Furthermore, a maximum is obtained at a H2/C3H8 ratio of about 3. This maximum is also observed experimentally; however, it occurs at a lower H2/C3H8 ratio of 1.25. (38) The selectivity to C3H6 is not much influenced by varying H2/C3H8 inlet ratios (see section S11 in the Supporting Information), as also stated in the literature. (38) From Figure 3 it is concluded that the extensive reaction network with thermodynamics and kinetics as given in Table 1 qualitatively captures the positive effect of hydrogen cofeeding on the catalyst activity.
+The origin of the positive effect of hydrogen cofeeding can be identified when the most important coverages at varying H2/C3H8 ratios are considered (see Figure 4). The trend in C3H6 site time yield in Figure 3 is clearly related to the number of free sites as a function of H2/C3H8 ratio shown in Figure 4: when the number of free sites increases, the STY of C3H6 also increases. At the inlet ratio H2/C3H8 = 0, a high coverage of the deeply dehydrogenated species ethylidyne (CCH3) and methylidyne (CH) is observed, 62.2% and 16.5%, respectively. These are the direct products of the scission reaction of propyne (reaction (26); see Figure 1), which is the first kinetically relevant C–C scission reaction in the network and is the main reaction responsible for side product formation (see section 4.3). However, at higher H2/C3H8 inlet ratios, these coverages decrease rapidly due to increasing hydrogenation of these species, increasing the number of free sites. This increase in free sites leads to higher activity and a higher yield of C3H6. This is similar to the behavior studied by Raybaud et al., (101) who calculated that ethylidyne becomes energetically less favored at high H2 pressures. Furthermore, the competitive adsorption between propylene and hydrogen is also included in these simulations and explains the positive effect, since the hydrogen coverage increases with increasing H2/C3H8 inlet ratio. Hook et al. already suggested that the positive hydrogen effect could be caused by competitive adsorption between hydrogen and alkene for ethane dehydrogenation, (102) and these results confirm that this effect contributes to the observed behavior. At very high H2/C3H8 inlet ratios (>2.5), the activity stagnates, since at increasing H2/C3H8 ratios the elementary surface steps approach equilibrium, as shown in Figure 5.
+Figure 4
+Figure 4. Most important coverages (total coverage, H, CCH3, CH, and amount of free sites in percent) as a function of H2/C3H8 inlet ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) at low H coverage. Input conditions as given in Table 2 are used.
+Figure 5
+Figure 5. Equilibrium composition (vol % C3H6) and simulated reactor outlet composition as a function of H2/C3H8 ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) at low H coverage. Input conditions as given in Table 2 are used.
+4.3 Reaction Path Analysis
+A reaction path analysis has been performed to gain insight into the actual formation pathways and into the kinetically most significant steps. First the rate of production analysis is discussed, followed by the results of the sensitivity analysis.
+In the simplified reaction scheme of Figure 6 only the reactions leading to the most important coke precursors, ethylidyne (CCH3) and methylidyne (CH), are shown with the turnover frequency >23 s–1 in the simulation under reactor outlet conditions. The other reactions have a low reaction rate (<2 s–1), and these are not shown. All isomerization and almost all C–C scission reactions have a zero reaction rate due to high reaction barriers (>140 kJ mol–1) and are consequently not included in the simplified reaction scheme. A DFT study on ethane dehydrogenation performed by Chen et al. confirms the energetically unfavorable isomerization reactions. (103) The most important exception is reaction (26), i.e., the C–C scission of propyne, which is responsible for the formation of the side products (see Figure 6) through deep dehydrogenation and further C–C scission reactions. Reaction (26) has a high TOF (284 s–1, 47% of the net propane adsorption rate), as shown in Figure 6. C–C scission reactions only occur with species that are more dehydrogenated than propylene, as already suggested by Yang et al. and confirmed in this study. (54)
+Figure 6
+Figure 6. Rate of production analysis for the simulation (H2/C3H8 inlet ratio = 1.25) under reactor outlet conditions (pressures of 0.17 bar of C3H8, 0.26 bar of H2, 0.02 bar of C3H6, 2.81 × 10–3 bar of C2H4, 7.18 × 10–3 bar of CH4, and 2.37 × 10–3 bar of C2H4) for the reaction network until the most important coke precursors, i.e., methylidyne (CH) and ethylidyne (CCH3), are formed (for the simulation at low H coverage). The direction of the arrow indicates the net direction in which the reversible elementary reaction steps proceed, while the thickness indicates the relative value of the TOF. The reaction arrow of the RDS for propene formation is crossed with a “V”. The percentages next to every arrow indicate the TOF expressed as a the percentage of the net propane adsorption rate. The gas-phase species and coke are shown in gray boxes.
+Figure 6 shows the relative turnover frequencies at reactor outlet conditions (pressures of 0.17 bar of C3H8, 0.26 bar of H2, 0.02 bar of C3H6, 2.81 × 10–3 bar of C2H4, 7.18 × 10–3 bar of CH4, and 2.37 × 10–3 bar of C2H4) graphically: the high TOFs are shown with a thick arrow, while the lower TOFs are shown with a thin arrow. The direction of the arrow indicates the net rate with which the reversible elementary reaction steps proceed. The percentages next to every arrow indicate the TOF expressed as a the percentage of the net propane adsorption rate.
+Analyses similar to those shown in Figure 6 have been performed at different points throughout the reactor, and results indicate that the reaction pathway remains unaltered throughout the catalyst bed. The dominant reaction path for the main reaction toward propylene occurs via the species 1- and 2-propyl, and consequently the important reactions are (1), (2), (5), and (8). The dominant reaction path for the side reaction, i.e. the formation of coke precursors, is via 1-propenyl and 2-propenyl toward the formation of propyne. Consequently, the important reaction steps for the side reaction are reactions (13), (14), (23), and (24) and the C–C scission of propyne (reaction (26)), in which coke precursors methylidyne and ethylidyne are formed. Furthermore, combining the sensitivity analysis and an affinity analysis under reactor outlet conditions shows that the rate-determining steps for the main reaction path are reactions (1) and (2), while the rate-determining step for the side reaction is reaction (26), the C–C scission of propyne. The numerical values of the reaction rates can be found in section S12 in the Supporting Information.
+Detailed results on the sensitivity analysis can be found in section S13 in the Supporting Information. The first dehydrogenation steps from propane, reactions (1) and (2), show a high sensitivity coefficient (SC) for the production of propylene (SC ≈ 0.70), followed by the second dehydrogenation step, reactions (5) and (8) (SC ≈ 0.20). Consequently, the rate of production of propylene is most sensitive to the rate coefficients for the initial dehydrogenation steps of propane in the reaction network. Furthermore, reactions (13) and (14) (dehydrogenation of propylene toward 1-propenyl and 2-propenyl), (23) and (24) (dehydrogenation of 1-propenyl and 2-propenyl toward propyne), and (26) (C–C scission of propyne) show a negative sensitivity coefficient for the production of propylene (SC ranging from −0.03 to −0.94) and these reaction steps have a negative influence on the production of C3H6. The production of propylene is most negatively influenced by reactions (13) and (14) (SC = −0.13 and −0.37, respectively) and reaction (26) (SC = −0.94).
+Consequently, on the basis of the rate of production analysis and the sensitivity analysis, the most important reaction steps that determine the activity toward C3H6 are the initial dehydrogenation steps, reactions (1), (2), (5), and (8), deep dehydrogenation, reactions (13) and (14), and the C–C scission of propyne, reaction (26).
+Up to this point the reported simulations were performed with thermodynamics and kinetics derived from DFT calculations at a low hydrogen coverage (no hydrogen coadsorbed in the unit cell), which allowed elucidation of the important effect of coke precursor coverage on the kinetics. To assess the influence of a higher hydrogen coverage on the thermodynamic and kinetic parameters, coverage-dependent kinetics and thermodynamics need to be taken into account, This will only be done for the reaction steps that determine the activity, which were identified by the reaction path analysis.
+5 Catalyst Performance at High H Coverage
+The thermodynamic and kinetic data as reported in Table 1 were determined at low hydrogen coverage (no hydrogen coadsorbed in the unit cell). It is possible that at high hydrogen coverage additional phenomena occur that are not yet captured by the low-coverage simulations performed in section 4. Furthermore, other effects that can also take place at high hydrogen coverage, such as the occurrence of a preferential alternative path including hydrogen-assisted transition states or the presence of subsurface hydrogen, need further investigation. First, the possibility of the existence of an alternative pathway and the presence of subsurface hydrogen will be assessed. Finally, a coverage-dependent thermodynamically consistent model is constructed to assess the catalyst performance at high H coverage.
+5.1 Hydrogen-Assisted β-H Abstraction and Subsurface Hydrogen
+Due to an increased hydrogen coverage, hydrogen on the surface could possibly actively participate in a low-activated reaction step in which adsorbed hydrogen abstracts a β-hydrogen from a hydrocarbon species on the surface. Furthermore, hydrogen can also migrate to subsurface tetrahedral and octahedral sites (49, 53, 104, 105) which can alter the energetics of the reactions on the surface. Subsurface hydrogen is likely in Pd metals (49, 53, 104, 105) and is reported to also occur in Pt metal surfaces, but typically only at very low temperatures and elevated H2 pressures. (49, 105, 106) Even for Pd, which is known to be more receptive to subsurface hydrogen, pressures as high as 100 bar of H2 and temperatures as low as 125 K are necessary to obtain subsurface hydrogen at (111) surfaces. (104)
+Both possibilities have been studied by comparing the reaction barrier of a relevant reaction step, i.e., reaction (5), the dehydrogenation of 1-propyl to adsorbed propylene (see reaction (a) in Table 4), with the reaction barriers obtained for hydrogen-assisted β-hydrogen abstraction or subsurface hydrogen (see Table 4). This reaction is chosen since it has a C–Pt bond in both the reactant and product of the reaction. Calculations indicate that both possibilities, hydrogen-assisted abstraction and the presence of subsurface hydrogen, are not plausible to explain the higher activity, since the calculated activation barriers are higher than the activation barrier of reference reaction (a). For reaction (e) in Table 4, i.e. the dehydrogenation of 1-propyl in the presence of subsurface hydrogen, the reaction barrier is similar to that of reaction (a). However, the conditions under which subsurface hydrogen is possible (very low temperatures and very high H2 pressures) are not very likely during dehydrogenation reactions. Consequently, reactions based on alternative hydrogen-assisted reaction pathways or in the presence of subsurface hydrogen have not been included in the coverage dependent model. Details on the calculations can be found in section S14 in the Supporting Information.
+Table 4. Reactions Used To Investigate the Possibility of Hydrogen-Assisted β-Hydrogen Abstraction or Subsurface Hydrogen and the Corresponding Electronic Reaction Barriers Ea and Initial Hydrogen Coverage θH,0a
+  reaction Ea (kJ mol–1) θH,0b
+(a) C3H7-S + 2S → C3H6-S2 + H-S 75.6 0.00
+(b) C3H7-S + H-S → C3H6-S2 + H2(g) c 0.11
+(c) C3H7-S + H-S + S → C3H6-S2 + H-S + H-S 81.4d 0.11
+(d) C3H7-S + 7H-S + S → C3H6-S2 + 8H-S 142.0 0.78
+(e) C3H7-S + 2S + 9Hsub → C3H6–S2 + H-S + 9Hsub 73.1 0.00 + 1 (sub)e
+(f) C3H7-S + 2S + 7H-S + 9Hsub → C3H6-S2 + 8H-S + 9Hsub 87.9 0.78 + 1 (sub)e
+aSurface metal sites are explicitly shown using S. Calculations have been performed using the opt-PBE vdW-DF functional on a 3 × 3 Pt(111) unit cell. Reaction (a) is the reaction at low H coverage and corresponds to reaction (5) in Table 1.
+bA hydrogen coverage of 0.11 means that, at the start of the reaction, one extra hydrogen was adsorbed on the Pt surface (one H atom per nine Pt surface atoms) to model the influence of higher H coverage.
+cIt is not possible to find a transition state for this reaction, since dissociated hydrogen (2H–S) is favored in comparison to physisorbed H2 (approximately 75 kJ mol–1 more stable).
+dThe motion of the migrating hydrogen in the imaginary mode of the transition state shows that the additional hydrogen atom adsorbed on the surface of the unit cell does not actively participate in the reaction (the transition state is not hydrogen-assisted).
+eA subsurface hydrogen coverage of 1.00 means that there are nine H atoms present in the first subsurface layer of the 3 × 3 Pt(111) surface. All hydrogen atoms are placed in the tetrasub31 position. (104)
+5.2 Construction of a Coverage-Dependent Model
+For the important reaction steps identified in section 4.3, i.e., reactions (1), (2), (5), (8), (13), (14), and (26) (see Figure 1), the reaction enthalpy ΔHr and activation energy Ea were obtained at high hydrogen coverage: i.e., θH,0 = 0.75. The coverage dependence is assumed to be captured in the reaction enthalpy ΔHr and activation energy Ea, whereas the reaction entropy ΔSr and the pre-exponential factor A are considered independent of coverage. Additionally, also reactions (4), (7), (19) and (20), i.e., the reactions that lead to C3 species with the same degree of dehydrogenation (see Figure 1), have been implemented in a coverage-dependent way. Using the data at both low and high hydrogen coverage, a basic, linear coverage-dependent model for the reaction enthalpy ΔHr and activation energy Ea was constructed:
+(9)
+(10)
+with Xlow being the ab initio calculated quantity at low H coverage, Xhigh the quantity calculated at high H coverage, θtot,low the total coverage for the data calculated at low coverage (i.e., 0.125, with θH,0 = 0 and θCxHy,0 = 0.125), θtot,high the total coverage for the data calculated at high coverage (i.e., 0.875, with θH,0 = 0.75 and θCxHy,0 = 0.125), and θtot the total surface coverage in the coverage-dependent simulation. In general, the reaction enthalpy of the dehydrogenation steps is higher at higher H coverage, while the activation barriers are also increased at higher H coverage. Note that the enthalpies and activation energies have been calculated for a high H coverage in the unit cell, but the correlations (eqs 9 and 10) are related to the total coverage θtot. Consequently, the coverage-dependent model attempts to capture coverage dependence in a simplified way. Detailed information on the high hydrogen coverage ab initio calculations and their implementation in the kinetic model can be found in section S15.1 in the Supporting Information.
+Furthermore, also the coverage dependence of hydrogen adsorption is assessed. For the adsorption enthalpy of H2 for coverages ranging from 0.13 to 0.75, the following equation is derived from the ab initio calculated hydrogen adsorption energies:
+(11)
+This equation represents the differential adsorption energy of H2 as a function of hydrogen coverage on the surface, as explained in detail in section S15.2 in the Supporting Information. The differential adsorption energy of H2 as a function of hydrogen coverage as given in eq 11 shows behavior similar to experimentally measured differential adsorption enthalpies of H2 as a function of hydrogen coverage and similar curves calculated in other DFT studies. (107-109) For every (de)hydrogenation step in the reaction scheme, which involves a hydrogen atom as a reaction partner, this relation (for a single hydrogen atom) is also applied.
+Finally, it is important that thermodynamic consistency is maintained, similar to the principles explained in section 2.2. When the thermodynamics of some of the reaction steps are modified as a function of coverage, e.g. reaction steps (1) and (5), the overall thermodynamic consistency is disturbed for e.g. the reaction from gas-phase propane to propylene. To overcome this for the reaction sequence propanegas → reaction (1) → reaction (5) → propylenegas, the adsorption strength of the product propylene is also implemented in a coverage-dependent way so that thermodynamic consistency is maintained. If the adsorption strength of propylene is implemented as a function of surface coverage, a lower adsorption strength is obtained at increasing surface coverage. The same is done for other sequences in the network, as explained in more detail in section S15.3 in the Supporting Information. Consequently, the coverage-dependent model includes the lower adsorption strength of propylene and hydrogen and the increased dehydrogenation barriers when the hydrogen coverage is increased. The resulting activation energies Ea and reaction enthalpies ΔHr used in the coverage-dependent model can be found in section S15.3 in the Supporting Information.
+A graphical representation of the Gibbs free energy profile for the most important reaction steps in the dominant reaction pathways, as determined in section 4.3, can be found in section S15.4 in the Supporting Information at both low and high coverage.
+5.3 Simulation Results
+The same experimental input values as given in Table 2 have been used, and a simulation has been performed, similar to the case in section 4.1 with H2/C3H8 inlet ratio = 1.25. Under the same conditions, the activity is about 3 times lower for the coverage-dependent model than that for the model at low coverage, and to obtain the same conversion as experiment (i.e., 11.5%) the simulation requires 9.09 × 10–5 g of catalyst, approximately 3 times larger than that in section 4. Furthermore, the same rate coefficient for graphitic coke formation (reaction (35) in Figure 1) was used as for the low-coverage case, leading to 9.3 molC molPt,surface–1 formed. Again, the overall conversion and selectivity are not sensitive to the exact value of k35. The coverages under outlet conditions for the coverage-dependent simulation performed at H2/C3H8 inlet ratio = 1.25 are reported in section S10 in the Supporting Information. The simulation results are compared to experiment in Table 2. The simulated activity for the coverage-dependent model in Table 2 is indeed about 3 times lower than the rate without coverage-dependent thermodynamics and kinetics. The coverage-dependent model predicts higher selectivity toward C3H6 in comparison to that seen experimentally or that in the absence of coverage-dependent thermodynamics and kinetics.
+The H2/C3H8 feed ratio can again be varied, similar to the case in section 4.3. The results are shown in Figure 7. Again, the activity is positively influenced by the increasing H2/C3H8 feed ratio and a maximum is observed. However, in contrast to Figure 3, the maximum is now observed at a H2/C3H8 feed ratio of 1.5, which is closer to the experimentally observed maximum at a H2/C3H8 ratio of 1.25. Hence, implementing coverage-dependent thermodynamics and kinetics indeed gives a better qualitative description of the experimental results. The most important coverages at varying H2/C3H8 inlet ratios are shown in Figure 8. The major difference between Figure 4 (coverages for the simulation at low coverage) and Figure 8 is the amount of free sites, which is much lower at H2/C3H8 = 0 in Figure 4 in comparison to Figure 8. In Figure 4, the amount of free sites increases steadily over the whole H2/C3H8 range, while the increase stagnates at low H2/C3H8 ratios for the coverage-dependent simulations (see Figure 8). When the amount of free sites stagnates, the reverse reactions (i.e., hydrogenation) gain importance, leading to lower activity. The maximum of the STYC3H6 curve in Figure 7 is therefore shifted toward regions of low H2/C3H8 in comparison to Figure 3. Additional plots of the selectivity at varying H2/C3H8 feed ratios can be found in section S16 in the Supporting Information.
+Figure 7
+Figure 7. Site time yields of C3H6 (maximum shown with ●), CH4, C2H6, and C2H4 as a function of H2/C3H8 ratio for the coverage-dependent simulation with a catalyst mass of 9.09 × 10–5 g corresponding to a conversion of 11.5% at H2/C3H8 = 1.25. Input conditions as given in Table 2 are used.
+Figure 8
+Figure 8. Most important coverages (total coverage, H, CCH3, CH3, and amount of free sites in %) as a function of H2/C3H8 inlet ratios for the coverage-dependent simulation with a catalyst mass of 9.09 × 10–5 (11.5% conversion at H2/C3H8 = 1.25). Input conditions as given in Table 2 are used.
+It can be concluded that coverage-dependent thermodynamics and kinetics indeed give a better description of the experimental results (correct description of the maximum at increasing H2/C3H8 inlet ratio). Furthermore, coverage-dependent simulations provide an additional explanation for the positive effect of hydrogen cofeeding on the activity in the propane dehydrogenation reaction: increasing dehydrogenation barriers and decreasing adsorption strength of propylene and H2 with increasing hydrogen coverage on the surface are also responsible for the positive hydrogen effect. (50, 51)
+6 Conclusions
+This study shows that the positive effect of hydrogen cofeeding on catalyst activity during propane dehydrogenation on a Pt(111) catalyst can be attributed to several phenomena and provides a rationale for the different explanations discussed in the literature. A detailed reaction mechanism, including side reactions and deep dehydrogenation reactions, is necessary to capture the effect of increased activity at higher H2/C3H8 inlet ratios. Reactor simulations with the extensive reaction mechanism show that at higher H2/C3H8 inlet ratios a reduced coverage of deeply dehydrogenated species, i.e., CCH3 (ethylidyne) and CH (methylidyne), leads to more free sites and consequently higher catalytic activity. The use of coverage-independent thermodynamic and kinetic parameters leads to simulations that can capture the increasing activity at increasing H2/C3H8 ratios; however, coverage-dependent simulations lead to a correct description of the maximum of the activity at increasing H2/C3H8 ratios. Furthermore, coverage-dependent simulations suggest that the decreased adsorption strength of propylene and increased reaction barriers of subsequent reactions with propylene induce higher catalytic activity at higher H2/C3H8 inlet ratios. The work shows that the qualitative behavior of Pt dehydrogenation catalysis can be captured by a fully DFT based model, provided the kinetic model is sufficiently large and coverage dependence is accounted for.
+Supporting Information
+The Supporting Information is available free of charge on the ACS Publications website at DOI: 10.1021/acscatal.7b01584.
+DFT calculations for reactions on Pt(211), preferential adsorption sites for the different adsorbates in the simulation, details on the calculation of reaction enthalpies and entropies, details on the calculation of rate coefficients, the complete extensive reaction scheme for propane dehydrogenation, derivation of experimental input and output data from the literature, detailed results for the low-coverage and coverage-dependent simulations, including rate of production and sensitivity analyses, details on the calculations for hydrogen-assisted β-H abstraction and subsurface hydrogen, and implementation of the coverage-dependent model (PDF)
+cs7b01584_si_001.pdf (1.02 MB)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+Corresponding Author
+Maarten K. Sabbe - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium;  http://orcid.org/0000-0003-4824-2407;  Email: Maarten.Sabbe@UGent.be
+Authors
+Stephanie Saerens - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium;  http://orcid.org/0000-0002-2662-1580
+Vladimir V. Galvita - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium;  http://orcid.org/0000-0001-9205-7917
+Evgeniy A. Redekop - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium;  Centre for Materials Science and Nanotechnology (SMN), Department of Chemistry, University of Oslo, P.O. Box 1033, Blindern, N-0315 Oslo, Norway
+Marie-Françoise Reyniers - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium
+Guy B. Marin - Laboratory for Chemical Technology, Ghent University, Technologiepark 914, B-9052 Ghent, Belgium;  http://orcid.org/0000-0002-6733-1213
+Notes
+The authors declare no competing financial interest.
+Acknowledgment
+The authors acknowledge financial support from the Long Term Structural Methusalem Funding by the Flemish Government, grant number BOF09/01M00409. E.A.R. acknowledges the Marie Curie International Incoming Fellowship granted by the European Commission (Grant Agreement No. 301703).
+References
+This article references 109 other publications.
+1Akporiaye, D.; Jensen, S. F.; Olsbye, U.; Rohr, F.; Rytter, E.; Ronnekleiv, M.; Spjelkavik, A. I. Ind. Eng. Chem. Res. 2001, 40, 4741– 4748 DOI: 10.1021/ie010299+
+Google Scholar
+2Vora, B. V. Top. Catal. 2012, 55, 1297– 1308 DOI: 10.1007/s11244-012-9917-9
+Google Scholar
+3Sattler, J. J. H. B.; Ruiz-Martinez, J.; Santillan-Jimenez, E.; Weckhuysen, B. M. Chem. Rev. 2014, 114, 10613– 10653 DOI: 10.1021/cr5002436
+Google Scholar
+4Radcliffe, C. FCC unit as propylene source; Intercat (Johnson Matthey), 2007.
+Google Scholar
+5James, O. O.; Mandal, S.; Alele, N.; Chowdhury, B.; Maity, S. Fuel Process. Technol. 2016, 149, 239– 255 DOI: 10.1016/j.fuproc.2016.04.016
+Google Scholar
+6Bhasin, M. M.; McCain, J. H.; Vora, B. V.; Imai, T.; Pujado, P. R. Appl. Catal., A 2001, 221, 397– 419 DOI: 10.1016/S0926-860X(01)00816-X
+Google Scholar
+7Zhao, Z. J.; Chiu, C. C.; Gong, J. L. Chem. Sci. 2015, 6, 4403– 4425 DOI: 10.1039/C5SC01227A
+Google Scholar
+8Davis, R. J.; Griffith, R. H.; Marsh, J. D. F. Adv. Catal. 1957, 9, 155– 168 DOI: 10.1016/S0360-0564(08)60164-9
+Google Scholar
+9Tinnemans, S. J.; Kox, M. H. F.; Nijhuis, T. A.; Visser, T.; Weckhuysen, B. M. Phys. Chem. Chem. Phys. 2005, 7, 211– 216 DOI: 10.1039/b414427a
+Google Scholar
+10Krause, A. O. I.; Kanervo, J. M.; Airaksinen, S. M. K. Abstr. Pap. Am. Chem. Soc. 2000, 220, U264– U265
+Google Scholar
+11Liu, G.; Zeng, L.; Zhao, Z. J.; Tian, H.; Wu, T. F.; Gong, J. L. ACS Catal. 2016, 6, 2158– 2162 DOI: 10.1021/acscatal.5b02878
+Google Scholar
+12Iglesias-Juez, A.; Beale, A. M.; Maaijen, K.; Weng, T. C.; Glatzel, P.; Weckhuysen, B. M. J. Catal. 2010, 276, 268– 279 DOI: 10.1016/j.jcat.2010.09.018
+Google Scholar
+13Uemura, Y.; Inada, Y.; Bando, K. K.; Sasaki, T.; Kamiuchi, N.; Eguchi, K.; Yagishita, A.; Nomura, M.; Tada, M.; Iwasawa, Y. Phys. Chem. Chem. Phys. 2011, 13, 15833– 15844 DOI: 10.1039/c1cp20994a
+Google Scholar
+14Larsson, M.; Hulten, M.; Blekkan, E. A.; Andersson, B. J. Catal. 1996, 164, 44– 53 DOI: 10.1006/jcat.1996.0361
+Google Scholar
+15Li, Q.; Sui, Z. J.; Zhou, X. G.; Zhu, Y.; Zhou, J. H.; Chen, D. Top. Catal. 2011, 54, 888– 896 DOI: 10.1007/s11244-011-9708-8
+Google Scholar
+16Sattler, J.; Beale, A. M.; Weckhuysen, B. M. Phys. Chem. Chem. Phys. 2013, 15, 12095– 12103 DOI: 10.1039/c3cp50646k
+Google Scholar
+17Sanfilippo, D.; Miracca, I. Catal. Today 2006, 111, 133– 139 DOI: 10.1016/j.cattod.2005.10.012
+Google Scholar
+18Wu, J.; Peng, Z. M.; Sun, P. P.; Bell, A. T. Appl. Catal., A 2014, 470, 208– 214 DOI: 10.1016/j.apcata.2013.10.058
+Google Scholar
+19Sattler, J.; Gonzalez-Jimenez, I. D.; Luo, L.; Stears, B. A.; Malek, A.; Barton, D. G.; Kilos, B. A.; Kaminsky, M. P.; Verhoeven, T.; Koers, E. J.; Baldus, M.; Weckhuysen, B. M. Angew. Chem., Int. Ed. 2014, 53, 9251– 9256 DOI: 10.1002/anie.201404460
+Google Scholar
+20Wang, T.; Jiang, F.; Liu, G.; Zeng, L.; Zhao, Z. J.; Gong, J. L. AIChE J. 2016, 62, 4365– 4376 DOI: 10.1002/aic.15339
+Google Scholar
+21Jablonski, E. L.; Castro, A. A.; Scelza, O. A.; de Miguel, S. R. Appl. Catal., A 1999, 183, 189– 198 DOI: 10.1016/S0926-860X(99)00058-7
+Google Scholar
+22Liu, X.; Lang, W. Z.; Long, L. L.; Hu, C. L.; Chu, L. F.; Guo, Y. J. Chem. Eng. J. 2014, 247, 183– 192 DOI: 10.1016/j.cej.2014.02.084
+Google Scholar
+23Redekop, E. A.; Galvita, V. V.; Poelman, H.; Bliznuk, V.; Detavernier, C.; Marin, G. B. ACS Catal. 2014, 4, 1812– 1824 DOI: 10.1021/cs500415e
+Google Scholar
+24Sun, P. P.; Siddiqi, G.; Vining, W. C.; Chi, M. F.; Bell, A. T. J. Catal. 2011, 282, 165– 174 DOI: 10.1016/j.jcat.2011.06.008
+Google Scholar
+25Yang, M. L.; Zhu, Y. A.; Zhou, X. G.; Sui, Z. J.; Chen, D. ACS Catal. 2012, 2, 1247– 1258 DOI: 10.1021/cs300031d
+Google Scholar
+26Yu, C. L.; Ge, Q. J.; Xu, H. Y.; Li, W. Z. Catal. Lett. 2006, 112, 197– 201 DOI: 10.1007/s10562-006-0203-y
+Google Scholar
+27Wu, J.; Sharada, S. M.; Ho, C.; Hauser, A. W.; Head-Gordon, M.; Bell, A. T. Appl. Catal., A 2015, 506, 25– 32 DOI: 10.1016/j.apcata.2015.08.029
+Google Scholar
+28Zhou, H. L.; Gong, J. J.; Xu, B. L.; Yu, L.; Fan, Y. N. Appl. Catal., A 2016, 527, 30– 35 DOI: 10.1016/j.apcata.2016.08.017
+Google Scholar
+29Wang, G. W.; Zhang, H. L.; Wang, H. R.; Zhu, Q. Q.; Li, C. Y.; Shan, H. H. J. Catal. 2016, 344, 606– 608 DOI: 10.1016/j.jcat.2016.11.003
+Google Scholar
+30Han, Z. P.; Li, S. R.; Jiang, F.; Wang, T.; Ma, X. B.; Gong, J. L. Nanoscale 2014, 6, 10000– 10008 DOI: 10.1039/C4NR02143F
+Google Scholar
+31Jiang, F.; Zeng, L.; Li, S. R.; Liu, G.; Wang, S. P.; Gong, J. L. ACS Catal. 2015, 5, 438– 447 DOI: 10.1021/cs501279v
+Google Scholar
+32Zhang, Y. W.; Zhou, Y. M.; Shi, J. J.; Zhou, S. J.; Sheng, X. L.; Zhang, Z. W.; Xiang, S. M. J. Mol. Catal. A: Chem. 2014, 381, 138– 147 DOI: 10.1016/j.molcata.2013.10.007
+Google Scholar
+33Zhang, Y. W.; Zhou, Y. M.; Qiu, A. D.; Wang, Y.; Xu, Y.; Wu, P. C. Catal. Commun. 2006, 7, 860– 866 DOI: 10.1016/j.catcom.2006.03.016
+Google Scholar
+34Xia, K.; Lang, W. Z.; Li, P. P.; Long, L. L.; Yan, X.; Guo, Y. J. Chem. Eng. J. 2016, 284, 1068– 1079 DOI: 10.1016/j.cej.2015.09.046
+Google Scholar
+35Barias, O. A.; Holmen, A.; Blekkan, E. A. J. Catal. 1996, 158, 1– 12 DOI: 10.1006/jcat.1996.0001
+Google Scholar
+36Virnovskaia, A.; Rytter, E.; Olsbye, U. Ind. Eng. Chem. Res. 2008, 47, 7167– 7177 DOI: 10.1021/ie800361a
+Google Scholar
+37Kogan, S. B.; Schramm, H.; Herskowitz, M. Appl. Catal., A 2001, 208, 185– 191 DOI: 10.1016/S0926-860X(00)00703-1
+Google Scholar
+38Siddiqi, G.; Sun, P. P.; Galvita, V.; Bell, A. T. J. Catal. 2010, 274, 200– 206 DOI: 10.1016/j.jcat.2010.06.016
+Google Scholar
+39Shan, Y. L.; Sui, Z. J.; Zhu, Y.; Chen, D.; Zhou, X. G. Chem. Eng. J. 2015, 278, 240– 248 DOI: 10.1016/j.cej.2014.09.107
+Google Scholar
+40Ertl, G.; Knözinger, H.; Weitkamp, J. Handbook of Heterogeneous Catalysis, 2nd ed.; Wiley-VCH: Weinheim, Germany, 1997; Vol. 4, pp 1940– 1943.
+Google Scholar
+41Paál, Z.; Menon, P. G. Hydrogen effects in catalysis: Fundamentals and Practical Applications; Marcel Dekker: New York, 1988.
+Google Scholar
+42Bond, G. C. Appl. Catal., A 1997, 149, 3– 25 DOI: 10.1016/S0926-860X(96)00249-9
+Google Scholar
+43Zimmer, H.; Dobrovolszky, M.; Tetenyi, P.; Paal, Z. J. Phys. Chem. 1986, 90, 4758– 4764 DOI: 10.1021/j100411a010
+Google Scholar
+44Galvita, V.; Siddiqi, G.; Sun, P. P.; Bell, A. T. J. Catal. 2010, 271, 209– 219 DOI: 10.1016/j.jcat.2010.01.016
+Google Scholar
+45Nykänen, L.; Honkala, K. ACS Catal. 2013, 3, 3026– 3030 DOI: 10.1021/cs400566y
+Google Scholar
+46Li, Q.; Sui, Z. J.; Zhou, X. G.; Chen, D. Appl. Catal., A 2011, 398, 18– 26 DOI: 10.1016/j.apcata.2011.01.039
+Google Scholar
+47Valcárcel, A.; Ricart, J. M.; Clotet, A.; Illas, F.; Markovits, A.; Minot, C. J. Catal. 2006, 241, 115– 122 DOI: 10.1016/j.jcat.2006.04.022
+Google Scholar
+48Zaera, F.; Chrysostomou, D. Surf. Sci. 2000, 457, 89– 108 DOI: 10.1016/S0039-6028(00)00337-X
+Google Scholar
+49Kozlov, S. M.; Aleksandrov, H. A.; Neyman, K. M. J. Phys. Chem. C 2014, 118, 15242– 15250 DOI: 10.1021/jp502575a
+Google Scholar
+50Yang, M. L.; Zhu, J.; Zhu, Y. A.; Sui, Z. J.; Yu, Y. D.; Zhou, X. G.; Chen, D. J. Mol. Catal. A: Chem. 2014, 395, 329– 336 DOI: 10.1016/j.molcata.2014.08.008
+Google Scholar
+51Sui, Z. J.; Zhu, Y. A.; Li, P.; Zhou, X. G.; Chen, D. Adv. Chem. Eng. 2014, 44, 61– 125 DOI: 10.1016/B978-0-12-419974-3.00002-6
+Google Scholar
+52Sabbe, M. K.; Canduela-Rodriguez, G.; Reyniers, M. F.; Marin, G. B. J. Catal. 2015, 330, 406– 422 DOI: 10.1016/j.jcat.2015.08.003
+Google Scholar
+53Aleksandrov, H. A.; Kozlov, S. M.; Schauermann, S.; Vayssilov, G. N.; Neyman, K. M. Angew. Chem., Int. Ed. 2014, 53, 13371– 13375 DOI: 10.1002/anie.201405738
+Google Scholar
+54Yang, M. L.; Zhu, Y. A.; Fan, C.; Sui, Z. J.; Chen, D.; Zhou, X. G. J. Mol. Catal. A: Chem. 2010, 321, 42– 49 DOI: 10.1016/j.molcata.2010.01.017
+Google Scholar
+55Gomez-Quero, S.; Tsoufis, T.; Rudolf, P.; Makkee, M.; Kapteijn, F.; Rothenberg, G. Catal. Sci. Technol. 2013, 3, 962– 971 DOI: 10.1039/C2CY20488F
+Google Scholar
+56Lobera, M. P.; Tellez, C.; Herguido, J.; Menendez, M. Appl. Catal., A 2008, 349, 156– 164 DOI: 10.1016/j.apcata.2008.07.025
+Google Scholar
+57Sahebdelfar, S.; Ravanchi, M. T.; Zangeneh, F. T.; Mehrazma, S.; Rajabi, S. Chem. Eng. Res. Des. 2012, 90, 1090– 1097 DOI: 10.1016/j.cherd.2011.11.004
+Google Scholar
+58Zangeneh, F. T.; Taeb, A.; Gholivand, K.; Sahebdelfar, S. J. Energy Chem. 2013, 22, 726– 732 DOI: 10.1016/S2095-4956(13)60096-0
+Google Scholar
+59Miraboutalebi, S. M.; Vafajoo, L.; Kazemeini, M.; Fattahi, M. Chem. Eng. Technol. 2015, 38, 2198– 2206 DOI: 10.1002/ceat.201500082
+Google Scholar
+60Kresse, G. J. Non-Cryst. Solids 1995, 192-193, 222– 229 DOI: 10.1016/0022-3093(95)00355-X
+Google Scholar
+61Kresse, G.; Furthmuller, J. Comput. Mater. Sci. 1996, 6, 15– 50 DOI: 10.1016/0927-0256(96)00008-0
+Google Scholar
+62Kresse, G.; Furthmuller, J. Phys. Rev. B: Condens. Matter Mater. Phys. 1996, 54, 11169– 11186 DOI: 10.1103/PhysRevB.54.11169
+Google Scholar
+63Kresse, G.; Hafner, J. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 49, 14251– 14269 DOI: 10.1103/PhysRevB.49.14251
+Google Scholar
+64Kresse, G.; Joubert, D. Phys. Rev. B: Condens. Matter Mater. Phys. 1999, 59, 1758– 1775 DOI: 10.1103/PhysRevB.59.1758
+Google Scholar
+65Blochl, P. E. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 50, 17953– 17979 DOI: 10.1103/PhysRevB.50.17953
+Google Scholar
+66Ibach, H. Physics of surfaces and interfaces, 1st ed.; Springer-Verlag: New York, 2006; p 646.
+Google Scholar
+67Wu, J.; Helveg, S.; Ullmann, S.; Peng, Z. M.; Bell, A. T. J. Catal. 2016, 338, 295– 304 DOI: 10.1016/j.jcat.2016.03.010
+Google Scholar
+68Zhu, J.; Yang, M. L.; Yu, Y. D.; Zhu, Y. A.; Sui, Z. J.; Zhou, X. G.; Holmen, A.; Chen, D. ACS Catal. 2015, 5, 6310– 6319 DOI: 10.1021/acscatal.5b01423
+Google Scholar
+69Redekop, E. A.; Saerens, S.; Galvita, V. V.; Gonzalez, I. P.; Sabbe, M.; Bliznuk, V.; Reyniers, M. F.; Marin, G. B. J. Catal. 2016, 344, 482– 495 DOI: 10.1016/j.jcat.2016.10.023
+Google Scholar
+70Vines, F.; Lykhach, Y.; Staudt, T.; Lorenz, M. P. A.; Papp, C.; Steinruck, H. P.; Libuda, J.; Neyman, K. M.; Gorling, A. Chem. - Eur. J. 2010, 16, 6530– 6539 DOI: 10.1002/chem.201000296
+Google Scholar
+71Boudart, M. Adv. Catal. 1969, 20, 153– 166 DOI: 10.1016/S0360-0564(08)60271-0
+Google Scholar
+72Monkhorst, H. J.; Pack, J. D. Phys. Rev. B: Condens. Matter 1976, 13, 5188– 5192 DOI: 10.1103/PhysRevB.13.5188
+Google Scholar
+73Lee, A. F.; Wilson, K.; Goldoni, A.; Larciprete, R.; Lizzit, S. Catal. Lett. 2002, 78, 379– 382 DOI: 10.1023/A:1014921021037
+Google Scholar
+74Tsai, Y. L.; Xu, C.; Koel, B. E. Surf. Sci. 1997, 385, 37– 59 DOI: 10.1016/S0039-6028(97)00114-3
+Google Scholar
+75Albert, H. J.; Rubin, L. R. Adv. Chem. Ser. 1971, 98, 1– 16 DOI: 10.1021/ba-1971-0098.ch001
+Google Scholar
+76Klimes, J.; Bowler, D. R.; Michaelides, A. J. Phys.: Condens. Matter 2010, 22, 022201 DOI: 10.1088/0953-8984/22/2/022201
+Google Scholar
+77Klimes, J.; Bowler, D. R.; Michaelides, A. Phys. Rev. B: Condens. Matter Mater. Phys. 2011, 83, 195131 DOI: 10.1103/PhysRevB.83.195131
+Google Scholar
+78Gautier, S.; Steinmann, S. N.; Michel, C.; Fleurat-Lessard, P.; Sautet, P. Phys. Chem. Chem. Phys. 2015, 17, 28921– 28930 DOI: 10.1039/C5CP04534G
+Google Scholar
+79Nykänen, L.; Honkala, K. J. Phys. Chem. C 2011, 115, 9578– 9586 DOI: 10.1021/jp1121799
+Google Scholar
+80Wijzenbroek, M.; Klein, D. M.; Smits, B.; Somers, M. F.; Kroes, G. J. J. Phys. Chem. A 2015, 119, 12146– 12158 DOI: 10.1021/acs.jpca.5b06008
+Google Scholar
+81Nattino, F.; Migliorini, D.; Bonfanti, M.; Kroes, G. J. J. Chem. Phys. 2016, 144, 044702 DOI: 10.1063/1.4939520
+Google Scholar
+82Cohen, A. J.; Mori-Sanchez, P.; Yang, W. T. Chem. Rev. 2012, 112, 289– 320 DOI: 10.1021/cr200107z
+Google Scholar
+83McQuarrie, D. A.; Simon, J. D. Physical chemistry: a molecular approach, 1st ed.; University Science Books: Sausalito, CA, 1997; p 349.
+Google Scholar
+84Linstrom, P. J.; Mallard, W. G. NIST Chemistry Webbook, NIST Standard Reference Database Number 69; http://webbook.nist.gov(accessed February 21, 2017).
+Google Scholar
+85Hindmarsh, A. IMACS Transactions on Scientific Computation 1983, 1, 55– 64
+Google Scholar
+86Boudart, M. Chem. Rev. 1995, 95, 661– 666 DOI: 10.1021/cr00035a009
+Google Scholar
+87Horiuti, J.; Polanyi, M. Trans. Faraday Soc. 1934, 30, 1164 DOI: 10.1039/tf9343001164
+Google Scholar
+88Olsbye, U.; Virnovskaia, A.; Prytz, O.; Tinnemans, S. J.; Weckhuysen, B. M. Catal. Lett. 2005, 103, 143– 148 DOI: 10.1007/s10562-005-6521-7
+Google Scholar
+89Cortright, R. D.; Hill, J. M.; Dumesic, J. A. Catal. Today 2000, 55, 213– 223 DOI: 10.1016/S0920-5861(99)00249-7
+Google Scholar
+90Cortright, R. D.; Levin, P. E.; Dumesic, J. A. Ind. Eng. Chem. Res. 1998, 37, 1717– 1723 DOI: 10.1021/ie970917f
+Google Scholar
+91Biloen, P.; Dautzenberg, F. M.; Sachtler, W. M. H. J. Catal. 1977, 50, 77– 86 DOI: 10.1016/0021-9517(77)90010-0
+Google Scholar
+92Suzuki, I.; Kaneko, Y. J. Catal. 1977, 47, 239– 248 DOI: 10.1016/0021-9517(77)90171-3
+Google Scholar
+93van Sint Annaland, T.; Kuipers, J. A. M.; van Swaaij, W. P. M. Catal. Today 2001, 66, 427– 436 DOI: 10.1016/S0920-5861(00)00640-4
+Google Scholar
+94Marin, G. B.; Beeckman, J. W.; Froment, G. F. J. Catal. 1986, 97, 416– 426 DOI: 10.1016/0021-9517(86)90013-8
+Google Scholar
+95Larsson, M.; Henriksson, N.; Andersson, B. Appl. Catal., A 1998, 166, 9– 19 DOI: 10.1016/S0926-860X(97)00233-0
+Google Scholar
+96Yang, M. L.; Zhu, Y. A.; Fan, C.; Sui, Z. J.; Chen, D.; Zhou, X. G. Phys. Chem. Chem. Phys. 2011, 13, 3257– 3267 DOI: 10.1039/c0cp00341g
+Google Scholar
+97Peng, Z. M.; Somodi, F.; Helveg, S.; Kisielowski, C.; Specht, P.; Bell, A. T. J. Catal. 2012, 286, 22– 29 DOI: 10.1016/j.jcat.2011.10.008
+Google Scholar
+98Sun, P. P.; Siddiqi, G.; Chi, M. F.; Bell, A. T. J. Catal. 2010, 274, 192– 199 DOI: 10.1016/j.jcat.2010.06.017
+Google Scholar
+99Lee, K.; Murray, E. D.; Kong, L. Z.; Lundqvist, B. I.; Langreth, D. C. Phys. Rev. B: Condens. Matter Mater. Phys. 2010, 82, 081101 DOI: 10.1103/PhysRevB.82.081101
+Google Scholar
+100Liu, B.; Cheng, L.; Curtiss, L.; Greeley, J. Surf. Sci. 2014, 622, 51– 59 DOI: 10.1016/j.susc.2013.12.001
+Google Scholar
+101Raybaud, P.; Chizallet, C.; Mager-Maury, C.; Digne, M.; Toulhoat, H.; Sautet, P. J. Catal. 2013, 308, 328– 340 DOI: 10.1016/j.jcat.2013.08.015
+Google Scholar
+102Hook, A.; Massa, J. D.; Celik, F. E. J. Phys. Chem. C 2016, 120, 27307– 27318 DOI: 10.1021/acs.jpcc.6b08407
+Google Scholar
+103Chen, Y.; Vlachos, D. G. J. Phys. Chem. C 2010, 114, 4973– 4982 DOI: 10.1021/jp909163z
+Google Scholar
+104Canduela-Rodriguez, G.; Sabbe, M. K.; Reyniers, M. F.; Joly, J. F.; Marin, G. B. Phys. Chem. Chem. Phys. 2014, 16, 23754– 23768 DOI: 10.1039/C4CP02991G
+Google Scholar
+105Yamauchi, M.; Kobayashi, H.; Kitagawa, H. ChemPhysChem 2009, 10, 2566– 2576 DOI: 10.1002/cphc.200900289
+Google Scholar
+106Fukutani, K.; Itoh, A.; Wilde, M.; Matsumoto, M. Phys. Rev. Lett. 2002, 88, 116101 DOI: 10.1103/PhysRevLett.88.116101
+Google Scholar
+107Saha, A. J. Therm. Anal. Calorim. 2016, 124, 1623– 1634 DOI: 10.1007/s10973-016-5262-8
+Google Scholar
+108Uner, D.; Uner, M. Thermochim. Acta 2005, 434, 107– 112 DOI: 10.1016/j.tca.2005.01.058
+Google Scholar
+109Vasic, D.; Ristanovic, Z.; Pasti, I.; Mentus, S. Russ. J. Phys. Chem. A 2011, 85, 2373– 2379 DOI: 10.1134/S0036024411130334
+Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+6
+Mentioning
+117
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 103 publications.
+Changqing Chu, Baoyu Chen, Yan He, Guiyuan Jiang, Xingying Lan, Shenggang Li, Changning Wu, Daofan Cao. CO2-Assisted Dehydrogenation of Propane by Atomically Dispersed Pt on MXenes. ACS Catalysis 2024, 14 (13) , 9662-9677. https://doi.org/10.1021/acscatal.4c01473
+Longkang Zhang, Xinyu Chen, Yue Ma, Shaojia Song, Hao Xu, Yejun Guan, Weiyu Song, Jiangwei Zhang, Peng Wu. Single Pt Coordinated with Framework Fe in MWW-Type Ferrisilicate toward Efficient Propane Dehydrogenation. ACS Catalysis 2024, 14 (12) , 9431-9439. https://doi.org/10.1021/acscatal.4c02091
+Yu-Ao Huang, Gong Cheng, Ming Lei, Ming-Lei Yang, De Chen, Xing-Gui Zhou, Yi-An Zhu. Decoding the Kinetic Complexity of Pt-Catalyzed n-Butane Dehydrogenation by Machine Learning and Microkinetic Analysis. ACS Catalysis 2024, 14 (10) , 7978-7995. https://doi.org/10.1021/acscatal.4c00864
+Meng Zhang, Haisong Feng, Si Wang, Tianyong Liu, Yuan Deng, Juan Han, Xin Zhang. Screening and Mechanism Exploration of Non-Noble Metal Ni3M Catalysts for Propane Dehydrogenation: The Excellence of Synergistic Effects. The Journal of Physical Chemistry Letters 2024, 15 (14) , 3785-3795. https://doi.org/10.1021/acs.jpclett.4c00683
+Natalie G. Lefton, Alexis T. Bell. Effects of Structure on the Activity, Selectivity, and Stability of Pt-Sn-DeAlBEA for Propane Dehydrogenation. ACS Catalysis 2024, 14 (6) , 3986-4000. https://doi.org/10.1021/acscatal.3c06047
+Antoni Salom-Català, Evgenii Strugovshchikov, Kamila Kaźmierczak, Daniel Curulla-Ferré, Josep M. Ricart, Jorge J. Carbó. Reactive Force Field Development for Propane Dehydrogenation on Platinum Surfaces. The Journal of Physical Chemistry C 2024, 128 (7) , 2844-2855. https://doi.org/10.1021/acs.jpcc.3c07126
+Yicong Chai, Shunhua Chen, Yang Chen, Fenfei Wei, Liru Cao, Jian Lin, Lin Li, Xiaoyan Liu, Sen Lin, Xiaodong Wang, Tao Zhang. Dual-Atom Catalyst with N-Colligated Zn1Co1 Species as Dominant Active Sites for Propane Dehydrogenation. Journal of the American Chemical Society 2024, 146 (1) , 263-273. https://doi.org/10.1021/jacs.3c08616
+Fabio Colasuonno, Martina Lessio. Thermodynamic and Kinetic Insights into Hydrogen Adsorption and Dissociation on the Ru (0001) Surface under STM and Catalytic Conditions. The Journal of Physical Chemistry C 2023, 127 (49) , 23645-23653. https://doi.org/10.1021/acs.jpcc.3c05348
+Bjarne Kreitz, Kento Abeywardane, C. Franklin Goldsmith. Linking Experimental and Ab Initio Thermochemistry of Adsorbates with a Generalized Thermochemical Hierarchy. Journal of Chemical Theory and Computation 2023, 19 (13) , 4149-4162. https://doi.org/10.1021/acs.jctc.3c00112
+Shaojia Song, Yuanqing Sun, Kun Yang, Yumeng Fo, Xiangyang Ji, Hui Su, Zhenxing Li, Chunming Xu, Guoyong Huang, Jian Liu, Weiyu Song. Recent Progress in Metal-Molecular Sieve Catalysts for Propane Dehydrogenation. ACS Catalysis 2023, 13 (9) , 6044-6067. https://doi.org/10.1021/acscatal.3c00816
+Yiyi Xu, Sai Chen, Xin Chang, Xianhui Wang, Guodong Sun, Zhenpu Lu, Zhi-Jian Zhao, Chunlei Pei, Jinlong Gong. Ultrathin TiOx Nanosheets Rich in Tetracoordinated Ti Sites for Propane Dehydrogenation. ACS Catalysis 2023, 13 (9) , 6104-6113. https://doi.org/10.1021/acscatal.3c00818
+Chunguang Dong, Zhuangzhuang Lai, Haifeng Wang. Comprehensive Mechanism and Microkinetic Model-Driven Rational Screening of 3N-Modulated Single-Atom Catalysts for Propane Dehydrogenation. ACS Catalysis 2023, 13 (8) , 5529-5537. https://doi.org/10.1021/acscatal.3c00889
+Ming-Lei Sun, Zhong-Pan Hu, Hao-Yu Wang, Yu-Jun Suo, Zhong-Yong Yuan. Design Strategies of Stable Catalysts for Propane Dehydrogenation to Propylene. ACS Catalysis 2023, 13 (7) , 4719-4741. https://doi.org/10.1021/acscatal.3c00103
+Yilang Liu, Xue Zong, Abhirup Patra, Stavros Caratzoulas, Dionisios G. Vlachos. Propane Dehydrogenation on PtxSny (x, y ≤ 4) Clusters on Al2O3(110). ACS Catalysis 2023, 13 (5) , 2802-2812. https://doi.org/10.1021/acscatal.2c05671
+Xiao Jiang, Bar Mosevitzky Lis, Stephen C. Purdy, Sreya Paladugu, Victor Fung, Wenying Quan, Zhenghong Bao, Weiwei Yang, Yang He, Bobby G. Sumpter, Katharine Page, Israel E. Wachs, Zili Wu. CO2-Assisted Oxidative Dehydrogenation of Propane over VOx/In2O3 Catalysts: Interplay between Redox Property and Acid–Base Interactions. ACS Catalysis 2022, 12 (18) , 11239-11252. https://doi.org/10.1021/acscatal.2c02099
+Guang-Di Wang, Jia-Wei Jiang, Zhi-Jun Sui, Yi-An Zhu, Xing-Gui Zhou. Kinetic Promotion Effect of Hydrogen and Dimethyl Disulfide Addition on Propane Dehydrogenation over the Pt–Sn–K/Al2O3 Catalyst. ACS Omega 2022, 7 (35) , 30773-30781. https://doi.org/10.1021/acsomega.2c01729
+Jinqiu Guo, Mi Peng, Zhimin Jia, Chengyu Li, Hongyang Liu, Hongbo Zhang, Ding Ma. Kinetic Evidence of Most Abundant Surface Intermediates Variation over Ptn and Ptp: Few-Atom Pt Ensembles Enable Efficient Catalytic Cyclohexane Dehydrogenation for Hydrogen Production-II. ACS Catalysis 2022, 12 (12) , 7248-7261. https://doi.org/10.1021/acscatal.2c01420
+Charles Fricke, Biplab Rajbanshi, Eric A. Walker, Gabriel Terejanu, Andreas Heyden. Propane Dehydrogenation on Platinum Catalysts: Identifying the Active Sites through Bayesian Analysis. ACS Catalysis 2022, 12 (4) , 2487-2498. https://doi.org/10.1021/acscatal.1c04844
+Liang Qi, Melike Babucci, Yanfei Zhang, Alicia Lund, Lingmei Liu, Jingwei Li, Yizhen Chen, Adam S. Hoffman, Simon R. Bare, Yu Han, Bruce C. Gates, Alexis T. Bell. Propane Dehydrogenation Catalyzed by Isolated Pt Atoms in ≡SiOZn–OH Nests in Dealuminated Zeolite Beta. Journal of the American Chemical Society 2021, 143 (50) , 21364-21378. https://doi.org/10.1021/jacs.1c10261
+Zhenyu Xie, Ting Zhang, Zhongkui Zhao. Ni Nanoparticles Grown on SiO2 Supports Using a Carbon Interlayer Sacrificial Strategy for Chemoselective Hydrogenation of Nitrobenzene and m-Cresol. ACS Applied Nano Materials 2021, 4 (9) , 9353-9360. https://doi.org/10.1021/acsanm.1c01819
+Ting Zhang, Xinwen Guo, Chunshan Song, Yuefeng Liu, Zhongkui Zhao. Fabrication of Isolated VOx Sites on Alumina for Highly Active and Stable Non-Oxidative Dehydrogenation. The Journal of Physical Chemistry C 2021, 125 (35) , 19229-19237. https://doi.org/10.1021/acs.jpcc.1c04737
+Ranga Rohit Seemakurthi, Griffin Canning, Zhenwei Wu, Jeffrey T. Miller, Abhaya K. Datye, Jeffrey Greeley. Identification of a Selectivity Descriptor for Propane Dehydrogenation through Density Functional and Microkinetic Analysis on Pure Pd and Pd Alloys. ACS Catalysis 2021, 11 (15) , 9588-9604. https://doi.org/10.1021/acscatal.1c01916
+Kazumasa Murata, Natsuki Kurimoto, Yuta Yamamoto, Akira Oda, Junya Ohyama, Atsushi Satsuma. Structure–Property Relationships of Pt–Sn Nanoparticles Supported on Al2O3 for the Dehydrogenation of Methylcyclohexane. ACS Applied Nano Materials 2021, 4 (5) , 4532-4541. https://doi.org/10.1021/acsanm.1c00128
+Tao Wang, Xinjiang Cui, Kirsten T. Winther, Frank Abild-Pedersen, Thomas Bligaard, Jens K. Nørskov. Theory-Aided Discovery of Metallic Catalysts for Selective Propane Dehydrogenation to Propylene. ACS Catalysis 2021, 11 (10) , 6290-6297. https://doi.org/10.1021/acscatal.0c05711
+Drejc Kopač, Damjan Lašič Jurković, Blaž Likozar, Matej Huš. First-Principles-Based Multiscale Modelling of Nonoxidative Butane Dehydrogenation on Cr2O3(0001). ACS Catalysis 2020, 10 (24) , 14732-14746. https://doi.org/10.1021/acscatal.0c03197
+Ling Xiao, Yu-Ling Shan, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Wei-Kang Yuan, Yi-An Zhu. Beyond the Reverse Horiuti–Polanyi Mechanism in Propane Dehydrogenation over Pt Catalysts. ACS Catalysis 2020, 10 (24) , 14887-14902. https://doi.org/10.1021/acscatal.0c03381
+Zheng Lu, Ryon W. Tracy, M. Leigh Abrams, Natalie L. Nicholls, Paul T. Barger, Tao Li, Peter C. Stair, Arrelaine A. Dameron, Christopher P. Nicholas, Christopher L. Marshall. Atomic Layer Deposition Overcoating Improves Catalyst Selectivity and Longevity in Propane Dehydrogenation. ACS Catalysis 2020, 10 (23) , 13957-13967. https://doi.org/10.1021/acscatal.0c03391
+Ningning Kong, Xing Fan, Fangfang Liu, Lu Wang, Haiping Lin, Youyong Li, Shuit-Tong Lee. Single Vanadium Atoms Anchored on Graphitic Carbon Nitride as a High-Performance Catalyst for Non-oxidative Propane Dehydrogenation. ACS Nano 2020, 14 (5) , 5772-5779. https://doi.org/10.1021/acsnano.0c00659
+Tanja Bauer, Sven Maisel, Dominik Blaumeiser, Julia Vecchietti, Nicola Taccardi, Peter Wasserscheid, Adrian Bonivardi, Andreas Görling, Jörg Libuda. Operando DRIFTS and DFT Study of Propane Dehydrogenation over Solid- and Liquid-Supported GaxPty Catalysts. ACS Catalysis 2019, 9 (4) , 2842-2853. https://doi.org/10.1021/acscatal.8b04578
+Diwen Xiao, Xiaodan Li, Jinfu Wang, Tiefeng Wang. DFT Calculations of Hydrogenation of 2(5H)-Furanone over Ni-, Rh-, Pd-, and Pt-Metal Surfaces Considering the Effects of Subsurface H Atoms. The Journal of Physical Chemistry C 2018, 122 (49) , 28182-28191. https://doi.org/10.1021/acs.jpcc.8b09572
+Javier Navarro-Ruiz, Damien Cornu, Núria López. Prevalence of trans-Alkenes in Hydrogenation Processes on Metal Surfaces: A Density Functional Theory Study. The Journal of Physical Chemistry C 2018, 122 (44) , 25339-25348. https://doi.org/10.1021/acs.jpcc.8b06880
+Keith Searles, Ka Wing Chan, Jorge Augusto Mendes Burak, Dmitry Zemlyanov, Olga Safonova, Christophe Copéret. Highly Productive Propane Dehydrogenation Catalyst Using Silica-Supported Ga–Pt Nanoparticles Generated from Single-Sites. Journal of the American Chemical Society 2018, 140 (37) , 11674-11679. https://doi.org/10.1021/jacs.8b05378
+Velina K. Markova, John P. Philbin, Weina Zhao, Alexander Genest, Joaquín Silvestre-Albero, Günther Rupprechter, Notker Rösch. Catalytic Transformations of 1-Butene over Palladium. A Combined Experimental and Theoretical Study. ACS Catalysis 2018, 8 (7) , 5675-5685. https://doi.org/10.1021/acscatal.8b01013
+Tinnakorn Saelee, Supawadee Namuangruk, Nawee Kungwan, Anchalee Junkaew. Theoretical Insight into Catalytic Propane Dehydrogenation on Ni(111). The Journal of Physical Chemistry C 2018, 122 (26) , 14678-14690. https://doi.org/10.1021/acs.jpcc.8b03939
+Zan Lian, Sajjad Ali, TianFu Liu, Chaowei Si, Bo Li, Dang Sheng Su. Revealing the Janus Character of the Coke Precursor in the Propane Direct Dehydrogenation on Pt Catalysts from a kMC Simulation. ACS Catalysis 2018, 8 (5) , 4694-4704. https://doi.org/10.1021/acscatal.8b00107
+Shibo Shao, Ke Wang, Yiming Zhang, Jason B. Love, Zongyang Yue, Wei Li, Liangliang Huang, Yuyin Wang, Xiaokun Yao, Tianxiao Chang, Xianfeng Fan. Photocatalytic conversion of lignin into aromatic monomers with adsorbents of radical species from water dissociation. Chem Catalysis 2024, 4 (8) , 101066. https://doi.org/10.1016/j.checat.2024.101066
+Xiaoming Hu, Mengwen Huang, Tetsuya Kinjyo, Shinya Mine, Takashi Toyao, Yoyo Hinuma, Masaaki Kitano, Toyoto Sato, Norikazu Namiki, Ken-ichi Shimizu, Zen Maeno. Propane dehydrogenation catalysis of group IIIB and IVB metal hydrides. RSC Advances 2024, 14 (32) , 23459-23465. https://doi.org/10.1039/D4RA02473G
+Jungmok Oh, Namgi Jeon, Iljun Chung, Okkyun Seo, Jisu Park, Akhil Tayal, Yongju Yun. P-modified Pt/Al2O3 catalysts for selective propane dehydrogenation. Applied Catalysis A: General 2024, 681 , 119783. https://doi.org/10.1016/j.apcata.2024.119783
+Shunhua Chen, Yicong Chai, Yang Chen, Fenfei Wei, Xiaoli Pan, Jian Lin, Sen Lin. Peripheral P doping in Zn1/NC single-atom catalyst to enhance propane dehydrogenation reaction. Chemical Engineering Science 2024, 291 , 119919. https://doi.org/10.1016/j.ces.2024.119919
+Jörn H. Matthies, Daniel Dittmann, Michael Dyballa, Ute Tuttlies, Ulrich Nieken. Investigation of Aging Mechanism of Pt‐ZSM‐5 Catalysts for Non‐Oxidative Propane Dehydrogenation. Chemie Ingenieur Technik 2024, 96 (6) , 850-863. https://doi.org/10.1002/cite.202300167
+Hong-Yan Ma, Gui-Chang Wang. Propane dehydrogenation over Pd-Bi intermetallic compounds: A DFT combined with microkinetic modeling study. Molecular Catalysis 2024, 563 , 114253. https://doi.org/10.1016/j.mcat.2024.114253
+Dong Gyun Kang, Yeonsu Kwak, Seongeun Moon, Woo Jong Jeong, Safira Ramadhani, Suk Woo Nam, Hyangsoo Jeong, Hyuntae Sohn, Young Suk Jo, Chang Won Yoon, Yongmin Kim. Thermally manageable and scalable reactor configurations towards efficient hydrogen release from liquid organic hydrogen carriers. Energy Conversion and Management 2024, 307 , 118345. https://doi.org/10.1016/j.enconman.2024.118345
+Robert Baumgarten, Piyush Ingale, Fabian Ebert, Aliaksei Mazheika, Esteban Gioria, Katharina Trapp, Kevin D. Profita, Raoul Naumann d'Alnoncourt, Matthias Driess, Frank Rosowski. Controlling the Coke Formation in Dehydrogenation of Propane by Adding Nickel to Supported Gallium Oxide. ChemCatChem 2024, 16 (8) https://doi.org/10.1002/cctc.202301261
+Guodong Sun, Zhi-Jian Zhao, Lulu Li, Chunlei Pei, Xin Chang, Sai Chen, Tingting Zhang, Kaige Tian, Shijia Sun, Lirong Zheng, Jinlong Gong. Metastable gallium hydride mediates propane dehydrogenation on H2 co-feeding. Nature Chemistry 2024, 16 (4) , 575-583. https://doi.org/10.1038/s41557-023-01392-x
+Chunguang Dong, Zhuangzhuang Lai, Haifeng Wang. Design of MoS 2 edge-anchored single-atom catalysts for propane dehydrogenation driven by DFT and microkinetic modeling. Physical Chemistry Chemical Physics 2024, 26 (6) , 5303-5310. https://doi.org/10.1039/D3CP05197H
+Bjarne Kreitz, Katrín Blöndal, Kirk Badger, Richard H. West, C. Franklin Goldsmith. Automatic mechanism generation involving kinetics of surface reactions with bidentate adsorbates. Digital Discovery 2024, 2 https://doi.org/10.1039/D3DD00184A
+Ping Hu, Qing-Yu Chang, Wei Zhang, Ming-Lei Yang, Ming Lei, De Chen, Xing-Gui Zhou, Zhi-Jun Sui, Yi-An Zhu. Dual Pt atoms stabilized by an optimized coordination environment for propane dehydrogenation. Journal of Catalysis 2024, 429 , 115299. https://doi.org/10.1016/j.jcat.2024.115299
+Kaijun Liang, Xuezhi Zeng, Rui Ma, Guojun Zou, Li Dang, Sha Li. A theoretical investigation of propane dehydrogenation on Pt and Ni-based alloys. Journal of Catalysis 2023, 428 , 115162. https://doi.org/10.1016/j.jcat.2023.115162
+Roghayeh Bardool, David P. Dean, Hien N. Pham, Abhaya K. Datye, Sona Raeissi, Mohammad Reza Rahimpour, Jeffery T. Miller. Secondary reactions of propylene on Ga/γ-Al2O3 propane dehydrogenation catalysts. Journal of Catalysis 2023, 428 , 115201. https://doi.org/10.1016/j.jcat.2023.115201
+Zahraa Al-Auda, Keith L. Hohn. Theoretical Study of Methane Dissociation on Pt(111) Surface Using Density Functional Theory (DFT) Calculations. Bulletin of Chemical Reaction Engineering & Catalysis 2023, 18 (3) , 499-505. https://doi.org/10.9767/bcrec.19788
+Yeonsu Kwak, Cong Wang, Chaitanya A. Kavale, Kewei Yu, Esun Selvam, Reyes Mallada, Jesus Santamaria, Ignacio Julian, Jose M. Catala-Civera, Himanshu Goyal, Weiqing Zheng, Dionisios G. Vlachos. Microwave-assisted, performance-advantaged electrification of propane dehydrogenation. Science Advances 2023, 9 (37) https://doi.org/10.1126/sciadv.adi8219
+Daniel Arribas, Víctor Villalobos-Vilda, Ezequiel Tosi, Paolo Lacovig, Alessandro Baraldi, Luca Bignardi, Silvano Lizzit, José Ignacio Martínez, Pedro Luis de Andres, Alejandro Gutiérrez, José Ángel Martín-Gago, Pablo Merino. In situ observation of the on-surface thermal dehydrogenation of n -octane on Pt(111). Nanoscale 2023, 15 (35) , 14458-14467. https://doi.org/10.1039/D3NR02564K
+Tatsuki Tomono, Riku Takamura, Miru Yoshida-Hirahara, Tomokazu Yamamoto, Syo Matsumura, Hideki Kurokawa, Hitoshi Ogihara. Dehydrogenative coupling of methane over Pt/Al 2 O 3 catalysts: effect of hydrogen co-feeding. Catalysis Science & Technology 2023, 13 (16) , 4656-4664. https://doi.org/10.1039/D3CY00612C
+Mingyuan Shao, Yang Song, Chaoquan Hu, Xuebing Xu, Chang Li. Design of PtM (M = Ru, Au, or Sn) bimetallic particles supported on TS-1 for the direct dehydrogenation of n-butane. Fuel 2023, 341 , 127630. https://doi.org/10.1016/j.fuel.2023.127630
+Ryan Alcala, David P. Dean, Isha Chavan, Che-Wei Chang, Brandon Burnside, Hien N. Pham, Eric Peterson, Jeffrey T. Miller, Abhaya K. Datye. Strategies for regeneration of Pt-alloy catalysts supported on silica for propane dehydrogenation. Applied Catalysis A: General 2023, 658 , 119157. https://doi.org/10.1016/j.apcata.2023.119157
+Brandon C. Bukowski, Stephen C. Purdy, Evan C. Wegener, Zhenwei Wu, A. Jeremy Kropf, Guanghui Zhang, Jeffrey T. Miller, Jeffrey Greeley. Intermetallic alloy structure–activity descriptors derived from inelastic X-ray scattering. Physical Chemistry Chemical Physics 2023, 25 (16) , 11216-11226. https://doi.org/10.1039/D3CP00330B
+Seokhyun Choung, Yoonho Kim, Jinuk Moon, Jangeon Roh, Jinwoo Hwang, Jeong Woo Han. Unveiling the catalyst deactivation mechanism in the non-oxidative dehydrogenation of light alkanes on Rh(111): Density functional theory and kinetic Monte Carlo study. Catalysis Today 2023, 411-412 , 113819. https://doi.org/10.1016/j.cattod.2022.06.034
+Wenyi Bian, Xueli Shen, Huang Tan, Xing Fan, Yunxia Liu, Haiping Lin, Youyong Li. The triggering of catalysis via structural engineering at atomic level: Direct propane dehydrogenation on Fe-N3P-C. Chinese Chemical Letters 2023, 34 (3) , 107289. https://doi.org/10.1016/j.cclet.2022.03.012
+Yingke Yang, Ruru Song, Xing Fan, Yunxia Liu, Ningning Kong, Haiping Lin, Youyong Li. A mechanistic study of selective propane dehydrogenations on MoS2 supported single Fe atoms. Chinese Chemical Letters 2023, 34 (2) , 107257. https://doi.org/10.1016/j.cclet.2022.02.062
+广 洪. Advances in Catalysts for CO2 Oxidation of Propane. Material Sciences 2023, 13 (12) , 1124-1135. https://doi.org/10.12677/MS.2023.1312125
+Zhengwen Li, Jingpeng Zhang, Jiaming Tian, Kai Feng, Zhao Jiang, Binhang Yan. Unveiling the origin of enhanced catalytic performance of NiCu alloy for semi-hydrogenation of acetylene. Chemical Engineering Journal 2022, 450 , 138244. https://doi.org/10.1016/j.cej.2022.138244
+W.X. Zhang, J.Q. Guo, H.Y. Ma, J.R. Wen, C. He. Anchoring of transition metals to CN as efficient single-atom catalysts for propane dehydrogenation. Chemical Physics Letters 2022, 809 , 140154. https://doi.org/10.1016/j.cplett.2022.140154
+Junwei Wu, Guofeng Zhao, Min Song, Huimin Wang, Yan Wei, Xuejiao Chen, Guanying Wang, Zifeng Yan. Nanosheets-stacked Al2O3-flower anchoring Pt catalyst for intensified ethylene production from ethane dehydrogenation. Fuel 2022, 329 , 125381. https://doi.org/10.1016/j.fuel.2022.125381
+Camilla Brencio, Luca Di Felice, Fausto Gallucci. Fluidized Bed Membrane Reactor for the Direct Dehydrogenation of Propane: Proof of Concept. Membranes 2022, 12 (12) , 1211. https://doi.org/10.3390/membranes12121211
+Evgeniy A. Redekop, Hilde Poelman, Matthias Filez, Ranjith K. Ramachandran, Jolien Dendooven, Christophe Detavernier, Guy B. Marin, Unni Olsbye, Vladimir V. Galvita. Aligning time-resolved kinetics (TAP) and surface spectroscopy (AP-XPS) for a more comprehensive understanding of ALD-derived 2D and 3D model catalysts. Faraday Discussions 2022, 236 , 485-509. https://doi.org/10.1039/D1FD00120E
+Sajjad Rimaz, Mohammadreza Kosari, Luwei Chen, Shibo Xi, Antonio Monzón, Sibudjing Kawi, Armando Borgna. Insights into catalyst structure, kinetics and reaction mechanism during propane dehydrogenation on Pt-Ge bimetallic catalysts. Applied Catalysis A: General 2022, 643 , 118751. https://doi.org/10.1016/j.apcata.2022.118751
+Bipasa Samanta, Ángel Morales-García, Francesc Illas, Nicolae Goga, Juan Antonio Anta, Sofia Calero, Anja Bieberle-Hütter, Florian Libisch, Ana B. Muñoz-García, Michele Pavone, Maytal Caspary Toroker. Challenges of modeling nanostructured materials for photocatalytic water splitting. Chemical Society Reviews 2022, 51 (9) , 3794-3818. https://doi.org/10.1039/D1CS00648G
+Cunyuan Gao, Kongshuo Ma, Zhenlu Zhao. Encapsulated NiCo 2 S 4 ‐based straight bamboo‐shaped N‐CNT as efficient and stable oxygen electrocatalysts. Electrochemical Science Advances 2022, 2 (2) https://doi.org/10.1002/elsa.202100034
+Bohan Feng, Yue-Chang Wei, Wei-Yu Song, Chun-Ming Xu. A review on the structure-performance relationship of the catalysts during propane dehydrogenation reaction. Petroleum Science 2022, 19 (2) , 819-838. https://doi.org/10.1016/j.petsci.2021.09.015
+Céline Chizallet. Achievements and Expectations in the Field of Computational Heterogeneous Catalysis in an Innovation Context. Topics in Catalysis 2022, 65 (1-4) , 69-81. https://doi.org/10.1007/s11244-021-01489-y
+Drejc Kopač, Blaž Likozar, Matej Huš. Metal-doped Cr2O3 as a catalyst for non-oxidative propane and butane dehydrogenation: A multiscale kinetic study. Applied Surface Science 2022, 575 , 151653. https://doi.org/10.1016/j.apsusc.2021.151653
+Ling Xiao, Ping Hu, Zhi-Jun Sui, De Chen, Xing-Gui Zhou, Wei-Kang Yuan, Yi-An Zhu. Rational design of intermetallic compound catalysts for propane dehydrogenation from a descriptor-based microkinetic analysis. Journal of Catalysis 2021, 404 , 32-45. https://doi.org/10.1016/j.jcat.2021.09.008
+Hongjun Park, Hanyoung Park, Jeong-Chul Kim, Minkee Choi, Jeong Young Park, Ryong Ryoo. Sodium-free synthesis of mesoporous zeolite to support Pt-Y alloy nanoparticles exhibiting high catalytic performance in propane dehydrogenation. Journal of Catalysis 2021, 404 , 760-770. https://doi.org/10.1016/j.jcat.2021.09.011
+Chombongkot Sricharoen, Bunjerd Jongsomjit, Joongjai Panpranot, Piyasan Praserthdam. The key to catalytic stability on sol–gel derived SnOx/SiO2 catalyst and the comparative study of side reaction with K-PtSn/Al2O3 toward propane dehydrogenation. Catalysis Today 2021, 375 , 343-351. https://doi.org/10.1016/j.cattod.2020.05.053
+Hilal Ezgi Toraman, Konstantinos Alexopoulos, Su Cheun Oh, Sichao Cheng, Dongxia Liu, Dionisios G. Vlachos. Ethylene production by direct conversion of methane over isolated single active centers. Chemical Engineering Journal 2021, 420 , 130493. https://doi.org/10.1016/j.cej.2021.130493
+Yeonsu Kwak, Jaewon Kirk, Seongeun Moon, Taeyoon Ohm, Yu-Jin Lee, Munjeong Jang, La-Hee Park, Chang-il Ahn, Hyangsoo Jeong, Hyuntae Sohn, Suk Woo Nam, Chang Won Yoon, Young Suk Jo, Yongmin Kim. Hydrogen production from homocyclic liquid organic hydrogen carriers (LOHCs): Benchmarking studies and energy-economic analyses. Energy Conversion and Management 2021, 239 , 114124. https://doi.org/10.1016/j.enconman.2021.114124
+Tao Wang, Frank Abild-Pedersen. Identifying factors controlling the selective ethane dehydrogenation on Pt-based catalysts from DFT based micro-kinetic modeling. Journal of Energy Chemistry 2021, 58 , 37-40. https://doi.org/10.1016/j.jechem.2020.09.034
+Simon Büchele, Guido Zichittella, Spyridon Kanatakis, Sharon Mitchell, Javier Pérez‐Ramírez. Impact of Heteroatom Speciation on the Activity and Stability of Carbon‐Based Catalysts for Propane Dehydrogenation. ChemCatChem 2021, 13 (11) , 2599-2608. https://doi.org/10.1002/cctc.202100208
+Yihu Dai, Xing Gao, Qiaojuan Wang, Xiaoyue Wan, Chunmei Zhou, Yanhui Yang. Recent progress in heterogeneous metal and metal oxide catalysts for direct dehydrogenation of ethane and propane. Chemical Society Reviews 2021, 50 (9) , 5590-5630. https://doi.org/10.1039/D0CS01260B
+Yalan Wang, Ping Hu, Jia Yang, Yi-An Zhu, De Chen. C–H bond activation in light alkanes: a theoretical perspective. Chemical Society Reviews 2021, 50 (7) , 4299-4358. https://doi.org/10.1039/D0CS01262A
+Tao Wang, Guomin Li, Xinjiang Cui, Frank Abild-Pedersen. Identification of earth-abundant materials for selective dehydrogenation of light alkanes to olefins. Proceedings of the National Academy of Sciences 2021, 118 (11) https://doi.org/10.1073/pnas.2024666118
+Sai Chen, Xin Chang, Guodong Sun, Tingting Zhang, Yiyi Xu, Yang Wang, Chunlei Pei, Jinlong Gong. Propane dehydrogenation: catalyst development, new chemistry, and emerging technologies. Chemical Society Reviews 2021, 50 (5) , 3315-3354. https://doi.org/10.1039/D0CS00814A
+Yihu Dai, Yue Wu, Hua Dai, Xing Gao, Suyang Tian, Jingjing Gu, Xianfeng Yi, Anmin Zheng, Yanhui Yang. Effect of coking and propylene adsorption on enhanced stability for Co2+-catalyzed propane dehydrogenation. Journal of Catalysis 2021, 395 , 105-116. https://doi.org/10.1016/j.jcat.2020.12.021
+Yueyue Jiao, Huan Ma, Hui Wang, Yong-Wang Li, Xiao-Dong Wen, Haijun Jiao. Interactive network of the dehydrogenation of alkanes, alkenes and alkynes – surface carbon hydrogenative coupling on Ru(111). Catalysis Science & Technology 2021, 11 (1) , 191-210. https://doi.org/10.1039/D0CY02055A
+Sibao Liu, Bofeng Zhang, Guozhu Liu. Metal-based catalysts for the non-oxidative dehydrogenation of light alkanes to light olefins. Reaction Chemistry & Engineering 2021, 6 (1) , 9-26. https://doi.org/10.1039/D0RE00381F
+Toyese Oyegoke, Fadimatu Nyako Dabai, Adamu Uzairu, Baba El-Yakubu Jibril. Mechanistic insight into propane dehydrogenation into propylene over chromium (III) oxide by cluster approach and Density Functional Theory calculations. European Journal of Chemistry 2020, 11 (4) , 342-350. https://doi.org/10.5155/eurjchem.11.4.342-350.2045
+Prakash Natarajan, Hassnain Abbas Khan, Ahsan Jaleel, Dae Sung Park, Dong-Chang Kang, Sungho Yoon, Kwang-Deog Jung. The pronounced effect of Sn on RhSn catalysts for propane dehydrogenation. Journal of Catalysis 2020, 392 , 8-20. https://doi.org/10.1016/j.jcat.2020.09.016
+Guangjian Wang, Kai Lu, Chaoqun Yin, Fanfei Meng, Qinqin Zhang, Xinlong Yan, Liancheng Bing, Fang Wang, Dezhi Han. One-Step Fabrication of PtSn/γ-Al2O3 Catalysts with La Post-Modification for Propane Dehydrogenation. Catalysts 2020, 10 (9) , 1042. https://doi.org/10.3390/catal10091042
+Jinwoong Nam, Fuat E. Celik. Effect of Tin in the Bulk of Platinum–Tin Alloys for Ethane Dehydrogenation. Topics in Catalysis 2020, 63 (7-8) , 700-713. https://doi.org/10.1007/s11244-020-01297-w
+Huanling Zhang, Kai Zhang, Guowei Wang, Shan Zhang, Xiaolin Zhu, Chunyi Li, Honghong Shan. Factors influencing 1,3-butadiene formation for light alkane dehydrogenation. Journal of the Taiwan Institute of Chemical Engineers 2020, 113 , 187-197. https://doi.org/10.1016/j.jtice.2020.08.009
+Qing‐Yu Chang, Kai‐Qi Wang, Ping Hu, Zhi‐Jun Sui, Xing‐Gui Zhou, De Chen, Wei‐Kang Yuan, Yi‐An Zhu. Dual‐function catalysis in propane dehydrogenation over Pt 1 –Ga 2 O 3 catalyst: Insights from a microkinetic analysis. AIChE Journal 2020, 66 (7) https://doi.org/10.1002/aic.16232
+Hikaru Saito, Yasushi Sekine. Catalytic conversion of ethane to valuable products through non-oxidative dehydrogenation and dehydroaromatization. RSC Advances 2020, 10 (36) , 21427-21453. https://doi.org/10.1039/D0RA03365K
+Stephen C. Purdy, Ranga Rohit Seemakurthi, Garrett M. Mitchell, Mark Davidson, Brooke A. Lauderback, Siddharth Deshpande, Zhenwei Wu, Evan C. Wegener, Jeffrey Greeley, Jeffrey T. Miller. Structural trends in the dehydrogenation selectivity of palladium alloys. Chemical Science 2020, 11 (19) , 5066-5081. https://doi.org/10.1039/D0SC00875C
+Chan Wu, Li Wang, Zhourong Xiao, Guozhu Li, Lichang Wang. Effects of van der Waals interactions on the dehydrogenation of n-butane on a Ni(1 1 1) surface. Chemical Physics Letters 2020, 746 , 137299. https://doi.org/10.1016/j.cplett.2020.137299
+Chan Wu, Li Wang, Zhourong Xiao, Guozhu Li, Lichang Wang. Understanding deep dehydrogenation and cracking of n -butane on Ni(111) by a DFT study. Physical Chemistry Chemical Physics 2020, 22 (2) , 724-733. https://doi.org/10.1039/C9CP05022A
+Suresh Avithi Kanniappan, Udaya Bhaskar Reddy Ragula. Effect of Reduction of Pt–Sn/α-Al2O3 on Catalytic Dehydrogenation of Mixed-Paraffin Feed. Catalysts 2020, 10 (1) , 113. https://doi.org/10.3390/catal10010113
+Ling Xiao, Fang Ma, Yi-An Zhu, Zhi-Jun Sui, Jing-Hong Zhou, Xing-Gui Zhou, De Chen, Wei-Kang Yuan. Improved selectivity and coke resistance of core-shell alloy catalysts for propane dehydrogenation from first principles and microkinetic analysis. Chemical Engineering Journal 2019, 377 , 120049. https://doi.org/10.1016/j.cej.2018.09.210
+Tao Tong, Wanjun Guo, Xiaohui Liu, Yong Guo, Chih-Wen Pao, Jeng-Lung Chen, Yongfeng Hu, Yanqin Wang. Dual functions of CoO decoration in PtCo/CeO2 catalysts for the hydrogen-borrowing amination of alcohols to primary amines. Journal of Catalysis 2019, 378 , 392-401. https://doi.org/10.1016/j.jcat.2019.08.024
+Zhong-Pan Hu, Dandan Yang, Zheng Wang, Zhong-Yong Yuan. State-of-the-art catalysts for direct dehydrogenation of propane to propylene. Chinese Journal of Catalysis 2019, 40 (9) , 1233-1254. https://doi.org/10.1016/S1872-2067(19)63360-7
+Zhikang Xu, Rui Xu, Yuanyuan Yue, Pei Yuan, Xiaojun Bao, Edy Abou-Hamad, Jean-Marie Basset, Haibo Zhu. Bimetallic Pt-Sn nanocluster from the hydrogenolysis of a well-defined surface compound consisting of [( AlO )Pt(COD)Me] and [( AlO )SnPh3] fragments for propane dehydrogenation. Journal of Catalysis 2019, 374 , 391-400. https://doi.org/10.1016/j.jcat.2019.04.035
+Load all citations
+Download PDF
+Get e-Alerts
+ACS Catalysis
+Cite this: ACS Catal. 2017, 7, 11, 7495–7508
+https://doi.org/10.1021/acscatal.7b01584
+Published September 15, 2017
+Copyright © 2017 American Chemical Society
+Request reuse permissions
+Article Views
+5654
+Altmetric
+3
+Citations
+103
+Learn about these metrics
+Recommended Articles
+Size Dependence of Pt Catalysts for Propane Dehydrogenation: from Atomically Dispersed to Nanoparticles
+October 21, 2020ACS Catalysis
+Wei Zhang, Haizhi Wang, Jiawei Jiang, Zhijun Sui*, Yian Zhu, 
+Catalytic Dehydrogenation of Light Alkanes on Metals and Metal Oxides
+August 27, 2014Chemical Reviews
+Jesper J. H. B. Sattler, Javier Ruiz-Martinez, Eduardo Santillan-Jimenez
+Show more
+recommended articles
+Figures
+References
+Supporting Info
+Abstract
+Figure 1
+Figure 1. Simplified reaction scheme for propane dehydrogenation showing only the reaction steps with a turnover frequency >23 s–1 and the coke formation reaction (35) (discussed in section 4) (for θH,0 = 0). Calculated thermodynamic and kinetic data can be retrieved in Table 1. “phys” stands for the physisorbed species. The species that provide the link between the top and the bottom schemes are shown in boxes.
+Figure 2
+Figure 2. Selectivity toward C3H6, CH4, C2H6, and C2H4 as a function of propane conversion for the simulation at low H coverage. At a conversion of 11.5% (vertical gray line) a catalyst mass of 2.94 × 10–5 g is used. At this point the selectivity toward C3H6 is 74%, to CH4 11%, to C2H6 7%, and to C2H4 8%.
+Figure 3
+Figure 3. Site time yields (STY) of C3H6 (maximum shown with ●), CH4, C2H6, and C2H4 as a function of H2/C3H8 ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) performed at low H coverage. Input conditions as given in Table 2 are used.
+Figure 4
+Figure 4. Most important coverages (total coverage, H, CCH3, CH, and amount of free sites in percent) as a function of H2/C3H8 inlet ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) at low H coverage. Input conditions as given in Table 2 are used.
+Figure 5
+Figure 5. Equilibrium composition (vol % C3H6) and simulated reactor outlet composition as a function of H2/C3H8 ratio for the simulation with a catalyst mass of 2.94 × 10–5 g (11.5% conversion at H2/C3H8 = 1.25) at low H coverage. Input conditions as given in Table 2 are used.
+Figure 6
+Figure 6. Rate of production analysis for the simulation (H2/C3H8 inlet ratio = 1.25) under reactor outlet conditions (pressures of 0.17 bar of C3H8, 0.26 bar of H2, 0.02 bar of C3H6, 2.81 × 10–3 bar of C2H4, 7.18 × 10–3 bar of CH4, and 2.37 × 10–3 bar of C2H4) for the reaction network until the most important coke precursors, i.e., methylidyne (CH) and ethylidyne (CCH3), are formed (for the simulation at low H coverage). The direction of the arrow indicates the net direction in which the reversible elementary reaction steps proceed, while the thickness indicates the relative value of the TOF. The reaction arrow of the RDS for propene formation is crossed with a “V”. The percentages next to every arrow indicate the TOF expressed as a the percentage of the net propane adsorption rate. The gas-phase species and coke are shown in gray boxes.
+Figure 7
+Figure 7. Site time yields of C3H6 (maximum shown with ●), CH4, C2H6, and C2H4 as a function of H2/C3H8 ratio for the coverage-dependent simulation with a catalyst mass of 9.09 × 10–5 g corresponding to a conversion of 11.5% at H2/C3H8 = 1.25. Input conditions as given in Table 2 are used.
+Figure 8
+Figure 8. Most important coverages (total coverage, H, CCH3, CH3, and amount of free sites in %) as a function of H2/C3H8 inlet ratios for the coverage-dependent simulation with a catalyst mass of 9.09 × 10–5 (11.5% conversion at H2/C3H8 = 1.25). Input conditions as given in Table 2 are used.

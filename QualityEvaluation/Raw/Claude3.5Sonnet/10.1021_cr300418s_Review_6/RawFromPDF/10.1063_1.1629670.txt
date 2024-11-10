@@ -1,0 +1,1753 @@
+On-the-fly ab initio trajectory calculations of the dynamics of Cl atom reactions with
+methane, ethane and methanol
+Svemir Rudić, Craig Murray, Jeremy N. Harvey, and Andrew J. Orr-Ewing 
+ 
+Citation: The Journal of Chemical Physics 120, 186 (2004); doi: 10.1063/1.1629670 
+View online: http://dx.doi.org/10.1063/1.1629670 
+View Table of Contents: http://scitation.aip.org/content/aip/journal/jcp/120/1?ver=pdfcov 
+Published by the AIP Publishing 
+ 
+Articles you may be interested in 
+Imaging the dynamics of chlorine atom reactions with alkenes 
+J. Chem. Phys. 133, 074306 (2010); 10.1063/1.3473049 
+ 
+Ab initio and direct dynamics study of the reaction of Cl atoms with HOCO 
+J. Chem. Phys. 129, 064301 (2008); 10.1063/1.2965523 
+ 
+Ab initio, kinetics, and dynamics study of Cl + CH 4 → HCl + CH 3 
+J. Chem. Phys. 117, 5730 (2002); 10.1063/1.1497681 
+ 
+Reaction dynamics of chlorine atom with methane: Dual-level ab initio analytic potential energy surface and
+isotope effects 
+J. Chem. Phys. 111, 6693 (1999); 10.1063/1.480039 
+ 
+Reaction dynamics of atomic chlorine with methane: Importance of methane bending and torsional excitation in
+controlling reactivity 
+J. Chem. Phys. 109, 9719 (1998); 10.1063/1.477642 
+ 
+ 
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+On-the-ﬂy ab initio trajectory calculations of the dynamics of Cl atom
+reactions with methane, ethane and methanol
+Svemir Rudic
+´, Craig Murray, Jeremy N. Harvey,a) and Andrew J. Orr-Ewing
+School of Chemistry, University of Bristol, Cantock’s Close, Bristol BS8 1TS, United Kingdom
+~Received 6 June 2003; accepted 6 October 2003!
+The dynamics of Cl atom reactions with methane, ethane, and methanol have been studied by
+calculation of quasi-classical trajectories, with computation of potential energies and gradients only
+at the geometries through which the trajectories pass. Trajectories were started from the transition
+state, with 2 kcal mol21 of energy given to the mode with an imaginary frequency ~representing the
+reaction coordinate at the transition state! and inclusion of zero-point energy in some or all of the
+remaining vibrational modes. The trajectories were propagated as far as separated products, with the
+majority of potential energy calculations performed at the HF/6-31G level of theory. The rotational
+quantum state population distributions of the HCl products from the reactions of Cl atoms with
+methane, ethane and methanol peaked at J851, 2, and 6, respectively. The calculations thereby
+exhibit somewhat greater rotational excitation than is found experimentally, but correctly describe
+the trend of increasing HCl product rotation for the three respective reactions. In agreement with
+previous observations, only 4% of the energy available to the products of the reaction of Cl atoms
+with methane was channeled into CH3 radical internal energy, and 1% into HCl rotation, with 92%
+ending up as translational energy. For the reaction of Cl atoms with ethane and with methanol, the
+corresponding values for radical internal energy, HCl rotation and product translation are 21, 3, and
+78%, and 46, 13, and 42%, respectively. For the latter two reactions, the radical internal energy is
+mostly accounted for by rotational motion. The clear increase in rotational excitation of the HCl
+products from the Cl atom reaction with methanol is explained in terms of a dipole-dipole
+interaction between the departing polar fragments. A smaller set of more computationally expensive
+trajectory calculations using potentials and gradients from the MP2/6-311G(d,p) level of theory
+were performed for reactions of Cl atoms with methanol, and give results in better agreement with
+experimentally measured HCl rotational excitation, consistent with the model of dipole-induced
+product rotation because the MP2/6-311G(d,p) calculations give smaller dipole moments for both
+products than the HF/6-31G calculations. The calculated angles between the rotational angular
+momentum vectors and recoil velocities of the radical peak sharply at 90° for the reactions of Cl
+atoms with ethane and methanol, but exhibit a much broader distribution for reaction with methane.
+© 2004 American Institute of Physics. @DOI: 10.1063/1.1629670#
+I. INTRODUCTION
+Our previous experimental studies of the dynamics of
+reactions of chlorine atoms with methanol, ethanol, dimethyl
+ether,1,2 and methylamine3 showed that hydrogen abstraction
+from the carbon atom bonded to oxygen or nitrogen gives
+HCl that is signiﬁcantly more rotationally excited than are
+the HCl products of Cl atom reactions with alkanes.4–6 The
+source of this greater HCl rotation was attributed to a dipole-
+dipole interaction between the separating HCl product and
+polar radical co-product. Each reaction pathway exhibits a
+shallow well in the exit valley of the potential energy surface
+~PES! that is, in part, a consequence of this dipole-dipole
+interaction, and which may inﬂuence the reaction dynamics.
+In order to gain further insight into the different dynamics of
+reaction of Cl atoms with alkanes and oxygenated organic
+molecules, we report fully dimensional classical trajectory
+calculations for the reactions of ground vibrational state
+methane, ethane, and methanol, and compare the results with
+available experimental data.
+Theoretical studies of reaction dynamics are an invalu-
+able aide to understanding experimental data, and thereby
+extracting as much insight as possible from the latter. In
+particular, classical ~or quasi-classical! trajectory studies, de-
+spite their known limitations arising from the neglect of most
+quantum effects, are of great worth given their ready visual
+interpretation.7 Traditionally, one of the main hurdles to be
+overcome in applying this classical trajectory method is the
+need to obtain an accurate analytical parametrization of the
+Born–Oppenheimer potential energy surface for the reaction.
+Such parametrizations are complicated, high-dimensional
+functions, so extensive testing and validation is needed to
+check that no important artifacts have been introduced. With
+the increasing power of computers and software, many re-
+cent classical trajectory studies have avoided this parametri-
+zation by computing the potential energy surface and its
+gradient at each trajectory point directly using electronic
+a!Author to whom correspondence should be addressed. Electronic mail:
+jeremy.harvey@bris.ac.uk
+JOURNAL OF CHEMICAL PHYSICS
+VOLUME 120, NUMBER 1
+1 JANUARY 2004
+186
+0021-9606/2004/120(1)/186/13/$22.00
+© 2004 American Institute of Physics
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+structure methods. As discussed below, the computational
+expense
+of
+this
+approach,
+referred
+to
+as
+‘‘direct
+dynamics,’’8,9 does however require a compromise to be
+made between the accuracy of the electronic structure
+method and the number of trajectories propagated.
+The reactions of Cl atoms with both ground and vibra-
+tionally excited methane and ethane have been intensively
+studied both experimentally and theoretically. Ab initio
+calculations10–13 characterized the system energetics and sta-
+tionary points on the ground PES, and predicted the Cl–H–C
+part of the transition state ~TS! to be linear in both reactions.
+Levine and co-workers14 constructed a number of model
+PESs for the Cl1CH4 reaction system and performed a de-
+tailed dynamical study via classical trajectory calculations.
+They found that the essential features of the dynamics are
+insensitive to the level of detail with which the CH3 group is
+described. Reduced-dimensionality quantum scattering cal-
+culations have also been applied to the study of this
+reaction,15–18 and enabled an examination of the effects of
+CH4 bend excitation on the rotational distribution of HCl.19
+Troya
+et al.20
+recently
+reported
+the
+use
+of
+reduced-
+dimensionality quasi-classical trajectory ~QCT! calculations
+on an analytical PES for the Cl1CH4 reaction and, among
+other things, were able to infer HCl ro-vibrational state spe-
+ciﬁc scattering angle distributions. These intensive theoreti-
+cal investigations were stimulated by a series of experimen-
+tal studies of the reaction dynamics4–6,21 in which state-to-
+state differential cross sections and HCl rotational level
+population distributions were measured. The HCl proved to
+be very rotationally cold in all studied reactions of Cl atoms
+with alkanes. The ﬁrst studies concluded that, for both the
+reactions of methane and ethane, only a small fraction of the
+available energy was released as internal energy of the radi-
+cal
+(CH3
+or
+C2H5)
+product,5,6
+although
+recent
+re-
+investigation by Brouard and co-workers questions this out-
+come for the ethane reaction.22
+The potential energy surfaces for reactions of Cl atoms
+with CH4 , C2H6 and CH3OH are qualitatively similar, with
+weak encounter complexes on both the reactant and product
+sides of the low-lying C–H abstraction TS. Figure 1 shows
+the energetics of these stationary points, calculated at the
+G2//MP2/6-311G(d,p) level of ab initio electronic structure
+theory.1 The geometry of the TS in all three cases exhibits a
+near-linear C–H–Cl conﬁguration. The van der Waals wells
+associated with the encounter complexes are so shallow in
+the case of the methane and ethane surfaces that they are
+expected to have no impact upon the dynamics, which
+should therefore be direct. Calculations of stationary point
+energies and geometries for the reaction of Cl atoms with
+methanol demonstrate that reaction proceeds along a mini-
+mum energy pathway that incorporates lower energy pre-
+and post-transition state intermediate complexes,1,23 bound
+by 24.64 and 29.64 kcal mol21, respectively, relative to the
+reagent energies. The differential cross sections reported by
+Ahmed et al.24 from crossed molecular beams and velocity
+map imaging experiments showed scattering that is predomi-
+nantly in the backward/sideways direction, suggesting direct
+~despite the potential wells! rebound dynamics, but recent
+experiments from Kitsopoulos and co-workers demonstrate
+that there is also a strong forward scattered component.25
+In the present study, we have carried out initial ab initio
+characterization of the reactions of Cl atoms with methane,
+ethane and methanol by calculating the energetics, geom-
+etries and vibrational frequencies of reagents, molecular
+complexes, transition states and products at various levels of
+electronic structure theory. A direct dynamics, ‘‘on-the-ﬂy’’
+QCT study of the post-transition state dynamics was then
+carried out using potential energies and gradients computed
+both at the HF/6-31G and MP2/6-311G(d,p) levels, avoid-
+ing the need to construct global PESs or to invoke reduced
+dimensionality approximations for the dynamics. From
+batches of hundreds or thousands of trajectories, HCl and
+radical product rotational angular momentum distributions,
+energy partitioning, and vector correlations for each system
+were derived, and the results are compared with previous
+experimental and theoretical studies. The values of the cal-
+culated dipole moments of the HCl and radical products de-
+pend markedly upon the level of theory used, and are seen to
+correlate well with the calculated degree of HCl rotational
+excitation.
+II. METHODS OF CALCULATION
+Ab initio electronic structure calculations were per-
+formed at several levels of theory to optimize geometries and
+energies and calculate zero-point harmonic vibrational fre-
+quencies in order to characterize stationary points ~reagents,
+molecular complexes, transition states and products! on the
+PESs of the systems studied. At the lowest level of theory
+employed, closed and open shell species were calculated us-
+ing restricted and restricted-open-shell Hartree–Fock ~RHF
+and ROHF! self-consistent ﬁeld ~SCF! wave functions, re-
+spectively, with the 6-31G basis set. The stationary points
+were also characterized in the same way ~geometry optimi-
+zation and zero-point harmonic frequency calculation! with
+the inclusion of electron correlation using second-order
+Møller–Plesset perturbation theory ~MP2! and a larger
+FIG. 1. Energies of the stationary points along the reaction coordinates for
+the reactions of Cl atoms with CH4 , C2H6, and CH3OH, calculated at the
+G2//MP2/6-311G(d,p) level of theory. The inset shows the optimized ge-
+ometry of the Cl–H–CH2OH transition state, calculated at the MP2/
+6-311G(d,p) level of theory. The vectors of the vibrational mode with
+imaginary frequency are shown, and bond lengths and angles are given in Å
+and degrees.
+187
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+6-311G(d,p) basis set. For these calculations, an unre-
+stricted Hartree–Fock reference was used, and the core elec-
+trons
+~C
+and
+O 1s,
+Cl 1s2s2p)
+were
+not
+correlated
+@UMP2~FC! calculations#. The single point energies were
+further reﬁned using a variation of the composite G2
+method,26,27 termed G2//MP2/6-311G(d,p). All HF/6-31G
+calculations were performed using GAMESS-USA28 while the
+GAUSSIAN 98 package29 was used for MP2/6-311G(d,p) and
+G2 level calculations.
+The on-the-ﬂy trajectory calculations require computa-
+tion of potential energies and gradients along all coordinates,
+calculated for every geometry sampled by each trajectory in
+passing from the starting point to the separated products. The
+trajectories are computationally intensive ~in total, our calcu-
+lations used more than 2 years of CPU time! and thus a
+balance must be struck between the level of theory used for
+ab initio calculations and the overall accuracy of the results.
+Two levels of electronic structure theory calculation were
+used to test the dependence of the outcomes of the trajecto-
+ries on the accuracy of the ab initio energetics and structures.
+In the more computationally economic and thus much faster
+calculations, HF/6-31G calculations were used, and these
+were
+tested
+against
+calculations
+performed
+at
+the
+MP2/6-311G(d,p) level of theory. All calculations neglect
+any effects of spin-orbit splitting in the Cl atoms, and all
+were performed on a Beowulf cluster of 45 networked, dual-
+processor ~1.8 GHz, 1 Gb RAM per node! personal comput-
+ers ~PCs!.
+The use of HF and MP2 level theory in direct dynamics
+calculations of chemical processes has some precedent.30–32
+For example, an HF direct dynamics study of product state
+distributions in photodissociation of formaldehyde33 gave
+reasonable agreement with experiment even though the HF
+level exaggerated the relevant barrier height ~as happens
+here, too—see below!. In a later study,34 more expensive
+MP2/6-311G(d,p) calculations were used for the potential
+energy surface, and improved results were obtained. One
+way to obtain accurate barrier heights at a very low compu-
+tational cost is to use semi-empirical electronic structure
+methods, using system-optimized parameters adjusted so as
+to reproduce certain features of the potential energy surface
+calculated at a high level of theory.35 For the formaldehyde
+case, however, it proved difﬁcult to obtain an overall satis-
+factory potential energy surface using this approach and the
+agreement with experiment was in fact poorer than with
+HF.36
+At the HF/6-31G level, batches of 2000 trajectories were
+initiated close to the corresponding transition states ~TS!,
+using the set of initial conditions described below, and inte-
+grated classically, with ab initio calculation of the potential
+and forces carried out at each time step in the propagation.37
+Integration of the classical equations of motion was executed
+by the use of a velocity Verlet algorithm,38 with a time step
+of 0.2 fs, until certain termination criteria had been achieved,
+typically after 1000–2000 steps. A small number of trajecto-
+ries were observed to recross into the reactant region, and
+these were discarded. We note that the use of classical me-
+chanics means that some trajectories can lead to products
+with signiﬁcantly less energy than the nominal ‘‘zero-point’’
+level; such trajectories were however included in all product
+state averages. A successful trajectory was terminated when
+the classical rotational angular momentum of the product
+HCl was stable to better than DJ850.0001 between sequen-
+tial steps and the distance between the Cl and C atoms was at
+least 7 Å, thereby ensuring that the interaction energy of the
+products was negligible. Throughout each trajectory, the total
+energy was conserved to 0.02 mHartree or better.
+Computational
+restrictions
+linked
+with
+unfavorable
+barrier-crossing statistics mean that it is not possible to
+sample the initial conditions for separated reactants. Since
+our main interest is product state distributions, we instead
+use initial conditions approximately representative of barrier-
+crossing events relevant to our, and other, experimental set-
+ups. Typically, hyperthermal chlorine atoms are produced by
+photodissociation, leading to center-of-mass frame colli-
+sional energies of ;6 kcal mol21.1–6 At these energies, and
+given that reaction usually occurs in a direct manner, most of
+the reactive events will occur through the transition state
+with only a moderate amount of vibrational energy in the
+transverse modes, and we therefore chose to include only
+zero-point energy in these modes. The unstudied inﬂuence of
+a pre-reactive complex in the reaction of Cl atoms with
+methanol may be to couple energy into the vibrational levels
+of the transition state. Moreover, certain translational and
+rotational degrees of freedom of the separated reagents for
+all the reactions will evolve into bending modes of the tran-
+sition state orthogonal to the reaction coordinate and may
+result in TS excitation. Our choice of zero-point level start-
+ing conditions should thus be viewed with appropriate cau-
+tion.
+The remaining energy was placed in the reaction coordi-
+nate. Speciﬁcally, computing and diagonalizing the transition
+state Hessian matrix ~at the same level of theory used for
+trajectory propagation! yielded the frequencies and eigenvec-
+tors, and 2 kcal mol21 of kinetic energy was given to the
+system in the direction of the imaginary mode, with the ve-
+locity oriented towards the products. To allow for zero-point
+energy ~ZPE! in the remaining transverse modes, random
+initial displacements and velocities for each vibrational mode
+were
+individually
+selected
+according
+to
+the
+Wigner
+distribution39 of the corresponding ground state harmonic os-
+cillator wave function. Although sampling initial geometries
+through displacement along rectilinear normal mode coordi-
+nates may introduce some total angular momentum, tests
+show that this is small (L'0), and we did not introduce
+additional rotation. Hence, the initial conditions sample only
+the outcome from low impact-parameter, low orbital angular
+momentum collisions. Excess energy of the reagents above
+the barrier height may excite rotational motion of the transi-
+tion state via larger impact parameter collisions, which will
+distribute into product rotation and orbital angular momen-
+tum. We thus highlight a limitation of our current calcula-
+tions that will be addressed in future developments.
+We believe that although all of these choices mean that
+the initial conditions used are not fully representative of the
+experiments, uncertainties concerning the potential energy
+surface are likely to be more important, and the approach
+used here should give at least a reasonable picture of the
+188
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+post-transition state dynamics of the bulk of the observed
+reactive events. The HF calculations give a particularly poor
+description of the energetics of the pre-transition state re-
+gions of the potentials for the various reactions ~vide infra!,
+so it is preferable to select the initial conditions for trajecto-
+ries using considerations based on the post-transition state
+energetics, rather than to duplicate the collision energies of
+the experiments. As is demonstrated later, our choice of start-
+ing kinetic energies results in almost equivalent available
+energies for the products of the three reactions, similar in
+magnitude to the experimental conditions, and thus facili-
+tates intercomparison between the outcomes of the calcula-
+tions and further comparisons with experimental results. We
+note also that the Wigner sampling method used does not
+give a constant energy set of initial conditions. Other meth-
+ods for sampling initial conditions have been described,40
+and allow, e.g., microcanonical ensembles to be obtained,
+and can also enable the total available energy to be distrib-
+uted between the reaction coordinate and the transverse
+modes as in transition state theory. Again, we do not believe
+that these other approaches are clearly superior to those used
+here, given the signiﬁcant inaccuracies in the potential en-
+ergy function.
+In order to examine the inﬂuence of classical sampling
+of the bending motion of the Cl–H–C group in the TS on
+HCl product rotational distributions, a second batch of 2000
+HF/6-31G trajectories was run and analyzed using slightly
+different initial conditions. For these trajectories, the zero-
+point energy was not included for any of the vibrational nor-
+mal modes that upon inspection were found to involve a
+signiﬁcant amount of this type of bending motion. The other
+modes were treated as described above. The constrained vi-
+brational modes of the TS are speciﬁed in Sec. III B. In ad-
+dition, single trajectories were computed from the unique
+starting geometries that arise from having no zero-point mo-
+tion in any of the normal modes of the TSs.
+Quantities of interest were calculated from the coordi-
+nates and velocity vectors of the atoms, furnished by the
+algorithm at the termination of the trajectory. The rotational
+quantum numbers of the HCl and radical fragment were cal-
+culated from their instantaneous coordinates and velocity
+vectors, and quantized by rounding to the nearest integer
+value. The internal ~vibrational! energy of the HCl product is
+treated as the sum of kinetic and potential energy contribu-
+tions. The kinetic fraction is calculated from the components
+of the velocity vectors of the H and Cl atoms along the
+internuclear axis. The potential part is calculated from the
+internuclear separation using a cubic spline ﬁt of the poten-
+tial energy curve of isolated HCl calculated at the same HF
+or MP2 level of theory used to propagate the trajectories.
+The HCl and radical translational energies were calculated
+straightforwardly from the center-of-mass velocity of each,
+and the internal energy of the radical fragment was deter-
+mined by energy conservation. The distributions of angles
+between the calculated vector properties ~HCl and radical
+fragment center-of-mass velocities and classical rotational
+angular momenta! were also evaluated to allow comparison
+with experimentally measured vector correlations.
+To test the effects of the level of ab initio theory used to
+calculate potential energies and gradients on the outcome of
+the dynamics, a smaller batch of 270 trajectories was propa-
+gated for the Cl1CH3OH reaction using MP2/6-311G(d,p)
+rather than HF/6-31G calculations. The starting conditions of
+energies, geometries and frequencies were all calculated at
+the same MP2/6-311G(d,p) level, using the GAUSSIAN 98
+program, with initial sampling carried out over all transverse
+vibrational
+modes. The
+computational
+expense
+of
+the
+MP2/6-311G(d,p) calculations prohibited running a larger
+batch of trajectories—on our system, an individual trajectory
+at this level took approximately 2 days, compared with ;45
+min at the HF/6-31G level.
+III. RESULTS
+A. Energies and geometries
+Table I gives the energies of reagents and transi-
+tion states, deﬁned with respect to the products and
+calculated
+at
+the
+HF/6-31G,
+MP2/6-311G(d,p),
+and
+G2//MP2/6-311G(d,p)
+levels
+of
+theory.
+The
+G2//MP2/6-311G(d,p) calculations involve the standard G2
+method but using a larger basis set than is usual to calculate
+geometries and zero-point energies. The outcomes of the cal-
+culations are compared with experimentally determined exo-
+thermicities. As can be seen, the HF level gives very poor
+agreement with experiment, and with the higher-level calcu-
+lations, for the overall reaction energy and for the height of
+the barrier to forward reaction. This poor behavior was main-
+tained ~or even worsened! by using larger basis sets. How-
+ever, the barrier height to the reverse reaction, that is, the
+energy difference between the TS and the products, while
+still too high, is in better agreement, and this is one of the
+most important factors inﬂuencing the post-barrier dynamics
+TABLE I. Relative energies ~in kcal mol21! with respect to the products
+~taken to have energies of zero! of the reagents and transition states for
+reaction of Cl atoms with methane, ethane, and methanol, calculated at the
+HF/6-31G, MP2/6-311G(d,p), and G2//MP2/6-311G(d,p) levels of theory
+at 0 K. Experimental values of the reaction enthalpies are included for
+comparison. Values without zero-point energy correction are given in paren-
+theses.
+Cl1CH4
+Cl–H–CH3
+HF/6-31G
+220.38
+~226.75!
+9.27
+~6.96!
+MP2/6-311G(d,p)
+22.99
+~28.23!
+4.62
+~3.65!
+G2//MP2/6-311G(d,p)
+21.79
+2.70
+Experimentala
+21.72
+Cl1C2H6
+Cl–H–CH2CH3
+HF/6-31G
+217.72
+~223.81!
+6.96
+~5.23!
+MP2/6-311G(d,p)
+20.41
+~25.67!
+2.01
+~1.25!
+G2//MP2/6-311G(d,p)
+1.64
+0.57
+Experimentala
+22.65
+Cl1CH3OH
+Cl–H–CH2OH
+HF/6-31G
+215.94
+~221.27!
+7.79
+~6.25!
+MP2/6-311G(d,p)
+5.28
+~0.95!
+5.98
+~3.37!
+G2//MP2/6-311G(d,p)
+6.19
+4.16
+Experimentalb
+7.7
+aAt 298 K. See Ref. 48.
+bAt 0 K. See Ref. 1 and references therein.
+189
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+that are our focus of interest. The geometry of the transition
+states is also fairly well described by the HF/6-31G calcula-
+tions ~see below!. These observations, combined with com-
+putational expense considerations, motivated our choice of
+the HF/6-31G method for the bulk of the trajectory calcula-
+tions. As a check of the reliability of the approach, however,
+the outcomes of these trajectories are later compared with
+calculations employing higher level ab initio theory.
+The inset to Fig. 1 shows the optimized geometry of the
+transition state for the reaction of a Cl atom with a methanol
+molecule, calculated at the MP2/6-311G(d,p) level, together
+with the individual atomic velocity vectors for the vibra-
+tional mode with imaginary frequency. The values of impor-
+tant optimized geometrical parameters for the transition
+states of the reactions of Cl atoms with methane, ethane, and
+methanol
+are
+listed
+in
+Table
+II
+for
+HF/6-31G
+and
+MP2/6-311G(d,p) calculations. Comparison of the Cl–H
+and H–C distances at the two levels of theory demonstrates
+that TS geometries at the MP2/6-311G(d,p) level are com-
+puted to be more reactant-like, but the Cl–H–C angle does
+not change signiﬁcantly with method of calculation. Table III
+presents harmonic vibrational frequencies for Cl–H–R (R
+5CH3 ,CH2CH3 ,CH2OH) transition states at both the HF/6-
+31G and MP2/6-311G(d,p) levels of theory. Values of the
+computed imaginary frequencies of the vibrational modes
+along the reaction coordinate differ signiﬁcantly for the two
+methods of calculation. In particular, for the Cl–H–CH2OH
+transition state, the imaginary frequency is almost eight
+times
+bigger
+at
+the
+HF/6-31G
+level
+than
+at
+the
+MP2/6-311G(d,p) level. For all three reactions, the vector
+of the vibrational mode describing the abstraction of the hy-
+drogen atom ~i.e., the reaction coordinate! at the HF/6-31G
+level is directed along the Cl–H–C direction while the re-
+maining hydrogen and nonhydrogenic atoms bonded to the
+carbon atom undergo umbrella mode type vibrations. Calcu-
+lated orientations of the vector corresponding to the reaction
+coordinate at the MP2/6-311G(d,p) level are in good agree-
+ment with the results from the HF calculations, apart from
+the Cl1CH3OH reaction system for which the vector de-
+scribing the abstraction of hydrogen deviates by ;20–25°
+from the Cl–C and H–C lines.
+TABLE II. Values of the most relevant optimized geometrical parameters of the Cl–H–R (R5CH3 , CH2CH3,
+and CH2OH) transition states, calculated at the HF/6-31G and MP2/6-311G(d,p) levels of theory.
+Cl–H–CH3
+Cl–H–CH2CH3
+Cl–H–CH2OH
+HF
+MP2
+HF
+MP2
+HF
+MP2
+R(Cl–H!/Å
+1.49
+1.44
+1.50
+1.46
+1.52
+1.79
+R(H–C!/Å
+1.40
+1.38
+1.39
+1.35
+1.37
+1.16
+/~Cl–H–C!/°
+180.0
+180.0
+179.0
+176.6
+177.1
+173.6
+TABLE III. Vibrational frequencies ~in cm21! for the Cl–H–R (R5CH3 , CH2CH3 and CH2OH) transition
+states, calculated at the HF/6-31G and MP2/6-311G(d,p) levels of theory. Modes with vibrational frequencies
+marked by an asterisk are those that were not given their ZPEs when running batches of trajectories with no
+ZPE in the so-called ‘‘bending modes.’’
+Cl–H–CH3
+Cl–H–CH2CH3
+Cl–H–CH2OH
+HF
+MP2
+HF
+MP2
+HF
+MP2
+n1
+3420.56
+3301.86
+3372.73
+3247.26
+4028.12
+3905.36
+n2
+3420.56
+3301.86
+3290.45
+3188.87
+3414.98
+3205.87
+n3
+3252.31
+3130.74
+3275.79
+3154.93
+3268.62
+3092.04
+n4
+1566.66
+1453.68
+3256.15
+3146.08
+1627.05
+1952.81
+n5
+1566.66
+1453.68
+3180.43
+3066.25
+1458.52
+1515.01
+n6
+1321.86
+1223.89
+1648.50
+1512.37
+1368.79*
+1427.83
+n7
+1129.24*
+945.26
+1638.29
+1499.71
+1261.97*
+1355.34
+n8
+1129.24*
+945.26
+1611.89
+1495.78
+1226.40*
+1308.53
+n9
+471.87
+525.53
+1581.51
+1419.93
+1140.25*
+1147.56
+n10
+459.07*
+352.32
+1351.70
+1249.00
+1122.78*
+1112.50
+n11
+459.06*
+352.32
+1335.86*
+1244.74
+565.54*
+1088.46
+n12
+2121.28i
+1260.30i
+1174.72*
+1094.88
+453.23*
+439.69
+n13
+1165.27*
+1017.16
+353.93*
+165.23
+n14
+1079.04*
+995.40
+146.46*
+66.19
+n15
+928.84*
+826.81
+1885.37i
+246.55i
+n16
+912.34*
+806.84
+n17
+495.05*
+496.26
+n18
+455.37*
+419.21
+n19
+172.97*
+172.08
+n20
+148.25*
+116.76
+n21
+1900.49i
+1102.64i
+190
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+B. Trajectories with HFÕ6-31G potentials
+Trajectories were run for each reaction system using po-
+tential energies and gradients calculated on the ﬂy at the
+HF/6-31G level of theory, with selection of the starting con-
+ditions using three different models for incorporation of the
+vibrational zero-point energy. Two thousand trajectories were
+propagated from the transition state with incorporation of
+zero-point motion and energy in all the vibrational modes
+listed in Table III, and a further 2000 trajectories were com-
+puted with the zero-point energies set to zero in the modes
+marked by asterisks in Table III. These vibrational modes of
+the TS were identiﬁed to contain components of Cl–H–C
+bending motion. Finally, single trajectories were propagated
+from the TS geometry with no ZPE in any vibrational modes
+and a small amount of energy along the reaction coordinate.
+For trajectories with the ZPE included in all vibrational
+modes, more than 95% ﬁnished normally, i.e., they resulted
+in dissociation into HCl and a radical fragment, while the
+remainder recrossed the transition state and reverted back to
+separated reagents. Trajectories for the Cl1CH3OH system
+were started only from the Cl–H–CH2OH transition state,
+from which a methyl hydrogen is abstracted, as the alterna-
+tive channel leading to HCl and a methoxy radical is known
+to be a negligible pathway.41
+The average times for trajectories to complete were
+;190, 210, and 380 fs for Cl atom reaction with methane,
+ethane and methanol, respectively, showing no propensity for
+formation of long-lived complexes. Rotational periods about
+the three principal axes of the Cl–H–CH2OH transition state
+structure were calculated from the computed rotational con-
+stants, and, for a total rotational angular momentum J51,
+the shortest rotational period is 10 ps, decreasing to 1 ps for
+J510. The reaction dynamics are thus best viewed as being
+direct. Sample trajectories representative of each reaction
+were animated to provide a convenient visualization of the
+reaction dynamics.42 The reactions of Cl with CH4 and C2H6
+show no substantial torques in the HCl, and thus little
+asymptotic rotation. For reaction with CH3OH, however, the
+H atom of the nascent HCl molecule can be seen to reorient
+to track the electronegative O atom in the CH2OH fragment,
+as we previously postulated,1,2 and the associated torque
+from an angularly anisotropic post-TS PES induces HCl ro-
+tation as the products begin to separate. The results described
+here, however, concentrate on statistical outcomes for
+batches of trajectories because these can be compared di-
+rectly with experimental measurements.
+Figure 2 shows the computed distributions of HCl prod-
+ucts over rotational quantum states from the reactions of Cl
+atoms with methane, ethane and methanol. The calculated
+distributions are compared with experimental results,1,2,4–6
+with the distributions normalized such that the sums of rela-
+tive populations of J8 levels up to J854, 6, and 11 for the
+methane, ethane and methanol reactions are unity. The
+shapes and widths of the experimental rotational distribu-
+tions are well reproduced by the calculations, but all the
+calculated data show long tails of low population in high J8
+levels that continue, with low probability, as far as J8521
+for the alkane reactions. These very high J8 values are not
+energetically accessible in the experiments. The mean rota-
+tional energies of the HCl products of the reactions between
+Cl atoms and CH4 , C2H6, and CH3OH are calculated from
+the classical angular momenta of the products, with exclu-
+sion of the respective high J8 tails beyond J854, 6, and 11,
+to be ^Erot&542 cm21 (0.12 kcal mol21), 94 cm21 ~0.27
+kcal mol21!, and 400 cm21 ~1.14 kcal mol21!. The respective
+experimental values are 3165 ~Ref. 5, or 59 cm21 from Ref.
+4!, 6965 ~Ref. 1!, and 330629 cm21 ~Ref. 1!, i.e., 0.09
+60.01 ~or 0.17!, 0.2060.1, and 0.9460.08 kcal mol21, re-
+spectively. All further analysis of properties of the batches of
+trajectories excludes those trajectories that produce HCl with
+binned J8 values greater than the chosen maxima speciﬁed
+above to avoid skewing of energy distributions. The theoret-
+ical results calculated at the HF/6-31G level of theory are
+more rotationally excited than the experimental measure-
+ments by 1 to 2 units of J8, but correctly describe the in-
+crease in HCl rotational excitation in going from reaction
+with methane to ethane and methanol. There is excellent,
+quantitative agreement between the calculated and measured
+rotational distributions for the reaction of Cl atoms with
+methanol if the former distribution is shifted down by two
+units of J8. The calculations thus reproduce the width and
+shape of the HCl rotational distribution, but not the mean.
+Trajectories were also initiated with no ZPE in the
+modes identiﬁed by asterisks in Table III ~those modes con-
+taining an element of Cl–H–C bending! at the HF/6-31G
+FIG. 2. Relative populations for HCl product rotational levels with quantum
+number J8, formed from the reaction of Cl atoms with ~a! methane, ~b!
+ethane, and ~c! methanol. The distributions, denoted by d, are calculated at
+the HF/6-31G level of theory, with initial conditions as described in the text.
+In each panel, the on-the-ﬂy trajectory results are compared with experimen-
+tal data taken from ~a! n Ref. 4 and h Ref. 5; ~b! h Ref. 1; and ~c! h Ref.
+1. The computed rotational population distributions are normalized such that
+each sums to unity over the range ~a! J850–4, ~b! J850–6, and ~c! J8
+50–11. The rotational state distribution for HCl products formed from the
+reaction of Cl atoms with methanol, calculated at the MP2/6-311G(d,p)
+level ~s!, is also shown in part ~c!.
+191
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+level. In these calculations, the HCl products from reactions
+of Cl atoms with methane and ethane are mainly produced
+with J850, with the probabilities for higher J8 levels falling
+sharply. No products with J8>3 were observed for the meth-
+ane reaction, or for J8>2 in the ethane reaction. Trajectories
+for the Cl1CH3OH reaction computed with no ZPE in the
+Cl–H–C bending modes gave an HCl product rotational dis-
+tribution which peaks at J857 and has a width of approxi-
+mately 61 units of J8. The maxima of these distributions
+coincide with the HCl J8 values for the single trajectories run
+from ﬁxed TS geometries with no ZPE in any vibrational
+modes, and just 2 kcal mol21 given to the reaction coordi-
+nate. The primary effect of the Cl–H–C bending modes at
+the transition state is to broaden the distribution of HCl ro-
+tational levels populated by the reaction, but in the Cl
+1alkane reactions, a small shift upwards in the maximum of
+the computed distribution by 1 or 2 units of J8 is also ob-
+served.
+Distributions of the total translational energy of the
+products ~i.e., HCl and the radical CH3 , CH2CH3 , or
+CH2OH) are shown in Fig. 3 for trajectories initiated from
+TSs incorporating zero-point motion in all vibrational
+modes. The total translational energy of the HCl1CH3 prod-
+ucts of reaction of Cl atoms with methane has an average
+value of 8.42 kcal mol21 and a FWHM of the calculated
+distribution of 5.65 kcal mol21. The reverse barrier height for
+this reaction, with correction for ZPEs, is 9.27 kcal mol21,
+and 2 kcal mol21 of energy was put into the mode corre-
+sponding to the reaction coordinate. The mean value of the
+total energy available to the products was, however, found to
+be 9.11 kcal mol21 from analysis of successful trajectories.
+This energy is lower than expected from the chosen initial
+conditions, in part because sampling from a Wigner distribu-
+tion does not give a constant energy, but also because the
+zero point energies are computed in a harmonic approxima-
+tion, whereas the potentials for the numerous normal modes
+will be anharmonic. Thus, of the 9.11 kcal mol21 of mean
+available energy, 92% is partitioned on average into transla-
+tional energy of the products, and for the reaction of Cl at-
+oms with ethane, 78% of the 7.70 kcal mol21 mean available
+energy becomes translational energy of the HCl and C2H5
+products. In contrast, for reaction of Cl atoms with methanol,
+the average translational energy of the HCl and CH2OH
+products is computed to be 3.68 kcal mol21, which amounts
+to just 42% of the average available energy of 8.86
+kcal mol21.
+Figure 4 presents HF/6-31G level calculated distribu-
+tions of the internal ~rotational plus vibrational! energies of
+the radical co-products for reactions of Cl atoms with meth-
+ane, ethane and methanol. The respective average energies
+are 4.54, 4.21, and 5.29 kcal mol21 for HCl and 19.86, 41.59,
+and 28.99 kcal mol21 for the radical product. After subtract-
+ing the harmonic ZPE from the HCl ~4.18 kcal mol21! and
+CH3 (19.52 kcal mol21), only 4% of the available energy for
+the Cl1methane reaction goes into HCl internal energy and
+4% into radical internal energy. For the other two reactions,
+the radical internal energy fraction is larger. A small number
+of trajectories deposit energies less than the zero-point en-
+ergy into internal motion because of the use of classical me-
+chanics. Detailed information about the partitioning of avail-
+able energy into HCl rotational and vibrational energy, total
+translational energy and internal energy of the radical for all
+three reactions can be found in Table IV.
+The rotational angular momentum quantum number dis-
+FIG. 3. Total translational energy distributions for the HCl and ~a! CH3 , ~b!
+C2H5, and ~c! CH2OH radical products calculated at the HF/6-31G ~white
+bars! and MP2/6-311G(d,p) ~black bars! levels of theory. The computed
+energies are divided into 1 kcal mol21 wide bins centered at half-integer
+energies.
+FIG. 4. Internal energy distributions of ~a! CH3 , ~b! C2H5, and ~c! CH2OH
+radical
+products
+calculated
+at
+the
+HF/6-31G
+~white
+bars!
+and
+MP2/6-311G(d,p) ~black bars! levels of theory. The computed energies are
+collected into 5 kcal mol21 wide bins.
+192
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+tributions of the radical fragments are shown in Fig. 5, with
+an analysis that rejects the trajectories resulting in highly
+rotationally excited HCl, as described earlier. The C2H5 and
+CH2OH radical rotational distributions have Gaussian-type
+shapes with respective average values of J8525 and 36 and
+full widths at half-maximum of 19 and 17 units of J8. These
+correspond, respectively, to average rotational energies of
+;1.8 and 3.9 kcal mol21. In addition to the calculated prod-
+uct rotational distributions and energy partitioning, vector
+correlations between the product velocities and rotational an-
+gular momenta have been computed. For all three reactions,
+the distributions peak at 90° angles between vHCl and JHCl
+8
+,
+and are very broad, with respective FWHM of 54°, 56°, and
+75° for the methane, ethane, and methanol reactions. Rakitzis
+et al.43 measured the rotational alignment of DCl(v850,
+J851) from the reactions of Cl atoms with CD4 and C2D6
+and explained the results in terms of preferential angular mo-
+mentum polarization perpendicular to the DCl recoil velocity
+direction (Cl1CD4) and the Cl to C atom line of centers
+(Cl1C2D6). The different reference directions were argued
+to arise from the relatively late and early transition states for
+the two reactions. Our calculations are not directly compa-
+rable because trajectories are initiated only from low impact
+parameter geometries ~with respect to the Cl–H–C part of
+the transition state!, but the line of centers and the HCl rela-
+tive velocity vectors coincide to within 20° so results are in
+reasonable agreement with experiments. The DCl from reac-
+tion of Cl with C2D6 was experimentally measured to be
+only half-maximally aligned, and thus exhibits a consider-
+able spread of angular momentum vector angles about the
+perpendicular to the reference axis, consistent with calcula-
+tions.
+It is interesting to note that while the distribution of
+angles between vR and JR
+8 for R5CH3 has the same broad
+form centered at 90° as for the correlation between vHCl and
+JHCl
+8
+, the angular distributions for R5C2H5 and CH2OH are
+sharply peaked about 90°, with FWHMs of 12° in both cases.
+Reasons for this difference are discussed in Sec. IV D. The
+distribution of angles between JHCl
+8
+and JR
+8 in all three reac-
+tions is broad ~ranging all the way from 0° to 180°! with
+peaks at angles around 145° and the majority of angles in
+regions of width 630° around the maxima.
+From the fraction of the available energy deposited into
+HCl vibrational energy, we conclude that, in all three studied
+reactions, the nascent HCl products are only very slightly
+vibrationally excited, in agreement with experimental obser-
+vations. Kandel et al.6 estimated that ;0.3% of the HCl from
+the reaction of Cl atoms with ethane was formed in v851,
+and Smith et al.44 measured this fraction to be 1262% for
+the reaction of Cl atoms with methanol under thermal con-
+ditions at 295 K.
+C. Trajectories with MP2Õ6-311G„d,p… potentials
+In parallel with the HF/6-31G calculations, a smaller
+batch
+of
+270
+trajectories
+was
+computed
+at
+the
+MP2/6-311G(d,p) level of theory for the Cl1CH3OH sys-
+tem, under the conditions described earlier, but with 5.81
+kcal mol21 of kinetic energy given to the vibrational mode
+TABLE IV. Fractions of the average available energy partitioned into different forms of HCl and radical product
+energy, as calculated using trajectories at the HF/6-31G level of theory and compared with experimental values.
+The equivalent results for the Cl1CH3OH reaction, calculated at the MP2/6-311G(d,p) level of theory, are
+also given.
+Erot~HCl)
+Evib~HCl)
+Theory
+Etrans
+Eint(R)
+Eavail
+/kcal mol21
+Theory
+Expt.
+Theory
+Expt.
+Theory
+Expt.
+Cl1CH4
+0.01
+0.05a
+0.03
+0.92
+0.04
+9.11
+Cl1C2H6
+0.03
+0.02b,c
+20.03
+0.78
+0.21
+0.07b
+7.70
+Cl1CH3OH ~HF!
+0.13
+0.06c
+0.00
+0.42
+0.39d
+0.46
+8.86
+Cl1CH3OH ~MP2!
+0.12
+0.04
+0.35
+0.50
+8.27
+aSee Ref. 5. In addition Varley and Dagdigian ~Ref. 4! obtained 0.03 for the fraction of available energy
+channeled into HCl rotation.
+bReference 6.
+cReferences 1 and 2.
+dReference 24.
+FIG. 5. Radical rotational state distributions for ~a! CH3 , ~b! C2H5, and ~c!
+CH2OH products, calculated at the HF/6-31G level of theory ~d!. Also
+shown in panel ~c! is the distribution computed at the MP2/6-311G(d,p)
+level for the reaction of Cl atoms with CH3OH ~s!. JR
+8 is the rotational
+quantum number of the radical.
+193
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+corresponding to the forward reaction coordinate to ensure
+an average energy available to the products that is very simi-
+lar to the HF level calculations. This kinetic energy corre-
+sponds to the difference between the sum of the mean ex-
+perimental collision energy ~5.60 kcal mol21! and reaction
+exothermicity at the G2//MP2/6-311G(d,p) level, and the
+reverse energy barrier at the MP2/6-311G(d,p) level of
+theory, with inclusion of all ZPEs. The effect of sampling of
+the initial conditions from the zero-point motions of the TS
+was to reduce the mean energy available to the products to
+8.27 kcal mol21. Of the 270 trajectories, 219 reached sepa-
+rated products, with 42 recrossing the transition state and
+separating towards reagents and only nine becoming trapped
+in the shallow well in the exit valley. The rotational distribu-
+tion of the HCl products calculated at the MP2/6-311G(d,p)
+level is shown in Fig. 2~c! alongside the HF/6-31G results
+and the experimentally determined HCl(v850) rotational
+distribution. The distribution is not smooth because of the
+relatively small number of trajectories computed because of
+constraints of computational expense. A single trajectory
+launched with 5.81 kcal mol21 of energy along the direction
+of the reaction coordinate, and without ZPE in any vibra-
+tional modes, resulted in an HCl product with J853.0 at this
+level of theory. Upon sampling a range of initial conditions
+incorporating ZPE effects, the MP2/6-311G(d,p) trajectory
+propagations led to a rotational distribution that is, on aver-
+age, less rotationally excited than was computed at the HF/
+6-31G level of theory: the mean rotational energies for the
+distributions truncated at J8511 are, respectively, 347 and
+400
+cm21
+~0.99
+and
+1.14
+kcal mol21!.
+The
+MP2/
+6-311G(d,p) results are in better agreement with experi-
+mental observations of a mean HCl rotational energy of
+330629
+cm21.1
+On
+average,
+2.87,
+5.70,
+and
+28.23
+kcal mol21 of available energy were channeled, respectively,
+into the total translational energy of the products, the HCl
+rotation and vibration, and the CH2OH radical internal en-
+ergy. After subtraction of the ZPE of the HCl ~4.41
+kcal mol21! and CH2OH (24.11 kcal mol21), of the 8.27
+kcal mol21 of available energy, 35% is transferred on aver-
+age into total translational energy of the products, 50% be-
+comes internal energy of the radical, and the remaining 16%
+goes into internal ~rotational and vibrational! energy of the
+HCl. Full details of the energy partitioning are listed in Table
+IV, with the internal energy of the HCl products separated
+into vibrational and rotational parts. Figures 3~c! and 4~c!
+show the distributions of total translational and internal en-
+ergy of the CH2OH radical, respectively, for the reaction of
+Cl
+atoms
+with
+methanol,
+as
+calculated
+at
+the
+MP2/6-311G(d,p) level of theory. The radical rotational an-
+gular momentum quantum number distribution calculated at
+this level is shown in Fig. 5~c! alongside the HF/6-31G re-
+sults.
+IV. DISCUSSION
+A. Cl¿CH4\HCl¿CH3
+The rotational distribution calculated at the HF/6-31G
+level of theory for the HCl products from the reaction of
+Cl1CH4 agrees well with the outcomes of reduced dimen-
+sionality QCT calculations performed by Troya et al.20
+which peak at J851, 2 and drop to close to zero by J855.
+Bowman and co-workers19 calculated a slightly hotter HCl
+rotational distribution, peaking at J852 for total energies
+below 7.26 kcal mol21. All these theoretical results predict
+rotational distributions with greater excitation than is found
+experimentally—for example, the results of Varley et al.4
+show a distribution that peaks at J851 and extends only up
+to J854, while that of Simpson et al.5 is colder still ~recent,
+unpublished measurements from our laboratory coincide
+closely with the results from Ref. 4!. Although the disagree-
+ment with experiment is not severe ~particularly with the
+data of Varley et al.4!, it is noteworthy that the trajectory
+calculations predict a hotter rotational distribution, with a tail
+extending to very high rotational levels. This outcome is all
+the more surprising given the initial conditions used, which
+are intended to mimic reaction occurring through the nonro-
+tating, zero-point level of the transition state. The C3v sym-
+metry of the saddle-point and the A1 irreducible representa-
+tion to which the reaction coordinate belongs mean that
+trajectories started at the TS along the reaction coordinate,
+with no excitation of orthogonal modes, should give com-
+pletely nonrotating HCl, and this is indeed what is observed.
+Given that the zero-point level should have no angular mo-
+mentum, and the absence of orbital angular momentum, our
+calculations might therefore be expected to give a cooler
+rotational distribution. It should, however, be noted that, ex-
+cept for the tail at high energies, very similar results to ours
+are obtained in the recent reduced-dimensionality trajectory
+study of Troya et al.,20 in which full reactive collisions are
+modeled, starting from reactants and including the whole
+range of impact parameters.
+Among other possible sources of error, it is possible that
+the exaggerated barrier height on our HF potential energy
+surface contributes to the slightly hotter J8 distribution than
+is experimentally measured. Computational restrictions pre-
+vented us, however, from considering a more accurate level
+of ab initio theory. The presence of wings in the Wigner
+distribution with both high displacement from the equilib-
+rium geometry and high momentum may also explain the
+occurrence of some trajectories with very high J8 values.
+Finally, we note that it is possible that a quantum interfer-
+ence effect might make the rotational distribution slightly
+cooler: as the system leaves the TS to enter the product re-
+gion, bending vibrations at the TS map onto rotations of the
+products. In the classical trajectories, initial conditions
+sampled on either ‘‘side’’ of a given bending vibration lead
+to HCl and CH3 products rotating in opposite directions. A
+corresponding quantum wavepacket might instead lead
+mainly to nonrotating products. Proving that such effects oc-
+cur would however require a more accurate treatment of the
+classical trajectories, both in terms of potential energy sur-
+faces and initial sampling.
+The rotational state distribution of the accompanying
+CH3 fragments is also cold, as depicted in Fig. 5, peaking at
+J852 from where it gradually decreases as far as J858, and
+extends with a weak tail up to J8512. These results are in
+agreement with quantum dynamics calculations of Yu and
+Nyman,17 which gave a cold CH3 rotational distribution
+194
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+peaking at J851 and extending only as far as J854. The
+data presented in Table IV demonstrate that most of the
+available energy ~92%! is channeled into HCl and CH3 trans-
+lation, with only 4% becoming CH3 radical internal energy
+and 3% vibrational excitation of the HCl. Our calculations
+thus disagree in this regard with the QCT calculations of
+Troya et al.:20 although both the on-the-ﬂy and the quasi-
+classical trajectories predict low HCl rotation ~2% of the
+available energy in the QCT case!, the QCT calculations re-
+sult in the rest of the energy being almost equally shared
+between translation ~51%! and HCl vibration ~47%!. Under
+the experimental conditions of Simpson et al.,5 vibrationally
+excited HCl products were energetically inaccessible. Trajec-
+tory animations conﬁrm that the CH3 radical in this reaction
+exerts little inﬂuence on the departing HCl product and ab-
+sorbs only a small fraction of the available energy.
+B. Cl¿C2H6\HCl¿C2H5
+As is observed for the reaction of Cl atoms with meth-
+ane, our on-the-ﬂy trajectory calculations for reaction of Cl
+atoms with ethane predict slightly hotter HCl rotational dis-
+tributions than are observed experimentally.1,2,6 Of the 7.70
+kcal mol21 of available energy, 78% evolves into product
+translation, with 21% channeled into C2H5 radical internal
+energy. This fraction of available energy in radical internal
+energy is larger than was deduced from experiments by Zare
+and co-workers6 ~7%!, but is in excellent agreement with a
+more detailed analysis of new data obtained by Bass et al.22
+Animations of selected trajectories, as well as the calculated
+extent of HCl rotational excitation, demonstrate that the ethyl
+radical does not have a substantial inﬂuence on the newly
+forming HCl product during the hydrogen abstraction reac-
+tion, although it does absorb a substantial fraction of the
+available energy, and thus cannot be construed as a spectator.
+The negative value of 23% obtained for the amount of avail-
+able energy partitioned into HCl vibrational energy is not
+classically unphysical, but rather means that the computed
+vibrational energy is marginally less than the quantum me-
+chanical ZPE associated with the HCl molecule. Ferna
+´ndez-
+Ramos et al.45 recently reported QCT calculations for the
+reaction of Cl atoms with ethane on a reduced dimensionality
+~2-D, rC–H , rH–Cl) parametrized PES constructed from ab
+initio calculations, but calculated only HCl velocity distribu-
+tions
+and
+found
+good
+agreement
+with
+experimental
+results.6,21
+Suits and co-workers46 proposed a model to account for
+the large internal energy observed in alkyl radical products of
+the reactions of O(3P) atoms with a variety of alkanes, in
+which sudden loss of an H atom projects the geometry of the
+alkane onto the alkyl radical. Large changes in geometry thus
+give rise to signiﬁcant internal excitation of the radical. The
+model was suggested to be applicable to reactions of Cl at-
+oms with alkanes and alcohols—an assertion that can be
+tested here. For the ethyl radical the most important geom-
+etry change is the relaxation from a pyramidal to near-planar
+arrangement around the C atom from which the H atom is
+abstracted accompanied by the slight shortening of the bonds
+to the adjacent atoms. The dihedral angle between the re-
+maining H atoms and the C–C backbone increases from
+122.03° to 166.02°, while the C–H and C–C bond lengths
+decrease from 1.0934 to 1.0824 Å and from 1.5286 to 1.4934
+Å, respectively. Calculations at the G2//MP2/6-311G(d,p)
+level, neglecting the ZPE, show the relaxation energy of the
+ethyl radical to be 6.66 kcal mol21. This signiﬁcantly over-
+estimates the amount of internal excitation of the ethyl radi-
+cal predicted in our trajectories ~1.65 kcal mol21! and would,
+in fact, account for the majority of the available energy for
+this mildly exothermic reaction. Indeed, for our effectively
+low impact parameter trajectories, the bulk of the ethyl inter-
+nal energy can be accounted for by rotation. In the limit that
+K50, the total energy in ethyl rotation calculated from the
+radical product state distribution shown in Fig. 5~b! is 1.59
+kcal mol21, or 96% of the ethyl internal energy. The model
+of Suits and co-workers is thus judged to be inappropriate for
+this H-atom abstraction reaction.
+The low rotational angular momentum of the HCl has
+been attributed to the near-linear Cl–H–C group in the TS,
+and to nonimpulsive release of energy on the products’ side
+of the PES.6 We also note that the computed dipole moment
+of the C2H5 radical ~0.25 D from HF/6-31G calculations! is
+sufﬁciently small that substantial torques are not generated
+by the interaction of the dipoles of the HCl and C2H5 as they
+separate. The rotational angular momentum of the C2H5 ,
+however, is much larger because of the torque applied about
+the center of mass of the radical by the abstraction of the H
+atom.
+C. Cl¿CH3OH\HCl¿CH2OH
+The rotational distribution of HCl products from the Cl
+atom reaction with methanol, calculated at the HF/6-31G
+level of theory, is more excited than is experimentally
+observed.1,2 ^Erot& values from HF/6-31G trajectories and ex-
+perimental measurements are, respectively, 400 and 330629
+cm21. This trend is the same as with the results for Cl atom
+reactions with methane and ethane, but the HCl from the
+methanol reaction is calculated to be signiﬁcantly more rota-
+tionally excited than that from the alkane reactions at the
+same level of theory. In addition to 13% of the available
+energy being channeled into the HCl rotation, and 42% into
+product translational energy, 46% is directed into CH2OH
+internal energy. The prediction for product translation is in
+good agreement with the experimental results of Ahmed
+et al.,24 and recent data from Kitsopoulos and co-workers.25
+In the former experiments, conducted at a collision energy of
+Ecoll58.7 kcal mol21, the average fraction of the available
+energy going to product translation was 39%. In the latter
+experiments, this fraction was 40% at a mean collision en-
+ergy of 5.6 kcal mol21. The fraction of the available energy
+deposited into internal energy of the CH2OH radical is sig-
+niﬁcantly higher than is the case for CH3 or C2H5 reaction
+products.
+Again
+following
+the
+model
+of
+Suits
+and
+co-workers,46 relaxation of the hydroxymethyl radical to its
+equilibrium conﬁguration primarily involves a change in the
+C atom conﬁguration to a more planar arrangement. The di-
+hedral angle between the remaining H atoms and the C–O
+bond opens from 121.24° to 146.21°, accompanied with
+195
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+shortening of the C–H and C–O bonds similar to that found
+in the ethyl radical. There is also a signiﬁcant torsion about
+the C–O bond, which decreases the HCOH dihedral angle
+from 61.52° to 28.75°. The relaxation energy of these geom-
+etry changes is calculated at the G2/MP2/6-311G(d,p) level
+to be 5.57 kcal mol21, again neglecting ZPE. As in the case
+of the ethyl radical, the relaxation energy is greater than the
+fraction of the available energy predicted to be partitioned
+into internal excitation of the hydroxymethyl in the trajectory
+calculations ~4.07 kcal mol21!. Based on the radical rota-
+tional state distribution calculated in the HF/6-31G level tra-
+jectories, and assuming that K50, the rotational energy
+again accounts for 98% of the hydroxymethyl internal exci-
+tation.
+The much greater rotational excitation of the HCl prod-
+ucts for the alcohol reaction was postulated to be a conse-
+quence of dipole-dipole interactions between the newly
+formed HCl and CH2OH fragments as they separate,1,2
+which is largely absent for the reactions of Cl atoms with
+methane and ethane. Table V shows the computed dipole
+moments of reagents, products, and the transition states, both
+as a whole and in terms of the constituent parts into which
+the TSs ﬁnally fragment, obtained at both HF/6-31G and
+MP2/6-311G(d,p) levels of theory. The CH2OH radical has
+a far larger dipole moment than the CH3 or C2H5 radicals.
+The on-the-ﬂy trajectory calculations for the Cl1CH3OH
+system, calculated at the MP2/6-311G(d,p) level, resulted
+in colder HCl rotational distribution than calculations at the
+HF/6-31G level, and the mean rotational energy is also
+smaller. This outcome can be rationalized in terms of the
+values of the computed HCl and CH2OH dipole moments,
+which are ;25% smaller from the MP2/6-311G(d,p) calcu-
+lations than from those derived from HF/6-31G calculations.
+The energies of the various dipole-dipole interactions, and
+thus the asymptotic degree of rotational excitation, will be
+proportional to the products of the dipole moments of the
+HCl and CH2OH. The ratio of the products of the HCl and
+CH2OH dipole moments computed at the HF/6-31G and
+MP2/6-311G(d,p) levels of theory is 1.7. Assuming that the
+experimental value of the dipole moment of CH2OH is not
+too different from the MP2/6-311G(d,p) value of 1.55 D,
+the equivalent ratio of the products of the HF/6-31G and
+experimental dipole moments ~with an HCl dipole moment
+of 1.1086 D!47 is 2.2. These ratios compare very favorably
+with the corresponding ratios of rotational energies for the
+centers of the distributions obtained from calculations and
+measurements. The HCl rotational distributions are centered
+at
+J856
+~HF/6-31G
+calculations!,
+J854.5 (MP2/6-
+311G(d,p) calculations! and J854 ~experimental measure-
+ments!, and the associated rotational energies, which are pro-
+portional to J8(J811), take values for the same ratios of 1.7
+and 2.1.
+D. Factors determining radical and HCl rotation
+The extent of radical rotational excitation and the corre-
+lations between angular momentum and velocity vectors can
+be understood in terms of the mechanisms for generation of
+rotational angular momentum of the polyatomic products.
+For the reactions of Cl atoms with CH3CH3 and CH3OH,
+even a collinear Cl–H–C arrangement in the TS will induce
+a torque about the center of mass of the CH2CH3 or CH2OH
+as the H atom is transferred. This torque will generate a
+substantial angular momentum of the radical product that is
+perpendicular to the plane of the recoil velocity vectors, and
+the associated rotation accounts for most of the internal en-
+ergy carried by the radical fragment. The torque may be
+shifted from its mean value by bending motion of the
+Cl–H–C group of atoms. The rotational angular momentum
+may be further inﬂuenced by dipole-dipole interactions be-
+tween the fragments, as discussed earlier, perhaps causing
+some reorientation of the angular momentum vectors of the
+products of the Cl1CH3OH reaction. For the C3v symmetry
+Cl–H–CH3 TS, however, the CH3 center of mass is located
+on the C3 axis, so there is no torque generated unless there is
+zero-point bending motion of the TS. Any such bending will
+map directly into the ~much smaller! CH3 rotational excita-
+tion, as well as HCl rotation and the orbital angular momen-
+tum of the products.
+As noted in Sec. III B, the distribution of angles between
+vR and JR for R5CH3 is centered at 90° but is very broad.
+Examination of sample trajectories resulting in nearly paral-
+lel vR and JR vectors shows no obvious cause for this unex-
+pected correlation, but is likely to be a consequence of the
+angular momentum within the TS associated with the starting
+conditions of the trajectories, perhaps compounded by zero-
+point motion that displaces the central H atom away from the
+sv symmetry planes of the transition state, thereby inducing
+a torsional motion. This distortion would generate compo-
+nents of counter-rotation of the CH3 and HCl products in the
+plane perpendicular to the C3 axis, but with no overall he-
+licity. Either effect will be most evident for the Cl1CH4
+reaction because it has the smallest components of angular
+momentum of the product radical in orthogonal directions,
+i.e., those in a plane perpendicular to the recoil direction.
+TABLE V. Dipole moments ~in Debye! of various molecules, radicals, and
+transition states important in the studied reactions and calculated at the
+HF/6-31G and MP2/6-311G(d,p) levels of theory. TS denotes the dipole
+moment of the transition state, or of a constituent part of the transition state
+indicated in parentheses.
+HF/6-31G
+MP2/6-311G(d,p)
+HCl
+1.88
+1.39
+CH3
+0.00
+0.00
+CH4
+0.00
+0.00
+TS (Cl–H–CH3)
+3.80
+3.03
+TS ~HCl!
+1.94
+1.54
+TS (CH3)
+0.47
+0.43
+C2H5
+0.25
+0.27
+C2H6
+0.00
+0.00
+TS (Cl–H–C2H5)
+4.23
+3.40
+TS ~HCl!
+1.95
+1.56
+TS (C2H5)
+0.50
+0.53
+CH2OH
+1.98
+1.55
+CH3OH
+2.29
+1.75
+TS (Cl–H–CH2OH)
+4.10
+2.06
+TS ~HCl!
+1.96
+1.81
+TS (CH2OH)
+1.95
+1.48
+196
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+Equivalent effects in the reactions of Cl atoms with ethane
+and methanol are not easily discerned in the product radical
+angular momentum alignment because of the dominant effect
+of the torque about the radical center of mass.
+There are no strong kinematic constraints on the rota-
+tional and orbital angular momenta of the reactions of Cl
+atoms with ethane and methanol, despite the mass combina-
+tion involving transfer of a light atom between two heavy
+partners. The rotational angular momenta of the C2H6 and
+CH3OH reagents are, on average, approximately J55 for
+experiments at 60 K and J59 for studies at 200 K, and are
+likely to be smaller than the reagent orbital angular momenta
+because of the high relative velocities for collisions. The
+product radicals are, however, calculated to have rotational
+angular momentum quantum numbers in excess of 20 that
+will be oriented almost opposite to the product orbital angu-
+lar momenta. The kinematic constraints associated with
+H1LH reactions ~H5heavy and L5light atom!, that require
+near-conservation of orbital angular momentum, are thus re-
+laxed here because of the rotational degrees of freedom of
+the polyatomic product.
+From the above discussion, we can make several deduc-
+tions about the factors that control the extent of rotational
+excitation of the HCl products of the three reactions studied.
+In all three reactions, the Cl–H–C group in the TS is calcu-
+lated to have a near-linear or collinear minimum energy ge-
+ometry. The transition states are, however, subject to distor-
+tion from this geometry because of bending vibrations, even
+in the zero point level. Our calculations suggest that this
+bending of the Cl–H–C group strongly inﬂuences the width
+of the HCl rotational distribution. Trajectories run at the HF/
+6-31G level without any ZPE in the vibrational modes of the
+TS that have components of Cl–H–C bending gave HCl
+product rotational distributions which peaked sharply at the
+same values of J8 as were obtained from single trajectories
+launched from the ﬁxed minimum energy geometry of the
+TS, with kinetic energy only along the reaction coordinate.
+With incorporation of ZPE in these bending modes, the HCl
+rotational distributions broadened, and, for the Cl1alkane
+reactions, shifted their mean values upwards by 1 to 2 units
+of J8. Larger dipole moments on the products appear to have
+a much greater effect on the mean rotational excitation of the
+HCl. Single trajectories from a TS with collinear Cl–H–C
+and no ZPE in vibration gave much more rotationally excited
+HCl products for the reaction of Cl atoms with methanol
+(J857 for HF/6-31G or J853 for MP2/6-311G(d,p) calcu-
+lations! than with the alkanes (J850).
+V. CONCLUSIONS
+A total of 2000 trajectories were calculated for each of
+the three reactions of Cl atoms with CH4 , C2H6, and
+CH3OH, using direct ab initio ~‘‘on-the-ﬂy’’! molecular dy-
+namics methods, and potentials from HF/6-31G calculations,
+with sampling of initial conditions from the zero-point mo-
+tions of the transition states. The trajectories were initiated at
+the TS for each reaction, allowing investigation of the effects
+of the exit channel potential energy surface on the product
+energies and reaction dynamics. The HF/6-31G level calcu-
+lations gave rotational quantum state population distributions
+of the HCl products that were 1–2 units of J8 hotter than
+experimental measurements, but correctly described the rela-
+tive degrees of rotational excitation of HCl products from the
+three reactions. The CH3 and C2H5 radicals are calculated to
+absorb 4% and 21% of the available energy in their internal
+modes. The hydroxymethyl radical not only acquires, on av-
+erage, 46% of the total available energy as internal excita-
+tion, but also exerts substantial inﬂuence on the rotational
+motion of the reaction products via a strong dipole-dipole
+interaction with the departing HCl cofragment. Most of the
+radical internal energy can be accounted for by rotational
+motion. There were also 270 trajectories calculated on-the-
+ﬂy at the MP2/6-311G(d,p) level of theory for the reaction
+of Cl atoms with methanol, and the 219 that reached prod-
+ucts gave an HCl rotational distribution that is in better
+agreement with experiment ~with respective mean values of
+the HCl rotational energy of 347 and 330 cm21!. The distri-
+bution is colder than that obtained at the HF/6-31G level of
+theory, and the enhanced rotation calculated from the HF/6-
+31G trajectories is attributed to the larger computed values of
+the HCl and CH2OH dipole moments. The HF/6-31G calcu-
+lations predict that 92%, 78%, and 42% of the available en-
+ergy is channeled into total translational energy of the HCl
+and, respectively, CH3 , C2H5, and CH2OH products. Thus,
+without recourse to reduced-dimensionality approximations,
+or the need for a global PES, we have calculated direct tra-
+jectory calculations at both the HF/6-31G and MP2/6-
+311G(d,p) levels of theory that are generally in very good
+agreement with the available experimental observations. As
+well as providing good quantitative agreement with experi-
+mental data, the results highlight the key qualitative features
+of the reaction dynamics of these large molecular systems.
+By initiating the trajectories at geometries close to the mini-
+mum energy transition state, however, we have not incorpo-
+rated the effects of large impact parameter collisions ~relative
+to the C–H bond attacked! and thus cannot yet derive differ-
+ential cross sections.
+ACKNOWLEDGMENTS
+The authors are grateful to the EPSRC for a studentship
+for S.R. and a postdoctoral fellowship for C.M. S.R. also
+acknowledges the award of an Overseas Research Students
+Awards Scheme scholarship.
+1S. Rudic
+´, C. Murray, D. Ascenzi, H. Anderson, J. N. Harvey, and A. J.
+Orr-Ewing, J. Chem. Phys. 117, 5692 ~2002!.
+2S. Rudic
+´, D. Ascenzi, and A. J. Orr-Ewing, Chem. Phys. Lett. 332, 487
+~2000!.
+3S. Rudic
+´, C. Murray, J. N. Harvey, and A. J. Orr-Ewing, Phys. Chem.
+Chem. Phys. 5, 1205 ~2003!.
+4D. F. Varley and P. J. Dagdigian, J. Phys. Chem. 99, 9843 ~1995!.
+5W. R. Simpson, T. P. Rakitzis, S. A. Kandel, T. Lev-On, and R. N. Zare, J.
+Phys. Chem. 100, 7938 ~1996!.
+6S. A. Kandel, T. P. Rakitzis, T. Lev-On, and R. N. Zare, J. Chem. Phys.
+105, 7550 ~1996!.
+7F. J. Aoiz, L. Ban
+˜ares, and V. J. Herrero, J. Chem. Soc., Faraday Trans. 94,
+2483 ~1998!.
+8M. S. Gordon, G. Chaban, and T. Taketsugu, J. Phys. Chem. 100, 11512
+~1996!.
+9K. Bolton, W. L. Hase, and G. H. Peslherbe, ‘‘Direct Dynamics Simula-
+tions of Reactive Systems,’’ chapter in Modern Methods for Multidimen-
+197
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Cl atom reactions with methane and methanol
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33
+sional Dynamics Computations in Chemistry, edited by D. L. Thompson
+~World Scientiﬁc, Singapore, 1998!, pp. 143–189.
+10T. N. Truong, D. G. Truhlar, K. K. Baldridge, M. S. Gordon, and R.
+Steckler, J. Chem. Phys. 90, 7137 ~1989!.
+11K. D. Dobbs and D. A. Dixon, J. Phys. Chem. 98, 12584 ~1994!.
+12A. Bottoni and G. Poggi, J. Mol. Struct.: THEOCHEM 337, 161 ~1995!.
+13O. Roberto-Neto and F. B. C. Machado, J. Mol. Struct.: THEOCHEM
+580, 161 ~2002!.
+14X. Wang, M. Ben-Nun, and R. D. Levine, Chem. Phys. 197, 1 ~1995!.
+15G. Nyman, H. G. Yu, and R. B. Walker, J. Chem. Phys. 109, 5896 ~1998!.
+16H. G. Yu and G. Nyman, Phys. Chem. Chem. Phys. 1, 1181 ~1999!.
+17H. G. Yu and G. Nyman, J. Chem. Phys. 110, 7233 ~1999!.
+18H. G. Yu and G. Nyman, J. Chem. Phys. 111, 6693 ~1999!.
+19S. Skokov and J. M. Bowman, J. Chem. Phys. 113, 4495 ~2000!.
+20D. Troya, J. Millan, I. Banos, and M. Gonzalez, J. Chem. Phys. 117, 5730
+~2002!.
+21S. A. Kandel, T. P. Rakitzis, T. Lev-On, and R. N. Zare, J. Phys. Chem. A
+102, 2270 ~1998!.
+22M. Bass, M. Brouard, C. Vallance, T. N. Kitsopoulos, P. C. Samartzis, and
+R. L. Toomes, J. Chem. Phys. 119, 7168 ~2003!.
+23J. T. Jodkowski, M. T. Rayez, J. C. Rayez, T. Be
+´rces, and S. Do
+´be
+´, J. Phys.
+Chem. A 102, 9230 ~1998!.
+24M. Ahmed, D. S. Peterka, and A. G. Suits, Phys. Chem. Chem. Phys. 2,
+861 ~2000!.
+25C. Murray, A. J. Orr-Ewing, R. L. Toomes, and T. N. Kitsopoulos, J.
+Chem. Phys. ~to be published!.
+26L. A. Curtiss, C. Jones, G. W. Trucks, K. Ragavachari, and J. Pople, J.
+Chem. Phys. 93, 2537 ~1990!.
+27L. A. Curtiss, K. Ragavachari, G. W. Trucks, and J. Pople, J. Chem. Phys.
+94, 7221 ~1991!.
+28 GAMESS-USA ~version of 25 June 2001!, M. W. Schmidt, K. K. Baldridge, J.
+A. Boatz et al., J. Comput. Chem. 14, 1347 ~1993!.
+29M. J. Frisch, G. W. Trucks, H. B. Schlegel et al., GAUSSIAN 98, Revision
+A.7 Gaussian, Inc., Pittsburgh, PA, 1998.
+30G. Li and W. L. Hase, J. Am. Chem. Soc. 121, 7124 ~1999!.
+31L. Sun, W. L. Hase, and K. Song, J. Am. Chem. Soc. 123, 5753 ~2001!.
+32L. Sun, K. Song, and W. L. Hase, Science 296, 875 ~2002!.
+33W. Chen, W. L. Hase, and H. B. Schlegel, Chem. Phys. Lett. 228, 436
+~1994!.
+34X. Li, J. M. Millam, and H. B. Schlegel, J. Chem. Phys. 113, 10062
+~2000!.
+35A. Gonzalez-Lafont, T. N. Truong, and D. G. Truhlar, J. Phys. Chem. 95,
+4618 ~1991!. For a recent example, see S. A. Va
+´zquez, F. J. Aoiz, L.
+Ban
+˜ares, J. Santamaria, E. Martı
+´nez-Nu
+´n
+˜ez, and A. Ferna
+´ndez-Ramos, J.
+Chem. Phys. 118, 6941 ~2003!.
+36G. H. Peslherbe and W. L. Hase, J. Chem. Phys. 104, 7882 ~1996!.
+37J. N. Harvey and M. Aschi, Phys. Chem. Chem. Phys. 1, 5555 ~1999!.
+38M. P. Allen and D. J. Tildesley, Computer Simulation of Liquids ~Claren-
+don, Oxford, UK, 1989!.
+39R. Schinke, Photodissociation Dynamics ~Cambridge University Press,
+Cambridge, UK, 1993!, Chap. 5, and references therein.
+40See, e.g., G. H. Peslherbe, H. Wang, and W. L. Hase, Adv. Chem. Phys.
+105, 171 ~1999!.
+41S. Do
+´be
+´, T. Be
+´rces, F. Temps, H. G. Wagner, and H. Ziemer, in Proceed-
+ings of the 25th Symposium (International) on Combustion ~Combustion
+Institute, Pittsburgh, PA, 1994!, p. 775.
+42Representative trajectories can be viewed at http://www.chm.bris.ac.uk/pt/
+ajoe/trajectories/
+43T. P. Rakitzis, S. A. Kandel, T. Lev-On, and R. N. Zare, J. Chem. Phys.
+107, 9392 ~1997!.
+44J. D. Smith, J. D. DeSain, and C. A. Taatjes, Chem. Phys. Lett. 366, 417
+~2002!.
+45A. Ferna
+´ndez-Ramos, E. Martı
+´nez-Nu
+´n
+˜ez, J. M. C. Marques, and S. A.
+Va
+´zquez, J. Chem. Phys. 118, 6280 ~2003!.
+46X. Liu, R. L. Gross, G. E. Hall, J. T. Muckerman, and A. G. Suits, J.
+Chem. Phys. 117, 7947 ~2002!.
+47CRC Handbook of Chemistry and Physics, 83rd ed., edited by D. R. Lide
+~CRC, Boca Raton, FL, 2002!.
+48R. Atkinson, D. L. Baulch, R. A. Cox, R. F. Hampson, Jr., J. A. Kerr, and
+J. Troe, J. Phys. Chem. Ref. Data 21, 1125 ~1992!.
+198
+J. Chem. Phys., Vol. 120, No. 1, 1 January 2004
+Rudic
+´ et al.
+ This article is copyrighted as indicated in the article. Reuse of AIP content is subject to the terms at: http://scitation.aip.org/termsconditions. Downloaded to  IP:
+155.33.16.124 On: Sat, 29 Nov 2014 06:35:33

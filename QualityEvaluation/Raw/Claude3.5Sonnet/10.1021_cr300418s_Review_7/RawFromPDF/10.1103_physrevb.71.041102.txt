@@ -1,0 +1,485 @@
+Taming multiple valency with density functionals:
+A case study of defective ceria
+Stefano Fabris,1 Stefano de Gironcoli,1 Stefano Baroni,1 Gianpaolo Vicario,2 and Gabriele Balducci2
+1SISSA and INFM DEMOCRITOS National Simulation Center, Via Beirut 2-4, I-34014 Trieste, Italy
+2Chemistry Department and Center of Excellence for Nanostructured Materials, Università di Trieste, Via Giorgieri 1,
+34127 Trieste, Italy
+sReceived 15 July 2004; published 14 January 2005d
+Modeling multiple-valence compounds using density-functional theory has long been considered a formi-
+dable task due to the role that strong electronic correlations play in these systems. We show that, in the case of
+defective ceria, the main effect of these correlations is to produce a multitude of metastable low-energy states
+among which the one displaying the correct valence of cerium is the most stable. This ground state may be
+difﬁcult to access in practice and it has in fact so far escaped a proper identiﬁcation. The introduction of a
+Hubbard-U term in the energy functional stabilizes the physical ground state and makes it easily accessible to
+routine calculations. When this contribution is deﬁned in terms of maximally localized Wannier functions, the
+calculated energies and structural properties are independent of the value of the parameter U.
+DOI: 10.1103/PhysRevB.71.041102
+PACS numberssd: 71.15.Mb, 61.72.Ji, 82.47.Ed
+The properties of many technologically relevant materials
+are determined by the ability of their atomic constituents to
+display multiple oxidation states—and hence a different
+chemical behavior—depending on the local microscopic en-
+vironment. A representative example is given by ceria-based
+materials which are key components of many advanced cata-
+lysts used to produce hydrogen and to reduce air pollution.
+Besides providing a resistant support for chemically active
+noble metals, ceria-based substrates take an active role in the
+catalytic reaction by controlling the oxygen partial pressure
+at the reaction sites, acting effectively as oxygen reservoirs.
+There is ample evidence that this property is controlled by
+the chemistry of oxygen vacancies which are neutralized by
+the valence change Ce4+→Ce3+ of two cations ssubstitu-
+tional CeCe
+8 defectsd.1 Our current understanding of this phe-
+nomenon relies on the quasidegeneracy of different ionic
+conﬁgurations in which a highly localized 4f-electron state is
+occupied or empty. The importance of electronic correlations
+related
+with
+quasidegeneracy
+and
+accompanying
+the
+f-electron localization process has lead to the widespread
+belief that conventional density-functional theory sDFTd
+techniques based on the local-density approximation sLDAd
+or generalized-gradient approximation sGGAd would be un-
+able to cope with these systems. For instance, the modeling
+of the a↔g transition in metallic Ce requires sophisticated
+variants of the DFT method, such as, e.g., self-interaction-
+corrected-DFT
+sRef.
+2d
+and
+DFT-dynamical-mean-ﬁeld
+theory.3 This belief is supported by the current literature on
+ceria4–9 which suggests that conventional DFT techniques
+fail to provide a uniﬁed description of ceria compounds
+sCeO2,CeO2−x,Ce2O3d. We believe that this conclusion is to
+some extent misleading. The purpose of this paper is two-
+fold. We ﬁrst show that the propensity of cerium to display
+multiple oxidation states determines the existence of a num-
+ber of DFT conﬁgurations that are stable at the LDA or GGA
+level, and which had not been identiﬁed so far. These con-
+ﬁgurations also comprise those which display the correct
+oxidation state of cerium and which are in fact predicted to
+be the most stable. The energy differences between different
+metastable conﬁgurations are so small—and the barriers
+separating them so important—that self-consistent ﬁeld
+sSCFd calculations starting near an unphysical solution tend
+to converge to it, so that the very existence of other solutions
+had gone so far unnoticed. We then show that the addition of
+a Hubbard-U term in the LDA sor GGAd energy functional
+substantially enhances the stability of the physical solution,
+thus allowing SCF calculations to proceed straight to it.
+Moreover, when the Hubbard-U contribution is deﬁned in
+terms of maximally localized Wannier functions, the energy
+of the stable conﬁguration is independent of U and therefore
+coincides with the LDA/GGA values.
+Pure cerium oxide has two stable stoichiometries: the cu-
+bic ﬂuorite-type CeO2 sFm3md and the hexagonal sesquiox-
+ide A-type Ce2O3 sP3m1d. These compounds represent the
+oxidation and reduction extremes in which all the Ce ions are
+nominally in the 4+ and 3+ oxidation states, respectively. In
+the former, all valence Ce states are empty, while in the latter
+one electron per cation occupies the Ce 4f-like band swhich
+is empty in CeO2d. In terms of the electronic structure, par-
+tially reduced ceria CeO2−x is simply an intermediate case:10
+the presence of oxygen vacancies induces the condensation
+of the compensating electrons into the empty 4f states of
+neighboring Ce atoms, thus driving the Ce4+→Ce3+ reduc-
+tion. Electronic correlation, due to the strong localization of
+these states in reduced cerias, Ce2O3 and CeO2−x, have the
+effect of splitting the Ce-4f band upon occupation, resulting
+in a fully occupied gap state experimentally10–12 detected to
+be 1.2–1.5 eV above the top of the valence band. The elec-
+tron population of this state is directly correlated to the num-
+ber of Ce3+ ions, and is experimentally employed as an esti-
+mator of the concentration of oxygen vacancies.12
+Existing ﬁrst-principles calculations4–9 adopt either one of
+the following two assumptions, which are individually ap-
+propriate to different oxidation states of Ce, but conﬂicting
+with one another: sid in the core-state model sCSMd Ce-4f
+states are treated as part of the core, and therefore their con-
+tribution to the bonding process is totally neglected;4,6 siid
+the valence-band model sVBMd, instead, treats Ce 4f elec-
+PHYSICAL REVIEW B 71, 041102sRd s2005d
+RAPID COMMUNICATIONS
+1098-0121/2005/71s4d/041102s4d/$23.00
+©2005 The American Physical Society
+041102-1
+trons explicitly as valence electrons which are therefore al-
+lowed to contribute to the chemical bond.4,7–9 The former
+approach provides good structural properties for Ce2O3 but
+not for CeO2 ssee Table Id, and it describes the oxide as an
+insulator by construction. Most importantly its predictive
+power is limited: the distribution of Ce4+ or Ce3+ ions has to
+be assumed as an input of the calculation. On the opposite
+side, the VBM leads to good structural properties for CeO2
+but not for Ce2O3 sTable Id, and describes this latter structure
+as a metal. In fact, the VBM does not predict the gap state
+experimentally observed in partially reduced ceria CeO2−x,
+therefore failing to correctly capture the electronic localiza-
+tion on the Ce-4f states, which is at the basis of the oxygen-
+storage mechanism.
+In this work we reconsider this problem in the light of
+different ab initio DFT calculations performed either at the
+LDA or at the GGA levels13 sthe latter in the Perdew-Burke-
+Ernzerhof ﬂavor16d.
+The simulation of CeO2 is a standard and straightforward
+problem. The LDA density of electronic states sDOSd is dis-
+played in Fig. 1sad. Occupied states are indicated by shaded
+areas, and the zero energy is set at the top of the upper
+valence band swith prevalent O-2p characterd. The sharp
+band centered at 4 eV is formed by fairly localized atomic-
+like Ce-4f empty orbitals. The onset of the conduction band
+is 5.6 eV above the highest occupied state s5.7 eV in GGAd,
+to be compared with the measured17 gap of 6.0 eV sfollowing
+Ref. 17 we do not consider the Ce-4f manifold as conduction
+statesd. On the opposite, calculations involving Ce atoms in
+the formal valency 3+ are much more subtle. Let us start
+with Ce2O3: in agreement with previous analysis, we ﬁnd
+that a metallic antiferromagnetic state is smetad stable at the
+LDA level. The corresponding DOS is displayed in Fig. 1sbd.
+Ce-4f states form a unique, partially occupied band. A pro-
+jection on Ce-4f states reveals that one electron is evenly
+distributed among three orbitals centered on each Ce atom. A
+careful electronic minimization, performed by doing several
+SCF calculations starting from different initial conditions,
+reveals that this state is not the ground state. In fact, an
+electronic conﬁguration resulting from the occupation of one
+4f state per Ce sa linear combination of the fz3 and f−ysy2−3x2d
+orbitalsd, results to be insulating and 0.36 eV/Ce2O3 lower in
+energy. The corresponding DOS is shown in Fig. 1scd. This
+ground state displays a gap in the 4f band, correctly repro-
+ducing the experimentally observed gap state and the mag-
+netic moment of 2.29 mB/mole sthe experimental18 value is
+2.17 mB/moled. The integrated charge of the gap state is ex-
+actly 2 sone electron per Ce3+ atomd. Metallic and insulating
+ferromagnetic solutions are also stable, 0.13 and 0.03 eV/
+Ce2O3 above the insulating antiferromagnetic ground state,
+respectively. GGA calculations display a similar abundance
+of local minima, the ground state being insulating and anti-
+ferromagnetic, essentially degenerate with the insulating fer-
+romagnetic solution. The metallic local minima are 1.1 sfer-
+romagneticd and 0.99 santiferromagneticd eV/Ce2O3 higher
+in energy. The addition of a Hubbard-U term to the LDA sor
+GGAd energy functional removes this quasidegeneracy and
+stabilizes electronic-structure calculations towards the physi-
+cal solution, thus providing an effective way for coping with
+these systems.
+The LDA+U energy functional reads
+ELDA+U = ELDA + U
+2 o
+I
+TrfnIs1 −nIdg,
+s1d
+where nI’s are M3M matrices sM being the degeneracy of
+the localized atomic orbital, M=14 in the case of f orbitalsd,
+and projections of the one-electron density matrix r
+ˆ over the
+f manifold localized at lattice site I, hfms
+I j:
+kfms
+I ur
+ˆufm8s8
+I
+l = nmm8
+Is dss8.
+s2d
+The second term in Eq. s1d, which we call EU, is positive
+deﬁnite for U.0 because the eigenvalues of the nI
+matrices—i.e., the occupation numbers of the f orbitals—lay
+in the range f0,1g. Note that, as soon as U is large enough to
+open a gap between occupied and unoccupied f states, the
+TABLE I. Calculated structural properties of bulk CeO2 and
+Ce2O3 compared with previous theoretical values in the valence-
+band and core-state models sVBM and CSMd, and with experimen-
+tal measurements.
+CeO2
+Ce2O3
+a0 sÅd
+B sGPad
+a0 sÅd
+B sGPad
+LDA CSMa
+5.56
+144.9
+3.89
+165.8
+LDA VBMa
+5.39
+214.7
+3.72
+208.6
+LDA VBMb
+5.38
+210.7
+3.84
+150.9
+Expt.
+5.41
+204–236
+3.88
+…
+GGA CSMa
+5.69
+128.8
+3.97
+145.3
+GGA VBMa
+5.48
+187.7
+3.81
+131.8
+GGA VBMb
+5.48
+178.0
+3.94
+131.3
+aReference 4.
+bThis work.
+FIG. 1. Density of electronic states for pure CeO2 sad and Ce2O3
+fsbd–sddg bulk phases, and for defective sed ceria structures
+CeO1.875. Occupied states are indicated as shaded areas, and the
+zero energy is set to the top of the valence band.
+STEFANO FABRIS et al.
+PHYSICAL REVIEW B 71, 041102sRd s2005d
+RAPID COMMUNICATIONS
+041102-2
+effect of EU is to favor the f occupation numbers to be close
+to either 0 or 1. At these extremes, EU strictly vanishes and
+the total energy is back to the LDA sor GGAd value. In any
+actual implementation of the LDA+U energy functionals,
+Eq. s1d, the values of the nI matrices depend on the choice of
+the localized orbitals, hfms
+I j, which deﬁne them through Eq.
+s2d. Suppose, for instance, that we identify the f’s with
+atomic Ce-4f orbitals, as it is done in any straightforward
+implementation of the LDA+U method. This choice would
+lead to an unphysical situation where Ce-4f occupancies are
+nonzero even in CeO2, where the nominal valence of all the
+Ce atoms is 4+. This apparent paradox is simply due to the
+fact that O-2p orbitals swhich are ﬁlled in CeO2d are not
+orthogonal to neighboring Ce-4f states. We have found that
+this spurious occupancy of Ce-4f orbitals results in a dete-
+rioration of the overall accuracy of the DFT functional, par-
+ticularly so for the structural parameters and the energies,
+which strongly depend on the value of the parameter U.
+In order to remove both the indetermination in the deﬁni-
+tion of the localized 4f-like orbitals and their spurious sand
+ill-deﬁnedd occupancy, we have decided to identify the f’s in
+Eq. s2d with the maximally localized Wannier functions
+sMLWF’sd sRef. 19d resulting from the Ce-4f band. In prac-
+tice, we have computed MLWF’s using a simple procedure
+which takes into account the fact that in the present case they
+are very close to the known Ce-4f orbitals, and can thus be
+obtained by a subspace alignment procedure.20 The corre-
+sponding projector yields a vanishing Hubbard energy cor-
+rection EU in case of completely ﬁlled or empty states, re-
+sulting in energies which are independent of U. The
+Hubbard-U parameter was calculated after the formulation of
+Cococcioni and de Gironcoli.21 It was estimated to be in the
+range 2.5–3.5 eV for LDA and 1.5–2 eV for GGA: in the
+calculations we used the values ULDA=3 eV and UGGA
+=1.5 eV.
+By applying this LDA+U approach, the metallic solutions
+are strongly disfavored with respect to the insulating antifer-
+romagnetic electronic conﬁguration. The resulting ground-
+state DOS is displayed in Fig. 1sdd. Note that it is the same
+insulating ground state predicted by the LDA calculation. As
+a byproduct, the Hubbard term also shifts the gap state to
+lower energies resulting in a band-structure closer to the ex-
+periments sgap state at 1.2–1.5 eV above the top of the va-
+lence bandd. Similarly, the GGA+U calculations result in the
+corresponding insulating GGA ground state.
+An analysis of the structural parameters sTable Id shows
+that, when the most stable insulating antiferromagnetic solu-
+tions sstabilized by the Hubbard termd are considered, tradi-
+tional LDA and GGA calculations do capture the structural
+properties of both CeO2 and Ce2O3. The self-consistent
+MLWF projector yields results that do not depend on the
+actual value of U, so the LDA+U and GGA+U structural
+parameters are identical to the corresponding LDA and GGA
+ones. On the contrary, a standard implementation of the
+LDA+U method based on atomic orbitals leads to structural
+parameters which depend linearly on U: for example, a0 and
+B of both CeO2 and Ce2O3 change by 0.03 Å and 1 GPa,
+respectively, when U varies from 0 to 3 eV in LDA and from
+0 to 1.5 eV in GGA. For CeO2, our VBM results sGGA and
+LDAd are very close to the corresponding VBM ones re-
+ported in Ref. 4 sTable Id, but differ from the CSM ones. This
+is because the CSM results for CeO2 were obtained by forc-
+ing the Ce atoms to be in a trivalent state, hence far from the
+more physical description given by the VBM si.e., Ce in the
+formal oxidation state 4+d. On the contrary, the CSM triva-
+lent state for Ce is a very good approximation for Ce2O3,
+thus explaining the success of the CSM for this particular
+compound. For Ce2O3, the difference between our VBM re-
+sults and those of Ref. 4 is partly due to the different elec-
+tronic solutions: insulating and metallic correspondingly.
+The
+formation
+energy
+of
+CeO2
+fDHf=mCeO2−mCessd
+−mO2sgd=−11.14 eV sRef. 22dg is 211.33 eV in LDA and
+29.20 eV in GGA. Similarly, for Ce2O3 fDHf=−18.56 eV
+sRef. 22dg it is 218.49 eV in LDA and 216.78 eV in GGA.
+Thus the resulting energy of the transformation CeO2
+→1
+2Ce2O3+ 1
+4O2 is 2.02 eV sLDAd and 0.82 eV sGGAd,
+where the experimental value is 1.97 eV.22 Note that the
+LDA results seem to agree considerably better with experi-
+ment than the GGA ones. This deserves serious consideration
+when simulating chemical reactions on reduced surfaces.
+An oxygen vacancy is modeled by removing a neutral
+oxygen atom from a CeO2 supercell whose size is deter-
+mined by the concentration of defects. As for the totally re-
+duced Ce2O3 system, several metastable solutions exist at the
+LDA/GGA level. In the metallic solution the two excess
+electrons released in the reduction process result to be evenly
+distributed among all the four Ce neighbors of the O va-
+cancy.
+These
+four
+atoms
+have
+equal
+4f
+occupancy
+sTrfnmm8g=0.15d, and they relax symmetrically with respect
+to the vacancy s0.18 Å outward, while the six O atoms next
+nearest neighbors to the vacancy relax inward by 0.15 Åd.
+The Hubbard-U correction to the energy functional results in
+a broken-symmetry solution where the two excess electrons
+localize on two srather than fourd Ce atoms neighboring the
+vacancy sthe ferromagnetic and antiferromagnetic solutions
+are degenerated. Again, the role of the Hubbard-U term is to
+drive the calculation directly toward the insulating solution
+which would be stable also at the LDA or GGA level. The
+DOS of defective ceria for x=0.125 is shown in Fig. 1sed. It
+displays features which are intermediate between those of the
+Ce2O3 and CeO2 structures: the gap state at 1.5 eV sdue to
+occupied 4f states on Ce3+ atoms as in Ce2O3d and the sharp
+unoccupied 4f band of the Ce4+ atoms at 4 eV. The release of
+oxygen from the crystal structure has therefore the effect of
+formally modifying the valency of Ce from 4+ to 3+ sthe
+corresponding value of Trfnmm8g changes from 0.01 to 0.98d.
+This result agrees with the experimental evidence that the
+compensating defects are CeCe
+8 and suggest their tendency to
+cluster around the oxygen vacancy. An electronic conﬁgura-
+tion in which two electrons were initially localized on Ce
+atoms far from the vacancy led to the same SCF solution
+described above, with two of the Ce nearest neighbors of the
+vacancy being formally Ce3+. The neighbors of the vacancy
+show a complex relaxation pattern which is not centrosym-
+metric: ﬁve O atoms relax inward sfour by 0.12 Å, one by
+0.25 Åd, one O atom outward by less than 0.03 Å, and the Ce
+atoms outward sthe Ce3+ by 0.11 Å, the Ce4+ by 0.17 Åd. All
+other atoms in the largest supercell relax by less than 0.05 Å.
+As noticed for ceria surfaces8 the relaxed structure is rela-
+TAMING MULTIPLE VALENCY WITH DENSITY…
+PHYSICAL REVIEW B 71, 041102sRd s2005d
+RAPID COMMUNICATIONS
+041102-3
+tively insensitive to the details of the functionals, LDA or
+GGA.
+The calculation of the heat of reduction per oxygen va-
+cancy depends on the choice of the reference state for the
+missing O atom. In line with the calculation of the oxide
+formation energies, we use the chemical potential of molecu-
+lar oxygen: DHr=mCeOs2−xd+x/2mO2sgd−mCeO2. The resulting
+values are 5.05 eV sLDA+Ud and 2.01 eV sGGA+Ud. Note
+that, as in the case of the formation energetics of the bulk
+oxides, the LDA+U value seems to be in better agreement
+with the experiments s4.7–5.0 eV from Table 1 in Ref. 23
+and references thereind than the GGA+U result. The ener-
+getics were converged with respect to the supercell size to
+less than 0.3 eV. The binding energy of molecular O, con-
+tributing to the reference mO2sgd, is known to be badly pre-
+dicted by DFT both in the LDA and the GGA. Another com-
+mon reference is the energy of the oxygen atom in the triplet
+state mO compensated by half of the experimental O2sgd
+binding energy f5.2 eV sRef. 22dg. Even with this reference,
+that partially compensates for known errors, the LDA+U
+result s6.1 eVd is still closer to the experimental range than
+the GGA+U one s2.7 eVd.
+In summary, the multiple-valence character of cerium
+makes the ﬁrst-principles simulation of ceria compounds in-
+trinsically insidious because of the existence of a large num-
+ber of competing local energy minima. We have shown that,
+contrary to the common belief based on previous research,
+the ground state of these systems as predicted by traditional
+LDA and GGA calculations does display the correct insulat-
+ing character and oxidation state of the various Ce atoms.
+This ground state may be difﬁcult to access in practice. The
+addition of a Hubbard-U term to the LDA/GGA energy func-
+tional enhances the stability of the physical ground state,
+making it easily accessible to routine DFT calculations. Pro-
+jection on self-consistent Wannier functions makes the struc-
+tural parameters and the energetics independent of U. The
+calculated energetics is in overall good agreement with ex-
+periments, the LDA results being actually better than the
+GGA ones. This issue may have important implications when
+studying chemical reactions on reduced ceria surfaces.
+ACKNOWLEDGMENTS
+We wish to thank J. Kaspar for fruitful discussions. The
+SISSA-CINECA scientiﬁc agreement, INFM Progetto Cal-
+colo Parallelo, Regione FVG, INSTM, MIUR-PRIN 2002,
+and FIRB 2001 sContract No. RBNE0155X7d are gratefully
+acknowledged.
+1Catalysis by Ceria and Related Materials, edited by A. Trovarelli
+sImperial College Press, London, 2002d.
+2J. Laegsgaard and A. Svane, Phys. Rev. B 59, 3450 s1999d.
+3K. Held, A. K. McMahan, and R. T. Scalettar, Phys. Rev. Lett.
+87, 276404 s2001d.
+4N. V. Skorodumova, R. Ahuja, S. I. Simak, I. A. Abrikosov, B.
+Johansson, and B. I. Lundqvist, Phys. Rev. B 64, 115108
+s2001d.
+5N. V. Skorodumova, S. I. Simak, B. I. Lundqvist, I. A. Abrikosov,
+and B. Johansson, Phys. Rev. Lett. 89, 166601 s2002d.
+6S. Gennard, F. Corà, and C. R. A. Catlow, J. Phys. Chem. B 103,
+10 158 s1999d.
+7J. C. Conesa, J. Phys. Chem. B 107, 8840 s2003d.
+8N. V. Skorodumova, M. Baudin, and K. Hermansson, Phys. Rev.
+B 69, 075401 s2004d.
+9Z. Yang, T. K. Woo, M. Baudin, and K. Hermansson, J. Chem.
+Phys. 120, 7741 s2004d.
+10D. R. Mullins, P. V. Radulovic, and S. H. Overbury, Surf. Sci.
+429, 186 s1999d.
+11A. Pfau and K. D. Schierbaum, Surf. Sci. 321, 71 s1994d.
+12M. A. Henderson, C. L. Perkins, M. H. Engelhard, S. The-
+vuthasan, and C. H. F. Peden, Surf. Sci. 526, 1 s2003d.
+13All calculations were performed within the plane-wave pseudo-
+potential approach, using ultrasoft pseudopotentials sRef. 14d
+and the PWSCF computer package sRef. 15d. Defective cerias
+CeO2−x were modeled with the supercell method by considering
+two concentrations of vacancies, x=0.125 and x=0.031, requir-
+ing 23- and 95-atom supercells. The kinetic-energy cutoff for the
+plane-wave basis set was set to 30 Ry. Convergency-test calcu-
+lations have been performed raising this cutoff to 40 Ry.
+14D. Vanderbilt, Phys. Rev. B 41, R7892 s1990d.
+15S. Baroni, A. Dal Corso, S. de Gironcoli, and P. Giannozzi, http://
+www.pwscf.org
+16J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77,
+3865 s1996d.
+17E. Wuilloud, B. Delley, W. D. Schneider, and Y. Baer, Phys. Rev.
+Lett. 53, 202 s1984d.
+18H. Pinto, M. N. Mintz, M. Melamud, and H. Shaked, Phys. Lett.
+88A, 81 s1982d.
+19N. Marzari and D. Vanderbilt, Phys. Rev. B 56, 12 847 s1997d.
+20C. A. Mead, Rev. Mod. Phys. 64, 51 s1992d.
+21M. Cococcioni and S. de Gironcoli, Phys. Rev. B sto be pub-
+lishedd.
+22CRC Handbook of Chemistry and Physics, edited by D. R. Lide
+sCRC, Boca Raton, 1993d.
+23Y.-M. Chiang, E. B. Lavik, and D. A. Blom, Nanostruct. Mater.
+9, 663 s1997d.
+STEFANO FABRIS et al.
+PHYSICAL REVIEW B 71, 041102sRd s2005d
+RAPID COMMUNICATIONS
+041102-4

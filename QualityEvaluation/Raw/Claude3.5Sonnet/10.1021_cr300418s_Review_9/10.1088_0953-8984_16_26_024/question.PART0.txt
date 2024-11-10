@@ -1,0 +1,642 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+This content has been downloaded from IOPscience. Please scroll down to see the full text.
+Download details:
+IP Address: 130.237.165.40
+This content was downloaded on 26/08/2015 at 04:30
+Please note that terms and conditions apply.
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO: a problem for density functional
+theory
+View the table of contents for this issue, or go to the journal homepage for more
+2004 J. Phys.: Condens. Matter 16 S2497
+(http://iopscience.iop.org/0953-8984/16/26/024)
+Home
+Search
+Collections
+Journals
+About
+Contact us
+My IOPscience
+INSTITUTE OF PHYSICS PUBLISHING
+JOURNAL OF PHYSICS: CONDENSED MATTER
+J. Phys.: Condens. Matter 16 (2004) S2497S2507
+PII: S0953-8984(04)62054-6
+Bonding of NH3, CO, and NO to NiO and Ni-doped
+MgO: a problem for density functional theory
+Gianfranco Pacchioni1,2,7, Cristiana Di Valentin1,2,
+David Dominguez-Ariza3, Francesc Illas3, Thomas Bredow4,
+Thorsten Kl
+uner5 and Volker Staemmler6
+1 Dipartimento di Scienza dei Materiali, Universit
+a di Milano-Bicocca, Italy
+2 Istituto Nazionale per la Fisica della Materia, via R Cozzi, 53-I-20125 Milano, Italy
+3 Departament de Qu
+mica F
+sica i Centre de Recerca en Qu
+mica Te
+orica, Universitat de
+Barcelona i Parc Cient
+fic de Barcelona, C/ Mart
+ i Franqu
+es 1, E-08028 Barcelona, Spain
+4 Theoretische Chemie, Universit
+at Hannover, Am Kleinen Felde 30, 30167 Hannover, Germany
+5 Department Chemical Physics, Fritz-Haber-Institut der Max-Planck-Gesellschaft,
+Faradayweg 4-6, 14195 Berlin, Germany
+6 Lehrstuhl f
+ur Theoretische Chemie, Ruhr-Universit
+at Bochum, 44780 Bochum, Germany
+E-mail: Gianfranco.pacchioni@unimib.it
+Received 10 April 2003
+Published 18 June 2004
+Online at stacks.iop.org/JPhysCM/16/S2497
+doi:10.1088/0953-8984/16/26/024
+Abstract
+Recent experimental results (Hoeft et al 2001 Phys. Rev. Lett. 87 086101)
+have questioned the capability of current theoretical methods for describing
+the bonding of NH3, CO, and NO with the NiO(100) surface.
+We show
+that these systems do indeed represent a challenge to theory. For different
+reasons, density functional theory (DFT) fails in describing the bonding of
+these molecules to the NiO surface. The gradient-corrected functionals which
+work better for the properties of NH3/NiO and CO/NiO (energies, geometries,
+vibrations) provide wrong answers for NO/NiO and vice versa. This is not
+due to the well-known difficulty as regards DFT describing the insulating
+character of NiO. In fact, exactly the same problem is found for isolated Ni2+
+impurities in MgO. A correct description of the bonding of both closed-shell
+(NH3 and CO) and open-shell (NO) molecules to NixMg1xO is obtained only
+after inclusion of dynamical correlation and dispersion forces via wavefunction-
+based methods. However, even with correlated calculations some uncertainties
+exist regarding the predicted value of the energy of adsorption of NO on NiO.
+While CASPT2 calculations reach reasonable agreement with experiment, the
+results of approximate coupled-cluster calculations (the multi-configuration
+coupled-electron-pair approach) substantially underestimate the adsorption
+energy.
+7 Author to whom any correspondence should be addressed.
+0953-8984/04/262497+11$30.00
+ 2004 IOP Publishing Ltd
+Printed in the UK
+S2497
+S2498
+G Pacchioni et al
+1. Introduction
+A correct description of the bonding of molecular complexes to transition metal oxide surfaces
+is of fundamental importance for the understanding of problems in catalysis, gas sensors,
+corrosion protection, etc. The bonding of simple molecules such as NH3, CO, and NO to
+metal oxides represents a serious challenge to theorists. A recent experimental paper on
+the structure of these molecules on NiO(100) [1, 2] has highlighted the weakness of current
+theoretical descriptions of oxidemolecule bonding, in particular as regards the bond lengths
+(and hence the bond strengths). Nowadays, two basically different approaches are used to
+describe the bonding at surfaces. Wavefunction-based methods with explicit inclusion of
+correlation effects (e.g. through configuration interaction or perturbative treatments) were
+developed in the 1980s and 1990s and can be applied within the local cluster model approach.
+Their use is not straightforward and their application is restricted to relatively small systems.
+This is one reason for the wide use of density functional theory (DFT) in the description
+of the surface chemical bonding and of the electronic structure of solids and surfaces [3].
+Historically, DFT was developed to perform band structure calculations where periodic
+boundary conditions are properly taken into account. Thanks to the introduction of hybrid
+exchangecorrelation functionals, the description of bond dissociation energies in molecular
+complexes has also approached so-called chemical accuracy (errors < 1 kcal mol1).
+However, recent studies on some special problems (magnetic coupling [4], localized holes
+in insulators [5, 6], weakly interacting systems [7, 8], etc) have shown limitations of DFT
+which may lead to a physically incorrect picture or to a strong dependence of the results on
+the exchangecorrelation functional.
+The adsorption properties of NH3, CO, and NO on NiO(100) and Ni-doped MgO(100)
+have been determined experimentally in detail and represent a unique opportunity to test theory.
+Photoelectron diffraction studies of NiO(100) thin films show that NO is bound with a NiN
+distance of 1.88 Å and a tilt angle of 59from the surface normal [1]; CO binds almost normal
+to the surface with a NiC distance of 2.07 Å [1, 2]; a similar distance, 2.06 Å, is measured for
+NH3 [1, 2]. Thermally programmed desorption (TPD) studies on NiO single crystals show that
+the desorption energy of NO, 0.57 eV, is about twice that of CO, 0.30 eV [9]. According to a
+crude estimate from TPD spectra of NH3 adsorbed on NiO thin films [10], this molecule is the
+most strongly bound, with a desorption energy of about 0.8 eV [1, 2]. Infra-red spectra of NiO
+powders show that while the frequency of adsorbed NO is red-shifted compared to that of the
+free molecule, ω = 71 cm1 [11], that of CO is slightly blue-shifted, ω = +9 cm1 [12].
+Ni2+ ions diluted in a MgO matrix behavein a very similar way to Ni2+ ions in the extended NiO
+surface: the CO vibrational frequencies are virtually the same in the two systems [11, 13]; the
+desorption temperatures of NO adsorbed on Ni-doped MgO and NiO are very similar [14, 15];
+for a more extended discussion see also [16]. The physical reason is that the bonding of CO
+and NO to the Ni ion is very local and only marginally depends on the matrix in which the
+ion is included. Electron spin resonance (ESR) measurements on NO adsorbed on NiO/MgO
+solid solutions show a single unpaired electron in the 3d shell of Ni (formally Ni+ 3d9) [17].
+In this work we report a theoretical study where the bonding of the three molecules
+to NiO and Ni-doped MgO is treated using both DFT and wavefunction-based methods. The
+calculations have been done within the cluster approach and compared with results for periodic
+slabs in selected cases. We will show that the DFT results exhibit a strong dependence on the
+exchangecorrelation functional used and that in some cases this results in a qualitatively
+wrong picture of the interaction. Functionals which provide the best answers for NH3/NiO
+and CO/NiO are inadequate to describe the bonding in NO/NiO and vice versa. A correct
+solution requires explicitly correlated wavefunctionsgenerated by complete-active-spaceSCF,
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO
+S2499
+CASSCF, and second-order perturbation theory, CASPT2, approaches [18, 19] or the multi-
+configuration coupled-electron-pair approach (MC-CEPA) method [20]. In this case also,
+however, some uncertainties about the bonding properties remain, mainly due to the difficulty
+of approaching a full CI treatment and selecting the proper configurations involved in the
+differential electronic correlation effects.
+2. Computational methods
+Both spin-polarized and spin-restricted calculations have been performed. A spin-polarized
+DFT calculation corresponds to an unrestricted HF approach, UHF, and, as such, cannot
+rigorously describe the spin multiplicity of an open-shell system. In fact, the spin-polarized
+calculations resulted in severe spin-contamination problems, as will be discussed below.
+Therefore, the calculations have been performed also using the restricted open-shell (RO)
+formalism.
+In this case the corresponding electronic states are pure triplet states for the
+adsorption of a closed-shell molecule on an isolated Ni2+ impurity in MgO and pure doublet
+or pure quartet states for NO/NiO.
+Correlation effects can be included, based on DFT. In the KohnShamformulationof DFT,
+the exact non-local HF exchange for a single determinant is replaced by a general expression,
+the exchangecorrelationfunctional, which can include both exchangeand electron correlation
+energy terms. Here we used three different approaches; one of them is a pure DFT method
+and the other two are hybrid approaches where the exchange interaction is described partially
+or entirely by the HF exchange. In the pure DFT scheme, we used the approach based on
+the gradient-corrected exchange functional proposed by Becke [21] combined with the non-
+local expression of the correlation functional proposed by Lee, Yang, and Parr (BLYP) [22],
+which goes back to the original work of Colle and Salvetti [23, 24] on the correlation factor.
+In one hybrid approach the exchange term was entirely described at the HF level (100% HF
+exchange) while the correlation part made use of the LYP correlation functional described
+above; this approach is referred to as HFLYP. A second hybrid approach makes use of the
+hybrid B3LYP method where the HF exchange is mixed in with the DF exchange using the
+Becke three-parameter approach [25].
+For CO/NiO the model of the NiO surface consists ofa Ni9O9 cluster embedded in effective
+core potentials (ECP) and a 3×3×2 set of point charges(PC = 2) to represent the crystalline
+Madelung potential; see table 1. The geometry was fixed to the ideal rock-salt structure of bulk
+NiO with a lattice constant of 4.16 Å [26]; no geometrical relaxation at the NiO(100) surface
+was allowed for. The calculations, performed with the GAUSSIAN98 program [27], have
+been compared with periodic calculations carried out with the CRYSTAL code [28] on three
+slabs of NiO for a CO coverage θ = 0.25 monolayers. On Ni9O9 we assumed a ferromagnetic
+coupling of the spins on the Ni atoms; in the periodic calculation the correct antiferromagnetic
+ordering has been used [29]. The differences in CO/NiO properties obtained with cluster and
+slab are smaller than 0.03 Å for the bond lengths, 0.02 eV for the binding energy, and 7 cm1
+for the frequencies; see table 1.
+For NH3 and NO most of the calculations have been performed for a NiMg8O9 model of
+an isolated Ni2+ impurity on the MgO(100) surface; see figure 1 and tables 2 and 3. Here,
+an undistorted MgO rock-salt structure was used [26]. As already mentioned above, the
+behaviour of Ni2+ ions diluted in a MgO matrix is analogous to that of Ni2+ ions in the
+extended NiO surface. This has been verified theoretically by comparing CO on NiMg8O9 and
+Ni9O9 cluster models: within a given method, the results are the same within 0.05 eV for
+the energies and 0.03 Å for the distances; see table 1. For the specific case of NO we also
+performed periodic slab calculations; see table 3. Given the tilt angle of the NO molecule, the
+S2500
+G Pacchioni et al
+Figure 1. Potential energy curves for the 2A and 4A states of NO/NiMg8O9 computed at the
+RO HFLYP, B3LYP, and BLYP levels. The distance of NO from the Ni cation has been optimized,
+keeping fixed the NO distance (1.17 Å), the tilt angle ϑ = 60(ϑ is the angle between the NO
+axis and the surface normal), and the ONNiOsurface polar angle ϕ = 45. In the inset we show
+the NiMg8O9 cluster used to model the surface. The cluster is embedded in ECPs and a large array
+of point charges (not shown).
+(This figure is in colour only in the electronic version)
+Table 1.
+Properties of CO adsorbed on NiO and Ni-doped MgO (De = dissociation energy,
+ωe = vibrational frequency; U = spin unrestricted; RO = restricted open shell; in parentheses:
+values without BSSE correction).
+Method
+Model
+De (eV)
+r1(NiC) (Å)
+r2(CO) (Å)
+ωe (cm1)
+HFLYP
+U
+Ni9O9
+0.15(0.22)
+2.38
+1.098
+10
+HFLYP
+U
+NiO slab
+0.17(0.29)
+2.40
+1.095
+3
+B3LYP
+U
+Ni9O9
+0.02(0.12)
+2.10
+1.134
+73
+B3LYP
+U
+NiMg8O9
+0.06(0.16)
+2.10
+1.130
+BLYP
+U
+Ni9O9
+0.23(0.33)
+1.87
+1.161
+172
+BLYP
+U
+NiMg8O9
+0.30(0.41)
+1.90
+1.154
+CASPT2
+RO
+NiMg8O9
+0.13(0.30)
+2.24
+1.136
++16
+Experiment
+0.30  0.04 [9]
+2.07  0.02 [1, 2]
+1.15  0.09 [1, 2]
++9 [12]
+coverage dependence of the results has been analysed by considering two coverages, θ = 0.25
+and 0.125 monolayers. The properties computed for NO/NiO(100) slabs are similar to those
+obtained with theNO/NiMg8O9 cluster; seetable3. ThisjustifiestheuseofNiMg8O9 instead of
+a Ni9O9 cluster. One practical advantage in using a NiMg8O9 model is that NO/Ni9O9 clusters
+result sometimes in severe convergence or spin-contamination problems due to the complex
+spin coupling (see below).
+The cluster wavefunctions have been constructed using localized Gaussian-type basis
+sets of triple-zeta-plus-polarization quality. The basis set for NiMg8O9 is 6-31G for Mg,
+[16s8p2d/6s5p2d]for O [30], and [22s14p6d/7s6p3d]for Ni [31] (see also basis set B in [32]).
+The basis set for Ni9O9 is 6-311 + G for Ni [33], and 6-311 + G[34] for O (see basis set C
+in [32]); this basis set has been used in a parallel study of CO adsorption at the NiO(100)
+surface [29], and is similar in quality to the basis set used for NiMg8O9. The 6-311 + G[34]
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO
+S2501
+Table 2.
+Properties of NH3 adsorbed on Ni-doped MgO (De
+= dissociation energy;
+U = spin unrestricted; in parentheses: values without BSSE correction).
+Method
+Model
+De (eV)
+r1(NiN) (Å)
+r2(NH) (Å)
+HFLYP
+U
+NiMg8O9
+0.49(0.55)
+2.169
+0.992
+B3LYP
+U
+NiMg8O9
+0.23(0.31)
+2.189
+1.015
+BLYP
+U
+NiMg8O9
+0.16(0.24)
+2.166
+1.024
+Experiment
+0.80 [1, 2]
+2.06  0.02 [1, 2]
+Table 3.
+Properties of NO adsorbed on NiO and Ni-doped MgO (De = dissociation energy;
+θ = angle between the NO axis and the surface normal; ωe = vibrational frequency; U = spin
+unrestricted; RO = restricted open shell; in parentheses: values without BSSE correction).
+Spin on
+Dc
+r1(NiN)
+r2(NO)
+ωe
+Method
+Model
+Ni
+(eV)
+(Å)
+(Å)
+θ (deg)
+(cm1)
+HFLYP
+RO
+NiMg8O9
+0.94
+3.53(3.42)
+1.82
+1.148
+64.1
+404
+HFLYP
+RO
+NiO slab
+0.95
+3.90(3.80)
+1.78
+1.170
+60.0a
+B3LYP
+RO
+NiMg8O9
+0.79
+0.11 (0.00)
+1.85
+1.164
+61.2
+209
+B3LYP
+U
+NiMg8O9
+3b
+0.25(0.36)
+2.02
+1.153
+57.1
+110
+B3LYP
+U
+NiO slab
+3b
+0.07(0.33)c
+2.07
+1.186
+60.0a
+BLYP
+RO
+NiMg8O9
+0.68
+0.96(1.10)
+1.84
+1.191
+59.6
+292
+CASPT2-Ad
+RO
+NiMg8O9
+1
+0.48(0.65)
+2.03
+1.185
+62.6
+101
+CASPT2-Be
+RO
+NiMg8O9
+1
+0.17(0.65)f
+2.03
+1.173
+62.6
+0.31(0.78)g
+MC-CEPAd
+RO
+NiMg8O9
+1
+0.18 (0.12)h
+2.03a
+1.170a
+60.0a
+CEPA-0d
+RO
+NiMg8O9
+1
+0.00(0.33)h
+2.03a
+1.170a
+60.0a
+MC-CEPAi
+RO
+NiMg8O9
+1
+0.02(0.24)h
+2.03a
+1.170a
+60.0a
+CEPA-0i
+RO
+NiMg8O9
+1
+0.34(0.57)h
+2.03a
+1.170a
+60.0a
+Experiment
+1
+0.57  0.04 [9]
+1.88  0.02 [1]
+59 [1]
+71 [11]
+a Not optimized.
+b Strongly spin-contaminated solution (two spins up and one spin down).
+c The calculation refers to a coverage θ = 0.25; for a lower coverage, θ = 0.125, and assuming the same geometry,
+De = 0.16 eV (0.41 eV before BSSE).
+d Calculations done with the same basis set as used for the DFT calculations (see the text).
+e Calculations done with the ANO basis set (see the text).
+f State-averaged CASSCF/CASPT-2 for an isolated NO molecule.
+g State-optimized CASSCF/CASPT-2 for an isolated NO molecule.
+h State-optimized CASSCF/MC-CEPA for an isolated NO molecule.
+i Extended basis.
+basis set was used for the NH3, CO, and NO molecules. The adsorption energies have been
+corrected using the counterpoise method to remove the basis set superposition error (BSSE)
+inherent to the use of localized basis functions [35].
+The DFT results have been complemented by wavefunction-based calculations with
+explicit inclusion of correlation effects employing the CASSCF, CASPT2, and MC-CEPA
+approaches. Clusters and basis sets are the same as for DFT. However, we restricted the
+CASPT2 analysis to CO and NO adsorbates and to NiMg8O9 models, since calculations on a
+Ni9O9 cluster, possible in principle, are quite complex because of the large number of possible
+spin couplings in the 3d manifold all within a very small energy interval.
+CASPT2 is a generalization of the well-known MP2 method based on HF wavefunctions
+to CASSCF wavefunctions and reduces rigorously to MP2 for CAS containing a single closed-
+shell Slater determinant (i.e. for a single HF wavefunction).
+Some part of the electron
+correlation effect is treated in a variational way in the CASSCF step, and the remainder,
+S2502
+G Pacchioni et al
+mainly dynamical electron correlation, is estimated by second-order perturbation theory with
+the CASSCF as the zeroth-order wavefunction. This strategy combines the accuracy of a
+multi-reference CI treatment and the low computational cost of a perturbational approach.
+Over the last few years the CASPT2 method has been proven to be a fruitful approach for
+studying, analysing, and predicting the spectroscopy of a wide range of organic and inorganic
+molecules [3639]. The method has also been successfully applied for studying excited states
+in solid-state compounds [4042].
+CASSCF and CASPT2 interaction energy curves have been determined by single-point
+calculations as functions of the distance of CO or NO from the Ni cation (the CO or NO
+distances have been kept fixed at 1.13 and 1.17 Å, respectively; a tilt angle ϑ = 60has been
+assumed for NO while CO is normal to the surface). In a first set of CASSCF calculations on
+NO/NiMg8O9 (CASSCF-A) the active space includes the Ni 3d(z2) and 3d(x2 y2) orbitals,
+two diffuse Ni 4d(z2) and 4d(x2 y2) orbitals, and the π(x) and π(y) antibonding orbitals
+on NO and three active electrons. For CO/NiMg8O9, the active space includes the CO 5σ,
+6σ , 1π, 2πand the Ni 3d(z2), 3d(x2 y2), 3d(xz)3d(yz) orbitals and twelve electrons. In
+CASPT2, a second-order estimate of the total energy is calculated by correlating a total of 162
+(CO) and 163 (NO) valence electrons (CASPT2-A). The bonding of NO to NiO represents a
+particularly complex case so another calculation has been performed on NO/NiMg8O9 using a
+larger basis set (CASPT2-B). In particular, we used the atomic natural orbitals (ANO) basis set
+given by Roos et al [43, 44]. The contraction scheme of the basis used for the NiMg8O9 is as
+follows: [17s12p/3s2p] for Mg, [14s9p4d/6s5p2d]for O, and [21s15p10d6f/8s6p3d1f]for Ni.
+For the NO molecule the contraction scheme is [14s9p4d/5s4p2d]. For the CASSCFCASPT2
+calculations we used the MOLCAS 5 package [45].
+A less approximate way of including dynamical correlation effects on top of a HF or
+CASSCF calculation is to employ a coupled-cluster method. In the present study, we have
+used the MC-CEPA scheme developed by Fink and Staemmler [19] which is an approximate
+multi-configuration coupled-cluster method. It is, in contrast to CISD methods, exactly size
+consistent, but contains certain approximations for complicated matrix elements [20]. The
+present implementationcan make use of three variants: the genuine MC-CEPA approximation,
+a variant-averaged coupled-pair functional (ACPF) as proposed by Gdanitz and Ahlrichs [46],
+and a linearized version, CEPA-0, in which all matrix elements not necessary to ensure size
+consistency are completely neglected. In all applications so far we found that MC-CEPA and
+ACPF correlation energies are quite similar and rather close to full CI results as well, whenever
+a comparison was possible, while CEPA-0 generally overestimates correlation effects. Similar
+observations have been made by other authors using related approaches [47].
+In the present study, we have performed single point MC-CEPA calculations for NO/NiO
+employing the same cluster geometry and nearly the same basis sets as in the DFT and CASPT2
+calculations. However, in order to keep the computer time low, we identified all doubly
+occupied orbitals in the cluster and included only the valence orbitals at Ni, at the O atoms
+adjacent to the Ni adsorption site, and at the NO molecule in the correlation treatment.
+3. Results and discussion
+NH3, CO, and NO bind to the NiO surface through completely different mechanisms. NH3 and
+CO interact mainly electrostatically with the Ni2+3d8 surface cation (the 3B2 ground state in
+C4v), with very small covalent bonding contributions[48]; the bonding arises from polarization
+and dispersion forces with no change of Ni2+ spin state.
+The bonding in NO/NiO and
+NO/NiMg8O9 implies interaction of the paramagnetic NO molecule, the 2 ground state,
+with a magnetic Ni2+ ion in an open-shell 3d8, 3B2, configuration.
+The coupling of the
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO
+S2503
+unpaired electrons on the two fragments results in four electronic states, 2A, 2A, 4A,
+4A (Cs symmetry) [49].
+Only one of them, 2A, is bonding, in agreement with ESR
+measurements [17]; the other three states exhibit purely repulsive potential energy curves,
+figure 1.
+First we consider the bonding of the three molecules as described by the popular hybrid
+B3LYP approach. At the U-B3LYP level CO/Ni9O9 and CO/NiMg8O9 are almost unbound
+complexes, with De = 0.02 and 0.06 eV, respectively, despite a distance from the surface,
+2.10 Å, close to the experimental one; see table 1. For NH3/NiMg8O9 we found at the same
+level a weak bonding, De = 0.23 eV, much lower than in the experiment, and a distance
+from the surface, 2.19 Å, which is 0.13 Å longer than the measured one [1, 2]; see table 2.
+It is important to note that the spin contamination is small for both NH3 and CO surface
+complexes and the expectation value of S2is within 0.02 of the nominal value for a triplet
+state. This is indicative of the single-reference nature ofthe ground state. For NO/NiMg8O9 the
+U-B3LYP approach gives De = 0.25 eV (BSSE corrected), a NiN distance of 2.02 Å, but
+a spin distribution which is contrary to experiment; see table 3. S2is 1.41 instead of that
+expected for a doublet state, 0.75, indicating a substantial spin contamination. The spin
+distribution shows the presence of three unpaired electrons, two with spin up on Ni and one
+with spin down on NO, at variance with the ESR experiment [17]. This is indicative of a
+multi-reference character of the ground state [32, 49]. Similar results are obtained when we
+model the NiO surface by a NiO slab; see the NO/NiO U-B3LYP results for θ = 0.25 in
+table 3. The binding energy, however, is considerably smaller, De = 0.07 eV after BSSE.
+This is due in part to adsorbateadsorbate repulsions. In fact, repeating the calculation for
+θ = 0.125 (the geometry has not been reoptimized), De becomes 0.16 eV. Apart from the
+slightly different energy, the NiMg8O9 cluster and the NiO slab give similar properties and
+incorrect spin distributions, showing that the problem cannot be treated properly within this
+DFT approach. If the B3LYP calculation is repeated using the RO formalism so that the
+corresponding solution is forced to be an eigenfunction of the S2spin operator (pure 2A
+state; figure 1), then the geometry is similar to the spin-polarized solution but the interaction
+energy is close to zero; see table 3. The other wrong prediction ofthe B3LYP approach is for the
+vibrational shifts of adsorbed CO and NO. For NO/NiMg8O9, ω (RO-B3LYP) = 209 cm1
+is three times the experimental value, 71 cm1; ω (U-B3LYP) = 110 cm1 is better but
+still overestimated; see table 3. For CO/Ni9O9 even the direction of the shift is wrong (theory:
+ω = 73 cm1; experiment: ω = +9 cm1 [12]; see table 1). Clearly, the B3LYP method
+does not provide a satisfactory description of the three bonds.
+We have further considered the pure BLYP gradient-corrected exchangecorrelation
+functional. At the BLYP level, NH3/NiMg8O9 with De = 0.16 eV is underboundtable 2;
+CO/NiMg8O9 with De = 0.30 eV matches the experimental result perfectlytable 1; while
+NO/NiMg8O9 is overbound, De = 0.96 eVtable 3. Probably BLYP underestimates the
+dispersion contribution to the bonding of NH3 to ionic substrates, while it overestimates the
+covalent contribution in NO/NiO. For NO and especially for CO, the distance from the surface
+is too short. This results in a strong overlap with the Ni 3d orbitals and in an excessive back-
+donation of charge into the antibonding levels of the adsorbed molecule. The consequence
+is that the CO vibrational shift is 172 cm1, instead of +9 cm1table 1; for NO, ω
+is 292 cm1 instead of 71 cm1table 3. Thus, the BLYP method is also completely
+inadequate for describing the bonding at the NiO surface. Notice that the PerdewWang GGA
+approach provides results (not reported here for brevity) similar to the BLYP ones. LDA
+appears to be totally inadequate since it fails even to correctly predict NiO as an insulator [50].
+As a last example of exchangecorrelation functionals, we have considered the HFLYP
+approach. Notice that hybrid DFT approaches such as HFLYP give a rather good description
+S2504
+G Pacchioni et al
+of the properties of bulk NiO [51, 52]. In HFLYP, for CO/Ni9O9, De = 0.15 eV is somewhat
+smaller than the experimental value; the NiC distance, 2.38 Å, is 0.21 Å longer than in
+the experiment; and ω is 10 cm1 instead of +9 cm1table 1. For NH3/NiMg8O9,
+De = 0.49 eV is slightly smaller than the experimental estimate and the NiN bond distance is
+0.1 Å too longtable 2. These results are far from being satisfactory. Still, HFLYP provides
+the best overall description of the bonding characteristics of CO/NiO and NH3/NiO among
+the functionals considered. Unfortunately, the same HFLYP approach gives a completely
+wrong description of NO/NiO; see table 3. The calculations are done at the RO level to avoid
+spin-contamination problems. Only the bond length, 1.82 Å for NiMg8O9 and 1.78 Å for
+a NiO slab, is reproduced with an acceptable error. The minimum of the 2A curve for
+NiMg8O9see figure 1lies 3.53 eV above the dissociation limit (3.90 eV with a NiO slab)
+and ω, 404 cm1, is five times larger than the experimental one! The reason for this
+failure lies in the description of the on-site Coulomb repulsion in Ni2+. The coupling of the
+NO spin with the Ni2+ unpaired electrons results formally in a change of Ni configuration
+from 3d8 to 3d9. This can be related to the electron affinity (EA) of the Ni2+ cation in NiO,
+a key parameter in determining the Hubbard U-parameter in magnetic insulators. EA for the
+process NiMg8O9 + e[NiMg8O9]changes dramatically as a function of the amount
+of HF exchange which is mixed in with the DFT exchange and goes from 2.7 eV in BLYP
+to 6 eV in HFLYP! The ordering of the 2A curves follows the same trend; see figure 1.
+Thus, the 3d intra-shell Coulomb repulsion is substantially overestimated when the exchange
+is treated at the HF level. This is associated also with the level of spin localization: in HFLYP
+the spin is localized by 94% on the Ni 3d orbital; in BLYP the localization is reduced to 68%;
+see table 3.
+These results show unambiguously the problems of the DFT approach for describing
+the bonding of NH3, CO, and NO to NiO or Ni-doped MgO surfaces. Therefore, we made
+use of wavefunction-based methods where the dynamical correlation, spin state, and multi-
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do the preparation methods, dopant concentrations, and vacancy formation in nickel oxide-based catalysts influence their electronic structure and catalytic performance in oxidative dehydrogenation reactions (such as ethylbenzene to styrene and ethane to ethylene), and what are the key challenges in theoretical modeling, process optimization, and balancing efficiency, selectivity, and safety in these catalytic systems?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

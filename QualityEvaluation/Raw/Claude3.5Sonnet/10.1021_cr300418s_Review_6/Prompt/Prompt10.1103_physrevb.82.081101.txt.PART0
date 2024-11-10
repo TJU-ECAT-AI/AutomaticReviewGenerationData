@@ -1,0 +1,596 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Higher-accuracy van der Waals density functional
+Kyuho Lee,1 amonn D. Murray,1 Lingzhu Kong,1 Bengt I. Lundqvist,2,3 and David C. Langreth1
+1Department of Physics and Astronomy, Rutgers University, Piscataway, New Jersey 08854-8019, USA
+2Department of Applied Physics, Chalmers University of Technology, SE-41296 Gteborg, Sweden
+3Center for Atomic-scale Materials Design, Department of Physics, Technical University of Denmark,
+DK-2800 Kongens Lyngby, Denmark
+Received 12 March 2010; revised manuscript received 8 July 2010; published 4 August 2010
+We propose a second version of the van der Waals density functional of Dion et al. Phys. Rev. Lett. 92,
+246401 2004, employing a more accurate semilocal exchange functional and the use of a large-N asymptote
+gradient correction in determining the vdW kernel. The predicted binding energy, equilibrium separation, and
+potential-energy curve shape are close to those of accurate quantum chemical calculations on 22 duplexes. We
+anticipate the enabling of chemically accurate calculations in sparse materials of importance for condensed
+matter, surface, chemical, and biological physics.
+DOI: 10.1103/PhysRevB.82.081101
+PACS numbers: 71.15.Mb, 31.15.E
+The van der Waals vdW attraction is a quantum-
+mechanical phenomenon with charge fluctuations in one part
+of an atomic system that are electrodynamically correlated
+with charge fluctuations in another. The vdW force at one
+point thus depends on charge events at another region and is
+a truly nonlocal correlation effect.
+Methods for accurately calculating the vdW interactions
+are critical to understanding sparse matter, including bulk
+solids e.g., layered materials, molecular crystals, and poly-
+mers, surface phenomena e.g., adsorption, water overlay-
+ers, and gas separation and storage, and biostructures e.g.,
+DNA and protein structure.
+The exact density functional contains the vdW forces. Un-
+fortunately, we do not have access to it but approximate ver-
+sions are abundant. Commonly, the local-density approxima-
+tion LDA and generalized gradient approximation are used
+with quite some success for dense matter, including hard
+materials and covalently bound molecules. They depend on
+the density in local and semilocal ways, respectively, how-
+ever, and give no account of the fully nonlocal vdW interac-
+tion.
+First-principles approaches for how vdW can be treated in
+DFT were first proposed for the asymptotic interaction
+between fragments.13 These ultimately evolved into the van
+der
+Waals
+density
+functional
+vdW-DF
+for
+arbitrary
+geometries.46 Despite its success for describing dispersion
+in a breadth of systems better than any other non-
+empirical
+method,7
+vdW-DF
+overestimates
+equilibrium
+separations4,5,712
+and
+underestimates
+hydrogen-bond
+strength.13,14
+In this Rapid Communication, we propose a second ver-
+sion of the van der Waals density functional vdW-DF2 em-
+ploying a more accurate semilocal exchange functional
+PW86 Refs. 15 and 16 and the use of a large-N asymptote
+gradient correction17 in determining the vdW kernel. By
+making a full comparison of potential-energy curves PECs
+with accurate quantum chemistry QC results for 22 mo-
+lecular duplexes, we show that vdW-DF2 substantially im-
+proves
+i
+equilibrium
+separations,
+ii
+hydrogen-bond
+strengths, and iii vdW attractions at intermediate separa-
+tions longer than the equilibrium ones. The improvement in
+iii, found via a full PEC comparison, is most critical for
+important real-life applications to sparse matter and bio-
+logical matter where it is impossible for basic structural units
+to assume the same separations they would have as binary
+units in vacuo.
+First, we replace Perdew-Burke-Ernzerhof revPBE ex-
+change functional18 with PW86,15,16 because revPBE is gen-
+erally too repulsive near the equilibrium separation,8 and can
+bind spuriously by exchange alone, although less so than
+most other local or semilocal functionals. Hence, other ex-
+change functionals19,20 have been proposed. Recent perfor-
+mance studies of various exchange functionals for weakly
+interacting atoms21 and molecules,22 however, show PW86,
+with an enhancement factor proportional to s2/5 at large re-
+duced density gradient s, to give the most consistent agree-
+ment with Hartree-Fock HF results, without spurious ex-
+change binding. It also is a good match23 for the vdW-DF2
+correlation kernel, introduced below, although no others
+were tried.
+The key to the vdW-DF method is the inclusion of a long-
+range piece of the correlation energy, Ec
+nln, a fully nonlocal
+functional of the density n. This piece is evaluated using a
+plasmon pole approximation for the inverse dielectric
+function, which satisfies known conservation laws, limits,
+sum rules, and invariances.4 A single parameter model for the
+pole position was adopted, with the pole residue set by the
+law of charge-current continuity f-sum rule, and the pole
+position at large wave vector set by the constraint that there
+be no self-Coulomb interaction. The single parameter is de-
+termined locally from electron-gas energy input via gradient
+corrected LDA.4
+The nonlocal piece of the correlation energy in both
+vdW-DF and vdW-DF2 is of the form
+Ec
+nln = d3r d3rnrr,rnr.
+1
+The kernel  is given as a function of Rfr and Rfr,
+where R=rr and fr is a function of nr and its gradi-
+ent. In fact fr is proportional to the exchange-correlation
+energy density xc of a gradient corrected LDA at the point r.
+PHYSICAL REVIEW B 82, 081101R 2010
+RAPID COMMUNICATIONS
+1098-0121/2010/828/0811014
+2010 The American Physical Society
+081101-1
+This arose from the approximately implemented requirement
+that the dielectric function implied by the plasmon pole
+model should give an exchange-correlation energy semilo-
+cally consistent with a gradient corrected electron gas. We
+call the semilocal functional that fixes fr in Eq. 1 the
+internal functional.
+The above is easier to understand for two separate mol-
+ecules, although the arguments apply equally well to a pair
+of high-density regions of a sparse material. The long-range
+vdW attraction implied by Eq. 1 occurs from the contribu-
+tion where r is on one molecule and r on the other. The
+definition of fr and fr varies continuously and indepen-
+dently at each point according to xcr and xcr. The
+quantity xc is taken to consist of a gradient corrected LDA.
+In the first version of vdW-DF,4 the gradient correction was
+obtained from a gradient expansion24 for the slowly varying
+electron gas.25,26 More appropriate is a functional that gives
+accurate energies for molecules, however. When r and r are
+each in a separate moleculelike region, with exponentially
+decaying tails between them, fr and fr can both be large
+and give key contributions to a vdW attraction. For this case
+including perhaps even a molecule near a surface the
+large-N asymptote27,28 and the exchange energy asymptotic
+series for neutral atoms provide a more accurate approxima-
+tion. In fact, the exchange parameter26  of the B88 ex-
+change functional,29 successfully used in the vast majority of
+DFT calculations on molecules, can be derived from first
+principles using the large-N asymptote,17 as can the LDA
+exchange. It seems obvious, then, that vdW-DF results
+should be improved if the second-order expansion of the
+exchange in gradients is replaced by the second-order
+large-N expansion. Interestingly, PW86R functional, selected
+as the overall exchange functional for different reasons, also
+follows the large-N behavior for small reduced gradient s
+values down to 0.1, where it reverts to the form of slowly
+varying electron-gas limit.
+Thus we use 2.222 times larger exchange gradient coeffi-
+cient, a value based on agreement between derived17,27,28 and
+empirical29 criteria a 6% smaller derived value of Ref. 17
+only gives a marginal improvement. Assuming that the
+screened exchange term30increases in the same proportion as
+gradient exchange itself, finally we get the appropriate gra-
+dient coefficient in the Z notation26 which is multiplied by
+2.222. Summarizing: while Zab=0.8491 in vdW-DF, Zab=
+1.887 in vdW-DF2, implying changes in the internal func-
+tional.
+The performance of our energy functional is assessed via
+comparisons with the accurate S22 reference data set31,32 and
+PECs Ref. 33 based on QC calculations at the level of
+coupled-cluster with single and double and perturbative
+triple excitations CCSDT with extrapolation to the com-
+plete basis set limit. These 22 small molecular duplexes for
+the noncovalent interactions typical in biological molecules
+include hydrogen-bonded, dispersion-dominated, and mixed
+duplexes. Recent evaluation13 of the performance of the
+vdW-DF for S22 shows it to be quite good, except for
+H-bonded duplexes, where vdW-DF underestimates the bind-
+ing energy by about 15%.
+Calculations are performed by a plane-wave code and an
+efficient vdW algorithm34 with Troullier-Martins-type norm-
+conserving pseudopotentials. Spot comparison with all elec-
+tron calculations using large basis sets indicates a calcula-
+tional accuracy of 1%, actually better than that of most of
+PAW potentials supplied in various standard codes. Large
+box sizes were used to control spurious electrostatic interac-
+tions between replicas. See supplementary material35 for fur-
+ther details.
+Figure 1 shows a typical PEC for each kind of interaction.
+To make a direct comparison to the QC results, the PECs are
+calculated at the same geometry of those of the CCSDT
+PEC calculations33 shown as dashed-dotted lines with
+circles, where each molecule is kept in its S22 geometry31
+and moved along the line defined by the center-of-mass co-
+ordinates of two molecules without any rotation. Overall, the
+vdW-DF2 PECs solid lines show a remarkable agreement
+with QC ones for all separations and for all three types of
+interactions. The shapes of the PECs near the minima, im-
+portant for vibrational frequencies, are greatly improved see
+inset figures where PECs are aligned to have the common
+minimum point. More importantly the strength of vdW at-
+0
+1
+2
+3
+Displacement (Å)
+-800
+-600
+-400
+-200
+0
+vdW-DF
+vdW-DF2
+CCSD(T)
+-0.2 0
+0.2 0.4
+0
+100
+200
+-200
+-150
+-100
+-50
+0
+-0.2 0
+0.2 0.4
+0
+25
+50
+Interaction Energy (meV)
+#5 Uracil dimer
+#2 Water dimer
+(a)
+0
+1
+2
+3
+Displacement (Å)
+-30
+-20
+-10
+0
+-0.2 0
+0.2 0.4
+0
+5
+10
+-50
+-25
+0
+-0.2 0
+0.2 0.4
+0
+10
+20
+Interaction Energy (meV)
+#8 Methane dimer
+#9 Ethene dimer
+(b)
+0
+1
+2
+3
+Displacement (Å)
+-200
+-100
+0
+-0.2 0
+0.2 0.4
+0
+25
+50
+-75
+-50
+-25
+0
+-0.2 0
+0.2 0.4
+0
+10
+20
+Interaction Energy (meV)
+#21 Indole·Benzene (T-shape)
+#16 Ethene·ethine
+(c)
+FIG. 1. Color online PECs for the best and the worst case of a hydrogen-bonded, b dispersion-dominated, and c mixed duplexes.
+CCSDT QC PECs dashed-dotted lines with circles taken from Ref. 33 and the reference energies cross marks taken from Ref. 32 at the
+geometry of Ref. 31 are also shown. The shapes near minima are compared in inset figures where PECs are aligned to have the common
+minimum point. For all the other S22 duplexes, see supplementary material.
+LEE et al.
+PHYSICAL REVIEW B 82, 081101R 2010
+RAPID COMMUNICATIONS
+081101-2
+traction at larger distances is weakened in agreement with
+QC, especially for vdW-bonded duplexes Fig. 1b. In other
+words, the original vdW-DF overestimates vdW attraction at
+intermediate separations beyond the equilibrium separation,
+although its minimum energy is accurate. This has special
+importance in sparse condensed matter. An example will be
+given below.
+The PECs tend to turn up slightly earlier when approach-
+ing the repulsion regime at small separations. This quite uni-
+versal feature might be due to PW86 exchange functional
+which is slightly more repulsive than HF at short distances.22
+For duplexes whose large distance asymptote is dominated
+by dispersion here methane dimer, ethene dimer, and
+benzene-methane, vdW-DF2 will have weaker attraction in
+the asymptotic region and smaller C6 coefficients than vdW-
+DF, which at least for the methane dimer already gives a C6
+coefficient close to experiment.6 Recently, this prediction
+was verified in detail for various duplexes.36 However, in the
+region of our calculations, such deterioration is not perva-
+sive. In any case, neither the vdW-DF curves nor the QC
+curve have reached their asymptotic limit for any of the
+above three cases. The remainder of the 22 duplexes have
+asymptotic forms dominated by electrostatics.
+In Fig. 2, we summarize the calculated binding energies at
+equilibrium separation, at equilibrium separation plus 1 Å,
+and the equilibrium separations themselves, with each quan-
+tity given as a deviation from that implied by the reference
+calculations.3133 Each subfigure clearly shows one of the
+three major improvements. i Hydrogen-bond strengths. The
+mean absolute deviation MAD of binding energy for
+hydrogen-bonded duplexes is decreased from 91 to 40 meV.
+ii Interaction at intermediate separations. The MAD of
+binding energy at a separation 1 Å larger than the equilib-
+rium one is reduced from 35 to 8 meV for the dispersion-
+dominated group and also substantially for the mixed group.
+iii Equilibrium separations. MAD is reduced from 0.23 to
+0.13 Å. Overall, the vdW-DF2 binding energies are within
+50 meV of the reference except for duplexes 5 and 7. The
+MAD of binding energy is decreased from 41 to 22 meV
+13% to 7.6%. As a final tidbit, we note that in vdW-DF2
+the MAD for the equilibrium energy of the dispersion-
+dominated complexes has been reduced to 11 meV, which is
+equal to the MAD of the work of Jurecka et al.,31 which until
+very recently32 was considered the gold standard for accu-
+racy in quantum chemical calculations on this group.
+The higher accuracy of vdW-DF2 persists in the extended
+systems we tested. As such applications, we calculated: i
+the graphite interlayer binding energy and spacing. The bind-
+ing energy is on a par with that of vdW-DF which is already
+good. Interlayer spacing is about 2% shorter than that by
+vdW-DF, in better agreement with experiment. ii H2 ad-
+sorption within two different metal-organic frameworks
+MOFs, Zn2BDC2TED and MOF-74. In the former, the
+binding at the highest binding site 57 meV including zero
+point is in good agreement with heat of adsorption measure-
+ment 52 meV, whereas vdW-DF overestimates it by 60%.
+This demonstrates the importance of accurate intermediate-
+range interaction. For comparison, the binding energy of
+hydrogen
+to
+benzene,
+one
+of
+building
+blocks
+of
+Zn2BDC2TED, is almost the same for both functionals at
+the equilibrium separation. At larger separations, however,
+vdW-DF substantially overestimates the binding. In case of
+MOF-74, H2 positions are experimentally known. VdW-DF2
+shows its higher accuracy in predicting separations between
+hydrogens and nearby atoms improved by 0.10.2 Å. The
+strongest binding comes from an unsaturated metal atom,
+rather than more distant structures, and the binding energy,
+already accurate in vdW-DF, is little changed in vdW-DF2.
+We also tested vdW-DF2 on the internal structure of a water
+molecule, as an example of strong chemical bonds in mol-
+ecules. We find that vdW-DF2 is on par with PBE. For de-
+tails of all tests, see supplementary material.
+In summary, we have presented an enhanced version of
+vdW-DF, denoted by vdW-DF2, which can be implemented
+via simple modifications of existing codes. It results in sig-
+nificant improvements in equilibrium spacings between non-
+covalently bound complexes, as well as in binding energy,
+especially when hydrogen bonding plays a role. We make a
+full comparison of PECs of both functionals with accurately
+known results for a set of 22 complexes and also apply it to
+extended solid systems, finding favorable results for the new
+functional. Thus, we expect our method to have important
+applications in a wide range of fields, including condensed
+matter and materials physics, chemical physics, and the
+physics of biological materials.
+We thank V. Cooper, A. Gulans, and R. Nieminen for
+discussions, P. Elliott and K. Burke for an early copy of Ref.
+17, and D. Case for the use of his computer cluster for sev-
+eral spot checks. Work principally supported by NSF under
+Grant No. DMR-0801343; work on MOFs by DOE under
+Grant No. DE-FG02-08ER46491; D.C.L. work at KITP by
+NSF under Grant No. PHY05-51164; and B.I.L. work by the
+Lundbeck Foundation via CAMD.
+-150
+-100
+-50
+0
+50
+BE (meV)
+Jurecka et al.
+vdW-DF
+vdW-DF2
+-100
+-50
+0
+50
+100
+BE@+1Å
+1 2 3 4 5 6 7 8 9 10 1112 13 14 15 16 17 18 19 20 2122
+S22
+-0.2
+0
+0.2
+0.4
+0.6
+Separation (Å)
+H-bonded
+Dispersion dominated
+Mixed
+(a)
+(b)
+(c)
+FIG. 2. Color online Comparison for the S22 duplexes of a
+binding energy predicted by Jurecka et al. Ref. 31, vdW-DF Ref.
+4, and the present work vdW-DF2. b Binding energy at a sepa-
+ration 1 Å larger than the equilibrium one and c equilibrium sepa-
+rations. The ordinates give the respective deviations of these quan-
+tities from the reference values taken from Takatani et al. Ref. 32
+for panel a, Molnar et al. Ref. 33 for panel b, and Jurecka et al.
+Ref. 31 for panel c.
+HIGHER-ACCURACY VAN DER WAALS DENSITY FUNCTIONAL
+PHYSICAL REVIEW B 82, 081101R 2010
+RAPID COMMUNICATIONS
+081101-3
+1Y. Andersson, D. C. Langreth, and B. I. Lundqvist, Phys. Rev.
+Lett. 76, 102 1996.
+2J. F. Dobson and B. P. Dinte, Phys. Rev. Lett. 76, 1780 1996.
+3W. Kohn, Y. Meir, and D. E. Makarov, Phys. Rev. Lett. 80, 4153
+1998.
+4M. Dion, H. Rydberg, E. Schrder, D. C. Langreth, and B. I.
+Lundqvist, Phys. Rev. Lett. 92, 246401 2004.
+5T. Thonhauser, V. R. Cooper, S. Li, A. Puzder, P. Hyldgaard, and
+D. C. Langreth, Phys. Rev. B 76, 125112 2007.
+6A recent variant denoted vdW-DF-09 by its authors, O. A. Vy-
+drov and T. Van Voorhis, J. Chem. Phys. 130, 104105 2009,
+introduces some empiricism but has been applied to too few
+systems to assess usefulness; a more recent functional, O. A.
+Vydrov and T. Van Voorhis, Phys. Rev. Lett. 103, 063004
+2009, has been the subject of further discussion; D. C. Lan-
+greth and B. I. Lundqvist, ibid. 104, 099303 2010; O. A. Vy-
+drov and T. Van Voorhis, ibid. 104, 099304 2010.
+7D. C. Langreth et al., J. Phys.: Condens. Matter 21, 084203
+2009.
+8A. Puzder, M. Dion, and D. C. Langreth, J. Chem. Phys. 124,
+164105 2006.
+9S. D. Chakarova-Kck, E. Schrder, B. I. Lundqvist, and D. C.
+Langreth, Phys. Rev. Lett. 96, 146107 2006.
+10L. Kong, G. Romn-Prez, J. M. Soler, and D. C. Langreth,
+Phys. Rev. Lett. 103, 096103 2009.
+11K. Toyoda et al., Surf. Sci. 603, 2912 2009.
+12L. Romaner et al., New J. Phys. 11, 053010 2009.
+13A. Gulans, M. J. Puska, and R. M. Nieminen, Phys. Rev. B 79,
+201105R 2009.
+14A. K. Kelkkanen, B. I. Lundqvist, and J. K. Nrskov, J. Chem.
+Phys. 131, 046102 2009.
+15J. P. Perdew and Y. Wang, Phys. Rev. B 33, 8800R 1986.
+16We recommend the refitted version PW86R see Ref. 22, Table
+2 for increased accuracy on the 1% level. It was used for the
+vdW-DF2 calculations here.
+17P. Elliott and K. Burke, Can. J. Chem. 87, 1485 2009.
+18Y. Zhang and W. Yang, Phys. Rev. Lett. 80, 890 1998.
+19V. R. Cooper, Phys. Rev. B 81, 161104 2010.
+20J. Klime, D. R. Bowler, and A. Michaelides, J. Phys.: Condens.
+Matter 22, 022201 2010.
+21F. O. Kannemann and A. D. Becke, J. Chem. Theory Comput. 5,
+719 2009.
+22E. D. Murray, K. Lee, and D. C. Langreth, J. Chem. Theory
+Comput. 5, 2754 2009.
+23VdW-DF with PW86 exchange corrects equilibrium separations
+but overestimates bindings and vdW attractions beyond equilib-
+rium separations which will be fixed by new vdW-DF2 correla-
+tion kernel. See Fig. 4 in supplementary material Ref. 35.
+24D. C. Langreth and S. H. Vosko, Adv. Quantum Chem. 21, 175
+1990.
+25The second-order expansion of the vdW interaction, the c term
+in the notation of Ref. 24, was omitted so that only the a and
+b terms are retained, hence the notation Zab. See Appendix B
+of Ref. 5. for a full discussion.
+26The relation between Z and other notations for the gradient co-
+efficient: Z=9=48321/3. For pure exchange, Z=
+10/9 in the gradient expansion, while for B88, Z=2.469.
+27J. Schwinger, Phys. Rev. A 22, 1827 1980.
+28J. Schwinger, Phys. Rev. A 24, 2353 1981.
+29A. D. Becke, Phys. Rev. A 38, 3098 1988.
+30This screening term is considerably smaller than the gradient
+exchange term. We expect that as an estimate, we can without
+major overall error simply assume that it increases in the same
+proportion as gradient exchange itself. This ansatz, unlike other
+simple approaches we might have taken, also assures that the
+effect of the 10/7 factor enhancing Sham exchange continues to
+cancel out of exchange and correlation together as it should
+Ref. 24.
+31P. Jureka, J. poner, J. ern, and P. Hobza, Phys. Chem.
+Chem. Phys. 8, 1985 2006.
+32T. Takatani et al., J. Chem. Phys. 132, 144104 2010.
+33L. F. Molnar, X. He, B. Wang, and K. M. Merz, J. Chem. Phys.
+131, 065102 2009.
+34G. Romn-Prez and J. M. Soler, Phys. Rev. Lett. 103, 096102
+2009; we adapted SIESTA, P. Ordejn, E. Artacho, and J. M.
+Soler, Phys. Rev. 53, 10441R 1996; J. M. Soler et al., J.
+Phys.: Condens. Matter 14, 2745 2002; vdW code for use
+within a modified version of ABINIT, X. Gonze et al., Comput.
+Mater. Sci. 25, 478 2002. The vdW interaction was treated
+fully self-consistently including forces. The computational costs
+are the same with vdW-DF. See supplementary material for
+more details Ref. 35.
+35See supplementary material at http://link.aps.org/supplemental/
+10.1103/PhysRevB.82.081101 for a table giving our calculated
+binding energies and equilibrium separations in vdW-DF and
+vdW-DF2 for all the S22 duplexes, as well as figures showing
+those S22 PECs omitted in this Rapid Communication.
+36O. A. Vydrov and T. Van Voorhis, Phys. Rev. A 81, 062708
+2010.
+LEE et al.
+PHYSICAL REVIEW B 82, 081101R 2010
+RAPID COMMUNICATIONS
+081101-4
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do computational methods, particularly density functional theory (DFT) and cluster models, enhance our ability to predict, analyze, and understand the catalytic activity of doped oxide catalysts in alkane activation, and what are the key considerations, challenges, and potential benefits of these approaches in terms of accuracy, efficiency, and the exploration of new catalytic materials?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

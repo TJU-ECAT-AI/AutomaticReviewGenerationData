@@ -1,0 +1,288 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Theoretical and kinetic assessment of the mechanism of ethane
+hydrogenolysis on metal surfaces saturated with chemisorbed hydrogen
+David W. Flaherty a,b,1, David D. Hibbitts a,1, Elif I. Grbz a, Enrique Iglesia a,
+a Department of Chemical Engineering, University of California at Berkeley, Berkeley, CA 94720, United States
+b Department of Chemical and Biomolecular Engineering, University of Illinois at Urbana-Champaign, Urbana, IL 61801, United States
+a r t i c l e
+i n f o
+Article history:
+Received 4 October 2013
+Revised 20 November 2013
+Accepted 29 November 2013
+Available online 29 January 2014
+Keywords:
+Alkanes
+Hydrogenolysis
+Reforming
+Hydrogenation
+Ring opening
+a b s t r a c t
+Ethane hydrogenolysis involves CC bond rupture in unsaturated species in quasi-equilibrium with gas-
+eous reactants and H2 on metal clusters, because CC bonds weaken as C-atoms replace hydrogen with
+exposed metal atoms from catalyst surfaces. The nature and reactivity of such adsorbed species are
+probed here using kinetic data and density functional theory (DFT) for the case of Ir surfaces, but with
+conclusions that appear to be general to hydrogenolysis on noble metals. On surfaces saturated with
+chemisorbed H-atoms (H), theory and experiments indicate that CC cleavage occurs predominantly
+via an a,b-bound CHCH species that forms via sequential dehydrogenation of adsorbed ethane; all other
+intermediates cleave CC bonds at much lower rates (>107-fold). Measured activation energies
+(213 kJ mol1) and free energies (130 kJ mol1) reflect the combined values for quasi-equilibrated steps
+that desorb H, adsorb C2H6, form C2-intermediates by dehydrogenation, and form the transition state
+from CHCH species. DFT-derived activation energies (218 kJ mol1) and free energies estimated from
+these values and statistical mechanics treatments of reaction and activation entropies (137 kJ mol1)
+are in excellent agreement with measured values. The removal of four H-atoms in forming the
+kinetically-relevant CHCH intermediates, taken together with measured effects of H2 pressure on
+hydrogenolysis rates, show that 23 H must be removed to bind this intermediate and the transition
+state, as expected from the structure of the proposed adsorbed species and H adsorption stoichiometries
+on Ir surface atoms that vary slightly with surface coordination on the non-uniform surfaces of metal
+clusters. Theory and experiments combine here to provide mechanistic insights inaccessible to direct
+observation and provide compelling evidence for reaction pathways long considered to be plausible for
+hydrogenolysis on noble metals. The extent of unsaturation in the single relevant intermediate and its
+CC cleavage rates will depend on the identity of the metal, but the elementary steps and their kinetic
+relevance appear to be a general feature of metal-catalyzed hydrogenolysis.
+ 2013 Elsevier Inc. All rights reserved.
+1. Introduction
+Hydrogenolysis of CC bonds on metals is the reaction of choice
+for decreasing the chain length of acyclic molecules and for opening
+rings in cyclic hydrocarbons [112]. It is also responsible, however,
+for yield losses during hydrocarbon reforming and isomerization
+[13,14], making mechanistic models of hydrogenolysis reactivity
+and selectivity useful in practice [15]. CC bond rupture has been
+widely used to probe the effects of cluster size [9,10,1626],
+elemental identity, and alloying [2737] in catalysis. Early studies
+recognized that hydrogenolysis requires the progressive weakening
+of CC bonds through the formation of unsaturated intermediates
+that
+replace
+CH
+bonds
+with
+C-metal
+bonds
+on
+surfaces
+[9,11,16,3841]. The structure and degree of unsaturation of these
+species on metal surfaces have been inferred indirectly from mea-
+sured effects of H2 pressure on hydrogenolysis rates [29,3840]
+and from isotopic exchange data [4244], because they lack distin-
+guishable spectroscopic signatures required for their direct interro-
+gation and, therefore, can only be assessed using theoretical
+methods [35,4548].
+Our recent studies have addressed the enthalpic and entropic
+barriers that govern reactivity and selectivity in hydrogenolysis
+of C2C10 n-alkanes [49] and isoalkanes [50] on supported Ir
+clusters. Here, we combine hydrogenolysis turnover rates and their
+kinetic interpretation on Ir clusters saturated with chemisorbed
+hydrogen (H) with density functional theory (DFT) treatments
+on the Ir(111) surface in order to infer mechanistic details for
+the hydrogenolysis of ethane. This study shows that CC bond
+cleavage occurs via a specific reactive intermediate (CHCH) that
+0021-9517/$ - see front matter  2013 Elsevier Inc. All rights reserved.
+http://dx.doi.org/10.1016/j.jcat.2013.11.026
+Corresponding author. Fax: +1 510 642 4778.
+E-mail address: iglesia@berkeley.edu (E. Iglesia).
+1 These authors contributed equally to this work.
+Journal of Catalysis 311 (2014) 350356
+Contents lists available at ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+forms by the loss of four H-atoms (as H2) through the sequential
+dehydrogenation of adsorbed ethane molecules. These findings
+and the DFT-derived activation barriers agree well with measured
+turnover rates and activation energies on Ir clusters. They confirm
+the essential role of unsaturation in the cleavage of CC bonds in
+ethane [45,46,48] and, by inference, in larger n-alkanes, isoalkanes,
+and cycloalkanes [7,8,16,35,47], for which similar kinetic depen-
+dences and activation barriers have been observed. The identifica-
+tion of the reactive species that cleave CC bonds shows also how
+their concentrations depend on H2 pressures and temperatures and
+can, therefore, inform the choice of reaction conditions and cata-
+lysts for processes that deliberately, or inadvertently, involve
+hydrogenolysis reactions.
+2. Methods
+2.1. Synthesis and characterization of IrSiO2
+IrSiO2 (3.0 wt.%) was prepared by incipient wetness impregna-
+tion using reported methods [49]. Samples were heated to 393 K at
+0.017 K s1 in flowing dry air (Praxair, 99.99%, 5.0 cm3 g1 s1) and
+held for 8 h and subsequently heated at 0.033 K s1 to 1123 K and
+held for 12 h. The sample was cooled to ambient temperature and
+then heated at 0.033 K s1 to 1173 K in flowing 50% H2/He (Praxair,
+99.999%, 1.0 cm3 g1 s1) and held for 8 h. The sample was again
+cooled to ambient temperature and passivated in flowing 0.5%
+O2/He (Praxair, 99.99%, 1.0 cm3 g1 s1) for 3 h. The number of ex-
+posed Ir atoms (Irs) was determined from volumetric uptakes of H2,
+O2, and CO at 298 K [49,51] and the mean Ir cluster diameter
+(<dchem>) was estimated by assuming hemispherical crystallites
+and the atomic density of bulk Ir (70.7 atoms nm3) [52,53]. Ir frac-
+tional dispersions from H2, O2, and CO chemisorption were 0.13,
+0.15, and 0.13, respectively, the average of which indicates that
+the mean diameter of the Ir clusters was 7 nm. Distribution of clus-
+ter sizes was determined by transmission electron microscopy
+(TEM) in bright-field mode (Philips, CM200F) using samples ap-
+plied as a fine dust onto lacey carbon-coated Cu grids. Surface-
+averaged cluster diameters were calculated using the following:
+< dTEM >
+P nid
+3
+i
+P nid
+2
+i
+1
+where ni is the number of clusters with a diameter di (1029 clusters)
+[54]. Values of <dTEM> (14.4 nm) and <dchem> (7 nm) indicate that
+the majority of the Ir exists in aggregates of 104 atoms. We must
+conclude that, in this case, distributions of detected cluster sizes
+overestimate the mean cluster diameter because TEM does not de-
+tect a significant numbers of small (d < 0.6 nm) clusters that are
+represented in chemisorption experiments. Thus, we conclude that
+the chemisorption measurements most accurately represent the
+average size of the clusters, 7 nm, and the corresponding number
+of Irs is used to calculate hydrogenolysis turnover rates. The Ir con-
+tent was measured by inductively-coupled plasma optical emission
+spectroscopy (Galbraith Laboratories, Inc.). The Supporting Informa-
+tion summarizes the synthesis and characterization of the 7 nm
+IrSiO2 catalyst (Table S1) and contains a representative TEM image
+and cluster size distribution for the IrSiO2 catalyst (Fig. S1).
+2.2. Ethane hydrogenolysis rate measurements
+Ethane hydrogenolysis rates were measured in a flow packed-
+bed stainless steel tubular reactor (3/800 O.D.) with plug-flow hydro-
+dynamics from 553 to 663 K with ethane ((C2H6)) and hydrogen
+((H2)) pressures from 10 to 80 kPa and from 0.6 to 1.8 MPa, respec-
+tively. The reactor was placed within a three-zone resistively-heated
+furnace, and the bed temperature was measured with a type K ther-
+mocouple held within a 1/16 stainless steel sheath aligned axially
+along the bed. The IrSiO2 catalyst was mixed with additional SiO2
+(CabOSil HS-5, washed with deionized water and treated in flow-
+ing dry air at 793 K for 5 h) to avoid any axial or radial temperature
+gradients. Pressure was controlled using a dome-loaded regulator
+(Mity-Mite, S91XW). The catalyst was treated in flowing H2 (Praxair,
+99.999%) at ambient pressure (50 cm3 g1 s1) by heating to 673 K at
+0.083 K s1 and holding for 2 h. The composition of the reactant
+stream was set using electronic mass flow controllers (Parker, 201)
+to meter the flow rates of H2 (Praxair, 99.999%), and ethane (5% eth-
+ane, 10% Ar, 85% He, Praxair, certified-grade). CH4 and C2H6 effluent
+concentrations were measured by gas chromatography (Agilent GC,
+5890) using a methyl silicone capillary column (HP-1, 50 m  0.32
+mm  1.05 lm) and a flame ionization detector. No other hydrocar-
+bons were detected. All rates are reported at differential conversions
+(<5%) to avoid consequential axial gradients in reactant concentra-
+tions. Turnover rates are reported as moles of ethane consumed
+per unit time normalized by the number of surface metal atoms
+determined by chemisorption, and reported uncertainties represent
+two-standard deviations (95% confidence intervals).
+2.3. Computational methods
+Periodic plane-wave DFT calculations were performed using the
+Vienna ab initio simulation package (VASP) [5558]. The plane-
+waves were constructed using projector augmented-wave (PAW)
+potentials with an energy cutoff of 396 eV [59,60]. The revised Per-
+dewBurkeErnzerhof (RPBE) form of the generalized gradient
+approximation (GGA) was used to determine exchange and corre-
+lation energies [6163]. Calculations of gaseous species were com-
+puted using 18  18  18 Å unit cells. The catalyst surface was
+modeled as a 4  4 Ir(111) closed-packed periodic lattice with a
+lattice parameter of 3.84 Å; it consists of four layers in the z-direc-
+tion with the bottom two layers fixed in their bulk positions and
+the other two allowed to relax to their minimum energy structures.
+Wavefunctions were converged to within 106 eV and forces were
+computed using a fast Fourier transform (FFT) grid with a cutoff of
+twice the planewave cutoff and a 3  3  1 Monkhorstpack sam-
+pling of the first Brillouin zone (k-point mesh) [64]. For optimiza-
+tions, the structures were relaxed until the force on unconstrained
+atoms was <0.05 eV/Å. After geometric convergence, a single-point
+calculation with a 6  6  1 k-point mesh was performed to opti-
+mize energy minima of reactant, product, and transition states.
+Transition state (TS) structures were obtained for each elemen-
+tary reaction by using the nudged elastic band (NEB) method
+[65,66] and the dimer method [67]. The NEB method was carried
+out using 16 images, and wavefunctions were converged to within
+104 eV using a 3  3  1 k-point mesh and an FFT grid size of 1.5
+times the planewave cutoff. The maximum force on each atom was
+converged to <0.3 eV/Å. These protocols provided an estimate of
+the reaction path and a starting point for the structure and the
+reactive vibrational mode for each transition state. The dimer algo-
+rithm was then used with wavefunctions converged to within
+106 eV using a 3  3  1 k-point mesh and an FFT grid size of 2
+times the planewave cutoff. For dimer calculations, the maximum
+force on each atom was converged to <0.05 eV/Å. As with optimi-
+zations of reactant and product states, the energy of the TS was
+then
+determined
+using
+a
+single-point
+calculation
+with
+6  6  1 k-point mesh. Zero-point energy and thermal corrections
+were implemented using vibrational frequencies for reactants,
+transition states and products involved in each elementary step
+to estimate enthalpies and entropies of each state (details in
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do single-atom alloys, particularly Pd atoms embedded in Cu surfaces, enhance catalytic performance in selective hydrogenation reactions, and what are the essential criteria for designing successful SAA catalysts in terms of reaction conditions, metal properties, and specific advantages over traditional catalysts, including their ability to break scaling rules and improve selectivity across various catalyst systems?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

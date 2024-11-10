@@ -1,0 +1,802 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Modifying structure-sensitive reactions by addition of Zn to Pd
+David J. Childers a, Neil M. Schweitzer b, Seyed Mehdi Kamali Shahari c, Robert M. Rioux c, Jeffrey T. Miller d,,
+Randall J. Meyer a,
+a Department of Chemical Engineering, University of Illinois at Chicago, United States
+b Center for Catalysis and Surface Science, Northwestern University, United States
+c Department of Chemical Engineering, The Pennsylvania State University, United States
+d Division of Chemical Sciences and Engineering, Argonne National Laboratory, United States
+a r t i c l e
+i n f o
+Article history:
+Received 9 May 2014
+Revised 17 July 2014
+Accepted 18 July 2014
+Keywords:
+Structure-sensitive reaction
+Intermetallic PdZn
+Propane dehydrogenation
+CleanCat
+DRIFTS
+CO calorimetry
+EXAFS
+Neopentane conversion
+a b s t r a c t
+Silica-supported Pd and PdZn nanoparticles of a similar size were evaluated for neopentane hydrogenol-
+ysis/isomerization and propane hydrogenolysis/dehydrogenation. Monometallic Pd showed high neopen-
+tane hydrogenolysis selectivity. Addition of small amounts of Zn to Pd lead PdZn scatters in the EXAFS
+spectrum and an increase in the linear bonded CO by IR. In addition, the neopentane turnover rate
+decreased by nearly 10 times with little change in the selectivity. Increasing amounts of Zn lead to greater
+PdZn interactions, higher linear-to-bridging CO ratios by IR and complete loss of neopentane conversion.
+Pd NPs also had high selectivity for propane hydrogenolysis and thus were poorly selective for propylene.
+The PdZn bimetallic catalysts, however, were able to preferentially catalyze dehydrogenation, were not
+active for propane hydrogenolysis, and thus were highly selective for propylene formation. The decrease
+in hydrogenolysis selectivity was attributed to the isolation of active Pd atoms by inactive metallic Zn,
+demonstrating that hydrogenolysis requires a particular reactive ensemble whereas propane dehydroge-
+nation does not.
+ 2014 Elsevier Inc. All rights reserved.
+1. Introduction
+The catalytic performance of metal nanoparticles can be modi-
+fied by changes in the surface geometry due to modification of the
+particle size or changes in the electronic properties by the addition
+of promoters or alloy formation. Boudart was the first to divide
+reactions into two groups based on sensitivity of the catalytic
+activity to particle size [1]. Structure-sensitive reactions are those
+for which the kinetics is dependent on the particle size (due to
+changes in the coordination of surface atoms with particle size),
+while structure-insensitive reactions are independent of the parti-
+cle size. For structure-sensitive reactions, the turnover rate (TOR),
+or rate per surface atom, changes with size. This geometric effect
+results because the active site for structure-sensitive reactions
+requires an ensemble of active atoms and the number of these
+ensembles changes with particle size. For structure-insensitive
+reactions, every surface atom is an active site, and thus, the rate
+is directly proportional to the dispersion.
+Electronic effects alter the chemical reactivity of the metal
+nanoparticle due to changes in the electronic structure. These
+two effects are often interrelated as changes in surface geometry
+often lead to changes in electronic properties. For example, as
+the size of a metal cluster is reduced, the cluster exhibits quantum
+confinement effects that perturb the electronic structure and in
+some cases, can even give rise to a band gap [24]. The reduced
+coordination of the cluster often results in changes in the energy
+of the valence orbitals that alter the bond strength of adsorbates
+[57].
+Alloying with another metal can also affect the electronic prop-
+erties of a catalyst [8]. Two effects appear simultaneously when
+metals are alloyed. First, charge transfer may occur between the
+alloying elements due to differences in the level of filling and rel-
+ative energies of the valence orbitals. Second, changes in hybridiza-
+tion of the bonding between metals may result due to changes in
+the bond distances between metal atoms. At the same time, the
+orbital extent or the size of the valence orbitals of the alloying ele-
+ments is different, resulting in changes in the overlap between the
+bonding orbitals. Therefore, alloying can result in both electronic
+effects (degree of charge transfer and hybridization) and geometric
+effects due to the creation of specific reaction ensembles. Although
+it is well known that these two aspects of the catalyst are impor-
+tant, it is often unknown whether one factor contributes more than
+another with respect to selectivity control for a particular reaction.
+However, understanding which factor is dominant for a particular
+reaction can be used to design improved catalysts.
+http://dx.doi.org/10.1016/j.jcat.2014.07.016
+0021-9517/ 2014 Elsevier Inc. All rights reserved.
+Corresponding authors.
+E-mail addresses: millerjt@anl.gov (J.T. Miller), rjm@uic.edu (R.J. Meyer).
+Journal of Catalysis 318 (2014) 7584
+Contents lists available at ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+Previous work on Pt and Pd catalysts of different particle sizes
+yielded a correlation between neopentane isomerization selectiv-
+ity and the initial CO heat of adsorption [9]. Isomerization selectiv-
+ity increased with decreasing CO heat of adsorption and this
+correlation appears to be independent of metal, nanoparticle size,
+and the configuration of adsorbed CO. Large Pd particles have pri-
+marily bridge-bound CO, while small Pt particles have primarily
+linear-bound CO, but they have similar catalytic behavior. This pro-
+vides strong evidence that the selectivity is dependent on electro-
+nic effects and the strength of adsorbate chemisorption. Extending
+this correlation, high selectivity to isomerization should be
+achieved by materials which bind CO even less strongly than Pt
+terrace sites. From previous DFT calculations, an intermetallic 1:1
+PdZn (111) surface was shown to have a lower CO adsorption
+energy compared to Pt(111) [10]. Sarkrany et al. found experimen-
+tally that the CO heat of adsorption on a PdZn alloy was 67 kJ/mol
+lower than that of monometallic Pd [11,12]. Using our correlation
+between the heat of adsorption and the neopentane isomerization
+selectivity, it is anticipated that alloy formation between Pd and Zn
+would lead to a lower heat of adsorption and also improve neopen-
+tane isomerization selectivity [10].
+PdZn alloys have been studied for a number of different reac-
+tions, including methanol steam reforming, watergas shift, alkene
+hydrogenation and auto-thermal reforming [11,1319]. Pd and Zn
+form a large number of bimetallic structures each with their own
+unique crystal structure and stoichiometry. At a 1:1 ratio of Pd:Zn,
+a face centered tetragonal structure forms, which is present for a
+wide range of Pd compositions (3070%) [13,17,18,20]. Improved
+selectivity and stability were the main benefits that PdZn catalysts
+exhibited for these various reactions. These improvements were
+credited to both geometric changes caused by zinc altering the cat-
+alyst surface by expanding the palladium bond distance and elec-
+tronic effects observed by the weakening of the PdCO bond
+[12,18]. Chen et al. performed DFT studies on the surface structure
+of PdZn alloys and found that the (111) surface was the most ener-
+getically favorable [21]. Calculations also suggested that the Pd d-
+band valence width was significantly reduced compared to pure
+Pd which was linked to improvements in methanol steam reforming
+performance. Many of these studies used ZnO as a support or sup-
+ported ZnO, e.g., from a Zn(NO3)2 precursor, as a source of zinc for
+alloy formation. PdZn intermetallic structures are typically synthe-
+sized with excess zinc and not in nominal molar ratios close to 1:1.
+Iwasa et al. were unable to form the PdZn intermetallic structure on
+silica at temperatures up to 700 C due to a lack of zinc reduction in
+ZnO [22]. Fottinger et al. performed methanol steam reforming over
+Pd/ZnO catalysts and found that reaction conditions caused PdZn
+intermetallic formation which resulted in improvements to selec-
+tivity [19]. Through in situ XAS it was also shown that the PdZn inter-
+metallic structure was also reversible upon exposure to oxygen.
+Here, we report on the synthesis, characterization, and testing
+of two PdZn nanoparticle catalysts supported on silica with differ-
+ent Pd:Zn molar ratios. The catalysts were characterized by elec-
+tron microscopy, diffuse reflectance infrared Fourier transform
+spectroscopy (DRIFTS) of adsorbed CO, X-ray absorption spectros-
+copy
+(XAS),
+CO
+chemisorption,
+and
+isothermal
+calorimetry.
+Neopentane hydrogenolysis/isomerization and propane hydrogen-
+olysis/dehydrogenation reactions were used to evaluate the influ-
+ence of Zn on the hydrogenolysis selectivity of Pd.
+2. Experimental methods
+2.1. Catalyst synthesis
+PdZn bimetallic catalysts supported on silica (Davisil 646 silica
+gel from SigmaAldrich, 300 m2/g and 1.15 mL/g pore volume)
+were synthesized by two different synthesis methods  sequential
+and co-incipient wetness impregnation (co-IWI) under controlled
+pH conditions [23,24]. During IWI, the support is contacted with
+just enough metal precursor solution to fill the pore volume. All
+of the metal precursor solution contacts the surface due to the
+incipient amount of liquid used. Sequential impregnation requires
+the two metals be added in separate incipient wetness impregna-
+tion steps, while co-impregnation combines the metals into a sin-
+gle solution. The 2% Pd catalyst was synthesized using a procedure
+described in previous work [9].
+2.1.1. 2%Pd10%Zn
+This catalyst was synthesized by sequential impregnation. Zinc
+was first added to silica using the IWI method. 18.1 g of Zn(NO3)2-
+6H2O was dissolved in 15 mL of H2O. 15 M NH4OH was then added
+to this solution to initially form a white precipitate which dis-
+solved when additional NH4OH was added bringing the total vol-
+ume to 50 mL. This solution was added dropwise to 40 g of silica
+and stirred. The catalyst was dried overnight at 125 C and then
+calcined at 300 C for 3 h. Palladium was also added by the IWI
+method. 2.81 g of 10% Pd(NH3)4(NO3)2 solution from Aldrich was
+added dropwise to 5 g of the 10% Zn/SiO2 catalyst. This catalyst
+was then dried overnight at 125 C, calcined at 500 C for 3 h and
+reduced at 550 C in 4% H2/He at 30 cc/min for 30 min.
+2.1.2. 3%Pd1.8%Zn
+The catalyst was synthesized by co-IWI with both zinc and pal-
+ladium precursors added simultaneously. 0.42 g of Zn(NO3)26H2O
+was dissolved in 1.5 mL of 15 M NH4OH and this solution was
+added to 4.21 g of 10% Pd(NH3)4(NO3)2 solution in H2O. This solu-
+tion was then added dropwise to silica (5 g) and mixed between
+drops. The catalyst was dried overnight at 125 C, calcined at
+225 C for 3 h and then reduced at 300 C at 30 cc/min in
+4%H2/He for 30 min.
+2.2. STEM
+The STEM images were taken at UICs Research Resources Cen-
+ter facility using the JEOL-ARM 200CF aberration-corrected micro-
+scope (70 pm spatial resolution and 300 meV energy resolution).
+Samples were dispersed in isopropyl alcohol and sonicated for
+20 min. A drop of the solution was added to a holey-carbon copper
+grid and dried under a heat lamp for 20 min. Images were taken
+using the high angle angular dark field (HAADF) mode and particle
+size was counted using the Particule2 program. A minimum of 100
+particles were counted to get an accurate representation of the
+particle size distribution for each catalyst.
+2.3. X-ray absorption spectroscopy (XAS)
+X-ray absorption spectroscopy (XAS) measurements for the Pd
+K (24350 eV) edge were made on the bending magnet beamline
+of the Materials Research Collaborative Access Team (MRCAT) at
+the Advanced Photon Source (APS), Argonne National Laboratory.
+Measurements were taken in transmission mode. A palladium foil
+spectrum was acquired through a third ion chamber simulta-
+neously with each measurement for energy calibration.
+Samples were prepared by grinding the catalysts into a fine
+powder and pressing them into the sample holder. The sample
+holder is a metal cylinder capable of holding up to six individual
+samples. The sample holder is then placed in a quartz tube with
+ports containing Kapton windows on each end to flow gases or iso-
+late the sample after treatment. The sample thickness was chosen
+to give a total absorbance at the Pd K-edge between 1 and 2
+absorption lengths and edge steps around 0.30.5. The XAS spectra
+were obtained following reduction at 275 C and 550 C at
+76
+D.J. Childers et al. / Journal of Catalysis 318 (2014) 7584
+atmospheric pressure in a 4% H2/He mixture at 50 cm3/min flow
+rate. After reduction, the samples were purged with He at
+100 cm3/min at the reduction temperature and cooled to room tem-
+perature in He flow. Trace oxidants in He were removed by passing
+through a Matheson PUR-Gas Triple Purifier Cartridge containing a
+Cu trap. All spectra were obtained at room temperature in He.
+WINXAS 3.1 software was used to fit the XAS data. The EXAFS
+coordination parameters were obtained by a least-squares fit in
+k-space of the k2-weighted Fourier transform data from 2.6 to
+12.1 Å1, and the first shell fit of the magnitude and imaginary
+parts were performed between 1.6 and 3.0 Å. Because of the lim-
+ited data range and number of allowed fit parameters of the two-
+shell fit in the bimetallic nanoparticles, the error in the fits was
+determined by fixing Dr2 at values typical of 2.53 nm nanoparti-
+cles, that is, 0.0010.002 greater than metallic foils. The error in N
+was 10% and in R was 0.02 Å, within the typical fitting errors of
+EXAFS. Fits were performed by altering the coordination number
+(CN), bond distance (R), r2, and energy shift (E0). The r2 value
+was kept constant through all sample fits, and CN and R were
+allowed to vary in turn to determine the correct fit. Although CN
+is determined for each catalyst, they used only to determine the
+coordination environment of the Pd. Although coordination num-
+bers can be used to determine the particle size [25] and morphol-
+ogy in monometallic NPs [26], the complex structure, i.e., PdZn
+alloy and multiple phases, e.g., Pd core with PdZn alloy shell,
+makes determination of the particle size, for example, unreliable.
+2.4. Neopentane hydrogenolysis and isomerization
+Neopentane hydrogenolysis and isomerization kinetics and
+selectivity were determined using 0.050.15 g of catalyst diluted
+with 0.9 g of silica and loaded into a 0.500 O.D. quartz plug-flow
+reactor. Glass wool was used for the bottom 2 cm of the bed. A
+0.5-cm silica layer was placed on top of the glass wool before the
+catalyst and silica mixture was added to the reactor resulting in
+a catalyst bed height of 3 cm. The reactor was purged with He
+for 5 min before each run, and the catalyst was reduced in 4% H2/
+He as the temperature was increased to the reaction temperature,
+273  2 C. This temperature allowed for all the catalysts to be
+tested at differential conversion. A K-type thermocouple was
+inserted from the bottom of the reactor into the lower portion of
+the catalyst bed. Once the reaction temperature stabilized, the
+pre-mixed reactant feed gas consisting of 0.35% neopentane and
+3.5% H2 balanced in He was passed through the reactor. The flow
+rate of the feed gas was varied from 25 to 100 cm3/min to obtain
+differential conversions (0.56%). Each flow rate was run for at
+least 1 h to ensure steady-state conversion had been reached. An
+Agilent 6890N gas chromatograph (J&W Scientific GS-Alumina col-
+umn) with an FID detector was used to analyze the products and
+was equipped with a back pressure regulator at the outlet to hold
+the system at a constant pressure of 9 psig. Each experimental run
+was completed within 6 h for consistency, and multiple runs for
+each catalyst were performed. No appreciable deactivation during
+neopentane hydrogenolysis was observed in any of the catalysts
+over this period of time. The maximum relative error of any selec-
+tivity measurements was 6%, with most of the data being repro-
+ducible within 2%. Turnover rates were calculated based upon
+the moles of neopentane converted divided by the number of
+active sites determined by the dispersion calculated from CO
+chemisorption.
+2.5. Propane dehydrogenation
+Propane dehydrogenation selectivity and rate were determined
+using 0.20.5 g of catalyst diluted with 0.9 g of silica and loaded
+into the same 0.500 O.D. quartz plug-flow reactor used for neopen-
+tane hydrogenolysis. The reactor was purged with He for 5 min
+before each run, and the catalyst was reduced in 4% H2/He as the
+temperature
+was
+increased
+to
+the
+reaction
+temperature,
+550  2 C. Once the reaction temperature stabilized, the pre-
+mixed reactant feed gas consisting of 2% propane and balance Ar
+was passed through the reactor. The flow rate of the feed gas
+was set to 50 cm3/min and held constant throughout the test so
+that the deactivation of each catalyst could be determined. The test
+was run until a steady-state conversion was reached. Each experi-
+mental run was completed within 6 h for consistency and multiple
+runs for each catalyst were performed. The maximum relative
+error of any selectivity measurements was 6%, with most of the
+data being reproducible within 2%.
+2.6. Diffuse reflectance infrared Fourier transform spectroscopy
+(DRIFTS)
+Infrared spectra were obtained using a Thermo Scientific Nico-
+let 6700 FTIR spectrometer equipped with a Harrick Scientific Pray-
+ing Mantis diffuse reflectance in situ cell at the Northwestern Clean
+Catalysis (CleanCat) Core Facility. Samples were ground to a fine
+powder using a mortar and pestle and packed into the sample
+chamber to create a uniform surface. The chamber was purged
+with Ar, then the gas was switched to 10% H2/N2, and the temper-
+ature was raised to 250 C and held for 15 min. After reduction of
+the catalyst, the gas was switched back to Ar and the temperature
+was reduced to 25 C. A background scan was then recorded, which
+was averaged over 100 scans (2-min observation time) with
+4 cm1 resolution. The sample was then exposed to 1.02% CO/N2
+and another scan was taken once equilibrium was reached, at
+which point the flow was changed back to Ar and a final scan
+was taken once the intensity of the adsorbed CO peak was invari-
+ant with time. The linear-to-bridge-bound ratios reported here do
+not take into account the differences in extinction coefficients
+between the adsorption sites and therefore do not represent quan-
+titative
+coverages,
+but
+rather
+reflect
+qualitative
+differences
+between catalysts [27].
+2.7. CO heats of adsorption
+Determination of the initial heat of adsorption of carbon mon-
+oxide on the two PdZn catalysts (6070 mg) reduced at two dif-
+ferent temperatures (300 and 550 C) was conducted utilizing a
+Setaram Sensys EVO differential scanning calorimetry interfaced
+with a plug-flow reactor. The plug-flow reactor was connected to
+a mass spectrometer. After reduction at the specified temperature
+in 5.11% H2/Ar (both gases 99.999%) for 2 h, the catalyst was cooled
+down to 35 C in the same gas, and the catalyst was exposed to a
+mixture of 1% CO (99.999% research grade) in He (99.9999%,
+research grade) pulsed into the 5% H2/Ar stream from a ten-way
+switching value with a 1000 lL sample loop. The number of moles
+of CO per pulse calculated from the ideal gas law was 4  104 -
+mmol. Twenty pulses of carbon monoxide were employed; the ini-
+tial heat of adsorption was determined by only considering
+injections in which the entire pulse of carbon monoxide was con-
+sumed. The 3Pd1.8Zn/SiO2 adsorbed entirely 56 pulses depend-
+ing on the reduction temperature, while the 2Pd10Zn/SiO2
+adsorbed entirely 1 pulse of carbon monoxide.
+2.8. CO chemisorption
+The CO chemisorption measurements were conducted at the
+Northwestern University Clean Catalysis (CleanCat) Core Facility
+using an Altamira Instruments AMI-200. Catalysts (0.050.2 g)
+were loaded into a U-shaped quartz reactor tube, which was
+weighed before and after sample addition to ensure an accurate
+D.J. Childers et al. / Journal of Catalysis 318 (2014) 7584
+77
+weight measurement. The loaded tube was then loaded into the
+furnace, and the catalysts were reduced in H2/Ar at 300 C or
+550 C for 2 h (10 C/min ramp rate) and then flushed for 30 min
+in He. Using a six-way valve, 5% CO/He was then pulsed (595 lL
+loop volume) into the system 15 times at 30 C to ensure the sur-
+face was saturated. Each pulse peak was integrated to find the vol-
+ume of CO remaining following adsorption. Surface saturation was
+typically reached within 10 pulses. The dispersion determined by
+CO chemisorption also included average stoichiometric factor
+determined from the uncorrected DRIFTS linear-to-bridging ratios
+for each catalyst. CO bound linearly account for one CO molecule
+per surface atom while bridge-bound CO implies there is one CO
+molecule per two surface atoms. The equation used to get the dis-
+persion is given below.
+Dispersion  mol CO adsorbed
+mol metal
+ linear CO fraction  1
+ bridge CO fraction  2
+3. Results
+3.1. Particle size analysis
+STEM imaging was used to determine metal nanoparticle size. A
+representative STEM image for the 3%Pd1.8%Zn catalyst and cor-
+responding size distribution are shown in Fig. 1. The particle sizes
+for the three catalysts tested are reported in Table 1 and show that
+the average particle sizes are similar. The 3%Pd1.8%Zn catalyst
+was also reduced at the propane dehydrogenation reaction tem-
+perature (550 C) to determine if any sintering occurred. The parti-
+cle
+size
+did
+not
+appreciably
+change,
+between
+the
+two
+temperatures. Having similar particle sizes between catalysts
+enables the changes caused by alloying to be studied without hav-
+ing to account for changes in particle size which are known to alter
+the kinetics of structure-sensitive reactions. From our previous
+studies, there are results for similar sized monometallic Pd cata-
+lysts for comparison with these PdZn bimetallic catalysts [9].
+3.2. X-ray absorption spectroscopy (XAS)
+Extended X-ray absorption fine structure (EXAFS) and X-ray
+absorption near-edge (XANES) spectra were gathered for each cat-
+alyst following reduction at 275 C and fitting done to determine
+bond distances and coordination numbers (CN). The XANES spectra
+are shown in Fig. 2a and an expanded view to the leading edge is
+shown in Fig. 2b. XANES were analyzed to determine the Pd K-edge
+position of each catalyst and evaluate the oxidation state of palla-
+dium. The edge energy is defined as the inflection point of the lead-
+ing edge and is determined by taking the maximum of first
+derivative of the spectra in Fig. 2a. The edge energy for all three
+catalysts
+is
+summarized
+in
+Table
+2.
+A
+K-edge
+energy
+of
+24.350 keV corresponds to metallic Pd and the PdZn catalysts are
+slightly shifted as seen in Fig. 2b (to 24.349 keV) from Pd which
+is consistent with the presence of bimetallic nanoparticles [8].
+The intensity of the first absorption peaks is similar indicating that
+the palladium is metallic rather than oxidized which would cause
+the peak intensity to increase. The small differences in the spectra
+following the first peak, changes in intensities and peak shifts, also
+indicate that non-Pd neighbors are near to Pd.
+Fig. 3 shows the EXAFS spectra for the Pd foil reference and all
+three catalysts reduced at 275 C, and Table 2 summarizes the
+parameters calculated from the fitting of the spectra. Coordination
+numbers and bond distances were determined by fitting the mag-
+nitude and imaginary parts of the Fourier transform of the k2-
+weighted first shell spectra. Although the total coordination num-
+bers for each of the samples are identical, the identity of the neigh-
+bors and their distances change between the three catalysts. The
+monometallic Pd catalyst shows two prominent peaks at 2.05
+and 2.50 Å (phase uncorrected distances) at a ratio of 2:1, typical
+of metallic Pd and also observed for the Pd foil spectra seen in
+Fig. 3a [18]. The PdPd bond distance of 2.75 Å in Table 2 also cor-
+responds to metallic Pd. Fig. 3b shows both bimetallic PdZn cata-
+lysts; the 3%Pd1.8%Zn spectra look similar to metallic Pd;
+however, a change in the peak ratio to 1.45:1 is consistent with a
+small number of non-Pd scattering atoms. The fit confirms there
+are PdZn bonds with a coordination number of 2.3 and a bond dis-
+tance of 2.56 Å. The coordination number for the PdPd scatters is
+5.3 with a bond distance of 2.73 Å (similar to metallic Pd). The dif-
+ferences in the coordination numbers between the PdPd and Pd
+Zn scatterers indicate that the majority of the palladium atoms in
+this catalyst are still surrounded by other palladium atoms with a
+Particle Count
+0
+20
+40
+60
+80
+0
+1
+Particle Diameter (nm)
+2
+3
+4
+5
+6
+Fig. 1. 3%Pd1.8%Zn sample image and particle size distribution determined by STEM.
+Table 1
+Particle sizes determined by STEM.
+Sample
+Particle size by STEM (nm)
+2%Pd
+2.5  1.1
+2%Pd10%Zn 300 C
+2.2  0.8
+3%Pd1.8%Zn 300 C
+2.7  0.8
+3%Pd1.8%Zn 550 C
+2.6  0.7
+78
+D.J. Childers et al. / Journal of Catalysis 318 (2014) 7584
+few Zn neighbors. The 2%Pd10%Zn catalyst also has two promi-
+nent peaks, but these peaks deviate from the pure Pd spectra sig-
+nificantly. Although the peak positions are similar, the ratio of
+the peaks has changed, suggesting that the bonding environment
+of Pd has changed with the addition of zinc. The fits in Table 2 con-
+firm this shift from Pd-rich particles to a catalyst with significant
+interaction between Pd and Zn as the PdZn coordination number
+increases to 5.3 and the PdPd coordination number decreases to
+2.7. The bond distances have not changed significantly in the two
+PdZn catalysts and these bond distances are also similar to those
+found in the literature [18]. Although the average coordination
+environment in these catalysts is different, EXAFS is a bulk charac-
+terization; therefore, the surface composition and structure, which
+is responsible for the catalytic activity, is uncertain.
+3.3. Diffuse reflectance infrared Fourier transform spectroscopy
+(DRIFTS)
+DRIFTS of CO adsorption was used to evaluate changes in sur-
+face composition and structure of the catalysts. Fig. 4 shows the
+DRIFTS spectra for the PdZn catalysts as well as the monometallic
+Pd catalyst with a similar particle size. Bridge-bound CO has previ-
+ously been assigned to the peaks in the range of 18002000 cm1.
+Within this range, peaks between 1800 and 1900 cm1 are attrib-
+uted to CO bridge-bound on terrace and hollow sites, while peaks
+between 1900 and 2000 cm1 are assigned to CO bridge-bound to
+corner and edge sites [28,29]. Linear bound CO is characterized by
+two peaks typically appearing around 2080 and 2050 cm1 in
+which Lennon et al. have assigned to corner and edge adsorption
+sites respectively [28].
+The 2%Pd catalyst, with an average particle size of 2.5 nm, has
+one very prominent bridge-bound CO peak at 1936 cm1, a shoul-
+der centered around 1835 cm1, and one linear CO peak at
+2084 cm1. The presence of two bridge-bound CO peaks is typical
+of pure Pd catalysts [28,29]. The 3%Pd1.8%Zn catalyst has one
+bridge-bound CO peak located at 1975 cm1. The loss of the
+bridge-bound CO peak around 1835 cm1 peak suggests zinc
+breaks up palladium terraces on the surface typically responsible
+for bridge-bound CO. Since the tail of the peak extends into the ter-
+race site range, there may be a small percentage of Pd ensembles
+remaining. The shift of the linear peak to 2075 cm1 from
+2084 cm1 indicates there is a small fraction of CO linearly bound
+to edge sites since most is still bound to corner sites. These shifts
+(a)
+24.26 24.28 24.30 24.32 24.34 24.36 24.38 24.40
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+1.2
+Normalized Adsorption
+Photon Energy (keV)
+ 2Pd
+ 3Pd-1.8Zn
+ 2Pd-10Zn
+(b)
+24.345
+24.350
+24.355
+0.2
+0.4
+0.6
+Normalized Adsorption
+Photon Energy (keV)
+ 2Pd
+ 3Pd-1.8Zn
+ 2Pd-10Zn
+Fig. 2. Pd XANES K-edge spectra for catalysts reduced at 275 C. (a) Full edge and (b) expanded view of the leading edge of the XANES near the inflection point.
+Table 2
+XANES and EXAFS fitting parameters following 275 C reduction.
+Catalyst
+Edge energy
+(keV)
+Coordination
+number
+Bond
+distance
+(Å)
+2Pd
+24.3500
+PdPd
+7.5
+2.75
+PdZn
+
+3Pd1.8Zn
+24.3496
+PdPd
+5.3
+2.73
+PdZn
+2.3
+2.56
+2Pd10Zn
+24.3494
+PdPd
+2.7
+2.72
+PdZn
+5.2
+2.56
+(a)
+0
+1
+2
+3
+4
+0.00
+0.01
+0.02
+0.03
+0.04
+0.05
+Mag FT (k
+2*Chi(k))
+R (angstroms)
+ 2Pd
+ Pd Foil
+(b)
+0
+1
+2
+3
+4
+0.00
+0.01
+0.02
+0.03
+Mag FT (k
+2*Chi(k))
+R (angstroms)
+ 3Pd+1.8Zn
+ 2Pd+10Zn
+Fig. 3. Pd K-edge spectra and fitting parameters following 275 C reduction. (a) 2%Pd (black) and Pd foil (red) and (b) 3%Pd1.8%Zn (red) and 2%Pd10%Zn (blue). (For
+interpretation of the references to color in this figure legend, the reader is referred to the web version of this article.)
+D.J. Childers et al. / Journal of Catalysis 318 (2014) 7584
+79
+have also been reported for other PdZn catalysts [18,30]. The
+2%Pd10%Zn catalyst has a small bridge-bound CO peak at
+1960 cm1 corresponding to corner and edge sites. The peak posi-
+tion has shifted from the other PdZn catalyst; however, it is still in
+the range of bridge-bound CO on corner and edge sites and there
+are no longer peaks for CO in the terrace region. The linear region
+has two distinct peaks at 2080 cm1 and 2050 cm1, which indi-
+cates that CO is linearly bound to edge sites as well as corner sites
+suggesting further zinc addition continues to reduce the number of
+surface palladium ensemble sites. Two peaks in the linear region
+have also been observed for PdZn catalysts [18].
+The linear-to-bridge-bound ratio calculated by comparing the
+raw areas of the different peaks is presented in Table 3. The addi-
+tion of zinc causes a dramatic shift in the CO adsorption resulting
+in greatly reduced concentration of bridge-bound CO. While the
+monometallic Pd catalyst has mostly bridge-bound CO, the addi-
+tion of zinc causes a significant increase in linear-bound CO. The
+addition of excess zinc in the 2%Pd10%Zn catalyst leads to a minor
+increase in the overall ratio of linear-to-bridge-bound CO (2.5:1)
+compared to the lower Zn sample (2.1:1), but there are differences
+in the peak positions as discussed above. The shift in the linear-to-
+bridge ratio indicates that zinc breaks up palladium ensembles on
+the surface and decreases the number of Pd ensemble sites capable
+of adsorbing bridge-bound CO. Weilach et al. used DFT to study CO
+adsorption on PdZn surfaces and found that adsorption on top sites
+was preferred on the intermetallic surface past  ML CO coverage
+[31].
+3.4. Heat of adsorption of CO determined by isothermal calorimetry
+The initial heat of adsorption determined previously for a pair of
+Pd/SiO2 catalysts with a mean TEM particle size of 2.53 nm was
+130 kJ mol1 [9]. The heat of CO adsorption on Pd was previously
+determined for the catalysts reduced in H2, evacuated at the reduc-
+tion temperature, followed by cooling in an inert gas to the adsorp-
+tion temperature (35 C). In the previous work, the differential
+(initial) heat of adsorption was determined using a volumetric
+adsorption instrument (Micromeritics ASAP 2020C) interfaced
+with a Setaram Sensys EVO differential scanning calorimeter. For
+the PdZn catalysts studied in this work, calorimetric measure-
+ments of CO adsorption led to abnormally large heat flow which
+was associated with the oxidation of CO by small quantities of oxy-
+gen in He (99.999% UHP) led to the oxidation of CO. Enthalpy mea-
+surements in He were unreliable since the oxidation reaction is
+highly exothermic and contributed significantly to the measured
+heat. All attempts to eliminate the CO oxidation reaction were
+unsuccessful including utilizing a CO/He mixture containing
+research grade He (99.9999%). As a result, the PdZn bimetallic cat-
+alysts were cooled in a 5% H2/Ar mixture to the adsorption temper-
+ature of 35 C. Due to the small particle size and alloy formation
+with Zn, the formation of a hydride is not expected, but there will
+be an adsorbed layer of hydrogen on the surface of these PdZn cat-
+alysts [3235]. Chemisorbed hydrogen will lower the heat of
+adsorption compared to an adsorbate-free surface of Pd [36]. The
+results in Table 3 also show that increasing reduction temperature
+slightly lowered the heat of adsorption. For comparison the heat of
+CO adsorption of monometallic Pd catalyst was obtained using the
+same procedure.
+3.5. Neopentane isomerization and hydrogenolysis
+Neopentane conversion was conducted at 273  2 C, 9 psig and
+varying flow rates in order to vary conversion within range of dif-
+ferential conversion (<10%). There are two possible reaction path-
+ways: hydrogenolysis and isomerization. Isomerization products
+include isopentane produced from an initial isomerization reaction
+and n-pentane if isopentane undergoes a second isomerization
+reaction before desorption from the surface. A single hydrogenoly-
+sis reaction will produce isobutane and methane, and any subse-
+quent
+steps
+will
+produce
+additional
+methane
+and
+lighter
+hydrocarbons (propane and ethane). All selectivities given in
+Table 4 are extrapolated to 0% conversion. Calculated turnover
+rates (TOR) using the same method described previously are also
+given in Table 4 [9]. Products with non-zero selectivity at 0% con-
+version are considered primary products while products that have
+0% selectivity are considered to be secondary products [37]. The
+isomerization selectivity is defined as the selectivity to isopentane
+and hydrogenolysis products are any molecule lower than C5
+shown in Table 4. The 2%Pd catalyst has an isomerization and
+hydrogenolysis selectivity of 9% and 91%, respectively. The 3%Pd
+1.8%Zn catalyst has a similar isomerization selectivity (13%) and
+hydrogenolysis selectivity (87%). The product distributions are also
+similar for the various hydrogenolysis products. If a single hydrog-
+enolysis event occurs per converted neopentane molecule, equal
+amounts of methane and isobutane should be identified in the
+product distribution. An excess of methane can be seen for both
+catalysts in Table 4 which indicates that further hydrogenolysis
+is occurring, as evidenced by the presence of small amounts of
+ethane and propane at 0% conversion.
+Since zinc does not adsorb CO, the amount of surface palladium
+was determined by chemisorption and used to calculate the TOR
+2200
+2100
+2000
+1900
+1800
+1700
+0.0
+0.1
+0.2
+0.3
+1940
+1850
+2079
+2084
+2074
+2076
+1974
+Absorbance (a.u.)
+Wavenumber (cm-1)
+ 2Pd
+ 3Pd-1.8Zn
+ 2Pd-10Zn
+1952
+Fig. 4. Normalized DRIFTS spectra of CO adsorption on: 2%Pd (black), 2%Pd10%Zn
+(blue) and 3%Pd1.8%Zn (red) reduced at 250 C. (For interpretation of the
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do single-atom alloys, particularly Pd atoms embedded in Cu surfaces, enhance catalytic performance in selective hydrogenation reactions, and what are the essential criteria for designing successful SAA catalysts in terms of reaction conditions, metal properties, and specific advantages over traditional catalysts, including their ability to break scaling rules and improve selectivity across various catalyst systems?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 
