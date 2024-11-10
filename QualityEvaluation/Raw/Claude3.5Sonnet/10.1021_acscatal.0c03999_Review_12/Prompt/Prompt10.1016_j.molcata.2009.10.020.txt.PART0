@@ -1,0 +1,565 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+Contents lists available at ScienceDirect
+Journal of Molecular Catalysis A: Chemical
+journal homepage: www.elsevier.com/locate/molcata
+A DFT study on the behavior of NO2 in the selective catalytic reduction of nitric
+oxides with ammonia on a V2O5 catalyst surface
+Xiang Gao , Xue-sen Du, Ye Jiang, Yang Zhang, Zhong-yang Luo, Ke-fa Cen
+State Key Laboratory of Clean Energy Utilization, Zhejiang University, Zheda Road 38, Hangzhou 310027, PR China
+a r t i c l e
+i n f o
+Article history:
+Received 20 May 2009
+Received in revised form 16 October 2009
+Accepted 20 October 2009
+Available online 30 October 2009
+Keywords:
+Selective catalytic reduction
+NH3
+NO2
+Density functional theory
+V2O5
+a b s t r a c t
+DFT calculations were carried out to study the behavior of NO2 in the selective catalytic reduction of
+nitric oxides with ammonia on the surface of the V2O5 catalyst. The results showed that NO2 could readily
+reoxidize V4+OH through two reaction routes: (1) NO2 directly reoxidizing V4+OH to V5+
+O and (2) NO2
+reacting with H2O or NH3 to produce HNO3, which subsequently reoxidizes V4+OH to V5+
+O. The rate-
+determining step of route 1 is the desorption of cis-HNO2 from the reoxidized V5+
+O, being endothermic
+by 9.91 kcal/mol. Route 2 possesses an energy barrier of 7.44 kcal/mol, less than route 1. This energetic
+comparison shows that route 2 is the predominant reaction mechanism at low temperature. Reactions of
+the by-product, HNO2, were also investigated. The results showed that both cis-HNO2 (route 1) and trans-
+HNO2 (route 2) can either react with NH3, producing H2O and N2, or react with themselves, producing
+H2O, NO and NO2. A systemic description of the behavior for NO2 in fast SCR on V2O5 surface, including
+the reaction routes and energy profiles, has been proposed in our work.
+ 2009 Elsevier B.V. All rights reserved.
+1. Introduction
+Selective catalytic reduction (SCR) with NH3 is thought to be
+state-of-the-art technology for the abatement of NOx emitted from
+stationary sources and vehicles [1,2]. Numerous experimental and
+theoretical studies have been carried out to reveal the SCR reac-
+tion mechanism over V2O5 catalysts [35]. The stoichiometry of
+the traditional SCR, known as the standard SCR, is given in Eq.
+(1):
+4NH3 + 4NO + O2 4N2 + 6H2O
+(1)
+Nevertheless, the current method of SCR over a V2O5 catalyst
+requires a high operation temperature (300400 C), which cannot
+be achieved in diesel engines and the low-temperature regions of
+stationary plants. One promising solution to this problem is repre-
+sented by the fast SCR with stoichiometry:
+2NH3 + NO + NO2 2N2 + 3H2O
+(2)
+The promotional effect of NO2 on the SCR reaction was first
+observed in 1981, when Kato et al. [6] reported that the reaction
+involving equimolar quantities of NO and NO2 feed mixture (Eq. (2))
+showed a considerably higher reaction rate than the standard SCR
+(Eq. (1)) at low temperatures. Thereafter, numerous authors [719]
+have dedicated themselves to the work of revealing the mechanism
+Corresponding author.
+E-mail address: xgao1@zju.edu.cn (X. Gao).
+of the fast SCR. Koebel et al. [710] have done significant work in
+this field, including giving the definition of fast SCR in 2001. They
+found that the fast SCR reaction exhibits a reaction rate at least 10
+times higher than that of the well-known standard SCR reaction
+with pure NO. The reoxidation of V4+OH by NO2, O2 in standard
+SCR, may be the main reason for enhancing the reaction rate of
+the fast SCR, according to their experimental results. They also
+pointed out that NH4NO3 will deposit on the catalyst surface at tem-
+peratures below 140 C. Nova et al. [11,12,1416,18,20] have also
+done outstanding work in order to illuminate the mechanism of the
+fast SCR. They proposed a novel mechanism involving the forma-
+tion of ammonium nitrate as an intermediate and its subsequent
+reaction with NO as the rate-determining step. The behavior of
+vanadium sites in the ammonium nitrate route has been well dis-
+cussed by Tronconi et al. [13], who reported that reduced V4+OH
+is not active in the SCR reaction. He also pointed out that both
+NO2 and HNO3 could reoxidize V4+OH to V5+
+O at lower temper-
+atures than O2 (standard SCR). The stoichiometry for the reaction
+of ammonium nitrate is shown in Eq. (3):
+NH4NO3 + NO NO2 + N2 + H2O
+(3)
+This reaction involves the decomposition of ammonium nitrate to
+HNO3 and NH3 and the redox of vanadium sites, as reported by
+several authors [11,12,16]. Li and Li performed a DFT study of the
+fast SCR over Fe-exchanged zeolites [21]. The result showed a
+significant promotional effect of NO2 on the SCR reaction.
+Although the behavior of NO2 in the SCR reaction on V2O5
+surface has been studied in numerous experiments, the delicate
+1381-1169/$  see front matter  2009 Elsevier B.V. All rights reserved.
+doi:10.1016/j.molcata.2009.10.020
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+47
+reaction mechanism and energy profile have rarely been involved.
+Based on previous work, the behavior of NO2 in the SCR reaction on
+the V2O5 surface could follow two reaction routes: (1) NO2 directly
+reoxidizing V4+OH to V5+
+O and (2) NO2 reacting with H2O to pro-
+duce HNO3, which subsequently reoxidizes V4+OH to V5+
+O. The
+objective of the present study is to elucidate the full sequence of
+reaction steps including intermediates and transition state geome-
+tries, and the energetics of these two reaction routes. A systematic
+description of the behavior of NO2 in the fast SCR is proposed.
+2. Calculation details
+All density functional theory (DFT) calculations were performed
+with Gaussian 03 [22] code using the gradient corrected Beckes
+[23,24] three-parameter hybrid exchange functional in combina-
+tion with the correlation functional of Lee et al. [25] (B3LYP). The
+6-31G(d,p) basis set was employed for all atoms. Each stationary
+structure has been confirmed as a minimum-energy structure or
+a transition state from the calculated vibrational frequencies. A
+geometry with no imaginary frequency (negative sign) indicates a
+minimum-energy structure, while a geometry with only one imagi-
+nary frequency implies a transition state. Zero point correction and
+vibrational frequencies obtained by frequency calculations were
+scaled by 0.9607 [26].
+A model cluster (V2O9H10) including two adjacent vanadium
+(V4+OH) sites was used to represent the reduced V2O5 catalyst sur-
+face in this DFT study, as shown in Fig. 1. This model cluster has been
+successfully used in numerous publications [5,2730]. The reduced
+V4+OH sites are produced after the reaction of NH3 and NO on the
+V5+
+O sites [13]. To be in accordance with the real electronic envi-
+ronment of the periodic structure on the V2O5 catalyst surface, only
+the atoms in the dashed lines (Fig. 1) were relaxed, while the others
+were kept fixed in all the optimization processes. The coordinates
+and bond lengths of the fixed atoms are referred to in previous
+publications [5,3035]. Frequency calculations were carried out
+to identify the applicability of the model cluster. The calculated
+frequency of the hydroxyl stretching for V4+OH is 3680 cm1, in
+good agreement with the value 3655 cm1 measured by IR exper-
+iments on a reduced titania-supported vanadia catalyst [36]. This
+Fig. 1. Optimized structure of the model cluster for the reduced V2O5 catalyst. Bond
+lengths are in Å.
+suggests a good agreement between this model cluster and the real
+catalyst.
+3. Results and discussion
+3.1. Direct reoxidization of V4+OH by NO2
+3.1.1. The adsorption and reaction of NO2 on V4+OH
+NO2 can readily reoxidize the V4+OH sites, as pointed out by
+Koebel et al. [79], with the production of V5+
+O and cis-HNO2
+(Fig. 2). The stoichiometry is shown in the following equation:
+V4+OH + NO2 V5+
+O + cis-HNO2
+(4)
+As can be seen from Figs. 2 and 3, NO2 is first adsorbed on to the
+cluster (V2O9H10), an exothermic process, releasing 52.39 kcal/mol.
+Then the hydrogen of the V4+OH will be captured by the adsorbed
+NO2, producing an adsorbed HNO2 on the cluster (V2O9H9HNO2,
+as shown in Fig. 2). This step releases an energy of 5.15 kcal/mol.
+Afterwards, with an activation energy of 9.91 kcal/mol, the cis-
+HNO2 desorbs from the cluster, accomplishing the reoxidization
+of V4+OH to V5+
+O (V2O9H9 in Fig. 2). The V2O9H9 includes a
+Fig. 2. Optimized structures of all the stationary points in the direct reoxidization of V4+OH by NO2. Bond lengths are in Å.
+48
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+Fig. 3. Energy profile for direct reoxidization of V4+OH by NO2 (relative to
+V2O9H10 + NO2).
+V5+
+O and a V4+OH, which can be further oxidized by NO2 or other
+species.
+Frequency calculations for V2O9H10NO2 were carried out to
+compare with the experimental results of Dines et al. [36]. This
+comparison shows excellent agreement between the frequencies
+1585, 1202 and 1620, 1225 cm1 for the calculated and experimen-
+tal results, respectively. The calculation shows that the hydroxyl
+of HNO2 in V2O9H9HNO2 possesses a swinging frequency at
+1349 cm1, while the experimental result [37] turns out to be
+1218 cm1. The difference between calculation and experiment
+may be attributed to the fact that the adsorption of HNO2 on a real
+catalyst surface will be influenced by the support. The V5+
+O has a
+stretching frequency at 1062 cm1, according to the frequency cal-
+culation for V2O9H9, in excellent agreement with the experimental
+result [37] of 1032 cm1.
+3.1.2. Reaction of the by-product cis-HNO2
+The reactions of cis-HNO2 are discussed in this subsection.
+Savara et al. [17] found that NH4NO2 could readily decompose at
+the temperatures less than 100 C to N2 and H2O. In our work, quan-
+tum chemistry calculations were carried out to reveal the reaction
+of HNO2 and NH3. The products of the reaction between HNO2 and
+NH3 were H2O and nitrosamide (H2NNO), which is thought to be
+the key intermediate in the SCR reaction [5]. H2NNO could further
+transform and decompose on V2O5 catalyst surface to N2 and H2O,
+the desired end products. The reaction between HNO2 and NH3
+could be described as the following equation (Eq. (5)):
+cis-HNO2 + NH3 H2NNO + H2O
+(5)
+The reaction between cis-HNO2 and NH3 on the catalyst sur-
+face has two types, i.e. reaction of adsorbed NH3 with gaseous
+cis-HNO2 and reaction of adsorbed cis-HNO2 with gaseous NH3.
+As can be seen from Fig. 4, reaction of adsorbed NH3 with gaseous
+cis-HNO2 (A1A5) starts with the NH3 adsorption on the catalyst
+surface with an exothermic energy of 12.85 kcal/mol. Gaseous cis-
+HNO2 will further react with the adsorbed NH3 to produce adsorbed
+H2NNOH2O (A4, both H2O and H2NNO are adsorbed on the cata-
+lyst surface) via a transition state (A3), costing an activation energy
+of 29.98 kcal/mol. In A3, a hydrogen of the adsorbed NH3 is being
+transferred to one oxygen of the cis-HNO2, simultaneously a NN
+bond between NH3 and HNO2 is being formed. Given an endother-
+mic energy of 25.20 kcal/mol, both H2O and H2NNO could desorb
+from the catalyst surface. H2NNO will re-adsorb on active site to
+produce N2 and H2O.
+Reaction of adsorbed cis-HNO2 with gaseous NH3 (B1B5) starts
+with the cis-HNO2 adsorption on the catalyst surface with an
+exothermic energy of 9.11 kcal/mol. The adsorbed cis-HNO2 will
+react with gaseous NH3 via a transition state (B3) with an activa-
+tion energy of 25.99 kcal/mol. Desorption of the products, H2O and
+H2NNO will be endothermic by 18.40 kcal/mol.
+The reaction between two cis-HNO2 has been studied by Mebel
+et al. [38]. In our present work, this reaction was calculated to com-
+pare with the reaction between HNO2 and NH3, aiming at revealing
+the real behavior of the by-product cis-HNO2. According to Eq. (6),
+cis-HNO2 would react with each other to produce H2O, NO and NO2:
+cis-HNO2 + cis-HNO2 NO2 + NO + H2O
+(6)
+Cis-HNO2 can be readily adsorbed onto the catalyst surface.
+Thus Eq. (6) will happen between adsorbed HNO2 and gaseous
+HNO2. The energy profile of this reaction is shown in Fig. 4
+(C1C5). Adsorbed HNO2 and gaseous HNO2 will react to produce
+adsorbed H2ONONO2 (C4, H2O, NO and NO2 adsorbed on the
+catalyst surface) via a transition state (C3). In C4, a hydrogen of
+Fig. 4. Energy profile for the reaction between adsorbed NH3 and gaseous HNO2 (A1A5, relative to NH3 + cis-HNO2); adsorbed HNO2 and gaseous NH3 (B1B5, relative to
+NH3 + cis-HNO2), adsorbed cis-HNO2 and gaseous cis-HNO2 (C1C5, relative to cis-HNO2 + cis-HNO2). ad- indicates the adsorbed species on the catalyst surface. The values
+(given in kcal/mol) on the right side of this figure are the corresponding relative energies.
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+49
+Fig. 5. Optimized structures of all the stationary points in the reaction of NO2 with H2O. Bond lengths are in Å.
+gaseous cis-HNO2 is being transferred to the hydroxy oxygen of a
+adsorbed cis-HNO2. This process would cost an activation energy of
+5.01 kcal/mol and has an exothermic energy of 3.45 kcal/mol. H2O,
+NO and NO2 will desorb from the catalyst surface, being endother-
+mic by 17.01 kcal/mol.
+In summary, cis-HNO2 could either react with NH3 or cis-HNO2.
+The reaction of adsorbed NH3 with gaseous cis-HNO2 and adsorbed
+cis-HNO2 with gaseous NH3 will cost a barrier energy of 29.98 and
+25.99 kcal/mol, respectively. Nevertheless, the reaction between
+two cis-HNO2 (Eq. (6)) just has a barrier energy of 18.40 kcal/mol.
+Thus, the by-product cis-HNO2 prefers the reaction of two cis-HNO2
+to produce H2O, NO and NO2 in low temperature. This result shows
+a good agreement with the work of Koebel et al. [9], which revealed
+that the reoxidization of V4+OH by NO2 would produce H2O and
+NO.
+3.2. Reoxidization of V4+OH by HNO3 (produced by the reaction
+of NO2 with H2O or NH3)
+3.2.1. Reaction of NO2 with H2O and NH3
+HNO3 acting as an intermediate to reoxidize V4+OH has been
+published by several authors [1116]. As known for a long time,
+NO2 can readily react with H2O with a production of trans-HNO2
+and HNO3. The stoichiometry is given in the following equation:
+2NO2 + H2O trans-HNO2 + HNO3
+(7)
+In this subsection, DFT calculation was performed to study the
+reaction route of Eq. (7) (Figs. 5 and 6). This reaction starts from
+the combination of H2O and two NO2 (N2O4H2O in Fig. 5), pro-
+ducing an exothermic energy of 6.58 kcal/mol. N2O4H2O further
+converts to HNO2HNO3 via a transition state (TS), costing an acti-
+vation energy of 2.53 kcal/mol. This transforming process yields
+an exothermic energy of 7.39 kcal/mol. Afterwards, HNO2HNO3
+decomposes to trans-HNO2 and HNO3 (Fig. 5) accompanying with
+an endothermic energy of 7.13 kcal/mol. The energy profile indi-
+cates that decomposition of HNO2HNO3 to trans-HNO2 and HNO3
+is the control step of the reaction between NO2 and H2O.
+The reaction between NO2 and NH3 has also been largely
+reported by several authors [11,13,15]. NO2 can react with NH3
+at low temperature to produce NH4NO3, N2 and H2O, as shown in
+Eq. (8). NH4NO3 can readily decompose to NH3 and HNO3 at the
+SCR temperature:
+2NO2 + 2NH3 H2O + N2 + NH4NO3
+(8)
+The reaction route and energy profile of reaction between NO2
+and NH3 are shown in Figs. 7 and 8, respectively. In the transition
+state (TS) of Fig. 7, a hydrogen of NH3 is being transferred to the oxy-
+gen of NO2 and a NN bond is being formed. The activation energy
+is only 2.34 kcal/mol. The largest energy barrier of this reaction is
+4.12 kcal/mol, consumed by the decomposition of H2NNOHNO3.
+H2NNO will further transform to H2O and N2, and HNO3 can read-
+ily combine with NH3 to produce NH4NO3, thus this calculation
+is accordant with Eq. (8). Low barrier energy confirms the results
+found by other authors [11,13,15].
+3.2.2. Reoxidation of V4+OH by HNO3
+HNO3 (one of the products in reactions (7) and (8)) is a strong
+oxidizing agent and can easily reoxidize V4+OH to V5+
+O, follow-
+ing Eqs. (9) and (10):
+V4+OH + HNO3 V5+NO3 + H2O
+(9)
+V5+NO3 V5+
+O + NO2
+(10)
+Fig. 6. Energy profile for the reaction between NO2
+and H2O (relative to
+NO2 + NO2 + H2O).
+50
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+Fig. 7. Optimized structures of all the stationary points in the reaction of NO2 with NH3. Bond lengths are in Å.
+Fig. 9 exhibits the optimized structures in the reoxidation pro-
+cess by HNO3. The energy in Fig. 10 is given relative to the
+total energy of V2O9H10 + HNO3. Initially, HNO3 is adsorbed on
+to the V2O9H10 cluster (V2O9H10HNO3), releasing an energy
+of 14.28 kcal/mol. Then, V2O9H10HNO3 is transformed to a
+V2O8H9NO3H2O cluster in which H2O is adsorbed on the
+V2O8H9NO3 cluster, via a transition state (TS1). In TS1, the
+hydrogen of HNO3 is being transferred to the hydroxyl oxygen
+of V4+OH accompanied by the weakening of the interaction
+between vanadium and the hydroxyl. Meanwhile, the interac-
+tion between the oxygen of HNO3 and vanadium of V4+OH is
+being formed. This process possesses an activation energy of
+4.5 kcal/mol and an exothermic energy of 3.96 kcal/mol. The H2O in
+the V2O8H9NO3H2O, cluster will desorb from the V2O8H9NO3
+(Fig. 9), since it is endothermic by 6.58 kcal/mol. Afterwards,
+V2O8H9NO3 will transform into V2O9H9, with the production
+of NO2, via a transition state (TS2). In TS2, NO2 is desorbing
+from V2O9H9, and simultaneously a V5+
+O bond is being formed.
+This NO2 desorption process, costing an activation energy of
+7.44 kcal/mol and finally being exothermic by 41.06 kcal/mol, turns
+out to be the rate-determining step of the reoxidation reaction.
+The release of NO2 from the reoxidation of V4+OH by HNO3 has
+Fig. 8. Energy profile for the reaction between NO2
+and NH3
+(relative to
+NO2 + NO2 + NH3).
+been confirmed by an experiment carried out by several authors
+[8,11,12,16].
+Frequency calculations were carried out to compare with the
+experimental results of several publications. In our work, the HNO3
+cluster adsorbed on to V2O9H10 has a stretching frequency of
+1265 cm1, in good agreement with the 1252 cm1 measured by
+Miyata and co-workers. Dines et al. [36] reported in 1991 that NO2
+adsorbed on to a V2O5 surface would produce a bidentate nitrato
+(V5+NO3), which has a 3 vibration at 1572 cm1, in accordance
+with the 1596 cm1 from our calculation for V2O8H9NO3.
+3.2.3. Reaction of the by-product trans-HNO2
+One of the products of reaction (7), trans-HNO2, can either react
+with NH3 to give H2NNO and H2O (Eq. (11)) or another trans-HNO2
+to produce NO, NO2 and H2O (Eq. (12)). Reactions (11) and (12)
+were both investigated with DFT calculations. The relative energy
+profiles are given in Fig. 11.
+The reaction between trans-HNO2 and NH3 on the catalyst sur-
+face also has two types, i.e. reaction of adsorbed NH3 with gaseous
+trans-HNO2 (D1D5) and reaction of adsorbed trans-HNO2 with
+gaseous NH3 (E1E5). The reaction between adsorbed NH3 and
+gaseous trans-HNO2 starts from the adsorption of NH3 on to the
+catalyst surface, which is exothermic by 12.85 kcal/mol. In the
+transition state D3 (Fig. 11), one hydrogen from the NH3 is being
+transferred to the hydroxyl oxygen of trans-HNO2, resulting in the
+formation of H2O and H2NNO (readily transform to N2 and H2O [5]).
+The whole process costs an activation energy of 28.04 kcal/mol and
+eventually has an exothermic energy of 7.27 kcal/mol:
+trans-HNO2 + NH3 H2NNO + H2O
+(11)
+The other type of Eq. (11) is the reaction of adsorbed trans-
+HNO2 and gaseous NH3. This reaction possesses an energy barrier
+of 24.06 kcal/mol, consumed by the transformation of E4E5, i.e.
+the desorption of H2O and H2NNO from the catalyst surface.
+Reaction (12) (Eq. (12)) occurs between two trans-HNO2. In tran-
+sition state F3, one hydrogen of trans-HNO2 is being transferred
+to the hydroxyl oxygen of the adsorbed trans-HNO2, costing an
+activation energy of 5.04 kcal/mol and producing F4 (H2O, NO and
+NO2 adsorbed on the catalyst surface). Afterwards, H2O, NO and
+NO2 will desorb from the catalyst surface, consuming an energy of
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+51
+Fig. 9. Optimized structures of all the stationary points in the reoxidization of V4+OH by HNO3. Bond lengths are in Å.
+24.05 kcal/mol:
+trans-HNO2 + trans-HNO2 NO2 + NO + H2O
+(12)
+The comparison between reactions (11) (two types) and (12)
+shows a similar energy profile. The energy barriers of these three
+reactions are 28.04 kcal/mol (adsorbed NH3 with gaseous trans-
+HNO2), 24.06 kcal/mol (adsorbed trans-HNO2 with gaseous NH3)
+Fig. 10. Energy profile for the reoxidization of V4+OH by HNO3 (relative to
+V2O9H10 + HNO3).
+and 24.05 kcal/mol (adsorbed trans-HNO2 with gaseous trans-
+HNO2). Thus, reactions (11) and (12) can equally happen on the
+catalyst surface.
+3.3. Discussion
+The first step of the SCR reaction is the reaction of NH3 and NO
+on V5+
+O, causing a reduction of V5+
+O to V4+OH (Eq. (13)) [3]:
+V5+
+O + NH3 + NO V4+OH + H2O + N2
+(13)
+The reduced V4+OH must be reoxidized in order to participate
+in the SCR reaction, as revealed by several authors [9,13]. NO2 can
+reoxidize V4+OH via two reaction routes, as discussed in Sections
+3.1 and 3.2. Fig. 12 shows the behavior of NO2 in the reoxidation
+of V4+OH to V5+
+O. The rate-determining step of route 1 (the
+direct reoxidation of V4+OH by NO2) is the desorption of cis-HNO2
+from V2O9H9, with an activation energy of 9.91 kcal/mol. Route 2
+(the reoxidation of V4+OH by HNO3 produced by the reaction of
+NO2 with H2O or the reaction of NO2 with NH3) costs a lower acti-
+vation energy of 7.44 kcal/mol, as required by the transformation
+of V5+NO3 to V5+
+O and NO2. Accordingly, route 2 is more pre-
+dominant than route 1 at low temperatures, in accordance with
+numerous publications [8,1113,15]; these have proposed that
+nitrate is much more important for the fast SCR at temperatures
+below 200 C.
+Both routes 1 and 2 will produce nitrous acid (cis-HNO2 by route
+1, trans-HNO2 by route 2). The calculations show that both cis-
+HNO2 and trans-HNO2 can either react with NH3, producing H2O
+52
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+Fig. 11. Energy profile for the reaction between adsorbed NH3 and gaseous trans-HNO2 (D1D5, relative to NH3 + cis-HNO2); adsorbed trans-HNO2 and gaseous NH3 (E1E5,
+relative to NH3 + trans-HNO2), adsorbed trans-HNO2 and gaseous trans-HNO2 (F1F5, relative to trans-HNO2 + trans-HNO2). ad- indicates the adsorbed species on the catalyst
+surface. The values (given in kcal/mol) on the right side of this figure are the corresponding relative energies.
+and N2, or react with themselves, producing H2O, NO and NO2. The
+energy profile shows that cis-HNO2 would rather react with itself
+than react with NH3. Energy profiles indicated that the reaction
+between two cis-HNO2 has an energetic advantage of more than
+7.5 kcal/mol than the reaction between cis-HNO2 and NH3. Never-
+theless, trans-HNO2 can equally react with itself or with NH3 on the
+catalyst surface.
+The combination of route 1 (Eq. (4)) and the preferred reac-
+tion (Eq. (6)) of its by-product, cis-HNO2, is given in Eq. (14). This
+stoichiometry is in close agreement with the experimental results
+reported by Koebel et al. [9], who found that the reoxidation of the
+V2O5 catalyst follows the reaction given in Eq. (13) in the absence
+of NH3. NO will further react with NH3 over the reoxidized V2O5
+surface, according to Eq. (13). Therefore, the overall stoichiometry
+turns out to be the equation of the fast SCR (Eq. (2)):
+2V4+OH + NO2 2V5+
+O + H2O + NO
+(14)
+Fig. 12. Reaction routes for the reoxidization of V4+OH by NO2. Route 1 represents
+the direct reoxidization of V4+OH by NO2; route 2 represents the reoxidization of
+V4+OH by HNO3 produced by the reaction of NO2 with H2O or NH3.
+The overall stoichiometry of route 2, combining the reactions of
+Eq. (7), 11(12), 9, 10, 13 or 8, 9, 10, 13, is also in accordance with
+the main reaction of the fast SCR (Eq. (2)). The reaction between
+NH4NO3 and NO over V2O5 catalyst reported by Koebel et al. [8],
+Ciardelli et al. [11] and Nova et al. [12] can also be well explained
+by route 2. Initially, NH4NO3 decomposes to NH3 and HNO3. Then
+HNO3 can readily reoxidize V4+OH according to Eqs. (9) and (10).
+Afterwards, the reoxidized V5+
+O will be reduced following the
+reaction of Eq. (13). The overall reaction is given in Eq. (15):
+NH4NO3 + NO NO2 + N2 + H2O
+(15)
+4. Conclusion
+DFT calculations have been carried out to study the behavior
+of NO2 in the selective catalytic reduction of nitric oxides with
+ammonia on the V2O5 catalyst surface at the B3LYP/6-31G(d,p)
+level. The results show that NO2 can readily reoxidize V4+OH
+through two reaction routes: (1) NO2 directly reoxidizes V4+OH
+to V5+
+O and (2) NO2 reacts with H2O or NH3 to produce HNO3,
+which subsequently reoxidizes V4+OH to V5+
+O. For these two
+reaction channels, we have explored the respective energy pro-
+files and identified the corresponding rate-determining steps. The
+rate-determining step of route 1 is the desorption of cis-HNO2 from
+the reoxidized V5+
+O, being endothermic by 9.91 kcal/mol. Route
+2 possesses an activation energy of 7.44 kcal/mol (less than route
+1), consumed in the desorption of NO2 from V5+
+O. Energetic com-
+parisons show that route 2 is the predominant reaction mechanism
+at low temperature. Frequency calculations of the species, includ-
+ing V5+
+O, V4+OH, NO2 adsorbed on V4+OH, HNO2 adsorbed on
+V5+
+O and HNO3 adsorbed on V4+OH, agree well with previous
+experimental results carried out by other authors, confirming the
+rationality of our model cluster.
+The reactions of the by-product, HNO2, were also investigated.
+The by-product of route 1, cis-HNO2, can either react with NH3 or
+another cis-HNO2. The reaction of two cis-HNO2 producing H2O,
+NO and NO2 has an activation energy of 18.40 kcal/mol, while
+the reaction between cis-HNO2 and NH3 possesses a considerably
+higher energy barrier of 25.99 kcal/mol (reaction of adsorbed cis-
+HNO2 with gaseous NH3). The energy profile for the behavior of
+trans-HNO2, the by-product of route 2, shows difference to that for
+X. Gao et al. / Journal of Molecular Catalysis A: Chemical 317 (2010) 4653
+53
+cis-HNO2. The rate-determining step of the reaction between two
+trans-HNO2 and the reaction between trans-HNO2 and NH3 will
+cost activation energies of 24.05 kcal/mol and 24.06 kcal/mol (reac-
+tion of adsorbed cis-HNO2 with gaseous NH3), respectively. These
+results showed that both cis-HNO2 (route 1) prefer to reacting with
+themselves, producing H2O, NO and NO2, rather than reacting with
+NH3. Nevertheless, trans-HNO2 will equally react with itself, pro-
+ducing H2O, NO and NO2 or with NH3, producing H2O and N2 on
+the catalyst surface. A systematic description of the behavior for
+NO2 in the fast SCR has been proposed in our work, as shown in
+Fig. 12.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the mechanisms of C-H bond activation and catalyst regeneration in oxidative dehydrogenation of alkanes for redox-active and redox-inactive metal oxide catalysts, explaining the role of traditional oxidants and CO2. Include a discussion on the effectiveness of different catalysts (such as V2O5, VOx/SiO2, CeO2, and transition metal clusters) in activating CO2 for oxidative dehydrogenation of propane, considering the proposed mechanisms and energy barriers for CO2 dissociation.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

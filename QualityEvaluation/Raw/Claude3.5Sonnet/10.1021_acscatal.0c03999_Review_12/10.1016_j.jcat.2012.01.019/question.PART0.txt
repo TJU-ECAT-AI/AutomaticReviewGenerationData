@@ -1,0 +1,2127 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Reaction path analysis of propane selective oxidation over V2O5 and V2O5/TiO2
+Konstantinos Alexopoulos, Marie-Franoise Reyniers , Guy B. Marin
+Laboratory for Chemical Technology, Ghent University, Krijgslaan 281 (S5), B-9000 Ghent, Belgium
+a r t i c l e
+i n f o
+Article history:
+Received 27 October 2011
+Revised 27 January 2012
+Accepted 31 January 2012
+Available online 11 March 2012
+Keywords:
+DFT
+V2O5/TiO2 catalyst
+Monolayer vanadia
+Oxygen sites
+CAH bond activation
+Propane dehydrogenation
+a b s t r a c t
+The selective oxidation of propane on the vanadyl and bridging oxygen sites of the fully oxidized (001)
+V2O5 surface and of an epitaxial vanadia monolayer supported on (001) TiO2 anatase is analysed using
+periodic density functional theory (DFT). Both the oxidative dehydrogenation leading to propene and
+the formation of oxygenated products, namely n-propanol, i-propanol, propanal and acetone, are inves-
+tigated. Selective oxidation proceeds via a Marsvan Krevelen redox mechanism, and its elementary steps
+on the vanadia surface are identified. Propane chemisorption preferentially occurs through a secondary
+CAH bond activation via a direct hydrogen abstraction by a lattice oxygen. Supporting a vanadia mono-
+layer on titania strongly enhances the CAH bond activation as compared to unsupported V2O5, yielding a
+lower activation energy and a more exothermic propane chemisorption. In accordance with experimental
+observations, the calculations show that the titania support not only modifies the activity of the vanadia
+monolayer but it also affects the selectivity of the catalyst, favouring the formation of propene compared
+to the formation of i-propanol and acetone. The vanadyl oxygen is overall the most active site on V2O5
+and V2O5/TiO2, while the bridging oxygen is more selective towards propane dehydrogenation.
+ 2012 Elsevier Inc. All rights reserved.
+1. Introduction
+The oxidation of hydrocarbons is of fundamental and techno-
+logical interest because it provides a potential route to effectively
+transform hydrocarbons to value-added and synthetically useful
+chemicals and to reduce environmental pollution. Examples of
+such processes are the oxidative dehydrogenation of light alkanes
+to olefins [13], the production of maleic anhydride from butane
+[46] and of phthalic anhydride from o-xylene [79], and the elim-
+ination of volatile organic compounds (VOCs) from exhaust
+streams [10]. The selection or development of an appropriate cat-
+alyst for each of these reactions is a challenging task. Theoretical
+studies based on first principles can help to develop an under-
+standing of the reaction mechanisms involved and the parameters
+responsible for reactivity and selectivity. Moreover, ab initio calcu-
+lations allow the determination of kinetic and thermodynamic
+parameters, such as activation energies and reaction enthalpies,
+needed for the development of a suitable microkinetic model.
+Heterogeneous catalysts composed of transition metal oxides
+are commonly used for the oxidation of hydrocarbons. Vanadium
+oxide-based catalysts are employed as efficient catalysts in the oxi-
+dative dehydrogenation of propane to propene, which is the reac-
+tion of interest examined in the current study. The interest in this
+reaction stems from the fact that the currently applied non-oxida-
+tive dehydrogenation is an endothermic and therefore energy
+intensive process, suffering from low propene yields due to cata-
+lyst coking and methane formation. In contrast, the alternative oxi-
+dative dehydrogenation is exothermic, because of the formation of
+water, and does not lead to the formation of coke [11]. Earlier
+experimental studies indicate that the selective oxidation of pro-
+pane on vanadium oxides proceeds via a Marsvan Krevelen redox
+mechanism that involves the reduction of the metal oxide surface
+by the alkane with the formation of the alkene and water, followed
+by reoxidation of the surface through gas-phase oxygen [12]. In
+addition, selective oxidation reactions, like the oxidative dehydro-
+genation of propane, can be considered as a first step towards the
+total oxidation of propane [11,12]. Nevertheless, mechanistic de-
+tails of the surface reactions and important elementary steps such
+as the initial CAH bond activation remain to be elucidated. Fur-
+thermore, a controversy still exists on the type of oxygen sites that
+are active for selective oxidation reactions. The vanadyl O(1) site
+has been proposed by many investigators to contain the critical
+oxygen involved in hydrocarbon oxidation reactions [1317]. Oth-
+ers like Eon et al. [18] mentioned the importance of the doubly
+coordinated bridging O(2) sites. On the other hand, according to
+Ramirez et al. [19], the oxygen atoms that participate more readily
+in the oxidation process correspond to the triply coordinated
+bridging O(3) sites.
+The goal of this theoretical study is to assess the activity and
+selectivity of the different oxygen sites in propane selective oxida-
+tion and to obtain a quantitative insight in the reaction mecha-
+nism. In order to address the issue of selectivity, the reaction
+network is not limited only to the oxidative dehydrogenation of
+0021-9517/$ - see front matter  2012 Elsevier Inc. All rights reserved.
+doi:10.1016/j.jcat.2012.01.019
+Corresponding author. Fax: +32 92645824.
+E-mail address: MarieFrancoise.Reyniers@ugent.be (M.-F. Reyniers).
+Journal of Catalysis 289 (2012) 127139
+Contents lists available at SciVerse ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+propane, which has been the subject of several theoretical studies
+[2026], but includes also the formation of oxygenated products,
+namely n-propanol, i-propanol, propanal and acetone. Addition-
+ally, as vanadia is commonly used supported on another metal
+oxide, for example, TiO2, SiO2, Al2O3, the effect of a strong interac-
+tion of a TiO2 anatase support with the active vanadia phase on
+propane activation and oxidation is investigated. Finally, although
+selective oxidation reactions have already been studied theoreti-
+cally on gas-phase vanadium oxide species [2730], on supported
+catalysts
+with
+coverage
+in
+vanadia
+below
+the
+monolayer
+[20,21,3137] and on the (001) V2O5 surface [2326], this study
+aims at exploring the reactivity of the monolayer vanadia catalyst,
+thus bridging in the gap between isolated vanadia species and bulk
+vanadia crystals.
+2. Computational details
+2.1. Catalyst models
+Bulk V2O5 forms a layer-type orthorhombic lattice with space
+group
+Pmmn
+D13
+2h
+and
+experimental
+lattice
+constants
+a = 1151.2 pm,
+b = 356.4 pm,
+c = 436.8 pm
+[38].
+Its
+unit
+cell,
+V4O10, comprises two formula units. In the crystal structure, the
+layers are stacked in such a way that distorted VO6 octahedra are
+formed with VAO bond distances varying between rather small
+(158 pm) and quite large values (279 pm). This large value is indic-
+ative of a weak van der Waals bond, which explains why V2O5 pre-
+sents an easy cleavage parallel to the (001) plane [39].
+Because of the easy cleavage parallel to the (001) plane, this
+plane has been used in this study to model the fully oxidized
+unsupported vanadia surface. For the construction of the possible
+competing reaction pathways, all structurally and electronically
+distinct oxygen sites, that is, singly coordinated vanadyl (O(1)),
+doubly coordinated bridging (O(2)) and triply coordinated bridging
+(O(3)) oxygen, of the catalyst have been taken into account. Peri-
+odic density functional theory (DFT) calculations have been per-
+formed for the (001) V2O5 surface using both single-layer and
+double-layer slabs, in order to test whether there is any influence
+of a second underlying vanadia layer on the surface reactivity. As
+seen from Tables S1 and S2 of the Supporting information, a sin-
+gle-layer slab seems adequate for modelling the oxidation reaction
+at early stages and can essentially be used for modelling the com-
+plete reaction at the bridging oxygen sites, where the surface
+reconstruction due to the reaction with the hydrocarbon is either
+minimal or very localized. However, when major surface recon-
+structions occur involving important interlayer interactions (e.g.
+creation of an interlayer bond due to oxygen vacancy formation
+at the vanadyl site), a single-layer slab is certainly not accurate en-
+ough. Moreover, a single-layer slab is missing the interlayer van
+der Waals bonds, which can lead to an extra stabilization of the
+reaction intermediate. Therefore, all data presented in this study
+for the unsupported vanadia surface are obtained from a double-
+layer slab model. As seen from Fig. 1, this model is a (1  2) super-
+cell of (001) V2O5, which corresponds to a surface area of 0.83 nm2
+(i.e. 1165.8 pm  715.1 pm) and a propane coverage of 1/8 ML (i.e.
+one propane molecule per eight surface vanadium atoms).
+The approach for modelling the V2O5 monolayer supported on
+(001) TiO2 anatase is based on results obtained by several surface
+characterization techniques [40] and assumes that the presence of
+the titania anatase support alters significantly the structure of the
+fully oxidized vanadia monolayer [41]. This model is constructed
+by placing half monolayer of oxygen atoms on top of a pseudomor-
+phic VO2 phase that extends the (001) TiO2 anatase structure. The
+optimized structure for the V2O5/TiO2 model together with the
+considered active sites is shown in Fig. 1. The vanadia monolayer
+in this model is supported on a (3  2) supercell of (001) TiO2,
+which
+corresponds
+to
+a
+surface
+area
+of
+0.88 nm2
+(i.e.
+1150.2 pm  766.8 pm) and a propane coverage of 1/6 ML (i.e.
+one propane molecule per six surface vanadium atoms).
+Finally, it is worth mentioning that since the experimental sat-
+uration coverage of propane on a metal oxide surface is 1/5 ML
+[42], this study is carried out for a relatively high hydrocarbon
+coverage.
+2.2. Computational methods
+The selective oxidation of propane on fully oxidized vanadia
+surfaces is analysed using periodic density functional theory
+(DFT) calculations. Density functional theory is widely used to
+study this topic, as the investigated systems are of considerable
+size and other methods are often not applicable due to unfavour-
+able scaling properties.
+Spin-polarized periodic DFT calculations have been carried out
+with the Vienna Ab initio Simulation Package (VASP) using
+plane-wave basis sets [43,44]. A plane-wave energy cut-off of
+400 eV has been used in all cases. The projector augmented wave
+method of Blchl [45] in the implementation of Kresse and Joubert
+[46] has been chosen to describe the electronion interaction. To
+account for the non-locality in the exchange correlation functional,
+the generalized gradient approximation (GGA) according to Per-
+dew, Burke and Ernzerhof (PBE) has been used [47]. The catalyst
+is represented as an infinite system with periodic symmetry [48].
+A conjugate-gradient algorithm has been utilized to relax the
+atoms into their instantaneous ground state, assuming that con-
+vergence is achieved when the forces are below 0.05 eV/Å. The di-
+mer method [49] with the same convergence criteria has been used
+to locate transition states on the potential energy surface. The
+MonkhorstPack division scheme [50] has been chosen to generate
+a set of k-points within the Brillouin zone. To improve the conver-
+gence with respect to the number of k-points without affecting the
+accuracy of the calculation, a Gaussian smearing [44,51] of 0.05 eV
+has been applied. A 2  6  6 and a 6  6  2 k-point mesh were
+found adequate for the bulk V2O5 and TiO2 anatase, respectively,
+[010]
+[100]
+[001]
+V2O5
+V2O5/TiO2
+O(3)
+O(1)
+O(2)
+O(3)
+O(2)
+O(1)
+O(1)
+O(2)
+O(3)
+O(3)
+O(1)
+O(2)
+Fig. 1. Side and top view of catalyst models used in this study (blue: V, green: Ti,
+red: O); active sites: O(1) singly coordinated vanadyl oxygen, O(2) doubly
+coordinated bridging oxygen, O(3) triply coordinated bridging oxygen. (For
+interpretation of the references to colour in this figure legend, the reader is
+referred to the web version of this article.)
+128
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+yielding cohesive energies that are converged within 1 meV.
+Accordingly, a 2  3  1 k-point mesh was applied for the (1  2)
+supercell of (001) V2O5 and for the (3  2) supercell of (001)
+TiO2. A vacuum gap of 1.1 nm was found sufficient to separate
+subsequent slabs, yielding surface energies that are converged
+within 0.001 J/m2 and adsorption energies that are converged
+within 1 kJ/mol. For the surface calculations, no symmetry was
+used, and a dipole correction was included. All energies are calcu-
+lated at 0 K and do not include zero-point vibrational energy
+(ZPVE) corrections. Adsorption energies of propane on the surface
+are calculated as follows
+DEads  EC3H8=V2O5  EC3H8g  EV2O5
+1
+where EC3H8=V2O5 refers to the energy of the physisorbed or chemi-
+sorbed complex, EC3H8g refers to the energy of an isolated propane
+molecule in the gas phase and EV2O5 refers to the energy of the clean
+vanadia surface. Positive values of DEads indicate endothermic pro-
+cesses, while negative values indicate exothermic processes.
+Additionally, in order to account for long-range dispersion
+interactions, the calculated PBE energies corresponding to the opti-
+mized structures have been corrected by performing single-point
+calculations using the DFT-D2 method of Grimme [52] in the
+implementation of Kerber et al. [53] for periodic systems, which
+is denoted in this work as PBE+D. The addition of dispersion correc-
+tions can change the relative energies of different intermediates on
+the potential energy surface (see Figs. S1S3 of the Supporting
+information), since dispersion corrections tend to increase the rel-
+ative stability of adsorbed intermediates. This effect can be clearly
+observed on the adsorption and desorption energies (see Tables
+S3S5 of the Supporting information), which become more exo-
+thermic and endothermic, respectively, when including dispersion
+corrections. Therefore, unless stated otherwise, all results pre-
+sented in this work include dispersion corrections.
+After geometry optimization with PBE, an analysis of the spin
+density is carried out for visualizing the location of unpaired elec-
+trons on the reaction intermediates. However, because of the self-
+interaction error of pure DFT, PBE incorrectly yields delocalized
+solutions for defective states (e.g. oxygen vacancies) in many oxi-
+des [5456]. Therefore, in order to describe properly these local-
+ized states, PBE+U with an on-site Coulomb repulsion parameter
+Ueff of 6.6 eV [57] for the V and Ti 3d-states has been used to cal-
+culate the spin density. The spin density (s) is calculated as
+s  qspin-up  qspin-down
+2
+with qspin-up and qspin-down being the spin-up and spin-down charge
+densities. To obtain the number of unpaired electrons localized on
+each atom, a Bader analysis [58,59] is performed on the spin
+density.
+3. Results and discussion
+3.1. Propane physisorption
+A physisorption step is typically assumed before any reaction
+takes place between the catalytic surface and the hydrocarbon.
+Two distinct locations above the catalytic surface have been studied
+for propane physisorption: on top of the vanadyl oxygen and in the
+valley between two double rows of vanadyl oxygen. Considering
+the possibilities of propane adsorbing on the catalytic surface, differ-
+ent approaches of the adsorbate to the surface have been examined,
+namely perpendicular or parallel to the surface and along or across
+the [100] direction (see Table S3 of the Supporting information).
+In Fig. 2, representative physisorbed states of propane over the
+unsupported and supported vanadia surface are depicted, while
+their respective physisorption energies are reported in the first
+and third rows of Table 1. Propane is physisorbed parallel to the
+surface with the difference in the preference between propane
+positioned along or across the [100] direction being only marginal
+(see Table S3 of the Supporting information). In all cases, a very
+weak physical adsorption is observed with no significant changes
+in the structure of the hydrocarbon and the surface. Interestingly
+enough, the calculated physisorption energies correlate well with
+the distance between the centre of mass of propane and that of
+the surface layer, since the higher the physisorption energy, the
+closer the hydrocarbon is to the surface (see Fig. 2 and Table 1).
+The preferred location for propane physisorption is over the valley,
+where the propane molecule is allowed to come closer to the sur-
+face. However, this preference in the location for propane physi-
+sorption is less pronounced in the supported vanadia surface
+because of the tilted vanadyl groups (see Fig. 1), which make the
+surface more flat with less distinct valley regions.
+Kmper et al. [60] studied propane physisorption on the unsup-
+ported (001) V2O5 surface using both molecular mechanics simu-
+lations
+and
+microcalorimetry
+measurements.
+As
+seen
+from
+Table 1, the calculated physisorption energies are in good agree-
+ment with the physisorption energies obtained from the molecular
+mechanics simulations, while the physisorption energy obtained
+for the most stable physisorbed state is close to the experimentally
+determined value. Although the orientation of physisorbed pro-
+pane over the valley is similar to the one obtained from the molec-
+ular mechanics simulations, that is, parallel to the surface and
+along the [100] direction, propane appears to be closer to the sur-
+face based on molecular mechanics (see Table 2). This difference
+can be attributed to the fact that in the current study, only pure
+DFT was used for geometry optimizations. In addition, as seen in
+Table 2, the shortest oxygenhydrogen distance for both the
+unsupported and supported vanadia is obtained with the vanadyl
+oxygen, while molecular mechanics for the unsupported vanadia
+yield that the doubly coordinated oxygen site is the closest one
+to a hydrogen atom of propane.
+Fig. 2. Representative physisorbed states of propane over different (top: vanadyl,
+bottom: valley) regions of the unsupported (V2O5) and supported (V2O5/TiO2)
+vanadia surface. Distances (in pm) are depicted between the centre of mass of
+propane and that of the surface layer. Blue balls are vanadium atoms, red balls are
+oxygen atoms, green balls are titanium atoms, grey balls are carbon atoms and
+white balls are hydrogen atoms. (For interpretation of the references to colour in
+this figure legend, the reader is referred to the web version of this article.)
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+129
+Therefore, it should be kept in mind that although propane is
+preferentially physisorbed in the valley where bridging oxygen
+sites are located, the vanadyl oxygen sites are not so far away from
+the hydrocarbon and should most certainly not be excluded as ac-
+tive centres for subsequent reactions. Moreover, because of the
+rather weak and non-specific interaction between the propane
+molecule and the coordinatively saturated vanadia layer, the influ-
+ence of the support is not important in propane physisorption.
+3.2. Propane chemisorption
+As seen from Fig. 3, all three types of bond activation have been
+examined for propane chemisorption, namely CAH bond activation
+at the primary or secondary position and CAC bond activation.
+Moreover, propane chemisorption via a CAH bond activation can
+be either a concerted [16] or a two-step process, the so-called re-
+bound mechanism [20,6163]. The calculated activation and reac-
+tion energies for these pathways are summarized in Table 3, while
+energy diagrams for propane chemisorption on each of the oxygen
+sites of the unsupported and supported catalyst are plotted in
+Fig. 4.
+In the first step of propane chemisorption via CAC bond activa-
+tion (1 ? 4 in Fig. 3), a lattice oxygen attacks the CAC bond of pro-
+pane, forming an adsorbed methoxide and a physisorbed ethyl
+radical. Based on the activation energies of Table 3, most favour-
+able sites for this step on either catalyst are O(1) and O(2), while
+O(3) is the least reactive one. The support enhances the reactivity
+of O(1) and O(2) for this step by lowering the activation energy for
+these sites. The exact opposite happens in the case of O(3), which
+loses reactivity when going from the unsupported to the supported
+catalyst. However, due to the very high activation barriers for this
+step (>280 kJ/mol), this mechanism is not considered further.
+In the concerted mechanism of propane chemisorption via a
+CAH bond activation (1 ? 2a, 1 ? 2b in Fig. 3), the addition of
+the CAH bond on a VAO site leads to the formation of a metal hy-
+dride and an adsorbed propoxide. In agreement with the order of
+the CAH bond dissociation energies in propane [64], the activation
+energies for addition of the secondary CAH bond are lower than
+those for addition of the primary CAH bond (see Table 3). Based
+on the activation energies of Table 3, O(1) and O(3) are most
+favourable for the secondary CAH bond addition on the unsup-
+ported catalyst, while O(1) and O(2) are most reactive for this step
+on the supported catalyst. Due to important steric hindrances, no
+transition state could be located for the secondary CAH bond addi-
+tion on the O(3) site of the supported catalyst. Nevertheless, it is
+unlikely for propane chemisorption to proceed via such a con-
+certed mechanism, since the activation barriers are once again very
+high (>270 kJ/mol).
+Significantly lower activation energies are obtained when the
+two-step mechanism of propane chemisorption via a CAH bond
+Table 1
+Physisorption energies (in kJ/mol) of propane on unsupported and supported vanadia.
+Method
+Position
+V2O5
+V2O5/TiO2
+PBE+D
+Vanady1
+15
+19
+MMa
+Vanady1
+16
+PBE+D
+Valley
+28
+21
+MMa
+Valley
+32
+Exp.a
+37  5
+a Ref. [60].
+Table 2
+Shortest oxygenhydrogen distances (in pm) for propane physisorption on the valley
+of the unsupported and supported vanadia surface.
+V2O5
+V2O5/TiO2
+This work
+Kmper et al. [60]
+This work
+O(1)AH
+273
+260
+293
+O(2)AH
+304
+252
+296
+O(3)AH
+308
+271
+338
+O
+V
+O
+CH
+V
+H
+2b.
+O
+V
+O
+H
+V
+CH
+3b.
+O
+V
+O
+H
+CH
+V
+5b.
+O
+V
+O
+H
+CH
+V
+6b.
+V
+O
+H
+V
+CH
+O
+7b.
+O
+V
+O
+V
+1.
+O
+V
+O
+CH2
+V
+H
+2a.
+O
+V
+O
+H
+V
+CH2
+3a.
+O
+V
+O
+H
+C
+H2
+V
+5a.
+O
+V
+O
+H
+CH2
+V
+6a.
+V
+O
+H
+V
+CH2
+O
+7a.
+O
+CH3
+V
+O
+V
+CH2
+4.
+via primary 
+C-H activation
+via secondary
+C-H activation
+C-C activation
+Fig. 3. Investigated pathways for propane chemisorption on the vanadia surface.
+130
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+Table 3
+Activation energies and reaction energies for the elementary steps considered in this study (see Figs. 3 and 7).
+Elementary step a
+V2O5
+V2O5/TiO2
+Eact (kJ/mol)
+DEr (kJ/mol)
+Eact (kJ/mol)
+DEr (kJ/mol)
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+1 ? 2a
+374
+388
+396
+190
+237
+283
+331
+324
+423
+117
+186
+230
+1 ? 2b
+352
+380
+352
+171
+227
+248
+279
+271
+99
+173
+1 ? 3a
+142
+146
+146
+122
+127
+139
+113
+139
+203
+54
+125
+105
+1 ? 3b
+120
+123
+130
+88
+92
+109
+86
+104
+198
+15
+92
+64
+1 ? 4
+332
+337
+392
+190
+182
+203
+288
+299
+421
+133
+182
+339
+3a ? 5a
+60
+87
+98
+42
+62
+63
+81
+43
+56
+53
+31
+12
+3b ? 5b
+68
+101
+112
+61
+85
+79
+83
+24
+61
+65
+17
+17
+3a ? 6a
+17
+13
+42
+126
+88
+39
+8
+32
+97
+131
+44
+54
+3b ? 6b
+11
+0
+27
+110
+76
+37
+8
+23
+106
+109
+20
+55
+3a ? 7a
+17
+14
+27
+143
+134
+110
+10
+18
+132
+176
+109
+66
+3b ? 7b
+16
+0
+16
+126
+120
+97
+4
+10
+134
+155
+88
+100
+3a ? 8
+30
+22
+58
+118
+61
+17
+7
+33
+88
+95
+12
+31
+3b ? 8
+34
+32
+66
+84
+26
+13
+7
+38
+96
+56
+21
+72
+6a ? 7a
+2
+25
+11
+17
+46
+71
+0
+46
+30
+45
+65
+12
+6b ? 7b
+1
+26
+20
+16
+44
+60
+0
+48
+68
+47
+68
+45
+6a ? 9a
+
+87
+172
+151
+
+191
+232
+58
+6b ? 9b
+
+91
+180
+165
+
+193
+226
+83
+7a ? 8
+151
+
+25
+
+171
+
+81
+
+7b ? 8
+137
+
+42
+
+152
+
+99
+
+7a ? 10a
+104
+183
+221
+6
+175
+216
+128
+262
+227
+71
+254
+176
+7b ? 10b
+84
+205
+217
+28
+153
+205
+123
+263
+235
+41
+254
+132
+10a ? 11a
+
+61
+167
+104
+
+102
+135
+11
+10b ? 11b
+
+73
+184
+105
+
+126
+123
+16
+a Propane physisorption energy is 28 kJ/mol on V2O5 and 21 kJ/mol on V2O5/TiO2.
+1
+TS
+3b
+TS
+6b
+TS
+4
+TS
+5b
+TS
+2b
+7b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7a
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+400
+ΔE (kJ/mol)
+1
+TS
+3b
+TS
+6b
+TS
+4
+TS
+5b
+TS
+2b
+7b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7a
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+400
+ΔE (kJ/mol)
+1
+TS
+3b
+TS
+5b,6b
+TS
+4
+TS
+7b
+TS
+2b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7a
+1
+TS
+3b
+6b
+TS
+4
+TS
+5b
+TS
+7b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7a
+1
+TS
+3b
+TS
+6b
+TS
+4
+TS
+5b
+TS
+2b
+7b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7a
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+ΔE (kJ/mol)
+1
+TS
+3b
+TS
+6b
+TS
+4
+TS
+5b
+TS
+2b
+TS
+6a
+3a
+TS
+5a
+TS
+2a
+TS
+7b
+7a
+V2O5
+V2O5/TiO2
+)
+1
+(
+O
+)
+1
+(
+O
+O(2)
+O(3)
+O(2)
+O(3)
+Fig. 4. Energy diagram for propane chemisorption on different oxygen sites of the unsupported and supported vanadia surface (see Fig. 3 for an illustration of the reaction
+intermediates).
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+131
+activation is considered (see Fig. 4). The first step of this mecha-
+nism is a direct hydrogen abstraction by a lattice oxygen (1 ? 3a,
+1 ? 3b in Fig. 3), leading to the formation of a physisorbed propyl
+radical and a surface hydroxyl group. In the second step of this
+mechanism, the propyl radical can either bind to a vanadium atom
+(3a ? 5a, 3b ? 5b in Fig. 3) or to a hydroxyl group (3a ? 6a,
+3b ? 6b in Fig. 3) formed in the previous step or to another lattice
+oxygen (3a ? 7a, 3b ? 7b in Fig. 3).
+In agreement with the order of the CAH bond dissociation ener-
+gies in propane [64], the activation energies for hydrogen abstrac-
+tion from the secondary CAH bond are lower than those for
+hydrogen abstraction from the primary CAH bond (see Table 3).
+The activation energies for hydrogen abstraction are almost equal
+on the different active sites of the unsupported catalyst, that is,
+O(1)  O(2)  O(3), while they increase in the order O(1) < O(2) <
+O(3) on the supported catalyst. The support clearly enhances the
+reactivity of O(1) by lowering the activation energy for this site,
+while the reactivity of O(3) is diminished when going from the
+unsupported to the supported catalyst. Therefore, all oxygen sites
+are almost equally preferable for hydrogen abstraction on the
+unsupported vanadia surface, while there is a clear preference for
+hydrogen abstraction to occur on the vanadyl oxygen in the case of
+the supported vanadia surface. Assuming that the initial hydrogen
+abstraction is potentially the rate-determining step of the oxidation
+mechanism, this conclusion about the reactivity of the oxygen sites
+of the unsupported catalyst inhydrogenabstractionjustifiesto some
+extent the different proposals that have been put forward in the lit-
+erature concerning the type of oxygen site that is active for catalytic
+oxidation on the crystalline V2O5 phase [13,18,19].
+Important geometric parameters of the transition states for the
+hydrogen abstraction step on different active sites are reported in
+Table 4, together with an energy decomposition analysis of the cor-
+responding activation energies. As presented in Fig. 5, two different
+schemes have been considered for the energy decomposition of the
+activation barrier for CAH bond activation [65,66]. The apparent
+activation energy, Eapp
+act , can be divided into the energy cost for
+the distortion of each reactant from the initial geometry to the
+transition state geometry (i.e. DEsurf
+dist for the surface, DEHC
+dist for the
+hydrocarbon) and the interaction energy between the distorted
+reactants at the transition state (i.e. DEint), that is:
+Eact  Eapp
+act  DEphys  DEHC
+dist  DEsurf
+dist  DEint  DEphys
+3
+Alternatively, the CAH bond activation barrier can be decomposed
+into the energy cost for the dissociation of the CAH bond in the
+gas phase (i.e. DEbond) and the energy gain from the subsequent
+adsorption of the two fragments at the transition state geometry
+(i.e. DEH
+ads, the adsorption energy of H on the surface, DErad
+ads, the
+adsorption energy of the propyl radical on the hydroxylated
+surface):
+Eact  Eapp
+act  DEphys  DEbond  DEH
+ads  DErad
+ads  DEphys
+4
+As can be expected, DEHC
+dist correlates well with the stretch of the
+CAH bond, DEsurf
+dist correlates well with the stretch of the OAV bond,
+while DEH
+ads correlates well with the HAO bond distance. As seen
+from Table 4 for the supported catalyst, the reduced reactivity of
+O(3) in hydrogen abstraction can be explained by the large energy
+cost for surface and hydrocarbon distortion, which is needed since
+this triply coordinated oxygen is pointing towards the bulk (see
+Fig. 1) and is hardly accessible by the hydrocarbon.
+In order to complete the chemisorption of propane on the van-
+adia surface, the propyl radical formed after the hydrogen abstrac-
+tion step should bind onto a surface site. According to the
+activation energies of Table 3, almost in all cases the propyl radical
+chemisorbs preferentially either on the hydroxyl group forming an
+adsorbed propanol intermediate (6a, 6b in Fig. 3) or on another lat-
+tice oxygen forming an adsorbed propoxide intermediate (7a, 7b in
+Fig. 3). The only exception is the case of the triply coordinated O(3)
+oxygen site of the supported monolayer vanadia catalyst, which is
+the most sterically hindered site of the vanadia surface. As ob-
+served from the reaction energies of Table 3 and illustrated in
+Fig. 4, chemisorption of the propyl radical in this case is unfavour-
+able, since the propyl radical is more stable in the physisorbed
+state (intermediate 3) compared to any chemisorbed state (inter-
+mediate 5 or 6 or 7) for this site. In addition, the following gas-
+phase reactions can compete with propane chemisorption on the
+O(3) site of the supported catalyst:
+CH3 C
+ HCH3 CH3CH2CH3 ! CH3CH2CH3 CH3 C
+ HCH3;Eact  54kJ=mol
+CH3CHC
+ H2 CH3CH2CH3 ! CH3CH2CH3 CH3 C
+ HCH3;Eact  53kJ=mol
+where Eact is the activation energy calculated for these reactions at
+300 K using the group additivity method of Sabbe et al. [67]. Finally,
+since no decomposition pathways such as a- or b-elimination are
+available after the formation of a CAV bond [16], the chemisorption
+of the propyl radical on a vanadium atom (3a ? 5a, 3b ? 5b) can be
+excluded from the reaction network of propane selective oxidation
+over vanadia.
+Table 4
+Bond distances (in pm) and energy decomposition analysis (in kJ/mol) of the transition states for CAH bond activation via direct hydrogen abstraction on unsupported and
+supported vanadia (see Fig. 5 for an explanation of both energy decomposition schemes).
+V2O5
+V2O5/TiO2
+CprimAH
+CsecAH
+CprimAH
+CsecAH
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+dCAH
+a
+151
+139
+146
+146
+138
+144
+141
+143
+142
+137
+139
+145
+dHAO
+b
+111
+122
+117
+114
+126
+122
+117
+120
+133
+122
+124
+137
+dOAV
+c
+171
+191
+201/224
+170
+191
+201/225
+169
+187
+208/230
+168
+186
+206/234
+Eact
+142
+146
+146
+120
+123
+130
+113
+139
+203
+86
+104
+198
+DEphys
+28
+28
+28
+28
+28
+28
+21
+21
+21
+21
+21
+21
+DEsurf
+dist
+38
+33
+44
+33
+32
+47
+31
+26
+83
+27
+23
+84
+DEHC
+dist
+134
+91
+116
+110
+77
+102
+95
+112
+112
+79
+86
+123
+DEint
+58
+6
+42
+51
+14
+47
+34
+20
+13
+41
+26
+30
+DEbond
+437
+437
+437
+420
+420
+420
+437
+437
+437
+420
+420
+420
+DEH
+ads
+234
+192
+205
+217
+170
+179
+231
+190
+100
+201
+168
+65
+DErad
+ads
+89
+127
+114
+111
+155
+139
+114
+129
+155
+154
+169
+178
+a The CAH bond distance for gas-phase propane is 110 pm.
+b The final average HAO bond distance after H abstraction is 101 pm.
+c For
+V2O5:
+dO(1)AV = 160 pm,
+dO(2)AV = 180 pm,
+dO(3)AV[010] = 189 pm,
+dO(3)AV[100] = 207 pm,
+for
+V2O5/TiO2:
+dO(1)AV = 160 pm,
+dO(2)AV = 177 pm,
+dO(3)AV = 196 pm,
+dO(3)ATi = 197 pm.
+132
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+Based on the chemisorption energies of Table 5, the adsorbed i-
+propoxide intermediate (7b) on the vanadyl oxygen (O(1)) is most
+stable for both catalysts, while the presence of the titania support
+strongly enhances propane chemisorption on this site. Results also
+show that the stability of the adsorbed i-propoxide intermediate
+(7b) decreases drastically with increasing the coordination number
+of the oxygen site. The most stable form of chemisorbed propane
+on both catalysts is shown in Fig. 6, while geometric parameters
+are reported in Table 6. Most differences in the geometric param-
+eters of chemisorbed propane between the unsupported and the
+supported catalyst can be attributed to the tilted geometry of the
+vanadyl groups of the supported vanadia surface (see VaVcOc value
+of Table 6), which above all else stabilizes the abstracted hydrogen
+to a greater extent than the unsupported vanadia surface (see OcH
+value of Table 6).
+3.3. Propanol formation
+Starting from physisorbed propane, propanol formation can be
+described as a sequence of the following steps (see Fig. 7): hydro-
+gen abstraction from propane (1 ? 3a, 1 ? 3b), chemisorption of
+the propyl radical on the hydroxyl group (3a ? 6a, 3b ? 6b) and
+desorption of propanol (6a ? 9a, 6b ? 9b). Depending on whether
+hydrogen is initially abstracted from the primary or secondary
+CAH bond of propane, n-propanol or i-propanol will be formed,
+respectively. All reaction paths considered in this study for pro-
+pane oxidation to propanol are tabulated in Table S6 of the Sup-
+porting information, while calculated activation and reaction
+energies for the considered elementary steps are reported in Ta-
+ble 3. Energy diagrams over the different active sites of the unsup-
+ported and supported catalyst are shown in Fig. 8a.
+As seen from Table 3, the desorption of propanol (6a ? 9a,
+6b ? 9b) is an endothermic process. However, it is less energy
+demanding than the removal of a lattice oxygen by itself (see Ta-
+ble 7), since propane adsorption and reaction on the oxygen site
+weakens the bonding of the lattice oxygen with the surface. A sim-
+ilar effect has been reported by Hermann et al. [68] for hydrogen-
+assisted oxygen desorption from the unsupported vanadia surface.
+Moreover, it is worth mentioning that the desorption energies on
+different oxygen sites do not need to follow the same order as
+the oxygen vacancy formation energies. For example, for the
+unsupported catalyst desorption energies increase in the order
+O(1) < O(3) < O(2), while oxygen vacancy formation energies in-
+crease with increasing coordination number of the oxygen site.
+As illustrated in Fig. 9, desorption energies, DEdes, can be calculated
+from the following thermodynamic cycle:
+DEdes  DEvac  DEchem  DEox;gas
+5
+in which DEvac is the oxygen vacancy formation energy, DEchem is
+the chemisorption energy of propane and DEox,gas is the reaction en-
+ergy of propane oxidation in the gas phase. Therefore, the desorp-
+tion
+energy
+does
+not
+depend
+only
+on
+the
+oxygen
+vacancy
+formation energy but is also influenced by the stability of the chem-
+isorbed intermediate (i.e. DEchem), which decreases with increasing
+the coordination number of the oxygen site (see Table 5).
+As depicted in Table S6 of the Supporting information for the
+unsupported catalyst, the propane oxidation to propanol on the
+O(2) and O(3) sites appears to be limited by the propanol desorp-
+tion energies (6a ? 9a, 6b ? 9b), while the propane oxidation to
+propanol on the O(1) site seems to be hampered by the initial H
+abstraction step (1 ? 3a, 1 ? 3b). On the other hand, in the case
+of the supported catalyst, propane oxidation to propanol appears
+to be hindered either by the high desorption energy (6a ? 9a,
+6b ? 9b) on the O(1) and O(2) sites or by the high initial activation
+energy (1 ? 3a, 1 ? 3b) on the O(3) site, exhibiting barriers of
+200 kJ/mol. Therefore, based on a comparison between the high-
+est energy barriers found for the reaction paths considered (see Ta-
+bles S6 and 3), the most reactive site of the unsupported catalyst is
+the O(1) vanadyl site, with i-propanol formation being more
+favourable than n-propanol formation on this site. Compared to
+the unsupported catalyst, the supported catalyst is significantly
+less active for propane oxidation to propanol, O(1) is only margin-
+ally more reactive than the other sites on the supported surface
+and no preference between the formation of n-propanol and
+i-propanol is observed.
+Overall, for both catalysts, the lowest energy pathways are ob-
+tained on the vanadyl oxygen sites (see Fig. 8a). The state of the
+catalytic surface after propane oxidation to propanol on O(1) is
+shown in Fig. 10. For the unsupported catalyst, propane oxidation
+Fig. 5. Thermodynamic cycle for the energy decomposition schemes of the calculated activation barrier for CAH bond activation.
+Table 5
+Chemisorption energies (in kJ/mol) of propane on unsupported and supported
+vanadia (see Fig. 3 for an illustration of the chemisorbed complexes).
+Chemisorbed complex a
+V2O5
+V2O5/TiO2
+O(1)
+O(2)
+O(3)
+O(1)
+O(2)
+O(3)
+5a
+136
+161
+174
+86
+73
+96
+5b
+121
+149
+160
+59
+54
+60
+6a
+32
+11
+72
+98
+60
+138
+6b
+50
+12
+44
+115
+51
+98
+7a
+49
+35
+1
+143
+5
+150
+7b
+66
+56
+16
+161
+17
+143
+a Propane physisorption energy is 28 kJ/mol on V2O5 and 21 kJ/mol on V2O5/
+TiO2.
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+133
+to propanol leads to the creation of two V4+ sites, one in the surface
+layer and one in the subsurface layer. On the other hand, for the
+supported catalyst, propane oxidation to propanol leads to the cre-
+ation of one surface V3+ site.
+3.4. Propanal/acetone formation
+Starting from physisorbed propane, two different pathways
+have been envisaged for propanal/acetone formation. The first path
+(i.e. path I) can be described as a sequence of the following steps
+(see Fig. 7): hydrogen abstraction from propane (1 ? 3a, 1 ? 3b),
+chemisorption of the propyl radical on a free lattice oxygen
+(3a ? 7a, 3b ? 7b), alpha hydrogen abstraction from the propox-
+ide intermediate (7a ? 10a, 7b ? 10b) and desorption of prop-
+anal/acetone (10a ? 11a, 10b ? 11b). The second path (i.e. path
+II) consists of a sequence of the following steps (see Fig. 7): hydro-
+gen abstraction from propane (1 ? 3a, 1 ? 3b), chemisorption of
+the propyl radical on the hydroxyl group (3a ? 6a, 3b ? 6b),
+hydrogen migration to free lattice oxygen (6a ? 7a, 6b ? 7b), al-
+pha
+hydrogen
+abstraction
+from
+the
+propoxide
+intermediate
+(7a ? 10a,
+7b ? 10b)
+and
+desorption
+of
+propanal/acetone
+(10a ? 11a, 10b ? 11b). Depending on whether hydrogen is
+[010]
+[100]
+V2O5
+V2O5/TiO2
+Fig. 6. Representative chemisorbed states of propane on the vanadyl sites of the unsupported and supported vanadia surface (blue: V, green: Ti, red: O, grey: C, white: H). (For
+interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)
+Table 6
+Geometric parameters (distances in pm, angles in ) for the most stable propane
+chemisorption complex on the vanadyl sites of the unsupported and supported
+vanadia surface (see Fig. 6).
+Chemisorbed complex
+Geometric parameters
+V2O5
+V2O5/TiO2
+CH
+b
+a
+a
+Vb
+Ob
+O
+V
+Va
+Oa
+H
+Vc
+Oc
+[100]
+CbCa
+152
+152
+ObCb
+145
+145
+ObVb
+173
+172
+OaVa
+176
+168
+OaH
+101
+114
+OcH
+174
+124
+OcVc
+163
+166
+VbObCb
+142
+139
+VaOaH
+114
+131
+OaHOc
+160
+173
+VaVcOc
+79
+52
+CbCaCaHb
+30
+29
+1.
+O
+O
+3a.
+O
+O
+H
+CH2
+6a.
+O
+CH2
+O
+H
+9a.
+O
+OH
+3b.
+O
+O
+H
+CH
+6b.
+O
+CH
+O
+H
+9b.
+O
+OH
+7a.
+O
+H
+CH2
+O
+7b.
+O
+H
+CH
+O
+8.
+O
+H
+H
+O
+11b.
+O
+O
+H
+H
+11a.
+O
+O
+H
+H
+10a.
+CH
+O
+O
+H
+H
+10b.
+C
+O
+O
+H
+H
+Fig. 7. Investigated pathways for propane oxidation over the vanadia surface.
+134
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+initially abstracted from the primary or secondary CAH bond of
+propane, propanal or acetone will be formed, respectively. Due to
+the relatively high hydrocarbon coverage (see computational de-
+tails and Fig. 6), the active site for the second hydrogen abstraction
+(7a ? 10a, 7b ? 10b) is chosen to be the hydroxyl group formed in
+the activation step. The reaction paths considered for propane oxi-
+dation to propanal/acetone are tabulated in Table S7 of the Sup-
+porting information, while calculated activation and reaction
+energies for the considered elementary steps are reported in Ta-
+ble 3. Energy diagrams over the different active sites of the unsup-
+ported and supported catalyst are shown in Fig. 8b.
+As depicted in Table S7 of the Supporting information, paths I
+and II are kinetically equivalent, since they share the same poten-
+tially rate-limiting step in all cases, and a separate discussion on
+each one of them is not needed. For the unsupported catalyst, pro-
+pane oxidation to propanal or acetone on the O(2) and O(3) sites
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+ΔE (kJ/mol)
+-150
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+400
+450
+ΔE (kJ/mol)
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+ΔE (kJ/mol)
+-100
+-50
+0
+50
+100
+150
+200
+250
+300
+350
+ΔE (kJ/mol)
+V2O5
+V2O5/TiO2
+O(1)
+O(2)
+O(3)
+1
+3b
+3a
+b
+9
+b
+6
+a
+6
+b
+3
+1
+S
+T
+S
+T
+S
+T
+S
+T
+a
+9
+3a
+b
+9
+b
+6
+a
+6
+9a
+TS
+TS
+TS
+TS
+1
+3b
+7a
+3a
+b
+1
+1
+b
+0
+1
+b
+7
+a
+0
+1
+b
+3
+1
+S
+T
+S
+T
+S
+T
+S
+T
+S
+T
+S
+T
+a
+1
+1
+7a
+3a
+b
+1
+1
+b
+0
+1
+b
+7
+a
+0
+1
+11a
+TS
+TS
+TS
+TS
+TS
+TS
+-50
+0
+50
+100
+150
+200
+250
+ΔE (kJ/mol)
+-50
+0
+50
+100
+150
+200
+250
+ΔE (kJ/mol)
+1
+3b
+8
+a
+3
+b
+3
+1
+S
+T
+S
+T
+S
+T
+S
+T
+8
+8
+a
+3
+8
+TS
+TS
+TS
+TS
+via primary
+C-H activation
+via secondary
+C-H activation
+via primary
+C-H activation
+via secondary
+C-H activation
+(a)
+(b)
+(c)
+Fig. 8. Energy diagram for propane oxidation to (a) propanol, (b) propanal/acetone, (c) propene (see Fig. 7 for an illustration of the reaction intermediates mentioned in the
+horizontal axis).
+Table 7
+Oxygen vacancy formation energies (in kJ/mol) on unsupported and supported
+vanadia.
+Reaction
+Site
+V2O5
+V2O5/TiO2
+O ?  + O2(g)
+O(1)
+197
+235
+O(2)
+325
+434
+O(3)
+365
+337
+Fig. 9. Thermodynamic cycle for propanol formation (R: C3H7, O: lattice oxygen, :
+oxygen vacancy).
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+135
+can be expected to be hindered by the second H abstraction step
+(7a ? 10a, 7b ? 10b), while the potentially rate-limiting step for
+propane oxidation to propanol on the O(1) site is the initial H
+abstraction step (1 ? 3a, 1 ? 3b). On the other hand, in the case
+of the supported catalyst, propane oxidation to propanal or acetone
+is hindered mostly by the second H abstraction step (7a ? 10a,
+7b ? 10b). Therefore, based on a comparison between the highest
+energy barriers found for the reaction paths considered (see Tables
+S7 and 3), the most reactive site of the unsupported catalyst is
+O(1), with acetone formation being more favourable than propanal
+formation on this site. O(1) is also the most reactive site of the sup-
+ported catalyst, exhibiting a comparable activity as the one of the
+unsupported catalyst, but without any preference between the for-
+mation of acetone and propanal.
+Overall, for both catalysts, the lowest energy pathways are ob-
+tained on the vanadyl oxygen sites (see Fig. 8b). The state of the
+catalytic surface after propane oxidation to propanal or acetone
+on O(1) is shown in Fig. 11. For the unsupported catalyst, propane
+oxidation to propanal or acetone leads to the creation of three sur-
+face V4+ sites and one subsurface V4+ site. On the other hand, for
+the supported catalyst, propane oxidation to propanal or acetone
+leads to the creation of two surface V4+ sites and one surface V3+
+site.
+3.5. Propene formation
+Starting from physisorbed propane, three different pathways
+have been envisaged for propene formation. The first path (i.e. path
+I) consists of two consecutive hydrogen abstraction steps (see
+Fig. 7): hydrogen abstraction from propane (1 ? 3a, 1 ? 3b) fol-
+lowed by hydrogen abstraction from the propyl radical (3a ? 8,
+3b ? 8). The second path (i.e. path II) can be described as a se-
+quence of the following steps (see Fig. 7): hydrogen abstraction
+from propane (1 ? 3a, 1 ? 3b), chemisorption of the propyl radical
+on a free lattice oxygen (3a ? 7a, 3b ? 7b) and beta hydrogen
+abstraction from the propoxide intermediate (7a ? 8, 7b ? 8).
+The third path (i.e. path III) consists of the following steps (see
+Fig. 7): hydrogen abstraction from propane (1 ? 3a, 1 ? 3b),
+chemisorption
+of
+the
+propyl
+radical
+on
+a
+hydroxyl
+group
+(3a ? 6a, 3b ? 6b), hydrogen migration to a free lattice oxygen
+(6a ? 7a, 6b ? 7b) and beta hydrogen abstraction from the prop-
+oxide intermediate (7a ? 8, 7b ? 8). Like in the case of propanal/
+acetone formation, the hydroxyl group formed in the activation
+step is considered to be the active site for the second hydrogen
+abstraction. The reaction paths considered for propane dehydroge-
+nation are tabulated in Table S8 of the Supporting informa-
+tion, while calculated activation and reaction energies for the
+[010]
+[100]
+[001]
+V2O5
+V2O5/TiO2
+V5+
+V4+
+O
+V3+
+V5+
+Ti4+
+O
+Fig. 10. Partially reduced vanadia surfaces after propanol formation on O(1).
+Formal oxidation states obtained using Bader analysis on the spin density
+calculated with PBE+U (Ueff = 6.6 eV).
+[010]
+[100]
+[001]
+V2O5
+V2O5/TiO2
+V5+
+V4+
+O
+V4+
+V5+
+Ti4+
+O
+H
+H
+V3+
+Fig. 11. Partially reduced vanadia surfaces after propanal/acetone formation on
+O(1). Formal oxidation states obtained using Bader analysis on the spin density
+calculated with PBE+U (Ueff = 6.6 eV).
+[010]
+[100]
+[001]
+V2O5
+V2O5/TiO2
+V5+
+V4+
+O
+V4+
+V5+
+Ti4+
+O
+H
+H
+Fig. 12. Partially reduced vanadia surfaces after propene formation on O(1). Formal
+oxidation states obtained using Bader analysis on the spin density calculated with
+PBE+U (Ueff = 6.6 eV).
+Fig. 13. Parallel-consecutive reaction scheme for propane total oxidation.
+136
+K. Alexopoulos et al. / Journal of Catalysis 289 (2012) 127139
+considered elementary steps are reported in Table 3. Energy
+diagrams over the different active sites of the unsupported and
+supported catalyst are shown in Fig. 8c.
+As depicted in Table S8 of the Supporting information, paths II
+and III are kinetically equivalent, since they share the same poten-
+tially rate-limiting step (i.e. beta H abstraction from the propoxide
+intermediate: 7a ? 8, 7b ? 8) in all cases, and a separate discus-
+sion on each one of them is not needed. On the other hand, the
+potentially rate-limiting step of path I is in all cases the initial H
+abstraction (1 ? 3a, 1 ? 3b). Therefore, based on a comparison be-
+tween the highest energy barriers found for the reaction paths con-
+sidered (see Tables S8 and 3), propene formation via an adsorbed
+propoxide intermediate (path II or III) is less favourable than pro-
+pene formation directly from the propyl radical (path I), that is,
+without chemisorption of the propyl radical (3a ? 6a, 3a ? 7a,
+3b ? 6b, 3b ? 7b). In addition, propene formation via an i-propyl
+radical (3b) is more favourable than propene formation via a
+n-propyl radical (3a).
+Overall, for both catalysts, the lowest energy pathways are ob-
+tained on the vanadyl oxygen sites (see Fig. 8c). The state of the
+catalytic surface after propane dehydrogenation on O(1) is shown
+in Fig. 12. For both catalysts, propane dehydrogenation leads to
+the creation of two surface V4+ sites. Moreover, since the poten-
+tially rate-limiting step for propene formation is the initial H
+abstraction (1 ? 3b), the vanadyl site of the supported catalyst
+can be expected to be more active in propane dehydrogenation
+than the vanadyl site of the unsupported catalyst. However, unlike
+the supported catalyst where propene formation is clearly fa-
+voured on the vanadyl site, in the case of the unsupported catalyst,
+the bridging oxygen (in particular the O(2) site) is equally active in
+propane dehydrogenation as the vanadyl oxygen. Taking also into
+account that the bridging oxygen sites are practically not active to-
+wards oxygenation reactions (1 ? 9a, 1 ? 9b, 1 ? 11a, 1 ? 11b),
+this means that these oxygen sites are more selective towards pro-
+pane dehydrogenation.
+3.6. Catalytic activity and selectivity
+Overall, the O(1) vanadyl site is the most active site on the
+unsupported and supported vanadia surface. To find out whether
+a dominant path exists on the investigated catalysts, the compet-
+ing reaction pathways on the vanadyl oxygen site are compared.
+Based on a comparison between the highest energy barriers of
+the most favourable reaction pathways (Tables S6S8 of the Sup-
+porting information), no dominant path can be identified for pro-
+pane oxidation on the unsupported catalyst. Propane oxidation to
+i-propanol or acetone and propane dehydrogenation are equally
+favourable on the unsupported catalyst, since they share the same
+potentially rate-limiting step, that is, the initial H abstraction
+(1 ? 3b), with an energy barrier of 120 kJ/mol. On the other hand,
+over the supported catalyst, propane dehydrogenation can be
+expected to be the dominant reaction path. As mentioned in the
+previous section, the potentially rate-limiting step of this path is
+the initial H abstraction (1 ? 3b), with an energy barrier of 86 kJ/
+mol. Therefore, propene can be expected to be the only product
+of propane selective oxidation over the supported catalyst, while
+both propene and oxygenates (i.e. i-propanol and acetone) can be
+expected as products of propane selective oxidation over the
+unsupported catalyst, which is in agreement with the experimen-
+tal observations on these catalysts [69,70]. In addition, assuming
+that the total oxidation of propane occurs via the parallel-consec-
+utive scheme of Fig. 13 [11,12], supporting a vanadia monolayer
+on titania will strongly favour the consecutive pathway via
+propene formation over the direct combustion of propane.
+Nevertheless, the two catalysts share some common features. In
+both cases, the potentially rate-limiting step of propane oxidation
+is the secondary CAH bond activation of propane via a direct H
+abstraction (1 ? 3b), which is in agreement with experiment
+[2,7173]. As seen from Fig. S4 of the Supporting information for
+both catalysts, this rate-determining step is actually a spin-cross-
+ing process with biradical transition states (see Fig. 14), which
+O3
+O3
+O3
+O1
+O2
+[100]
+[010]
+[001]
+O3
+O1
+O2
+O1
+O2
+O3
+O3
+O3
+[001]
+[010]
+[100]
+O1
+O2
+O3
+O3
+V2O5
+V2O5/TiO2
+Fig. 14. Side, top and local view of the transition states for the secondary CAH bond
+activation on the vanadyl site of the unsupported (V2O5) and supported (V2O5/TiO2)
+catalyst. PBE+U (Ueff = 6.6 eV) calculated spin densities (contour value of isosurface:
+0.1 e/Å3) are shown in the side and the top view (blue: V, green: Ti, red: O, grey: C,
+white: H, yellow: isosurface). Distances (in pm) and angles (in degrees) are shown
+in the local view. (For interpretation of the references to colour in this figure legend,
+the reader is referred to the web version of this article.)
+Table 8
+Theoretical and experimental activation energies for propane oxidation over vanadia-
+based catalysts.
+Method
+Catalyst
+Eact (kJ/mol)
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the mechanisms of C-H bond activation and catalyst regeneration in oxidative dehydrogenation of alkanes for redox-active and redox-inactive metal oxide catalysts, explaining the role of traditional oxidants and CO2. Include a discussion on the effectiveness of different catalysts (such as V2O5, VOx/SiO2, CeO2, and transition metal clusters) in activating CO2 for oxidative dehydrogenation of propane, considering the proposed mechanisms and energy barriers for CO2 dissociation.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

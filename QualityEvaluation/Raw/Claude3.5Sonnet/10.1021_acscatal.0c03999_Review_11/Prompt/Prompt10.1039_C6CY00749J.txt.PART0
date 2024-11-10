@@ -1,0 +1,669 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+This is an Accepted Manuscript, which has been through the 
+Royal Society of Chemistry peer review process and has been 
+accepted for publication.
+Accepted Manuscripts are published online shortly after 
+acceptance, before technical editing, formatting and proof reading. 
+Using this free service, authors can make their results available 
+to the community, in citable form, before we publish the edited 
+article. We will replace this Accepted Manuscript with the edited 
+and formatted Advance Article as soon as it is available.
+You can find more information about Accepted Manuscripts in the 
+Information for Authors.
+Please note that technical editing may introduce minor changes 
+to the text and/or graphics, which may alter content. The journals 
+standard Terms & Conditions and the Ethical guidelines still 
+apply. In no event shall the Royal Society of Chemistry be held 
+responsible for any errors or omissions in this Accepted Manuscript 
+or any consequences arising from the use of any information it 
+contains. 
+Accepted Manuscript
+ 
+Catalysis 
+ 
+Science & 
+T
+echnology
+www.rsc.org/catalysis
+View Article Online
+View Journal
+This article can be cited before page numbers have been issued, to do this please use:  V. Fung, F. Tao
+and D. Jiang, Catal. Sci. Technol., 2016, DOI: 10.1039/C6CY00749J.
+ 
+1 
+Understanding oxidative dehydrogenation of ethane on Co3O4 nanorods from 
+density functional theory 
+Victor Fung,1 Franklin (Feng) Tao,2 De-en Jiang1,* 
+1Department of Chemistry, University of California, Riverside, CA, USA 92521 
+2Department of Chemical and Petroleum Engineering and Department of Chemistry, University of Kansas, 
+Lawrence, KS, USA 66045 
+*E-mail: de-en.jiang@ucr.edu. Tel.: +1-951-827-4430 
+Abstract 
+Co3O4 is a metal oxide catalyst with weak, tunable M-O bonds promising for catalysis. 
+Here density functional theory (DFT) is used to study the oxidative dehydrogenation (ODH) of 
+ethane on Co3O4 nanorods based on the preferred surface orientation (111) from the 
+experimental electron-microcopy image. The pathway and energetics of the full catalytic cycle 
+including the first and second C-H bond cleavages, hydroxyl clustering, water formation, and 
+oxygen-site regeneration are determined. We find that both lattice O and Co may participate as 
+active sites in the dehydrogenation, with the lattice-O pathway being favored. We identify the 
+best ethane ODH pathway based on the overall energy profiles of several routes. We identify that 
+water formation from the lattice oxygen has the highest energy barrier and is likely a rate-
+determining step. This work of the complete catalytic cycle of ethane ODH will allow further 
+study into tuning the surface chemistry of Co3O4 nanorods for high selectivity of alkane ODH 
+reactions. 
+ 
+Page 1 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+2 
+1. Introduction 
+The conversion of alkanes such as ethane and propane into olefins is an industrially and 
+economically important process and produces a significant portion of highly desired feedstock 
+used in the chemical industry. Due to the high expense and energy cost of steam cracking to 
+produce these olefins, there has been intense effort in recent years to search for more selective 
+and energetically efficient methods.1 Catalytic oxidative dehydrogenation (ODH) has been 
+proposed as an attractive alternative with the advantage of being more thermodynamically 
+favored and with the potential to have greater selectivity at lower temperatures. These qualities 
+of the ODH pathway would significantly reduce the costs of olefin production to suit the quickly 
+increasing global demand.2 
+A wide variety of catalytic materials have been studied for the ODH reaction: earth-
+abundant metal oxides3-18 appear as a cost effective and more viable alternative to noble metal 
+catalysts. In particular, spinel cobalt oxide (Co3O4) is a particularly promising candidate which 
+has been found to be very active in many oxidation reactions including those of CO,19 CH4,20 and 
+other hydrocarbons.21 A major factor in the catalytic activity of Co3O4 is the very weak M-O 
+bond among other transition metal oxides22 and the presence of readily generated oxygen 
+vacancies at the surface.20, 23 Experimental and theoretical studies have identified a number of 
+stable surfaces on the Co3O4 nanoparticles and nanorods, including the (100), (110) and (111) 
+surfaces.19, 21, 24-32  
+Of these surfaces, the high activity of the (110) facet in these studies for reactions such as 
+CO oxidation has been widely reported; however, the (111) surface has been found to be readily 
+formed26, 29 and more thermodynamically stable28 than the (110) surface. Therefore, the 
+morphology of Co3O4 nanocatalysts may greatly impact their catalytic activity due to the 
+Page 2 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+3 
+difference in preferred surface orientations and it would be very interesting to understand the 
+change in the reaction mechanism on those different surfaces. DFT has been employed in many 
+previous studies on the surface properties and catalytic activity of Co3O4 that is thought to 
+proceed via the Mars-van Krevelen mechanism involving the lattice oxygen on the surface.33-37 
+These active oxygen species react and desorb as products to form vacancies which must then be 
+regenerated from gaseous molecular oxygen in order to maintain the catalytic activity of the 
+surface.  
+Several recent works have shown that modifying the pure Co3O4 surface can improve its 
+performance for alkane activation. These methods include doping transition metals such as Ni to 
+facilitate the oxidation of alkanes20 and depositing nonmetallic elements such as Si and Ge on the 
+surface of Co3O4 nanorods to tune the selectivity of the catalyst towards the ethane ODH 
+product.38 However, the underlying mechanism of how the modification of the Co3O4 surface by 
+other elements changes the activity and selectivity of the nanocatalyst for ethane ODH remains 
+unclear.  
+As a first step toward understanding the roles of morphology control and surface 
+modification in Co3O4 nanocatalysts for ethane ODH, herein we will present the detailed analysis 
+of the full catalytic cycle from first principles based on the experimental determination of the 
+preferred surface orientation of Co3O4 nanorods. We hope to elucidate the nature of the two C-H 
+activations to produce ethylene, the formation of water, and the regeneration of the oxygen sites 
+to complete the catalytic cycle. These insights will provide a better understanding of the role of 
+the different active surface atoms on a specific surface orientation in determining selectivity and 
+yield of the ethane ODH pathway that may allow one to design better Co3O4 nanocatalysts.  
+ 
+Page 3 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+4 
+2. Experimental and Computational Methods 
+Co3O4 nanorods were synthesized via a previously reported method.23, 39 Briefly, cobalt 
+acetate tetrahydrate was dissolved in ethylene glycol and heated to 160 oC under N2; then reacted 
+with the slowly added NaHCO3 aqueous solution under vigorous stirring. After centrifugation a 
+purple precipitate was obtained, which was then dried at 50 oC under vacuum and calcined at 350 
+oC in air to yield the Co3O4 nanorods. Their crystalline form was checked with powder X-ray 
+diffraction. Then the nanorods were imaged with the high angle annular dark field (HAADF) 
+scanning transmission electron microscopy (STEM) on a JEOL JEM-ARM200F Transmission 
+Electron Microscope at 200 kV. Based on the surface orientation of the Co3O4 nanorods from the 
+STEM images, we then employed density functional theory (DFT) to examine the ethane ODH 
+pathways on it.  
+All DFT calculations were performed using the Vienna ab initio Simulation Package 
+(VASP).40, 41 The on-site Coulomb interaction was included using the DFT+U method by 
+Dudarev, et al.42 in VASP using a Hubbard parameter of U = 2 eV for Co, which yielded band 
+gaps in good agreement with experimental results and was used to good effect in previous DFT 
+studies of Co3O4 surface chemistry and catalysis.19, 20 The Perdew-Burke-Erzerhof (PBE)43 form 
+of the generalized-gradient approximation (GGA) was chosen for electron exchange and 
+correlation. The electron-core interaction was described using the projector-augmented wave 
+method (PAW).44, 45 A kinetic energy cutoff of 450 eV was used for the planewaves, and the 
+Brillouin zone was sampled using a 3×3×1 Monkhorst-Pack scheme.46 All calculations in this 
+work were performed with spin polarization. The slab was created containing 11 layers with the 
+bottom 9 layers frozen in their bulk positions. The optimized lattice constant was found to be 
+8.14 Å, in very good agreement with the experimental value of 8.09 Å.47 
+Page 4 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+5 
+The adsorption energies were defined by Eads = Esurface+adsorbate  (Esurface + Eadsorbate), where 
+the energy of the adsorbate Eadsorbate was computed by placing an adsorbate molecule in a cubic 
+cell of 10 Å in side length (in other words, the molecule and its nearest periodic images are 
+separated by about 10-Å vacuum). Transition states were found via a two-step approach, using 
+both the nudged elastic band method (NEB) and the dimer method48 implemented in the VASP-
+VTST package by Henkelman et al.49 Initial and final states of the reactions were first created 
+and optimized, and were used to generate 8-10 equally spaced images through a linear 
+interpolation. These images were then minimized under the NEB constraints to forces of 0.4-
+0.2 eV/Å in order to generate an approximate minimum reaction energy path. The highest two 
+energy images along the path were then used to generate a starting geometry for the dimer 
+method, until reaching an energy convergence of 0.05 eV/Å. Selected transition states were 
+confirmed with vibrational frequency analysis to verify the effectiveness of this method and the 
+convergence criterion. 
+3. Results and discussion 
+3.1 Surface structure of Co3O4 nanorods 
+Recent work has shown that Si and Ge modified Co3O4 nanorods improved the selectivity 
+and yield of ethane ODH, but the molecular-level mechanism is still unclear.38 Here we first 
+direct our attention to modeling the mechanism of ethane ODH on the experimentally produced 
+Co3O4 nanorods, so we can examine the role of the surface modification in the future. The 
+synthesized Co3O4 nanorods were imaged via the scanning tunneling electron microscopy 
+(STEM) (Fig. 1 A-B). The atomic-resolution HAADF-STEM image (Fig. 1B) suggests that the 
+Co3O4(111) surface is preferentially exposed in this sample of Co3O4 nanorods. This information 
+about the surface orientation provides a desired foundation for our DFT modeling. The 
+Page 5 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+6 
+Co3O4(111) surface as well with the Co3O4 (110) surface are both catalytically active and stable 
+surfaces confirmed from both experimental and theoretical studies in previous literature.26, 28, 29 
+Based on the STEM images, we chose the (111) surface as a model active surface in this work.  
+ 
+Fig. 1 (A) STEM image of a large area of a Co3O4 nanorod sample. (B) HAADF-STEM image of a small 
+area of the Co3O4 nanorod sample, marked with lattice fringes. (C) The surface model used in this DFT 
+study for the same Co3O4 (111) surface: only the first three layers are shown for clarity. The two 
+inequivalent surface lattice oxygens are labeled as OA and OB: OA is coordinated with three subsurface 
+Co3+ atoms (in light blue); OB  is coordinated with two subsurface Co3+ atoms and one surface Co2+ atom. 
+ 
+The Co3O4(111) surface can be terminated into six inequivalent layers; we chose the one 
+with the lowest surface energy based on previous DFT calculations.28 This surface model 
+terminates to yield tetrahedral Co2+ atoms and triply coordinated oxygen atoms on the surface 
+(Fig. 1C). The surface lattice oxygens can be categorized into two types: OA, which are triply 
+coordinated to the subsurface cobalt (Co3+); OB, which are doubly coordinate to the subsurface 
+Co but also singly coordinated to the surface Co (Fig. 1C). After relaxation of this Co3O4 (111) 
+surface termination, the surface Co-OB bonds shorten from 1.952 to 1.788 Å. The OA-Co bonds 
+shorten from 1.932 to 1.885 Å. In predicting the reactivity of the two inequivalent lattice O 
+Page 6 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+7 
+atoms, we find that OA has a lower vacancy formation energy of 2.488 eV and a higher average 
+Bader charge of -0.767 e. Meanwhile, the OB has a vacancy formation energy of 2.946 eV and 
+an average Bader charge of -0.860 e. The average Bader charge of the surface Co was found to 
+be 1.298 e. The lower OA vacancy formation energy suggests that the OA oxygen is more active 
+and more likely to react to result in a vacancy.  
+Both OA and OB vacancies lead to minimal surface rearrangement, with the OA vacancy 
+leading to the least change in surface bond lengths and the OB vacancy leading to a shortening of 
+the remaining two Co- OB bonds from 1.788 to 1.769 Å. These results show that the Co3O4(111) 
+surface can readily generate and refill oxygen vacancies without loss of surface structure, 
+suggesting a robustness and stability consistent with experimental and theoretical findings,26, 28, 50 
+and making it a good candidate as the model for the catalytic surface.  
+A less negative Bader charge of OA than OB indicates the increased ability of the OA 
+oxygen to further gain electrons, so OA is more electrophilic than OB and thus is the more 
+favored active site for the homolytic fission of the C-H bond in the ethane ODH reaction. The 
+more negative Bader charge of OB suggests that it is more nucleophilic in character and more 
+suited in the heterolytic fission of the C-H bond as part of the metal-oxygen redox pair, where 
+the metal cation Co2+ participates as the electrophile. Both the homolytic and heterolytic C-H 
+cleavage will be examined next. 
+3.2 First C-H activation of ethane 
+In alkane oxidation reactions over metal oxides, both the full oxidation and ODH 
+reactions proceed first via C-H activation onto the surface. Thus, we first study the activation of 
+the ethane C-H bond by either a surface oxygen or cobalt. They can be characterized as either 
+Page 7 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+8 
+homolytic or heterolytic mechanisms, via the lattice oxygen or lattice cobalt, respectively.21, 51-53 
+In the homolytic case, the oxygen atom abstracts a hydrogen from the alkane, forming an alkyl 
+radical which then reacts with a nearby lattice oxygen. In the heterolytic case, the reaction occurs 
+over the Co-O acid-base site pair with the lattice Co activating the C-H bond via σ-bond 
+metathesis, leading to Co-C2H5 and O-H.    
+ 
+Fig. 2 Transition and final states for the first C-H activation on Co3O4(111). Reactions 1A and 1B are 
+Co2+ activated heterolytic reactions. Reactions 1C-E are O activated homolytic reactions. 
+ 
+We examined both the heterolytic and homolytic pathways on Co3O4(111) surface. Based 
+on the configuration of the surface cobalt and oxygen, there should be five possible final states. 
+Starting with a weakly physisorbed C2H6 on the surface, we found the minimum energy paths 
+Page 8 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+9 
+and transition states leading to the five final states. These transition and final states are illustrated 
+in Fig. 2, while the energetic profiles are shown in Fig. 3. For the heterolytic activation (reactions 
+1A-B), the transition states were found to form a Co-C2H5-H-O complex. The barrier for the 
+pathway via OB is 1.02 eV, lower than via OA (1.11 eV), likely due to the fact that OA is slightly 
+farther from Co than OB, which results in a less stable transition state complex. For homolytic 
+activation (reactions 1C-E), the transition states show the formation of the CH3CH2--H--O 
+complex where the C-H-O angle is almost 180 degrees, while in the final states the ethyl group 
+attaches to another nearby lattice O. Reaction 1C is activated by the OA oxygen with a barrier of 
+0.62 eV, whereas reaction 1D and 1E are both activated by the OB oxygen with a similar barrier 
+of 0.98 to 1.03 eV. The stronger oxidizing power of OA than OB, as indicated by the charge 
+analysis, corroborates the lower activation energy of the first C-H activation on OA.  
+ 
+Fig. 3 Energy profiles of the first C-H activation. Reactions 1A-1B are Co-activated, whereas reactions 
+1C-1E are O-activated.   
+ 
+Page 9 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+10
+The energy barriers (Ea) and reaction energies (E) of both heterolytic and homolytic 
+pathways of 1A-E are compared in Table 1, together with those of propane from another study.21 
+We find that our calculated barriers are in very good agreement with the propane barriers for the 
+same surface. It is apparent that the homolytic pathway is both the thermodynamically and 
+kinetically favored reaction path due to both the overall lower barriers as well as the more 
+negative reaction energies. The OA-catalyzed pathway has the lowest barrier by far with a value 
+of 0.62 eV. These results are also in good agreement with the propane DFT results and consistent 
+with the higher bond dissociation energy of the ethane C-H bond.  
+Table 1 Activation energy Ea and energy of reaction E of the first C-H activation of ethane. Propane Ea 
+and E in a similar study on the same Co3O4 (111) surface listed for comparison. 
+No. 
+Reaction Pathway 
+Ethane Ea  (eV)  Ethane E (eV)  
+Propane Ea 
+(eV)21 
+Propane E 
+(eV)21  
+1A 
+C2H6(g)  C2H5-Co2+ + OB-H 
+1.02 
+-0.47 
+0.95 
+-0.71 
+1B 
+C2H6(g)  C2H5-Co2+ + OA-H 
+1.11 
+-0.33 
+N/A 
+N/A 
+1C 
+C2H6(g)  C2H5-OB + OA-H 
+0.62 
+-1.07 
+0.41 
+-1.41 
+1D 
+C2H6(g)  C2H5-OB + OB-H 
+1.03 
+-0.75 
+0.60 
+-0.80 
+1E 
+C2H6(g)  C2H5-OA + OB-H 
+0.98 
+-1.27 
+N/A 
+N/A 
+ 
+3.3 Second C-H activation and C2H4 formation 
+We further examined the second C-H activation of ethane following the first C-H 
+activation. Reactions 1A and 1C were selected as the best starting points for the second 
+activation for the heterolytic and homolytic cases, respectively. The subsequent second C-H 
+pathways (transition states and final states) are illustrated in Fig. 4, while the energy profiles are 
+shown in Fig. 5. In the heterolytic case (following 1A), the second C-H bond is activated via OB 
+on the CH3 group, or the β-hydrogen elimination, (2A); via OB on the CH2 group, or the α-
+Page 10 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+11
+hydrogen elimination, (2B); or via OA by the β-hydrogen elimination (2C). We find that the 2C 
+path has the lowest barrier of only 0.39 eV (Fig. 5). In the homolytic case (following 1C), the 
+second C-H bond is activated via either OA by the β-hydrogen elimination (2D), OB by the α-
+hydrogen elimination, (2E), or the OA-H in the previous step by the α-hydrogen elimination (2F). 
+We found that 2D and 2E pathways yield very similar barriers of 1.26 eV (Fig. 5). The 2F 
+pathway has a much higher barrier of 2.46 eV, because the presence of a preexisting adsorbed 
+hydrogen on the lattice O severely deactivates it from further C-H activation.  
+ 
+Fig. 4 Initial, intermediate and final states for the second C-H activation of ethane. Reactions 2A-2C 
+continue from the previous heterolytic reaction 1A. Reactions 2D-2F continue from the previous 
+homolytic reaction 1C. 
+Page 11 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+12
+ 
+The barriers and reaction energies of the second C-H activation are compared in Table 2. 
+Most notably, the second C-H activation following the heterolytic pathway (1A then 2C) appears 
+to have lower barriers than following the homolytic pathway (1C then 2D or 2E). This result is 
+also consistent with the DFT study of propane on the Co3O4 (110) surface.21 Reactions via β-
+hydrogen elimination, 2A, 2C, and 2D all lead to ethylene formation. In the case of 2A and 2C, 
+we found that desorption of C2H4 is uphill by about 1.0 eV, while in the case of 2D, C2H4 was 
+found to spontaneously go to the gas phase. Reactions 2B, 2E, and 2F via α-hydrogen 
+elimination generate CH3CH which were found to bind very strongly to the surface Co or O with 
+a strength greater than 2 eV. We expect that the CH3CH intermediate is unlikely to result in 
+ethylene production and more likely to be part of the further oxidation pathways.  
+ 
+Fig. 5 Energy profiles of the second C-H activation. Reactions 2A-2C follow the 1A path. Reactions 2D-
+2E follow the 1C path.  
+ 
+Page 12 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+13
+Table 2 Activation energy (Ea) and reaction energy (E) of the second C-H activation of ethane, starting 
+from the most favored Co-activated path (1A) and O-activated path (1C) from the first C-H activation.  
+No. 
+Reaction Pathway 
+Ea (eV) 
+E (eV) 
+2A C2H5-Co2+ + OB-H  CH2CH2-Co2+ + 2OB-H 
+0.87 
+-1.08 
+2B C2H5-Co2+ + OB-H  CH3CH-Co2+ + 2OB-H 
+1.76 
+0.50 
+2C C2H5-Co2+ + OB-H   CH2CH2-Co2+ + OA-H + OB-H 
+0.39 
+-1.02 
+2D C2H5-OB + OA-H   CH2CH2-OB + 2OA-H 
+1.26 
+0.07 
+2E C2H5-OB + OA-H   CH3CH-OB + OA-H + OB-H  
+1.26 
+0.33 
+2F  C2H5-OB + OA-H   CH3CH-OB + H-OA-H 
+2.47 
+2.34 
+ 
+3.4 Hydroxyl clustering, water formation, and water desorption 
+Following the second C-H activation, ethylene will desorb in the ODH reaction, leaving 
+two lattice O sites with adsorbed hydrogen, that is, formation of hydroxyls. Previous 
+experimental isotopic studies have thoroughly shown that the oxidation and ODH reactions result 
+in the formation of water containing the lattice oxygen.20 Therefore, these surface hydroxyls will 
+come closer (clustering), then form water, and desorb from the surface, in order for the catalytic 
+cycle to proceed. This simplistic path for hydroxyl clustering is via diffusion of the hydrogen 
+atom from a surface hydroxyl to a neighboring lattice oxygen. With two hydroxyl groups nearby, 
+then one hydrogen of a hydroxyl can combine with the neighboring hydroxyl to form water. The 
+barrier for a representative H diffusion from OA to OB on the Co3O4(111) surface was found to be 
+1.35 eV (Fig. 6A). Next, we examined the water formation from two neighboring hydroxyl 
+groups (Fig. 6B) and the barrier increases to 2.02 eV.  
+Page 13 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+14
+ 
+Fig. 6 Initial, transition, and final states of hydrogen diffusion across the Co3O4 (111) surface: A, 
+diffusion of hydrogen from OA to OB; B, diffusion of hydrogen from OB to a OA-H hydroxyl group. 
+ 
+After the H-O-H species is formed on the surface (Fig. 6B), it can then desorb to the gas 
+phase. This desorption energy was found to be 0.581 eV, much lower than the lattice-oxygen 
+vacancy formation energy (2.488 eV for the OA atom). Indeed, the addition of two hydrogen 
+atoms on the lattice oxygen destabilizes the system and lengthening the Co-O bonds. Oxygen 
+vacancies are then formed following the desorption of water. 
+3.5 Regeneration of lattice oxygen sites 
+The oxygen vacancies left from water desorption can react with gas phase O2 to 
+regenerate the lattice oxygen sites. A very likely scenario would be that one gaseous O2 molecule 
+refills at a double oxygen vacancy site. We found that O2 first binds vertically on one of the 
+vacancies and then one oxygen atom of O2 then dissociates to the neighboring vacancy site. We 
+calculated the barrier of this process and found that it occurs via a barrier of only 0.51 eV and a 
+reaction energy of -4.24 eV (Fig. 7A). These double vacancies may be generated through the 
+process of continued water formation/desorption reactions on the surface during the catalytic 
+Page 14 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+15
+cycle, or through vacancy diffusion across the surface. The diffusion of these oxygen vacancies 
+were also studied and found to have a barrier of 1.63 eV for a diffusion from a vacancy at OA to 
+OB (Fig. 7B). This double-vacancy regeneration model with very low barriers is also consistent 
+with previous theoretical works on the Co3O4(110) surface.19, 21 Thus, we can conclude that 
+regeneration of the lattice oxygen sites is highly facile in oxygen rich environments and unlikely 
+to be a rate-determining step in the overall catalytic cycle.  
+ 
+Fig. 7 (A) Regeneration of lattice oxygen on Co3O4(111) via reaction of double oxygen vacancies with  
+gaseous molecular oxygen. (B) Vacancy diffusion on the on Co3O4(111) surface from OB site to OA site.  
+ 
+3.6 Overall energy profile 
+Fig. 8 shows the overall energy profile including the first and second C-H activations, 
+hydroxyl clustering via hydrogen diffusion, and water formation and desorption. We select the 
+1C-2D reaction path as the most representative ODH pathway through consideration of both 
+activation energies, reaction energies, and product desorption. We omit the vacancy regeneration 
+portion of the cycle for simplicity as well as the fact that its barriers are quite low in comparison. 
+Fig. 8 shows that the water formation step is the least energetically favored step and a possible 
+rate-determining step in the overall catalytic cycle. Alternative to the 1C-2D path, we also 
+Page 15 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+16
+considered a competitive path via the 1A-2C channel where the first C-H activation is via Co2+ 
+and the second C-H activation is via OA. We found that again the water formation is the rate-
+determining step (RDS) in this mechanism.  
+ 
+Fig. 8 The overall energy profile of ODH of ethane to ethylene on Co3O4(111). The C-H cleavages follow 
+the 1C-2D path in red and the 1A-2C path in black (Fig. 2 and Fig. 4), while hydrogen diffusion and 
+water formation energies are from Fig. 6. 
+ 
+Page 16 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+17
+A schematic drawing of the complete catalytic cycle for the homolytic path is shown in 
+Fig. 9, composed of the first and second C-H activations, hydrogen diffusion, water formation, 
+and lattice-oxygen regeneration. It starts with C2H6 adsorption, followed by the first C-H 
+cleavage on lattice OA. Then, the second C-H cleavage takes place on another lattice OA, leading 
+to formation and desorption of C2H4. Next, hydroxyl clusters via hydrogen diffusion and water 
+forms from nearby hydroxyl groups. Water desorbs and leaves lattice-oxygen vacancy, which is 
+refilled by molecular oxygen. The cycle repeats.  
+ 
+Fig. 9 Schematic drawing of the complete catalytic cycle of ethane ODH on the Co3O4 (111) surface. 
+ 
+3.7 Implications of the present DFT results 
+Our present DFT study of ethane ODH on the Co3O4 (111) surface presents several 
+interesting perspectives regarding the reaction characteristics. First, we find that for ethane, the 
+first step of the reaction occurs via the activation of its C-H bond over either the Co2+ or the OA / 
+Page 17 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+18
+OB atoms. While the first C-H activation is strongly favored towards the O-activated homolytic 
+pathway, the second C-H activation is in fact more favored towards the heterolytic pathway. In 
+reality, it is likely for both pathways to participate in the formation of ethylene; however, without 
+further kinetic analysis it would be very difficult to quantify their respective contributions 
+towards forming the ODH product.  
+Next, we have found that the vacancy formation energy and Bader charge of the lattice 
+oxygen to be a good descriptor of the catalytic activity of the lattice oxygen. We were able to 
+predict the OA oxygen to have lower barriers for C-H activation than the OB oxygen. We would 
+expect this trend to hold for lattice oxygen atoms of different Co3O4 surfaces, such as (110), 
+(100), and (112), which could be important of Co3O4 nanocatalysts with different morphologies.  
+We find that the water formation step of the catalytic cycle on the pure (111) surface 
+appears to be the RDS, while experiments shows that changing the alkane will change the overall 
+barriers,54 thus suggesting that the C-H activation barrier is significant to the overall rates. Based 
+on preliminary DFT results, we believe that the hydroxylation of the surface will affect the 
+energy profile by increasing the barriers of C-H activation and reducing the barriers of H2O 
+formation. In this model, we can then expect that the actual experimental energy profile will 
+have the C-H activation and water formation barriers approach in energy at a steady-state 
+hydrogen coverage of the surface. Thus, varying C-H bond strength would in fact affect the rates 
+of the overall ODH reaction. 
+Experimental findings have indeed shown that surface hydroxylation occurs on the 
+surfaces of metal oxides as the dominant species during and after a reaction.55, 56 In addition, 
+water formation, and consequently water concentration were found to affect the rates of the 
+ODH/oxidation reactions on many studied metal oxides.55, 57-59 This phenomenon occurs for CO 
+Page 18 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+19
+and CH4 oxidation on Co3O4 as well.56, 60, 61 These experimental findings support our conclusion 
+that the water formation is an important step of the ethane ODH on Co3O4(111). This 
+phenomenon is notably absent in CO oxidation, which is consistent with experimental 
+observations of CO oxidations having much lower barriers and reaction temperatures than alkane 
+oxidation. The coverage effect of surface hydroxyl groups on the catalytic pathways thus 
+warrants further studies.  
+The experimental work of ethane ODH on Co3O4 nanorods38 have focused on 
+ethylene/CO2 selectivity and ethylene yield as a function of surface modification by Si and Ge 
+oxides. Detailed kinetic data such as reaction rates and apparent activation energy on the 
+unmodified Co3O4 nanorods are still not available for a direct comparison. To compare with the 
+experimental ethylene/CO2 selectivity, the complete pathway of ethane combustion has to be 
+mapped out, which requires substantial more work and is beyond the scope of the present work. 
+A joint experimental and computational study is expected for the near future to directly compare 
+the computational results and the experimental data. 
+The present DFT study focuses on the (111) surface based on the STEM images of our 
+Co3O4 nanorod sample (Fig. 1), but other facets may also exist such as the (100) and (110) 
+surfaces depending upon preparation methods and calcination temperature. The different facets 
+can affect the energetics of the elementary steps because the oxygen reactivity can be different. 
+For example, the (110)-B surface of Co3O4 has a twofold-coordinate oxygen site, in contrast with 
+the threefold-coordinate oxygen sites on the (111) surface. How this twofold-coordinate oxygen 
+site on the (110)-B surface would change the energetics of ethane ODH steps is a question that 
+we intend to find out in a future study. 
+ 
+Page 19 of 23
+Catalysis Science & Technology
+Catalysis Science & Technology Accepted Manuscript
+Published on 20 May 2016. Downloaded by Weizmann Institute of Science on 23/05/2016 08:37:46. 
+View Article Online
+DOI: 10.1039/C6CY00749J
+ 
+20
+4. Conclusions 
+We have studied the oxidative dehydrogenation (ODH) of ethane to ethylene on the 
+Co3O4(111) surface with DFT+U, in order to understand the mechanism on Co3O4 nanorods. The 
+more reactive lattice oxygen (OA) was found to yield the lowest barriers for the first C-H 
+activation, consistent with our predictions based on vacancy formation energy and Bader 
+charges. Overall, we found the barriers for the first C-H activation to be lower for the homolytic 
+pathway (0.62 eV), but the barriers for the second C-H activation to be lower for the heterolytic 
+pathway. The cleaved hydrogen from C2H6 forms hydroxyl groups on Co3O4(111), which can 
+cluster via hydrogen diffusion. Water formation from nearby hydroxyl groups and desorption to 
+leave oxygen vacancy on the surface were found to have a large activation energy (2.02 eV) and 
+is likely to be the rate-determining step. These vacancies can readily react with oxygen 
+molecules in gas phase to regenerate the lattice oxygen sites. These insights will help understand 
+the role of the surface orientation of the Co3O4 nanocatalysts in improving the selectivity and 
+yield of alkane to alkene conversion through ODH.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Describe and compare the various halogen-assisted methods for selectively dehydrogenating propane to propene, including dehydrogenation with halogens, oxidative dehydrogenation, oxyhalogenation, and molten metal halide salt approaches. Explain the reaction conditions for each method and analyze why propane's reactivity in these processes differs significantly from that of other alkanes such as methane and ethane.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

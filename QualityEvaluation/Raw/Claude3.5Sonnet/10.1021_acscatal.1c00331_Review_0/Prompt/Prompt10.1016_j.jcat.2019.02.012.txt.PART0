@@ -1,0 +1,1458 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+The effect of phase composition and crystallite size on activity and
+selectivity of ZrO2 in non-oxidative propane dehydrogenation
+Yaoyuan Zhang a,b,1, Yun Zhao b,1, Tatiana Otroshchenko b, Shanlei Han a,b, Henrik Lund b, Uwe Rodemerck b,
+David Linke b, Haijun Jiao b, Guiyuan Jiang a,, Evgenii V. Kondratenko b,
+a State Key Laboratory of Heavy Oil Processing, China University of Petroleum Beijing, Beijing 102249, China
+b Leibniz-Institut fr Katalyse e.V. an der Universitt Rostock, Albert-Einstein-Strae 29a, Rostock 18059, Germany
+a r t i c l e
+i n f o
+Article history:
+Received 22 October 2018
+Revised 8 February 2019
+Accepted 9 February 2019
+Keywords:
+Dehydrogenation
+Propane
+Propene
+Zirconia
+Crystallite size
+Crystal phase
+Coordinatively unsaturated Zr4+
+Reaction mechanism
+Selectivity
+DFT
+a b s t r a c t
+A series of bare ZrO2 materials composed either of monoclinic or tetragonal phase with the size of crys-
+tallites varying between 3.7 and 43.4 nm were prepared by precipitation, hydrothermal or thermal cal-
+cination methods. The samples
+were characterized by XRD, BET,
+CO-TPR, NH3-TPD, electrical
+conductivity measurements and operando UVvis spectroscopy. Density functional theory calculations
+provided molecular insights into the kind of active site and individual steps of propane dehydrogenation
+to propene and hydrogen. Regardless of the phase composition, two Zr cations located at an oxygen
+vacancy, i.e. coordinatively unsaturated Zr cations (Zrcus sites) having, nevertheless, different chemical
+environment in tetragonal and monoclinic ZrO2, were concluded to be responsible for homolytic breaking
+of CAH bonds in propane. Monoclinic ZrO2 showed, however, higher rate of propene formation and
+higher propene selectivity than ZrO2 stabilized in the tetragonal phase. Both the activity and the selectiv-
+ity to propene increased with a decrease in the size of crystallites. The effects of phase composition and
+crystallite size on the PDH performance were related to the ability of ZrO2 to release lattice oxygen upon
+reductive catalyst treatment and thus to create Zrcus sites. The knowledge derived can be used for further
+optimizing PDH performance of ZrO2-based catalysts and also extended to other non-reducible metal
+oxides.
+ 2019 Elsevier Inc. All rights reserved.
+1. Introduction
+Propene is widely used for the manufacture of a large number of
+chemicals relevant for our everyday life [1,2]. Its production and
+demand continue to grow because of the higher consumption of
+the downstream products made of propene. The global annual pro-
+pene market is estimated to reach 165 million tons by 2030 com-
+pared to 103 million in 2012 [3,4]. Nowadays, propene is mainly
+produced through steam (6065%) or fluid catalytic cracking
+(30%) of various oil fractions [5,6]. However, these two processes
+cannot fulfill the demands for propene. Therefore, some on-
+purpose
+technologies,
+such
+as
+metathesis
+of
+ethylene
+with
+2-butenes [7], methanol to olefins or propene [8] and propane
+dehydrogenation (PDH) [3] have been developed to close the gap
+between propene demand and production.
+PDH is one of the largest processes for on-purpose propene pro-
+duction and offers high propene selectivity. The two main indus-
+trial processes are Catofin and Oleflex utilizing CrOx/Al2O3 and
+Pt/Al2O3 based catalysts respectively [3]. Such catalysts are highly
+active and selective, however, have some drawbacks [3,911]. In
+particular, Pt/Al2O3 is expensive and should be treated under chlo-
+rine atmosphere to re-disperse platinum species [3], while Cr(VI)
+may cause various health effects. Apart from Pt-based or CrOx-
+based catalysts, there are some alternatives reported in literature.
+They include materials on the basis of ZnO [1214], GaOx [15,16],
+VOx [1719], isolated FeII [20] and CoII [21]. None of them has,
+however, been commercialized. This is due to the lower catalytic
+performance (activity, selectivity and durability) compared with
+commercial catalysts and insufficient understanding of structure
+activity-selectivity
+relationship
+required
+for
+tailored
+catalyst
+design. It is usually not easy to establish such relationship as (i)
+the PDH reaction requires high temperature hindering application
+of operando characterization techniques and (ii) molecular struc-
+tures of catalytically active species are typically unknown and
+may change under dynamic reaction conditions.
+https://doi.org/10.1016/j.jcat.2019.02.012
+0021-9517/ 2019 Elsevier Inc. All rights reserved.
+Corresponding authors.
+E-mail addresses: jianggy@cup.edu.cn (G. Jiang), evgenii.kondratenko@catalysis.
+de (E.V. Kondratenko).
+1 These authors contributed equally to this work.
+Journal of Catalysis 371 (2019) 313324
+Contents lists available at ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+Recently, our group has developed alternative-type catalysts on
+the basis of ZrO2, which are environmentally friendly and cost-
+efficient in comparison with commercial CrOx and Pt-containing
+catalysts respectively. They showed industrially relevant activity
+and olefin selectivity in non-oxidative dehydrogenation of C3 and
+C4 alkanes [2225]. Coordinatively unsaturated zirconium cations
+(Zrcus) are supposed to be active sites for the dehydrogenation
+reaction. Such sites can be created by doping of zirconia with some
+metal oxides or by high-temperature reductive treatment or by
+loading tiny amounts of metal nanoparticles, such as Ru and Rh.
+Our very recent study investigated the effect of crystallite size of
+bare monoclinic ZrO2 on the activity and propene selectivity in
+PDH. It was found that the activity in PDH could be tuned by
+changing crystallite size: the smaller the crystallite size, the higher
+the activity is [26]. The highest activity achieved over bare mono-
+clinic ZrO2 was comparable to that of commercial CrOx/Al2O3 cata-
+lyst. DFT calculations suggested that the active site of monoclinic
+ZrO2 consists of two Zr cations located at an oxygen vacancy.
+This work aims to validate a new strategy for regulating the
+activity and especially selectivity of ZrO2 in PDH through phase
+composition and crystallite size. A principle goal was to identify
+the kind of active sites for the non-oxidative propane dehydro-
+genation (PDH) to propene and for coke formation and the factors
+affecting their generation over tetragonal and monoclinic ZrO2. To
+address these challenges, we followed a complementary approach
+combining controlled material synthesis with steady-state cat-
+alytic tests and catalyst characterization by XRD, BET, NH3-TPD,
+CO-TPR, electrical conductivity measurements and operando UV
+vis spectroscopy. The latter technique was instrumental for eluci-
+dating mechanistic aspects of coke formation. In addition, density
+functional theory (DFT) calculations were applied to derive molec-
+ular insights into the kind of active site and individual reaction
+pathways leading from propane to propene.
+2. Experimental
+2.1. DFT calculations
+Spin-polarized and periodic DFT calculations were carried out
+using the Vienna ab initio simulation package (VASP) [27,28].
+Exchange and correlation were treated within the Perdew-Burke-
+Ernzerhof generalized gradient approximation (GGA-PBE) [29]
+{Perdew, 1996 #275; Perdew, 1996 #514}. To obtain accurate
+energies with errors of less than 1 meV per atom, a cutoff energy
+of 400 eV was used. Geometry optimization was converged until
+forces acting on atoms were lower than 0.02 eV/Å, whereas the
+energy threshold defining self-consistency of the electron density
+was set to 104 eV. The Climbing Image Nudged Elastic Band (CI-
+NEB) method with eight images was applied for finding transition
+states and minimum energy paths of all reactions with a force tol-
+erance of 0.05 eV/Å [30]. The final transition state structures were
+refined by using the quasi-Newton algorithm until the Hellman-
+Feynman forces on each ion were lower than 0.02 eV/Å. The normal
+mode frequency analysis was performed to validate the optimized
+transition states and each authentic transition state has only one
+imaginary frequency along the reaction coordinates. The resulted
+zero-point vibrational energies (ZPE) from the frequency analysis
+are included in our energetic discussion. The slab with nine layers
+was fixed and the surface-adsorbed molecules (partial Hessian) or
+intermediates are relaxed.
+Since XRD analysis proved that our catalysts are mainly com-
+posed of the tetragonal phase (as shown below), we calculated
+tetragonal ZrO2 (t-ZrO2) models. For the optimization of the bulk
+structure, the lattice parameters of the t-ZrO2 phase were deter-
+mined by minimizing the total energy of the unit cell by using a
+conjugated gradient algorithm to relax the ions. A 9  9  6
+Monkhorst-Pack k point grid was used for sampling the Brillouin
+zone [31]. The calculated lattice parameters of the unit cell,
+a = b = 3.632 and c = 5.231 Å, are in excellent agreement with the
+experimental values (a = b = 3.64 and c = 5.27 Å) [32] as well as
+other theoretical results [33,34] summarized in Table S1. This
+agreement clearly validates our computational methodology.
+Among all t-ZrO2 surfaces, the (1 0 1) termination with O-Zr-O
+surface was found to be most stable [3537]. The t-ZrO2(1 0 1) sur-
+face was modelled by a nine-layer slab with the lowest three layers
+fixed in the bulk positions and the upper six layers being allowed
+to relax. In all cases, a p(2  3) lateral supercell containing a vac-
+uum space of 15 Å between the slab and its periodic replicas was
+used. The Brillouin zone was sampled with a 3  3  1 Mon-
+khorstPack mesh.
+The oxygen-defective t-ZrO2(1 0 1) surface was computed by
+removal of a neutral oxygen atom. The vacancy formation energy,
+Ef(Ov), was calculated according to equation Ef(Ov) = Ed + 1/2EO2 -
+ Es, where Ed is the energy of oxygen defect surface slab and Es
+is the energy of the clean surface slab, while EO2 is the energy of
+gas-phase O2 molecule. The oxygen vacancy formation energy is
+a measure of the reducibility of the oxide. The higher the (positive)
+value, the lower the reducibility is.
+The adsorption energy is defined by Eads = EX+s/d  Es/d  EX,
+where EX+s/d is the total energy of the slab (clean or oxygen defect
+surface) with adsorbents in its equilibrium geometry, Es/d is the
+total energy of the slab (clean or oxygen defect surface) and EX is
+gas-phase species. The more negative the adsorption energy, the
+stronger the adsorption is. The activation barrier (or activation
+energy, Ea) and reaction energy (DEr) are calculated according to
+Ea = ETS  EIS and DEr = EFS  EIS, where EIS, EFS and ETS are the ener-
+gies of the corresponding initial state (IS), final state (FS) and tran-
+sition state (TS) respectively.
+2.2. Catalyst preparation
+Tetragonal
+ZrO2
+samples
+were
+prepared
+by
+precipitation
+method. ZrOCl28H2O (98%, Aldrich) or ZrO(NO3)2xH2O (99%,
+Aldrich) were used as zirconia precursors, ammonium hydroxide
+solution (25%, Roth) or ethylene diamine (greater than99%, Merck)
+were used as precipitation agents. t-ZrO2_1 and t-ZrO2_2 were syn-
+thesized using ZrO(NO3)2xH2O and ammonium hydroxide solu-
+tion.
+Firstly,
+41.237 g
+of
+ZrO(NO3)2xH2O
+were
+dissolved
+in
+243 mL of H2O to get a solution with a zirconium concentration
+of 0.5 molL1. Hereafter, an ammonium hydroxide solution was
+added dropwise to the above solution until the pH value reached
+10. The obtained mixture was heated to 100 C while maintaining
+the same pH value. The precipitated product was then stirred for
+10 days, filtered, washed with deionized water and dried. t-
+ZrO2_1 and t-ZrO2_2 samples were obtained after calcination of
+the dried product at 500 C and 600 C for 4 h respectively. t-
+ZrO2_3 was prepared in a similar way but using ZrOCl28H2O as a
+zirconia precursor. The absence of chloride anions in the precipi-
+tate was proven by the reaction of filtrate with AgNO3. This sample
+was obtained after calcination of the dried product at 700 C for
+5 h. t-ZrO2_4 was prepared using ZrOCl28H2O and ethylene dia-
+mine. Firstly, 7.251 g of ZrOCl28H2O were dissolved in 500 mL
+H2O and then ethylene diamine was added into the above solution
+dropwise until the pH value reached 11. Hereafter, the mixture was
+heated to 100 C and stirred for 24 h. The precipitated product was
+filtered, washed, dried, and calcined at 800 C for 4 h.
+Monoclinic and amorphous ZrO2 catalysts are from our previous
+work
+[26].
+They
+were
+abbreviated
+as
+m-ZrO2_1,
+m-ZrO2_2,
+m-ZrO2_3, m-ZrO2_4, m-ZrO2_5, m-ZrO2_6 and a-ZrO2 respectively.
+m-ZrO2_1
+was
+provided
+by
+Saint-Gobain
+without
+any
+treatment. m-ZrO2_3 was prepared by hydrothermal method from
+314
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+ZrO(NO3)2xH2O.
+m-ZrO2_2,
+m-ZrO2_4
+and
+m-ZrO2_5
+were
+prepared by calcination of m-ZrO2_1 at 550, 700 and 900 C for
+4 h
+respectively.
+m-ZrO2_6
+was
+prepared
+by
+calcination
+of
+ZrO(NO3)2xH2O at 1000 C for 5 h. a-ZrO2 was prepared by precip-
+itation method using ZrOCl28H2O as precursor.
+2.3. Catalyst characterization
+X-ray diffraction (XRD) analysis was performed on a Panalytical
+XPert diffractometer equipped with a Xcelerator detector, auto-
+matic divergence slits and Cu tube (ka1/a2 radiation, 40 kV,
+40 mA, k = 0.015406 nm, 0.0154443 nm). Cu beta-radiation was
+excluded by using nickel filter foil. The crystallite size was calcu-
+lated by the Scherrer equation (Eq. (1))
+D 
+Kk
+b cos h
+1
+where K parameter was set to 1.0747, b is the integrated breadth of
+(1 1 1) reflection peak, h is the diffraction angel.
+Specific surface area (SBET) of the catalysts was measured by
+nitrogen physisorption experiments at 77 K using a Belsorp mini
+setup (Bel Japan). Desorption isotherms were evaluated accord-
+ing to the BET method.
+Temperature-programmed desorption (TPD) of NH3 was carried
+out in an in-house developed setup containing eight individually
+heated continuous-flow fixed-bed quartz reactors. The following
+procedure was applied. The catalysts (0.05 to 0.1 g) were initially
+calcined in air flow at 550 C for 1 h, purged with Ar for 15 min
+and then treated in a flow consisting of 57 vol% H2 in Ar for 1 h.
+After that, the catalysts were cooled down in Ar flow to 120 C.
+Then the catalysts were exposed to a flow of NH3 (1 vol% NH3 in
+Ar, 14 mLmin1) for 1 h. Hereafter, the catalysts were cooled down
+in Ar flow to 80 C. Before starting NH3-TPD, the catalysts were
+purged in Ar flow at 80 C for 2 h to remove weakly adsorbed
+NH3. Finally, the catalysts were heated to 900 C with a heating
+rate of 10 Kmin1 in Ar flow (10 mLmin1). Desorbed NH3 was
+monitored by an on-line mass spectrometer (Pfeiffer Vacuum
+OmniStar GSD 320) at the atomic mass unit (AMU) of 15 (NH).
+Ar (AMU of 40) was used as inert standard.
+Temperature-programmed reduction (TPR) experiments were
+performed using a feed consisting of 1 vol% CO in Ar. Catalysts
+(0.2 g) were firstly calcined in air flow at 550 C for 1 h, then cooled
+down in the same flow to room temperature and purged in Ar flow
+to remove oxygen. Hereafter, they were heated in a flow of 1 vol%
+CO in Ar (10 mLmin1) to 900 C with a heating rate of 10 Kmin1.
+The consumption of CO was detected by an on-line mass spectrom-
+eter (Pfeiffer Vacuum OmniStar GSD 320). The signals at AMUs of
+28 (CO and CO2), 44 (CO2) and 40 (Ar) were recorded.
+Overall electrical conductivity of catalysts was measured in a
+fixed-bed continuous-flow tubular quartz reactor. Firstly, the cata-
+lyst was pressed into a dense disc of 7.1 mm in diameter and 1.2
+2.0 mm in thickness to minimize interior grain boundaries. Both
+surfaces of the disc were covered with a platinum conducting paste
+(ChemPur, 71% Pt) and dried at 120 C. Hereafter, a sample disc
+was sandwiched between two inert platinum electrodes and
+arranged inside the reactor. 1 kHz alternating current was adjusted
+with an automatically compensating bridge (Wayne Kerr B905). At
+this mono-frequency regime, the contributions of both surface and
+bulk conductivity are regarded similar for all samples, owing to the
+identical treatment of the sample discs. As an equivalent circuit, a
+parallel connection of a condenser and an ohmic resistance was
+applied. Electrical conductivity of catalysts was measured at
+550 C in air and N2 to ensure different partial pressures of oxygen,
+i.e. 20 kPa and about 104 kPa respectively. The electrical conduc-
+tivity of the catalysts was calculated according to Eq. (2).
+r  1=R  h=S
+2
+where R is the electrical resistance (X), h is the thickness (mm) and
+S is the cross section area (mm2) of the catalyst disc.
+Operando UVvis tests were performed at 550 C in an in-house
+developed set-up equipped with an AVASPEC fiber optical spec-
+trometer (Avantes), a DH-2000 deuterium-halogen light source
+and a CCD array detector. A high-temperature reflection UVvis
+probe consisting of 6 radiating optical fibers and 1 reading fiber
+was threaded through the furnace to face quartz reactor walls at
+the position where catalysts were held [38]. The catalysts were
+firstly heated in N2 flow up to 550 C followed by calcination in
+air flow for 1 h. Then they were purged with N2 for 15 min, treated
+with H2 flow (57 vol% H2 in N2) for 1 h, flushed in N2 for 15 min,
+and then reacted with a feed containing 40 vol% C3H8 in N2. The
+catalyst amount and flow were set to 0.10.2 g and 640 mLmin1
+respectively to keep the initial propane conversion over all cata-
+lysts about 10%. For analyzing carbon deposition during PDH, we
+defined relative reflectance (Rrel) as the ratio of the reflectance of
+the catalysts with coke deposits (RDH) to the fully oxidized ones
+(RO2) according to Eq. (3). From this reflectance, we calculated
+the relative Kubelka-Munk function F(Rrel) according to Eq. (4).
+Rrel  RDH
+RO2
+3
+FRrel  1  Rrel2
+2  Rrel
+4
+2.4. Catalyst tests
+All catalytic tests were performed at 1 bar in an in-house devel-
+oped setup consisting of 15 continuous-flow fixed-bed quartz reac-
+tors. To determine the rate of propene formation, the tests were
+carried out at a degree of propane conversion below 10% using a
+feed containing 40 vol% C3H8 in N2. The amount of the catalyst
+and the total flow of reaction mixture were set to 0.1 g and
+20 mLmin1 respectively. The catalysts were firstly heated in N2
+flow up to 550 C followed by calcination in air flow for 1 h. Then
+they were purged with N2 for 15 min, treated with H2 flow
+(57 vol% H2 in N2) for 1 h and flushed in N2 for 15 min. Finally, a
+flow of C3H8-N2 mixture (40 vol% C3H8 in N2) was passed through
+the catalyst bed. The initial rate of propene formation was mea-
+sured after 190 s on stream.
+To establish the dependence of product selectivity on propane
+conversion, we performed catalytic tests at 550 C with the cata-
+lysts reduced in a flow of H2 (57 vol% H2 in N2). Catalyst amount
+(0.8 to 1.5 g) and total flow (6 to 80 mLmin1) were varied to
+get different contact times and accordingly different degrees of
+propane conversion.
+An overall activation energy of propane dehydrogenation was
+determined in the temperature range between 500 and 550 C over
+the catalysts pre-reduced at 550 C in a flow of H2 (57 vol% H2 in
+N2) for 1 h. Catalyst amount used in these tests was varied from
+0.1 to 0.4 g depending on the sample, while the total flow of the
+reaction
+feed
+was
+set
+to
+10 mLmin1,
+10 mLmin1
+and
+20 mLmin1 for 500, 525 and 550 C respectively.
+The feed components and the reaction products were analyzed
+by an on-line gas chromatograph (Agilent 6890) equipped with
+PLOT/Q (for CO2), AL/S (for hydrocarbons), and Molsieve 5 (for
+H2, O2, N2, and CO) columns as well as flame ionization and ther-
+mal conductivity detectors.
+Eqs. (5)(9) were used to calculate the rate of propene
+formation (r(C3H6) expressed as mmol(C3H6)g1
+catmin1), propane
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+315
+conversion (X(C3H8)), selectivity to gas-phase products (Si) or to coke
+(S(coke)), and propene yield (Y(C3H6)) respectively.
+r C3H6
+  STY C3H6
+  1000
+60  M C3H6
+
+5
+X C3H8
+ 
+_
+n
+in
+C3H8  _
+n
+out
+C3H8
+_
+n
+in
+C3H8
+6
+Si  vC3H8
+vi
+_
+n
+out
+i
+_
+n
+in
+C3H8  _
+n
+out
+C3H8
+7
+S coke
+  1 
+X
+i
+Si
+8
+Y C3H6
+  X C3H8
+  S C3H6
+
+9
+Here, STY C3H6
+ is space time yield of C3H6 (kg(C3H6)h1
+kg(cat)1), mcat is catalyst amount (g), _
+n with superscripts in
+and out is a molar flow of gas phase components (indicated with
+subscripts i, C3H8 or N2) at the reactor inlet and outlet respec-
+tively (molmin1), vi is reciprocal stoichiometric coefficient for
+product i, MC3H6 is the molar weight of C3H6 (42.08 gmol1).
+Reaction-induced changes in gas volume were accounted for by
+using N2 as an internal standard.
+3. Results and discussion
+3.1. DFT calculations of individual reaction pathways
+We shall start with the presentation and discussion of the
+results of DFT calculations of propane dehydrogenation over
+t-ZrO2 and will compare them with those obtained in our previous
+study for monoclinic ZrO2 (m-ZrO2) [26]. The purpose was to check
+if the kind of active sites and individual reaction steps for propene
+formation depend on the phase composition of ZrO2. As the (1 0 1)
+facet is the most stable termination surface of t-ZrO2 [3537] this
+surface was selected for the calculations. We computed individual
+reaction pathways leading from propane to propene on the ideal
+and oxygen-defective (1 0 1) surfaces. Surface oxygen vacancy
+(Ov) was created by removal of a neutral oxygen atom (O3c
+I
+or
+O3c
+II ) or with help of CO or H2 in form of CO2 or H2O (Table S2). In
+comparison with O3c
+II , O3c
+I
+(Fig. S1) was established to be 0.38 eV
+more energetically (5.45 vs. 5.83 eV for O3c
+I
+and O3c
+II respectively)
+preferable species to form surface oxygen vacancy (Table S2). Thus,
+the defective t-ZrO2(1 0 1) surface in our model was created
+through removal of one O3c
+I
+species (Fig. S1(b)). It is worth men-
+tioning that oxygen vacancy on the surface of t-ZrO2 (1 0 1) and
+m-ZrO2 (1
+1 1) have very different local chemical environment.
+For m-ZrO2 (1
+1 1), the removed oxygen atom was connected to
+two Zr atoms, while three Zr atoms were around the oxygen atom
+removed from t-ZrO2 (1 0 1). To derive molecular insights into
+electron distribution inside the anion vacancy, we further com-
+puted the spin density and the density of states (DOS) for the clean
+surface and the surface with an oxygen vacancy (Fig S2). We found
+that the Zr cation is only very slightly reduced and remains mainly
+formal Zr4+ on the basis of the computed Barde charge (the three Zr
+cations near the vacancy accumulate 0.20, 0.16 and 0.16e as com-
+pared with those of the clean surface). In addition, the DOS of Zr
+center on both surfaces are approximately the same, apart from
+some electrons at the Fermi level. Thus, electrons generated upon
+oxygen vacancy formation remain delocalized.
+To identify the kind of active site and the mode of dissociation
+of methylene CAH bond over defective t-ZrO2 (1 0 1), we computed
+the reaction on three different sites: (i) one lattice oxygen and one
+saturated Zr site (Zr6c
+Ia-O3c
+I , Zr6c
+Ia-O3c
+II , Zr6c
+II O3c
+II , Zr7c
+I O3c
+I
+or Zr7c
+I O3c
+II
+in Fig. S1 (a)), (ii) two Zrcus cations located at an oxygen vacancy
+([Zr6c
+Ia, Zr6c
+II ]-Ov or [Zr6c
+II , Zr6c
+Ib]-Ov in Fig. S1 (b)) and (iii) two lattice
+oxygen species (O3c
+I O3c
+II in Fig S1 (a)). The most thermodynami-
+cally preferable pathway was concluded to be homolytic breaking
+of the C-H bond on the [Zr6c
+Ia, Zr6c
+II ]-Ov or [Zr6c
+II , Zr6c
+Ib]-Ov sites
+(Fig. 1, Fig. S3, Table S3), which is exothermic by 0.91 or 0.29 eV
+(Fig. S4). The full potential energy surfaces of the most preferred
+routes on defective t-ZrO2 and m-ZrO2 surfaces are shown in
+Fig. 1, while the Gibbs free energy profiles are given in Fig. S5. Sim-
+ilar to our recent DFT calculations of propane dehydrogenation
+over m-ZrO2 [26], the overall apparent barrier for this reaction over
+the oxygen-defective t-ZrO2 (1 0 1) facet is significantly lower
+(1.13 vs. 1.90 eV) than that over the ideal facet (Fig. 1 and Fig. S3).
+It is also obvious from Fig. 1 and Fig. S5 that the energy profiles
+in the course of propane dehydrogenation reaction over oxygen-
+defective m-ZrO2(1
+1 1) and oxygen-defective t-ZrO2(1 0 1) have
+the same shape and trend. The individual pathways, however, dif-
+fer in the energy values. For example, propene formation over m-
+ZrO2(1
+1 1) should proceed easier than over t-ZrO2(1 0 1). No sig-
+nificant differences could be identified between these samples in
+terms of H2 formation.
+The conclusion about the mode (homotytic vs. heterolytic) of C-
+H bond breaking was drawn on the basis of the following argu-
+ments: (i) DFT calculations predict that both H and iso-C3H7 inter-
+act with surface Zr atoms having the same charge rather than with
+one Zr and one O atom, which are differently charged and (ii) the
+computed Bader Charge of the H atom and the central C atom in
+iso-C3H7 is negative and does not significantly differ from each
+other (-0.33e and 0.29e for H and C3H7 respectively).
+The importance of surface defects for propane dehydrogenation
+over t-ZrO2 is in agreement with our previous calculations dealt
+with m-ZrO2 [26]. Thus, regardless of ZrO2 phase composition,
+two Zrcus cations located at an oxygen vacancy, which has different
+local environment in t-ZrO2 and m-ZrO2, are responsible for pro-
+pane activation, while catalytic centers consisting of one lattice
+oxygen and one saturated Zr site or two lattice oxygen species do
+not seem to be relevant. On an elementary step level, iso-C3H7 frag-
+ment formed upon homolytic breaking of the C-H bond in C3H8 is
+bound at the Zr6c
+Ia or Zr6c
+II
+site, while the remaining H atom is
+located in a bridge position between the Zr6c
+Ib and Zr6c
+II cations.
+The methylene CAH activation barrier at the [Zr6c
+Ia, Zr6c
+II ]-Ov site
+is lower than that at the [Zr6c
+II , Zr6c
+Ib]-Ov site (0.42 vs. 0.61 eV).
+After identifying the mode of methylene CAH activation, we
+examined several possible routes of methyl CAH bond activation
+in iso-C3H7 adsorbed on the Zr6c
+Ia or Zr6c
+II site (Fig. S6). The most
+thermodynamically and kinetically preferred route is methyl
+CAH bond dissociation at the (Zr6c
+II , Zr6c
+Ia)-Ov site with the dissoci-
+ated H located at the adjacent Zr6c
+Ia center (Fig. 1 and Fig. S6). Pro-
+pene formation is an endothermic process (with 0.23 eV) with an
+activation barrier of 0.92 eV. The hydrogen formation is also
+strongly endothermic by 1.17 eV, while the reversed hydrogen dis-
+sociation is a barrier-less process. After considering the methylene
+CAH and methyl CAH bond activation together, [Zr6c
+II , Zr6c
+Ib]-Ov site
+is concluded to be more kinetically favorable than [Zr6c
+Ia, Zr6c
+II ]-Ov
+site for propane dehydrogenation to propene.
+Although propane dehydrogenation over m-ZrO2 and t-ZrO2
+occurs on two Zrcus cations, the phase composition of ZrO2 is nev-
+ertheless relevant for the PDH reaction as concluded from the
+potential energy surfaces shown in Fig. 1 and the Gibbs free energy
+profiles in Fig. S5. It is obvious that the methylene CAH bond acti-
+vation over defective t-ZrO2 (1 0 1) requires higher energy in com-
+parison with this process over defective m-ZrO2 (1
+1 1); i.e. 0.42 or
+316
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+0.61 eV vs. 0.16 eV. The latter surface is also more favorable for
+breaking of the methyl bond in iso-C3H7, which is the surface pre-
+cursor formed from C3H8. Such difference between t-ZrO2 (1 0 1)
+and m-ZrO2 (1
+1 1) might be related to the local structure of two
+Zrcus cations forming the active site on these surfaces. Even though
+propene formation appears to be a structure-sensitive process,
+hydrogen formation does not depend on the phase composition
+of ZrO2. This process requires the highest energy, which is 1.13
+and 1.24 eV for the defective t-ZrO2 (1 0 1) and m-ZrO2 (1
+1 1)
+facets respectively. Thus, it should be the rate-limiting step in
+the course of PDH over bare ZrO2 regardless of its phase composi-
+tion. However, it is noted that the computed barriers are lower
+than the experimentally estimated Arrhenius activation energies;
+and such differences between theory and experiment have been
+reported previously [39].
+3.2. Characterization of as-prepared catalysts
+Under consideration of the above DFT results about the kind of
+active site and the elementary reaction pathways of propane dehy-
+drogenation over t-ZrO2 and m-ZrO2, one may expect that the
+phase composition is not vital for the activity of bare ZrO2 in the
+target reaction. To verify this assumption, we prepared several
+ZrO2 samples composed of either monoclinic or tetragonal phase.
+The X-ray diffraction (XRD) patterns of as-prepared materials are
+shown in Fig. 2. According to these data, four samples are stabilized
+in the tetragonal phase with an average crystallite size of 3.7, 4.6,
+5.7 or 8.1 nm, six samples are m-ZrO2 with an average crystallite
+size of 9.1, 12.9, 13.0, 18.6, 32.8 or 43.4 nm and one ZrO2 sample
+is amorphous (a-ZrO2). The fact that t-ZrO2 samples are composed
+of smaller crystallites than their m-ZrO2 counterparts could be due
+to the lower surface free energy of t-ZrO2 than that of m-ZrO2.
+Accordingly, when the crystallite size is small enough, zirconia is
+easily stabilized in t-ZrO2 without any promoter [40,41]. The phase
+composition of selected ZrO2 catalysts did not change after cat-
+alytic tests (Fig. S7).
+Specific surface area of the catalysts was determined according
+to the BET method. The results are shown in Table 1. The highest
+surface area of 267 m2g1 was measured for a-ZrO2. For the sam-
+ples composed of t-ZrO2 or m-ZrO2 phases, the surface area
+increases with a decrease in crystallite size as expected.
+Overall acidity of bare ZrO2 materials was determined from
+NH3-TPD experiments. The obtained NH3-TPD profiles are shown
+in Fig. 3(a). NH3 desorption was observed in a broad temperature
+range between 200 and 550 C thus proving the presence of acidic
+sites of different strength. These sites should be of Lewis character
+10
+20
+30
+40
+50
+60
+70
+80
+Intensity (a.u.)
+2θ (degree)
+3.7 nm
+4.6 nm
+5.7 nm
+9.1 nm
+13.0 nm
+18.6 nm
+8.1 nm
+32.8 nm
+amorphous
+43.4 nm
+12.9 nm
+t
+m
+m
+t
+m
+m
+m: monoclinic phase
+t : tetragonal phase
+t
+t
+m
+m
+m
+m
+Fig. 2. XRD patterns of differently prepared ZrO2 materials.
+defective t-ZrO2 (101) 
+defective m-ZrO2 ( 11)
+Fig. 1. The calculated energy profiles and optimized structures of intermediates along the pathway of propane dehydrogenation to propene over defective t-ZrO2 (1 0 1) and
+m-ZrO2 (1
+1 1) surfaces (Zr/light blue, C/grey, O/red, H/white).
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+317
+because Brnsted acidic OH sites are decomposed upon catalyst
+treatment at 550 C as proven in our separate study [24]. The tem-
+perature of maximal desorption of NH3 for different samples did
+not differ strongly and was around 260 C. Thus, the largest frac-
+tion of Lewis acidic sites on the surface of all catalysts should be
+of similar strength. The density of acidic sites was calculated for
+each catalyst under assumption that one NH3 molecule can be
+adsorbed on one acidic site. The results are given in Table 1. Among
+all samples, m-ZrO2_2 revealed the highest density of acidic sites,
+while m-ZrO2_6 showed the lowest one. It was found that the den-
+sity of acidic sites increased with decreasing crystallite size for
+monoclinic or tetragonal phase, and amorphous ZrO2 showed a
+middle acidic density among all catalysts (Fig. S8).
+The reducibility (the ability of ZrO2 to release lattice oxygen in
+the presence of reducing agent) of differently prepared ZrO2 was
+investigated by CO-TPR method. Fig. 3(b) shows the profiles of
+CO consumption for all catalysts in a form of a change of CO mass
+spectrometric signal with temperature. In general, the reduction
+temperature of the samples composed of t-ZrO2 was at least
+100 C higher than that of the samples composed of m-ZrO2, while
+the amorphous ZrO2 did not show any measurable CO consump-
+tion. The temperature of maximal rate of reduction decreases with
+a decrease in crystallite size both for t-ZrO2 and m-ZrO2. Such ten-
+dency can be explained by the fact that oxygen ions located at cor-
+ners/edges or surface defects can be easier removed than those on
+the flat non-defective surface and thus the reducibility of metal
+oxide will be improved upon decreasing the size of crystallites
+[42]. The amount of CO consumed by each sample during the
+CO-TPR tests is listed in Table 1. One can see that all m-ZrO2 sam-
+ples consumed higher amount of CO per surface area than a-ZrO2
+or t-ZrO2.
+3.3. Catalyst activity and selectivity
+In order to check if and how phase composition of ZrO2 affects
+PDH performance, two series of catalytic tests were performed
+with the purpose (i) to determine the rate of propene formation
+and (ii) to elucidate an overall scheme of product formation. We
+shall start with the activity data. Fig. 4(a) shows the rate of pro-
+pene formation determined at a degree of propane conversion
+below 10% as a function of crystallite size of m-ZrO2 and t-ZrO2.
+The activity of a-ZrO2 sample is also shown for comparative pur-
+poses. Similar to our previous study with m-ZrO2 samples [26],
+the rate of propene formation over the t-ZrO2 materials increases
+with a decrease in crystallite size. However, there should be a min-
+imal size of crystallites, below which ZrO2 will lose its high PDH
+activity as concluded from the fact that the rate of propene forma-
+tion on a-ZrO2 was low (Fig. 4(a)). As the effect of the size of crys-
+tallites on PDH activity is also valid when the rate is calculated per
+surface area (Fig. S9), the size should determine the concentration
+of catalytically active sites or their intrinsic activity. It is also worth
+mentioning that the rate of propene formation per surface area
+over m-ZrO2 with the smallest size of crystallites is about 7 times
+higher than that of t-ZrO2 sample composed of the smallest crys-
+tallites (Fig. S9). Importantly, as seen in Table 1, the crystallite size
+of t-ZrO2_4 and m-ZrO2_1 catalysts is 8.1 and 9.1 nm respectively,
+i.e. very similar. However, these two materials strongly (about 150
+times) differ in the rate of propene formation (Table 1, Fig. 4(a)).
+This result implies that the monoclinic phase of ZrO2 is more
+preferable for the PDH reaction in terms of activity. This aspect
+as well as the size effect on the rate of propene formation will be
+discussed in a below separate section under consideration of addi-
+Table 1
+Catalysts and their selected physico-chemical characteristics: surface area, crystal phase (t-tetragonal, m-monoclinic, a-amorphous), crystallite size, acid site density determined
+from NH3-TPD, CO consumption in CO-TPR, initial rate of propene formation (r(C3H6)) at 550 C.
+Catalysts
+SBET/m2g1
+Crystal phase
+Crystallite size/nm
+Acid density/mmolm2
+CO consumption/mmolm2
+r(C3H6)/mmol (C3H6)g1min1
+t-ZrO2_1
+202
+t
+3.7
+1.13
+0.305
+0.107
+t-ZrO2_2
+163
+t
+4.6
+0.99
+0.325
+0.051
+t-ZrO2_3
+128
+t
+5.7
+1.47
+0.009
+0.008
+t-ZrO2_4
+69
+t
+8.1
+0.69
+0.006
+0.002
+m-ZrO2_1
+88
+m
+9.1
+1.84
+2.048
+0.305
+m-ZrO2_2
+54
+m
+12.9
+2.43
+1.135
+0.159
+m-ZrO2_3
+43
+m
+13.0
+2.20
+3.318
+0.157
+m-ZrO2_4
+38
+m
+18.6
+1.55
+1.605
+0.073
+m-ZrO2_5
+23
+m
+32.8
+0.91
+0.957
+0.015
+m-ZrO2_6
+18
+m
+43.4
+0.15
+0.353
+0.008
+a-ZrO2
+267
+a
+1.43
+0.065
+0.025
+400
+500
+600
+700
+800
+900
+200
+400
+600
+800
+Temperature / C 
+Temperature / C 
+C(NH3) / a.u.
+3.7 nm
+4.6 nm
+5.7 nm
+9.1 nm
+13.0 nm
+18.6 nm
+8.1 nm
+32.8 nm
+amorphous
+43.4 nm
+(a)
+C(CO) / a.u.
+3.7 nm
+4.6 nm
+5.7 nm
+9.1 nm
+13.0 nm
+18.6 nm
+8.1 nm
+32.8 nm
+amorphous
+43.4 nm
+(b)
+12.9 nm
+12.9 nm
+Fig. 3. (a) NH3-TPD and (b) CO-TPR profiles obtained for bare ZrO2 materials differing in their phase composition (black line: t-ZrO2, grey line: m-ZrO2, dashed line: a-ZrO2)
+and the size of crystallites.
+318
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+tional characterization data. Now we turn our attention to product
+selectivity.
+To answer the question about the effect of phase composition
+and the size of crystallites on the selectivity to propene and unde-
+sired products, catalytic tests at different degrees of propane con-
+version were carried out over selected t-ZrO2 samples and one
+m-ZrO2
+with
+the
+lowest
+size
+of
+crystallites.
+The
+obtained
+selectivity-conversion plots for propene, coke and cracking prod-
+ucts (C1-C2 hydrocarbons) are shown in Fig. 4(b), (c) and (d)
+respectively. The effect of contact time on product selectivity is
+shown in Fig. S10.
+Regardless of phase composition and crystallite size, the selec-
+tivity to propene is above 85% at propane conversion below 5%
+but decreases with increasing propane conversion or contact time.
+Contrarily, the selectivity to cracking products and coke (for all
+t-ZrO2 materials) increases. According to selectivity-contact time
+plots shown in Fig. S10(b), we can conclude that catalytic transfor-
+mations of propene should play the most significant role, while
+gas-phase reactions are less important. Extrapolation of the selec-
+tivity to coke over t-ZrO2 to zero propane conversion or zero
+contact time gives values close to zero. The corresponding value
+for m-ZrO2 is about 10% and is independent of propane conversion.
+For all materials, a near to zero selectivity to cracking products will
+be achieved when
+the conversion approaches
+to zero. The
+selectivity-conversion dependences can be interpreted as follows.
+Propene is formed directly from propane and then undergoes con-
+secutive transformations. They include formation of carbon depos-
+its over t-ZrO2 and cracking products over all ZrO2 samples (Fig. 5).
+Coke formation over m-ZrO2 mainly occurs with participation of
+propane or its surface intermediates also leading to propene.
+The slope of the selectivity-conversion plot for propene is repre-
+sentative for the ability of ZrO2 for consecutive conversion of this
+olefin. The steeper the slope, the higher the conversion is. Under
+this consideration, m-ZrO2 shows the lowest ability for undesired
+propene transformations in comparison with t-ZrO2 samples. The
+selectivity to propene over m-ZrO2 decreases from 90% to 83% with
+an increase in propane conversion from 9% to 33%. Among the t-
+ZrO2 materials, their ability for secondary propene conversion
+increases with an increase in the size of crystallites. The selectivity
+to propene over t-ZrO2 at propane conversion above 10% was lower
+than over m-ZrO2. The main difference between the catalysts is
+related to propene conversion into carbon deposits, while phase
+composition and/or crystallite size do not seem to affect the ability
+of ZrO2 materials for propene conversion into cracking products.
+0
+5
+10
+15
+20
+25
+30
+35
+0
+10
+20
+30
+40
+50
+5
+10
+15
+20
+25
+30
+35
+0
+5
+10
+15
+20
+25
+30
+35
+0
+5
+10
+15
+20
+25
+30
+0.0
+0.1
+0.2
+0.3
+70
+80
+90
+100
+0
+2
+4
+6
+8
+Fig. 4. (a) The rate of propene formation (r(C3H6)) over (s) m-ZrO2, (h) t-ZrO2 and (4) a-ZrO2 catalysts versus the size of crystallites. The selectivity-conversion relationships
+for (b) propene, (c) coke and (d) cracking products over m-ZrO2 with (d) 9.1 nm crystallites and t-ZrO2 samples with (w) 3.7, () 4.6 or () 5.7 nm crystallites. Reaction
+conditions: T = 550 C, feed composition: 40 vol% C3H8 in N2.
+Fig. 5. Proposed reaction scheme of propane dehydrogenation.
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+319
+Taking into account the dependence of the selectivity to these
+products on modified contact time (Fig. S10(c)), one can conclude
+that they are mainly formed through catalytic transformations of
+propene. In addition, as shown in our recent study on PDH over
+m-ZrO2 [26], the selectivity to cracking products becomes lower
+when the catalysts were reduced in CO instead of H2 before the
+PDH reaction. If non-catalytic reactions played a decisive role,
+the selectivity would not depend on the kind of reducing agent.
+From our previous study [26], the selectivity to coke over
+m-ZrO2 was found to depend on the size of crystallites in a similar
+way as for t-ZrO2 in the present study. From a mechanistic view-
+point, coke originated both from propane and propene, with the
+former pathway being dominated over m-ZrO2 with 9.1 nm crys-
+tallites (the sample with the smallest crystallites of m-ZrO2). The
+propane aided pathways can be easily understood when assuming
+that surface intermediates originated from propane can desorb
+yielding gas-phase propene or interact with each other forming
+coke. The contribution of each pathway to overall coke formation
+may, however, depend on the size of crystallites and the kind of
+ZrO2 phase. According to DFT calculations, desorption of propene
+formed from propane is easier from t-ZrO2 than from m-ZrO2
+(0.07 vs. 0.46 eV (Fig. 1)). Thus, in comparison with t-ZrO2, propene
+adsorbed on m-ZrO2 may have longer residence time on the sur-
+face before escaping to gas phase and accordingly higher probabil-
+ity to react with other adsorbed propene molecule(s). This may be
+a reason for the dominance of apparent propane-aided pathway of
+coke formation over m-ZrO2 with 9.1 nm crystallites.
+3.4. Active sites and factors affecting their formation
+As shown in the preceding section, m-ZrO2 revealed higher
+activity in PDH than t-ZrO2, although DFT calculations predict that
+there is no difference between these phases in terms of the kind of
+active sites and the highest barrier in the course of propane dehy-
+drogenation. The below discussion is focused on identifying possi-
+ble
+reason(s)
+of
+such
+apparent
+discrepancy
+between
+the
+experiment and the theory. Firstly, we measured overall activation
+energy of propene formation over differently structured ZrO2
+materials in the temperature range from 500 to 550 C. Since cat-
+alytically active Zrcus sites can be formed during reductive treat-
+ment of ZrO2, the catalysts were always reduced at the highest
+reaction temperature (550 C) before performing the PDH reaction
+to exclude the effect of reduction temperature on the concentra-
+tion of such sites. The rate of propene formation was measured
+at 500, 525 and 550 C and propane conversion was below 10%.
+The obtained activation energy (Ea) values and the corresponding
+Arrhenius plots for m-ZrO2 and t-ZrO2 with different size of crys-
+tallites are shown in Fig. 6 and Fig. S11 respectively. Regardless
+of the catalysts tested, the Ea values were about 150 kJmol1.
+The similarity between differently structured ZrO2 in terms of
+experimentally determined Ea values suggests that the kind of
+the active site does not depend on catalyst phase composition. It
+can be composed of two Zrcus cations located at an oxygen vacancy
+as concluded from DFT calculations.
+Under the above considerations, the different activity of t-ZrO2
+and m-ZrO2 as well as t-ZrO2 with different size of crystallites may
+be related to the number of active sites, i.e. the ability of ZrO2 to
+generate Zrcus. To verify this idea we tried to quantify such sites
+in the catalysts from Fig. 4(a). To this end, we performed CO-TPR
+tests with the purpose to determine the amount of lattice oxygen
+removed from ZrO2. When lattice oxygen is removed, an oxygen
+vacancy is formed. As a consequence, the neighboring zirconium
+cations will become coordinatively unsaturated. Thus, the amount
+of removed oxygen species should reflect the ability of ZrO2 to
+generate Zrcus sites upon reductive catalyst treatment before start-
+ing the PDH reaction.
+According to the CO-TPR results (Fig. 3(b)), different ZrO2 cata-
+lysts possess different reducibility. They differ in the amount of
+released lattice oxygen as well as in the temperature of maximal
+rate of oxygen removal. As this amount correlates with the concen-
+tration of generated Zrcus sites, a correlation between the rate of
+propene formation and the concentration of removed oxygen spe-
+cies can exist if Zrcus is responsible for propane activation. Indeed,
+the rate of propene formation nearly linearly increases with the
+amount of CO consumed in the temperature range from 400 to
+900 C (Fig. 7(a)), however, there are two catalysts with smaller
+crystallite size stay outside of the fitting line, which maybe
+explained under assumption that the defective sites, such as cor-
+ners, edges and steps, couldnt be characterized by CO-TPR but still
+active for propane dehydrogenation. Similar dependences are also
+valid when the amount of removed oxygen was determined by
+integrating the CO-TPR profiles between 400 and 600 C or
+between 400 and 700 C (Fig. S12). The established relationships
+strongly suggest that Zrcus site are active in the PDH reaction over
+ZrO2 and their concentration depends on the ability of ZrO2 to
+release its lattice oxygen during reductive catalyst treatment.
+From our previous study, it was found that bare m-ZrO2 is an
+ionic conductor and the smaller the crystallite size, the higher
+the conductivity is. This was explained by higher concentration
+of anion vacancies or/and easier diffusion of lattice oxygen in smal-
+ler crystallite size samples [26]. So, we also performed electrical
+conductivity tests with t-ZrO2 catalysts at 550 C in air and N2
+for semi-quantitative analysis of the number of bulk anion vacan-
+cies. Table S4 shows the conductivity value of selected catalysts at
+different oxygen partial pressure at 550 C. As the conductivity val-
+ues are quite similar under different oxygen partial pressure, it was
+concluded that ionic conductivity dominates in all t-ZrO2 samples.
+The effect of phase composition and of the size of ZrO2 crystallites
+on the conductivity is shown in Fig. S13. Regardless of the kind of
+ZrO2 phase, the conductivity increased with a decrease in the size.
+It is also worth mentioning that PDH activity of ZrO2 strongly cor-
+relates with the conductivity. As seen in Fig. 7(b) the rate of pro-
+pene formation increases linearly with rising conductivity. The
+electrical conductivity data are also in accordance with the results
+of CO-TPR tests. The higher the reducibility, the easier the oxygen
+anions move and thus the higher the ionic conductivity is. Thus,
+these results further support the importance of Zrcus for propane
+dehydrogenation and prove that the concentration of such sites
+depends on the kind of ZrO2 phase and the size of crystallites.
+4
+6
+8
+10
+100
+125
+150
+175
+200
+Crystallite size / nm
+Ea(C3H6) / KJ·mol-1
+t-ZrO2
+m-ZrO2
+Fig. 6. Activation energy of propene formation (Ea(C3H6)) determined for (d) m-
+ZrO2 and (j) t-ZrO2 composed of different crystallites. The catalysts were always
+reduced at 550 C, catalytic tests were performed at 500, 525, 550 C.
+320
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+3.5. Crystallite size and phase composition effects on coking behaviour
+After establishing the factors governing the activity of differ-
+ently structured ZrO2 in PDH, we turn our discussion to the funda-
+mentals affecting the selectivity to propene and coke (Fig. 4(b), (c)).
+With this purpose, we initially determined an overall rate of pro-
+pane conversion into coke (r(coke)/mmolg1
+catmin1) at a propane
+conversion of about 15% (8.5% for t-ZrO2_4). The rate was calculated
+according to Eq. (10). For both m-ZrO2 and t-ZrO2, the rate increases
+with a decrease in the size of crystallites (Fig. 8(a)). Nevertheless, the
+selectivity to coke decreases too. Such obvious inconsistency can be
+explained as follows. The coke selectivity is defined as the ratio of
+the rate of propane conversion into coke to the overall rate of pro-
+pane consumption (Eq. (11)).
+r coke
+ 
+Ffeed 
+_
+nin
+N2
+_
+nout
+N2
+ xinC3H8  XC3H8  Scoke  1000
+Vm  mcat
+10
+S coke
+ 
+rcoke
+r C3H6
+  r coke
+  rcracking products
+11
+where xin(C3H8) is the molar fraction of propane in the reaction
+feed, Ffeed is the total flow of C3H8/N2 mixture (mLmin1).
+Since the rate of formation of cracking products is very low, the
+selectivity to coke is mostly reflected by the ratio of the rate of pro-
+pene formation to the rate of coke formation (r(C3H6)/r(coke)).
+Fig. 8(b) shows the dependence of r(C3H6)/r(coke) on the size of
+crystallites of different ZrO2 materials. It is obvious that this ratio
+is significantly larger than 1 and decreases with the size. As this
+ratio is sensitive to structural characteristics of ZrO2, we can con-
+clude that active sites for propene formation and coke formation
+are different. Furthermore, this relationship provides us hints for
+improving the selectivity to propene with a simultaneous decrease
+in the selectivity to coke. Another important conclusion from Fig. 8
+(b) is related to the effect of the kind of ZrO2 phase on the ratio of
+r(C3H6)/r(coke), which is in general higher for m-ZrO2 than for
+t-ZrO2 and moreover decreases less pronounced with an increase
+in crystallite size. This conclusion is also valid for other degrees
+of propane conversion (Fig. S14) thus supporting its generality.
+Furthermore, operando UVvis tests were used to investigate
+the formation of coke species during PDH reaction over t-ZrO2 cat-
+alysts with crystallite size of 3.7, 4.6 or 5.7 nm and over m-ZrO2
+with 9.1, 13.0 or 43.4 nm crystallites. For all these catalysts, an ini-
+tial propane conversion was between 5% and 12% and the selectiv-
+ity to propene varied from 80% to 100% (Fig. S15). The obtained
+UVvis spectra of three t-ZrO2 samples in form of the relative
+Kubelka-Munk function (F(Rrel) are shown in Fig. 9(ac). F(Rrel)
+increased with time on propane stream across the entire range of
+wavelengths as a consequence of formation of coke species.
+Absorption bands with the maxima at about 300, 420, 600 and
+750 nm can be tentatively identified in the UVvis spectra of
+ZrO2 under PDH conditions. The latter two bands can be ascribed
+to polyaromatic graphitic species [43]. It is clearly seen in Fig. 9
+(ac) that the relative ratio of the intensity of absorption bands
+in higher absorbing wavelength range to that of lower absorbing
+wavelength increases with increasing crystallite size. This means
+that the larger the size of t-ZrO2 crystallites, the higher the fraction
+of polyaromatic graphitic species is. This conclusion is also applica-
+ble to m-ZrO2 samples (Fig. S16). To derive further mechanistic
+insights into coke formation, we analyze changes in the UVvis
+spectra with rising time on stream under PDH conditions. Tempo-
+ral changes of F(Rrel) at 300, 420, 600, or 750 nm are given in
+Fig. S17. As expected F(Rrel) at all the wavelengths increased with
+time on stream thus proving that carbon deposits are continuously
+formed. Some details about this process can be obtained from ana-
+lyzing temporal evolution of the ratio of F(Rrel) at 750 nm to that at
+300 nm (F(Rrel)750/F(Rrel)300). This ratio is given in Fig. 9(d) and
+qualitatively represents the relative fraction of polyaromatic and
+less polymerized species. For all materials, this ratio is well below
+1 within a few first minutes on propane stream and then increases
+with the rising time. Such dependence can be understood when
+assuming that coke precursors (seeds) composed of a few propene
+molecules are initially formed. Due to their low oligomerization
+degree, they should absorb light in UV range. Such precursors
+can further react with propene or surface propane fragments to
+yield higher oligomerized carbon-containing deposits absorbing
+visible light. As seen in Fig. 9(d), the F(Rrel)750/F(Rrel)300 ratio
+increases with an increase in the size of ZrO2 crystallites and its
+temporal changes are also faster. In other words, larger crystallites
+favor formation of polyaromatic graphitic coke, low aggregated
+coke precursor is also formed on smaller crystallite size catalysts.
+On the basis of the above discussion, the size effect on coke for-
+mation can be explained as follows. As the ratio of r(C3H6)/r(coke)
+increases with a decrease in the size of ZrO2 crystallites, it is rea-
+sonable to suggest that there are at least two different active sites
+for propane/propene adsorption and further reaction. One type is
+Zrcus sites, which are active for propene formation (Fig. 1) and
+may also form coke but with a significantly lower rate in compar-
+ison with the rate of propene formation. Another type might be
+regular surface Zr cations, which can adsorb propene and catalyze
+Fig. 7. The rate of propene formation over (d) m-ZrO2, (j) t-ZrO2 and () a-ZrO2 catalysts versus (a) the amount of CO consumed between 400 and 900 C in CO-TPR and (b)
+conductivity in air over ZrO2 materials from Fig. 2(a).
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+321
+its oligomerization. When keeping in mind that ZrO2 reducibility
+increases with a decrease in the size of crystallites (Table 1), the
+ratio of Zcus/Zr will also increase. Thus, the concentration of regular
+sites decreases and consequently a probability of interaction
+between several adsorbed propylene to form heavier hydrocarbons
+being coke precursor lowers too. It is also worth mentioning that
+the rate of coke formation related to catalyst surface area, in gen-
+eral, increases with a decrease in the size of crystallites in a
+similar way as the rate related to catalyst amount (Fig. S18 and
+Fig.
+S14(ac)
+respectively).
+However,
+the
+area-related
+rate
+increases after passing a minimum at the crystallite size of
+33 nm. Such behavior is probably related to the fact that the sur-
+face fraction of Zrcus in ZrO2 with large crystallites is very low. Reg-
+ular surface Zr cations are the dominant species favoring coke
+formation. This explanation is indirectly supported by our previous
+results on PDH over V-based catalysts [17,44]. Coke formation was
+established to depend on the speciation of supported VOx species.
+The larger the species, the higher the selectivity to coke was.
+2
+4
+6
+8
+10
+0
+10
+20
+30
+40
+50
+0
+10
+20
+30
+40
+50
+0.000
+0.005
+0.010
+0.015
+0.020
+0.025
+Crystallite size / nm
+(a)
+Crystallite size / nm
+r(C3H6) / r(coke) 
+(b)
+m-ZrO2
+t-ZrO2
+m-ZrO2
+t-ZrO2
+Fig. 8. The effect of crystallite size on (a) the rate of propane conversion into coke (r(coke)) and (b) the ratio of the rate of propene formation (r(C3H6)) to r(coke) over ZrO2
+catalysts composed of either (d) m-ZrO2 or (j) t-ZrO2.
+3.7 nm
+4.6 nm
+5.7 nm
+9.1 nm
+13.0 nm
+43.4 nm
+300
+400
+500
+600
+700
+800
+λ / nm
+λ / nm
+F(Rrel) / -
+F(Rrel) / -
+(b)
+(a)
+15 min
+30 min
+50 min
+3.7 nm
+15 min
+30 min
+50 min
+4.6 nm
+λ / nm
+15 min
+30 min
+50 min
+5.7 nm
+(c)
+F(Rrel) / -
+0
+10
+20
+30
+40
+50
+60
+0
+1
+2
+3
+4
+time / min
+F(Rrel)750nm / F(Rrel)300nm
+(d)
+300
+400
+500
+600
+700
+800
+300
+400
+500
+600
+700
+800
+Fig. 9. The UVvis spectra of t-ZrO2 with (a) 3.7, (b) 4.6, and (c) 5.7 nm crystallites after different times on PDH stream. (d) The relative ratio of F(Rrel) at 750 nm to 300 nm of
+t-ZrO2 with (h) 3.7, (s) 4.6, (4) 5.7 nm crystallites and of m-ZrO2 with (
+) 9.1, (
+) 13.0 and (
+) 43.4 nm crystallites under PDH conditions. PDH was performed at 550 C
+using a feed containing 40 vol% C3H8 in N2.
+322
+Y. Zhang et al. / Journal of Catalysis 371 (2019) 313324
+4. Conclusions
+In this study we demonstrated that the activity of bare ZrO2 and
+particularly the selectivity to propene in non-oxidative propane
+dehydrogenation can be tuned through the kind of crystal phase
+(monoclinic vs. tetragonal) and crystallite size. For both monoclinic
+and tetragonal ZrO2, the rate of propene formation was established
+to increase with a decrease in the latter parameter. However, mon-
+oclinic ZrO2 shows higher activity than tetragonal ZrO2. This was
+explained by the fact that the former materials can release their
+lattice oxygen easier thus ensure higher concentration of Zrcus.
+DFT calculations suggest that two of such sites form the active site
+on the surface both of monoclinic and tetragonal ZrO2 for propane
+dehydrogenation. This conclusion was also supported experimen-
+tally through establishing correlations between the rate of propene
+formation and the amount of lattice oxygen removed in CO-TPR or
+the ionic conductivity of ZrO2. Thus, the different PDH activity of
+monoclinic and tetragonal ZrO2 is related to the number of active
+Zrcus sites and not to their different intrinsic activity. In addition,
+the selectivity to propene over monoclinic ZrO2 was higher than
+over tetragonal ZrO2. This was attributed to a higher ratio between
+Zrcus sites and those responsible for coke formation. The obtained
+fundamentals provide hints for designing ZrO2-based catalysts
+with improved activity and may be applied to another metal oxides
+previously used or not used for alkane dehydrogenation.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the catalytic direct dehydrogenation of propane (PDH) function as a method for propene production, and what are the key considerations regarding reaction conditions, catalyst types, and industrial applications? Furthermore, how does coke formation on Pt-based catalysts impact the process efficiency, and what strategies can be implemented to mitigate its formation and improve catalyst regeneration?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

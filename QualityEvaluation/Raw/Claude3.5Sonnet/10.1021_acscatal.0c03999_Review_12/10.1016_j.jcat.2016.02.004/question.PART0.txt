@@ -1,0 +1,972 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Reforming and oxidative dehydrogenation of ethane with CO2 as a soft
+oxidant over bimetallic catalysts
+MyatNoeZin Myint a,1, Binhang Yan b,1, Jie Wan c, Shen Zhao d, Jingguang G. Chen b,e,
+a Department of Chemical and Biomolecular Engineering, University of Delaware, Newark, DE 19716, United States
+b Department of Chemistry, Brookhaven National Laboratory, Upton, NY 11973, United States
+c College of Materials Science and Engineering, Tsinghua University, Beijing 100084, China
+d Department of Chemistry, University of Illinois, Urbana, IL 61801, United States
+e Department of Chemical Engineering, Columbia University, New York, NY 10027, United States
+a r t i c l e
+i n f o
+Article history:
+Received 29 September 2015
+Revised 30 January 2016
+Accepted 2 February 2016
+Available online xxxx
+Keywords:
+Reforming
+Oxidative dehydrogenation
+Synthesis gas
+Ethylene
+CeO2 supports
+a b s t r a c t
+An efficient mitigation of abundantly available CO2 is critical for sustainable environmental impact as
+well as for novel industrial applications. Using ethane, CO2 can be catalytically converted into a useful
+feedstock (synthesis gas) and a value-added monomer (ethylene) via the dry reforming pathway through
+the CC bond scission and the oxidative dehydrogenation pathway through the CH bond scission,
+respectively. Results from the current flow-reactor study show that the precious metal bimetallic CoPt/
+CeO2 catalyst undergoes the reforming reaction to produce syngas with enhanced activity and stability
+compared to the parent monometallic catalysts. In order to replace Pt, the activities of non-precious
+CoMo/CeO2 and NiMo/CeO2 are investigated and the results indicate that NiMo/CeO2 is nearly as active
+as CoPt/CeO2 for the reforming pathway. Furthermore, FeNi/CeO2 is identified as a promising catalyst
+for the oxidative dehydrogenation to produce ethylene. Density functional theory (DFT) calculations
+are performed to further understand the different pathways of the CoPt/CeO2 and FeNi/CeO2 catalysts.
+ 2016 Elsevier Inc. All rights reserved.
+1. Introduction
+Emission of CO2, a by-product from many industrial processes
+and power plants, has increased with increasing energy demand
+and growing population [1]. While viable utilization and mitiga-
+tion of CO2 are critical for sustainable environmental impact, cat-
+alytically
+activating
+CO2,
+one
+of
+the
+most
+stable
+carbon-
+containing molecules, remains a challenge [2,3]. CO2 can be acti-
+vated to CO using hydrogen, via the reverse water gas shift (RWGS)
+reaction at relatively mild conditions [4]. To be carbon-efficient,
+the RWGS reaction requires inexpensive CO2-free hydrogen,
+instead of hydrogen produced from the steam reforming of
+methane (SRM) that produces CO2 as a by-product. Alternatively,
+CO2 conversion to synthesis gas or syngas (CO and H2) can be
+achieved via dry reforming with the hydrogen-rich methane mole-
+cule (DRM). DRM is particularly attractive as it simultaneously
+transforms two abundant greenhouse gases into an important
+feedstock, syngas, which can be subsequently used in methanol
+and FischerTropsch (FT) syntheses. Compared to SRM, DRM pro-
+duces pure syngas without requiring the purification step and
+hence has lower operating cost [5,6]. However, DRM is highly
+endothermic and energy intensive due to high reaction tempera-
+tures, with most state-of-the-art DRM catalysts suffering from cat-
+alyst deactivation due to carbon deposition. For instance, Ni, the
+most common DRM catalyst, suffers serious deactivation [7].
+Although the more expensive and scarce Pt-group metals such as
+Pt, Rh and Ru are more resistant to carbon deposition [5,8], their
+limited availability and high cost have hindered their applications
+in the DRM processes.
+An alternative way to convert CO2 to syngas is to use ethane, the
+second-largest component of natural gas after methane [9]. Similar
+to methane reforming, dry reforming of ethane (DRE) (Eq. (1)) pro-
+duces H2/CO via
+C2H6g  2CO2g ! 4COg  3H2g
+DH
+25  429 kJ=mol
+DG
+25  273 kJ=mol
+1
+One significant advantage of DRE over DRM is that the former
+reaction reaches DG < 0 at a temperature that is approximately
+100 K lower than that of the latter and thus potentially reducing
+the operating cost and catalyst deactivation [2]. Other reactions
+of CO2 and ethane include oxidative dehydrogenation of ethane
+http://dx.doi.org/10.1016/j.jcat.2016.02.004
+0021-9517/ 2016 Elsevier Inc. All rights reserved.
+Corresponding author at: Department of Chemical Engineering, Columbia
+University, New York, NY 10027, United States. Fax: +1 (212) 854 3054.
+E-mail address: jgchen@columbia.edu (J.G. Chen).
+1 These authors contributed to the work equally and should be regarded as co-first
+authors.
+Journal of Catalysis xxx (2016) xxxxxx
+Contents lists available at ScienceDirect
+Journal of Catalysis
+journal homepage: www.elsevier.com/locate/jcat
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+with CO2 (ODEC) (Eq. (2)), non-oxidative dehydrogenation (Eq. (3)),
+cracking to produce methane (Eq. (4) and RWGS to form water (Eq.
+(5)):
+C2H6g  CO2g ! C2H4g  COg  H2Ol
+DH
+25  134 kJ=mol
+DG
+25  121 kJ=mol
+2
+C2H6g ! C2H4g  H2g
+DH
+25  137 kJ=mol
+DG
+25  101 kJ=mol
+3
+C2H6g  2CO2g ! CH4g  3COg  H2Ol
+DH
+25  180 kJ=mol
+DG
+25  122 kJ=mol
+4
+CO2g  H2g ! COg  H2Og
+DH
+25  41 kJ=mol
+DG
+25  28 kJ=mol
+5
+The ODEC reaction is an attractive method to produce ethylene,
+one of the most important building blocks in chemical industry
+used in the production of a variety of basic and intermediate prod-
+ucts [10,11]. The ODEC reaction, where CO2 acts as a soft oxidant,
+has potential advantages compared to using oxygen as an oxidant
+or the current production of ethylene from the highly energy inten-
+sive steam cracking of naphtha or ethane. Specifically, ODEC
+employs CO2, which in excess can reduce the amount of coke
+formed at elevated temperature on the catalysts via the reverse
+Boudouard reaction (CO2 + C ? 2CO), thereby increasing conver-
+sion and maintaining the stability of the catalysts. In contract,
+oxidative dehydrogenation of ethane with oxygen leads to total
+oxidation to produce the undesired CO2 by-product and hence
+results in low ethylene selectivity [12].
+While current research efforts focus heavily on DRM [1,5,13]
+and ODE with oxygen [14,15], a comparative study of DRE and
+ODEC over bimetallic catalysts is still lacking. Some of the previ-
+ously studied ODEC catalysts include Ga2O3- and Cr-based cata-
+lysts on various supports, mainly acidic supports such as SiO2
+[3,16]. Addition of Fe, Co and Mn has been shown to increase the
+activity of transition metal oxides [1618]. Besides supported tran-
+sition metal oxides, supported metal carbide, Mo2C/SiO2, has also
+been studied for ODEC [19]. Despite the initial high activity, these
+catalysts suffer from low stability [11,20].
+The primary objective of the current study is to identify low-
+cost and stable catalysts for both DRE and ODEC, using precious
+and non-precious bimetallic catalysts supported on CeO2. Specifi-
+cally, the catalytic performance of CoPt/CeO2, previously reported
+as a selective catalyst for CO2 activation by hydrogen [4], is evalu-
+ated against its respective monometallic catalysts, Pt/CeO2 and Co/
+CeO2, for the reaction of CO2 and ethane. In order to replace Pt, sev-
+eral non-precious bimetallic catalysts, CoMo/CeO2, NiMo/CeO2 and
+FeNi/CeO2, are selected for parallel catalytic performance evalua-
+tion. Reducible CeO2 oxide, known for its ability to promote active
+metal dispersion and to shift easily between reduced and oxidized
+states which help accommodate CO2 dissociation [21], is used as
+the oxide support in this work. Our results indicate that CoPt/
+CeO2 and NiMo/CeO2 are active catalysts for DRE pathway to pro-
+duce syngas, while FeNi/CeO2 shows promising selectivity for the
+ODEC pathway to produce ethylene. The experimental results are
+supported by DFT calculations of energetics for the DRE and ODEC
+pathways over CoPt and FeNi surfaces, respectively.
+2. Materials and methods
+2.1. Catalyst preparation
+Monometallic (Pt, Co, Mo, Ni, and Fe) and bimetallic catalysts
+were synthesized by incipient wetness impregnation over as-is
+commercially obtained CeO2 (3545 m2/g, cubic, SigmaAldrich)
+supports, as described previously [4]. Precursor solutions were pre-
+pared by dissolving Pt(NH3)4(NO3)2 (Alfa Aesar), Co(NO3)26H2O
+(Alfa Aesar), H24Mo7N6O244H2O (Alfa Aesar), Ni(NO3)26H2O (Alfa
+Aesar) and Fe(NO3)39H2O (Alfa Aesar). The catalysts were then
+dried at 353 K for 23 h and calcined at 563 K for 2 h. For all
+bimetallic catalysts, a co-impregnation synthesis procedure was
+used to maximize the number of bimetallic bond formation [22].
+Metal loading amounts (atomic ratio of 1:3 for Pt:Co, Mo:Ni, Mo:
+Co, Ni:Fe) and calcination temperature were selected to be consis-
+tent with the previous studies from our research group [4].
+2.2. Catalyst characterization
+2.2.1. Pulse CO chemisorption
+Using an AMI-300ip (Altamira), pulse CO chemisorption was
+performed to compare the number of active sites in each supported
+catalyst. Approximately 200 mg of catalyst was added into a U-
+shaped quartz tube and dried at 393 K for 30 min, under helium
+with a constant flow rate of 50 mL/min. The reduction was per-
+formed with a heating rate of 10 K/min from 323 K to 723 K and
+held at 723 K for 45 min, using a mixture of 10% H2 in Ar (30 mL/
+min). Before pulse CO chemisorption experiments, the reduced cat-
+alyst was purged in He (50 mL/min) at 723 K for 20 min for degas-
+sing and then cooled down to 313 K. A thermal conductivity
+detector (TCD) was used to analyze the amount of CO flowing
+out of the reactor. Pulses of 10% CO in He (loop 590 lL) were
+injected onto a He stream (50 mL/min) until the peak area became
+constant. The amount of CO adsorbed by each catalyst provides a
+means to calculate the turnover frequency (TOF) and quantitatively
+compare the activity between each supported catalyst.
+2.2.2. Temperature programmed reduction (TPR)
+Temperature programmed reduction (TPR) was carried out in
+the same AMI-300ip (Altamira) instrument equipped with a ther-
+mal conductivity detector (TCD). For each TPR experiment, approx-
+imately 200 mg of fresh catalyst was added into a U-shaped quartz
+tube and pre-treated at 393 K for 30 min in a He flow (30 mL/min)
+and then cooled to 323 K. The flow was then switched to a mixture
+of 10% H2 in Ar with a constant flow rate of 30 mL/min, and the TPR
+measurements were performed with a heating rate of 10 K/min to
+723 K. The amount of hydrogen consumed as a function of reduc-
+tion temperature was continuously monitored and recorded by
+TCD, which can be used to compare the reducibility of active met-
+als in supported catalysts and to examine the alloy formation of the
+bimetallic catalysts.
+2.2.3. Flow reactor studies
+Reactions of CO2 and ethane were performed in a  in. quartz
+reactor under atmospheric pressure. Approximately 100 mg of cat-
+alysts, sieved to 1620 mesh, were used for steady-state experi-
+ments. Catalysts were reduced at 723 K for 1 h with a feed ratio
+of unity for H2 and He (20 mL/min each). With the constant total
+flow rate at 40 mL/min, CO2, C2H6 and He as a diluent were intro-
+duced at 1:1:2 ratio, respectively, into the reactor. The catalysts
+were heated to 873 K and kept at this temperature for 12 h for
+steady-state measurements. Gas products were analyzed on-line
+using a gas chromatography (GC), equipped with a flame ionization
+detector (FID) and thermal conductivity detector (TCD). Control
+experiments were performed using a blank quartz reactor with
+and without the CeO2 support at 873 K. Both cases show little
+activity, indicating that the gas-phase reaction, quartz sand and
+the support will not strongly affect the reaction.
+For catalysts which show a selective dehydrogenation activity,
+the amount of H2 produced was below the detection limits of GC,
+2
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+and therefore to be consistent, conversion, selectivity and TOF
+were defined as follows:
+Conversion  moles
+inlet
+reactant  moles
+outlet
+reactant
+moles
+inlet
+reactant
+ 100%
+Selectivityi  moles of carbon  containing producti
+Sum of carbon  containing products  100%
+TOF 
+Conversion  Inlet flow rate  Pressure
+CO uptake  Catalyst weight  Temperature  R
+2.3. Density functional theory (DFT) calculations
+Density functional theory (DFT) [23,24] calculations were per-
+formed using the Vienna Ab-Initio Simulation Package (VASP) code
+[25,26]. A plane wave cut-off energy of 400 eV and 3  3  1 Mon-
+khorstPack [27] grid was used for total energy calculations. The
+interactions between the electrons and nuclei were treated with
+all electron like projector augmented wave (PAW) potentials with
+the generalized gradient approximation (GGA) [28,29] using PW91
+functionals [30]. Ionic positions were optimized until Hellman-
+Feynman force on each ion was smaller than 0.02 eV/Å.
+The Pt-terminated CoPt(111) surface was modeled using a four
+layer 3  3 surface slab. The Pt(111) surface was modified by
+replacing subsurface (2nd layer) Pt atoms with the Co atoms to
+model Pt-terminated CoPt(111) surface [31]. The mixed FeNi
+(111) surface was modeled using a four layer 4  4 surface slab.
+The Ni(111) surface was modified by replacing half of the Ni atoms
+in the top two layers with Fe atoms to model a mixed FeNi(111)
+surface to mimic the slab configuration for the previously reported
+FeNi-supported catalysts [32]. A vacuum layer of 14 Å thick was
+added in the slab cell along the direction perpendicular to the sur-
+face in order to minimize the artificial interactions between the
+surface and its periodic images. During geometry optimization,
+atoms in the top two layers were allowed to relax while the atoms
+in the bottom two layers were fixed. The binding energy of an
+adsorbate is calculated as follows:
+BEadsorbate  Eslab  adsorbate  Eslab  Eadsorbate
+where E(slab + adsorbate), E(slab) and E(adsorbate) are the total
+energies of slab with adsorbate, clean slab and adsorbate species
+in gas phase, respectively. The detailed information regarding the
+mixed CoPt(111) and the Ni-terminated FeNi(111) can be found
+in the Supplementary Information.
+3. Results and discussion
+3.1. Thermodynamic analysis
+A thermodynamic analysis to investigate the effect of tempera-
+ture on the Gibbs free energy (DG) for DRM, DRE and ODEC from
+298 to 1273 K is performed using the HSC Chemistry 8 software.
+As shown in Fig. 1, temperature affects DG significantly: while all
+of the above reactions are highly endothermic at low temperature
+(298 K) due to the stable nature of the reactants, an increase in
+temperature to 1173 K results in thermodynamically favorable
+for all three reactions. It should be pointed out that the tempera-
+ture at which DG becomes zero varies significantly among the
+three reactions: the reaction temperature for DRE is lower by about
+100 K and 200 K, compared to DRM and ODEC, respectively. This is
+in agreement with previous thermodynamic calculations by Xiaod-
+ing and Moulijn [2]. Lower reaction temperature for DRE means
+less energy required and possibly reduced catalyst deactivation
+problems which are typically associated with coking and sintering
+resulted from high reaction temperatures. At sufficiently high tem-
+peratures, both DRE and ODEC occur simultaneously and hence it is
+important to identify catalysts which kinetically control the selec-
+tivity toward each reaction.
+Fig. 1. Thermodynamic analysis of dry reforming of methane (green) and ethane
+(red) and oxidative dehydrogenation of ethane with CO2 (blue) using the HSC
+Chemistry 8 software.
+Fig. 2. Thermodynamic equilibrium plots for CO2 + C2H6 reaction at 1 atm from 373
+to 1273 K and at inlet feed ratio of CO2: C2H6 = 1 with products (a) CO, H2 and H2O
+only (b) CO, H2, H2O and C2H4. The plots were created by using Gibbs free energy
+minimization algorithm on HSC Chemistry 8 software.
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+3
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+Although industrial processes rarely operate at equilibrium, it
+has been shown that a variety of reforming catalysts can achieve
+compositions close to equilibrium [1,33]. Hence, equilibrium plots
+provide insights for thermodynamic limitations and the effects of
+variables such as temperature and pressure [33]. Noureldin et al.
+[33] established thermodynamic trends for syngas production
+from the reforming of natural gas using thermodynamic equilib-
+rium modeling in order to maximize hydrogen generation and eco-
+nomic benefits. Pakhare et al. [34] studied the equilibrium
+compositions for the DRE process using the HSC Chemistry 7.1
+software to identify the effect of reaction temperature. In this
+study, Gibbs free energy minimization simulation from the HSC
+Chemistry 8 software is used to generate thermodynamic equilib-
+rium plots for the reactions of CO2 and ethane at an equimolar
+ratio. Fig. 2a shows the equilibrium concentrations of the CO2 +
+ethane reaction with products CO, H2 and H2O from 373 to
+1273 K at 1 atm. The analysis indicates that the temperature
+affects equilibrium compositions significantly, particularly those
+of H2 and CO. The ratio of H2 to CO, an important variable for syn-
+gas generation, progressively increases starting at 473 K and
+reaches 0.75 at 853 K, as expected from the reaction stoichiometry.
+The H2/CO ratio then remains constant at 0.75 till 1273 K. Further-
+more at 853 K, the ethane/CO2 ratio approaches 0.5, consistent
+with the stoichiometric coefficients for DRE.
+When simultaneous oxidative dehydrogenation reaction is con-
+sidered, however, a different equilibrium composition is observed
+in Fig. 2b after 823 K, where the production of ethylene begins.
+The ratio of H2 to CO increases and eventually approaches unity
+at 1273 K, consistent with stoichiometry for ODEC. Fig. 2b also
+shows a higher ethane conversion at high temperature. Based on
+trends in Figs. 1 and 2a and b, a reaction temperature of 873 K is
+selected to avoid gas phase reactivity and rapid catalyst deactiva-
+tion associated with high reaction temperatures in order to inves-
+tigate the catalytic activity of supported bimetallic catalysts in a
+flow reactor at steady-state. It should be pointed out that the equi-
+librium amounts in Fig. 2b are calculated based on the assumption
+that all possible reactions, ODEC and DRE, are simultaneously tak-
+ing place. Hence, while the reaction temperature of 873 K in Fig. 2b
+results in a low equilibrium amount for ethylene, if ODEC alone is
+assumed to take place, by 873 K, ethane conversion to produce
+ethylene is achieved up to 20%.
+3.2. Catalyst selection and characterization
+CoPt/CeO2 has previously been identified as an active and selec-
+tive catalyst for the catalytic reduction of CO2 by hydrogen [4].
+Compared to other bimetallic catalysts such as NiPt/CeO2 and
+NiPd/CeO2, CoPt/CeO2 produces the highest amount of the desir-
+able product CO, instead of fully reducing CO2 into CH4 [4]. The
+combination of a reducible CeO2 support with the active and selec-
+tive CoPt bimetallic catalysts makes CoPt/CeO2 a promising candi-
+date for the reaction of CO2 with ethane. However, in order to
+overcome the dependence for expensive and scarce precious met-
+als, several non-precious metal bimetallic catalysts are selected for
+this study. Particularly, the activities of CoMo/CeO2 catalyst, which
+replaces Pt with Mo, as well as NiMo/CeO2, which employs Ni, the
+most common reforming transition metal, are investigated and
+compared with that of CoPt/CeO2. Furthermore, since Fe is known
+to enhance the catalytic activity of Cr-supported catalysts in ODEC
+[17], FeNi/CeO2 is also studied in this work.
+3.2.1. CO uptake and chemisorption
+In order to obtain a quantitative comparison of the number of
+active sites on different catalysts via the amount of adsorbed CO,
+pulse CO chemisorption was performed. As shown in Table 1, the
+CO uptake values show the following trends: (1) CoPt/CeO2 >
+Table 1
+Summary of flow reactor results for CO2 + ethane reaction (10 mL/min each) at 873 K diluted in 20 mL/min He. Values of conversion and selectivity calculated by averaging data points between 500 and 700 min on stream.
+Catalysta
+Chemisorption (lmol CO/g)
+Conversion (%)
+Space-time Yield
+(105 molproduct
+gcat
+1 min1a)
+TOF (min1)
+Selectivity for
+carbon-containing Products
+CO2
+C2H6
+CO2
+C2H4
+CO2
+C2H6
+CO
+CH4
+C2H4
+CoPt/CeO2
+33.6
+44.7
+24.0
+200
+1.2
+18.5
+9.9
+98.7
+0.6
+0.7
+CoMo/CeO2
+7.9
+14.0
+7.0
+60
+1.3
+24.7
+12.3
+98.0
+0.1
+1.9
+NiMo/CeO2
+18.0
+37.3
+19.5
+200
+0.6
+28.9
+15.1
+99.5
+0.1
+0.4
+FeNi/CeO2
+28.9
+10.8
+9.1
+20
+10
+5.2
+4.4
+68.7
+0.3
+31.0
+Pt/CeO2
+23.2
+18.2
+8.8
+90
+2.8
+10.9
+5.3
+97.0
+0.4
+2.6
+Co/CeO2
+10.2
+19.4
+4.7
+100
+0.9
+26.6
+6.5
+99.3
+0.1
+0.6
+Mo/CeO2
+9.5
+5.7
+5.1
+8.6
+3.2
+8.3
+7.4
+74.0
+1.0
+25.0
+Ni/CeO2
+12.0
+20.5
+13.3
+60
+5.0
+23.8
+15.4
+93.7
+0.2
+6.1
+Fe/CeO2
+17.2
+12.0
+11.1
+9.3
+3.5
+9.7
+9.0
+76.0
+1.2
+22.8
+a For bimetallic catalysts, the metal loading corresponds to a Co/Pt (Co/Mo, Ni/Mo or Fe/Ni) atomic ratio of 31. The metal loadings in monometallic catalysts are 1.7 wt%, 0.5 wt%, 0.8 wt%, 0.5 wt% and 0.5 wt% for Pt/CeO2,
+Co/CeO2, Mo/CeO2, Ni/CeO2, and Fe/CeO2, respectively.
+4
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+Pt/CeO2 > Co/CeO2, (2) Co/CeO2 > Mo/CeO2 > CoMo/CeO2, (3) NiMo/
+CeO2 > Ni/CeO2 > Mo/CeO2, and (4) FeNi/CeO2 > Fe/CeO2 > Ni/CeO2.
+In general, all bimetallic catalysts, except CoMo/CeO2, have higher
+CO uptake values than those of the respective monometallic
+catalysts.
+3.2.2. Temperature programmed reduction (TPR)
+The reducibility of active metals in supported catalysts is inves-
+tigated using temperature programmed reduction (TPR) and the
+comparison
+of
+each
+bimetallic
+catalyst
+with
+respective
+monometallic catalysts is shown in Fig. 3ad for CoPt/CeO2,
+CoMo/CeO2, NiMo/CeO2 and FeNi/CeO2, respectively. Generally,
+the TPR profiles of bimetallic catalysts are different from those of
+monometallic catalysts, suggesting that the formation of bimetallic
+bonds affects the reduction kinetics. Fig. 3a shows that the reduc-
+tion peaks of CoPt/CeO2 shift to lower temperatures, compared to
+those
+of
+monometallic
+catalysts,
+indicating
+an
+increase
+in
+reducibility. As shown in Table 1, the bimetallic CoPt/CeO2 catalyst
+shows
+a
+higher
+CO
+uptake
+value
+than
+the
+corresponding
+monometallic catalysts. This is likely due to the synergistic interac-
+tion between the two metals. The presence of Pt facilitates the dis-
+sociation of molecular hydrogen, which in turn promotes the
+reduction of CoOx species, leading to a higher dispersion of active
+metals and correspondingly a higher CO uptake value. However,
+the TPR profiles of CoMo/CeO2 and NiMo/CeO2 show a different
+trend. While the reduction peaks of both Co- and Ni-modified
+molybdenum bimetallic catalysts have higher reduction tempera-
+tures, compared to those of either Co or Ni alone, the bimetallic
+catalysts show lower reduction peak temperatures compared to
+the parent Mo/CeO2 catalyst. This suggests that by modifying Mo
+with either Co or Ni, the reducibility of Mo is enhanced. In the case
+of FeNi/CeO2, while the bimetallic catalyst shows a very similar
+TPR profile as Fe/CeO2 with similar reduction temperatures, FeNi/
+CeO2 clearly has a higher peak area, compared to the parent cata-
+Fig. 3. TPR profiles for comparison of bimetallic catalysts with respective monometallic catalysts (a) CoPt/CeO2, Pt/CeO2, Co/CeO2, (b) CoMo/CeO2, Mo/CeO2, Co/CeO2, (c)
+NiMo/CeO2, Mo/CeO2, Ni/CeO2, and (d) FeNi/CeO2, Fe/CeO2, Ni/CeO2.
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+5
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+lysts, suggesting an increased reducibility. Overall, results in Fig. 3
+show a general increase in reducibility of active metals upon
+bimetallic formation.
+3.3. Catalytic evaluation
+3.3.1. Comparison of bimetallic catalysts
+Table 1. summarizes the activity and selectivity of CoPt/CeO2,
+NiMo/CeO2,
+CoMo/CeO2,
+FeNi/CeO2
+and
+the
+corresponding
+monometallic
+catalysts
+at
+873 K.
+Concentrations
+of
+carbon-
+containing products between 0 and 10 h on stream as a function
+of time on stream are shown in Figs. 4 and 5 for bimetallic and
+monometallic catalysts, respectively.
+As summarized in Table 1, among the bimetallic catalysts, on
+the basis of the mass of the catalysts, CoPt/CeO2 shows the highest
+conversions for CO2 and ethane, 44.7% and 24.0%, respectively, 
+approximately over twofold higher than those in the monometallic
+catalysts. Upon replacing Pt with Mo, however, the conversions are
+reduced as much as three times, suggesting that CoMo/CeO2 is less
+active than CoPt/CeO2. However, when Ni, instead of Co, is alloyed
+with Mo, conversions of CO2 and ethane are comparable to those of
+the CoPt/CeO2 catalyst, with 37.3% and 19.5% for CO2 and ethane
+conversions, respectively. This is a particularly promising result
+since NiMo/CeO2 is a precious metal free catalyst which can poten-
+tially reduce the need for precious metal catalysts for DRE. Table 1
+shows that all three bimetallic catalysts, CoPt/CeO2, CoMo/CeO2,
+and NiMo/CeO2, show high selectivity of over 98% for the reform-
+ing product CO via the CC bond cleavage.
+When Fe is alloyed with Ni, on the other hand, despite relatively
+low conversions, the formation of ethylene is observed. The selec-
+tivity for ethylene is 30% for FeNi/CeO2, suggesting that FeNi shows
+promising selectivity to the ODEC reaction via the CH bond cleav-
+age. For all bimetallic reforming catalysts, conversions of CO2 and
+ethane are approximately 2:1 and for the dehydrogenation FeNi/
+CeO2 catalyst, conversions are nearly 1:1, consistent with the reac-
+tion stoichiometric coefficients, discussed previously in Eqs. (1)
+and (2), respectively.
+The TOF values shown in Table 1, however, suggest a different
+trend due to varying CO uptake values. Among bimetallic catalysts,
+the TOF trend of CO2 shows that NiMo/CeO2 > CoMo/CeO2 > CoPt/
+CeO2 > FeNi/CeO2, resulting from low CO uptake in molybdenum-
+based bimetallic catalysts.
+3.3.2. Comparison of bimetallic catalysts with corresponding
+monometallic catalysts
+As shown in Table 1, the CoPt/CeO2 catalyst shows the highest
+activity on the basis of mass, compared to its monometallic cata-
+lysts, Pt/CeO2 and Co/CeO2. The TOF values in Table 1, in contrast,
+show that Co/CeO2 has the highest TOF due to its low CO uptake.
+Selectivity at similar conversions, although not included, shows
+that all CoPt/CeO2, Pt/CeO2 and Co/CeO2 catalysts have over 97%
+selectivity for the reforming product CO, suggesting that all cata-
+lysts favor the reforming pathway via the CC bond cleavage. In
+the case of the CoMo/CeO2 bimetallic catalyst, both the activity
+and TOF show the same trend: Co/CeO2 > CoMo/CeO2 > Mo/CeO2.
+While both Co/CeO2 and CoMo/CeO2 lead to CO selectivity over
+98%, Mo/CeO2 shows approximately 25% for ethylene selectivity.
+Fig. 4. Concentration of carbon-containing products for reactions of ethane and CO2 (10 mL/min each) diluted in 20 mL/min He at 873 K for (a) CoPt/CeO2, (b) CoMo/CeO2, (c)
+NiMo/CeO2 and (d) FeNi/CeO2 plotted versus time on stream.
+6
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+This means that by modifying Mo with Co, the selectivity could be
+tuned from partially selective to dehydrogenation to highly selec-
+tive toward the reforming pathway.
+For NiMo/CeO2, modification of Mo with Ni enhances the activ-
+ity of the bimetallic catalyst compared to either parent metal cat-
+alyst. Similar to CoMo/CeO2, NiMo/CeO2 shows over 99% selectivity
+for the reforming pathway. This result suggests that a highly active
+and stable non-precious NiMo/CeO2 catalyst can be used to replace
+the need for the precious metal CoPt/CeO2 catalyst for the DRE
+reaction. When Ni/CeO2 is modified to form FeNi/CeO2, the
+bimetallic catalyst shows a promising selectivity toward the ODEC
+pathway to form ethylene with selectivity up to 30%. A comparison
+of results in Figs. 4 and 5 also reveals differences in the stability of
+monometallic and bimetallic catalysts. Generally, the stability of
+all bimetallic catalysts is enhanced compared to the corresponding
+monometallic catalysts. To obtain quantitative deactivation, the
+percent deactivation between 1 and 10 h on stream for all catalysts
+is calculated and shown in Table 2. The deactivation is reduced
+from 48.7% in Pt/CeO2 to 10.4% in CoPt/CeO2, suggesting that the
+addition of Co increases the stability of the Pt/CeO2 catalyst. The
+Fig. 5. Concentration of carbon-containing products for reactions of ethane and CO2 (10 mL/min each) diluted in 20 mL/min He at 873 K for (a) Pt/CeO2, (b) Co/CeO2, (c) Mo/
+CeO2, (d) Ni/CeO2 and (e) Fe/CeO2 plotted versus time on stream.
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+7
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+same stability effect of Co is observed upon modification of Mo/
+CeO2 with Co; the deactivation of CoMo/CeO2 is reduced to 25.0%
+from 38.5% in Mo/CeO2. Table 2 also shows that the deactivation
+of Ni/CeO2 is significant, up to 52.8, consistent with previous
+reports [5]. However, the stability of the NiMo/CeO2 bimetallic cat-
+alyst
+is
+significantly
+enhanced,
+compared
+to
+either
+parent
+monometallic catalyst. In fact, the stability of non-precious
+NiMo/CeO2 is comparable to that of precious CoPt/CeO2. Similarly,
+an enhanced stability is also observed in FeNi/CeO2.
+3.4. Reaction pathways via DFT calculations
+As summarized in the literature [31], the formation of bimetal-
+lic alloys modifies the surface d-band center and changes the bind-
+ing energies of reactants and surface intermediates, leading to
+different catalytic activity and selectivity for several types of reac-
+tions. More detailed DFT calculations should be performed to iden-
+tify general trends and descriptors for the reaction pathways of
+CO2 with ethane. The CoPt and FeNi bimetallic systems are further
+investigated using DFT to gain more mechanistic insights for the
+DRE and ODEC pathways, respectively. As a simplified representa-
+tion of the dominant plane of nanoparticles of CoPt and FeNi,
+model surfaces of CoPt(111) and FeNi(111) with the most thermo-
+dynamically stable facet are constructed without the CeO2 support
+since recently we have reported that the calculated energy profiles
+for the reforming of ethane on Pt(111) and CeO2/Pt(111) show a
+similar trend, although the strong metalsupport interaction
+causes the reaction to be more thermodynamically favorable
+[35]. Based on the previous studies, Pt-terminated CoPt(111)
+[31], Ni-terminated FeNi(111), mixed CoPt(111) [31] and mixed
+FeNi(111) [32] surface are selected to investigate the energy pro-
+file during the reaction. The binding energies of potential reaction
+intermediates for CC and CH bond cleavage for the reaction of
+ethane and CO2 are calculated on the Pt-terminated CoPt(111)
+and mixed FeNi(111) surfaces shown in Fig. 6a and b, respectively.
+The binding energies of potential reaction intermediates (Table S2)
+and the enthalpy change for the oxidative CC and CH bond cleav-
+age of ethane (Fig. S5) on CoPt(111) and FeNi(111) surfaces are
+calculated and provided in the Supplementary Information. In
+these calculations the surfaces are modified by oxygen atoms from
+the dissociation of CO2. The results in Table 3 show that all inter-
+mediates bind more strongly on mixed FeNi(111) than on Pt-
+terminated CoPt(111). In addition, the results show that the bind-
+ing energy difference between Pt-terminated CoPt(111) and the
+mixed surfaces is more pronounced for species adsorbed via the
+oxygen atom than those via the carbon atom (Fig. 7) mainly
+because of significantly enhanced O binding on the mixed surfaces.
+The change in energy for the oxidative CC and CH bond cleav-
+age of ethane is calculated on all surfaces with two atomic oxygen
+preadsorbed on all surfaces. The energy profiles are shown in
+Fig. 8a and b for the Pt-terminated CoPt(111) surface and the
+mixed FeNi(111) surfaces, respectively. Here the energy change
+is calculated for the reforming pathway via the CC bond cleavage
+leading to products CH3
+, CO and H2O(g). For the oxidative dehy-
+drogenation pathway, the energy change is calculated along a
+pathway via the CH bond cleavage leading to products CH2CH
+and H2O(g). For all surfaces, the atomic hydrogen is assumed to
+react with O on the surface to form H2O(g).
+Fig. 8a shows that on Pt-terminated CoPt(111), the CC bond
+cleavage of ethane to form CH3
+, CO and H2O (g) is exothermic,
+and energetically more favorable compared to the selective CH
+bond scission to form CH2CH2
+. In particular, it is found that the oxi-
+dation of ethane to form CH3CH2O is energetically more favorable
+than the dehydrogenation of ethane to form CH3CH2
+. The CH3CH2-
+O species subsequently undergoes two successive dehydrogena-
+tion reactions to form CH3CO, which then undergoes CC bond
+cleavage to form CH3
+ and CO. Thus, the DFT results suggest that
+the Pt-terminated CoPt(111) surface promotes the reforming path-
+way to form CO. This is in agreement with the flow reactor exper-
+imental studies shown in Table 1. Interestingly, however, the DFT
+calculated energy profile on the mixed CoPt(111) surface in
+Fig. S5a does not show similar trend to that on the Pt-terminated
+CoPt(111) surface. Specifically, both the CC and CH bond scis-
+sions are endothermic and the energy difference between the
+two pathways is significantly reduced, as low as approximately
+0.2 eV. This result implies that the mixed CoPt surface is neither
+selective to CC bond scission nor CH bond scission, which is dif-
+ferent from the flow reactor results of selective CC bond scission
+Table 2
+The metal loading and percent deactivation of bimetallic and monometallic catalysts.
+Catalysta
+Metal loading (wt%)
+% Deactivation
+CoPt/CeO2
+1.7% Pt, 1.5% Co
+10.4
+CoMo/CeO2
+0.8% Mo, 1.5% Co
+25.0
+NiMo/CeO2
+0.8% Mo, 1.5% Ni
+15.0
+FeNi/CeO2
+0.5% Ni, 1.4% Fe
+28.9
+Pt/CeO2
+1.7
+48.7
+Co/CeO2
+0.5
+26.1
+Mo/CeO2
+0.8
+38.5
+Ni/CeO2
+0.5
+52.8
+Fe/CeO2
+0.5
+62.3
+a For bimetallic catalysts, the metal loading corresponds to a Co/Pt (Co/Mo, Ni/Mo
+or Fe/Ni) atomic ratio of 31. Deactivation percentages are calculated between
+100 min and 630 min on stream.
+Fig. 6. DFT optimized slabs models. Side (top) and top (bottom) views of (a) Pt-
+terminated CoPt(111) and (b) mixed FeNi(111) surfaces. Light gray: Pt, blue: Co,
+aqua: Ni and brown: Fe, respectively.
+Table 3
+DFT calculated binding energies (in eV) of potential ethane dehydrogenation
+intermediates and atomic O on Pt-terminated CoPt(111) and mixed FeNi(111)
+surfaces.
+Species
+Pt-terminated CoPt
+(111)
+Mixed FeNi(111)
+BE (eV)
+Site
+BE (eV)
+Site
+H
+2.40
+fcc
+2.87
+fcc(Fe, Fe, Ni)
+O
+3.46
+fcc
+5.87
+fcc(Fe Fe, Ni)
+CO
+1.10
+hcp
+1.84
+fcc(Fe, Ni, Ni)
+CH3
+1.68
+top
+2.19
+fcc(Fe, Fe, Ni)
+CH2CH2
+0.37
+toptop
+0.94
+top(Fe)hcp(Fe, Fe, Ni)
+CH2CH
+2.00
+toptop
+2.96
+top(Fe)hcp(Fe, Fe, Ni)
+CH3CH2
+1.51
+top
+1.82
+fcc(Fe, Fe, Ni)
+CH3CH2O
+1.43
+fcc
+3.17
+fcc(Fe, Fe, Ni)
+CH3CHO
+0.24
+top
+0.65
+top(Fe)fcc(Fe, Fe, Ni)
+CH3CO
+1.84
+top
+2.31
+top(Fe)fcc(Fe, Fe, Ni)
+8
+MyatNoeZin Myint et al. / Journal of Catalysis xxx (2016) xxxxxx
+Please cite this article in press as: M. Myint et al., Reforming and oxidative dehydrogenation of ethane with CO2 as a soft oxidant over bimetallic catalysts, J.
+Catal. (2016), http://dx.doi.org/10.1016/j.jcat.2016.02.004
+for reforming over the supported CoPt catalysts. This result sug-
+gests that CoPt/CeO2 could be Pt-terminated under reaction condi-
+tions or experiments performed in the current study.
+In contrast to the Pt-terminated CoPt(111) surface, DFT calcula-
+tions predict a different reaction scheme on the mixed FeNi(111)
+surface. On the mixed FeNi(111) surface, as shown in Fig. 8b, the
+pathway for selective CH bond cleavage (leading to product CH2-
+CH2
+) is energetically more favorable than the pathway for CC
+bond cleavage. Thus the mixed FeNi(111) surface is predicted to
+preferentially dehydrogenate ethane to form CH2CH2. The DFT pre-
+diction supports the flow reactor data for the detection of ethylene
+as one of the major products over the FeNi/CeO2 catalyst in Table 1.
+Instead, the energy profile on the Ni-terminated FeNi(111) surface
+in Fig. S5b shows a reverse trend to the experimental data. On this
+surface, the oxidation of ethane to form CH3CH2O is exothermic
+and energetically more favorable than the dehydrogenation of
+ethane to form CH3CH2
+. Moreover, the CC bond cleavage of ethane
+to form CH3
+, CO and H2O (g) is energetically more favorable com-
+pared to the selective CH bond scission to form CH2CH2
+, which is
+highly
+endothermic.
+The
+DFT
+results
+suggest
+that
+the
+Ni-
+terminated FeNi(111) is quite selective to CC bond scission to
+promote the reforming pathway. This result suggests that FeNi/
+CeO2 could be mixed FeNi(111) under reaction conditions or
+experiments performed in the current study.
+4. Conclusions
+The catalytic performance of precious metal bimetallic catalyst,
+CoPt/CeO2, and non-precious metal bimetallic catalysts, CoMo/
+CeO2, NiMo/CeO2, and FeNi/CeO2 is compared for the reaction of
+CO2 and ethane. In general the catalytic stability is enhanced in
+all bimetallic catalysts over the corresponding monometallic cata-
+lysts. In terms of selectivity, CoPt/CeO2, CoMo/CeO2, and NiMo/
+CeO2 favor the reforming pathway to produce syngas via the CC
+bond cleavage, while FeNi/CeO2 shows promising selectivity to
+the oxidative dehydrogenation pathway to produce ethylene via
+the CH bond cleavage. DFT calculated energy profiles on CoPt/
+CeO2 and FeNi/CeO2 confirm different reaction pathways, consis-
+tent with the experimental results.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the mechanisms of C-H bond activation and catalyst regeneration in oxidative dehydrogenation of alkanes for redox-active and redox-inactive metal oxide catalysts, explaining the role of traditional oxidants and CO2. Include a discussion on the effectiveness of different catalysts (such as V2O5, VOx/SiO2, CeO2, and transition metal clusters) in activating CO2 for oxidative dehydrogenation of propane, considering the proposed mechanisms and energy barriers for CO2 dissociation.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 
