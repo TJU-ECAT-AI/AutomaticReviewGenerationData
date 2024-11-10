@@ -1,0 +1,67 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+Dimensional Understanding of Boron-Based Catalysts for Oxidative Propane Dehydrogenation: Structure and Mechanism
+1. Introduction
+ARTICLE SECTIONSJump To
+Propene, the second most important olefin building block and raw material in the chemical industry, is widely used to prepare value-added chemicals and polymer products such as polypropylene, propylene oxide, acrylonitrile, acrylic acid, isopropylbenzene, and butyl alcohol. (1−3) With the development of the modern chemical industry and the increase in consumption of high-value-added products, the annual demand for propene is increasing. (4,5) Among the existing propene production technologies, the synthesis of propene through propane dehydrogenation is more economically viable and environmentally friendly. (6−9)
+Compared with the direct dehydrogenation of propane, (1,2,10−20) oxidative dehydrogenation of propane to propene (ODHP) requires a lower reaction temperature owing to the exothermicity of the oxidation reaction. This characteristic of ODHP exhibits considerable advantages and broad prospects for the efficient and continuous conversion of propane to propene. (21−25) Currently, conventional catalysts used in the ODHP process are mainly transition metal oxide catalysts, such as VOx, MgOx, WOx, CrOx, and silica-supported catalysts. (26−38) The reaction generally follows the Mars–van Krevelen mechanism; that is, the lattice oxygen activates the C–H bond of the alkane, and then O2 replenishes the lattice oxygen to regenerate the active site, thus completing the catalytic cycle. However, the strong interaction between the d orbital of the transition metal and the π orbital of olefin results in the easy C–C bond cleavage of olefin and subsequent peroxidation of hydrocarbons. Typically, as the propane conversion on the transition metal oxide catalyst approaches 20%, the propylene selectivity is less than 50%, and the selectivity of COx peroxidation products reaches 40–50%. This phenomenon can be explained based on the bond energy of the reactants and products. (21) On one hand, the weakest C–H bond in propene is weaker than that of propane (360.7 versus 401.3 kJ·mol–1), which makes propene thermodynamically more vulnerable to oxygen attack compared to propane. On the other hand, the weakest C–C bond in propene is 413.8 kJ·mol–1, only a little higher than that of the weakest C–H bond of propane. Consequently, the generated propene tends to be activated preferentially on the catalysts, leading to the cleavage of the C–C bond and overoxidation of propane to COx. The lattice-activated oxygen is too reactive to prevent potential side reactions in the ODHP reaction. Therefore, the key scientific challenge is to discover a suitable catalyst that can inhibit the overoxidation of propene to more thermodynamically stable CO and CO2 (COx), particularly at a high propane conversion rate.
+In the last century, researchers attempted to use supported boron oxide (39) and B–P mixed oxide (40) catalysts for alkane oxidative dehydrogenation and partial oxidation. These pioneering studies revealed that boron could be a crucial component to improve alkane conversion under oxidizing conditions. Recently, since Hermans et al. and Lu et al. reported hexagonal boron nitride (h-BN)-based materials as metal-free catalysts for the ODHP reaction that exhibited excellent catalytic performance, (25,41) considerable progress has been achieved in this field and numerous boron-based (B-based) catalysts have been developed, including the bulk B catalyst, supported B catalyst, metallic borides, nonmetallic borides, and porous B materials. (1,6,42−44) Although the chemical states of the B-based materials vary widely in their pristine form, the structure and kinetic behaviors of the diverse B catalysts are similar in the ODHP reaction. Investigations of the active site of B catalysts reveals that an oxygen functionalization process occurs under reaction conditions, generating the three-coordinated oxygen/hydroxyl modified B(OH)xO3–x species as the real active species in nearly every B-based ODHP catalyst. Owing to the unique free radical reaction pathways of the B(OH)xO3–x species, the peroxidation of olefin has been inhibited and the propene selectivity generally reaches as high as 80% at a propane conversion of ∼20%. Furthermore, the spatial distribution of the active sites is a crucial factor that influences the catalyst performance. On the one hand, the dispersion pattern determines the number/density of active sites on the B catalysts. On the other hand, the distribution of the active sites significantly regulates the gas-phase free radical reaction by changing the initiation and termination possibilities of radical reactions, which contributes to the majority part of propene production in the oxidative dehydrogenation of propane (ODHP). Currently, several elegant reviews have summarized the catalytic performances, kinetics, and mechanism of B-based catalysts in detail. (1,6,14,42,43,45) Lu et al. (6,43) focused on the preparation methods and chemical properties of BN and BOx-based catalysts and expounded their characterization and performance in the ODH of light alkanes. Hermans et al. systematically discussed the catalyst active sites and associated reaction mechanisms, elaborating on the similarities and differences of B materials in catalytic and kinetic behaviors. (42) However, as the classification of these reviews is mainly based on the chemical state of B materials, the importance of dimensions of B active sites has not been stressed systematically and sufficiently.
+In this review, we classify B-based catalysts based on the configuration and spatial dimension of active sites, discuss the structural characteristics, and highlight the corresponding promotion strategies. Moreover, the conversion pathways and mechanism of ODHP on the catalyst surface and in the gas phase mediated by radicals are also analyzed. On the basis of these discussions of active sites and mechanism, the prospects of future research on the B-based catalyst system in ODHP are discussed and some useful suggestions are provided.
+</Paragraphs>
+</file-attachment-contents>

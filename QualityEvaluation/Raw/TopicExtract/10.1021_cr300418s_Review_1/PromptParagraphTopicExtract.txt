@@ -1,0 +1,67 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+2 Historical Note
+ARTICLE SECTIONSJump To
+It is very likely that doped oxide catalysts have been used before the concept was formulated explicitly. Most oxide catalysts have low levels of impurities that may be substitutional dopants; if they segregate at the surface, they can affect the catalytic activity without our knowledge even though their net concentration is very low. Furthermore, most industrial catalysts have small amounts of “additives” that prevent coarsening, provide mechanical stability, prevent the evaporation of the catalyst, increase conversion, increase selectivity, or “poison” an unwanted reaction (one way of achieving selectivity). It is possible that catalysis by doped oxides is as old as catalysis by oxides, but we were not aware of the fact.
+It is not our intention to provide an accurate or comprehensive history of the subject. Paravano (55-57) seems to be the first scientist who prepared substitutionally doped oxide intentionally, to boost the performance of an oxide catalyst. He studied the oxidation of CO by NiO with a variety of dopants. While at that time it was not possible to prove that doped oxides were prepared, at least the intention was to do so. The inspiration came from work that showed that doping changes the electronic properties of oxides (mainly the conductivity and the adsorption spectrum). The premise was that an additive that changed conductivity was likely to affect catalytic chemistry, especially for reactions in which electron transfer might be involved. Cimino et al. (58, 59) studied N2O decomposition on “solid-solutions” of NiO and MgO; by solid-solutions, they meant substitutional doping. They hoped that by “diluting” the Ni ions in the surface of NiO, they can modify the catalytic activity of Ni.
+The idea of using substitutional doping of oxides in catalysis languished until around 1985 when Lunsford (60) showed that Li-doped MgO is a selective catalyst for oxidative coupling of methane to ethylene. This was followed by a large number of studies (61-77) in which very stable oxides (e.g., MgO, CaO, La2O3, Sm2O3, etc.) were doped with low-valence dopants to perform oxidative coupling of methane. Several older reviews of this subject are available. (78-80) We will not review oxidative methane-coupling by oxides containing alkali dopants for two reasons. First, this reaction is performed at very high temperature (between 600 and 900 °C), and the structure of the doped-oxide catalyst is affected by this. (81) Therefore, this is not a good system for comparison to theory. Second, two excellent papers have reviewed the subject recently, (81, 82) and we have nothing to add to their analysis.
+We are aware of only two articles that review catalytic chemistry of doped oxides (besides the ones mentioned in connection with oxidative methane coupling). One, by Cimino and Stone, (83) is mainly concerned with oxides more complex than the binary oxides studied here. The other, by Hegde, (84) concentrates on the considerable amount of work done in his group in Bangalore.
+
+</Paragraphs>
+</file-attachment-contents>

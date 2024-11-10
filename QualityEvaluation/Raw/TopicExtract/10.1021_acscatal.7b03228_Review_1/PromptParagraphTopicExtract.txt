@@ -1,0 +1,67 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+All values are reported for low coverage (either 1/9 or 1/16 ML; see Figure S1 in the Supporting Information for details). Dispersion corrections are included.
+Such changes in adsorbate configuration can have profound effects on what reactions may occur. For example, in propane dehydrogenation, a common unwanted side reaction is hydrogenolysis to create ethane and methane. (8) It has been shown by Iglesia and co-workers that hydrogenolysis often involves multiple dehydrogenation steps before C–C bond cleavage can occur. (19) Alloying the active metal with an sp-electron metal to alter the reactivity can have two positive effects. First, as shown in Figure 2, by a change in the electronic structure, the binding energy of propene to the surface is weakened, resulting in desorption before further dehydrogenation can occur. Second, the activation barrier for C–C bond cleavage is higher due to the lack of the appropriate 3-fold hollow sites on the PdZn surface. Similar work on propane dehydrogenation on PtSn surfaces has been reported by Chen et al., although they chose to focus their interpretation on electronic effects (at least for the Pt-rich surfaces) resulting from the d-band perturbation of the alloying event. (20) In this way, one can see that the intermetallic compound surface combines both electronic effects and geometric effects to perturb reactivity in a positive way for increased selectivity in propane dehydrogenation. One interesting aspect of intermetallic compounds is that, by altering the composition slightly, different types of ensembles can be created. (21) For example, Feng et al. have shown that moving from PdIn to Pd3In results in a change in the Pd ensemble size from single isolated Pd atoms to Pd trimers. This structural change results in a loss of selectivity from 92% to 21% C2H4 in acetylene semihydrogenation. (22) It is interesting to ponder what the critical ensemble size would be for a given adsorption or reaction event. Intermetallic compounds are actually quite common, (23) so the possible ensembles are boundless, but to date much of the focus has been on a few systems (PtSn, PdZn). Armbruster and co-workers have written several papers on the use of PdGa compounds and nanoparticles thereof for acetylene semihydrogenation. (24) Similarly, Miller and co-workers have continued to test various intermetallics for alkane dehydrogenation. (25) However, much work remains to be done in order to fully explore how the systematic perturbation of ensembles may be exploited for catalyst selectivity, particularly for new reactions. It should be noted that the creation of intermetallic phases with specific compositions in the form of nanoparticles supported on high-surface-area carriers remains a considerable synthetic challenge. (26) In addition, while an enthalpic driving force exists to prevent surface segregation in response to some adsorbates, sp metals are subject to oxidation and therefore the surface of the intermetallic may deviate strongly from the bulk in the presence of oxygen. (27)
+An extreme example of a site design second material pathway toward geometric perturbation is the use of single-atom alloys (the smallest possible ensemble). To this end, Sykes and co-workers have demonstrated that Pd atoms embedded in a Cu(111) surface can act as unique sites for the activation of hydrogen and thereby boost activity and selectivity in selective hydrogenation. (28) In their combined temperature-programmed desorption/scanning tunneling microscopy study, Kyriakou et al. deposited 0.01 ML (monolayer) and 0.1 ML of Pd on a Cu(111) surface to form structures where individual Pd atoms were alloyed into a Cu (111) surface. (28a) DFT calculations predicted that the barrier for hydrogen dissociation was reduced from 0.4 to 0.02 eV but that the adsorption enthalpy was not strongly affected (−0.35 eV on the alloy but −0.20 eV on Cu(111)). This prediction indicates a break from Brønsted–Evans–Polanyi scaling rules which would dictate that the reaction enthalpy and reaction barrier are correlated. (29) Breaking these scaling rules through a geometric effect (changing the active site) allows departure from a purely electronic structure description of catalysis. In agreement with this prediction, the desorption temperature (manifested as the barrier to association—the reverse of the dissociation process) dropped dramatically from 310 K on Cu(111) to about 220 K on 0.01 ML Pd/Cu(111) (and even lower to ∼180 K on 0.1 ML Pd/Cu(111)). Selective hydrogenation of acetylene to ethylene and styrene to ethylbenzene were demonstrated successfully in order to illustrate the advantageous catalytic properties of the Pd@Cu SSA. More recently, Boucher et al. extended this approach to nanoparticles by galvanic replacement of Cu with Pd, demonstrating selective hydrogenation of phenylacetylene to styrene at a Cu:Pd ratio of 80:1. (30) Similar work presented by Louis and co-workers which examined the selective hydrogenation of butadiene over AuPd catalysts (31) and by Aich et al. which examined the selective hydrogenation of acrolein to allyl alcohol over PdAu catalysts (32) also invoked the idea of single Pd atoms allowing for a much greater selectivity to the desired products, whereas contiguous Pd atoms led to unselective hydrogenation.
+The following criteria probably apply for any successful SAA catalyst. First, the reaction temperature must be rather mild. High-temperature reactions (e.g., above the Tamman temperature of the metal) may result in significant metal–metal diffusion leading to aggregation of the guest metal. (33) Second, one must avoid reactive environments that can result in segregation of the metal. For example, if one metal forms very strong metal–adsorbate bonds but the other does not, then the former metal will migrate to the surface. (34) For oxidation reactions, for instance, the host metal probably should be gold, since gold will not form a bulk oxide. (35) Finally the reaction chosen must be able to take advantage of the geometric site created by the single-atom alloy. This probably implies that “structure sensitive” reactions are more likely to be successful. (36)
+It should be mentioned that another pathway toward steering both geometry and electronic structure has emerged through coadsorbates that act as structural modifiers. This approach extends back many years through the use of sulfur, chlorine, and alkali metals to locally modify the electronic structure and block certain potential adsorption sites. (37) However, this idea has been expanded by Medlin and co-workers to tune selectivity in hydrogenation of functionalized hydrocarbons. (38) In many cases, the presence of the modifier can change the adsorption configuration of the reactant. For example, in the hydrogenation of furfural, the presence of C18 alkanethiols on palladium nanoparticles shifted the selectivity from furan to methylfuran and furfuryl alcohol by shutting down the pathways to decarbonylation while still maintaining the pathways for hydrodeoxygenation. (38b) The presence of the C18 thiol forced furfural to bond in an upright configuration, whereas in the absence of the modifier, furfural can lie down on the surface. The role of the modifier can even be an active one whereby the reactant interacts favorably with the modifier such that it adopts a more favorable adsorption geometry. In the selective hydrogenation of cinnamaldehyde over coated Pt/Al2O3, the use of 3-phenyl-1-propanethiol was found to give over 90% selectivity to cinnamyl alcohol, whereas the analogous phenylbutanethiol and phenylethanethiol modifiers gave less than 80% selectivity. (38d) This increase in selectivity was attributed to favorable aromatic stacking interactions. Depending upon the type of adsorbate employed, the functionality of the modifier can be potentially adjusted accordingly in an enzymatic-inspired design to molecular specificity.
+The modifiers must be thermally stable well above the reaction temperature of interest and preferably stable in the presence of air/water so that they are sufficiently robust. In addition, the modifier coverage must be appropriately tuned such that the surface is adequately accessible to potential adsorbates. Obviously, if the surface coverage so dramatically reduces the measured dispersion, then the inefficient use of the metal may be detrimental to the application. Although the previous examples generally involve monometallic catalysts, the same idea could easily be applied to bimetallic systems, where specific site configurations on the surface could be built through the use of modifiers. In addition, Medlin’s group has recently extended this concept to selective oxidation, showing that the SAM may also help prolong catalyst life by shutting off deactivation pathways leading to carbonaceous residues. (39)
+In summary, both geometric effects and electronic effects have long been known to be present in alloy systems. As Reuter and Norskov have shown, limits emerge to the degree that electronic modification of a metal can change catalytic performance that stems from scaling relationships. (40) Therefore, exploitation of geometric effects is critical to paradigm-shifting performance improvement in metal catalysts. Through the use of unique materials which control the manner in which substrates may adsorb, these advances can be realized. Opportunities still exist in the realm of intermetallic compounds, single-atom alloys, and surface modifiers for catalyst design.
+</Paragraphs>
+</file-attachment-contents>

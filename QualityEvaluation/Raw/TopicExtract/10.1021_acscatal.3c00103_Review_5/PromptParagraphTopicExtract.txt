@@ -1,0 +1,70 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+4. Conclusion and Outlook
+ARTICLE SECTIONSJump To
+PDH has been considered one of the most promising techniques to obtain highly pure propylene and applied in industrial propylene production for decades. High temperature is preferable to achieve high propane conversion due to the thermodynamic limitation of the PDH reaction, which can induce a series of side reactions and pose challenges to the development of PDH catalysts. Currently, exploring catalysts with high stability and propylene selectivity is still urgent to meet further demand for industrial production.
+Sintering and coke deposition are the main causes for the deactivation of heterogeneous catalysts. In this review, we have briefly introduced reasons for sintering and coke formation and how they impact catalytic stability. Small-sized particles with high surface energy tend to agglomerate into large particles during the PDH process, causing rapid deactivation, while coke generated from side reactions under high temperatures can deposit on the active sites, inhibiting the contact of reactants. Currently, there still exist intricate debates over the behavior of sintering and coke formation, which is complicated and needs further research.
+Introducing promoters, encapsulation, hydroxyl anchoring, support modifications, and so forth have been proven to be the most efficient strategies to build high-performance catalysts with outstanding antisintering and anticoke ability. Though great progress has been made, there are still challenges remaining to be solved, including the following:
+(1) Adding promoters is one of the most efficient strategies in active site regulation to inhibit sintering and coke deposition. Excessive amounts of metal promoters are needed in metal-based catalysts to construct and sustain stable intermetallic compounds or alloys, making these catalysts uneconomical. Meantime, for metal oxide-based catalytic systems, the introduction of inappropriate oxides may suppress the intrinsic activity of active compounds. Thus, deeply figuring out the specific effect along with the functional mechanism of the promoters and exploring cheap promoters are still urgent.
+(2) The hydroxyl anchoring method could be an effective approach to anchor active sites. At the present stage, the controllable introduction of heteroatoms can be achieved through SOMC. However, the complicated processes for the fabrication of supports with uniform organic groups and expensive TMPs make it difficult to apply in practical production. The hydroxyl groups on zeolites also can be used to anchor active sites into the zeolite framework, whereas post-treatment of current zeolites for fabricating hydroxyl nests could reduce the crystallinity of supports, causing low hydrothermal stability and a high surface barrier, severely limiting intracrystal diffusion. Thus, an alternative strategy needs to be developed imminently.
+(3) Encapsulation is one of the hottest topics in the construction of stable PDH catalysts due to its advantages in size control, sites adjustment, and spatial segmentation. At the present stage, controllably encapsulating metal or metal oxide clusters into a zeolite matrix can be achieved through the ligand-protected direct synthesis route, making full use of the cooperation effect among organic groups. However, excess ligands are usually required to form coordinative metal compounds, and the difficulty comes with the selection of proper ligands that are based on different supports and metals, making this technique uneconomical and complex. The ALD technique provides an advanced method to add a protective layer for encapsulating active compounds. At the present stage, the complicated production processes and the expensive raw materials are still big problems that limit the further application in industrial production. Therefore, it is urgent to develop an economical and universal strategy to realize controllable encapsulation.
+(4) For the traditional microporous zeolites and metal oxide supports, utilizing different morphologies of supports with large outer surfaces can efficiently decrease the diffusion restriction in heterogeneous catalytic systems. Preparing this type of supports usually needs rare templates, which hinders the application in industrial production. Mesoporous zeolites can serve as potential supports for PDH reaction due to their lower diffusion limitation compared to microporous zeolites. The amorphous structure of mesoporous zeolites induces low hydrothermal stability and weak interactions for the fixation of active components. Constructing hierarchical zeolites as PDH supports provides an effective solution to alleviate the diffusion limitation due to the combination of catalytic properties of conventional microporous zeolites and mesoporous zeolites. Currently, the methods of synthesizing hierarchical zeolites can be classified into two sorts: top-down and bottom-up methods. The former, which are post-treatment processes, including dealumnization, desiliconization, and recrystallization, can induce low hydrothermal stability and poor repeatability, while the latter, which utilize porogens in the synthesis process, need expensive templates and complicated synthesis routes that are uneconomical. Therefore, there is still a long way to explore facile templates and simplify the synthesis process.
+In conclusion, we have summarized the mechanism of catalytic deactivation and the advanced strategies in catalytic design for the propane dehydrogenation reaction. We hope that this review will provide different insights on catalyst design and promote the development of propane dehydrogenation.
+</Paragraphs>
+</file-attachment-contents>

@@ -1,0 +1,75 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+3.3.2. Pore Structure
+The pore structure of the support is another factor which has a significant role in coke formation. (96) The acidity of the support was decreased after the modification of the pore structure of ZSM-5 by introducing hierarchical-pores, (96) which inhibits the formation of coke on the metal and improves the capacity of the support for coke. Moreover, the pore size has a direct effect on performance of PDH. The Pt catalysts on the microporous support show better selectivity, stability, and lower coke amount than the counterpart on the mesoporous support. (97) The simulation of the effect of the pore structure of the support on coking formation and deactivation shows that the structure of the pore could affect the coke accommodation. A support with more uniform, higher connected, and larger-sized pores could accommodate more cokes. (60)
+As summarized in Table 1, most of the appropriate modification methods increase the activity and selectivity and decrease the amount of coke. Moreover, the transfer of coke from metal to support is accountable for the unexpected good performance when the total cokes are increased.
+3.4. New Strategy: Single Atom/Site and Confined Cluster
+In recent days, the new strategies of catalysts’ design in PDH are proposed and verified to effectively curb coke formation. The concept of a single atom/site is applicable for Pt catalysts, which achieve not only good activity but also impressive stability. The propane dehydrogenation is not a size-sensitive reaction. (98,99) Furthermore, the side reactions such as hydrogenolysis are size-dependent. This difference opened the opportunity which can achieve good activity and reduce cokes by diminishing side reactions from the rational adjustment of catalyst size. Under this principle, single atom/site strategies were explored to optimize PDH performance. Additionally, a nanosized Pt cluster, in particular confined in zeolite, demonstrated unique geometrical and electronic properties, which is different from conventional supported Pt clusters on open support. This difference is key to stabilize the metal cluster and minimize the coke formation. These two aspects of new strategies to design PDH catalysts are discussed below.
+3.4.1. Single Atom/Site
+Sun et al. successfully synthesized a Pt/Cu single atom alloy supported on γ-alumina and applied in propane direct dehydrogenation. (33) They found that the catalyst delivered the propylene selectivity of ∼90% with the formation rate of 10.6 mol·gPt–1·h–1 at 520 °C. Moreover, the stable performance is verified for at least 120 h. The success of the catalysts was concluded from the breaking of the scaling relation between the C–H bond activation energy and propene adsorption. In general, Pt alloy, in particular Pt3M (M = transition metal), has a low barrier for C–H bond activation in propane. Unfortunately, it was accompanied with strong adsorption of propene, which led to unfavorable desorption. The single Pt surrounded by inert Cu significantly reduced the barrier of propene desorption which make the products’ desorption become favorable over the deep dehydrogenation. Consequently, the cokes are largely diminished as evidenced by the lifetime of the catalyst. Following a similar rationale, Nakaya et al. applied the Pt/Ga single atom alloy in PDH. (32) One of the interesting strategies adopted in this work is that Pt3Ga sites are selectively blocked by Pb, while the single Pt site was unchanged. The comparison between PtGa and PtGa-Pb catalysts indicated that the former deactivated very fast because coke formation, and the latter delivered a stable performance of 99.6% selectivity for 96 h at elevated temperature. Zhang et al. examined the cokes’ formation on a series different loading of Pt supported on alumina. (29) After PDH, it was observed that there are barely cokes found on 0.1 wt % loading Pt, which is corresponding to an atomic dispersed catalyst. In contrast, the amount of cokes on 3 wt % loading is nearly 4 times bigger than the counterpart on 0.1% loading. Multiple Pt–Pt sites at high loading catalysts favor side reactions which are leading to coke formation. Overall, it is clearly demonstrated that single Pt atom has a good balance between dehydrogenation activity and coke regulation.
+A single Pt site also possessed good resistance to coke formation. For example, Chen et al. successfully synthesized a single-site [PtZn4] catalyst. (26) They identified that a single-site on the catalyst is a Pt atom separated by four neighboring Zn as imaged from an aberration-corrected high-angle annular dark-field scanning transmission electron microscope (AC-HAADF-STEM). The single-site [PtZn4] catalyst significantly outperformed the conventional PtSn catalyst, in particular regarding coke formation, as shown in Figure 6a. It was indicated that [PtZn4] has no obvious deactivation during a 160 h test, and the conversion drop is only 0.04%. In contrast, a conventional PtSn catalyst shows a decrease of conversion from the initial 34.8% to 11.7% under the same condition. Further analysis reveals that the electrons from neighboring Zn transferred to Pt, which induced the electron accumulation. The rich electrons at Pt reduced the binding energy of propene and accelerated its desorption which prevent the further dehydrogenation and decrease coke formation. Overall, the application of single atom/site not only significantly reduce the coke formation but also create a new direction to optimize PDH performance.
+3.4.2. Confined Pt Cluster
+Recently, Corma’s group developed a series PtSn cluster catalysts which are confined in zeolite and applied in PDH. (71) Although PtSn is the conventional PDH catalyst, the intriguing feature of the obtained catalyst is that the region selective deposition of PtSn cluster within zeolite. The subnanometer (0.5–0.6 nm) PtSn cluster is precisely located in sinusoidal 10R channels of siliceous MFI zeolite. The anchor site of the cluster is very important which renders not only the good stability without obvious sintering but also excellent resistance to cokes. Under the real industrial condition, the K-PtSn@MFI catalyst showed an initial propane conversion of ∼20% at 550 °C and an initial selectivity to 97% propylene. More importantly, the propane conversion slightly decreased from 20% to 17% during a 70 h reaction, which indicates the superior stability. Furthermore, the role of Sn was uncovered to have distinct features from previous reports. It was suggested that the minimal interactions between Pt and Sn are sufficient to suppress coke formation. Sn is in close proximity with the Pt cluster, but it is not forming an intermetallic alloy compound as shown in Figure 6b.
+Ryoo et al. used a mesoporous zeolite with surface framework defects as PDH catalyst support. (82) It was found that rare-earth elements such as La and Y can be trapped at these defective sites as atomic species. The much increased chemical potential of atomic La and Y enable them to form an intermetallic compound with Pt. Moreover, La/Y also enhanced the strong metal–support interaction which increased catalyst dispersion. The synthesized PtLa/Y cluster with 3 nm diameter uniformly distributed within zeolite. The confined PtLa/Y cluster exhibited remarkable stability in PDH. Pt3La/Y catalysts has an initial 40% conversion and still retain 8% conversion after 30 days of reaction under a harsh condition and large space velocity. The excellent stability in PDH was also reported for PtZn cluster encapsulated in silicalite-1 (S-1) zeolite. The catalysts have extraordinary low deactivation constant of 0.001 h–1, which is 200 times lower than the counterpart supported on Al2O3. (100) Overall, the mesoporous structure of zeolite yields a confined space for Pt-based cluster, and the unique interactions between them are accountable for the observed activity and stability.
+3.5. Regeneration of Catalyst
+Although the prevention of coke formation achieved impressive progress, the coke deposition is still unavoidable in PDH. Thus, it is mandatory to periodically regenerate the catalyst in industry. The main method to regenerate the coke-covered catalyst is to burn coke with oxidant. A low burning temperature means low energy consumption and cost. Besides, high temperature leads to the sintering of the active component. Hence, the control of burning temperature of coke is of great importance.
+As aforementioned, the introduction of Sn could cause the transfer of coke from active site to support. A side effect of this practice is that the coke on the support is more difficult to remove than on metal. For example, the oxidation peak of coke shifts to a high temperature with the increasing contents of Sn, as shown in Figure 7. (101) Hence, the improvements of catalytic performance might cause the difficulty in regenerating the catalyst.
+Additionally, support engineering is a useful way to tune the burning temperature of coke. The different supports have distinct performance in burning coke. The oxidation temperature of coke on several supports is Pt/CeZrO2 < Pt/CeO2 < Pt/MgO < Pt/Al2O3 < Pt/SBA-15. The observed sequence is attributed to the different mobility of activated oxygen species on the support. (102,103) The largest temperature difference, between Pt/CeZrO2 and Pt/SBA-15, reaches 250 °C. However, the regeneration by burning coke also caused Pt sintering. Hence, further oxychlorination is often used to keep the high disperse of Pt. (104)
+</Paragraphs>
+</file-attachment-contents>

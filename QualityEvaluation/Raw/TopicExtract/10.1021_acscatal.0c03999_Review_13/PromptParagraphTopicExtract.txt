@@ -1,0 +1,68 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+6.3. Reactions with Other Soft Oxidants
+6.3.1. Sulfides
+Zhu et al. have explored the possibility of sulfur as another less active oxidant for alkane conversion, specifically for methane oxidative coupling. (298) The authors note that the thermodynamic well for O2 oxidation of methane to CO2 is −13.41 eV, whereas for sulfur oxidation to CS2, it is considerably higher in energy at −3.45 eV. Therefore, the thermodynamic driving force for overoxidation is much lower for the sulfur oxidant. This approach is realized by carrying out the reaction under gaseous sulfur flow on a selection of transition metal sulfides. Presumably, the gaseous sulfur regenerates vacancies on the surface formed from H2S desorption during methane coupling. An ethylene selectivity of up to 18% can be achieved on a PdS catalyst at 1050 °C. High temperatures are needed for this process due to both the thermodynamics of the reaction and the relatively high C–H activation barriers on the sulfide catalysts, which are poor hydrogen abstractors compared to metal oxides. These barriers range from 1.91 eV on MoS2 to 2.68 eV for TiS2. While the performance of this catalyst is found to be relatively modest and far from practical consideration, it is conceivable that future studies can identify catalysts with higher conversion rates by descriptor-based theoretical screening. In particular, the authors have observed the M–S bond energy to be a good descriptor for both C–H activation and C–C coupling reaction barriers.
+Premji et al. have explored the role of H2S in ODHP in the gas phase from experimental and theoretical perspectives. (44) From theoretical calculations, it was proposed the co-feed of H2S/O2 and partial oxidation of H2S can produce sulfur radical species SH and HS2 which participate in hydrogen abstraction along with OH and OOH. Subsequently, after C–H activation to form propyl radicals, both O2 and S2 can then form adducts with the propyl and undergo further reactions. With the propyl-O2 adduct, the propylene is the kinetic product, though a side distribution of other products can be formed, such as propanal, methyloxirane, and oxetane, all of which are more thermodynamically stable than propylene. On the other hand, with the propyl-S2 adduct, propylene is more favored both kinetically and thermodynamically, in part due to the relative instability of the S-containing hydrocarbon products. The more favorable energetics for propylene formation with sulfide species is consistent with experimental observation of higher propylene selectivity observed in the paper.
+6.3.2. Halides
+There has been recent interests in using halogens, such as Cl2 and Br2, as oxidants, particularly in oxyhalogenation reactions, which can be used for alkane to alkene conversion. (249,299) Zichittella et al. have explored the mechanism and factors governing alkene selectivity for oxyhalogenation in a combined theoretical and experimental study of an iron phosphate catalyst. (252) Interestingly, the authors have observed a divergence in the mechanism for ethane oxychlorination and oxybromination, with the former being dominated by surface reactions and the latter being mainly dominated by gas-phase reactions (Figure 31). In the proposed mechanism, ethane oxychlorination follows a surface-mediated C–H activation (with a barrier of 0.61 eV) to form an ethyl intermediate which then reacts with a surface chloride to form ethyl chloride in a barrierless process. Ethyl chloride is subsequently dehydrohalogenated (where a hydrogen and halogen are both removed from the alkyl in a concerted step) to ethylene, the desired product, in another surface reaction. By contrast, when Br2 is used, a gas-phase reaction is found to be more favorable where bromine desorbs as radicals which dehydrogenate and polybrominate ethane in a process unselective to ethylene. These results highlight the importance of the competition between surface and gas phase reactions that control the selectivity of the alkene and how the different oxidants shift their relative contributions.
+
+
+</Paragraphs>
+</file-attachment-contents>

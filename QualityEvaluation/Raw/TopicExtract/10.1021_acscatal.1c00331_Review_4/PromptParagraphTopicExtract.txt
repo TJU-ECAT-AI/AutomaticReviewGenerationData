@@ -1,0 +1,66 @@
+# Paragraph Topic Extractor and Question Generator
+
+You are an expert in academic writing and text analysis. Your task is to extract the main topic from a given paragraph of an academic review and then generate a single comprehensive question based on that topic. Follow these steps carefully:
+
+1. Read the provided paragraph carefully.
+2. Analyze its content to identify the main topic.
+3. Formulate a concise topic statement.
+4. Based on the extracted topic, create a single comprehensive question that can guide the extraction of detailed information from the paragraph.
+5. Translate the question into Chinese.
+
+Output your results in the following XML format:
+
+```xml
+<analysis>
+  <original_paragraph>
+    [Insert the original paragraph here]
+  </original_paragraph>
+  
+  <topic_extraction>
+    <step1_initial_thoughts>
+      [Provide your initial thoughts about the paragraph's content]
+    </step1_initial_thoughts>
+    
+    <step2_key_concepts>
+      [List the key concepts or ideas present in the paragraph]
+    </step2_key_concepts>
+    
+    <step3_topic_formulation>
+      [Explain how you're formulating the topic based on the key concepts]
+    </step3_topic_formulation>
+    
+    <extracted_topic>
+      [State the extracted topic in a clear, concise manner]
+    </extracted_topic>
+  </topic_extraction>
+
+  <question_generation>
+    <step1_question_formulation>
+      [Explain how you're formulating the question based on the extracted topic]
+    </step1_question_formulation>
+    
+    <generated_question>
+      <english>[Present the final version of your generated question in English]</english>
+      <chinese>[Present the Chinese translation of the generated question]</chinese>
+    </generated_question>
+  </question_generation>
+</analysis>
+```
+
+Remember to:
+- Be thorough in your analysis and explanation.
+- Ensure that the extracted topic accurately represents the main idea of the paragraph.
+- Create a single, comprehensive question that can elicit detailed information about the topic from the paragraph.
+- Use academic language appropriate for the field of study.
+- Provide both English and Chinese versions of the generated question.
+
+<file-attachment-contents filename="Paragraphs.txt"> 
+<Paragraphs>
+4. SUMMARY AND OUTLOOK
+ARTICLE SECTIONSJump To
+In summary, coke deposition is a crucial issue for the commercial Pt-based catalysts, and many efforts have been made to understand and alleviate the detrimental effects. The structure, composition, and location of cokes are the prerequisite to inhibit coke formation. It is revealed that these factors are entangled, and the details regarding coke composition are still under debate. The kinetics of coke growth has an apparent importance for coke formation. Although there are several models available, none of them could resolve the mechanism at the molecular level. The cofeeding gas, metal promoter, and support modification are the verified effective methods to prevent coke formation. The cofeeding of hydrogen can remove the coke precursor and weaken the acidity of the support. Furthermore, hydrogens also aggregate the degree of coke graphitization which requires a higher regeneration temperature. The promoters, such as Sn, directly tune the catalytic properties of Pt from both a geometry and electronic perspective, which simultaneously increase activity and stability. However, the optimal kind and loading of promoter is still not concluded as there is a lack of guiding principle to govern a search. The additive to conventional support alumina can modify the acid/base strength and facilitate the coke transfer between metal and support. New developments of effective catalyst design are also noted. The success of single atom/site strategy wisely exploited the different size dependence of dehydrogenation and side reaction in PDH. The confined subnanosized Pt cluster in zeolite could be deposited at particular position with the unique interaction between catalyst and support, which exhibited excellent resistance to coke formation. Although these methods indeed alleviate the coke formation, the regeneration is still needed to prolong the life of the catalyst. Some strategies seem to be useful to lower temperature in regeneration which is important to reduce cost and stabilize activity. In the end, the collaborations between experimental and computational techniques are urgently needed to address the complicated issue in heterogeneous catalysis such as coke formation. On the basis of the previous studies, three aspects are proposed to reduce the effect of coke further:
+1. The advance of novel design of active center: the geometry of active site has been verified to be a crucial factor to control coke formation. The rationale is that single Pt has been sufficient to abstract hydrogen from propane, while side reactions such as hydrogenolysis required multiple Pt–Pt site. Hence, the catalyst with a small ensemble of Pt, such as atomic Pt wire and Pt single atom/site surrounding by inactive elements, seems to be a good candidate, which may be synthesized via alloying and spatial confinement by support. (105) In addition, the local environment has significant impact on single Pt atom/site as indicated in the other single atom catalysts. (106,107) In particular, these inert surrounding coordinated species induced significant charge transfer from/to an active center, which consequently modifies the electronic structure. It is obvious that the combinations of active species and neighboring elements will be enormous. It is suggested that machine learning can be exerted to meet this challenge. The data from either experiment or computation feed into a machine learning model, which not only efficiently screens highly effective catalysts candidates but also possibly identifies a valid descriptor.
+2. The coke migration: it is evident that coke formation is inevitable in PDH. To accommodate more cokes before regeneration is an effective way to extend the durability of the catalyst. The coke migration from the active metal to the support is a feasible way to keep activity. The migration is closely connected with the nature of the metal and the properties of the support, such as mobility of oxygen and structure of pores. Moreover, the interface between the metal and the support also determine the coke migration to some extent. Therefore, to resolve the mechanism of coke migration will require both experimental characterization and DFT simulation. The latter is capable to give a detailed description of metal–support interaction. (108,109)
+3. The kinetics of coke formation: most available models provide a phenomenological description. Investigations of coke kinetics at the molecular level and the transformation between disordered coke and graphitic coke are extremely scarce, which hinders the discovery of effective methods to suppress coke. The difficulties are most likely originated from the diversity of coke precursor and complex network. Although it is not straightforward to extrapolate to coke on Pt, the methodologies adopted for graphene growth on a metal catalyst might be a potential candidate to supply more insights, which included large-scale kinetic Monte Carlo simulations (110−112) and molecular dynamics. (113−115)
+</Paragraphs>
+</file-attachment-contents>
