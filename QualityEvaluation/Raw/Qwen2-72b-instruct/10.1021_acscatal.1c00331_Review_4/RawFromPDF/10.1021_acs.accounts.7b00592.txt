@@ -1,0 +1,304 @@
+element not found
+
+Accounts of Chemical ResearchVol 51/Issue 3Article
+Cite
+Share
+Jump to
+Expand
+ARTICLEMarch 1, 2018
+Atomistic Simulations of Graphene Growth: From Kinetics to Mechanism
+Zongyang Qiu
+Pai Li
+Zhenyu Li*
+Jinlong Yang
+Open PDF
+Abstract
+Conspectus
+Epitaxial growth is a promising strategy to produce high-quality graphene samples. At the same time, this method has great flexibility for industrial scale-up. To optimize growth protocols, it is essential to understand the underlying growth mechanisms. This is, however, very challenging, as the growth process is complicated and involves many elementary steps. Experimentally, atomic-scale in situ characterization methods are generally not feasible at the high temperature of graphene growth. Therefore, kinetics is the main experimental information to study growth mechanisms. Theoretically, first-principles calculations routinely provide atomic structures and energetics but have a stringent limit on the accessible spatial and time scales. Such gap between experiment and theory can be bridged by atomistic simulations using first-principles atomic details as input and providing the overall growth kinetics, which can be directly compared with experiment, as output. Typically, system-specific approximations should be applied to make such simulations computationally feasible.
+By feeding kinetic Monte Carlo (kMC) simulations with first-principles parameters, we can directly simulate the graphene growth process and thus understand the growth mechanisms. Our simulations suggest that the carbon dimer is the dominant feeding species in the epitaxial growth of graphene on both Cu(111) and Cu(100) surfaces, which enables us to understand why the reaction is diffusion limited on Cu(111) but attachment limited on Cu(100). When hydrogen is explicitly considered in the simulation, the central role hydrogen plays in graphene growth is revealed, which solves the long-standing puzzle into why H2 should be fed in the chemical vapor deposition of graphene.
+The simulation results can be directly compared with the experimental kinetic data, if available. Our kMC simulations reproduce the experimentally observed quintic-like behavior of graphene growth on Ir(111). By checking the simulation results, we find that such nonlinearity is caused by lattice mismatch, and the induced growth front inhomogeneity can be universally used to predict growth behaviors in other heteroepitaxial systems. Notably, although experimental kinetics usually gives useful insight into atomic mechanisms, it can sometimes be misleading. Such pitfalls can be avoided via atomistic simulations, as demonstrated in our study of the graphene etching process.
+Growth protocols can be designed theoretically with computational kinetic and mechanistic information. By contrasting the different activation energies involved in an atom-exchange-based carbon penetration process for monolayer and bilayer graphene, we propose a three-step strategy to grow high-quality bilayer graphene. Based on first-principles parameters, a kinetic pathway toward the high-density, ordered N doping of epitaxial graphene on Cu(111) using a C5NCl5 precursor is also identified.
+These studies demonstrate that atomistic simulations can unambiguously produce or reproduce the kinetic information on graphene growth, which is pivotal to understanding the growth mechanism and designing better growth protocols. A similar strategy can be used in growth mechanism studies of other two-dimensional atomic crystals.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2018 American Chemical Society
+Subjects
+what are subjects
+Carbon Clusters
+Epitaxy
+Kinetics
+Monomers
+Two Dimensional Materials
+1. Introduction
+Graphene is an important material that has attracted intense research interest from both academia and industry. (1,2) Among the available methods for its synthesis, epitaxial growth is promising for the realization of both high quality and large quantity of the obtained graphene samples. (3,4) By using different metal substrates, (3,5−7) carbon sources, (8) and growth environments (temperature, pressure, etc.), (9) different groups have developed very different protocols to grow graphene, which has led to diverse growth behaviors and sample morphologies. (10,11) Guided optimization of the growth conditions requires a deep understanding of the growth mechanisms. Unfortunately, characterization of the atomic details of graphene growth in situ and in operando is still a great challenge, mainly due to the high growth temperature. Kinetic information is thus the main experimental clue to conjecture growth mechanisms.
+First-principles, semiempirical, and empirical theoretical methods are routinely used in geometry optimizations and energy calculations to compare the relative stabilities of different species on a metal surface. Such results of atomistic resolution certainly provide useful insight for understanding the growth mechanism. (12−18) However, the energetics, in principle, is an equilibrium state property and is difficult to be directly related to the overall kinetics obtained from experiment. To fill this gap between theory and experiment, explicit simulations of graphene growth are desirable. Due to the complexity, multiscale simulation techniques, from molecular dynamics (MD) (19) to kinetic Monte Carlo (kMC), (20−22) rate equations, (21,23) kinetic Wulff construction, (24,25) phase field, (26) and even computational fluid dynamics (CFD), (27) have been used to study graphene growth. To gain enough mechanistic insight, maintaining atomistic resolution in the simulation is desirable.
+In this Account, we summarize our recent progress in the atomistic simulation of graphene growth. Based on our simulation results, we can now largely understand the mechanism of graphene growth on different substrates, even for the most complicated and most widely adopted case of chemical vapor deposition (CVD) on a Cu substrate. A direct comparison between the simulation results and experimental data provides an ultimate way to judge mechanistic hypotheses gained from experiment. With kinetic and mechanistic information from simulations, we can also theoretically design growth protocols to tune graphene growth. These results demonstrate that atomistic simulation plays an important role in understanding two-dimensional (2D) van der Waals (vdW) epitaxy.
+2. Simulation Techniques
+The most straightforward atomistic simulation technique is MD. In a classical MD simulation, the atoms move following Newton’s law. To discretize Newton’s equation with a desirable accuracy, the proper time step is about 1 fs. Therefore, the time scale accessible for an MD simulation is typically much shorter than that of graphene growth, which makes MD more suitable for studying specific problems in graphene growth instead of obtaining an overall picture. High temperature and/or high oversaturation may be required in MD simulations to artificially speed up the growth. Alternatively, MD simulations can be used with enhanced sampling techniques, such as metadynamics (28) and umbrella sampling, (29) to obtain the potential of mean force and kinetic information on key reactions.
+To go beyond MD, a time scale coarse grain technique such as kMC can be adopted. In a typical kMC simulation, the whole system is represented by a lattice, where different sites can be occupied by different species. The occupation status of all sites determines the configuration of the system. At each step, all events that can change the current system configuration are listed in a table along with their rates, which are typically provided by first-principles calculations within the framework of transition state theory. A specific event is selected with a probability proportional to its rate, which changes the lattice configuration and advances the simulation. However, even with kMC, an explicit simulation of graphene growth may still be computationally unfeasible. Therefore, we developed some system-specific techniques to speed up kMC simulations of graphene growth.
+2.1. Floating Simulation Box
+To obtain a statistically significant growth rate, the graphene edge as the growth front must be propagated forward over a long distance, which requires a very large simulation cell. To solve this problem, we divided the whole system into four regions (Figure 1): graphene area, where graphene is already formed (black dashed box); far field, in which a stationary distribution of different surface species can be assumed (blue dashed box); diffusion layer, through which a carbon flux passes (yellow dashed box); growth front, whose velocity determines the growth rate (red dashed box). If we focus on the last region and use a simulation box moving with the growth front, the so-called standing-on-the-growth-front (SOF) model permits us to use a very small simulation box but still obtain a statistically significant growth rate. (20)
+Figure 1
+Figure 1. Schematic diagram of the SOF-kMC model. Solid and hollow circles represent occupied and unoccupied lattice sites. Brown sites have already formed graphene. For simplicity, surface sites for carbon adsorption are represented by a honeycomb lattice. Adapted from ref (20). Copyright 2012 American Chemical Society.
+2.2. Time Scale Separation
+If there is a large rate gap in the event list, the possibility to select low-rate events, which will determine the overall growth kinetics, becomes extremely low. Most of the simulation time will be wasted on fast events and the system is trapped in local equilibrium states. In this situation, a time scale separation technique can be used. (20) If slow events have not been selected for a long time, then the fast events can be temporarily removed from the event list. After a slow event is selected, the full event list is restored.
+2.3. Mean Field Approximation for Specific Species
+A species that diffuses quickly can reach its equilibrium distribution quickly for any configuration of other species. In an explicit kMC simulation, the diffusion of this species, if abundant, will have a very high probability to be selected and thus consumes a large amount of simulation time. To avoid this situation, we can apply a mean field approximation for this species, (22) where its lattice distribution is not bookkept and only its total number is recorded. Fast diffusion events for this species are permanently removed from the event list, and the rates of all other events involving this species are adjusted according to its total number.
+3. Identification of Dominant Kinetic Pathways
+Because it can explicitly simulate the graphene growth process, atomistic modeling provides an independent means to investigate growth mechanisms. For example, dominant kinetic pathways of growth can be identified without any input from experiment.
+3.1. Hydrogen-Free Growth on a Cu Substrate
+Graphene growth on Cu(111) has been found experimentally to be diffusion limited. (30) Because the diffusion of carbon atoms on Cu(111) is almost barrierless, this is a surprising observation if graphene growth occurs through the attachment of carbon atoms to graphene edges. One possibility is that carbon atom attachment is not the dominant kinetic pathway of graphene growth. We performed an atomistic simulation study to find the actual feeding species for graphene growth. (21)
+First, we calculated the energy barriers of all possible events on the surface involving carbon species up to trimers from first principles. As expected, monomer attachment to the graphene edges has a high barrier (1.17 eV), which blocks the pathway of graphene growth via carbon monomer attachment. The dimer is energetically much more favorable than the monomer on Cu(111), (12) and the formation of a dimer from two monomers is kinetically feasible with a low barrier (0.3 eV). Further increasing the cluster size to form a trimer has a large barrier (1.15 eV). Therefore, many dimers will be formed on the surface. By solving the rate equations, we found that the steady-state concentration of dimer is indeed at least 2 orders of magnitude higher than that of other species. Although the barrier to dimer diffusion (0.49 eV) is still slightly lower than that to attachment at the graphene edge (0.58 eV), the low concentrations of carbon species and graphene islands on the surface may make graphene growth diffusion limited.
+To determine whether dimer attachment is the dominant growth pathway and whether this pathway will lead to diffusion-limited growth behavior, kMC simulations were performed. First, the dominance of the dimer predicted by the rate-equation approach within the mean field approximation was confirmed. More importantly, a carbon concentration gradient around the graphene islands, which is characteristic of diffusion-limited growth, was observed (Figure 2a). We also used kMC simulations to perform virtual experiments by, for example, artificially increasing the dimer attachment barrier. In this case, the carbon concentration gradient disappears (Figure 2b). This result confirms that the experimentally observed diffusion-limited growth behavior is indeed a result of the dimer being the dominant feeding species of graphene growth on Cu(111).
+Figure 2
+Figure 2. (a) Spatial distribution of the simulated steady-state carbon concentration, as well as its line scan between two neighboring islands, on Cu(111) with a 0.024 monolayer coverage. (b) Same as in (a), but with an artificially high dimer attachment barrier. Adapted with permission from ref (21). Copyright 2015 American Physical Society.
+Similar simulations can be performed for graphene growth on Cu(100). In this case, the dimer is also the dominant feeding species, but the growth behavior becomes attachment limited. This conclusion is consistent with experimental observations. (31) Identification of the dimer as the dominant feeding species can also be used to explain the experimentally observed graphene island morphology transformation at different temperatures. (30) Generally, the formation of dendritic or compact islands is determined by the competition between carbon attachment and its diffusion along the edge. Based on such a model, we can estimate the transition temperatures, which reasonably agree with experiment. (21)
+3.2. Hydrogen-Involved Growth on a Cu Substrate
+Hydrogen is highly involved in the industry-compatible CVD growth of graphene, where hydrocarbon molecules, such as methane, are used as the carbon source. Our density functional theory (DFT) calculations indicate that the dehydrogenation of methane and other intermediate species is coupled with other elementary steps of graphene growth. (32) Therefore, all CxHy species should be considered in H-involved CVD growth on Cu substrates.
+What makes things more complicated is that, in most CVD experiments, H2 gas is also provided. Because the overall reaction of graphene CVD growth with methane is CH4 → C + 2H2, it is counterintuitive as to why H2, which is a byproduct of the reaction, should be supplied. Both hydrogen-promoted growth (33,34) and hydrogen-induced graphene etching (35,36) have been observed experimentally, but the underlying mechanism is still under debate. (37) Hydrogen can affect the surface species concentration, graphene edge configuration, and carbon attachment/detachment dynamics. Relevant elementary processes form a complicated kinetic network. To understand the mechanisms behind this network, the dominant kinetic pathways should be unambiguously identified. (22)
+DFT calculations indicate that H2 can easily dissociate into H adatoms on Cu(111). In contrast, the dehydrogenation of CH4 is endothermic with a high activation barrier, making the surface sticking coefficient of CH4 extremely low. As a result, the surface concentration of H atoms is typically much higher than those of carbon-containing species, even if the partial pressure of H2 is lower than that of CH4. Our kMC simulations indicate that the surface H atom concentration is almost exclusively determined by the H2 partial pressure. At low H2 pressures, the most abundant carbon-containing species is C2, and CH becomes dominant at high H2 pressure. The graphene edge configuration also depends on the H2 partial pressure. Between metal passivation at low H2 pressures (16) and hydrogen saturation at high H2 pressures, (38) homogeneous partially hydrogen-saturated configurations exist due to entropic effects.
+The attachment of different carbon-containing species to the graphene edge is generally easier at metal-passivated sites than at hydrogen-saturated sites. The same trend also stands for carbon detachment. An overall picture of growth can be obtained via kMC simulations. As shown in Figure 3, under a relatively low H2 pressure, CH and C2 are the most commonly attached species. Although the raw attachment frequencies of these two species are comparable, the contribution to graphene growth from C2 is much higher. The reason is that the C2 detachment barrier at metal-passivated edge sites (2.19 eV) is much higher than the CH detachment barrier (1.08 eV). Because the concentration of carbon-containing species in graphene CVD growth is extremely low (<10–5 ML), a high detachment barrier is critical for a species to be stable at the graphene edge. Otherwise, it will easily detach from the edge and not stay until the next carbon-containing species arrives. Because detachment from H-saturated edges is generally much slower than from metal-passivated edges, hydrogen saturation stabilizes the graphene edges during growth. At the same time, hydrogen also reacts with carbon-containing species on the surface, which finally leads to desorption of these species. The competition between these two mechanisms can describe many experimentally observed hydrogen effects in graphene growth, such as the change in growth rate with H2 partial pressure. (34)
+Figure 3
+Figure 3. Reaction pathways of graphene growth. The numbers denote the number of occurrences of each event in a typical kMC trajectory. Net occurrences (forward minus backward) are given in white. Adapted from ref (22). Copyright 2017 American Chemical Society.
+4. Reproducing Experimental Kinetics
+The ability of atomistic simulations to be used as an independent tool to study the kinetics of graphene growth makes it possible to directly compare simulation results with experimental kinetic data, when available.
+4.1. Nonlinear Growth on an Ir Substrate
+Experimental kinetic data have been obtained for graphene growth on Ru(0001) (39) and Ir(111) (40) surfaces via low-energy electron microscopy (LEEM). The growth rate was described by a nonlinear quintic-like function of the surface carbon concentration. Such kinetic information provides valuable insight into the growth mechanism, indicating that the growth rate is somehow determined by the attachment of five-membered carbon clusters. Unfortunately, further atomic details are not available. (41)
+Using the Ir(111) surface as an example, we systematically studied such interesting growth behavior. (20) First, the energetics of all possible carbon clusters on the surface were determined by DFT calculations to obtain a stationary distribution of different clusters in the far field. The concentration of carbon monomers determines the concentration of larger clusters via the chemical equilibrium Cn ⇋ nC. Then, diffusion barriers were calculated for these clusters, which determines their mobility and the strength of the carbon flux from the far field to the growth front (Figure 1). Large clusters, such as C5, have similar or even higher mobility than small clusters, but their concentrations are more than 10 orders of magnitude lower.
+DFT calculations on carbon cluster attachment at the graphene edge indicate that small cluster attachment can be either endothermic or exothermic depending on the attaching edge site. Due to lattice mismatch, a Moiré pattern forms for graphene grown on Ir(111), and each edge site has a different chemical environment. Taking carbon monomer as an example, if the attached carbon sits on top of a substrate Ir atom, the attachment is endothermic. When the attached carbon atom is located in a surface hollow site, the corresponding monomer attachment becomes exothermic. Because carbon monomer is present on Ir(111) in a much higher concentration than the other clusters, there is a large monomer flux to the graphene edges, and carbon atoms will attach to all sites with exothermic monomer attachment (Figure 4a). For other sites to which attachment is endothermic, attached carbon monomers will soon detach. If a large cluster such as C5 is available, the gap can be filled by an exothermic cluster attachment event (Figure 4b). Because large clusters have extremely low concentrations, their attachment is rare, which eventually determines the overall growth rate.
+Figure 4
+Figure 4. (a) Carbon monomers attached at 8 of the 10 graphene edge sites and (b) with an additional C5 cluster at the other 2 sites. C, H, and Ir atoms are given in yellow, white, and blue. (c) Growth rate versus C monomer concentration. Adapted from ref (20). Copyright 2012 American Chemical Society.
+To obtain quantitative results, we performed SOF-kMC simulations using the time scale separation technique. By repeating simulations at different carbon concentrations, we finally obtained a relation between the growth rate and carbon monomer concentration, which was well fit by a curve with an exponent of 5.25 (Figure 4c). Such good agreement between simulation and experiment gives us high confidence in the revealed mechanism, as everything in our simulations comes from first principles without fitting to experiment. Virtual experiments with artificial kMC parameters indicate that nonlinear growth induced by lattice mismatch is a universal mechanism, (42) which explains why similar kinetics have been observed in experiments for substrates with contrasting interactions with carbon.
+4.2. Ni Nanoparticle-Catalyzed Graphene Cutting
+Although it helps describe the mechanism in most cases, experimental kinetic information can sometimes be misleading. An interesting example is metal nanoparticle-catalyzed graphene cutting in H2 atmosphere, (43−45) which is the reverse process of graphene growth and is also a useful tool for device fabrication after graphene growth, as the cutting is usually along a specific direction, in most cases the zigzag direction. (46) The gasification rate of carbon atoms has been experimentally found to be proportional to the nanoparticle surface area. (47) Based on this experimental kinetic information, we may expect that the rate-limiting step involves the surface of the metal nanoparticles. However, all possible surface reactions, such as hydrogen dissociation and carbon hydrogenation, seem no more difficult than C–C bond breaking at the nanoparticle-graphene interface. If C–C bond breaking is the most difficult step, the cutting rate is expected to be linearly dependent on the nanoparticle radius.
+To solve this puzzle, we performed multiscale simulations of Ni nanoparticle-catalyzed graphene cutting. (48) Reactive MD simulations using the ReaxFF force field (49) at an elevated temperature indicate that at least two Ni atoms are required to break the C–C bond, and intimate contact between the metal nanoparticle and graphene edge is critical. This explains why the more open and flexible armchair edge is easier to etch than the zigzag edge. With knowledge from our MD simulations, we can go beyond previous single metal atom (50) or metal surface (51,52) approximations and construct a minimal but still realistic model for a DFT-level investigation of graphene cutting, where four and six Ni atoms are used to represent the nanoparticle for zigzag and armchair edge site cutting, respectively. DFT calculations predict a higher cutting barrier for zigzag C–C bonds than for armchair bonds and confirm that the ReaxFF force field is reliable for this system.
+Using the reliable force field, metadynamics simulations at the experimental temperature were performed to obtain the free energy profile. The free energy barrier to breaking a zigzag C–C bond is 1.73 eV. For armchair C–C bond breaking, using the coordination number of the two outmost carbon atoms as reaction coordinates, we obtain a complicated free energy surface (Figure 5a). The most favorable reaction pathway is marked with green arrows in Figure 5b. The corresponding free energy barrier is 1.11 eV, which is much lower than the zigzag case.
+Figure 5
+Figure 5. (a) Free energy surface of armchair C–C bond breaking obtained from metadynamics. In the inset, edge atoms are numerically labeled. CN2 and CN3 are the coordination number of carbon atoms 2 and 3. (b) Different configurations corresponding to free energy minima in (a). Barriers are marked in eV. Adapted with permission from ref (48). Copyright 2016 Wiley.
+Our kMC simulations based on kinetic parameters from metadynamics successfully reproduce the surface area dependence of the cutting rate k. Because the zigzag site is difficult to etch, most of the cutting time is spent on waiting for the first zigzag C–C bond to be cut after a new zigzag edge is formed. Then, kink sites, which are even more open and flexible than pristine armchair sites, are formed. By etching these kink sites, a whole zigzag row can be quickly etched, and a new zigzag edge is formed. In such a triggering mechanism, the etching time t for a specific cutting distance is determined by the wait time for etching of the first zigzag site, which is inversely proportional to the nanoparticle radius R, because the larger the nanoparticle, the longer the graphene-metal interface, and thus, more sites have potential to be the first zigzag site. At the same time, the number of etched carbon atoms N for a specific cutting distance is proportional to R, as the cutting channel is wider for larger nanoparticles. Finally, the etching rate k = N/t ∼ R2. Therefore, the R2 dependence is not derived from a rate-limiting surface reaction. Atomistic simulations enable us to understand such interface-reaction limited cutting processes with the surface area-dependent kinetics.
+5. Mechanistic Study Based Growth Protocol Design
+With a deep understanding of the growth mechanisms, we can theoretically design optimal growth protocols for a specific purpose, such as bilayer graphene growth or heteroatom-doped graphene growth.
+5.1. Bilayer Graphene Growth
+Because it does not have a finite gap, graphene cannot be used in digital devices requiring a high on–off ratio. Bilayer graphene is suitable for this purpose, as a band gap can be easily induced by an electric field. However, graphene growth on a Cu surface is traditionally considered to be a self-limiting process leading to graphene monolayers. The main reason for this behavior is that if a graphene overlayer is formed, it will cover the Cu surface and block carbon-containing species from reaching the substrate.
+Our mechanistic study suggests that carbon atoms can actually penetrate a graphene overlayer on a Cu surface by atom exchange. (53) At the same time, the barrier to penetrate the second graphene layer becomes much higher, which provides a possible method to controllably grow bilayer graphene. We propose the multistep protocol shown in Figure 6, which can be described as follows: (a) monolayer graphene is grown via the standard CVD method on a Cu surface, (b) penetration-based carbon monomer intercalation leads to the growth of a second layer using molecular-beam epitaxy (MBE), (c) hydrogen gas is supplied to etch extra carbon species, and (d) high-quality bilayer graphene is finally obtained after hydrocarbon desorption. According to our calculations, the optimal temperature of the MBE step is 693 K.
+Figure 6
+Figure 6. (a) Monolayer graphene (black) is grown from CH4 and H2 via standard CVD on a Cu surface. (b) Carbon monomer intercalation occurs via a penetration mechanism, and the second graphene layer (green) is grown. (c) Hydrogen gas is supplied to etch extra carbon species. (d) After hydrocarbon desorption, high-quality bilayer graphene is obtained. Adapted from ref (53). Copyright 2014 American Chemical Society.
+5.2. N-Doped Graphene Growth
+Doping is an effective strategy to increase the carrier density in graphene. However, the realization of uniform doping and the avoidance of defects during doping are still challenges. (8,54) We suggest using C5NCl5 as the precursor to grow graphene containing high-density and highly ordered nitrogen dopants on a Cu(111) surface. (55)
+Such a process relies on the elegant concerted roles played by London dispersion, chemical bonding, and screened Coulomb repulsive forces in enhancing molecular adsorption, facilitating easy dechlorination, and dictating the overall orientation of the C5N radicals, respectively. First-principles calculations show that C5NCl5 can be stably adsorbed on Cu(111) due to strong London dispersion forces (Figure 7a). The dechlorination barrier of C5NCl5 is below 0.76 eV, and the whole dechlorination process is exothermic (Figure 7b). Moderate migration barriers and strong Coulomb repulsion can assemble C5N radicals in an orderly manner (Figure 7c). The obtained free-standing N-doped graphene is stable and metallic with a high carrier density.
+Figure 7
+Figure 7. (a) Molecular adsorption of C5NCl5 on Cu(111). (b) Efficient dechlorination of C5NCl5 catalyzed by the substrate. (c) Diffusional and rotational movements enable C5N radicals to self-assemble into graphene with highly ordered N dopants. Adapted from ref (55). Copyright 2017 American Chemical Society.
+6. Summary and Outlook
+In this Account, we summarized our recent progress in understanding graphene growth. We demonstrated that atomistic simulations are a powerful tool for mechanism exploration. From the simulations, we can construct a complex kinetic network of growth and identify the dominant pathways. The obtained kinetics can also be directly compared with experiment. Agreement between simulation and experiment can further verify the obtained mechanisms. With such mechanistic insight, we can theoretically design new growth protocols, in which key experimental parameters can be quantitatively estimated from theory. We expect that this encouraging progress will inspire more theoretical studies into 2D material growth using atomistic simulations.
+Certainly, large challenges remain. Although we now largely understand the growth mechanisms, atomic details of the graphene nucleation process remain elusive. On the methodology side, kinetic parameters in kMC simulations are typically obtained from DFT calculations on an ideal surface model within the transition state theory framework. Distortion of the substrate structure and the anharmonicity effect are generally not incorporated in the determination of event rates, though these effects are expected to be significant at the high temperature of graphene growth. A possible remedy is feeding kMC simulations with rates determined from MD simulations supported by advanced sampling techniques. To avoid overlooking important events, on-the-fly kMC simulations can be used. All these considerations require vast computational resources. An accurate force field, possibly based on machine learning, (56) is thus highly desirable. Future progress in these directions will further deepen our understanding of graphene growth and enhance the use of atomistic simulations as a tool for mechanism exploration.
+Author Information
+Corresponding Author
+Zhenyu Li - Hefei National Laboratory for Physical Sciences at the Microscale, University of Science and Technology of China, Hefei, Anhui 230026, China;  http://orcid.org/0000-0003-2112-9834;  Email: zyli@ustc.edu.cn
+Authors
+Zongyang Qiu - Hefei National Laboratory for Physical Sciences at the Microscale, University of Science and Technology of China, Hefei, Anhui 230026, China
+Pai Li - Hefei National Laboratory for Physical Sciences at the Microscale, University of Science and Technology of China, Hefei, Anhui 230026, China
+Jinlong Yang - Hefei National Laboratory for Physical Sciences at the Microscale, University of Science and Technology of China, Hefei, Anhui 230026, China;  http://orcid.org/0000-0002-5651-5340
+Notes
+The authors declare no competing financial interest.
+Biographies
+Zongyang Qiu received his B.S. degree in physics from Fujian Normal University in 2011. He is currently a PhD candidate at University of Science and Technology of China (USTC) and is studying graphene growth and etching via MD simulations and free energy calculations.
+Pai Li graduated from Hunan University with a B.S. degree in physics in 2013. He is now a PhD candidate at USTC and is interested in mechanisms of graphene growth.
+Zhenyu Li is a Professor of chemistry at USTC. He received his PhD degree in physical chemistry from USTC in 2004. His research interests involve the theoretical design and computational characterization of materials and physical/chemical processes, mainly based on electronic structure calculation and molecular simulation.
+Jinlong Yang is a Changjiang Professor of chemistry at USTC. He received his PhD degree in condensed matter physics from USTC in 1991. His research interests involve the development of first-principles methods and their application to clusters, nanostructures, solid materials, surfaces, and interfaces.
+Acknowledgments
+We thank all group members and collaborators who contributed to the studies summarized in this Account. This work is supported by MOST (2016YFA0200604), by NSFC (21173202 and 21573201), by CUSF, and by USTC-SCC, SCCAS, and Shanghai Supercomputer Centers.
+References
+This article references 56 other publications.
+1Novoselov, K. S.; Fallko, V.; Colombo, L.; Gellert, P.; Schwab, M.; Kim, K. A roadmap for graphene. Nature 2012, 490, 192– 200,  DOI: 10.1038/nature11458
+Google Scholar
+2Allen, M. J.; Tung, V. C.; Kaner, R. B. Honeycomb carbon: a review of graphene. Chem. Rev. 2010, 110, 132– 145,  DOI: 10.1021/cr900070d
+Google Scholar
+3Li, X.; Cai, W.; An, J.; Kim, S.; Nah, J.; Yang, D.; Piner, R.; Velamakanni, A.; Jung, I.; Tutuc, E. Large-area synthesis of high-quality and uniform graphene films on copper foils. Science 2009, 324, 1312– 1314,  DOI: 10.1126/science.1171245
+Google Scholar
+4Bae, S.; Kim, H.; Lee, Y.; Xu, X.; Park, J.-S.; Zheng, Y.; Balakrishnan, J.; Lei, T.; Kim, H. R.; Song, Y. I. Roll-to-roll production of 30-in. graphene films for transparent electrodes. Nat. Nanotechnol. 2010, 5, 574– 578,  DOI: 10.1038/nnano.2010.132
+Google Scholar
+5Sutter, P.; Sadowski, J. T.; Sutter, E. Graphene on Pt (111): Growth and substrate interaction. Phys. Rev. B: Condens. Matter Mater. Phys. 2009, 80, 245411,  DOI: 10.1103/PhysRevB.80.245411
+Google Scholar
+6Yu, Q.; Lian, J.; Siriponglert, S.; Li, H.; Chen, Y. P.; Pei, S.-S. Graphene segregated on Ni surfaces and transferred to insulators. Appl. Phys. Lett. 2008, 93, 113103,  DOI: 10.1063/1.2982585
+Google Scholar
+7Sutter, P. W.; Flege, J.-I.; Sutter, E. A. Epitaxial graphene on ruthenium. Nat. Mater. 2008, 7, 406– 411,  DOI: 10.1038/nmat2166
+Google Scholar
+8Li, Z.; Wu, P.; Wang, C.; Fan, X.; Zhang, W.; Zhai, X.; Zeng, C.; Li, Z.; Yang, J.; Hou, J. Low-temperature growth of graphene by chemical vapor deposition using solid and liquid carbon sources. ACS Nano 2011, 5, 3385– 3390,  DOI: 10.1021/nn200854p
+Google Scholar
+9Bhaviripudi, S.; Jia, X.; Dresselhaus, M. S.; Kong, J. Role of kinetic factors in chemical vapor deposition synthesis of uniform large area graphene using copper catalyst. Nano Lett. 2010, 10, 4128– 4133,  DOI: 10.1021/nl102355e
+Google Scholar
+10Zhang, Y.; Zhang, L.; Zhou, C. Review of chemical vapor deposition of graphene and related applications. Acc. Chem. Res. 2013, 46, 2329– 2339,  DOI: 10.1021/ar300203n
+Google Scholar
+11Tetlow, H.; de Boer, J. P.; Ford, I.; Vvedensky, D.; Coraux, J.; Kantorovich, L. Growth of epitaxial graphene: theory and experiment. Phys. Rep. 2014, 542, 195– 295,  DOI: 10.1016/j.physrep.2014.03.003
+Google Scholar
+12Chen, H.; Zhu, W.; Zhang, Z. Contrasting behavior of carbon nucleation in the initial stages of graphene epitaxial growth on stepped metal surfaces. Phys. Rev. Lett. 2010, 104, 186101,  DOI: 10.1103/PhysRevLett.104.186101
+Google Scholar
+13Wu, P.; Zhang, W.; Li, Z.; Yang, J.; Hou, J. G. Communication: Coalescence of carbon atoms on Cu (111) surface: Emergence of a stable bridging-metal structure motif. J. Chem. Phys. 2010, 133, 071101
+Google Scholar
+14Gao, J.; Yip, J.; Zhao, J.; Yakobson, B. I.; Ding, F. Graphene nucleation on transition metal surface: structure transformation and role of the metal step edge. J. Am. Chem. Soc. 2011, 133, 5009– 5015,  DOI: 10.1021/ja110927p
+Google Scholar
+15Yuan, Q.; Gao, J.; Shu, H.; Zhao, J.; Chen, X.; Ding, F. Magic carbon clusters in the chemical vapor deposition growth of graphene. J. Am. Chem. Soc. 2012, 134, 2970– 2975,  DOI: 10.1021/ja2050875
+Google Scholar
+16Gao, J.; Zhao, J.; Ding, F. Transition metal surface passivation induced graphene edge reconstruction. J. Am. Chem. Soc. 2012, 134, 6204– 6209,  DOI: 10.1021/ja2104119
+Google Scholar
+17Wu, P.; Zhang, W.; Li, Z.; Yang, J. Mechanisms of graphene growth on metal surfaces: theoretical perspectives. Small 2014, 10, 2136– 2150,  DOI: 10.1002/smll.201303680
+Google Scholar
+18Wang, Z.; Luo, Q.; Zhang, W.; Li, Z. Effects of Carbide Formation in Graphene Growth. Chin. J. Chem. Phys. 2015, 28, 65– 69,  DOI: 10.1063/1674-0068/28/cjcp1410170
+Google Scholar
+19Wang, Y.; Page, A. J.; Nishimoto, Y.; Qian, H.-J.; Morokuma, K.; Irle, S. Template effect in the competition between Haeckelite and graphene growth on Ni (111): Quantum chemical molecular dynamics simulations. J. Am. Chem. Soc. 2011, 133, 18837– 18842,  DOI: 10.1021/ja2064654
+Google Scholar
+20Wu, P.; Jiang, H.; Zhang, W.; Li, Z.; Hou, Z.; Yang, J. Lattice mismatch induced nonlinear growth of graphene. J. Am. Chem. Soc. 2012, 134, 6045– 6051,  DOI: 10.1021/ja301791x
+Google Scholar
+21Wu, P.; Zhang, Y.; Cui, P.; Li, Z.; Yang, J.; Zhang, Z. Carbon dimers as the dominant feeding species in epitaxial growth and morphological phase transition of graphene on different Cu substrates. Phys. Rev. Lett. 2015, 114, 216102,  DOI: 10.1103/PhysRevLett.114.216102
+Google Scholar
+22Li, P.; Li, Z.; Yang, J. Dominant Kinetic Pathways of Graphene Growth in Chemical Vapor Deposition: The Role of Hydrogen. J. Phys. Chem. C 2017, 121, 25949– 25955,  DOI: 10.1021/acs.jpcc.7b09622
+Google Scholar
+23Wang, L.; Zhang, X.; Chan, H. L.; Yan, F.; Ding, F. Formation and healing of vacancies in graphene chemical vapor deposition (CVD) growth. J. Am. Chem. Soc. 2013, 135, 4476– 4482,  DOI: 10.1021/ja312687a
+Google Scholar
+24Artyukhov, V. I.; Liu, Y.; Yakobson, B. I. Equilibrium at the edge and atomistic mechanisms of graphene growth. Proc. Natl. Acad. Sci. U. S. A. 2012, 109, 15136– 15140,  DOI: 10.1073/pnas.1207519109
+Google Scholar
+25Artyukhov, V. I.; Hao, Y.; Ruoff, R. S.; Yakobson, B. I. Breaking of symmetry in graphene growth on metal substrates. Phys. Rev. Lett. 2015, 114, 115502,  DOI: 10.1103/PhysRevLett.114.115502
+Google Scholar
+26Meca, E.; Lowengrub, J.; Kim, H.; Mattevi, C.; Shenoy, V. B. Epitaxial graphene growth and shape dynamics on copper: phase-field modeling and experiments. Nano Lett. 2013, 13, 5692– 5697,  DOI: 10.1021/nl4033928
+Google Scholar
+27Li, G.; Huang, S.-H.; Li, Z. Gas-phase dynamics in graphene growth by chemical vapour deposition. Phys. Chem. Chem. Phys. 2015, 17, 22832– 22836,  DOI: 10.1039/C5CP02301G
+Google Scholar
+28Laio, A.; Parrinello, M. Escaping free-energy minima. Proc. Natl. Acad. Sci. U. S. A. 2002, 99, 12562– 12566,  DOI: 10.1073/pnas.202427399
+Google Scholar
+29Torrie, G. M.; Valleau, J. P. Nonphysical sampling distributions in Monte Carlo free-energy estimation: Umbrella sampling. J. Comput. Phys. 1977, 23, 187– 199,  DOI: 10.1016/0021-9991(77)90121-8
+Google Scholar
+30Nie, S.; Wofford, J. M.; Bartelt, N. C.; Dubon, O. D.; McCarty, K. F. Origin of the mosaicity in graphene grown on Cu (111). Phys. Rev. B: Condens. Matter Mater. Phys. 2011, 84, 155425,  DOI: 10.1103/PhysRevB.84.155425
+Google Scholar
+31Wofford, J. M.; Nie, S.; McCarty, K. F.; Bartelt, N. C.; Dubon, O. D. Graphene islands on Cu foils: the interplay between shape, orientation, and defects. Nano Lett. 2010, 10, 4890– 4896,  DOI: 10.1021/nl102788f
+Google Scholar
+32Zhang, W.; Wu, P.; Li, Z.; Yang, J. First-principles thermodynamics of graphene growth on Cu surfaces. J. Phys. Chem. C 2011, 115, 17782– 17787,  DOI: 10.1021/jp2006827
+Google Scholar
+33Jung, D. H.; Kang, C.; Kim, M.; Cheong, H.; Lee, H.; Lee, J. S. Effects of hydrogen partial pressure in the annealing process on graphene growth. J. Phys. Chem. C 2014, 118, 3574– 3580,  DOI: 10.1021/jp410961m
+Google Scholar
+34Vlassiouk, I.; Regmi, M.; Fulvio, P.; Dai, S.; Datskos, P.; Eres, G.; Smirnov, S. Role of hydrogen in chemical vapor deposition growth of large single-crystal graphene. ACS Nano 2011, 5, 6069– 6076,  DOI: 10.1021/nn201978y
+Google Scholar
+35Zhang, H.; Zhang, Y.; Zhang, Y.; Chen, Z.; Sui, Y.; Ge, X.; Yu, G.; Jin, Z.; Liu, X. Edge morphology evolution of graphene domains during chemical vapor deposition cooling revealed through hydrogen etching. Nanoscale 2016, 8, 4145– 4150,  DOI: 10.1039/C5NR06624G
+Google Scholar
+36Zhang, Y.; Li, Z.; Kim, P.; Zhang, L.; Zhou, C. Anisotropic hydrogen etching of chemical vapor deposited graphene. ACS Nano 2012, 6, 126– 132,  DOI: 10.1021/nn202996r
+Google Scholar
+37Li, K.; He, C.; Jiao, M.; Wang, Y.; Wu, Z. A first-principles study on the role of hydrogen in early stage of graphene growth during the CH4 dissociation on Cu (111) and Ni (111) surfaces. Carbon 2014, 74, 255– 265,  DOI: 10.1016/j.carbon.2014.03.030
+Google Scholar
+38Zhang, X.; Wang, L.; Xin, J.; Yakobson, B. I.; Ding, F. Role of hydrogen in graphene chemical vapor deposition growth on a copper surface. J. Am. Chem. Soc. 2014, 136, 3040– 3047,  DOI: 10.1021/ja405499x
+Google Scholar
+39Loginova, E.; Bartelt, N. C.; Feibelman, P. J.; McCarty, K. F. Evidence for graphene growth by C cluster attachment. New J. Phys. 2008, 10, 093026,  DOI: 10.1088/1367-2630/10/9/093026
+Google Scholar
+40Coraux, J.; Engler, M.; Busse, C.; Wall, D.; Buckanie, N.; Zu Heringdorf, F.-J. M.; Van Gastel, R.; Poelsema, B.; Michely, T. Growth of graphene on Ir (111). New J. Phys. 2009, 11, 023006,  DOI: 10.1088/1367-2630/11/2/023006
+Google Scholar
+41Zangwill, A.; Vvedensky, D. D. Novel growth mechanism of epitaxial graphene on metals. Nano Lett. 2011, 11, 2092– 2095,  DOI: 10.1021/nl2006005
+Google Scholar
+42Jiang, H.; Wu, P.; Hou, Z.; Li, Z.; Yang, J. Orientation-sensitive nonlinear growth of graphene: An epitaxial growth mechanism determined by geometry. Phys. Rev. B: Condens. Matter Mater. Phys. 2013, 88, 054304,  DOI: 10.1103/PhysRevB.88.054304
+Google Scholar
+43Schäffel, F.; Warner, J. H.; Bachmatiuk, A.; Rellinghaus, B.; Büchner, B.; Schultz, L.; Rümmeli, M. H. Shedding light on the crystallographic etching of multi-layer graphene at the atomic scale. Nano Res. 2009, 2, 695– 705,  DOI: 10.1007/s12274-009-9073-0
+Google Scholar
+44Datta, S. S.; Strachan, D. R.; Khamis, S. M.; Johnson, A. C. Crystallographic etching of few-layer graphene. Nano Lett. 2008, 8, 1912– 1915,  DOI: 10.1021/nl080583r
+Google Scholar
+45Ci, L.; Xu, Z.; Wang, L.; Gao, W.; Ding, F.; Kelly, K. F.; Yakobson, B. I.; Ajayan, P. M. Controlled nanocutting of graphene. Nano Res. 2008, 1, 116– 122,  DOI: 10.1007/s12274-008-8020-9
+Google Scholar
+46Campos, L. C.; Manfrinato, V. R.; Sanchez-Yamagishi, J. D.; Kong, J.; Jarillo-Herrero, P. Anisotropic etching and nanoribbon formation in single-layer graphene. Nano Lett. 2009, 9, 2600– 2604,  DOI: 10.1021/nl900811r
+Google Scholar
+47Keep, C.; Terry, S.; Wells, M. Studies of the nickel-catalyzed hydrogenation of graphite. J. Catal. 1980, 66, 451– 462,  DOI: 10.1016/0021-9517(80)90047-0
+Google Scholar
+48Qiu, Z.; Song, L.; Zhao, J.; Li, Z.; Yang, J. The Nanoparticle Size Effect in Graphene Cutting: A ″Pac-Man″ Mechanism. Angew. Chem., Int. Ed. 2016, 55, 9918– 9921,  DOI: 10.1002/ange.201602541
+Google Scholar
+49Mueller, J. E.; van Duin, A. C.; Goddard, W. A., III Development and validation of ReaxFF reactive force field for hydrocarbon chemistry catalyzed by nickel. J. Phys. Chem. C 2010, 114, 4939– 4949,  DOI: 10.1021/jp9035056
+Google Scholar
+50Wang, J.; Ma, L.; Yuan, Q.; Zhu, L.; Ding, F. Transition-Metal-Catalyzed Unzipping of Single-Walled Carbon Nanotubes into Narrow Graphene Nanoribbons at Low Temperature. Angew. Chem., Int. Ed. 2011, 50, 8041– 8045,  DOI: 10.1002/anie.201101022
+Google Scholar
+51Pizzocchero, F.; Vanin, M.; Kling, J.; Hansen, T. W.; Jacobsen, K. W.; Bøggild, P.; Booth, T. J. Graphene edges dictate the morphology of nanoparticles during catalytic channeling. J. Phys. Chem. C 2014, 118, 4296– 4302,  DOI: 10.1021/jp500800n
+Google Scholar
+52Ma, L.; Wang, J.; Yip, J.; Ding, F. Mechanism of transition-metal nanoparticle catalytic graphene cutting. J. Phys. Chem. Lett. 2014, 5, 1192– 1197,  DOI: 10.1021/jz500254u
+Google Scholar
+53Wu, P.; Zhai, X.; Li, Z.; Yang, J. Bilayer graphene growth via a penetration mechanism. J. Phys. Chem. C 2014, 118, 6201– 6206,  DOI: 10.1021/jp4108156
+Google Scholar
+54Xue, Y.; Wu, B.; Jiang, L.; Guo, Y.; Huang, L.; Chen, J.; Tan, J.; Geng, D.; Luo, B.; Hu, W.; Yu, G.; Liu, Y. Low temperature growth of highly nitrogen-doped single crystal graphene arrays by chemical vapor deposition. J. Am. Chem. Soc. 2012, 134, 11060– 11063,  DOI: 10.1021/ja302483t
+Google Scholar
+55Cui, P.; Choi, J.-H.; Zeng, C.; Li, Z.; Yang, J.; Zhang, Z. A Kinetic Pathway towards High-Density Ordered N Doping of Epitaxial Graphene on Cu (111) Using C5NCl5 Precursors. J. Am. Chem. Soc. 2017, 139, 7196– 7202,  DOI: 10.1021/jacs.6b12506
+Google Scholar
+56Behler, J. Perspective: Machine learning potentials for atomistic simulations. J. Chem. Phys. 2016, 145, 170901,  DOI: 10.1063/1.4966192
+Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+2
+Mentioning
+24
+Contrasting
+1
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 29 publications.
+Ashutosh Kumar Verma, Bharat Bhushan Sharma. Experimental and Theoretical Insights into Interfacial Properties of 2D Materials for Selective Water Transport Membranes: A Critical Review. Langmuir 2024, 40 (15) , 7812-7834. https://doi.org/10.1021/acs.langmuir.4c00061
+Luyang Wang, Runze Lai, Lichen Zhang, Mengqi Zeng, Lei Fu. In Situ Investigating the Mechanism of Graphene Growth by Chemical Vapor Deposition. ACS Materials Letters 2022, 4 (4) , 528-540. https://doi.org/10.1021/acsmaterialslett.1c00783
+Pai Li, Xiongzhi Zeng, Zhenyu Li. Understanding High-Temperature Chemical Reactions on Metal Surfaces: A Case Study on Equilibrium Concentration and Diffusivity of CxHy on a Cu(111) Surface. JACS Au 2022, 2 (2) , 443-452. https://doi.org/10.1021/jacsau.1c00483
+Zan Lian, Chaowei Si, Faheem Jan, ShuaiKe Zhi, Bo Li. Coke Deposition on Pt-Based Catalysts in Propane Direct Dehydrogenation: Kinetics, Suppression, and Elimination. ACS Catalysis 2021, 11 (15) , 9279-9292. https://doi.org/10.1021/acscatal.1c00331
+Paul Leidinger, Jürgen Kraus, Sebastian Günther. Predicting Graphene Growth on Cu: Universal Kinetic Growth Model and Its Experimental Verification. ACS Nano 2021, 15 (7) , 12201-12212. https://doi.org/10.1021/acsnano.1c03809
+Pai Li, Zhenyu Li. Theoretical Insights into the Thermodynamics and Kinetics of Graphene Growth on Copper Surfaces. The Journal of Physical Chemistry C 2020, 124 (30) , 16233-16247. https://doi.org/10.1021/acs.jpcc.0c02040
+Viktor Johánek, Václav Nehasil, Tomáš Skála, Nataliya Tsud. Carbon Chain Length Dependence of Graphene Formation via Thermal Decomposition of Alkenes on Pt(111). The Journal of Physical Chemistry C 2019, 123 (13) , 7911-7921. https://doi.org/10.1021/acs.jpcc.8b07165
+Dechun Zhou, Zhiqiang Niu, Tianchao Niu. Surface Reconstruction of Germanium: Hydrogen Intercalation and Graphene Protection. The Journal of Physical Chemistry C 2018, 122 (38) , 21874-21882. https://doi.org/10.1021/acs.jpcc.8b04965
+Di Zhang, Peiyun Yi, Xinmin Lai, Linfa Peng, Hao Li. Active machine learning model for the dynamic simulation and growth mechanisms of carbon on metal surface. Nature Communications 2024, 15 (1) https://doi.org/10.1038/s41467-023-44525-z
+Longlong Xiong, Liang Zhang, Bin Zhao, Bin Jiang. Six-dimensional quantum dynamics of an Eley–Rideal reaction between gaseous and adsorbed hydrogen atoms on Cu(111). Faraday Discussions 2024, 40 https://doi.org/10.1039/D3FD00163F
+Francesco Moriggi, Vincenzina Barbera, Maurizio Galimberti, Giuseppina Raffaini. Adsorption Affinities of Small Volatile Organic Molecules on Graphene Surfaces for Novel Nanofiller Design: A DFT Study. Molecules 2023, 28 (22) , 7633. https://doi.org/10.3390/molecules28227633
+Meysam Esmaeilpour, Patrick Bügel, Karin Fink, Felix Studt, Wolfgang Wenzel, Mariana Kozlowska. Multiscale Model of CVD Growth of Graphene on Cu(111) Surface. International Journal of Molecular Sciences 2023, 24 (10) , 8563. https://doi.org/10.3390/ijms24108563
+Chao Shen, Shichen Xu, Zhuo Chen, Nannan Ji, Jinhui Yang, Jin Zhang. Fluorobenzene and Water‐Promoted Rapid Growth of Vertical Graphene Arrays by Electric‐Field‐Assisted PECVD. Small 2023, 19 (10) https://doi.org/10.1002/smll.202207745
+Lingjun Zhu, Ce Hu, Jialu Chen, Bin Jiang. Investigating the Eley–Rideal recombination of hydrogen atoms on Cu (111) via a high-dimensional neural network potential energy surface. Physical Chemistry Chemical Physics 2023, 25 (7) , 5479-5488. https://doi.org/10.1039/D2CP05479E
+Adrian Ruckhofer, Marco Sacchi, Anthony Payne, Andrew P. Jardine, Wolfgang E. Ernst, Nadav Avidor, Anton Tamtögl. Evolution of ordered nanoporous phases during h-BN growth: controlling the route from gas-phase precursor to 2D material by in situ monitoring. Nanoscale Horizons 2022, 7 (11) , 1388-1396. https://doi.org/10.1039/D2NH00353H
+Xuesen Kou, Jing Jin, Yongzhen Wang, Yanhui Li, Fengxiao Hou. Understanding the effect of calcium containing compounds on ash deposition during boiler operation: experiment study and dynamics calculation. Environmental Science and Pollution Research 2022, 29 (48) , 72126-72139. https://doi.org/10.1007/s11356-021-17572-6
+Ilya Popov, Patrick Bügel, Mariana Kozlowska, Karin Fink, Felix Studt, Dmitry I. Sharapa. Analytical Model of CVD Growth of Graphene on Cu(111) Surface. Nanomaterials 2022, 12 (17) , 2963. https://doi.org/10.3390/nano12172963
+Sayan Bhowmik, Ananth Govind Rajan. Chemical vapor deposition of 2D materials: A review of modeling, simulation, and machine learning studies. iScience 2022, 25 (3) , 103832. https://doi.org/10.1016/j.isci.2022.103832
+Xiongzhi Zeng, Wei Hu, Xiao Zheng, Jin Zhao, Zhenyu Li, Jinlong Yang. Computational characterization of nanosystems. Chinese Journal of Chemical Physics 2022, 35 (1) , 1-15. https://doi.org/10.1063/1674-0068/cjcp2111233
+Li Jin, Changbao Zhao, Zhongmiao Gong, Jiaqi Pan, Wei Wei, Guoqing Wang, Yi Cui. Hydrogen-promoted graphene growth on Pt(111) via CVD methods. Surfaces and Interfaces 2021, 26 , 101383. https://doi.org/10.1016/j.surfin.2021.101383
+Menglei Wang, Yingze Song, Nan Wei, Yuanlong Shao, Guan Sheng, Jingyu Sun. Universal interface and defect engineering dual-strategy for graphene-oxide heterostructures toward promoted Li–S chemistry. Chemical Engineering Journal 2021, 418 , 129407. https://doi.org/10.1016/j.cej.2021.129407
+Baojun Sun, Jinbo Pang, Qilin Cheng, Shu Zhang, Yufen Li, Congcong Zhang, Dehui Sun, Bergoi Ibarlucea, Yang Li, Duo Chen, Huaimin Fan, Qingfang Han, Mengxin Chao, Hong Liu, Jingang Wang, Gianaurelio Cuniberti, Lin Han, Weijia Zhou. Synthesis of Wafer‐Scale Graphene with Chemical Vapor Deposition for Electronic Device Applications. Advanced Materials Technologies 2021, 6 (7) https://doi.org/10.1002/admt.202000744
+Kasra Momeni, Yanzhou Ji, Yuanxi Wang, Shiddartha Paul, Sara Neshani, Dundar E. Yilmaz, Yun Kyung Shin, Difan Zhang, Jin-Wu Jiang, Harold S. Park, Susan Sinnott, Adri van Duin, Vincent Crespi, Long-Qing Chen. Multiscale computational understanding and growth of 2D materials: a review. npj Computational Materials 2020, 6 (1) https://doi.org/10.1038/s41524-020-0280-2
+Kaicheng Jia, Haina Ci, Jincan Zhang, Zhongti Sun, Ziteng Ma, Yeshu Zhu, Shengnan Liu, Junling Liu, Luzhao Sun, Xiaoting Liu, Jingyu Sun, Wanjian Yin, Hailin Peng, Li Lin, Zhongfan Liu. Superclean Growth of Graphene Using a Cold‐Wall Chemical Vapor Deposition Approach. Angewandte Chemie 2020, 132 (39) , 17367-17371. https://doi.org/10.1002/ange.202005406
+Kaicheng Jia, Haina Ci, Jincan Zhang, Zhongti Sun, Ziteng Ma, Yeshu Zhu, Shengnan Liu, Junling Liu, Luzhao Sun, Xiaoting Liu, Jingyu Sun, Wanjian Yin, Hailin Peng, Li Lin, Zhongfan Liu. Superclean Growth of Graphene Using a Cold‐Wall Chemical Vapor Deposition Approach. Angewandte Chemie International Edition 2020, 59 (39) , 17214-17218. https://doi.org/10.1002/anie.202005406
+Xiaodong Li, Ning Wang, Jianjiang He, Ze Yang, Zeyi Tu, Fuhua Zhao, Kun Wang, Yuanping Yi, Changshui Huang. Designing the efficient lithium diffusion and storage channels based on graphdiyne. Carbon 2020, 162 , 579-585. https://doi.org/10.1016/j.carbon.2020.03.004
+Jie Yang, PingAn Hu, Gui Yu. Design of carbon sources: starting point for chemical vapor deposition of graphene. 2D Materials 2019, 6 (4) , 042003. https://doi.org/10.1088/2053-1583/ab31bd
+Yangyong Sun, Liangwei Yang, Kailun Xia, Haizhou Liu, Dong Han, Yingying Zhang, Jin Zhang. “Snowing” Graphene using Microwave Ovens. Advanced Materials 2018, 30 (40) https://doi.org/10.1002/adma.201803189
+Yangyunli Sun, Shuo Zhang, Wen-hua Zhang, Zhen-yu Li. Theoretical study of adsorption and dehydrogenation of C2H4 on Cu(410). Chinese Journal of Chemical Physics 2018, 31 (4) , 485-491. https://doi.org/10.1063/1674-0068/31/cjcp1805120
+Download PDF
+Get e-Alerts
+Accounts of Chemical Research
+Cite this: Acc. Chem. Res. 2018, 51, 3, 728–735
+https://doi.org/10.1021/acs.accounts.7b00592
+Published March 1, 2018
+Copyright © 2018 American Chemical Society
+Request reuse permissions
+Article Views
+3159
+Altmetric
+3
+Citations
+29
+Learn about these metrics
+Recommended Articles
+Theoretical Insights into the Thermodynamics and Kinetics of Graphene Growth on Copper Surfaces
+June 18, 2020The Journal of Physical Chemistry C
+Pai Li and Zhenyu Li*
+Dominant Kinetic Pathways of Graphene Growth in Chemical Vapor Deposition: The Role of Hydrogen
+November 14, 2017The Journal of Physical Chemistry C
+Pai Li, Zhenyu Li*, and Jinlong Yang
+Show more
+recommended articles
+Figures
+References
+Abstract
+Figure 1
+Figure 1. Schematic diagram of the SOF-kMC model. Solid and hollow circles represent occupied and unoccupied lattice sites. Brown sites have already formed graphene. For simplicity, surface sites for carbon adsorption are represented by a honeycomb lattice. Adapted from ref (20). Copyright 2012 American Chemical Society.
+Figure 2
+Figure 2. (a) Spatial distribution of the simulated steady-state carbon concentration, as well as its line scan between two neighboring islands, on Cu(111) with a 0.024 monolayer coverage. (b) Same as in (a), but with an artificially high dimer attachment barrier. Adapted with permission from ref (21). Copyright 2015 American Physical Society.
+Figure 3
+Figure 3. Reaction pathways of graphene growth. The numbers denote the number of occurrences of each event in a typical kMC trajectory. Net occurrences (forward minus backward) are given in white. Adapted from ref (22). Copyright 2017 American Chemical Society.
+Figure 4
+Figure 4. (a) Carbon monomers attached at 8 of the 10 graphene edge sites and (b) with an additional C5 cluster at the other 2 sites. C, H, and Ir atoms are given in yellow, white, and blue. (c) Growth rate versus C monomer concentration. Adapted from ref (20). Copyright 2012 American Chemical Society.
+Figure 5
+Figure 5. (a) Free energy surface of armchair C–C bond breaking obtained from metadynamics. In the inset, edge atoms are numerically labeled. CN2 and CN3 are the coordination number of carbon atoms 2 and 3. (b) Different configurations corresponding to free energy minima in (a). Barriers are marked in eV. Adapted with permission from ref (48). Copyright 2016 Wiley.
+Figure 6
+Figure 6. (a) Monolayer graphene (black) is grown from CH4 and H2 via standard CVD on a Cu surface. (b) Carbon monomer intercalation occurs via a penetration mechanism, and the second graphene layer (green) is grown. (c) Hydrogen gas is supplied to etch extra carbon species. (d) After hydrocarbon desorption, high-quality bilayer graphene is obtained. Adapted from ref (53). Copyright 2014 American Chemical Society.
+Figure 7
+Figure 7. (a) Molecular adsorption of C5NCl5 on Cu(111). (b) Efficient dechlorination of C5NCl5 catalyzed by the substrate. (c) Diffusional and rotational movements enable C5N radicals to self-assemble into graphene with highly ordered N dopants. Adapted from ref (55). Copyright 2017 American Chemical Society.

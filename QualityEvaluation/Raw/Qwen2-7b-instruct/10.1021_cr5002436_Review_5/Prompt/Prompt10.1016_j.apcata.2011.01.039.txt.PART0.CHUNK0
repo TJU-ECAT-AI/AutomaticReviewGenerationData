@@ -1,0 +1,463 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Applied Catalysis A: General 398 (2011) 1826 Contents lists available at ScienceDirect Applied Catalysis A: General journal homepage: www.elsevier.com/locate/apcata Kinetics of propane dehydrogenation over PtSn/Al2O3 catalyst Qing Li a, Zhijun Sui a, Xinggui Zhou a,, De Chen b,a State Key Laboratory of Chemical Engineering, East China University of Science and Technology, Shanghai 200237, China b Department of Chemical Engineering, Norwegian University of Science and Technology (NTNU), Sem Slandsvei 4, N-7491 Trondheim, Norway a r t i c l e i n f o Article history: Received 8 October 2010 Received in revised form 25 January 2011 Accepted 26 January 2011 Available online 3 February 2011 Keywords: Propane dehydrogenation Kinetics Coke formation PtSn/Al2O3 catalyst a b s t r a c t LangmuirHinshelwood kinetic models for catalytic propane dehydrogenation on Pt -Sn/Al2O3 are pro- posed based on the reaction mechanisms that take into account the one step or two-step dehydrogenation and are evaluated by fitting the experiments. When taking into consideration the fitting accuracy, the number of fitting parameters and the rigorousness of the reaction mechanism, the kinetics of propane dehydrogenation based on the assumptions of step-wise dehydrogenation, the first step dehydrogenation as the rate-determining step, and low surface coverage of C3H7 outperforms other kinetic models. The change of catalyst activity with time-on-stream is related to the rate of coke formation that depends on the partial pressures of propene and hydrogen. Finally a complete kinetic model, which includes propane dehydrogenation and cracking and catalyst deactivation because of coking, is developed, which is found to agree well with the changes of propane conversions with time-on-stream under different operating conditions. Direct measurement of coke formation is avoided by the approach employed in this study for the prediction of catalyst deactivation by coke deposition. 2011 Elsevier B.V. All rights reserved.
+1. Introduction
+Nowadays the world demand of propene is fast increas- ing [13] because of the heavy increase in the demand of polypropylene, acrylonitrile, propene oxide, cumene, phenol, iso- propylic alcohol and many other propene derivatives. The propene obtained as a co-product from steam crackers or FCC units does not satisfy the growing demand. Consequently, there is a great interest in developing alternative routes for propene production. Propane dehydrogenation is one of the techniques for on-purpose propene production, and several propane dehy- drogenation processes, such as Oleflex and Catofin, have been commercialized.
+Propane dehydrogenation is equilibrium limited and highly endothermic, which is usually carried out at 500600 C and atmo- spheric pressure on platinum or chromium catalysts. However,the dehydrogenation reaction is also accompanied with cracking and coking reactions at such conditions. While cracking decreases the propene yield, coking deactivates catalyst. As a result, peri- odic regeneration of the catalyst is required in industrial operation.
+Developing dehydrogenation catalysts with high activity and selec- tivity as well as good stability against coke formation remains a challenge.
+Corresponding authors. Tel.: +86 21 64253509; fax: +86 21 64253528.
+E-mail addresses: xgzhou@ecust.edu.cn (X. Zhou), chen@nt.ntnu.no (D. Chen).
+Up to now, investigation on the reaction of propane dehy- drogenation has been mainly focused on improving the catalytic performance. Many efforts have been devoted to improving the activity and selectivity by adding alkali metal, alkaline earth metal,transition metal and also Ga and Sn in the catalyst [49], under- standing the mechanism of coke formation on the catalyst that causes catalyst deactivation, and building reliable reaction kinet- ics for process design and optimization [1013]. Compared with the investigation on the mechanism of propane dehydrogenation and coke formation and the study to improve the activity and sta- bility of the catalyst, much less efforts have been made to establish complete and reliable kinetic models under industrial operating conditions and taking into consideration side reactions and cata- lyst deactivation. These models are essential for optimization of the reactor and the process to increase the propene yield and reduce the deactivation. Moreover, most of the kinetics reported in the literature are not complete because the catalyst deacti- vation is not considered, or the activity of the catalyst is not related to the rate of coke formation [1417]. Among the few complete kinetics published, Larsson et al. [18] combined the kinet- ics of propane dehydrogenation, which was a simple power law model, with the kinetics of coke formation. Thereafter, Lobera et al.
+[19] employed the generalized monolayermultilayer coke growth model (MMCGM) [20,21] to describe the kinetics of coking on PtSn catalyst. Gascn et al. [22] used a similar approach to establish the kinetics for Cr2O3 catalyst. Moreover, in previous publications on propane dehydrogenation, only the temperature was considered to be responsible for catalyst deactivation. However, the gas compo- 0926-860X/$  see front matter  2011 Elsevier B.V. All rights reserved. doi:10.1016/j.apcata.2011.01.039
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+19 Nomenclature a activity of the catalyst Ea1 activation energy of propane dehydrogenation (kJ/mol) Ea2 activation energy of propane cracking (kJ/mol) Eac activation energy of coking reaction (kJ/mol)
+F
+flowrate of outlet gas (in Eqs. (11) and (12)) (m3/min)
+F0
+flowrate of feed gas (in Eqs. (11) and (12)) (m3/min) k1, k 2 forward reaction rate constants (mol/(min kg), in models (M1), (M1-1), (M2), and (M3)) k10, k20 pre exponential factors of k1 and k2 k1, k 2 reverse reaction rate constants (mol/(min kg)) ka1, ka2, ka3 rate constants of adsorption ka1, ka2, ka3 rate constants of desorption kc coking reaction rate constant kd rate constant in deactivation function
+K
+reaction equilibrium constant of propane dehydro- genation
+K
+reaction equilibrium constant of the elimination of the first hydrogen atom
+K
+reaction equilibrium constant of the elimination of the second hydrogen atom
+K2, K3
+adsorption equilibrium constants (atm1)
+K20, K30
+pre-exponential factors of K2 and K3 l the number of experimental points (in Eq. (13)) M1, M1-1, M2, M2-1, M2-2, M2-3, M3, models for the rate of dehydrogenation of propane
+M4
+model for propane cracking
+M5
+model for deactivation
+MSC
+model selection criteria p the number of parameters (in Eq. (13)) Pi (i = C3H8, C3H6 and H2) partial pressure of specie i (atm) r1, r2, r3, r4 reaction rate of propane dehydrogenation rc coking rate s selectivity to propene
+S
+vacant site
+SSR
+sum of squared residuals x conversion of propane yi (i = Ar, CH4, C2H4, C2H6, C3H6, C3H8 and H2) the molar ratio of specie i in the outlet gas (in Eqs. (11) and (12)) yi0 (i = Ar, CH4, C2H4, C2H6, C3H6, C3H8 and H2) the molar ratio of specie i in the feed gas (in Eqs. (11) and (12))
+Ycal the model-calculated values (in Eq. (13))
+Yobs the weighted mean of the experimental observa- tions (in Eq. (13))
+H2
+adsorption heat of propene (kJ/mol)
+H3
+adsorption heat of hydrogen (kJ/mol) sitions, including the partial pressures of propene and hydrogen,also have significant influences on the rate of coke formation and therefore catalyst deactivation.
+For dynamic simulation and optimization of the process of propane dehydrogenation, a transient reaction kinetics, which takes all the important reactions into consideration is required. In this study, a kinetic model for propane dehydrogenation includ- ing propane cracking and catalyst deactivation over PtSn/Al2O3 catalyst is presented. Moreover, the rate of catalyst deactivation is related not only to temperature, but also to gas composition, i.e., C3H6 and H2 concentrations.
+2. Kinetic model
+2.1. Propane dehydrogenation
+The mechanisms of dehydrogenation on several catalysts have been studied in a number of investigations. Jackson et al. [16] studied the dehydrogenation of propane over a chromium cata- lyst using isotopic labeling techniques coupled to transient flow methods and identified the rate determining step as the elimina- tion of -hydrogen from propyl radical. Biloen et al. [23] studied the catalytic dehydrogenation of propane to propene over platinum and platinumgold alloys, and also concluded that the subse- quent conversion of the propyl radical into -bonded propene via -hydrogen elimination was the rate-determining step, while the desorption of -bonded propene had a comparatively low activation energy. Suzuki and Kaneko [24] investigated the dehy- drogenation of propane over chromiumaluminapotassium oxide catalysts and proposed that the rate determining step of the reac- tion was the dehydrogenation of adsorbed propane.
+Recently we [25] studied the adsorption of the possible inter- mediates and the pathways of propane dissociation on Pt(1 1 1) by density functional theory. The results revealed that propane is physically adsorbed on Pt because the propane molecule has no unpaired electron and cannot bind with Pt atom. Trapping- mediated dissociative chemisorption indicated that the gas phase molecule is trapped in the potential field of the surface in the form of alkane, which accommodates to the temperature of the surface [26]. The physically adsorbed molecule may then either desorb or dissociate. Propene is chemically adsorbed on Pt by bind- ing two surface Pt atoms through its unsaturated CC bond. More interestingly, it was found that surface hydrogen has a remarkable influences on the overall reactions by promoting propene desorp- tion and hindering propene dehydrogenation. However, it is still difficult to establish the reaction kinetics for a complex heteroge- neous catalyst reaction such as propane dehydrogenation based solely on theoretical calculations due to the material and pressure gaps between theoretical calculations and experiments under prac- tical operating conditions. Therefore, in this study the conventional LangmuirHinshelwood (LH) approach is employed to establish the kinetic models by assuming different reaction mechanisms and rate-determining steps.
+In the first mechanism, direct dehydrogenation of gas phase molecule to propene on Pt surface, hydrogen dissociative adsorp- tion, and propene desorption are involved.
+C3H8 + 3S
+k1
+k1
+C3H6S + 2HS
+(I1)
+2HS
+ka3
+ka3
+H2 + 2S
+K3 = ka3 ka3
+(I2)
+C3H6S
+ka2
+ka2
+C3H6 + S
+K2 = ka2 ka2
+(I3)
+In fact, this is a simple mechanism that lumps up all the possible dehydrogenation steps. By assuming the surface reaction (I3) as the rate-determining step, the rate of propane conversion is:r1 = k1(PC3H8 PC3H6PH2/K)
+(1 + K2PC3H6 + K0.5
+3
+P0.5
+H2 )
+3
+(M1)
+where [27]: K = exp(16.858 15934
+T
++ 148728
+T2
+)atm (1) 20
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+If the hydrogen adsorption is weak, the rate expression (M1) can be simplified to (M1-1):r2 = k1(PC3H8 PC3H6PH2/K)
+1 + K2PC3H6
+(M1-1)
+In another mechanism, both propene and hydrogen adsorption are considered but dehydrogenation is assumed to proceed step by step, i.e.
+C3H8 + 2S
+k1
+k1
+C3H7S + HS
+K = k1 k1
+(II1)
+C3H7S + S
+k 2
+k 2
+C3H6S + HS
+K =
+k 2 k 2
+(II2)
+C3H6S
+ka2
+ka2
+C3H6 + S
+(II3)
+2HS
+ka3
+ka3
+H2 + 2S
+(II4)
+If the first CH bond cleavage of propane (II1) is the rate- determining step, the rate expression can be derived as:r3 = k1(PC3H8 PC3H6PH2/K)
+(1 + K2PC3H6 + K0.5
+3
+P0.5
+H2 + K2PC3H6K0.5
+3
+P0.5
+H2 /K)
+2
+(M2)
+If the second step with second CH bond cleavage of propane (II2) is the rate-limiting step, the rate expression is:r4 = k
+2K(PC3H8 PC3H6PH2/K)
+K0.5
+3
+P0.5
+H2 (1 + K2PC3H6 + K0.5
+3
+P0.5
+H2 + PC3H8K/(K0.5
+3
+P0.5
+H2 ))
+2
+(M3)
+By assuming negligible surface coverage of C3H7, or C3H6 as the only dominating surface species, or H atom as the only dominat- ing surface species, the rate expression can be further simplified to (M2-1), (M2-2) and (M2-3), respectively. r31 = k1(PC3H8 PC3H6PH2/K)
+(1 + K2PC3H6 + K0.5
+3
+P0.5
+H2 )
+2
+(M2-1)
+r32 = k1(PC3H8 PC3H6PH2/K)
+(1 + K2PC3H6)2
+(M2-2)
+r33 = k1(PC3H8 PC3H6PH2/K)
+(1 + K0.5
+3
+P0.5
+H2 )
+2
+(M2-3)
+2.2. Propane cracking
+In preliminary propane dehydrogenation experiments on the PtSn catalyst, only methane and ethene were detected as cracking products, which is in good agreement with the results reported by Wu et al. [28]. Therefore in addition to propane dehydrogenation,the side reaction considered is the cracking of propane to methane and ethylene, i.e.
+C3H8 CH4 + C2H4
+(2) The cracking rate is assumed to be first order with respect to propane,rcracking = k2PC3H8
+(M4)
+2.3. Coke formation and catalyst deactivation
+Coke on the catalyst could form from several routes, such as deep cracking of propane, polymerization of olefins (mainly propene) and condensation of large molecules. The coke is mainly formed by two mechanisms, i.e., deep cracking of propane that leads to graphi- tized carbon, and polymerization, condensation etc., that lead to polyaromatics [2932]. These two mechanisms are represented by
+C3H8 3C + 4H2
+(3) nC3H6 3nCH0.5 + 2.25nH2 (4) The deep propane cracking Eq. (3) and the propene polymeriza- tion Eq. (4) can be assumed to be first order with respect to propane and propene. As H2 has definite influences on the coking rate, it should be included in the coking rate equation. Our DFT study showed H2 inhibits coke formation mainly by promoting propene desorption and decreasing the surface coverage of propene, which lowers the rate of deep cracking or polymerization of propene.
+Based on our DFT analysis, propene can be considered as the pre- cursor for deep cracking and polymerization, and the influence of hydrogen on the coking rate is assumed the same for both deep cracking and for polymerization. Therefore, the coking rate on fresh catalyst is defined as:rc0 = kcPC3H6
+1 + K3PH2
+(5) where PC3H6 and PH2 are the partial pressures of propene and hydro- gen. On partially coked catalyst, the coking rate is rc = acrc0 (6) where ac is the activity of the catalyst for coke formation.
+As usual, the rate of propane dehydrogenation is written as r = ar0 (7) where r0 is the rate on fresh catalyst, and a is the activity of the catalyst. The change of catalyst activity with time generally takes the form [33] da dt =  d(pi, T)ad (8) where d is the deactivation order and  d the deactivation func- tion, usually expressed in a LHHW form [3440]. By assuming that coke formation takes place on the same site for propane dehydro- genation, and only one site is involved in the rate determining steps for both propane dehydrogenation and coke formation, we have a first order catalyst deactivation and the same deactivation rate for propane dehydrogenation and coke formation, i.e. ac = a = Cm Cc Cm (9) where Cc is the concentration of the active sites occupied by the coke and Cm is the total concentration of the active sites. Therefore, Eq. (6) is rewritten as dCc dt = Cm Cc Cm rc0 (10) Replacing Cc with Cm(1 a) yields da dt = rc0 Cm a = kdPC3H6
+1 + K3PH2
+a kd = kc Cm
+(M5)
+3. Experimental
+3.1. Catalyst preparation
+The PtSn/Al2O3 catalyst used for kinetic study was prepared by incipient impregnation of Al2O3 (Pural 200) with H2PtCl6 and SnCl4 solutions, respectively. The catalysts were calcinated at 530 C and treated with steam to remove chlorine.
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+21 0
+0.2
+0.4
+0.6
+0.8
+1
+1.2
+0
+0.05
+0.1
+0.15
+0.2
+0.25
+0.3
+0.35
+0.4
+Diameter of catalyst particle (mm) Conversion of Propane O - W=0.10 g T=600oC Fig. 1. Influences of particle size on pore mass diffusion (600 C, 65.0 kPa Ar; 35.0 kPa C3H8, 80.0 ml/min total flow).
+3.2. Catalyst characterization
+The catalyst was characterized by N2 physisorption on ASAP 2010 (Micromeritics, USA) at 196 C after out-gassing the samples for at least 5 h at 190 C and 1 mm Hg vacuum. The specific surface areas were calculated with BET equation, and the pore volumes and pore size distributions were determined from the N2 desorption isotherms by using the BJH method. Prior to the kinetic experi- ment, the catalyst was ground and sieved to particle sizes between
+0.1 and 0.15 mm.
+3.3. Experimental set-up
+The tubular reactor for the kinetic experiments was a stainless tube with an inner diameter of 6 mm, the temperature of which was maintained by an electrical furnace jacketed outside the reac- tor. Inside the catalyst packing inserted was a thermocouple for indication of the real temperature for reaction. Silica sands as inert packing were used for a uniform flow distribution. An online gas chromatography (Agilent 4890D) was used to measure the outlet 0 50 100 150 0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+W/F (g.min/mol) Conversion of Propane T=600oC Δ - W=0.20 g ο - W=0.10 g Fig. 2. Influences of space velocity on film mass diffusion (600 C, 65.0 kPa Ar;
+35.0 kPa C3H8, for W = 0.10 g, F is varied from 22.8 ml/min to 89.6 ml/min; for
+W = 0.20 g, F is varied from 39.5 ml/min to 155.6 ml/min).
+Table 1 Blank analysis.
+Temperature (C) Conversion of
+C3H8 (%)
+Selectivity to
+C3H6 (%)
+550
+0.6
+n.d. 575
+0.9
+n.d. 600
+1.4
+2.33
+n.d.: Not detected. gas concentration (Agilent 4890D). The propane conversion and the selectivity to propene were calculated, respectively, by x = F0yi0 Fyi F0yi0 (11) s = Fyi F0yi0 F0yC3H80 FyC3H8 (12) where F0 and F are the inlet and outlet molar flow rate. yi0 repre- sents the molar ratio of specie i in the feed gas and yi represents the molar ratio of specie i (i = Ar, CH4, C2H4, C2H6, C3H6, C3H8 and H2) in the outlet gas.
+3.4. Blank test
+In order to check whether the wall of the reactor and inert pack- ing (mainly quartz particles) catalyze the reaction, several blank tests were carried out at different temperatures with a flow rate of 80.0 ml/min and the results are shown in Table 1. A very small amount of propane was converted, which was possibly due to ther- mal cracking. The even smaller amount of C3H6 formed at 600 C might also come from thermal cracking. In this study, however, C3H6 is considered to be formed only by catalytic dehydrogena- tion. The formation of propene from propane by thermal cracking or catalyzed by the wall of the reactor or by the inert packing can be neglected. To elucidate whether the reactor has an influence on the conversion of propene, both propene and hydrogen with equal molar fractions were fed into the reactor at 600 C. About
+1.0% of the propene is converted to methane, ethene and propane
+and, based on the carbon balance, 0.1% of the propene is estimated to be converted into coke.
+3.5. Kinetic experiments
+The kinetic experiments were carried out in the fixed bed reactor at temperatures ranging from 530 to 600 C and under 100 kPa. The total feed flow rate was kept 80.0 ml/min for all the runs. The partial pressures of propane, propene and hydrogen were varied by adjust- ing balance flow. In each experiment 100 mg catalyst was used.
+After being loaded in a tubular reactor, the catalyst was reduced in situ in a flow of H2 (10 ml/min) for 100 min at 500 C.
+Table 2 Catalyst characteristics.
+Shape Pellet Diameter
+1.0 mm
+Surface area
+56.6 m2/g
+Pore volume
+0.25 m3/g
+Average pore diameter
+18.5 nm
+Major components (wt.%) Pt
+0.5%
+Sn
+1.5%
+22
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+0 10 20 30 40 50 60 70 80 90
+0.10
+0.20
+0.30
+0 10 20 30 40 50 60 70 80 90
+0.10
+0.20
+0.30
+0.40
+0.50
+Time on stream (min) Time on stream (min) Propane conversion Propane conversion
+T-1
+T-2
+T-3
+Model prediction Propane-1 Propane-2 propane-3 Model prediction (a) (b) 0 10 20 30 40 50 60 70 80 90
+0.05
+0.15
+0.25
+0.35
+0 10 20 30 40 50 60 70 80 90
+0.10
+0.20
+Time on stream (min) Time on stream (min) Propane conversion Propane conversion Propene-1 Propene-2 Model prediction Hydrogen-1 Hydrogen-2 Model prediction (c) (d) Fig. 3. Propane conversions at different conditions: experimental (symbols) and predicted (lines). (a) T-1: 530 C, T-2: 550 C, T-3: 600 C (C3H8, 35.0 kPa, C3H6: 4.0 kPa H2:
+6.0 kPa, Ar, balance), (b) propane-1: 11.0 kPa, propane-2: 35.0 kPa, propane-3: 49.0 kPa (575 C, 0.0 kPa H2, balance Ar), (c) propene-1: 0.0 kPa, propene-2: 10.0 kPa (575 C,
+35.0 kPa C3H8, 7.0 kPa H2, balance Ar), (d) hydrogen-1: 12.0 kPa, hydrogen-2: 22.0 kPa (575 C, 35.0 kPa C3H8, 7.0 kPa C3H6, balance Ar).
+4. Results and discussion
+4.1. Characteristics of catalyst
+Table 2 summarizes the characteristics of the catalyst.
+4.2. Effects of mass and heat transports on the reactions
+Catalysts with four different averaged diameters were used to investigate the influences of internal mass diffusion. The experi- ments were carried out at 600 C, the highest temperature in the
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+23 interested temperature region. The W/F was kept 30 g min/mol con- stant. Fig. 1 shows that the initial propane conversions of propane did not change remarkably when the size of the catalyst was smaller than 0.3 mm. Therefore, catalyst with an averaged size of 0.15 mm was employed in the experiments to eliminate the influences of pore diffusion.
+The catalyst with an averaged size of 0.15 mm was used to study the influences of the effects of external mass and heat transport on the reactions. Experiments with 0.10 g and 0.20 g catalyst, respec- tively, were carried out. The flow rate was varied to change the gas velocity through the catalyst bed. Fig. 2 shows the changes of initial propane conversions of propane with W/F ratios. The con- version at any space velocity should be independent of the linear velocity through the bed in the absence of interphase transport limitations [17]. As seen in Fig. 2, for the same W/F ratio, the conver- sion will be different when the W/F ratio is large (>50 g min/mol),which is because of the large difference in the linear velocity and the external mass and heat transport. When the W/F ratio is smaller than 50 g min/mol, the influence of external transport can be neglected. In our kinetic experiments, the W/F ratios were less than 30 g min/mol to eliminate the influences of transport limita- tion.
+4.3. Propane conversions at different conditions
+The effects of temperature, propane, propene and hydrogen pressures on propane dehydrogenation are shown in Fig. 3(ad),respectively. Propane conversion increases remarkably with tem- perature (Fig. 3(a)) as expected. The conversion decreases with time on stream and more rapidly at higher temperatures owing to faster catalyst deactivation. The propane conversion decreases with increasing propene concentration (Fig. 3(c)), but is only slightly influenced by hydrogen concentration (Fig. 3(d)). It indicates a strong adsorption of propene, which occupies most of the surfaces.
+High propene concentration decreases the free site for adsorption of the reactant molecules, and thus lowers the reaction rate. Although no significant effect of hydrogen on propane dehydrogenation is observed, the deactivation rate is lower at higher hydrogen con- centration. It indicates an inhibition of coke formation by hydrogen.
+The deactivation rate depends more strongly on propene (Fig. 3(c)) than on propane (Fig. 3(b)). It implies that propene instead of propane is possibly the coking precursor.
+5. Model discrimination and parameter estimation
+Referring to the rate Eqs. (M1)(M3) corresponding to the different reaction mechanisms or different assumption of rate determining step, one can see that if the adsorption terms and the reversible reaction are negligible, (M1) and (M2) can be reduced to one rate equation which is the first order with respect to propane and zero order to hydrogen, while (M3) can be reduced to a rate equation which is the first order with respect to propane and 0.5 to hydrogen. Therefore it is possible to discriminate (M3) from the other kinetic models based on the determination of the reaction order of hydrogen. For this reason, some experiments were carried out at very low propane and hydrogen partial pressures (smaller than 10 kPa) and a high space velocity to guarantee negligible adsorption and reversible reaction. The rates of propane consump- tion shown in Figs. 4 and 5 indicate that the reaction is indeed first order to propane but zero order to hydrogen. Therefore, the kinetic experiments clearly exclude (M3) from the mechanisms. As it will also be shown later, this model cannot fit experimental data well.
+(M1) and (M2) are supposed to be better than (M1-1) because both of them have taken into account of hydrogen adsorption,which is important in propane dehydrogenation [25]. The simpli-
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+10.0
+20.0
+30.0
+40.0
+Propane partial pressure, kPa Forward reaction rate, 10-7 mol/(g.s) Fig. 4. Dehydrogenation rates at different propane partial pressures (T = 550 C,hydrogen partial pressure in feed: 8.0 kPa, argon: balance). fied models (M2-1), (M2-2) and (M2-3) will certainly not able to fit the experiments as accurately as (M2), but they have less param- eters and some of them may outperform (M2) if the number of parameters is also an account. To compare the different kinetics compromising the fitting accuracy and number of fitting parame- ters, the criteria suggested by Akaike [41] was used, MSC = ln
+l
+j=1 (Yobsj Yobs) 2 l
+j=1 (Yobsj Ycalj)2
+2p l (13) This criterion takes into consideration the span of independent data set and the number of experiments points for parameter esti- mation and has been normalized to be independent of the scale of data. For the same data set for parameter fitting, the MSC value depends only on the fitting accuracy and the number of fitting parameters. The MSC value is therefore a good indication of the usefulness and appropriateness of the model because it is a good balance between under-fitting and over-fitting. The best model is the one with the largest MSC value.
+4.0
+6.0
+8.0
+10.0
+12.0
+10.0
+20.0
+30.0
+Hydrogen partial pressure, kPa Forward reaction rate, 10-7 mol/(g.s) Fig. 5. Dehydrogenation rates at different hydrogen partial pressures (T = 550 C,propane partial pressure in feed: 1.5 kPa, argon: balance). 24
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+Table 3 MSC values for different models.
+Model
+MSC
+SSR
+Parameter number
+(M1)
+4.63
+10.84e4
+3
+(M1-1)
+4.55
+12.53e4
+2
+(M2)
+4.60
+10.49e4
+4
+(M3)
+4.04
+18.21e4
+4
+(M2-1)
+4.62
+10.90e4
+3
+(M2-2)
+4.53
+12.74e4
+2
+(M2-3)
+4.45
+19.18e4
+2 By assuming plug-flow, the reactor models with different reac- tion kinetics and rate constants are integrated by RungeKutta method to give the outlet concentrations under different operating conditions. To simplify the discrimination of the kinetic models, the coking rate equations and catalyst deactivation is temporarily not considered, and for each run of the experiments with a series of time dependent concentration profiles, only the first analysis data (i.e., the propene and methane concentrations), which indicate the initial rates of dehydrogenation and cracking, are used for the data fitting. In the fitting, the reaction constants (k1, k2, fc, K1, K2, K3) are expressed as the reparametrized form of Arrhenius equations (Eqs.
+(14) and (15)) and a reference temperature Tm (565 C) is employed. k = k0 exp
+Ea
+R
+1
+T 1
+Tm
+(14) K = K0 exp
+H
+R
+1
+T 1
+Tm
+(15) The parameters are determined by the least-square method to minimize the SSR,
+SSR =
+l
+j=1 (Yobsj Ycalj)2 (16) where Y is the outlet concentration and i represents propane,propene, hydrogen, methane and ethene.
+Listed in Table 3 are the MSC and SSR values for all the seven kinetic models. (M1) emerges as the best one according to the MSC value; however, it involves the lumping of the elementary steps. (M2) has the least SSR value, and is the best model to fit the experiments; however, it has more parameters than (M1). (M1-1),as expected, is worse than (M1) and (M2) since it has not taken the adsorption of hydrogen into account. Among the three models derived from (M2), (M2-2) and (M2-3) have large fitting resid- uals, indicating the assumption of negligible coverage of either propene or hydrogen is not appropriate. It indicates that hydrogen Table 4 Parameters for kinetic model.
+Parameters Value and unit (confidence degree, 95%) k1 k10 = 1.4e1  2.5e2 (mmol/(s g atm)) Ea1 = 44.7  16.9 (kJ/mol) k2 k20 = 1.0e3  4.8e5 (mmol/(s g atm)) Ea2 = 104.8  9.9 (kJ/mol)
+K2
+K20 = 8.0  3.8 (atm1) H2 = 94.3  37.9 (kJ/mol)
+K3
+K30 = 1.0  0.2 (atm1) H3 = 238.9  58.7 (kJ/mol) kd fc0 = 7.4e4  4.9e4 (mmol/(s g atm)) Eac = 127.8  55.3 (kJ/mol) also adsorbs relatively strongly at high hydrogen pressures, which reduces significantly not only the rate of propane dehydrogena- tion but also the rates of coke formation and catalyst deactivation.
+Although (M2-1) has a fitting residual slightly higher than (M2) and (M1), it is considered as the best kinetic model for propane dehy- drogenation because the underline reaction mechanism is reliable,the rate equations are simple, and the predictions are acceptable.
+The model (M3) cannot well describe the experimental results,which is in accordance with the above discussions that the sec- ond dehydrogenation, namely propyl dehydrogenation could not be the rate-determining step. However, this is in disagreement with the results of Biloen et al. [23]. The contraversial results were also observed on Cr catalysts [16,24]. This implies that the rate deter- mining step may be dependent on the structure of the catalyst, e.g. the size and surface orientation. A systematic study is necessary in the future to test this hypothese.
+The kinetic parameters in dehydrogenation (M2-1), cracking (M4), and deactivation (M5), are then estimated by fitting the changes of propene and methane concentrations with time on stream (about 400 data points). It is noted here that, because of the small conversion of propane, the activity of the catalyst is assumed to be independent of the axial position. The kinetic parameters in (M2-1) and (M4) obtained by fitting to initial experimental data are used the initial values for the model fitting. No significant change in parameter values is found by re-fitting all the data. Table 4 sum- marizes the values of all the parameters of the reaction kinetics.The predictions made by the established reaction kinetics (M2- 1) are shown in Fig. 3 (dashed line), displaying a good agreement with the experimental data.
+Tables 5 and 6 summarize the reported activation energies of propane dehydrogenation and also the adsorption energies of propane, propene and hydrogen on platinum determined by exper- iments and DFT calculation. The activation energy for propane dehydrogenation varies from 30 to 170 kJ/mol, while it is deter- Table 5 Activation/adsorption energies determined by experiments.
+Dehydrogenation Model Catalyst Activation/adsorption energies (kJ/mol) Refs. r = kforPC3H8 krevPC3H6 P
+H2
+PtSn/Al2O3 (0.54, 1.53 wt.% Pt and Sn) Eafor = 34.8  19.6 Earev = -89.5  42.3 [18] r = a k1(PC3H8 (PC3H6 PH2 /Keq))
+1 + (PC3H6 /KC3H6 )
+PtSnK/Al2O3 (0.05, 0.14 and
+0.10 wt.% Pt, Sn
+and K) Ea1 = 34.57  9.13
+HC3H6 =
+85.82  22.46
+[19] Power law Pt/Al2O3 PtAu/Al2O3 Ea = 121  19.6 [23] r = k1(KC3H8 PC3H8 KC3H6 KH2 PC3H6 PH2 /KP) (1 + KC3H8 PC3H8 + KC3H6 PC3H6 + KH2 PH2 )2 PtSn/Al2O3 (0.15, 0.15 wt.% Pt and Sn) Ea1 = 169.7
+HC3H8 = 48.07
+HC3H6 = 32.02
+HH2 = 30.68
+[36]
+Q. Li et al. / Applied Catalysis A: General 398 (2011) 1826
+25 Table 6 Adsorption energies determined by DFT.
+Species Crystal surface Adsorption energy (kJ/mol) Refs.
+Propane Pt(1 1 1)
+5.8
+[25] Propene Pt(1 1 1)
+38.548.2
+[43] Pt(1 1 1)
+89.7
+[25] mined to be 44.7 kJ/mol in the present work, which agrees with the results reported by Lobera et al. [19] and Gascn et al. [22]. How- ever, high activation energies were obtained by Biloen et al. [23] and Chen et al. [42]. Although there was no mention about the Pt parti- cle sizes in these references, we still regard that the differences of the activation energies are resulted by the differences in the particle sizes of the Pt catalysts. It is believed that the surface is mostly ter- minated by steps and edges on smaller particles, while the surface is mostly terminated by terraces on larger particles [44,45]. In addi- tion, reactions proceeding on stepped surfaces tend to have smaller activation energies than those proceeding on terrace surfaces [46].
+The experimental adsorption energies of propene reported by Chen et al. [42] and Lobera et al. [19] were 32.02 and
+85.82 kJ/mol, respectively, and the difference was mainly due
+to the different catalysts employed in the experiments. The calculated adsorption energy of propene was in the range of
+38.589.7 kJ/mol [25,43], and the differences among these adsorp-
+tion energies of propene were mainly because of the different models employed for calculation. The adsorption energy of propene determined in our study is 94.3 kJ/mol, which is reasonable according to the results of both experimental and DFT calcula- tion.
+However, the adsorption energy of hydrogen (238.9 kJ/mol) in our model is higher than that reported by Chen et al. [42], indicat- ing the adsorption of hydrogen is stronger in our study. It is also probably contributed by the corners and steps on smaller Pt parti- cle size [47,48]. On Pt with silica-supported, the heats of hydrogen adsorption determined by microcalorimetric measurement [49,50] were 95 and 93 kJ/mol at 300 K and 403 K, respectively. The ini- tial differential heats were essentially the same for the 1.2 wt.% Pt, 6:1 Pt/Sn and 6:1 Pt/Sn catalysts, while for the 1:3 Pt/Sn cat- alyst, the initial heat was approximately 75 kJ/mol [50]. It seems that the present model overestimated the adsorption heat of hydro- gen.
+6. Conclusion
+In this study, propane dehydrogenation experiments are carried out on PtSn catalyst at different temperatures and with different inlet propane, propene and hydrogen concen- trations. A reaction kinetic model of propane dehydrogenation including cracking and deactivation is established following the LH approach. The first CH cleavage in propane molecule is identified as the rate-determining step. The underline reac- tion mechanism of propane dehydrogenation in the kinetic model agrees with experiments and quantum chemistry calcula- tions.
+The kinetic model of coke formation taking into account the effects of propene and hydrogen is integrated into the deacti- vation model. The propene is identified as the main precursor for the coke formation and hydrogen suppressed coke forma- tion and thus deactivation. The model describes well the kinetics of catalyst deactivation, which is related to the rate of coke formation and takes into consideration the facts that propene promotes while hydrogen depresses coke formation, is proposed.
+The changes of propane conversion with time-on-stream under different operating conditions are well predicted by the deac- tivation model. The strategy for kinetic modeling employed in the present work is to directly integrate the coking formation kinetic model into the deactivation model, making it possible to avoid measurement of coke content in situ. It makes the modeling relatively simple but still keeps a good predictive capa- bility.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Provide a detailed explanation of the Horiuti-Polanyi mechanism for catalytic dehydrogenation reactions, describing its four main steps and analyzing the ongoing debate regarding which step is considered rate-limiting. Additionally, discuss why this mechanism remains a topic of scientific interest and controversy despite nearly a century of study.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

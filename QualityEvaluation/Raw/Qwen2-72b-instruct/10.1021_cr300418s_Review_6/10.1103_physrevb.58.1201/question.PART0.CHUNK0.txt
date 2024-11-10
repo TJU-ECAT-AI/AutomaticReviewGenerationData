@@ -1,0 +1,340 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+ARTICLES
+Reformulation of the LDA1U method for a local-orbital basis
+W. E. Pickett,* S. C. Erwin, and E. C. Ethridge
+Complex Systems Theory Branch, Naval Research Laboratory, Washington, DC 20375 Received 13 February 1998!
+We present a local orbital approach to the evaluation of the on-site repulsion energy U for use in the LDA1U method of Anisimov and co-workers. Our objectives are to make the method more firmly based, to concentrate primarily on ground-state properties rather than spectra, and to test the method in cases where only modest changes in orbital occupations are expected, as well as for highly correlated materials. Because of these objectives, we employ a differential definition of U. We also define a matrix U, which we find is very dependent on the environment of the atom in question. The formulation is applied to evaluate U for transition- metal monoxides from VO to NiO using a local-orbital basis set. The resulting values of U are typically only 4065 % as large as values currently in use. We evaluate the U matrix for the eg and t2g subshells in paramagnetic FeO, and illustrate the very different charge responses of the eg and t2g states. The sensitivity of the method to the choice of the d orbitals, and to the basis set in general, is discussed.
+@S0163-182998!05427-7#
+I. INTRODUCTION
+The understanding and evaluation of the electronic struc- ture of strongly correlated materials is a long-standing prob- lem. For weakly correlated materials such as nearly-free- electron-like metals, covalent semiconductors, ionic solids,and even rather complex intermetallic transition metal com- pounds, the local-density approximation the LDA, which we understand to include the spin degree of freedom as well! to the exchange-correlation functional that occurs in density- functional theory gives very reasonable ground-state proper- ties and even band structures which are excited-state fea- tures!. For correlated materials, however, LDA can be completely wrong: the now-classic example is the canonical cuprate La2CuO4, which LDA predicts to be a nonmagnetic metal1,2 whereas it is actually an antiferromagnetic insulator.
+Model many-body Hamiltonian treatments, such as the Hub- bard model,3 can readily explain the observed type of ground state, but do so in terms of adjustable parameters and the neglect of many aspects of the crystal that may influence most of its properties. Evaluation of the dynamic self-energy,which gives the description of excitations, is appropriate for comparing with many experiments, but even low-order ap- proximations can be very tedious to evaluate.4 Within the past few years Anisimov and co-workers have proposed an extension of the LDA approach now called LDA1U) based on lessons learned from Hubbard model studies3 that single out a particular local orbital and the as- sociated on-site repulsive interaction U as the fundamental characteristic to be addressed.58 They proposed that the LDA treats the effects of U reasonably well in some average sense, even in highly correlated systems, but that one must allow a deviation from this average behavior by including a correction to the total energy, including a term like
+DE5 1
+2 ( m,sm8,s8 U2ds,s8J!nmsnm8s8,1! where J is the exchange constant and nms is the new charge that includes a local charge redistribution relative to the LDA value n ms) obtained by solving the LDA1U equations self-consistently. The local-orbital and -spin indices are m and s, respectively. It is assumed in the method that one can identify the orbitals to be treated (d orbitals of Cu in La2CuO4 for the example mentioned above!.The LDA1U method achieves some spectacular suc- cesses, such as leading to an antiferromagnetic insulating state of La2CuO4 with band gap and atomic moment in rea- sonable correspondence with observed values9, and leading to similarly impressive descriptions of the transition-metal monoxides. There remain questions, however, such as the proper way to specify the orbitals, the correct way to obtain the interaction constants (U and J), and how, if possible, to extend the method to give an improved treatment of the me- tallic phase when the insulator is heavily doped. In this paper we address these questions. A primary feature is that, since the method is perforce focused on an atomic orbital, it is natural to use a local-orbital basis set. We will refer to the local orbital of interest as the d orbital, although in some applications it may be an f or, rarely, an s or p orbital.
+II. DESCRIPTION OF LDA1U
+AS CURRENTLY PRACTICED
+In extending the LDA method to account for correlations resulting from strong on-site interactions, there are several criteria that one might hope to satisfy, such as 1! it should reduce to LDA when LDA is known to be good; 2! the energy is given by a functional of the density; 3! the method specifies how to obtain the local orbital in question perhaps
+PHYSICAL REVIEW B
+15 JULY 1998-I
+VOLUME 58, NUMBER 3
+PRB 58
+0163-1829/98/583!/12019!/$15.00 1201 1998 The American Physical Society through a self-consistency procedure!; 4! the definition of U and J are provided unambiguously; 5! the method predicts antiferromagnetic insulators when appropriate; and 6! the description of highly correlated metals is improved over the LDA description. This list, although perhaps still incomplete,is already very ambitious, and only certain of these desires have been addressed seriously.
+Anisimov, Zaanen, and Andersen AZA! Ref. 6! chose to refine the LDA by including an orbital-dependent one- electron potential to account explicitly for the important Coulomb repulsions not treated fully in the LDA. This was accomplished in analogy with Hartree-Fock theory by cor- recting the mean-field contribution of the d-d on-site inter- action with an intra-atomic correction. This correction has been applied in slightly varying forms, but a representative example of the functional to be solved is ELDA1U5ELDA@n#2 1
+2 U(
+i Ni@nms#Ni@nms#21! 1 1 2( i ( msm8s8 Um,m8nimsnim8s8. 2!Here i denotes the lattice site, and terms involving J have been neglected because we do not need to specify the com- plete form of the functional for this paper. Ni is the site sum of the d charges, evaluated for the self-consistent LDA1U densities. The second term is presumed to be a reasonable description of the direct Coulomb interaction energy in- cluded in the LDA expression.Equation 2! reveals that, in the LDA1U approach, one singles out beforehand the atomic orbitals to be treated, and decides how to specify them. Implementations to date use orbitals arising in the linearized muffin-tin orbital LMTO! method. The d orbitals to which the U correction is applied are numerical solutions to a Schro dinger equation inside an atomic sphere, and are zero outside this sphere. In addition, LDA1U is clearly no longer a straightforward density func- tional because it depends on parameters U and J that depend on the LDA density rather than the LDA1U density.The one-electron potential is the conventional LDA form of potential, plus an orbital-dependent shift of energy given by DVms5U 1 2 2nms! 3! if Umm8U is orbital independent. The changes in the elec- tronic structure are proportional to U, and the definition and calculation of U is the next topic to address.To obtain U and J, AZA performed LMTO calculations for a supercell in which the d charge on one atom is con- strained and the eigenvalue is obtained.10 The d orbitals on all atoms in the supercell are decoupled entirely from the remaining part of the basis set. This makes the treatment of the local orbitals an atomiclike problem, which greatly reduces the difficulty associated with constraining the occu- pation numbers. It also has the effect of leaving a rather artificial system to perform the screening. For example, in NiO the screening system consists of oxygen p orbitals that cannot hybridize with the Ni d orbitals, plus whatever other virtual orbitals are included in the basis set.The discreteness of the d eigenvalues makes it simple to specify the charge in the spin-orbitals in the supercell, and U and J are determined from the relations U53dS n
+2 1 1 2 ,n
+2D 23dS n
+2 1 1 2 ,n
+2 21D ,
+4! in which the d occupation differs by unity around a mean polarization of unity, and J53dS n
+2 1 1 2 ,n
+2 2 1 2D 23dS n
+2 1 1 2 ,n
+2 2 1
+2D ,
+5! which is a straightforward difference between up and down eigenvalues for unit spin polarization. Here 3d(n,n) @3d(n,n)# is the spin-up spin-down! 3d eigenvalue for occupancies nand n.
+While it is widely recognized that the on-site repulsion U is a screened quantity, the manner in which the screening should be done is not precisely specified. An early study by Cox, Coulthard, and Lloyd11 for 3d metals used a renormal- ized neutral atom approach, although it was recognized that screening processes might extend over a somewhat larger region. Anisimov and co-workers chose the method pre- sented in this section, but in this paper we pursue a different approach, with a somewhat different objective.
+III. REFORMULATION OF LDA1U
+FOR A LOCAL ORBITAL BASIS
+We specify in following subsections the various ways in which our approach differs from that in current use.
+A. LCAO basis set
+We begin with a basis set of local orbitals $f%, whose lattice sums lead to the standard linear combination of atomic orbitals LCAO! Bloch basis functions for the one- electron Hamiltonian.12 To represent an occupied atomic or- bital including core states!, we use a contracted set of Gaussian functions, multiplied by appropriate angular func- tions for s, p, or d behavior. In particular, at the beginning we choose from a neutral atom or an ion! the d orbitals of central interest. Although we have no indication of any better choice than the d orbital of the corresponding atom e.g.,neutral Cu in La2CuO4), our method allows the ability to check how sensitive the results are to the form chosen for the orbital. In addition to basis functions describing filled atomic or ionic! orbitals, we add other Gaussian functions to the basis to provide a more nearly complete basis for the valence and conduction states than a minimal basis set would pro- vide. This feature is an advantage of our local-orbital repre- sentation, as the ability to include self-consistent screening by a crystalline density of general form in the calculations is important.
+This LCAO basis set brings up an important feature. As a sum of squares of wave functions, the charge density con- tains two types of terms. One consists of atom-centered con- tributions containing the coordinate dependence flm 2 (r
+W2R
+W ),
+and is clearly identified as a contribution to the charge from angular momentum l of the atom located at R W . The other 1202
+PRB 58
+W. E. PICKETT, S. C. ERWIN, AND E. C. ETHRIDGE
+contribution has a coordinate dependence given by flm(r
+W
+2R
+W )fl8m8(r
+W2R
+W 8), R
+W R
+W 8, which at a particular point may be positive or negative and cannot be assigned uniquely to any atom. The Mulliken decomposition,13 which assigns half of each such term to charge component l,m on the atom at R
+W
+and the other half to charge l8m8 of the atom at R W 8, is widely used when atomic decomposition of the charge is desired.
+Mulliken population is well understood to be not only arbi- trary, but also dependent on the flexibility of the basis set,and therefore should not be endowed with any important physical meaning.
+A central fact that must be addressed is that the total charge density cannot be decomposed, precisely or meaning- fully, into simple atomic contributions alone. This fact means that the orbital occupations that are the centerpiece of the LDA1U approach unfortunately are not particularly well defined. For our LCAO basis set we will use for nms charge contributions solely of the first type, which will be called on-site charges to distinguish them from Mulliken charges. These on-site quantities also cannot properly be called occupation numbers since there is no sum rule for their total, and it is not impossible that for a given orbital the value can exceed unity.
+B. On the specification of the functional
+Although we do not carry out LDA1U calculations in this paper, we are thinking in terms of a generalized LDA 1U functional that is consistent with our philosophy behind the correction. Without more formal justification than is nor- mally done in the LDA1U approach and which we do not address seriously here!, any change must simply be tested to see if it produces better results. The form that we envision has affected our study of how to define and evaluate the interaction constants that arise in the method. We suppose that the correction is to provide adjustment to full-potential LDA results, and therefore includes both a suborbital index and a spin index on the reference charges n n ms . These numbers will differ, sometimes greatly, for different irreduc- ible representations of the point group of the atom. The cor- rection then might be written suggestively as ELDA1U5ELDA@n#1 1 2( i ( msm8s8 Um,m82ds,s8Jm,m8! 3nims2n ims!nim8s82n im8s8!. 6!This change may affect the types of orbitally ordered so- lutions that will be obtained. This form ensures that the LDA solution is an exact stationary solution of the LDA1U func- tional for which the correction vanishes identically!, which is not the case for Eq. 2!, i.e., if shell-averaged values of n
+are used. Aside from strongly correlated solids, another in- terest of ours is to ascertain whether LDA1U can provide a useful improvement of the description of simpler systems such as the transition metals Fe and V, where anisotropy relative amounts of t2g and eg character! is not reproduced accurately in LDA, or in correlated metals where no bandgap occurs but charge rearrangement might be appropriate.
+C. Procedure for determining U and J
+We take as our ansatz that the constant U (J) occurring in the LDA1U functional should describe the cost in potential energy of charge spin! fluctuations in the actual crystal, i.e.,with all normal interactions and degrees of freedom available to the electrons. Thus we do not decouple the d states from surrounding states. The U and J terms are applied in pre- cisely the same system from which they are determined. We comment below on the question of dealing with the associ- ated cost in kinetic energy due to charge fluctuations. For the remainder of this paper we concentrate solely on U, postpon- ing a related treatment of J such as suggested in Ref. 14 for the future.
+We also take the point of view that the main purpose of LDA1U theory, as in density-functional theory, is to obtain ground-state properties, rather than to approximate excita- tions with the eigenvalues. Describing the ground state may require small rearrangements of occupation numbers away from their LDA values, and usually less than one-half, so we employ a differential definition of U also used by Solovyev, Dederichs, and Anisimov14! rather than one employing occu- pation numbers differing by unity. We will see that this in- troduces extra richness into the charge rearrangements de- scribed by the LDA1U method, because a small change in say! t2g population can be strongly compensated by a change in eg population.
+We employ then a generalized constrained density func- tional approach as proposed by Dederichs et al.10 to calculate the change in energy due to constraints on local-orbital den- sities. We minimize the local-density functional subject to the constraint that on-site local orbital charges na,s be equal to designated values Qa,s , where a labels an irreducible representation of the point group of the atom in question e.g., t2g or eg), and that total charge N be conserved:
+EQ!5
+min n,n,na,sH ELDA@n,n#1( a,s wa,sna,s2Qa,s! 2mSE nr!d3r2NDJ . 7!The Lagrange multipliers are the usual chemical potential m and the potential shifts wa,s necessary to satisfy the con- straint na,s5Qa,s . Dependence on the total number N of electrons always conserved! will not be displayed explicitly.Variation with respect to the spin orbitals leads to a one- electron Schro dinger equation in which the potential is the LDA potential, supplemented by local orbital shifts wa,s on the orbitals in the irreducible representation a having spin s.These additional shifts of potential can be represented as a nonlocal potential
+VNL5(
+a,s ( mPa ufm,s&wa,sfm,su,8! where $f% are normalized atomic orbitals.Evaluation of the constrained energy in Eq. 7! deserves comment. Solution for the constrained energy involves gen- erating the Kohn-Sham equations, which have an additional potential of the form of Eq. 8! that effectively constrains the density as desired. The conventional method of evaluating
+PRB 58
+1203 REFORMULATION OF THE LDA1U METHOD FOR A . . . the energy is to sum the resulting eigenvalues and correct for double counting of the Hartree energy and the miscounting of exchange-correlation energy. That cannot be done di- rectly, because the Kohn-Sham eigenvalues contain the ef- fects of the additional potential of Eq. 8! and one does not obtain ELDA. The additional term that has been included by summing the LDA1U eigenvalues, however, contains only the additional one-body term (a,swa,sna,s , and this term can be subtracted to obtain ELDA evaluated for the con- strained density.
+D. Constrained energy
+It is convenient to introduce a vector notation for the local occupations, the constraining values, and the Lagrange pa- rameter! potential shifts: na,sn W, and similarly for Q W and for w W . Since we will be dealing with quantities relative to their LDA values, we also use the notational conveniences q
+W5Q
+W 2Q
+W LDA,
+Eq
+W5EQ
+W !2EQ
+W LDA!.
+9!
+From the Hellmann-Feynmann-like relation ]Eq
+W
+]q W [q WEq W52w
+W ,
+10! we can generalize the constrained density-functional theory viewpoint of Dederichs et al.10 to obtain the change in en- ergy due to constraining a set of orbital densities in the man- ner of Eq. 7!. Since there is no change in energy if the charges are constrained to be their LDA values Q
+W
+5Q
+W LDA so q W50), the energy change is given by Eq
+W5E
+0
+W
+q
+W
+dq W•q WEq
+W52E
+0
+W
+q
+W
+dq W•w W q
+W !,
+11! subject only to the condition that Eq W is analytic as we as- sume!.
+The general behavior of the constrained energy can be seen by noting that w W is linear for small changes in occupa- tion, i.e., linear in q
+W. Since at the minimum of Eq. 7! we
+have n
+W[Q
+W , we may use these quantities interchangeably to write w W 52Uq W1Oq W !252Udn W1Odn
+W !2,
+12! where dn W5n W2n W LDA, and U is the constant matrix! of pro- portionality. For the remainder of this section we concern ourselves with the linear response that is implicit in the LDA1U method, although we demonstrate in the numerical results of Sec. V A where non-linear corrections begin to arise. Then the energy shift is given by Eq
+W5 1
+2 q W•U•q
+W,
+13! where U[2]w W /]q
+W.
+14!
+E. Potential vs kinetic contributions
+The constrained energy E(q W) can be decomposed into the kinetic-energy term, the interaction with the external poten- tial, and the remainder, the potential energy Eq W5Eq W,K1Eq W,ext1Eq
+W,P .
+15!
+Eq W,ext is linear in q W and gives no contribution to U, but the quadratic term involving U contains both a kinetic-energy contribution UK and a potential-energy contribution UP ,
+U5UK1UP ,
+16!
+UKP!5q Wq WEq
+W,KP! ,
+and cancellation between the two contributions may occur.
+In a self-consistent calculation, any change in local orbital charge results in an accompanying change in kinetic energy as well as a potential energy change. Since the U term in the LDA1U energy functional is a potential energy term,one might argue that it should be UP that goes into the LDA1U calculation, and the kinetic-energy change in the constrained LDA calculation should be removed: UUP 5U2UK is the appropriate U in LDA1U. It was a re- lated correction, to avoid double counting of kinetic terms,that Anisimov and Gunnarsson5 expected to account for by disconnecting their local orbitals from all other basis func- tions in their prescription for the determination of U. The constrained LDA procedure we propose is in some respects closer to that of Hybertsen, Schlu ter, and Christensen16 than to that of Anisimov and co-workers. However, Hybertsen, Schu lter, and Christensen were specifically interested in ob- taining parameters for the Hubbard model, and their proce- dure was tied to the form of extended Hubbard model they wished to consider.
+Using the Hellmann-Feynman relation @Eq. 10!# to obtain w W (q W), it is straightforward to obtain U of Eq. 12! numeri- cally: one applies a shift in potential w W and calculates the change in charge q W, and forms the finite-difference derivative in Eq. 14!. To calculate the separate contributions there is no alternative to evaluating a finite difference second derivative.17 We have carried out this calculation methods are described below! for FeO. We obtain the provocative result UK /U '210, which leaves UP /U '11, i.e., each con- tribution is an order of magnitude larger than the net result,and they have opposite sign. Clearly these individual contri- butions are not directly useful, nor in fact is this directly related to the kinetic-energy contribution that Gunnarsson and Anisimov treated by disconnecting d orbitals when cal- culating U. In the context of the Hubbard model, the term kinetic energy really denotes all of the energy except the potential energy related to U, and is very different than the kinetic energy we have evaluated. We leave the question of potential vs kinetic contributions to U for further study. The value of U that we evaluate and report below is the total net! value U5UK1UP .
+F. Change in independent variable
+It will be instructive to consider the potential shifts w W to be the independent variables in an associated energy func- 1204
+PRB 58
+W. E. PICKETT, S. C. ERWIN, AND E. C. ETHRIDGE
+tional leading to q W(w W ) rather than w W (q W). This is also in keep- ing with the practice in the constrained density approach of choosing the shifts w W and then calculating the charge re- sponse q
+W. This change of variable is done by a Legendre
+transformation
+E
+w W 5Eq W1q W•w
+W ,
+17! which, from the differential forms dEq W52w W •dq WdE w W 5q W•dw
+W ,
+18! leads to the energy shift
+E
+w
+W 5E
+0
+W
+w
+W
+q Ww W !•dw
+W '2 1
+2 w W •U21•w
+W .
+19!
+This formalism brings in the matrix U21 implicit in Eq. 12!, relating the charge shifts in various suborbitals to po- tential shifts applied to other suborbitals, e.g., a decomposi- tion of the Hubbard U for d orbitals into eg and t2g contri- butions for cubic site symmetry. This result is reminiscent of the extension of the definitions of U and J @Eqs. 4! and 5!# by Solovyev, Hamada, and Terakura15 to give different val- ues Ueg and Ut2g, but their procedure did not provide off- diagonal terms. The effects of differing charge response in the eg and t2g channels will be quantified in Sec. V. The concept can be extended to non-site-diagonal interactions,viz. d orbitals interacting with neighboring oxygen p orbit- als.
+We now establish a sum rule relating the matrix elements of U to the conventional scalar U, which for clarity we de- note Udd 5 ]wd /]Qd , where Qd is the total d charge and wd is a shift in potential applied to all d orbitals. Since a change in potential wt2g acting on the t2g orbitals followed by a change in potential weg acting on only the eg orbitals is equivalent to a potential wd of the same magnitude acting on all d orbitals, we have, in the linear regime ] ]wt2g 1 ] ]weg 5 ] ]wd . 20!
+By definition nd5nt2g1neg, so, from the definition Uab 2152 ]na ]wb ,21! we have a sum rule relating the matrix elements to the con- ventional Coulomb repulsion constant Udd 215 ( a,b5t2g ,eg Uab 21 . 22!Below we provide a numerical test of this sum rule for NiO.
+IV. METHOD OF CALCULATION
+For the metallic constituents of the compounds we con- sidered, a basis set representing six s-, four p-, and three d-type functions is expanded on a set of 16 Gaussian func- tions. The O basis set is expanded on a set of 12 Gaussian exponents contracted into four s- and three p-type functions.
+The Coulomb and exchange-correlation potentials comprise the effective potential Veff, which is also described by a superposition of atom-centered Gaussian-type functions. By choosing this expansion, the matrix elements of the Hamil- tonian are analytic. Details of the method, and comparison to results of the full-potential linearized augmented-plane-wave LAPW! method, have been published elsewhere.12,18 For this work it is important to obtain sufficiently well converged values of orbital densities. Tests using special point meshes in the irreducible 1 48 of the simple cubic Bril- louin zone IBZ! for eight atom cells up to 56 k W points indi- cated that ten or 20 k W points in the IBZ gave the necessary accuracy. A temperature broadening of 0.07 eV was used to facilitate convergence to self-consistency, and it was verified that this size of broadening did not change the results.
+V. EVALUATION FOR TRANSITION-METAL
+MONOXIDES
+We have applied this approach to evaluate U for the tran- sitions metal monoxides MO, M5V, Mn, Fe, Co, and Ni, in the paramagnetic state and for the cubic rocksalt structure.
+The experimental! lattice constants used were VO, 4.093 Å; MnO, 4.444 Å; FeO, 4.332 Å; CoO, 4.260 Å; and NiO,
+4.193 Å.
+A. Suborbital independent U
+First, applying a potential shift wd equally to all d subor- bitals analogously to LMTO treatments, the derived value of U is shown in Table I. Comparison is provided with values obtained by the method of AZA, and it is seen that the values TABLE I. Calculated values of U for transition-metal oxides, compared to values of Anisimov, Zaanen,and Andersen AZA! Ref. 6!. Empirical values include representative values from the literature.
+Ref.
+VO
+MnO FeO CoO NiO This work
+2.7
+3.6
+4.6
+5.0
+5.1
+AZA
+6.7
+6.9
+6.8
+7.8
+8.0
+Empirical
+4.04.8 a
+7.88.8 a
+3.55.1 a
+4.95.3 a
+6.16.7 a
+7.0 d
+3.9 c, 7.0 d
+4.9 c
+7.9,b 6.1,c 7.5d
+aAnisimov, Zaanen, and Anderson, Ref. 6. bReference 19. cReference 20. dReference 21.
+PRB 58
+1205 REFORMULATION OF THE LDA1U METHOD FOR A . . . obtained are 4065 % of the values obtained by AZA. That our values are smaller is no surprise, since our approach of not disconnecting d orbitals from other orbitals! naturally allows additional screening to occur, by including hybridiza- tion between d orbitals and neighboring oxygen p orbitals.
+Moreover, charge rearrangement between eg and t2g sub- shells reveals that there is some intra-d-shell screening in the current approach. In addition, our definition of the d orbital is not identical with that of AZA.
+Figures 13 for MnO, FeO, and NiO illustrate the change in subshell charge with wd as well as the total change, which is what determines U. Taking MnO, for example, it is seen in Fig. 1 that the effect of positive wd is to decrease nt2g as expected, but neg instead increases. Clearly charge rear- rangement within the d shell is leading to a reduction in U i.e., additional screening!. A similar behavior occurs for FeO Fig. 2!, while for NiO the eg charge remains almost unchanged as wd is varied. Note that, besides the differences in approach and in basis sets, the values obtained in the AZA approach are evaluated for differences in d charge of unity.
+Empirically determined values obtained by comparing to excited state data! lie in nearly all cases between our values and those of AZA.
+The values of U in Table I are obtained as the first de- rivative of polynomial fits to the wd vs Qd curve Eq. 12!.
+Figures 13 indicate the DQd vs wd curve for shifts wd up to
+60.8 eV for MnO, FeO, and NiO. The change in total d
+charge is linear up to this size of shift ('20230 % of U).Even for this size shift, however, the individual t2g and eg contributions are beginning to become nonlinear, as seen most clearly for MnO in Fig. 1.On-site charges and Mulliken charges within the LDA,for our basis set, are compared in Table II. The charges are less ionic than their formal dipositive! charge, as experience would suggest. Although atomic charge within a crystal cannot be defined uniquely, it is widely accepted that ef- fective ionic charges are nearly always reduced by hybrid- ization from their formal, full ionic values.! Although VO is somewhat of an exception, the Mulliken charge does not differ more than 4% from the on-site charge for these ex- amples. The response of Mulliken and on-site charges are very different, however, with Mulliken charges varying more slowly. If one uses Mulliken charges rather than on-site charges to obtain U, the resulting values are much larger: 3.8 eV for VO, 6.2 eV for MnO, and 11.1 eV for NiO.
+B. Suborbital dependent U
+We have studied FeO charge redistribution when eg and t2g subshells are treated separately. In Fig. 4, we present the change in subshell charge when a shift in potential is applied individually to the subshells. In both cases, charge forced out of one subshell by an upward shift in potential goes prima-
+FIG. 1. Change in the on-site d charge solid line! in MnO
+resulting from a potential shift wd applied to all d states on a single Mn atom in a four molecule supercell. The total charge is decom- posed into its eg short dashed line! and t2g long dashed line! components.
+FIG. 2. Change in the d charge in FeO, plotted as in Fig. 1.
+FIG. 3. Change in the d charge in NiO, plotted as in Fig. 1.
+TABLE II. d-shell charges, according to various definitions, for transition-metal monoxides from VO to NiO.
+Type
+VO
+MnO FeO CoO NiO Formal 3 5 6 7 8 On-site
+3.67
+5.45
+6.22
+7.41
+8.22
+Mulliken
+3.09
+5.48
+6.44
+7.20
+8.40
+1206
+PRB 58
+W. E. PICKETT, S. C. ERWIN, AND E. C. ETHRIDGE
+rily into the other subshell, amounting to very strong intra- d-shell screening in these cases. Using Eq. 21!, we obtain,in eV21,
+S
+Ut2g ,t2g 21 Ut2g ,eg 21 Ueg ,t2g 21 Ueg ,eg
+21 D 5S
+1.18
+21.00
+21.39
+1.41 D ,
+23! which satisfies the sum rule of Eq. 22!. The inverse is, in eV,
+S
+Ut2g ,t2g Ut2g ,eg Ueg ,t2g Ueg ,egD 5S
+5.15
+3.65
+5.08
+4.31D .
+24!
+Recall that Udd54.6 eV, so in the usual orbital-independent treatment the corresponding matrix would be
+S
+Ut2g ,t2g Ut2g ,eg Ueg ,t2g Ueg ,egD 5S
+4.6
+4.6
+4.6
+4.6D .
+25!
+Thus the behavior that looks rather peculiar in Fig. 4, and the negative off-diagonal elements in Eq. 21!, do not lead to pathological behavior in the direct matrix U.
+C. Dependence of local orbital shape
+The LDA1U procedure is built around some choice of local orbital. In a LCAO basis, this orbital is specified at the beginning, and we have used neutral atom d orbitals from atomic LDA calculations. Another possible choice might be,say, the d orbital from a positive ion. For FeO we have checked the effect of using the Fe21 d orbital obtained from an atomic calculation on an isolated ion. The difference in radial density is shown in Fig. 5. For the FeO paramagnetic! solid, the on-site charge of 6.22 electrons Table II! changes to the rather peculiar value of 4.85 electrons, and the calcu- lated value of U increases from 4.6 to 7.8 eV. The total energy, however, changes only by 10.12 eV/FeO, which is a very modest change adding f functions in a LCAO or LMTO calculation, or increasing the number of basis func- tions in a LAPW calculation, can result even larger changes,which are unimportant for most purposes!.
+This result makes it clear that the choice of d orbital can affect the calculated value of U, certainly in the LCAO method but most likely in any calculational approach. In our calculation it is the result of the density being represented in a different fashion, that is, the separation between local or- bital charges and the overlap Mulliken! contributions is a rather sensitive function of the basis set choice. As a result the values of nms that arise in the LDA1U functional de- pend on the choice of d orbital. We are investigating meth- ods of minimizing this effect, by normalizing the sum of the d occupation numbers over the full d band region to ten.
+VI. DISCUSSION
+The results presented in Sec. V reflect a strong difference in response of the eg and t2g electrons, at least to potentials of moderate strength. Such differences have been noted sev- eral times in the literature. In the context of the LDA1U method, Solovyev, Hamada, and Terakura15 have advocated using using separate values of U for the two subshells in perovskite structure transition-metal oxides. Their method of obtaining Ua was a generalization of the standard method
+FIG. 4. Change in the subshell (eg and t2g) charge in FeO,
+resulting from a potential shift of only one of the subshells. Top panel: change in t2g charge; bottom panel: change in eg charge. The label indicates the type of applied potential shift w: d indicates shifts of all d states; t2g (eg) indicates a shift of only t2g (eg) states.
+Only positive energy shifts are shown.
+FIG. 5. Comparison of the 3d radial functions used in the
+LCAO basis set as the Fe 3d orbital to calculate the two values of U reported in the text. The functions are radial wave functions from neutral and doubly ionized Fe atomic calculations, fit to a set of 11 Gaussians.
+PRB 58
+1207 REFORMULATION OF THE LDA1U METHOD FOR A . . . described in Sec. II. We, on the other hand, have adopted the differential definition of U that leads to a matrix Uab .
+To begin to understand the response of the separate sub- shells, in Fig. 6 we show the on-site eg and t2g densities of states DOS! on a Ni atom in an eight-atom supercell of NiO,both before and after a downward shift of all d states by
+20.54 eV. The t2g states in the rocksalt structure are weakly
+dpp bonding and form a narrow band, whereas the eg states form dps bonds that produce wider eg bands. From Fig. 3 it is seen that such shifts produce negligible change in the on- site eg charge, with all the difference coming entirely from the on-site t2g subshell. This result is counterintuitive, since the t2g DOS is full, and pulling it down seemingly cannot increase its occupation. The eg DOS is open shell and could accept charge, but does not do so.
+The resolution of this paradox lies in the change in the representation of charge of the system by the LCAO basis functions as a shift in potential is applied. By looking at other local DOSs, for both on-site and Mulliken charge de- compositions, we have found that a downward shift of d states, which changes the degree and character of hybridiza- tion as well as the probability of occupation, results in a more active participation of the virtual orbitals in represent- ing the charge density. To some extent this is a real effect:d-p hybridization increases as the d states are pulled down nearer the p bands, and what one calls the d function, or the d charge, becomes less well defined. The definition be- comes clear for well-separated atoms, and perhaps for states well separated in energy from any other states.! The effect is present with other basis sets as well, but is more difficult to identify.
+It is important to understand clearly the source of this paradox. It arises because the d charge density is not a precisely and objectively defined quantity. Although we are accustomed to thinking in terms of five d bands in a transition-metal oxide that can be identified and whose DOS integrates to five electrons per spin, this is a fiction that be- comes apparent as soon as orbital overlap becomes appre- ciable. This difficulty has the same origin as the difficulty in defining the d orbital to be used in the LDA1U method.
+These ambiguities are problems that must be lived with until a better prescription can be formulated.
+VII. SUMMARY
+We have presented a reformulation of the method of ob- taining U for a LDA1U calculation. The approach is based on a local-orbital expansion, which is a natural one consid- ering that the d orbital is to be singled out and specified in any case. We aim specifically to improve ground-state prop- erties rather than to account for spectroscopic data.
+Values of U using this approach are found to be only 4065 % of the values of Anisimov and co-workers. Most of this difference is understood in terms of the definitions and procedures that are used in each case. A generalization pre- sented here is the identification of an interaction matrix that describes interactions that are nondiagonal in the suborbital index, e.g., the change in energy of t2g states due to a change in eg charge. The off-diagonal parts of this interaction are expected to be strongly dependent on the environment of the ion, and this expectation is borne out in our study of FeO.
+There are important aspects of our approach that require further work. The contribution to U from the kinetic energy,and how it should be dealt with, is one loose end. The most appropriate choice of d orbital is another question that may require some experience to answer. Carrying out LDA1U studies to compare with results using the previous LDA 1U method, and ascertaining the effect of off-diagonal in- teractions, are, however, the main priority, and this work is in progress.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do computational methods, particularly density functional theory (DFT) and cluster models, enhance our ability to predict, analyze, and understand the catalytic activity of doped oxide catalysts in alkane activation, and what are the key considerations, challenges, and potential benefits of these approaches in terms of accuracy, efficiency, and the exploration of new catalytic materials?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

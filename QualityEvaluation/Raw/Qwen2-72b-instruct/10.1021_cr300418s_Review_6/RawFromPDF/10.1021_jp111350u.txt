@@ -1,0 +1,327 @@
+element not found
+
+The Journal of Physical Chemistry CVol 115/Issue 13Article
+Cite
+Share
+Jump to
+Expand
+ARTICLEMarch 11, 2011
+Choice of U for DFT+U Calculations for Titanium Oxides
+Zhenpeng HuHoria Metiu*
+View Author Information
+View Author Information
+Open PDF
+Abstract
+Many recent articles have suggested that density functional theory (DFT) with the generalized-gradient approximation does not provide the correct electronic structure for the oxides of titanium. The current opinion is that a Hubbard U correction improves the DFT results. There is no generally accepted method for deciding what the value of the U parameter should be, and we propose that, if one intends to study catalysis, U should be chosen to fit the reaction energy for the oxidation of Ti2O3 to TiO2. We show that the value of U derived in this manner provides additional improvements in the description of the electronic structure.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2011 American Chemical Society
+Subjects
+what are subjects
+Chemical Calculations
+Chemical Reactions
+Electrical Conductivity
+Energy
+Oxides
+1 Introduction
+The study of catalysis by oxides benefits from calculations using density functional theory (DFT) to find possible intermediates, to help assign spectra, or to determine the activation energies and reaction mechanism. In the past few years it has been repeatedly pointed out that DFT with the generalized-gradient approximation (GGA), or with the local density approximation (LDA), has some shortcomings when used to calculate the properties of transition metals or rare-earth oxides (see reviews by Pacchioni (1) and Ganduglia-Pirovano, Hoffmann and Sauer (2)). Since the objections stem from the manner in which DFT deals with the cations, the same shortcomings ought to be present when the theory is applied to sulfides, halides, or other solid compounds of these metals.
+As is well-known, in DFT, the difference between the bottom of the conduction band and the top of the valence band is smaller than the measured band gap. This is true for all oxides, but it is particularly severe for Ti2O3; normal DFT calculations find that Ti2O3 is a metal (3) while the experiments show that it is an insulator (4-6) with a band gap (7) of 1 eV. Moreover, it is expected (1, 2) that when oxygen vacancies are formed in TiO2 the unpaired electrons left behind after removing an oxygen atom should be housed in orbitals that are localized on the Ti atoms and whose energy is in the band gap; GGA-DFT calculations (8-13) do not fulfill these expectations. It is believed that the main reason for these difficulties is the electron self-interaction in DFT. Methods that remove the self-interaction, such as exact-exchange or self-interaction corrected DFT, require too much computer power to be useful for computations on catalysis. A possible, practical cure may be provided by the GGA+U theory. This prevents the unwanted delocalization of the d- or f-electrons, by adding to the Hamiltonian a term that increases the total energy when two d- or f-electrons are located on the same cation. Hybrid functionals are also an improvement over ordinary GGA-DFT, because they use some Hartree−Fock exchange for a partial cancellation of the self-interaction; unfortunately this gain in quality is at the expense of efficiency, and the hybrid functionals are of limited usefulness in heterogeneous catalysis research.
+Most oxidation reactions, in which TiO2 is involved as a catalyst or as a support, occur through a Mars−van Krevelen mechanism, (14-16) in which the oxide is reduced and reoxidized during the catalytic cycle; the Ti atoms involved in catalysis change their valence from IV to III and back to IV. Therefore, it is necessary to find a suitable U value for DFT+U calculation on catalysis reactions involving titanium oxide.
+Previous work (17-27) has recommended a variety of values for U. Depending on the quantity fitted, the U values were in a wide range from 2.5 to 10 eV. There is no consensus regarding the procedure by which U is chosen or the best value for U. Most of the previous work determined U so that the energies of some of the Kohn−Sham orbitals match the excitation energies measured by “one-electron spectroscopy”, such as the band gap (17-19) of TiO2, the energy of the states in the band gap (20-22) of partially reduced TiO2, or the XPS spectrum. (28) In other papers U was calculated by a variety of methods. (24-26, 29)
+In this article, we propose a choice of U for TiO2 that is designed to make the DFT+U method useful for calculations aimed at understanding catalysis. Because catalysis is controlled exclusively by energy differences, it is natural to choose U to fit the energy of the “redox” reactions
+(1)
+and
+(2)
+These are relevant to catalysis because most oxidation reactions involving TiO2 take place thorough a mechanism in which Ti is reduced and then reoxidized.
+Our confidence in the value of U given by this fitting is increased if other criteria are also satisfied. While we do not believe that the KS energies should coincide with the ones measured by one-electron spectroscopy, it is reasonable to require that they should be qualitatively similar. Thus, we expect that if U is “correct”, Ti2O3 should be an insulator (normal DFT calculations find that it is a metal) and that the formation of oxygen vacancies should create KS orbitals in the gap of TiO2.
+We also perform hybrid functional calculations (B3LYP, B3PW, and PBE0) for bulk Ti2O3 and TiO2 to test whether this method of self-interaction removal gives satisfactory energies for these reactions.
+In principle, more data should be fitted, but the structure of TiO is not well established, the energy differences between rutile, anatase, and brookite are smaller than the expected accuracy of DFT, Ti halides are not solids, and the sulfides have an ill-defined structure. Furthermore, reliable desorption energies for molecules on titanium oxides are not available because of the difficulty of preparing well-defined surfaces in ultrahigh vacuum (steps and oxygen vacancies are always present).
+We find that a U value between 2 and 3 eV, used with the PW91 or the PBE functional but not with LDA, satisfies all these criteria. The hybrid functionals give remarkably accurate reaction energies and reasonable band gaps, as compared to GGA or GGA+U.
+2 Methodology
+The primitive unit cell for bulk rutile TiO2 calculations is a rectangular box containing two Ti atoms and four O atoms with P42/mnm symmetry (Figure 1a). For bulk Ti2O3 calculations, the primitive cell is a rhombohedral box (Figure 1b) containing four Ti atoms (I, II, III, and IV along the [111] direction) and six O atoms, with R3̅c symmetry.
+Figure 1
+Figure 1. Unit cell used in the bulk calculations: (a) rutile TiO2 and (b) Ti2O3. The red spheres are O atoms; the gray spheres are Ti atoms.
+The GGA-DFT and the DFT+U calculations were performed with the VASP code. (30-32) We used three functionals (LDA, (33) PW91, (34) and PBE (35)) and the projector augmented wave (36, 37) (PAW) pseudopotential. The electrons in the 3p, 4s, and 3d shells of Ti and in the 2s, 2p shells of O were included explicitly in all calculations. The parameter U for Ti was varied between 0 and 6 eV. All “+U” calculations used Dudarev’s approximation (38) with U equivalent to the Ueff parameter (Ueff = U − J). For geometry optimization, the plane-wave cutoff was 500 eV, and the convergence criteria were 10−4 eV for energy and 0.01 eV/Å for stress. Once the optimum energy was found, we used a plane-wave cutoff of 400 eV with an energy convergence criterion of 10−5 eV, to get the single-point energy and see the effect of different U values. In all calculations, we used a gamma-centered 13 × 13 × 13 k-point mesh for Ti2O3 and a gamma-centered 13 × 13 × 17 k-point mesh for rutile TiO2. A finer 21 × 21 × 21(25) k-point mesh was also tested, which allowed us to conclude that the 13 × 13 × 13(17) k-point mesh was good enough.
+The lattice parameter of the supercell has been optimized for each value of U. We also performed calculations with different values of U that used the lattice parameters obtained with GGA-DFT, as has sometimes been done. (26, 28) The difference between the energies calculated in this way and those obtained by optimizing the geometry is less than 0.2 eV.
+The hybrid functional calculations, using the B3LYP, (39-41) B3PW, (34, 39, 41) and PBE0 (42) functionals, were performed with the Crystal06 code. (43) These spin-polarized calculations used the following Gaussian basis sets: 8-411G*, for O the atoms, and 8-6-411G, for the Ti atoms. (44) The five tolerances for Coulomb and exchange integrals were set to 10−8, 10−8, 10−8, 10−8, and 10−16 atomic units, respectively. An extra large grid (XXLGRID) for numerical integrals, the shrink factor 10 10 for Ti2O3 (8 8 for TiO2), and the single-point energy convergence of 10−6 au were used to improve the accuracy of the results.
+3 Results for GGA and GGA+U
+3.1 The Energy of Reaction
+As explained in section 1, we wish to find a value of U for which DFT+U describes well the energies of the reactions 2TiO2 + H2 → Ti2O3 + H2O and 2TiO2 → Ti2O3 + (1/2)O2, and for which Ti2O3 is an insulator with the correct magnetic ordering. We place a greater emphasis on the reduction of TiO2 with H2 because that reaction does not involve O2, a molecule for which DFT does not give the correct bond energy.
+The energy of the reactions, calculated with LDA+U, PW91+U, and PBE+U, for U varying, in increments of 1, from 0 to 6, are given in Table 1 and are plotted in Figure 2.
+Table 1. Energies of the Reactions 2TiO2 → Ti2O3 + (1/2)O2 and 2TiO2 + H2 → Ti2O3 + H2O (in eV) Calculated by Various Methodsa
+2TiO2 → Ti2O3 + (1/2)O2, exp = 3.81 eV
+U LDA+U PW91+U PBE+U B3LYP B3PW PBE0
+0 3.90 3.69 3.62 4.045 3.901 3.852
+1 4.06 3.83 3.77 (4.163) (3.992)  
+2 4.20 3.93 S 3.83 S      
+3 4.26 S 3.74 SG 3.60 SG      
+4 4.06 SGL 3.39 S 3.25 S      
+5 3.72 S 2.99 S 2.84 S      
+6 3.32 S 2.56 S 2.40 S      
+2TiO2 + H2 → Ti2O3 + H2O, exp = 1.30 eV
+U LDA+U PW91+U PBE+U B3LYP B3PW PBE0
+0 1.00 1.11 1.08 1.39 1.18 1.06
+1 1.15 1.26 1.23 (1.54) (1.31)  
+2 1.29 1.36 S 1.30 S      
+3 1.35 S 1.16 SGL 1.07 SGL      
+4 1.15 SG 0.82 S 0.99 S      
+5 0.81 S 0.42 S 0.31 S      
+6 0.41 S 0.02 S .      
+aThe experimental standard heats of reactions are 3.81 and 1.30 eV, respectively. The values in parentheses, for the hybrid functionals, were obtained by using 15% Hartree−Fock exchange. S indicates that the calculations give the correct spin ordering for Ti2O3. G indicates that the calculation gives good values for the band gap of Ti2O3. L indicates that a calculation gives correct values for the lattice parameter ratio c/a of Ti2O3. The numbers in bold are the calculated heats of reaction that are closest to the standard reaction enthalpy.
+Figure 2
+Figure 2. (a) Energy of the reaction 2TiO2 + H2 → Ti2O3 + H2O as a function of U. (b) Energy of the reaction 2TiO2 → Ti2O3 + (1/2)O2 as a function of U.
+Since we trust most the results obtained for the reduction of TiO2 with hydrogen, we recommend using U between 2 and 3 eV for PW91+U or for PBE+U. The same values of U give good results for the energy of oxidation of Ti2O3 with oxygen. We recommend against using LDA+U, for the following reason: the reaction energy for 2TiO2 → Ti2O3 + (1/2)O2 is close to experiment if U = 5 eV, but reasonable energies for 2TiO2 + H2 → Ti2O3 + H2O are obtained for U = 3 eV. We believe that it is not acceptable to use different values of U, for a given functional, when dealing with two reactions involving the reduction of the same oxide.
+It is reasonable to expect that the value of U might depend on the Ti−Ti distance and the environment of the Ti atoms. If this dependence is strong, it would be very difficult to determine a value of U that is entirely atom-dependent and the GGA+U method would have limited usefulness. It is therefore comforting to see that using the same U for Ti2O3 and TiO2 leads to reasonable results.
+3.2 Lattice Parameters
+It is well-known that GGA-DFT does not give accurate values for lattice parameters. (20, 26, 28, 45, 46) We cannot find a value of U for which the GGA+U calculations give a good agreement with both the lattice constants and the heats of the two reactions considered here.
+3.3 Band Gaps
+Figures 3a and b show the dependence of the band gaps of Ti2O3 and TiO2, respectively, on U. Ti2O3 is an insulator (4-6) with a band gap (7) of 1 eV. Like previous calculations, (3) our LDA and GGA calculations (with the PW91 and PBE functionals) give no band gap: according to LDA or GGA, Ti2O3 is a metal. A gap opens when U ≥ 2 eV, and it is close to the experimental value when U = 3 eV. As U increases the band gap of rutile TiO2 increases, but it never reaches the experimental value (47) of 3 eV. Previous work (17, 19) has shown that to obtain a band gap of 3 eV one must use U = 10 eV. As we have already stated, we believe that DFT calculations need not give the correct band gap, but it is important that Ti2O3 is no longer a metal when U > 2 eV.
+Figure 3
+Figure 3. (a) Band gap of Ti2O3 as a function of U. (b) Band gap of rutile TiO2 as a function of U.
+3.4 The Spin States of Ti2O3
+The primitive unit cell of Ti2O3 has four Ti atoms, each having one d-electron. Several electronic states, which differ through the orientation of the spins on these four atoms, are possible. We find that for U ≥ 2 the spin state having the lowest energy is (+, −, −, +), where atom I in Figure 1b has spin up, atom II in Figure 1b has spin down, etc. This is in agreement with previous reports. (4, 44) However, the energy differences between various spin states are very small, and, given the errors expected in DFT calculations, it is questionable whether obtaining the correct spin-ordering is significant.
+4 Results for Hybrid Functionals
+The hybrid functionals counteract the ill effects of electron self-interaction by using some Hartree−Fock (HF) exchange. They are expected to do better with titanium oxides than GGA. To test this belief we calculated the energies of the reactions 2TiO2 → Ti2O3 + (1/2)O2 and 2TiO2 + H2 → Ti2O3 + H2O by using B3LYP, B3PW, and PBE0. While the original derivation of the hybrid functionals fixed the amount of Hartree−Fock exchange to 20%, this percentage can be viewed as an adjustable parameter. To explore what happens if we change it, we performed a few calculations with 15% Hartree−Fock exchange.
+For the reaction 2TiO2 + H2 → Ti2O3 + H2O, the difference between the calculated heats of reaction and the reaction enthalpy is 0.09 eV (a 6.9% deviation) for B3LYP, −0.12 eV (a 9.2% deviation) for B3PW, and −0.24 eV (a 18.5% deviation) for PBE0. Changing the percentage of Hartree−Fock exchange to 15% (values in bracket, in Figure 2a) makes the calculated energies worse. For the reaction 2TiO2 → Ti2O3 + (1/2)O2, the results are 4.04 eV for B3LYP, 3.90 eV for B3PW, and 3.85 eV for PBE0, while the standard enthalpy of reaction is 3.81 eV. This leads to the following errors: 6% for B3LYP, 2.6% for B3PW, and 1.04% for PBE0. The agreement with the experiment is remarkable, considering that there is no adjustable parameter in these procedures. Changing the amount of Hartree−Fock exchange to 15% makes the agreement with the experiment worse (but the error is not large). As far as the reaction energies are concerned, there is no preferred hybrid functional, and, as a rule of thumb, we should expect errors of 0.2 eV or less.
+The calculated band gap of rutile TiO2 (see Figure 3b) is 3.44, 3.48, and 3.96 eV, for B3LYP, B3PW, and PBE0, respectively. These values are larger than the measured value (47) of 3.0 eV. The calculated band gap for Ti2O3 is 2.00 eV for B3LYP, 1.87 eV for B3PW, and 2.62 eV for PBE0. The experimental value is 1 eV. Using 15% Hartree−Fock exchange improves the band gaps but gives worse energies than the conventional value of 20%.
+A further test was performed for B3PW with 15% Hartree−Fock exchange. We calculated the band gap of a system in which a Ti atom, out of the 16 atoms in the TiO2 supercell, was replaced with a V atom. The presence of the V dopant shifts the band gap to (7) 0.80 eV, and the calculated band gap for this system is 0.76 eV. The good agreement is probably accidental, but it is satisfying to see that the trend is correct: doping with V lowers the gap.
+5 Summary
+We propose that, if one is interested in redox catalysis by TiO2, one should use either PBE+U or PW91+U, with U = 2−3 eV, because such calculations give reasonable values for the energy of reduction of TiO2 toTi2O3. While we do not expect the Kohn−Sham orbital energies to give the correct band gap, we are gratified that with our choice of U, Ti2O3 is no longer a metal and it has the correct spin state. Since calculations using hybrid functionals consume more computer power, we recommend using DFT+U for studying catalysis by the oxides of the transition metals and rare-earth metals. While the calculations are not highly accurate, many questions in catalysis can be settled reliably if the error in total energy differences are less than ∼0.2 eV.
+Author Information
+Corresponding Author
+Horia Metiu - Department of Chemistry and Biochemistry, and Department of Chemical Engineering, University of California, Santa Barbara, California 93106, United States ;  Email: metiu@chem.ucsb.edu
+Author
+Zhenpeng Hu - Department of Chemistry and Biochemistry, and Department of Chemical Engineering, University of California, Santa Barbara, California 93106, United States
+Acknowledgment
+This work was supported by the U.S. Department of Energy (DE-FG02-89ER140048). We made use of the computer facility of the California NanoSystems Institute funded in part by the National Science Foundation. Use of the Center for Nanoscale Materials was supported by the U.S. Department of Energy, Office of Science, Office of Basic Energy Sciences, under Contract No. DE-AC02-06CH11357.
+References
+This article references 47 other publications.
+1Pacchioni, G. J. Chem. Phys. 2008, 128, 182505
+Google Scholar
+2Ganduglia-Pirovano, M. V.; Hofmann, A.; Sauer, J. Surf. Sci. Rep. 2007, 62, 219
+Google Scholar
+3Mattheiss, L. F. J. Phys.: Condens. Matter 1996, 8, 5987
+Google Scholar
+4Abrahams, S. C. Phys. Rev. 1963, 130, 2230
+Google Scholar
+5Imada, M.; Fujimori, A.; Tokura, Y. Rev. Mod. Phys. 1998, 70, 1039
+Google Scholar
+6Honig, J. M.; Zandt, L. L. V. Annu. Rev. Mater. Sci. 1975, 5, 225
+Google Scholar
+7Uchida, M.; Fujioka, J.; Onose, Y.; Tokura, Y. Phys. Rev. Lett. 2008, 101, 066406
+Google Scholar
+8Vijay, A.; Mills, G.; Metiu, H. J. Chem. Phys. 2003, 118, 6536
+Google Scholar
+9Errico, L. A.; Rentería, M.; Weissmann, M. Phys. Rev. B 2005, 72, 184425
+Google Scholar
+10Cho, E.; Han, S.; Ahn, H.-S.; Lee, K.-R.; Kim, S. K.; Hwang, C. S. Phys. Rev. B 2006, 73, 193202
+Google Scholar
+11Von Oertzen, G. U.; Gerson, A. R. Int. J. Quantum Chem. 2006, 106, 2054
+Google Scholar
+12Di Valentin, C.; Pacchioni, G.; Selloni, A. Phys. Rev. Lett. 2006, 97, 166803
+Google Scholar
+13Chrétien, S.; Metiu, H. J. Chem. Phys. 2007, 126, 104701
+Google Scholar
+14Mars, P.; van Krevelen, D. W. Chem. Eng. Sci. Spec. Suppl. 1954, 3, 41
+Google Scholar
+15Doornkamp, C.; Ponec, V. J. Mol. Catal. A: Chem. 2000, 162, 19
+Google Scholar
+16Vannice, M. A. Catal. Today 2007, 123, 18
+Google Scholar
+17Persson, C.; da Silva, A. F. Appl. Phys. Lett. 2005, 86, 231912
+Google Scholar
+18da Silva, A. F.; Pepe, I.; Persson, C.; de Almeida, J. S.; Araujo, C. M.; Ahuja, R.; Johansson, B.; An, C. Y.; Guo, J. H. Phys. Scr. 2004, T109, 180
+Google Scholar
+19Deskins, N. A.; Dupuis, M. Phys. Rev. B 2007, 75, 195212
+Google Scholar
+20Morgan, B. J.; Watson, G. W. Surf. Sci. 2007, 601, 5034
+Google Scholar
+21Morgan, B. J.; Watson, G. W. J. Phys. Chem. C 2009, 113, 7322
+Google Scholar
+22Morgan, B. J.; Watson, G. W. J. Phys. Chem. C 2010, 114, 2321
+Google Scholar
+23Yang, K.; Dai, Y.; Huang, B.; Feng, Y. P. Phys. Rev. B 2010, 81, 033202
+Google Scholar
+24Bonapasta, A.; Filippone, F.; Mattioli, G.; Alippi, P. Catal. Today 2009, 144, 177
+Google Scholar
+25Mattioli, G.; Filippone, F.; Alippi, P.; Bonapasta, A. Phys. Rev. B 2008, 78, 241201
+Google Scholar
+26Calzado, C. J.; Hernández, N. C.; Sanz, J. F. Phys. Rev. B 2008, 77, 045118
+Google Scholar
+27Finazzi, E.; Di Valentin, C.; Pacchioni, G.; Selloni, A. J. Chem. Phys. 2008, 129, 154113
+Google Scholar
+28Nolan, M.; Elliott, S. D.; Mulley, J. S.; Bennett, R. A.; Basham, M.; Mulheran, P. Phys. Rev. B 2008, 77, 235424
+Google Scholar
+29Bocquet, A. E.; Mizokawa, T.; Morikawa, K.; Fujimori, A.; Barman, S. R.; Maiti, K.; Sarma, D. D.; Tokura, Y.; Onoda, M. Phys. Rev. B 1996, 53, 1161
+Google Scholar
+30Kresse, G.; Furthmüller, J. Phys. Rev. B 1996, 54, 11169
+Google Scholar
+31Kresse, G.; Hafner, J. Phys. Rev. B 1993, 47, 558
+Google Scholar
+32Kresse, G.; Hafner, J. Phys. Rev. B 1994, 49, 14251
+Google Scholar
+33Perdew, J. P.; Zunger, A. Phys. Rev. B 1981, 23, 5048
+Google Scholar
+34Perdew, J. P.; Wang, Y. Phys. Rev. B 1992, 46, 12947
+Google Scholar
+35Perdew, J. P.; Burke, K.; Ernzerhof, M. Phys. Rev. Lett. 1996, 77, 3865
+Google Scholar
+36Blöchl, P. E. Phys. Rev. B 1994, 50, 17953
+Google Scholar
+37Kresse, G.; Joubert, D. Phys. Rev. B 1999, 59, 1758
+Google Scholar
+38Dudarev, S. L.; Botton, G. A.; Savrasov, S. Y.; Humphreys, C. J.; Sutton, A. P. Phys. Rev. B 1998, 57, 1505
+Google Scholar
+39Becke, A. D. J. Chem. Phys. 1993, 98, 5648
+Google Scholar
+40Lee, C.; Yang, W.; Parr, R. G. Phys. Rev. B 1988, 37, 785
+Google Scholar
+41Vosko, S. H.; Wilk, L.; Nusair, M. Can. J.Phys. 1980, 58, 1200
+Google Scholar
+42Adamo, C.; Barone, V. J. Chem. Phys. 1999, 110, 6158
+Google Scholar
+43Dovesi, R.; Saunders, V. R.; Roetti, C.; Orlando, R.; Zicovich-Wilson, C. M.; Pascale, F.; Civalleri, B.; Doll, K.; Harrison, N. M.; Bush, I. J.; D’Arco, P.; Llunell, M. CRYSTAL06 User’s Manual; University of Torino: Torino, Italy, 2006.
+Google Scholar
+44Catti, M.; Sandrone, G.; Dovesi, R. Phys. Rev. B 1997, 55, 16122
+Google Scholar
+45Lindan, P. J. D.; Harrison, N. M.; Gillan, M. J.; White, J. A. Phys. Rev. B 1997, 55, 15919
+Google Scholar
+46Muscat, J.; Swamy, V.; Harrison, N. M. Phys. Rev. B 2002, 65, 224112
+Google Scholar
+47Pascual, J.; Camassel, J.; Mathieu, H. Phys. Rev. B 1978, 18, 5606
+Google Scholar
+Cited By
+This article is cited by 268 publications.
+Jingyu Yang, Jinbo Pan, Jun Deng, Yan-Fang Zhang, Yuhui Li, Yongqian Zhu, Guolin Wan, Shixuan Du. Vacancy-Induced Anionic Electrons in Single-Metal Oxides and Their Possible Applications in Ammonia Synthesis. Journal of the American Chemical Society 2024, 146 (30) , 21160-21167. https://doi.org/10.1021/jacs.4c07362
+Yifan Yuan, Ranjan Kumar Patel, Suvo Banik, Tadesse Billo Reta, Ravindra Singh Bisht, Dillon D. Fong, Subramanian K. R. S. Sankaranarayanan, Shriram Ramanathan. Proton Conducting Neuromorphic Materials and Devices. Chemical Reviews 2024, Article ASAP.
+See Wee Koh, Lavie Rekhi, Arramel, Muhammad Danang Birowosuto, Quang Thang Trinh, Junyu Ge, Wei Yu, Andrew T. S. Wee, Tej S. Choksi, Hong Li. Tuning the Work Function of MXene via Surface Functionalization. ACS Applied Materials & Interfaces 2023, Article ASAP.
+Yong Han, Tianyu Li, Qingrui Zhang, Xiaoqiang Guo, Tifeng Jiao. Influence of an External Electric Field on Electronic and Optical Properties of a g-C3N4/TiO2 Heterostructure: A First-Principles Perspective. Langmuir 2023, 39 (45) , 16035-16047. https://doi.org/10.1021/acs.langmuir.3c02169
+S. Vahid Hosseini, Andrei Postnikov, Mohammad Reza Mohammadizadeh. First-Principles Study of Hydrogen Dynamics in Monoclinic TiO. The Journal of Physical Chemistry C 2023, 127 (25) , 11787-11800. https://doi.org/10.1021/acs.jpcc.3c00750
+Willis O’Leary, Livia Giordano, Jieun Park, Stephen S. Nonnenmann, Yang Shao-Horn, Jennifer L. M. Rupp. Influence of Sr-Site Deficiency, Ca/Ba/La Doping on the Exsolution of Ni from SrTiO3. Journal of the American Chemical Society 2023, 145 (25) , 13768-13779. https://doi.org/10.1021/jacs.2c12011
+Robert H. Lavroff, Jason Wang, Michael G. White, Philippe Sautet, Anastassia N. Alexandrova. Mechanism of Stoichiometrically Governed Titanium Oxide Brownian Tree Formation on Stepped Au(111). The Journal of Physical Chemistry C 2023, 127 (17) , 8030-8040. https://doi.org/10.1021/acs.jpcc.3c00715
+Néstor García-Romeral, Ángel Morales-García, Francesc Viñes, Ibério de P. R. Moreira, Francesc Illas. Theoretical Analysis of Magnetic Coupling in the Ti2C Bare MXene. The Journal of Physical Chemistry C 2023, 127 (7) , 3706-3714. https://doi.org/10.1021/acs.jpcc.2c07609
+Travis K. Deason, Gregory Morrison, Amir Mofrad, Hunter B. Tisdale, Jake Amoroso, David DiPrete, Gary Was, Kai Sun, Theodore M. Besmann, Hans-Conrad zur Loye. Developing Waste Forms for Transuranic Elements: Quaternary Neptunium Fluorides of the Type NaxMNp6F30 (M = Ti, V, Cr, Mn, Fe, Co, Ni, Al, Ga). Journal of the American Chemical Society 2023, 145 (1) , 465-475. https://doi.org/10.1021/jacs.2c10669
+Herman Heffner, Jorge Mario Marchetti, Ricardo Faccio, Ignacio López-Corral. Density Functional Evaluation of Catechol Adsorption on Pristine and Reduced TiO2(B)(100) Ultrathin Sheets for Dye-Sensitized Solar Cell Applications. Inorganic Chemistry 2022, 61 (48) , 19248-19260. https://doi.org/10.1021/acs.inorgchem.2c02933
+M. Nur Hossain, Rachelle M. Choueiri, Sharon Abner, Leanne D. Chen, Aicheng Chen. Electrochemical Reduction of Carbon Dioxide at TiO2/Au Nanocomposites. ACS Applied Materials & Interfaces 2022, 14 (46) , 51889-51899. https://doi.org/10.1021/acsami.2c14368
+Jun Xia, Runhua Gao, Yang Yang, Zheng Tao, Zhiyuan Han, Shichao Zhang, Yalan Xing, Puheng Yang, Xia Lu, Guangmin Zhou. TinO2n–1/MXene Hierarchical Bifunctional Catalyst Anchored on Graphene Aerogel toward Flexible and High-Energy Li–S Batteries. ACS Nano 2022, 16 (11) , 19133-19144. https://doi.org/10.1021/acsnano.2c08246
+David Langhammer, Jolla Kullgren, Lars Österlund. Adsorption and Oxidation of NO2 on Anatase TiO2: Concerted Nitrate Interaction and Photon-Stimulated Reaction. ACS Catalysis 2022, 12 (16) , 10472-10481. https://doi.org/10.1021/acscatal.2c03334
+Yameng Liu, Junwei Xu, De-en Jiang, Xiuzhong Fang, Xiang Wang, Xianglan Xu. Uncovering the Nature of Band Gap Engineering of Adsorption Energy by Elucidating an Adsorbate Bonding Mechanism on Two-Dimensional TiO2(110). The Journal of Physical Chemistry C 2022, 126 (26) , 10677-10685. https://doi.org/10.1021/acs.jpcc.2c01384
+Jeremy Hu, Eun Mi Kim, Michael J. Janik, Konstantinos Alexopoulos. Hydrogen Activation and Spillover on Anatase TiO2-Supported Ag Single-Atom Catalysts. The Journal of Physical Chemistry C 2022, 126 (17) , 7482-7491. https://doi.org/10.1021/acs.jpcc.2c01670
+Gyujin Song, June Ho Lee, Sangyeop Lee, Dong-Yeob Han, Sungho Choi, Myung-Jun Kwak, Ji-Hyun Jang, Donghwa Lee, Soojin Park. Highly Stable Germanium Microparticle Anodes with a Hybrid Conductive Shell for High Volumetric and Fast Lithium Storage. ACS Applied Materials & Interfaces 2022, 14 (1) , 750-760. https://doi.org/10.1021/acsami.1c18607
+Kazunori Nishio, Satoru Ichinokura, Akitaka Nakanishi, Koji Shimizu, Yasutaka Kobayashi, Naoto Nakamura, Daisuke Imazeki, Ryota Shimizu, Toru Hirahara, Satoshi Watanabe, Taro Hitosugi. Ionic Rectification across Ionic and Mixed Conductor Interfaces. Nano Letters 2021, 21 (23) , 10086-10091. https://doi.org/10.1021/acs.nanolett.1c03872
+Douglas A. Blom, Thomas Vogt. Detecting Framework Distortions Predicted by Hybrid-DFT: An Opportunity to Improve the M1 Catalyst. The Journal of Physical Chemistry Letters 2021, 12 (45) , 11158-11163. https://doi.org/10.1021/acs.jpclett.1c02941
+Yu Tang, Victor Fung, Xiaoyan Zhang, Yuting Li, Luan Nguyen, Tomohiro Sakata, Kotaro Higashi, De-en Jiang, Franklin Feng Tao. Single-Atom High-Temperature Catalysis on a Rh1O5 Cluster for Production of Syngas from Methane. Journal of the American Chemical Society 2021, 143 (40) , 16566-16579. https://doi.org/10.1021/jacs.1c06432
+Guanyu Liu, Parvathala Reddy Narangari, Quang Thang Trinh, Wenguang Tu, Markus Kraft, Hark Hoe Tan, Chennupati Jagadish, Tej S. Choksi, Joel W. Ager, Siva Karuturi, Rong Xu. Manipulating Intermediates at the Au–TiO2 Interface over InP Nanopillar Array for Photoelectrochemical CO2 Reduction. ACS Catalysis 2021, 11 (18) , 11416-11428. https://doi.org/10.1021/acscatal.1c02043
+Ana E. Torres, Janatan Rodríguez-Pineda, Rodolfo Zanella. Relevance of Dispersion and the Electronic Spin in the DFT + U Approach for the Description of Pristine and Defective TiO2 Anatase. ACS Omega 2021, 6 (36) , 23170-23180. https://doi.org/10.1021/acsomega.1c02761
+Miho Isegawa, Aleksandar Staykov, Miho Yamauchi. Proton-Coupled Electron Transfer in Electrochemical Alanine Formation from Pyruvic Acid: Mechanism of Catalytic Reaction at the Interface between TiO2 (101) and Water. The Journal of Physical Chemistry C 2021, 125 (23) , 12603-12613. https://doi.org/10.1021/acs.jpcc.1c01304
+Xianglan Xu, Xiang Wang, De-en Jiang. Band Gap as a Novel Descriptor for the Reactivity of 2D Titanium Dioxide and its Supported Pt Single Atom for Methane Activation. The Journal of Physical Chemistry Letters 2021, 12 (10) , 2484-2488. https://doi.org/10.1021/acs.jpclett.1c00318
+Mousam Charan Sahu, Sameer Kumar Mallik, Sandhyarani Sahoo, Sanjeev K. Gupta, Rajeev Ahuja, Satyaprakash Sahoo. Effect of Charge Injection on the Conducting Filament of Valence Change Anatase TiO2 Resistive Random Access Memory Device. The Journal of Physical Chemistry Letters 2021, 12 (7) , 1876-1884. https://doi.org/10.1021/acs.jpclett.1c00121
+James D. Kammert, Ashwin Chemburkar, Naomi Miyake, Matthew Neurock, Robert J. Davis. Reaction Kinetics and Mechanism for the Catalytic Reduction of Propionic Acid over Supported ReOx Promoted by Pd. ACS Catalysis 2021, 11 (3) , 1435-1455. https://doi.org/10.1021/acscatal.0c04328
+Thi D. Ta, A. Kiet Tieu, Bach H. Tran. Hydroxyl Influence on Adsorption and Lubrication of an Ultrathin Aqueous Triblock Copolymer Lubricant. Langmuir 2021, 37 (4) , 1465-1479. https://doi.org/10.1021/acs.langmuir.0c02987
+Pengbo Lyu, Guillaume Maurin. H2S Stability of Metal–Organic Frameworks: A Computational Assessment. ACS Applied Materials & Interfaces 2021, 13 (3) , 4813-4822. https://doi.org/10.1021/acsami.0c21285
+David Langhammer, Jolla Kullgren, Lars Österlund. Photoinduced Adsorption and Oxidation of SO2 on Anatase TiO2(101). Journal of the American Chemical Society 2020, 142 (52) , 21767-21774. https://doi.org/10.1021/jacs.0c09683
+Guoliang Zhao, Xin Wang, Chen Xu. MXene-Derived Nanocomposites as Earth-Abundant Efficient Electrocatalyst for Nitrogen Reduction Reaction under Ambient Conditions. Inorganic Chemistry 2020, 59 (22) , 16672-16678. https://doi.org/10.1021/acs.inorgchem.0c02671
+Hongru Wang, Congmian Zhen, Jingtong Xie, Lu Liu, Li Ma, Dewei Zhao, Denglu Hou. Electronic Structure and Magnetic Configuration of Ni-Substituted MnCo2O4 Spinel. The Journal of Physical Chemistry C 2020, 124 (44) , 24090-24096. https://doi.org/10.1021/acs.jpcc.0c07165
+Stephanie Jensen, Kui Tan, Liang Feng, Jing Li, Hong-Cai Zhou, Timo Thonhauser. Porous Ti-MOF-74 Framework as a Strong-Binding Nitric Oxide Scavenger. Journal of the American Chemical Society 2020, 142 (39) , 16562-16568. https://doi.org/10.1021/jacs.0c02772
+Juan Manuel Arce-Ramos, Alexander Genest, Notker Rösch. How TeO Defects in the MoVNbTeO Catalyst Material Affect the V4+ Distribution: A Computational Study. The Journal of Physical Chemistry C 2020, 124 (34) , 18628-18638. https://doi.org/10.1021/acs.jpcc.0c05447
+Yujie Wang, Shiheng Deng, Boping Liu, Yulong Jin. Mechanistic Understanding on the Role of Cu Species over the CuOx/TiO2 Catalyst for CO2 Photoreduction. ACS Omega 2020, 5 (29) , 18050-18063. https://doi.org/10.1021/acsomega.0c01533
+Kulbir K. Ghuman, Elisa Gilardi, Daniele Pergolesi, John Kilner, Thomas Lippert. Microstructural and Electronic Properties of the YSZ/CeO2 Interface via Multiscale Modeling. The Journal of Physical Chemistry C 2020, 124 (29) , 15680-15687. https://doi.org/10.1021/acs.jpcc.0c01797
+Astrid Marthinsen, Tor Grande, Sverre M. Selbach. Microscopic Link between Electron Localization and Chemical Expansion in AMnO3 and ATiO3 Perovskites (A = Ca, Sr, Ba). The Journal of Physical Chemistry C 2020, 124 (24) , 12922-12932. https://doi.org/10.1021/acs.jpcc.0c02060
+Ikuya Yamada, Masaya Kinoshita, Seiji Oda, Hirofumi Tsukasaki, Shogo Kawaguchi, Kengo Oka, Shigeo Mori, Hidekazu Ikeno, Shunsuke Yagi. Enhanced Catalytic Activity and Stability of the Oxygen Evolution Reaction on Tetravalent Mixed Metal Oxide. Chemistry of Materials 2020, 32 (9) , 3893-3903. https://doi.org/10.1021/acs.chemmater.0c00061
+Amita Sihag, Zong-Lun Xie, Ho Viet Thang, Chin-Lung Kuo, Fan-Gang Tseng, Matthew Stephen Dyer, Hsin-Yi Tiffany Chen. DFT Insights into Comparative Hydrogen Adsorption and Hydrogen Spillover Mechanisms of Pt4/Graphene and Pt4/Anatase (101) Surfaces. The Journal of Physical Chemistry C 2019, 123 (42) , 25618-25627. https://doi.org/10.1021/acs.jpcc.9b04419
+Akbar Mahdavi-Shakib, Juan M. Arce-Ramos, Rachel N. Austin, Thomas J. Schwartz, Lars C. Grabow, Brian G. Frederick. Frequencies and Thermal Stability of Isolated Surface Hydroxyls on Pyrogenic TiO2 Nanoparticles. The Journal of Physical Chemistry C 2019, 123 (40) , 24533-24548. https://doi.org/10.1021/acs.jpcc.9b05699
+Qing Zhao, Heather J. Kulik. Stable Surfaces That Bind Too Tightly: Can Range-Separated Hybrids or DFT+U Improve Paradoxical Descriptions of Surface Chemistry?. The Journal of Physical Chemistry Letters 2019, 10 (17) , 5090-5098. https://doi.org/10.1021/acs.jpclett.9b01650
+Qixin Wan, Sulei Hu, Jiangnan Dai, Changqing Chen, Wei-Xue Li. Influence of Crystal Facet and Phase of Titanium Dioxide on Ostwald Ripening of Supported Pt Nanoparticles from First-Principles Kinetics. The Journal of Physical Chemistry C 2019, 123 (17) , 11020-11031. https://doi.org/10.1021/acs.jpcc.9b01942
+Yaqing Zhang, Xian-Hu Zha, Kan Luo, Nianxiang Qiu, Yuhong Zhou, Jian He, Zhifang Chai, Zhengren Huang, Qing Huang, Yunxiao Liang, Shiyu Du. Tuning the Electrical Conductivity of Ti2CO2 MXene by Varying the Layer Thickness and Applying Strains. The Journal of Physical Chemistry C 2019, 123 (11) , 6802-6811. https://doi.org/10.1021/acs.jpcc.8b10888
+Shiyou Liang, Xiang Zheng, Jing Zhu, Rong Yu. Coherent Topotactic Interface between Corundum and Rutile Structures. The Journal of Physical Chemistry C 2019, 123 (1) , 534-540. https://doi.org/10.1021/acs.jpcc.8b09878
+Ikuya Yamada, Akihiko Takamatsu, Kaisei Asai, Takuto Shirakawa, Hideo Ohzuku, Akihiro Seno, Tasuku Uchimura, Hiroshi Fujii, Shogo Kawaguchi, Kouhei Wada, Hidekazu Ikeno, Shunsuke Yagi. Systematic Study of Descriptors for Oxygen Evolution Reaction Catalysis in Perovskite Oxides. The Journal of Physical Chemistry C 2018, 122 (49) , 27885-27892. https://doi.org/10.1021/acs.jpcc.8b09287
+Lu Qiao, Wei-Hai Fang, Run Long. Dopant Control of Electron–Hole Recombination in Cesium–Titanium Halide Double Perovskite by Time Domain Ab Initio Simulation: Codoping Supersedes Monodoping. The Journal of Physical Chemistry Letters 2018, 9 (23) , 6907-6914. https://doi.org/10.1021/acs.jpclett.8b03356
+Todd Whittaker, K. B. Sravan Kumar, Christine Peterson, Meagan N. Pollock, Lars C. Grabow, Bert D. Chandler. H2 Oxidation over Supported Au Nanoparticle Catalysts: Evidence for Heterolytic H2 Activation at the Metal–Support Interface. Journal of the American Chemical Society 2018, 140 (48) , 16469-16487. https://doi.org/10.1021/jacs.8b04991
+Minkyu Kim, Li Pan, Jason F. Weaver, Aravind Asthagiri. Initial Reduction of the PdO(101) Surface: Role of Oxygen Vacancy Formation Kinetics. The Journal of Physical Chemistry C 2018, 122 (45) , 26007-26017. https://doi.org/10.1021/acs.jpcc.8b08226
+Junbo Chen, Satish Kumar Iyemperumal, Thomas Fenton, Alexander Carl, Ronald Grimm, Gonghu Li, N. Aaron Deskins. Synergy between Defects, Photoexcited Electrons, and Supported Single Atom Catalysts for CO2 Reduction. ACS Catalysis 2018, 8 (11) , 10464-10478. https://doi.org/10.1021/acscatal.8b02372
+Yu-Ning Wu, Wissam A. Saidi, Paul Ohodnicki, Benjamin Chorpening, Yuhua Duan. First-Principles Investigations of the Temperature Dependence of Electronic Structure and Optical Properties of Rutile TiO2. The Journal of Physical Chemistry C 2018, 122 (39) , 22642-22649. https://doi.org/10.1021/acs.jpcc.8b06941
+Hsiu-Liang Yeh, Shih-Hsuan Tai, Chieh-Ming Hsieh, Bor Kae Chang. First-Principles Study of Lithium Intercalation and Diffusion in Oxygen-Defective Titanium Dioxide. The Journal of Physical Chemistry C 2018, 122 (34) , 19447-19454. https://doi.org/10.1021/acs.jpcc.8b06540
+I. Yamada, A. Takamatsu, K. Asai, H. Ohzuku, T. Shirakawa, T. Uchimura, S. Kawaguchi, Hirofumi Tsukasaki, Shigeo Mori, K. Wada, H. Ikeno, S. Yagi. Synergistically Enhanced Oxygen Evolution Reaction Catalysis for Multielement Transition-Metal Oxides. ACS Applied Energy Materials 2018, 1 (8) , 3711-3721. https://doi.org/10.1021/acsaem.8b00511
+Alena Kremleva, Notker Rösch. Modeling the Effect of the Electrolyte on Standard Reduction Potentials of Polyoxometalates. The Journal of Physical Chemistry C 2018, 122 (32) , 18545-18553. https://doi.org/10.1021/acs.jpcc.8b05426
+Rosendo Valero, Ángel Morales-García, Francesc Illas. Theoretical Modeling of Electronic Excitations of Gas-Phase and Solvated TiO2 Nanoclusters and Nanoparticles of Interest in Photocatalysis. Journal of Chemical Theory and Computation 2018, 14 (8) , 4391-4404. https://doi.org/10.1021/acs.jctc.8b00651
+Inhak Song, Jaeha Lee, Geonhee Lee, Jeong Woo Han, Do Heui Kim. Chemisorption of NH3 on Monomeric Vanadium Oxide Supported on Anatase TiO2: A Combined DRIFT and DFT Study. The Journal of Physical Chemistry C 2018, 122 (29) , 16674-16682. https://doi.org/10.1021/acs.jpcc.8b02291
+Mitchell Albert, Amanda Clifford, Igor Zhitomirsky, Oleg Rubel. Adsorption of Maleic Acid Monomer on the Surface of Hydroxyapatite and TiO2: A Pathway toward Biomaterial Composites. ACS Applied Materials & Interfaces 2018, 10 (29) , 24382-24391. https://doi.org/10.1021/acsami.8b05128
+A. R. Elmaslmane, M. B. Watkins, K. P. McKenna. First-Principles Modeling of Polaron Formation in TiO2 Polymorphs. Journal of Chemical Theory and Computation 2018, 14 (7) , 3740-3751. https://doi.org/10.1021/acs.jctc.8b00199
+Joshua J. Brown, Zhuofeng Ke, Wei Geng, Alister J. Page. Oxygen Vacancy Defect Migration in Titanate Perovskite Surfaces: Effect of the A-Site Cations. The Journal of Physical Chemistry C 2018, 122 (26) , 14590-14597. https://doi.org/10.1021/acs.jpcc.8b03322
+Alec Hook, Timothy P. Nuber, Fuat E. Celik. Density Functional Theory Investigation of the Role of Cocatalytic Water in Methane Steam Reforming over Anatase TiO2 (101). Industrial & Engineering Chemistry Research 2018, 57 (24) , 8131-8143. https://doi.org/10.1021/acs.iecr.8b00944
+Alec Hook, Fuat E. Celik. Density Functional Theory Investigation of the Role of Cocatalytic Water in the Water Gas Shift Reaction over Anatase TiO2 (101). Industrial & Engineering Chemistry Research 2018, 57 (20) , 6830-6841. https://doi.org/10.1021/acs.iecr.8b00532
+Qing Zhao and Heather J. Kulik . Where Does the Density Localize in the Solid State? Divergent Behavior for Hybrids and DFT+U. Journal of Chemical Theory and Computation 2018, 14 (2) , 670-683. https://doi.org/10.1021/acs.jctc.7b01061
+Sergio Tosoni and Gianfranco Pacchioni . Trends in Adhesion Energies of Gold on MgO(100), Rutile TiO2(110), and CeO2(111) Surfaces: A Comparative DFT Study. The Journal of Physical Chemistry C 2017, 121 (51) , 28328-28338. https://doi.org/10.1021/acs.jpcc.7b09429
+Shuping Huang, Pragya Verma, and Donald G. Truhlar . Localizing Holes as Polarons and Predicting Band Gaps, Defect Levels, and Delithiation Energies of Solid-State Materials with a Local Exchange-Correlation Functional. The Journal of Physical Chemistry C 2017, 121 (43) , 23955-23963. https://doi.org/10.1021/acs.jpcc.7b09000
+A. S. M. Jonayat, Adri C. T. van Duin, and Michael J. Janik . Ab Initio Thermodynamic Investigation of Monolayer Stability of Multicomponent Metal Oxides: MxOy/ZnO(0001) and MxOy/TiO2(110) (M = Pd, Ru, Ni, Pt, Au, Zn). The Journal of Physical Chemistry C 2017, 121 (39) , 21439-21448. https://doi.org/10.1021/acs.jpcc.7b06521
+Yang He and Siris Laursen . Trends in the Surface and Catalytic Chemistry of Transition-Metal Ceramics in the Deoxygenation of a Woody Biomass Pyrolysis Model Compound. ACS Catalysis 2017, 7 (5) , 3169-3180. https://doi.org/10.1021/acscatal.6b02806
+Henrik H. Kristoffersen, Hunter L. Neilson, Steven K. Buratto, and Horia Metiu . Stability of V2O5 Supported on Titania in the Presence of Water, Bulk Oxygen Vacancies, and Adsorbed Oxygen Atoms. The Journal of Physical Chemistry C 2017, 121 (15) , 8444-8451. https://doi.org/10.1021/acs.jpcc.7b00745
+Alexandros Vasileiadis and Marnix Wagemaker . Thermodynamics and Kinetics of Na-Ion Insertion into Hollandite-TiO2 and O3-Layered NaTiO2: An Unexpected Link between Two Promising Anode Materials for Na-Ion Batteries. Chemistry of Materials 2017, 29 (3) , 1076-1088. https://doi.org/10.1021/acs.chemmater.6b03928
+Salai Cheettu Ammal and Andreas Heyden . Water-Gas Shift Activity of Atomically Dispersed Cationic Platinum versus Metallic Platinum Clusters on Titania Supports. ACS Catalysis 2017, 7 (1) , 301-309. https://doi.org/10.1021/acscatal.6b02764
+Marçal Capdevila-Cortada, Zbigniew Łodziana, and Núria López . Performance of DFT+U Approaches in the Study of Catalytic Materials. ACS Catalysis 2016, 6 (12) , 8370-8379. https://doi.org/10.1021/acscatal.6b01907
+Aadesh P. Singh, Nisha Kodan, Bodh R. Mehta, Alexander Held, Leonhard Mayrhofer, and Michael Moseler . Band Edge Engineering in BiVO4/TiO2 Heterostructure: Enhanced Photoelectrochemical Performance through Improved Charge Transfer. ACS Catalysis 2016, 6 (8) , 5311-5318. https://doi.org/10.1021/acscatal.6b00956
+Henrik H. Kristoffersen and Horia Metiu . Interaction between Monomeric Vanadium Oxide Clusters Supported on Titania and Its Influence on Their Reactivity. The Journal of Physical Chemistry C 2016, 120 (25) , 13610-13621. https://doi.org/10.1021/acs.jpcc.6b04216
+Stephanie J. Jensen, Talgat M. Inerbaev, and Dmitri S. Kilin . Spin Unrestricted Excited State Relaxation Study of Vanadium(IV)-Doped Anatase. The Journal of Physical Chemistry C 2016, 120 (11) , 5890-5905. https://doi.org/10.1021/acs.jpcc.5b12167
+Hungru Chen, Peng Li, Naoto Umezawa, Hideki Abe, Jinhua Ye, Kenji Shiraishi, Akio Ohta, and Seiichi Miyazaki . Bonding and Electron Energy-Level Alignment at Metal/TiO2 Interfaces: A Density Functional Theory Study. The Journal of Physical Chemistry C 2016, 120 (10) , 5549-5556. https://doi.org/10.1021/acs.jpcc.5b12681
+Xu Huang, Sai Kumar Ramadugu, and Sara E. Mason . Surface-Specific DFT + U Approach Applied to α-Fe2O3(0001). The Journal of Physical Chemistry C 2016, 120 (9) , 4919-4930. https://doi.org/10.1021/acs.jpcc.5b12144
+Arthur C. Reber, Shiv N. Khanna, F. Sloan Roberts, and Scott L. Anderson . Effect of O2 and CO Exposure on the Photoelectron Spectroscopy of Size-Selected Pdn Clusters Supported on TiO2(110). The Journal of Physical Chemistry C 2016, 120 (4) , 2126-2138. https://doi.org/10.1021/acs.jpcc.5b08611
+Ryan C. Nelson, Byeongjin Baek, Pamela Ruiz, Ben Goundie, Ashley Brooks, M. Clayton Wheeler, Brian G. Frederick, Lars C. Grabow, and Rachel Narehood Austin . Experimental and Theoretical Insights into the Hydrogen-Efficient Direct Hydrodeoxygenation Mechanism of Phenol over Ru/TiO2. ACS Catalysis 2015, 5 (11) , 6509-6523. https://doi.org/10.1021/acscatal.5b01554
+Matthew T. Curnan and John R. Kitchin . Investigating the Energetic Ordering of Stable and Metastable TiO2 Polymorphs Using DFT+U and Hybrid Functionals. The Journal of Physical Chemistry C 2015, 119 (36) , 21060-21071. https://doi.org/10.1021/acs.jpcc.5b05338
+Zhenhua Zeng, Maria K. Y. Chan, Zhi-Jian Zhao, Joseph Kubal, Dingxin Fan, and Jeffrey Greeley . Towards First Principles-Based Prediction of Highly Accurate Electrochemical Pourbaix Diagrams. The Journal of Physical Chemistry C 2015, 119 (32) , 18177-18187. https://doi.org/10.1021/acs.jpcc.5b03169
+Arvin Kakekhani and Sohrab Ismail-Beigi . Ferroelectric-Based Catalysis: Switchable Surface Chemistry. ACS Catalysis 2015, 5 (8) , 4537-4545. https://doi.org/10.1021/acscatal.5b00507
+Samuel O. Odoh, Christopher J. Cramer, Donald G. Truhlar, and Laura Gagliardi . Quantum-Chemical Characterization of the Properties and Reactivities of Metal–Organic Frameworks. Chemical Reviews 2015, 115 (12) , 6051-6111. https://doi.org/10.1021/cr500551h
+Henrik H. Kristoffersen, Joan-Emma Shea, and Horia Metiu . Catechol and HCl Adsorption on TiO2(110) in Vacuum and at the Water–TiO2 Interface. The Journal of Physical Chemistry Letters 2015, 6 (12) , 2277-2281. https://doi.org/10.1021/acs.jpclett.5b00958
+Hsin-Yi Tiffany Chen, Sergio Tosoni, and Gianfranco Pacchioni . Adsorption of Ruthenium Atoms and Clusters on Anatase TiO2 and Tetragonal ZrO2(101) Surfaces: A Comparative DFT Study. The Journal of Physical Chemistry C 2015, 119 (20) , 10856-10868. https://doi.org/10.1021/jp510468f
+Yurui Gao, Xuefeng Wang, Jun Ma, Zhaoxiang Wang, and Liquan Chen . Selecting Substituent Elements for Li-Rich Mn-Based Cathode Materials by Density Functional Theory (DFT) Calculations. Chemistry of Materials 2015, 27 (9) , 3456-3461. https://doi.org/10.1021/acs.chemmater.5b00875
+Sencer Selcuk and Annabella Selloni . DFT+U Study of the Surface Structure and Stability of Co3O4(110): Dependence on U. The Journal of Physical Chemistry C 2015, 119 (18) , 9973-9979. https://doi.org/10.1021/acs.jpcc.5b02298
+F. Sloan Roberts, Scott L. Anderson, Arthur C. Reber, and Shiv N. Khanna . Initial and Final State Effects in the Ultraviolet and X-ray Photoelectron Spectroscopy (UPS and XPS) of Size-Selected Pdn Clusters Supported on TiO2(110). The Journal of Physical Chemistry C 2015, 119 (11) , 6033-6046. https://doi.org/10.1021/jp512263w
+Zhongnan Xu, Jan Rossmeisl, and John R. Kitchin . A Linear Response DFT+U Study of Trends in the Oxygen Evolution Activity of Transition Metal Rutile Dioxides. The Journal of Physical Chemistry C 2015, 119 (9) , 4827-4833. https://doi.org/10.1021/jp511426q
+Christopher L. Muhich, Jay Y. Westcott, IV, Thomas Fuerst, Alan W. Weimer, and Charles B. Musgrave . Increasing the Photocatalytic Activity of Anatase TiO2 through B, C, and N Doping. The Journal of Physical Chemistry C 2014, 118 (47) , 27415-27427. https://doi.org/10.1021/jp508882m
+Maytal Caspary Toroker . Theoretical Insights into the Mechanism of Water Oxidation on Nonstoichiometric and Titanium-Doped Fe2O3(0001). The Journal of Physical Chemistry C 2014, 118 (40) , 23162-23167. https://doi.org/10.1021/jp5073654
+Lixia Sang, Yixin Zhao, and Clemens Burda . TiO2 Nanoparticles as Functional Building Blocks. Chemical Reviews 2014, 114 (19) , 9283-9318. https://doi.org/10.1021/cr400629p
+Filippo De Angelis, Cristiana Di Valentin, Simona Fantacci, Andrea Vittadini, and Annabella Selloni . Theoretical Studies on Anatase and Less Common TiO2 Phases: Bulk, Surfaces, and Nanomaterials. Chemical Reviews 2014, 114 (19) , 9708-9753. https://doi.org/10.1021/cr500055q
+Mukes Kapilashrami, Yanfeng Zhang, Yi-Sheng Liu, Anders Hagfeldt, and Jinghua Guo . Probing the Optical Property and Electronic Structure of TiO2 Nanomaterials for Renewable Energy Applications. Chemical Reviews 2014, 114 (19) , 9662-9707. https://doi.org/10.1021/cr5000893
+Gianfranco Pacchioni . Ketonization of Carboxylic Acids in Biomass Conversion over TiO2 and ZrO2 Surfaces: A DFT Perspective. ACS Catalysis 2014, 4 (9) , 2874-2888. https://doi.org/10.1021/cs500791w
+Arthur C. Reber and Shiv N. Khanna . Effect of N- and P-Type Doping on the Oxygen-Binding Energy and Oxygen Spillover of Supported Palladium Clusters. The Journal of Physical Chemistry C 2014, 118 (35) , 20306-20313. https://doi.org/10.1021/jp5045145
+Li Yan, Shan Hu, Jinming Duan, and Chuanyong Jing . Insights from Arsenate Adsorption on Rutile (110): Grazing-Incidence X-ray Absorption Fine Structure Spectroscopy and DFT+U Study. The Journal of Physical Chemistry A 2014, 118 (26) , 4759-4765. https://doi.org/10.1021/jp500097v
+Conn O’Rourke and David R. Bowler . Intrinsic Oxygen Vacancy and Extrinsic Aluminum Dopant Interplay: A Route to the Restoration of Defective TiO2. The Journal of Physical Chemistry C 2014, 118 (14) , 7261-7271. https://doi.org/10.1021/jp407736f
+Francesca Nunzi, Loriano Storchi, Michele Manca, Roberto Giannuzzi, Giuseppe Gigli, and Filippo De Angelis . Shape and Morphology Effects on the Electronic Structure of TiO2 Nanostructures: From Nanocrystals to Nanorods. ACS Applied Materials & Interfaces 2014, 6 (4) , 2471-2478. https://doi.org/10.1021/am404293x
+Dan C. Sorescu, Svatopluk Civiš, and Kenneth D. Jordan . Mechanism of Oxygen Exchange between CO2 and TiO2(101) Anatase. The Journal of Physical Chemistry C 2014, 118 (3) , 1628-1639. https://doi.org/10.1021/jp410420e
+Glen R. Jenness and J. R. Schmidt . Unraveling the Role of Metal–Support Interactions in Heterogeneous Catalysis: Oxygenate Selectivity in Fischer–Tropsch Synthesis. ACS Catalysis 2013, 3 (12) , 2881-2890. https://doi.org/10.1021/cs4006277
+Nitin Kumar, Paul R. C. Kent, David J. Wesolowski, and James D. Kubicki . Modeling Water Adsorption on Rutile (110) Using van der Waals Density Functional and DFT+U Methods. The Journal of Physical Chemistry C 2013, 117 (45) , 23638-23644. https://doi.org/10.1021/jp404052k
+Charles T. Campbell and Jason R. V. Sellers . Enthalpies and Entropies of Adsorption on Well-Defined Oxide Surfaces: Experimental Measurements. Chemical Reviews 2013, 113 (6) , 4106-4135. https://doi.org/10.1021/cr300329s
+Eric W. McFarland and Horia Metiu . Catalysis by Doped Oxides. Chemical Reviews 2013, 113 (6) , 4391-4427. https://doi.org/10.1021/cr300418s
+Andrew “Bean” Getsoian, Vladimir Shapovalov, and Alexis T. Bell . DFT+U Investigation of Propene Oxidation over Bismuth Molybdate: Active Sites, Reaction Intermediates, and the Role of Bismuth. The Journal of Physical Chemistry C 2013, 117 (14) , 7123-7137. https://doi.org/10.1021/jp400440p
+Load more citations
+Download PDF
+Get e-Alerts
+The Journal of Physical Chemistry C
+Cite this: J. Phys. Chem. C 2011, 115, 13, 5841–5845
+https://doi.org/10.1021/jp111350u
+Published March 11, 2011
+Copyright © 2011 American Chemical Society
+Request reuse permissions
+Article Views
+7581
+Altmetric
+-
+Citations
+268
+Learn about these metrics
+Recommended Articles
+Performance of DFT+U Approaches in the Study of Catalytic Materials
+November 17, 2016ACS Catalysis
+Marçal Capdevila-Cortada, Zbigniew Łodziana, and 
+Origin of the Overpotential for Oxygen Reduction at a Fuel-Cell Cathode
+October 22, 2004The Journal of Physical Chemistry B
+J. K. Nørskov, J. Rossmeisl, A. Logadottir, L. Lindqvist, 
+Show more
+recommended articles
+Figures
+References
+Abstract
+Figure 1
+Figure 1. Unit cell used in the bulk calculations: (a) rutile TiO2 and (b) Ti2O3. The red spheres are O atoms; the gray spheres are Ti atoms.
+Figure 2
+Figure 2. (a) Energy of the reaction 2TiO2 + H2 → Ti2O3 + H2O as a function of U. (b) Energy of the reaction 2TiO2 → Ti2O3 + (1/2)O2 as a function of U.
+Figure 3
+Figure 3. (a) Band gap of Ti2O3 as a function of U. (b) Band gap of rutile TiO2 as a function of U.

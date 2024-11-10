@@ -1,0 +1,1528 @@
+Structure and Bonding (2004) 112:151-
+-183
+DOI 10.1007/b97939
+ Springer-Verlag Berlin Heidelberg 2004
+DFT Computation of Relative Spin-State Energetics
+of Transition Metal Compounds
+Jeremy N. Harvey
+School of Chemistry, University of Bristol, Cantocks Close, Bristol, BS8 1TS, UK
+jeremy.harvey@bris.ac.uk
+1
+Introduction . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+152
+2
+Wavefunction and DFT Methods . . . . . . . . . . . . . . . . . . . . . . . . .
+155
+2.1
+Wavefunction Methods . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+155
+2.2
+Density Functional Theory . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+157
+3
+Spin-State Splitting in Main-Group Compounds . . . . . . . . . . . . . . . .
+162
+4
+Spin-State Splitting in TM Compounds . . . . . . . . . . . . . . . . . . . . .
+164
+4.1
+Atoms and Atomic Ions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+164
+4.2
+Organometallic and Coordination Complexes . . . . . . . . . . . . . . . . . .
+166
+4.2.1
+Iron Tetracarbonyl . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+167
+4.2.2
+Exact Exchange and Spin-State Splitting: Other Observations . . . . . . . . .
+170
+5
+Discussion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+176
+6
+Conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+181
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+182
+Abstract DFT is often used to predict the energetics of transition metal compounds. In
+particular, energy differences between states of different spin are of great interest. This
+review discusses the accuracy of such computations for spin-state splittings of monome-
+tallic complexes where the differences in spin-pairing occur mostly or exclusively on the
+metal itself. Large differences are found for computed splittings using different function-
+als, in particular between pure and hybrid functionals. An optimum exact exchange ad-
+mixture of ~15% seems to yield accurate results in many cases, but experimental and es-
+pecially theoretical uncertainties suggest that this should not be relied upon, and the de-
+velopment of new functionals is seen to be highly desirable.
+Keywords DFT · Spin-state · Transition Metals · Exact exchange · Self-interaction
+List of Abbreviations
+TM
+Transition Metal
+DFT
+Density functional theory
+HF
+Hartree-Fock
+1
+Introduction
+The problem of predicting the structure of and the nature of bonding in sta-
+ble organic or main-group inorganic compounds is comparatively straight-
+forward in the sense that the qualitative features of the electronic wavefunc-
+tion of the ground state of the species are usually known. Most of these mo-
+lecules have closed-shell configurations, with all of their electrons paired up
+to give a singlet spin state. Of course, even in this area of chemistry there
+are exceptions to this rule. For example, many “free radicals”, with one un-
+paired electron, are known, and although many of these are intermediates
+with a low lifetime, some can be isolated in pure form. There are also several
+well-known types of reactive intermediate with more than one unpaired
+electron. For example, divalent carbon compounds, or carbenes, have two
+electrons on the carbon atom that do not participate directly in bonding,
+and which can occupy two orbitals. As a result, carbenes often have several
+close-lying electronic states, the most important of which are the open-shell
+triplet, and the closed-shell singlet. In fact, depending on the substituents
+on the carbon, either of these can be the ground state. Such systems are
+however exceptions within organic and main group chemistry. For most
+compounds in these fields, the nature of the electronic ground state is fairly
+predictable. This is not to deny that there are many other difficulties associ-
+ated with theoretical studies of their structure and bonding!
+Transition metal (TM) chemistry stands in contrast to this. Many com-
+pounds involve metal centres with partially filled d shells, and/or with one
+or several unpaired electrons. Therefore, it is not always straightforward to
+predict the orbital occupation pattern of a given stable compound. For inter-
+mediates on a reactive pathway, this is an even greater problem. This is also
+true for organometallic chemistry, despite the fact that many compounds
+obey the 18-electron rule and have closed-shell singlet ground states. Thus,
+there are many 16- or even 14-electron intermediates, odd-electron species
+[1], and polymetallic clusters and complexes for which the spin state is not
+readily predicted.
+Computational and theoretical chemistry has a very important role to
+play in helping to predict and rationalize the nature of the electronic ground
+state of TM compounds. Being able to do so is critical in many respects, if
+one wishes to predict the structure, properties, and reactivity of such com-
+pounds. First of all, the predicted structure and properties (for example the
+spectroscopic features) will of course be very different for different spin
+states. Of more interest to our research group is the notion that reactivity
+often crucially depends on the preferred spin state of reactants, products
+and intermediates. Thus, we have shown elsewhere (for reviews, see [2–4])
+that many reactions of TM compounds involve multiple electronic states, of
+different spin. In these cases, reactivity is strongly influenced by the energy
+152
+J.N. Harvey
+splitting between the different spin states. Two generic examples of this are
+shown schematically in Fig. 1. In example 1, shown in the upper part of the
+Figure, the ground state of the reactants (Rc) belongs to one spin state,
+shown as a bold potential energy curve, and the ground state of the products
+(Pr) lies on another spin-state surface, shown as a lighter line. In Case A, the
+reaction is endothermic and involves a significant barrier, whereas in
+Case B, in which the second spin state is (relatively) much lower in energy,
+the reaction is exothermic and has a low barrier. Example 2 involves an in-
+termediate (Int) which differs in spin state from reactants and products. In
+Case A, this spin state lies at such high energy that it will not be formed,
+and the reaction will proceed adiabatically over a high barrier. In Case B, the
+spin-state is relatively much more stable, and it now becomes more favour-
+able, from the energetic point of view, to have a double spin-state change
+during the reaction. Clearly, in order to be able to predict the qualitative fea-
+tures of such reactions, it is necessary to be able to predict relative spin-state
+energetics accurately!
+For all of these reasons, transition metal chemists have developed many
+semi-empirical and ab initio, qualitative and semi-quantitative procedures
+to try to predict the ordering of electronic states. The purpose of the present
+review is to survey the success of one of the most sophisticated of these
+methods, density functional theory, in calculating the relative energetics of
+spin states.
+Compounds can have close-lying electronic states of different spin for
+several reasons. For convenience, we have divided these into three partially
+Fig. 1 Two cases show how changes in predicted spin-state splittings can affect the pre-
+dicted quantitative and qualitative features of a reactive system. In A, reactants (Rc) and
+products (Pr) belong to different spin states, whereas in B, they have the same spin state,
+but a potential intermediate (Int) has a different spin
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+153
+overlapping categories, as shown in Fig. 2. In case A, electrons on the metal
+(usually within the d shell) couple up in different ways to give either a high
+or a low (or an intermediate) spin overall. This very common case is very
+familiar, for example in crystal field theory. Many examples will be discussed
+below. In case B, two (or more) metal centres are present in the molecule (or
+material), and both of them have one or more unpaired electrons contribut-
+ing to a “local” spin angular momentum. These momenta then couple, either
+through space or through the bonding orbitals of the “bridge” connecting
+the metals, to provide the overall spin. This case is well-known from solid
+state chemistry of substances such as metal oxides, with parallel and anti-
+parallel arrangements of the metal ion spin components leading to either
+ferromagnetic or antiferromagnetic solids. Many bi- and polymetallic mo-
+lecular complexes are also known to display this kind of coupling, and there
+is considerable experience in using DFT methods to predict the spin-state
+splitting in such compounds (see reviews: [5–7]).
+Likewise, in the final case, C, spin angular momentum on a metallic cen-
+tre can be more or less closely situated with respect to an unpaired electron
+(or electrons) situated on a non-metallic centre. One example of this situa-
+tion concerns the Compound I intermediate of oxidative cytochrome P450
+enzymes. This compound involves two unpaired electrons on a formally
+Fe(IV)-O iron oxo core, high-spin coupled to form a local S=1 spin contri-
+bution, with a third unpaired electron residing in the p orbitals of the por-
+phyrin ligand [8]. Coupling between the two spin components can lead to
+both doublet and quartet states.
+Fig. 2 Different scenarios for obtaining multiple spin-states in a transition metal com-
+pound. M is a metal atom with generic ligands, X is a non-metallic group bearing an un-
+paired electron
+154
+J.N. Harvey
+The bulk of this review will focus on situations belonging to category A,
+without addressing the very different issues involved with cases B and C in
+which the inter-spin coupling is much weaker. Nevertheless, some systems
+occur at the borderline between A and either B or C, and for these, the pres-
+ent review will be of some relevance.
+2
+Wavefunction and DFT Methods
+2.1
+Wavefunction Methods
+Before reviewing their specific behaviour for the problem at hand, it is ap-
+propriate to briefly remind the reader of the mathematical form of Hartree-
+Fock (HF) and of Density Functional (DFT) theories (for more detail on the
+material contained in this section, the reader is referred to one of the many
+excellent books on electronic structure theory, such as [9]). HF expresses
+the electronic wavefunction as a Slater determinant – an antisymmetrized
+product of one-electronic functions, or molecular orbitals. For a given sys-
+tem defined by the nature and position of the (fixed) atomic nuclei and by
+the number of electrons n, the electronic energy, Eelec (to which the nuclear-
+nuclear repulsion energy must be added to give the total energy, which de-
+fines the potential energy surface), is given as:
+Eelec ¼
+X
+n
+i¼1
+ti þVNi
+ð
+Þþ1
+2
+X
+n
+i¼1
+X
+n
+j¼1
+Jij Kij
+
+
+ð1Þ
+Here ti is the kinetic energy of an electron in molecular orbital i; VNi is
+the interaction energy of the same electron with the Coulombic potential in-
+duced by the positively charged nuclei; the “Coulomb” integral Jij is the clas-
+sical interaction energy between the charge density corresponding to an
+electron in orbital i and that corresponding to another electron in orbital j;
+and the “Exchange” integral Kij serves to correct the Coulomb integral for
+its neglect of the wavefunction antisymmetrization. The mathematical form
+of Kij means that it is equal to zero for electrons of opposite spin. It is of
+some importance for the discussion of DFT, below, to note that the exchange
+integrals in Eq. 1 have a second important function. Thus, the double sum-
+mation includes the terms where i=j (in other words the energy includes the
+repulsion energy of each electron with itself!). Fortunately, Jii is exactly equal
+to Kii, so that this “self-interaction” contribution cancels out exactly. This
+may appear to be a mere technical detail concerned with the way in which
+the summation of the Jij and Kij contributions is carried out, but it turns out
+that the precise cancellation is required for HF calculations to be carried out
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+155
+effectively. It would not be convenient to need to exclude all the terms where
+i=j.
+From this discussion of HF theory, it is possible to discuss the expected
+calculated energetics for different spin states of metal complexes. For case A,
+above, the electronic configuration of the two spin states can be shown
+schematically as in Fig. 3. Making a few simplifying assumptions, the HF
+difference in energy between the singlet and triplet states can be given as:
+DE1;3
+HF ¼ J11
+ð
+Þ J12 K12
+ð
+Þ
+ð2Þ
+This assumes that the form of the molecular orbitals is the same in both
+states, that the one-electron parts of the energy expressions are the same for
+both states, and that all of the Coulomb and Exchange integrals involving
+one of the two electrons in orbitals 1 and 2 with one of the other electrons
+are identical to those involving the other of the two electrons (that is, that
+J1a=J2a, and so on). If both orbitals are mainly d atomic orbitals localized on
+the metal atom, then J11 and J12 will be of the same order and the energy dif-
+ference will be given by K12, the exchange integral or “interaction” between
+the two electrons in the triplet state. Since this energy contribution is posi-
+tive (and fairly large in chemical terms), the triplet state will be significantly
+lower than the singlet. The cartoon in Fig. 3 shows both d orbitals as isoen-
+ergetic. In cases where one orbital lies lower than the other (for example due
+to better interactions with the nuclei on a ligand or to less electron-electron
+repulsion with ligands), the triplet will still usually come out as lower in HF
+calculations, unless the orbital splitting is very large.
+Although some of the assumptions made are certainly not correct in de-
+tail, this qualitative prediction of how HF behaves for the spin splitting in
+metal complexes of type A is in good agreement with the results of HF cal-
+culations (see below). In almost all cases, the high-spin state is far too stable
+with respect to the low-spin one when the splitting is compared with experi-
+Fig. 3 Schematic molecular orbital diagram for singlet and triplet spin states of a metal
+complex, showing doubly-occupied (ligand-based, for example) molecular orbitals a and
+b, and a degenerate pair of metal orbitals, 1 and 2
+156
+J.N. Harvey
+mental data. This is because HF neglects an important physical effect: elec-
+tron correlation. Because of Coulombic repulsion, the probability of finding
+one electron at a given point in space depends on whether or not another
+electron is already in the vicinity. HF theory neglects part of this effect. If
+the wavefunction were written as a simple product of molecular orbitals
+(Hartree product), the neglect would in fact be total, with each electron
+moving completely independently of the others. The Slater determinant,
+however, includes some “correlation” in that the probability of finding two
+electrons of same spin near each other is decreased – antisymmetrization in-
+troduces “Fermi holes” around each electron in which the probability of
+finding another electron of the same spin is lower than would be predicted
+by the Hartree product. However, HF does not describe the similar effect
+that occurs between electrons irrespective of their spin, the “Coulomb hole”.
+To do so, it is necessary to expand the electronic wavefunction as a linear
+combination of multiple Slater determinants. The larger the expansion, the
+closer to the exact result (barring effects such as relativity which are not in-
+cluded in the simplest treatments).
+It is well-known that wavefunction-based methods, whilst in principle, of
+course, capable of reaching the exact result in this way, struggle to repro-
+duce experimental spin-state splittings for transition metal compounds (for
+examples, see below). This is because of the large size and therefore huge
+computational cost of the expansion needed to achieve convergence on the
+energy difference. Also, simple methods to include electron correlation, such
+as MP2 theory, which are often qualitatively successful for main group com-
+pounds, sometimes fail dramatically for TM systems (for reviews of ab initio
+calculations on TM compounds, see [10] for example). Even for very small
+TM compounds, it can be rather difficult to achieve quantitative accuracy
+using ab initio methods.
+2.2
+Density Functional Theory
+Compared to wavefunction methods, DFT follows an apparently completely
+different approach in order to solve the same problem – the determination
+of the energy of a collection of fixed nuclei and moving electrons (for gener-
+al introductions to DFT, see [9], as well as more specialized sources such as
+[11]). Instead of the many-dimensional wavefunction, the central object in
+DFT is a comparatively simple function of three variables, the electronic
+density r within the molecular space. DFT is built on two fundamental theo-
+rems proposed by Hohenberg and Kohn. The first states that there exists in
+principle a functional E[r] from which the exact energy of the system can be
+computed upon inputting the exact density function r. The second theorem
+states that this functional is variational: the energy computed from a given
+density function is lower the closer the input density is to the correct one.
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+157
+The problem in DFT is to find the correct form for the functional, and, using
+that, to solve for the density.
+The exact functional of DFT is unknown, and, even if it was known, there
+is no guarantee that it would be significantly more computationally tractable
+to evaluate energies and densities from it than it is to obtain them from ex-
+act solutions of the Schrdinger equation within the wavefunction approach.
+However, many approximate functionals are known which give excellent re-
+sults for a range of chemical problems, and it is with those that we are con-
+cerned. All of these functionals adopt the same basic energy expression:
+Eelec r
+ð Þ ¼ T r
+ð ÞþVNe r
+ð ÞþJee r
+ð ÞþExc r
+ð Þ
+ð3Þ
+The four functional terms to the right of this equation correspond respec-
+tively to the kinetic energy of the electrons in the density distribution, the
+Coulombic interaction of the electron distribution with the nuclei (or with
+other external fields), the classical Coulombic interactions of the electrons
+amongst themselves, and the “exchange-correlation” functional which cor-
+rects the former three terms for their neglect of various effects. For practical
+reasons (see below), it is convenient to treat the density as arising from a
+sum of contributions from a set of doubly- (or singly-) occupied molecular
+(Kohn-Sham) orbitals. Applying the variational condition to Eelec therefore
+involves finding the set of orbitals that minimise the energy; doing so leads
+to the Kohn-Sham equation which in outward form is very similar to the
+Fock equation of HF theory, and also needs to be solved self-consistently.
+Whilst Eq. 3 is in principle exact, practical implementations necessarily
+involve approximations. To get a better understanding of the impact of these
+approximations on spin-state energetics, it is useful to discuss each term in
+some more detail.
+The first term, the kinetic energy, is difficult to calculate directly from the
+density, and it is for this reason that the “molecular orbitals” mentioned
+above are introduced: a very good approximation to the kinetic energy cor-
+responding to the density can be calculated from the orbitals as it would be
+in HF theory. This approach does not however yield the exact kinetic energy
+because it assumes that the electrons in each orbital do not interact with
+electrons in other orbitals. The exact exchange-correlation functional must
+therefore contain a corrective term to incorporate the effect of electronic in-
+teractions on their kinetic energy. In practice, such a term is not explicitly
+included in common functionals.
+The second term, describing the interaction of the electron density with
+the positive nuclei (or other external fields), is straightforward.
+The third term, describing the interelectronic Coulomb repulsion energy,
+is given in density functional theory as:
+158
+J.N. Harvey
+Jee r
+ð Þ ¼ 1
+2
+Z Z r r
+ð Þr r0
+ð Þ
+r r0
+j
+j drdr0
+ð4Þ
+This is in fact mathematically identical to the sum of the Jij Coulomb inte-
+grals discussed above in the context of HF theory. As also mentioned there,
+this is not the true electron-electron repulsion energy, for several reasons.
+First, it neglects exchange effects (the antisymmetry of the electronic wave-
+function, and the associated Fermi hole that this introduces around each
+electron). Next, it does not include the effect of electronic correlation – the
+Coulomb hole. Finally, it includes electron-electron self-interaction. In HF
+theory, the exchange and self-interaction error are corrected for simply by
+including the exchange integrals Kij, but to recover the correlation effects, it
+is necessary to use very complex post-HF methods.
+In DFT, the fourth term, or exchange-correlation functional, in principle
+contains all of the corrections needed to give the exact overall energy. EXC is
+often split into one term corresponding to “exchange”, EX, and one corre-
+sponding to “correlation”, EC. This division into two terms reflects the fact
+that the neglect of exchange and self-interaction, on the one hand, and of
+correlation on the other, can at first sight be treated as separate effects.
+Accordingly, the role of EX is to correct for exchange and self-interaction
+effects. The interelectronic Coulomb repulsion energy, Jee, is too large be-
+cause it regards electrons of the same spin as approaching each other close-
+ly, whereas in fact the antisymmetry of the wavefunction keeps them apart.
+By assuming that the Fermi hole is relatively “small”, it is possible to treat
+the exchange correction as an integral over all of space of a “local” effect.
+This local effect contributes a stabilisation term that is larger in regions of
+space where the density of electrons of a given spin is larger. In the simplest
+version of DFT, the Local Density Approximation (LDA), this term is given
+the following very simple expression derived from the Dirac formula which
+applies for a uniform “gas” of electrons:
+Ex r
+ð Þ ¼ 21=3C
+Z
+r4=3
+a
+þr4=3
+b
+
+
+dr
+ð5Þ
+Here ra and rb are the densities of spin-up and -down electrons, respec-
+tively, at a given point in space. Like the Coulomb interelectronic repulsion
+term, this exchange functional does not evaluate to zero for one-electron
+systems, where there are of course no electron-electron interactions. In fact,
+the two terms are similar in magnitude in such cases, and roughly cancel
+out. In this sense, the exchange functional also corrects in part for self-inter-
+action effects. For example, the LDA Coulombic energy Jee of the hydrogen
+atom, calculated using a large basis set, is 0.2997 Hartrees, and the LDA EX
+exchange functional is 0.2791 Hartrees. As can be seen, however, the two
+terms do not cancel out exactly, and this leads to the so-called self-interac-
+tion error of traditional DFT methods, which we will discuss below. These
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+159
+errors, associated with calculating the exchange energy from the local (or
+quasi-local, see below) density, suggest that DFT should perform much less
+well than HF theory, where exchange is treated exactly. In practice, however,
+this is not true. One might also think that a better form of DFTcould be con-
+structed, in which exchange is calculated entirely from the HF expression
+(not partly, as in hybrid DFTs), but correlation is incorporated using DFT
+expressions. Such approaches have been tried, but they do not perform well.
+This is partly because the HF description of exchange is not, in fact, exact: it
+is exact only within the approximation of a wavefunction represented by a
+single Slater Determinant. In DFT, the molecular orbitals and therefore the
+Slater Determinant used to expand the density are not assumed to corre-
+spond to the exact wavefunction (only to the exact density), so there is no
+reason to expect that they could be used to calculate exchange exactly. Also,
+exchange and correlation do not have exactly the same meaning in DFT and
+HF theory, and these subtle differences lead to problems in this type of ap-
+proach.
+The correlation part of the functional, EC, is also derived, for simple func-
+tionals, from expressions derived for the uniform electron gas. As for the ex-
+change term, the role of this part of the functional is to incorporate the sta-
+bilising effect of the Coulomb hole that surrounds electrons. Thus, in re-
+gions where there is a build-up of electron density – where the probability
+of finding two electrons simultaneously is larger – the Coulombic repulsion
+energy predicted from Eq. 4 will be an overestimate, as it neglects the corre-
+lation in electron motion. Again, like exchange energy, this effect is mod-
+elled in DFT as a local effect. Various different correlation functionals have
+been suggested, which are all given as integrals over space of functions of
+the density (and in some cases of its gradient). The mathematical form of
+these functionals can be found elsewhere (see [11] and other references be-
+low).
+In the above discussion (in the context of HF theory), electron correlation
+was shown to play an important role in determining the relative energetics
+of spin states. In fact, within post-HF methods, the problem associated with
+calculating this energy difference is entirely due to the need to use more and
+more complicated wavefunctions so as to recover a significant proportion of
+the differential correlation effect between the two states. It might therefore
+be expected that, within DFT, the spin-state splitting would be determined
+mainly by the correlation functional. As will be seen below, however, this is
+not so, with the correlation functional playing little or no role in relative en-
+ergetics. In simplistic terms, this can be seen as due to the fact that all corre-
+lation functionals make a similar contribution to the energy difference,
+whereas the different exchange functionals make different contributions.
+In summary, the use of approximate functionals can lead to errors for
+several reasons: the neglect of correlation effects on electronic kinetic ener-
+gy, the incorrect cancellation of the self-interaction involved in the Coulomb
+160
+J.N. Harvey
+term, and the inaccurate treatment of exchange and correlation effects. It
+will be argued below that the errors associated with self-interaction and ex-
+change play the most important role in calculations of spin-state energetics
+in TM compounds.
+The simplest exchange-correlation functionals, derived from the density
+alone, give reasonable results for many molecular properties. However, it
+has been found that adding terms proportional to the local gradient of the
+density in both the exchange and correlation integrands leads to much more
+accurate results. Most modern DFT computations use these so-called “non-
+local” or gradient-corrected functionals.
+It is useful to mention some of the popular DFT functionals that we will
+refer to below. Some of these are “complete”, exchange and correlation func-
+tionals, such as the generalized gradient approximation of Perdew and Wang
+(abbreviated as PW91) [12] and the HCTH147 [13] and RPBE [14] function-
+als. Some include only an exchange functional and are designed to be used
+together with a correlation functional, such as Beckes 1988 functional (B or
+B88) [15] or the Gill 1996 (G or G96) expression [16]. The PW91 functional
+mentioned above in fact contains exchange and correlation contributions
+which can be used separately with other functionals. The most important
+correlation functionals are those of Perdew (P or P86) [17] and of Lee, Yang
+and Parr (LYP) [18].
+The expressions given above for calculating the energy of a molecular
+system all use so-called pure density functional theory. That is, the energy is
+calculated from the density alone – although the kinetic energy is derived
+from a set of Kohn-Sham “orbitals”. A very popular modification of DFT was
+suggested some years ago, in which the exchange energy is computed as a
+weighted sum of two terms, one of which is based upon the density alone,
+and the other is the Hartree-Fock exchange expression, using the Slater De-
+terminant constructed from the Kohn-Sham orbitals. As discussed above,
+poor results are obtained when one uses this “exact” exchange expression
+on its own to calculate the exchange energy within DFT. However, as a mix-
+ture with DFT expressions, very accurate functionals can be obtained. The
+proportion of HF exchange was initially chosen to be 50% [19], yielding the
+BHLYP (or BHandHLYP) functional in conjunction with the B and LYP ex-
+change and correlation functionals. In later work, the coefficient defining
+this proportion was optimised to reproduce computed energetics of a set of
+small main-group compounds as accurately as possible. This yields a family
+of functionals with 20% of exact exchange [20], by far the most common of
+which also includes contributions from the LDA exchange and correlation
+expressions, the B exchange functional, and LYP correlation. This B3LYP
+functional is one of the most accurate available at the present time [21]. It
+also performs very well for many species that do not belong to the initial set
+of compounds, including TM compounds, as shown by its countless applica-
+tions in the field. There are many other so-called “hybrid” functionals, some
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+161
+of which, for instance B3PW91 or B3P86, use the same mathematical form
+and mixing coefficients as B3LYP but other correlation functionals. Others,
+such as B1LYP, PBE0, KMLYP, MPW1 K, use different proportions of exact
+exchange and different DFT expressions for exchange and correlation.
+The development of new DFTs is a very active field of research, with new
+“pure” and hybrid functionals appearing all the time, some of which per-
+form as well as or better than B3LYP for some (or all?) properties. In most
+cases, the researchers developing functionals test them on sets of com-
+pounds that do not contain any TM atoms. It then takes some time before
+such newly developed functionals become widely adopted by the broader
+computational community, and especially before they are used to try to pre-
+dict spin-state splittings of TM compounds. Given the difficulties discussed
+below, it would seem desirable for TM compounds to be used earlier in the
+development phase of new functionals, although this is itself not straightfor-
+ward given the need for reliable benchmarks.
+3
+Spin-State Splitting in Main-Group Compounds
+Before addressing transition metal compounds, it is instructive to see how
+DFT compares to wavefunction methods for predicting the spin-state split-
+ting of main-group open-shell compounds. Given the many calculations on
+this type of system in the literature, there is potentially a lot of data available
+pertaining to this issue. In line with the general high performance of the
+B3LYP functional, it often seems to give good results for state splittings, for
+example of carbenes [22]. However, other functionals also seem to perform
+well [23], suggesting that there may not be great differences in this field be-
+tween them. Perhaps because of this good agreement, and the general good
+behaviour of standard functionals such as B3LYP, there do not appear to be
+many systematic studies of DFT-dependence. For this reason, we include
+here, as a reference for the following sections on transition metal com-
+pounds, state splittings calculated for two simple compounds with a broad
+range of functionals [24].
+Table 1 shows the predicted splitting between the triplet ground state and
+the closed-shell first singlet excited state of the methylene biradical, CH2. To
+take the ab initio results first, it can be seen that HF exaggerates the stability
+of the triplet, for the reasons discussed above. Next, the simplest correlated
+method, MP2, does not improve the result much, mainly due to near-degen-
+eracy effects in the singlet state. All of the multi-reference methods, includ-
+ing the very simple two configuration CASSCF(2,2) method, give results in
+close agreement and close to the exact value. The highly-correlated single-
+reference CCSD and especially CCSD(T) methods also perform well.
+162
+J.N. Harvey
+The most important trend within the DFT results is that there is no sys-
+tematic dependence of DE(1,3) on the type of exchange functional used. In
+fact, the correlation functional appears to be more important: The PW91
+and B3PW91 functionals give very similar state-splittings which are clearly
+too negative, BP86 and B3P86 also overestimate the splitting, whereas BLYP,
+B3LYP and B1LYP all give values which are fairly close to experiment. Of the
+functionals using the LYP correlation functional, only BHandHLYP, with its
+very high proportion of exact exchange (50%), overstabilises the high-spin
+state to a significant extent. Finally, even the simplest LDA functional gives a
+reasonable value, which is not out of line with those obtained with the other
+functionals.
+This pattern seems to be fairly common for main group compounds. In
+Table 2, results with the same range of functionals are shown for the singlet-
+triplet splitting in methyl-silylene [24]. In this system, the unpaired elec-
+trons reside on a different atom (Si versus C), and the singlet is now the
+Table 1 DFT and ab initio calculated energy splittings (in kcal/mol) between the triplet and
+singlet states of CH2. The indicated value does not include a correction for zero-point ener-
+gy
+DFT/6–311G** (optimized)
+Ab initio/cc-pVQZ (at B3LYP/6–311G** geometry)
+DFT
+DE(1,3)
+Ab initio level
+DE(1,3)
+LDA
+13.43
+HF
+24.98
+PW91
+15.46
+MP2
+19.50
+BLYP
+10.26
+CCSD
+10.39
+BP86
+13.64
+CCSD(T)
+9.52
+B3PW91
+15.94
+CASSCF(2,2)
+10.49
+B3LYP
+11.39
+CASSCF(6,6)
+10.15
+B3P86
+14.60
+MRCISD
+9.15
+B1LYP
+11.57
+MRCISD+Q
+8.99
+BHandHLYP
+12.66
+MRACPF
+9.04
+HF
+26.02
+MRAQCC
+9.09
+Table 2 DFT and ab initio calculated energy splittings (in kcal/mol) between the triplet and
+singlet states of CH3SiH. HF and DFT results involve full geometry optimization with the
+6–311G** basis; CCSD and CCSD(T) values use the cc-pVQZ basis at the B3LYP/6–311G**
+geometry; no corrections for zero-point energy have been included
+Method
+DE(1,3)
+Method
+DE(1,3)
+LDA
+23.15
+B3P86
+20.00
+PW91
+19.20
+B1LYP
+22.78
+BLYP
+23.68
+BHandHLYP
+21.97
+BP86
+20.59
+HF
+7.67
+B3PW91
+18.78
+CCSD
+22.66
+B3LYP
+22.96
+CCSD(T)
+23.17
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+163
+ground state (DE(1,3) is positive). Using the CCSD(T) results as a reference,
+it can be seen that the functionals using the LYP functional are again most
+accurate, with the PW91 and, to a lesser extent, P86 correlation functionals
+leading to an over-stable triplet (or under-stable singlet). As in the case of
+CH2, HF clearly favours the triplet, the LDA performs well, and even the lar-
+gest differences between functionals are fairly modest.
+In summary, most DFT functionals seem to reproduce spin-state split-
+tings of main-group compounds fairly accurately. The differences between
+functionals, from experiment or accurate computation, are typically below
+5 kcal/mol, and the nature of the correlation functional seems to be some-
+what more important than that of the exchange functional. As expected from
+its general good performance for predicting thermochemistry of main-
+group compounds, the functional chosen by default in many computational
+studies, B3LYP, also gives good results for spin-state splittings.
+4
+Spin-State Splitting in TM Compounds
+The situation for transition metal compounds is rather different from that
+just discussed for main-group species. Different functionals frequently pre-
+dict spin-state splittings which differ by 10 kcal/mol or more, and this has
+been noticed and reported by many different groups. A lot of effort has been
+put into ascertaining which functional gives the best results for a given sys-
+tem. This is not always easy, as an accurate experimental or computational
+calibration is not always available. An additional difficulty comes from the
+fact that many computational studies of TM compounds use relatively small
+basis sets, such as the double zeta, unpolarized, LanL2DZ ECP basis. Al-
+though DFT is not as demanding in terms of basis sets as correlated ab initio
+methods (only the one-particle space of the Kohn-Sham orbitals needs to be
+spanned, not the two-particle inter-electronic cusp, the accurate description
+of which requires very large basis sets), and some properties calculated with
+basis sets as small as this can be more or less converged, it is frequently the
+case that basis set effects of 10 kcal/mol can affect such results. We will now
+review the results of calculations on a range of TM compounds.
+4.1
+Atoms and Atomic Ions
+It might appear at first sight that atomic systems are ideal for testing and
+benchmarking the performance of DFT in predicting spin-state splitting.
+The energies of the electronic states of these species are known very accu-
+rately from experiment, they are amenable to accurate computation using ab
+initio methods, and a broad range of d orbital occupation patterns and spin
+164
+J.N. Harvey
+multiplicities are covered if one considers all of the transition metals. How-
+ever, there are some problems associated with these species. First and fore-
+most, atomic states tend to be degenerate due to orbital angular momentum
+as well as spin. The simple-minded approach to representing these states is
+to carry out DFT calculations with the electrons assigned to orbitals in such
+a way as to obtain the correct overall occupation pattern ndq(n+1)sr – for
+example the valence electrons in the iron atom will be placed so as to obtain
+a 3d64s2 configuration consistent with the 5D ground state of the atom. How-
+ever, the angular degeneracy of the atomic state means that it can, in princi-
+ple, be represented in several different ways in terms of the occupations
+of the individual d orbitals: (z2)2(xy)1(xz)1(yz)1(x2y2)1 or (z2)1(xy)2(xz)1
+(yz)1(x2y2)1, and so on. With many functionals, these different occupation
+patterns generate significantly (several kcal/mol) different energies. It has
+been proposed that either carefully chosen single configurations or weighted
+averages over several configurations should be used as atomic multiplet en-
+ergies. For a discussion of these issues, see [25–27] and references therein.
+Obviously, the calculated spin-state splitting will depend on whether or not
+these more sophisticated approaches are used or whether one has simply en-
+tered the required charge and multiplicity into the electronic structure soft-
+ware and hoped for the best!
+Another objection to the use of atoms as reference systems for calibration
+is that their electronic structure is often not typical of that of the metallic
+complexes for which prediction of spin states is desirable. For example, the
+(n+1)s orbital of a metal in a complex is usually not occupied, whereas it is
+in bare metal atoms. For this reason, unless there are good grounds for
+thinking that the behaviour of functionals should be fairly constant whatever
+the electronic structure and bonding environment, then the “best” function-
+als for atoms may perform poorly for complexes. We note that as well as
+atoms and atomic ions, small, highly unsaturated gas phase molecules such
+as metal monohydrides MH, monoxides MO, and monocarbonyls MCO can
+be argued to have somewhat unrepresentative electronic structures. For this
+reason, it is advisable to avoid extrapolating too confidently from computa-
+tional studies of these systems to larger complexes.
+Of course, in some cases it is important to be able to calculate the ener-
+gies of atoms, and it is also interesting to examine how functionals behave
+for these systems. Thus, despite the problems with these calculations, many
+studies have been carried out on atoms and atomic ions, often with the spe-
+cific aim of testing functional behaviour. To take just one example, Marko-
+vits et al studied the ground state of the first row transition metal atoms us-
+ing the PW91 and B3LYP functionals as a part of their study of the absorp-
+tion of metal atoms on magnesium oxide surfaces [28]. For most metals, the
+lowest configuration was found to correspond to the experimental ground
+state. For V, however, PW91 predicts a 3d44s1 quintet ground state, whereas
+B3LYP agrees with experiment in finding a 3d34s2 triplet ground state. For
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+165
+Ni, both functionals predict a triplet ground state, but with PW91, this is a
+3d94s1 configuration, instead of 3d84s2 as found experimentally and with
+B3LYP. This example illustrates the second point made above: the different
+states involved differ in their 3d occupation instead of, or as well as, in their
+spin state. In metal complexes, competing spin states differ instead in terms
+of the spin coupling of the nd electrons.
+4.2
+Organometallic and Coordination Complexes
+After these highly unsaturated species, the rest of the review will focus on
+more realistic, multi-ligand complexes. It is useful to make a distinction be-
+tween organometallic and Werner-type coordination compounds. Organo-
+metallic compounds typically involve “strong field” ligands such as carbon-
+yl, whose orbitals interact strongly with the d orbitals of the metal through
+both bonding and back-bonding interactions. This is also favoured by the
+fact that in many organometallic compounds, the metal atom has a fairly
+low formal oxidation state, and indeed is fairly electron rich, so that its
+occupied d orbitals are fairly high in energy, and interact significantly with
+the ligand orbitals. All of this results in fairly strong splitting of the formal
+d orbital energy levels, which results in a significant preference of organo-
+metallic compounds for closed-shell singlet electronic ground states. For ex-
+ample, the success of the 18-electron rule in rationalising bonding in these
+compounds clearly correlates with this preference for singlet states.
+In contrast to this, coordination compounds typically involve weaker-
+field nitrogen, halogen or oxygen-based ligands on the metal centre. Also,
+the metal often has a fairly high formal charge of +2 or +3, and so has quite
+small d orbitals spatially, which overlap less with ligand orbitals. As a result,
+d orbital splitting is less pronounced, and both high-spin and low-spin elec-
+tronic states can be observed. For example, octahedral Fe(II) complexes in-
+trinsically have a formal electron count of 18, yet both quintet and singlet
+(and indeed sometimes triplet) ground states are very common for these
+species. For these compounds, then, the occurrence of close-lying spin states
+is a general rule, and being able to predict the ground state is crucial if one
+wants to be able to predict such things as geometrical structure or spectros-
+copy.
+Of course, for many TM species, it can be difficult (and conceptually not
+very useful!) to decide whether they are “organometallic” or “coordination”
+compounds – for many complexes, a good case could be made for them be-
+longing to both groups (or neither). Also, the hand-waving rules given
+above whereby organometallic compounds tend to have low-spin and indeed
+most often singlet ground states, whereas coordination compounds tend to
+have close-lying high- and low-spin states, are much too simple for them
+not to fail quite frequently. From our present point of view, it is important to
+166
+J.N. Harvey
+point out that there are many stable organometallic species, and even more
+reactive intermediates, in which an electron count lower than 18, an odd
+number of electrons, or the presence of comparatively weak-field ligands,
+leads to the existence of low-lying open-shell electronic states. For these cas-
+es, it is important to be able to predict spin-state splittings accurately, as it
+is more generally for coordination compounds.
+4.2.1
+Iron Tetracarbonyl
+It is instructive to start our overview of TM compounds with a very simple
+species, which has been the object of many computational studies: iron
+tetracarbonyl. As will be seen, many of the trends concerning DFT and spin-
+state splitting are observed for this compound. Fe(CO)4 is a 16-electron re-
+active intermediate which has been shown to have a triplet ground state in
+the gas phase, but with a low-lying singlet state just above. Both electronic
+states have C2V geometries, which can be thought of as arising from distor-
+tion of the species obtained by removing an equatorial carbonyl from trigo-
+nal bipyramidic Fe(CO)5 (See Fig. 4). The ground state has three doubly-
+occupied orbitals which are mainly metal-3d in character, and two singly oc-
+cupied orbitals of b1 and a1 symmetry, respectively. The first of these is es-
+sentially the metal 3dxz orbital – the d orbital lying in the “equatorial” plane.
+The second is mainly the iron dz2 orbital, with some 4s character, and is ori-
+ented along the C2V axis – which corresponds to what was, in formal terms,
+the broken Fe–C bond in Fe(CO)5. In the singlet, the b1 orbital is doubly oc-
+cupied, and the a1 orbital is empty. This occupation pattern is fairly typical
+of other unsaturated 16-electron singlet/triplet pairs.
+Fig. 4 Three-dimensional representation of the structures of A: Fe(CO)5; B: 1Fe(CO)5,
+and; C: 3Fe(CO)4; showing how the latter two structures can be derived from the first one
+by removing one CO
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+167
+For the reasons discussed above, early ab initio calculations [29, 30] tend
+to exaggerate the stability of the triplet ground state, even when using corre-
+lated wavefunctions, as it is difficult to recover all of the differential correla-
+tion effects. The computations thereby find a large (~15 kcal/mol or more)
+splitting between the triplet and singlet states. There have been many DFT
+studies of this species [31–35]. The geometries found in these different stud-
+ies are generally in good agreement, but the spin-state splitting is found to
+vary quite strongly depending on the functional used. Thus, “pure” DFT
+methods give rather low excitation energies, for example DE=0.5 kcal/mol
+with BP86 and BLYP [32], whereas hybrid functionals give larger splittings,
+like 8.7 kcal/mol with B3LYP [32].
+In a recent study, we calculated the state splitting of Fe(CO)4 using a vari-
+ety of DFT and wavefunction methods [36]. The DFT calculations yielded re-
+sults very similar to those found above, except that we surveyed a broader
+range of functionals (see Table 3). This reveals some interesting points. First,
+the splitting does not strongly depend on the nature of the correlation func-
+tional, for a given exchange functional (or mixture of functionals). Thus
+BP86, BLYP, and BPW91 give very similar values. Second, there are enor-
+mous differences in the computed DE upon varying the exchange functional,
+and especially the amount of exact exchange. Thus, all pure functionals give
+a very small splitting (LDA is a slight exception, for which the singlet is the
+ground state, probably due to the absence of gradient corrections), function-
+als with 20–25% HF exchange give values close to 10 kcal/mol, and the two
+functionals KMLYP [37] and MPW1 K [38], developed to give accurate bar-
+Table 3 DFT spin-state splitting DE(1,3) between 3B1 and 1A1 Fe(CO)4, in kcal/mol. The neg-
+ative value for the LDA means that the singlet is found to be the ground state with that
+method. Also shown is the proportion of "exact" exchange used in the functional. From
+[36]; includes a correction for zero-point energy
+DFT
+Exact exchange (%)
+DE(1,3) (kcal/mol)
+LDA
+0
+5.91
+BP86
+0
+0.92
+BLYP
+0
+1.43
+G96LYP
+0
+1.61
+HCTH147
+0
+0.43
+BPW91
+0
+1.64
+B3LYP
+20
+9.78
+B1LYP
+25
+12.92
+mPW1PW91
+25
+12.11
+PBE0
+25
+9.15
+KMLYP
+55
+21.61
+MPW1 K
+42
+20.21
+B3PW91
+20
+9.65
+B3PW91*
+15
+6.88
+B3"PW91**
+10
+4.09
+168
+J.N. Harvey
+riers for some small gas-phase reactions, and containing ~50% HF ex-
+change, give splittings close to 20 kcal/mol. Whilst not fully conclusive, our
+wavefunction-based calculations (CASPT2 and CCSD(T) with large basis
+sets) agreed that the correct splitting should be somewhere between the val-
+ue given by the pure functionals and that given by B3LYP.
+There is an interesting exception to the rule that pure functionals predict
+near-degenerate singlet and triplet states. The modified form of the “pure”
+PBE functional described by Hammer et al [14], called RPBE, has been re-
+ported [35] to predict a triplet-singlet energy difference for Fe(CO)4 of
+4.0 kcal/mol, which is probably much closer to the correct value than that
+computed with any other “pure” functional. Whilst the RPBE functional has
+been very enthusiastically adopted by the periodic DFT community for cal-
+culations on surfaces – the area for which it was developed – very few appli-
+cations have been reported for molecular TM complexes, so it is not yet
+clear whether the good result for Fe(CO)4 will be transposable to other sys-
+tems.
+In the last three rows of Table 3, the effect of varying the proportion of
+exact exchange whilst keeping all other aspects of the functional constant
+shows that the spin-state splitting does indeed depend on the proportion of
+exact exchange. We found that the modified B3PW91* functional, with a re-
+duced 15% contribution of exact exchange, gave the closest agreement with
+what we believe to be our “best” wavefunction-based predictions for the
+spin-state splitting and the bond energy in Fe(CO)5 (which is not discussed
+here). The dependence on the proportion of exact exchange is shown more
+clearly in Fig. 5, where we have followed the example of Reiher et al [39]
+Fig. 5 Computed [23] spin-state splitting DE(1,3) between 3Fe(CO)4 and 1Fe(CO)4, as a
+function of the proportion of exact exchange. Diamonds and solid line: B3LYP(c3) results;
+discs and dotted line: B3(c3) results (only the exchange parts of the DFT functional were
+used)
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+169
+(see below), and plotted DE for 11 different B3LYP(c3) functionals, in which
+the c3 coefficient defining the percentage of exact exchange is varied from
+0–50% [24]. As can be seen, the dependence is almost linear, with increasing
+amounts of exact exchange progressively favouring the triplet more and
+more.
+A final, and remarkable, piece of evidence relating to Fe(CO)4 and show-
+ing the importance of the exchange functional in establishing the spin-state
+splitting is also shown in the Figure. We have calculated the spin-state ener-
+gy difference using modified B3LYP functionals, in which (a) the proportion
+of exact exchange was varied, and (b) the local and non-local correlation
+functionals were completely removed – only exchange contributions were in-
+cluded. These calculations actually give spin-state splittings which are only
+slightly more in favour of the triplet than with the full B3LYP(c3) function-
+als. Like the latter, though, the predicted energy difference is found to vary
+significantly depending on the proportion of exact exchange. Clearly, the
+meaning of “exchange” in DFT is quite different from that which it has in
+HF and post-HF theories: the HF spin-state splitting in this system is
+~38 kcal/mol [24], so the much lower values found for these “exchange
+only–B3LYP” functionals means that the exchange functional must intro-
+duce a description of some of what would be called correlation effects within
+wavefunction theory.
+In summary, Fe(CO)4 has a triplet ground state, with a closed-shell singlet
+lying slightly higher. The exact state splitting is unknown, but is likely to be
+between 4 and 8 kcal/mol. Pure DFT functionals (except RPBE) predict a
+state-splitting which is clearly too small, with the singlet lying ~1 kcal/mol
+above the triplet. Hybrid functionals predict a splitting which increases al-
+most linearly with the proportion of mixed-in exact exchange. In particular,
+functionals such as the popular B3LYP, with 20% exact exchange, seem to
+slightly overestimate the stability of the triplet, and better results seem to be
+obtained with functionals such as B3PW91*, which has a reduced 15% con-
+tribution from HF exchange.
+4.2.2
+Exact Exchange and Spin-State Splitting: Other Observations
+The observations summarised at the end of the previous section, and drawn
+from our own work [24, 36], have in fact been made by several other authors
+both previous to and in parallel with our work. The most systematic study,
+to which we have already briefly alluded, is that of Reiher et al [39]. These
+authors started out by studying a set of bridged dithiolate Fe(II) complexes,
+shown in Fig. 6. The spin multiplicity of the ground state of these com-
+pounds was known experimentally. The authors found that use of the BP86
+functional wrongly predicted that some high-spin (S=2) compounds should
+have a lower-lying low-spin (S=0) state, whereas use of the B3LYP functional
+170
+J.N. Harvey
+led to the opposite problem: some low-spin species were predicted to have
+high-spin ground states.
+The authors went on [39] to study the effect on the spin-state splitting for
+each of the compounds of using a range of hybrid functionals based on
+B3LYP but with a systematically varied proportion of exact exchange. They
+found an almost exactly linear dependence, as shown in Fig. 7. Note that the
+slope of the lines relating spin-splitting to exchange is rather large – changes
+in relative energetics of more than 25 kcal/mol (100 kJ/mol) are observed
+upon going from pure functionals to those with 20% of exact exchange. This
+effect is clearly not a small one that can be ignored in all but the most quan-
+titatively-focused studies! Values of between 10–15% define a so-called “op-
+timum” region, within which the correct ground-state is predicted for all the
+compounds studied. With either lower or higher amounts of exchange, at
+least some of the predicted ground states were wrong. Accordingly, the au-
+Fig. 6 Fe(II) compounds studied by Reiher et al [39]. Reproduced with permission from
+[39]
+Fig. 7 Computed spin-state splittings ELS/HS for the compounds of Fig. 6 [39], as a func-
+tion of the proportion of exact exchange. Reproduced with permission from [39]
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+171
+thors proposed [39] the use of a modified B3LYP functional, with 15% exact
+exchange (c3=0.15 instead of 0.20), which they refer to as B3LYP*.
+In subsequent work, Reiher et al have tested the performance of this
+B3LYP* functional much more widely [40]. First, they found that the agree-
+ment with experiment for the set of atomization and ionization energies and
+of electron affinities for the main-group molecules contained in the G2 test
+set is not appreciably worse with B3LYP* compared to B3LYP. Next, they ex-
+plored the dependence of spin-state splitting on the c3 coefficient for differ-
+ent spin states of metallocenes M(C5H5)2 (M=Ti, V, Cr, Mn, Fe, Co, Ni) and
+of bis-benzene complexes, M(C6H6)2 (M=Ti, V, Cr, Fe, Co), Mn(C6H6)2
++ and
+Ni(C6H6)2
+2+. As for the Fe(II) complexes discussed in their previous paper,
+most of these species showed a relative stabilization of the high-spin state
+upon increasing the amount of exact exchange. The authors draw particular
+attention to the cases of manganocene (Mn(C5H5)2) and cobaltocene
+(Co(C5H5)2). Experimentally, the first of these has a sextet ground state
+whereas the second is a doublet. Agreement with experiment is only found
+for c3 values larger than 14% and smaller than 22%. This interval overlaps
+in a small region with that found in their earlier study, and reinforces their
+recommendation that B3LYP* should be a more accurate functional for de-
+scribing spin-state splitting than B3LYP itself, and is much more accurate
+than “pure” density functionals.
+This observation is informally supported by work from other groups. For
+example, the mechanism of the bis(imino)pyridyl iron(II) catalyzed poly-
+merization of alkenes has been of considerable interest, and two major com-
+putational studies have appeared on this topic [41, 42]. Both studies have ad-
+dressed parts of the singlet, triplet, and quintet potential energy surfaces rel-
+evant to the individual steps in propagation and termination. Figure 8 shows
+the catalyst system. The second study [42] has mostly used the B3LYP hy-
+brid functional, and includes a critical and comparative review of differ-
+ences with the first study [41], which used the pure BP86 functional. The
+studies address large molecules and to do so treat them using a mixed quan-
+tum-mechanical/molecular mechanics (QM/MM) method. As well as differ-
+ing in the choice of functional, the two studies also use different computer
+Fig. 8 Generic structure of the bis(imino)pyridyl iron(II) catalyst system studied in [41,
+42]
+172
+J.N. Harvey
+programs, and different MM force-fields, so that straightforward compari-
+son is not possible. Nevertheless, spin-state splitting for a number of inter-
+mediates are systematically and significantly (10 kcal/mol) more in favour of
+the high-spin state in the B3LYP study than in the BP86 study. In the supple-
+mentary material of [42], the authors report the results of calculations using
+both functionals, with the same basis set, for a small, QM-only, model di-
+chloride system (Fig. 8, R=R0=H, X=Y=Cl). This enables a consistent com-
+parison of energetics. BP86 predicts that quintet and triplet should be de-
+generate, with the singlet 3 kcal/mol higher. B3LYP gives relative energies of
+0.0, 13.3 and 21.3 for quintet, triplet and singlet. As the full dichloride spe-
+cies (R0=bulky aryl group) is experimentally known to be a quintet, the au-
+thors note that B3LYP appears to describe spin-state energetics in this sys-
+tem more accurately than BP86.
+In a related study on cobalt(II) bis(imino)pyridyl catalyzed polymeriza-
+tion [43], Margl et al have likewise compared the behaviour of BP86 and
+B3LYP for a number of species on the catalytic cycle. Their results (also pre-
+sented in the Supplementary Material of their paper [43]) show that the
+spin-state splitting between doublet and quartet states is ~25 kcal/mol more
+in favour of the quartet with the hybrid B3LYP functional than with BP86.
+As in the iron case, the B3LYP result is in somewhat better agreement with
+experiment than the BP86 one, with respect to spin-state splitting, as it cor-
+rectly predicts the quartet ground state of the catalyst precursor, whereas
+BP86 predicts a doublet ground state.
+In brief, there is lots of other evidence in the literature that hybrid func-
+tionals favour high-spin states:
+– Ghosh and Taylor have calculated a 4 kcal/mol lower energy difference with
+BP86 than with B3LYP between the sextet ground state and lowest quartet
+excited state of the hexa-solvated iron(III) ion, Fe(H2O)6
+3+ [44].
+– Scherlis and Estrin [45] have compared HF, BP86, BLYP, B3LYP, and
+BHandHLYP calculations on iron atoms and iron-porphyrin systems, and
+found that the pure functionals overestimate the stability of low-spin states,
+whereas HF favours the high-spin states.
+– Several groups have studied the energy difference between low-spin
+and high-spin forms of so-called “spin-crossover” compounds such as
+Fe(phen)2(NCS)2 [46, 47], Fe(tpen)2+ (tpen=tetrakis(2-pyridylmethyl)-ethyl-
+enediamine) [48, 49], and others [46], using different functionals. The ener-
+gy difference is best described by B3LYP* [47], then by hybrid functionals,
+with pure functionals favouring the low-spin form.
+– The energetics of the low-, intermediate-, and high-spin states of the
+key species on the potential energy surface for oxidation of alkenes by
+Mn(salen) (and the related chromium species [50]) complexes have received
+considerable attention, following the suggestion [51] by Linde et al that
+spin-state changes play an important role in the diastereoselectivity of this
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+173
+important synthetic transformation. The key manganese oxo intermediate,
+formally with an Mn(V) centre, has close-lying singlet, triplet and quintet
+states [52–54]. Calculations on a simple model compound, shown in Fig. 9,
+lead to very different relative energetics for these states. Thus, most func-
+tionals predict similar energies for the singlet and triplet states, but hybrid
+functionals place the quintet state close in energy as well, whereas with pure
+functionals it lies ~15 kcal/mol higher.
+For this system, there is a complicating factor which is not always proper-
+ly taken into account when discussing spin-state energetics: the manganese
+oxo species does not really belong to type A in the classification shown in
+Fig. 1, because the unpaired electrons in the different spin states are not
+purely located on the metal. Significant spin-contamination in the triplet
+[53] is inconsistent with it being described purely as a Mn(V) centre with
+two unpaired electrons, bearing an oxo (2) ligand. Instead, it must be de-
+scribed as a mixture between this “oxo” structure, and an “oxy” resonance
+form. The latter involves a high-spin Mn(IV) centre, with three unpaired
+electrons contributing an overall 3/2 spin angular momentum, low-spin cou-
+pled to an oxy radical doublet. In this picture, there are four unpaired elec-
+trons, one of which is not on the metal! The quintet corresponds to a high-
+spin coupling of the Mn(IV) and oxy radical spins. The change from singlet
+to triplet therefore involves some redox changes as well as a change in spin
+on the metal, and the change from triplet to quintet involves some redox
+change, and a change in the relative alignment of the spin contributed by
+two different parts of the molecule – as in case C of Fig. 1. This is a very dif-
+ferent situation to that found in systems such as the Fe(II) or Co(II) com-
+plexes, in which the different spin states do mostly arise as a consequence of
+different spin-pairing on the metal centre itself. It is not clear that spin-state
+splittings in borderline case C systems will follow the same trends as normal
+case A compounds.
+– In their study of the spin-forbidden addition reactions of CO and N2 to the
+16-electron spin-triplet Cp*MoCl(PMe3)2, Jensen and Poli calculated the en-
+ergy difference between the triplet ground state and lowest singlet excited
+state of the fragment using both B3LYP and BPW91 functionals, as well as
+various wavefunction methods [55]. The HF method gave a large splitting,
+Fig. 9 Model system used to study spin-state splittings and reactivity in Mn(salen) oxida-
+tion
+174
+J.N. Harvey
+of 19.5 kcal/mol, B3LYP gave a much reduced energy difference of 5.6 kcal/
+mol, and the pure functional gave a still smaller 2.9 kcal/mol.
+– As a part of their attempt to evaluate the capability of the PM3 semiempiri-
+cal method to correctly predict the correct spin state of technetium com-
+plexes, Ball et al [56] compared spin-state splittings computed for several of
+the target compounds with four different functionals, BP86, BLYP, B3P86
+and B3LYP. Singlet-triplet or doublet-quartet splittings were typically
+3–5 kcal/mol more in favour of the singlet with the pure functionals than
+with the hybrid ones, with still larger effects for the singlet-quintet or dou-
+blet-sextet energy differences.
+It is perhaps worth noting in the context of these last two examples that
+the effect of exact exchange on spin-state splitting is apparently much small-
+er for complexes of the second-row TM elements. The cobalt and iron exam-
+ples given earlier lead to differences of up to 20 kcal/mol or more between
+spin-state splittings computed using standard pure (BP86) and hybrid
+(B3LYP) functionals. The differences in the case of the molybdenum and
+technetium compounds are much smaller. This is not limited to early sec-
+ond-row elements or indeed to the second row, as shown in Table 4, in which
+we report computed spin-state splitting for the second- and third-row ana-
+logues of Fe(CO)4, Ru(CO)4 and Os(CO)4, obtained with a similar basis set
+and a similar range of functionals to that used for Fe(CO)4 (Table 3, [36]).
+Note that spin-orbit coupling – not included in the computations – may af-
+fect the energy of the “triplet” state of these heavy species, especially the Os-
+mium complex.
+These 16-electron species adopt rather similar geometries to the corre-
+sponding spin-states of Fe(CO)4, but unlike for the latter, the singlet is pre-
+dicted to be the ground state at all levels (except HF for Os(CO)4). This is
+Table 4 DFT spin-state splitting DE(1,3) between
+3B1 and
+1A1 states of Ru(CO)4 and
+Os(CO)4, in kcal/mol; the negative values correspond to singlet ground states (from [24]).
+Calculated using a 6–31G* basis on C and O, LACV3P on Ru or Os, at the B3LYP/6–31G*
+geometry. Does not include a correction for zero-point energy
+DFT
+DE(1,3) Ru
+DE(1,3) Os
+LDA
+21.4
+17.8
+BP86
+17.7
+15.9
+BLYP
+18.5
+17.7
+PW91
+17.9
+15.7
+B3LYP
+16.7
+14.7
+B3PW91
+15.6
+12.6
+B1LYP
+15.8
+13.8
+BHandHLYP
+13.0
+9.8
+KMLYP
+14.0
+9.0
+HF
+0.3
+5.8
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+175
+basically due to the larger spatial extent of the 4d and 5d orbitals, and hence
+to better bonding interactions with the ligands, a large d orbital splitting,
+and decreased d-d Coulombic repulsion. As can be seen in the Table, for
+these species, the computed spin-state splitting varies by only 5.5 and
+6.1 kcal/mol, respectively, between the pure BLYP functional and the
+BHandHLYP functional, which includes a very large amount, 50%, of exact
+exchange. For a similar pair of functionals, BLYP and KMLYP, the spin-state
+splitting of Fe(CO)4 changes by over 20 kcal/mol. Nevertheless, the overall
+trend remains that the high-spin state is favoured upon mixing in increasing
+amounts of HF exchange.
+5
+Discussion
+The above examples show that there is abundant evidence in the literature
+that mixing in of HF exact exchange can lead to dramatic changes in spin-
+state splittings of TM complexes as compared to results obtained using pure
+functionals. The energy effect depends approximately linearly upon the pro-
+portion of exact exchange, and leads to the stabilisation of the high-spin
+state (or destabilisation of the low-spin state). It is particularly strong for
+first-row transition metals.
+The most usual interpretation provided for this effect is implicit in our
+introduction on HF and DFT methods: HF accounts for the Fermi hole cor-
+relation effect between electrons of same spin, but does not describe the
+more general (Coulomb hole-derived) correlation between electron motion.
+It therefore over-stabilises high-spin states. In contrast, pure DFT often over-
+stabilises low-spin states. Note that the reason for this is not clear, and none
+is usually given when this point is being discussed, but it is a fairly common
+observation. Taken together, these two trends mean that mixing in HF ex-
+change terms in the DFT functional will lead to error compensation, or to a
+more accurate functional, depending on the point of view. From the prag-
+matic point of view, this point of view seems acceptable at first sight: if, for a
+given compound, spin-state splitting depends strongly on exact exchange
+admixture, and pure functionals overstabilise the low-spin form whereas HF
+overestimates the high-spin form, then adjusting the amount of exact ex-
+change should enable parameterisation of a functional which gives good
+agreement with experiment for that system.
+However, this account does raise a number of issues, concerning transfer-
+ability (or universality), calibration, the role of exchange functionals in pure
+DFT, and the self-interaction error.
+Transferability is in some ways a double problem. The first of these re-
+lates to whether an optimised exact exchange contribution able to reproduce
+spin-state splittings in a given compound or class of compounds will repro-
+176
+J.N. Harvey
+duce them equally well for other compounds. The second is whether the pre-
+ferred value for the exact exchange contribution is able to give accurate pre-
+dictions for other properties.
+Taking the second problem first, Reiher et al [40] have found that chang-
+ing the proportion of exact exchange from 0.20 to 0.15, whilst greatly im-
+proving the predicted spin-state splittings for some compounds, has only a
+small effect on the computed thermochemistry of main group compounds.
+The resulting B3LYP* functional yields results on the G2 thermochemical
+test set which are of very similar quality to those obtained with B3LYP itself.
+In other words, energetics for many main-group compounds are sufficiently
+insensitive to exact exchange that this can be modified slightly in order to
+improve behaviour for TM spin-state splitting. However, large changes are
+impossible because this would lead to inferior results – the mixing ratio was
+optimised to 20% by fitting to thermochemical data for a large number of
+main group compounds. It is the consequent superior thermochemical be-
+haviour compared to pure functionals which is, after all, the main reason
+why B3LYP has become so popular.
+Speaking more generally, though, it does not appear that all properties
+are well computed by functionals with a proportion of exact exchange simi-
+lar to B3LYP or B3LYP*. In transition metals, it has been shown [57] that
+both pure functionals and hybrid functionals with a moderate amount of ex-
+act exchange, such as B3LYP, provide a description of bonding in Cu(II)
+complexes such as CuCl4
+ which is too covalent. The authors of this study
+found that increasing the admixture of exact exchange to 38% produced a
+better account of the bonding. Equally, the barrier heights of many simple
+reactions are poorly described by B3LYP, and it is found empirically that
+better agreement with experiment is obtained only upon mixing in very high
+(~50%) proportions of exact exchange (see for example [37, 38]). As shown
+in Tables 3 and 4, and elsewhere by Reiher et al [39, 40], such HF exchange-
+rich functionals give very poor spin-state splittings. Other researchers have
+varied the degree of exact exchange and studied other properties. For exam-
+ple, Tozer et al find that a c3 coefficient of between 0.2 and 0.3 yields the best
+agreement with experiment for the prediction of magnetic resonance shield-
+ing tensors [58]. In fact, as discussed below, there is no real reason why
+there should be a single “best” value of the coefficient for exact exchange ad-
+mixture, which yields perfect results for all properties, and the empirical ev-
+idence suggests that there is indeed no such value.
+In fact, we believe there is some evidence that spin-state splittings, in at
+least some cases, are reproduced best by functionals with a very different
+proportion of exact exchange. Thus, in the CpCo(CO) 16-electron system, all
+ab initio methods and DFT functionals predict a triplet ground state, with a
+singlet excited state [59]. In recent calculations on this system [60], we have
+found a strong dependence of the spin-state splitting on the proportion of
+exact exchange included in the functional. Thus, with the B3LYP functional,
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+177
+the difference is of 25.7 kcal/mol, whereas with BP86, the splitting is as small
+as 14.9 kcal/mol. We have carried out CCSD(T) calculations on this system,
+using very large basis sets on the cobalt atom (quadruple zeta, with 3f, 2g
+and 1h polarization functions). At this level, the splitting is of 15.4 kcal/mol
+– much closer to the BP86 value than to the B3LYP one. In this system, if the
+CCSD(T) result is reliable, then the optimum exchange energy mixing is
+clearly of the order of 0%, not 20 or indeed 15%. That being said, the accu-
+racy of single-reference treatments of first-row transition metal systems is
+much disputed. In some recent work [36], we have argued that these meth-
+ods should in fact be quite accurate, even when, as here, fairly large t1 diag-
+nostic values [61] of ~0.05 are obtained. However, given that this assessment
+of the reliability of the CCSD(T) method is still the subject of much discus-
+sion (see [62] for instance), and given that this appears to be one of the only
+cases where pure functionals appear to behave better than those with signif-
+icant admixture of exact exchange, it is maybe prudent to reserve judgement
+until more evidence is available.
+The previous paragraph serves to highlight a very important point for the
+whole area of prediction of spin-state splittings in TM compounds, that of
+calibration: to reach some level of confidence that a given functional pre-
+dicts spin-state splittings accurately, one needs to know what the true split-
+tings are. This is not as straightforward as it sounds. First, for main-group
+systems containing relatively few atoms, it is possible to refer DFT calcula-
+tions to the results obtained from highly accurate computational calibration.
+For example, composite calculations using methods such as the popular G2
+or G3 approaches [63, 64], or simply very large basis-set CCSD(T) or MR-CI
+computations, can be carried out in such a way as to reach chemical (1 kcal/
+mol) accuracy. The above discussion of our CCSD(T) computations on
+CpCo(CO) [60] shows that reaching that level of accuracy is still elusive for
+many TM compounds. As well as all of the intrinsic difficulties in accounting
+for the complex electronic structure of d elements, this is due to the fact that
+even small TM compounds are quite large by the standards of accurate ab
+initio computations if, that is, they are realistic in the sense of having a
+near-complete coordination sphere: CpCo(CO) has 8 heavy (non-hydrogen)
+atoms. Much work is currently being done to try and reach a better degree
+of accuracy in treating spin-state splittings in TM complexes using ab initio
+methods (see [36, 65–67] for example), but this is still very difficult, so that
+routine calibration of DFT by ab initio methods is not really possible for the
+present problem.
+The other approach to calibration, by comparison with experimental data,
+also presents difficulties. Here, the problem is in ensuring that the calcula-
+tions relate correctly to the experiment, which, in this field, most frequently
+refers to finite-temperature free energy differences in the condensed phase.
+As well as obtaining accurate electronic energy differences, therefore, zero-
+point energy (zpe), thermal or enthalpic (H), entropic (S), and medium ef-
+178
+J.N. Harvey
+fects need to be computed or at least accounted for in some way so as to
+make a comparison. For TM compounds, scalar relativistic and spin-orbit
+coupling effects on the electronic energies are needed. The second of these
+in particular can be fairly large (a few kcal/mol) and is not trivial to com-
+pute. Computation of vibrational frequencies enables a reasonable approxi-
+mation to the zpe, H and S terms to be computed using the standard expres-
+sions of statistical thermodynamics. However, for realistic TM complexes,
+this procedure is less accurate than for small closed-shell species, as one
+may have multiple minima, floppy (highly anharmonic) potential energy
+surfaces, and so on. Finally, medium effects can be important. Using a con-
+tinuum solvation model, it has been found [68] that the spin-state splitting
+in various Co(L)6
+3+ species (L=H2O or NH3) can differ by up to 5 kcal/mol
+in the gas-phase and in solution. Clearly, if such effects are general, “agree-
+ment with experiment” for a gas-phase calculation would be undesirable! To
+take another example, the calculations on Mn(C5H5)2 mentioned above [40]
+were carried out in the gas-phase, yet the experimental spin-state splitting
+refers to the solid phase, in which manganocene adopts a polymeric struc-
+ture, with significant inter-complex interaction, which will almost certainly
+affect the spin-state splitting to a significant extent. Here too, the exact cor-
+respondence between experiment and theory is thus not straightforward.
+A final question concerns the interpretation of the observation that exact
+exchange admixture affects spin-state splittings. Why does it do this? What
+does this tell us about pure and hybrid functionals? What does it suggest for
+future functional development? The first fairly obvious point to be made is
+that pure density functionals do not appear to describe exchange interactions
+correctly in many cases. The evidence described above, whereby pure DFTs
+often exaggerate the stability of low-spin states compared to experiment, is
+so wide-ranging that it is not possible that this is due in each case to prob-
+lems with interpretation of the calculations. It is in a sense no surprise that
+the simple, local, expressions used to evaluate exchange energy are unable to
+capture the complex nature of this phenomenon in all cases. However, for
+many main-group compounds, the problem does not appear to be a big one
+– fairly accurate energetics are obtained in many cases, and indeed spin-state
+splittings are also fairly reliable as shown by Tables 1 and 2.
+From this point of view, the improvement of the description upon using
+hybrid functionals can be described as resulting from a fortunate cancella-
+tion of errors. However, it could be argued that this cancellation is not pure-
+ly accidental, or at least that it can be partly expected on other theoretical
+grounds.
+First, it is by now well-known that the poor cancellation of electron self-
+interaction in DFT can lead to a substantial error in the energy of d orbitals
+(see [69] and references therein). Self-interaction corrected DFT leads to
+much improved results for such systems. This has mostly been noticed in
+the context of periodic studies of metal oxides such as ZnO. Ziegler has
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+179
+pointed out [70] that the wrong electronic structure obtained for CuCl4
+
+with pure DFT functionals [57] is due to self-interaction errors that affect
+the energies of the d orbitals. The same author has shown recently [71] that
+the treatment of a number of transition states, such as that of the simple
+H+H2 system, is much improved upon using self-interaction corrected DFT,
+and stated that self-interaction errors affect spin-state splittings in TM com-
+pounds [70].
+Next, it is observed in other contexts that properties whose calculated val-
+ues are strongly affected by the self-interaction error are improved upon
+mixing in progressively more HF exact exchange. The best example here is
+the same energy barriers for hydrogen atom abstraction reactions, whose
+treatment is improved with pure, but self-interaction corrected, DFTs [71]. It
+is well-known [37, 38] that they are poorly described by pure functionals,
+and that large (~50%) amounts of exact exchange are needed by functionals
+to generate accurate barrier heights.
+Finally, in careful comparative studies of the molecular electron densities
+generated by HF, correlated ab initio, and pure, self-interaction corrected,
+and hybrid DFT calculations, Cremer et al have made a very interesting ob-
+servation [72, 73]. They found that the pure DFT generated densities dif-
+fered from those obtained with accurate ab initio methods in a particular
+way, and that both hybrid, and self-interaction corrected DFT methods,
+yielded densities closer to the correct ones. Based on this observation, they
+suggested that mixing in of exact exchange in hybrid functionals serves as a
+proxy for the self-interaction correction.
+Based on these three points, it appears consistent with all of these obser-
+vations that self-interaction errors mean that pure DFT gives a poor descrip-
+tion of d orbital levels and so of spin-state splittings, and that like in other
+cases, exact exchange mixing can correct this error, by serving as an effec-
+tive self-interaction correction. In this picture, the amount of exact exchange
+needed to correct the self-interaction error might well vary depending on
+the severity of this problem, and there would be no reason to expect system-
+atic behaviour. Instead, one might think that accurate and reliable spin-state
+splittings could only be obtained for TM compounds with a new generation
+of functionals developed to be self-interaction error free from the start.
+However, this argument certainly cannot yet prove that different amounts
+of HF exchange will be needed for different metal complexes. In fact, there
+is a considerable amount of evidence that for many compounds, an exact ex-
+change proportion of roughly 15% gives good results. From a pragmatic
+point of view, therefore, the use of such modified functionals must be rec-
+ommended at present, until more calculations, better calibration, and a
+deeper understanding of DFT performance in this area are available.
+180
+J.N. Harvey
+6
+Conclusions
+In conclusion, DFT methods must be used with caution when attempting to
+predict the spin-state splitting between TM compounds. Large variations, of
+20 kcal/mol or more, have been observed between computed splittings using
+different DFT functionals. This effect is particularly strong for first-row TM
+systems, which are unfortunately those that most often display high-spin
+states! In general, “pure” DFTs tend to overestimate the stability of low-spin
+forms, and results obtained using such functionals must therefore be treated
+with great suspicion. Including HF exact exchange leads to an improved be-
+haviour in many cases, and an optimum spin-state mixing of roughly 15%
+has been proposed [39, 40], which, based on current knowledge, seems to
+yield very good results.
+Nevertheless, there are still considerable uncertainties about the generali-
+ty of this observation. First, accurate calibration is difficult for TM com-
+pounds, so that it may be hard to be certain what the “correct” value is, let
+alone whether a given functional reproduces it! Next, a theoretical analysis
+suggests that the strong dependence of state-splittings on exact exchange ad-
+mixture may result from the occurrence of significant self-interaction errors
+when using pure functionals. This analysis also invites great care in assum-
+ing that a single “best” value for exact exchange admixture can be found. In-
+deed, problems with self-interaction errors arise in other areas when using
+DFT, and can also be partially dealt with by the use of exact exchange. How-
+ever, the optimum mixing in such cases is not always close to the 15% sug-
+gested to prevail for metal complexes. Clearly, DFT can be an inexpensive
+and useful aide for assessing spin-states of TM compounds, but much work
+is needed to develop new and more reliable functionals before DFT can be
+trusted to yield accurate spin-state energetics in the kind of “black-box”
+way in which B3LYP is often used nowadays.
+In the meantime, computational chemists working in the area are recom-
+mended to compute spin-state splittings of importance to their particular
+theoretical project using several different functionals, including at least one
+pure functional, and one hybrid one. If large differences are found, results
+must be interpreted with care, and computations using hybrid functionals
+with ~15% exact exchange are recommended as giving the best current per-
+formance for these problems.
+Acknowledgements Dr. F. R. Manby is thanked for helpful comments. JNH is an EPSRC
+advanced research fellow.
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+181
+References
+1. Poli R (1996) Chem Rev 96:2135
+2. Harvey JN (2001) In: Cundari TR (ed) Computational organometallic chemistry. Mar-
+cel Dekker, New York
+3. Poli R, Harvey JN (2003) Chem Soc Rev 32:1
+4. Harvey JN, Poli R, Smith KM (2003) Coord Chem Rev 238:347
+5. Illas F, Moreira IDR, de Graaf C, Barone V (2000) Theor Chem Acc 104:265
+6. Ruiz E, Rodriguez-Fortea A, Cano J, Alvarez S, Alemany P (2003) J Comput Chem
+24:982
+7. Ciofini I, Daul CA (2003) Coord Chem Rev 238:187
+8. Filatov M, Harris N, Shaik S (1999) Angew Chem Int Edit 38:3510
+9. Jensen F (1999) Introduction to computational chemistry. Wiley, Chichester, UK
+10. Siegbahn PEM (1996) In: Prigogine I, Rice SA (eds) Advances in chemical physics,
+Vol XCIII, Wiley, New York, p 333
+11. Koch W, Holthausen MC (2001) A chemists guide to density functional theory.
+Wiley-VCH, Weinheim
+12. Perdew JP, Chevary JA, Vosko SH, Jackson KA, Pederson MR, Singh DJ, Fiolhais C
+(1992) Phys Rev B 46:6671
+13. Boese AD, Doltsinis NL, Handy NC, Sprik M (2000) J Chem Phys 112:1670
+14. Hammer B, Hansen LB, Norskov JK (1999) Phys Rev B 59:7413
+15. Becke AD (1988) Phys Rev A 38:3098
+16. Gill PMW (1996) Mol Phys 89:433
+17. Perdew JP (1986) Phys Rev B 33:8822
+18. Lee CT, Yang WT, Parr RG (1988) Phys Rev B 37:785
+19. Becke AD (1993) J Chem Phys 98:1372
+20. Becke AD (1993) J Chem Phys 98:5648
+21. Bauschlicher CW, Partridge H (1995) J Chem Phys 103:1788
+22. Scott AP, Platz MS, Radom L (2001) J Am Chem Soc 123:6069
+23. Worthington SE, Cramer CJ (1997) J Phys Org Chem 10:755
+24. Harvey JN (unpublished work)
+25. Baerends EJ, Branchadell V, Sodupe M (1997) Chem Phys Lett 265:481
+26. Mineva T, Goursot A, Daul C (2001) Chem Phys Lett 350:147
+27. Weinert M, Watson RE, Fernando GW (2002) Phys Rev A 66:032508
+28. Markovits A, Paniagua JC, Lopez N, Minot C, Illas F (2003) Phys Rev B 67:115417
+29. Daniel C, Benard M, Dedieu A, Wiest R, Veillard A (1984) J Phys Chem 88:4805
+30. Barnes LA, Rosi M, Bauschlicher CW (1991) J Chem Phys 94:2031
+31. Delley B, Wrinn M, Luthi HP (1994) J Chem Phys 100:5785
+32. Wang WH, Weitz E (1997) J Phys Chem A 101:2358
+33. Decker SA, Klobukowski M (1998) J Am Chem Soc 120:9342
+34. Gonzalez-Blanco O, Branchadell V (1999) J Chem Phys 110:778
+35. Matveev A, Staufer M, Mayer M, Rosch N (1999) Int J Quantum Chem 75:863
+36. Harvey JN, Aschi M (2003) Faraday Discuss 124:129
+37. Kang JK, Musgrave CB (2001) J Chem Phys 115:11040
+38. Lynch BJ, Fast PL, Harris M, Truhlar DG (2000) J Phys Chem A 104:4811
+39. Reiher M, Salomon O, Hess BA (2001) Theor Chem Acc 107:48
+40. Salomon O, Reiher M, Hess BA (2002) J Chem Phys 117:4729
+41. Deng LQ, Margl P, Ziegler T (1999) J Am Chem Soc 121:6479
+42. Khoroshun DV, Musaev DG, Vreven T, Morokuma K (2001) Organometallics 20:2007
+43. Margl P, Deng LQ, Ziegler T (1999) Organometallics 18:5701
+182
+J.N. Harvey
+44. Ghosh A, Taylor PR (2003) Curr Opin Chem Biol 7:113
+45. Scherlis DA, Estrin DA (2002) Int J Quantum Chem 87:158
+46. Paulsen H, Duelund L, Winkler H, Toftlund H, Trautwein HX (2001) Inorg Chem
+40:2201
+47. Reiher M (2002) Inorg Chem 41:6928
+48. Chen GJ, Espinosa-Perez G, Zentella-Dehesa A, Silaghi-Dumitrescu I, Lara-Ochoa F
+(2000) Inorg Chem 39:3440
+49. Chen GJ, Liu RZ, Silaghi-Dumitrescu I, Espinosa-Perez G, Zentella-Dehesa A, Lara-
+Ochoa F (2001) Int J Quantum Chem 83:60
+50. Brandt P, Norrby PO, Daly AM, Gilheany DG (2002) Chem-Eur J 8:4299
+51. Linde C, Akermark B, Norrby PO, Svensson M (1999) J Am Chem Soc 121:5083
+52. Abashkin YG, Collins JR, Burt SK (2001) Inorg Chem 40:4040
+53. Khavrutskii IV, Musaev DG, Morokuma K (2003) Inorg Chem 42:2606
+54. Cavallo L, Jacobsen H (2003) J Phys Chem A 107:5466
+55. Jensen VR, Poli R (2003) J Phys Chem A 107:1424
+56. Ball DM, Buda C, Gillespie AM, White DP, Cundari TR (2002) Inorg Chem 41:152
+57. Szilagyi RK, Metz M, Solomon EI (2002) J Phys Chem A 106:2994
+58. Wilson PJ, Tozer DJ (2002) J Chem Phys 116:10139
+59. Siegbahn PEM (1996) J Am Chem Soc 118:1487
+60. Carron-Macedo J-L, Harvey JN (2004) J Am Chem Soc 126:5789
+61. Lee TJ, Taylor PR (1989) Int J Quantum Chem, Quantum Chem Symp 23:199
+62. Gagliardi L, Ziegler, Neville S, Garner, Green, Harvey, Eisenstein, Bursten, Kaltsoyan-
+nis, Macgregor, Perutz (2003) Faraday Discuss 124:145
+63. Curtiss LA, Raghavachari K, Redfern PC, Rassolov V, Pople JA (1998) J Chem Phys
+109:7764
+64. Curtiss LA, Raghavachari K (2002) Theor Chem Acc 108:61
+65. Pierloot K (2003) Mol Phys 101:2083
+66. Roos BO, Widmark PO, Gagliardi L (2003) Faraday Discuss 124:57
+67. Jensen VR, Thiel W (2001) Organometallics 20:4852
+68. Schmiedekamp AM, Ryan MD, Deeth RJ (2002) Inorg Chem 41:5733
+69. Meyer B, Marx D (2003) Phys Rev B 67:035403
+70. Ziegler T (2003) Faraday Discuss 124:287
+71. Patchkovskii S, Ziegler T (2002) J Chem Phys 116:7806
+72. Cremer D (2001) Mol Phys 99:1899
+73. Polo V, Kraka E, Cremer D (2002) Mol Phys 100:1771
+DFT Computation of Relative Spin-State Energetics of Transition Metal Compounds
+183

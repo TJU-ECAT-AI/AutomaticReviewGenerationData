@@ -1,0 +1,142 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+data analysis 322
+# 2001 International Union of Crystallography
+Printed in Great Britain  all rights reserved
+J. Synchrotron Rad. (2001). 8, 322324
+J. Synchrotron Rad.
+IFEFFIT: Interactive XAFS Analysis and
+FEFF Fitting Matthew Newville* Consortium for Advanced Radiation Sources, The University of Chicago, 5640 S Ellis Ave, Chicago, IL 60637, USA.
+E-mail: newville@cars.uchicago.edu IFEFFIT, an interactive program and scriptable library of XAFS al- gorithms is presented. The core algorithms of AUTOBK and FEFFIT have been combined with general data manipulation and interactive graphics into a single package. IFEFFIT comes with a command-line program that can be run either interactively or in batch-mode. It also provides a library of functions that can be used easily from C or For- tran, as well as high level scripting languages such as Tcl, Perl and Python. Using this library, a Graphical User Interface for rapid on- line data analysis is demonstrated. IFEFFIT is freely available with an Open Source license. Outside use, development, and contribu- tions are encouraged.
+Keywords: XAFS Analysis.
+1. Introduction
+The availability of high-quality and easy-to-use programs for data analysis is of primary importance for beamlines and practition- ers of XAFS. As Dimakis and Bunker wrote in 1999(Dimakis & Bunker, 1999), describing their APEX program: There has long been a need for a basic set of x-ray absorption fine-structure analysis (XAFS) programs that are freely available, including source code; that runs on all major operating systems; is readily exten- sible; is easy to use for beginners; and is a useful tool for experts.
+This is an ambitious set of requirements, but certainly achievable,as Dimakis and Bunker have shown with their wrapper for the freely available batch-processing UW/NRL Fortran programs.
+In addition to the requirements that Dimakis and Bunker set, I would also add: the use of robust EXAFS analysis procedures,and a facility for users to write macros, scripts, or even programs of varying levels of sophistication for repetitious analysis tasks.
+The need for form-based Graphical User Interfaces (GUIs) to oth- erwise complex EXAFS analysis procedures is probably obvious to the reader, as is the need for predictability, uniformity, and cor- rectness of the analysis procedures used. With the gravity of all of these lofty analytic, social, and programming goals in mind, I describe IFEFFIT, an attempt to bring interactivity, flexibility, and scripting capabilities to the AUTOBK(Newville et al., 1993) and FEFFIT(Newville et al., 1995) algorithms, and demonstrate its pro- grammability with a fledgling Graphical Interface, G.I.FEFFIT.
+2. Command Line Interface and Data Handling
+IFEFFIT is implemented as a programming library that provides an interactive session which is available either from within a calling program or directly to the user through a command-line interface.
+The session takes commands to read, write, and manipulate data as input as processes the data as requested. Though IFEFFIT is imple- mented as a program library, not as an executable program per se,a simple command-line-interface (CLI) is easily implemented and comes installed with the library. This CLI (simply called ifef- fit) serves as the most basic interface to the IFEFFIT library.
+The data manipulation capabilities of IFEFFIT include XAFS analysis procedures that implement the AUTOBK background- removal scheme, XAFS Fourier transforms, and modeling and fit- ting of XAFS data with FEFF(Zabinsky et al., 1995; Ankudinov & Rehr, 1997) calculations, based on the algorithms that make up
+FEFFIT. IFEFFIT also supports the plotting and simple algebraic ma-
+nipulation of data ( +,,,=, sin, cos, exp, etc.). This is a very different philosophy of data analysis than in the stand-alone AU- TOBK and FEFFIT programs which, when packaged as part of the UWXAFS Project(Stern et al., 1995), created a rigid and fixed for- mat of procedures and user-interaction for XAFS analysis.
+IFEFFIT provides the user with the ability to create, read, and write data into named program variables in the IFEFFIT session.
+Data for XAFS analysis is generally stored as one-dimensional arrays, and IFEFFIT supports and distinguishes data for arrays,scalars, and text strings. General mathematical manipulation of data is supported for arrays and scalars, so that it is trivial to do common tasks such as adding two arrays element-by-element or scaling every element of an array by a constant factor. Currently,input data is expected to be in simple ASCII text files with columns of data corresponding to one-dimensional arrays. IFEFFIT makes the reading and writing of data files to and from program variables very easy.
+The commands that IFEFFIT supports are a mixture of fairly high-level XAFS analysis commands and basic mathematical data processing. A complete listing is available on-line(Newville,2000b), and a partial listing of commands is given in table 1.
+Table 1 Summary of principle IFEFFIT commands and their meanings.
+Command Functionality read data read arrays from ASCII data file write data write arrays to ASCII data file set create or set the value of a variable show show the value of a variable plot plot x-y arrays pre edge XAFS pre-edge subtraction and normalization spline XAFS background subtraction (AUTOBK) fftf XAFS Fourier transform k
+! R
+fftr XAFS Fourier transform R ! k path Define FEFF path and Path Parameters ff2chi combine FEFF paths to (k ) feffit combine FEFF paths to best-fit (k ) data minimize general fitting of simple functions or combinations of data arrays.
+Because many commands are repeated for analysis of XAFS data, and because it is desirable to be able to apply identical pro- cedures for different sets of data, IFEFFIT has a simple facility for writing and saving macros of commands: multiple commands that are executed with a single user-defined macro name. A prim- itive method exists for substituting parameters in the macros, and for more sophisticated processing batch files or scripts written in high-level languages can be used.
+IFEFFIT uses the PGPLOT(Pearson, 1997) graphics library for plotting data. Currently, this library works well to produce plots for X Windows, in Postscript, and in GIF. This library has been ported to native Win32 systems, and IFEFFIT has had some success
+IFEFFIT: interactive XAFS analysis and FEFF
+tting
+J. Synchrotron Rad. (2001). 8, 322324
+Matthew Newville 323 data analysis using this port. IFEFFIT can also be built without built-in graphics from PGPLOT.
+3. Programmers Interface
+The IFEFFIT library is written in Fortran, and can be used from Fortran or C programs. Special attention has been given to ensure that this library can also be used from high-level scripting lan- guages such as Tcl(Ousterhout, 1994), Perl(Wall et al., 1997), and Python(von Rossum, 1995; Lutz & Ascher, 1999). All of these lan- guages execute directly from source code without an intermediate compilation step, run on Unix, Windows, and Macintosh systems,and are freely available. Scripts written for one operating system can usually be ported to other systems with minimal work. Such scripting languages are ideal for rapidly developing small scien- tific programs. As will be demonstrated in the next section, they can also be used for writing cross-platform GUIs.
+The application programmers interface to the IFEFFIT li- brary is very simple, and extensive programming experience is not required to use it. The IFEFFIT library provides 7 ba- sic functions, which give full access to an underlying IFEF- FIT session and its data from the calling program or script.
+The principle function in the library is ifeffit(), which ex- ecutes IFEFFIT command strings as if they were typed at the command-line. The remaining 6 functions provide mechanisms to move IFEFFITs three principle data types (scalar, array, and text string) from the IFEFFIT session directly to and from the calling program. These are get scalar(), get array(),get string(),put scalar(),put array(),and put string(). More detailed descriptions are available in the on-line documentation(Newville, 2000b).
+A simple example of using the IFEFFIT library from within an- other program would be to add AUTOBK background capabilities for data already existing in a program, such as a beam-line data acquisition program. Such a program might look like this (this ex- ample is in Python, as it is the most like pseudo-code of all the available languages), assuming that data for
+(E
+) exists in the ar- rays energy and mu data):#!/usr/bin/python ## load the ifeffit library from Ifeffit import * ##
+## process mu(E) --> energy and mu_data arrays
+ret1 = put_array(energy,dat.energy) ret2 = put_array(mu_data, dat.mu)
+## execute ifeffits spline command
+ifeffit(spline(dat.energy,dat.mu, rbkg=1.1 find_e0, kweight=1))
+## create k*chi(k) inside
+ifeffit ifeffit(set dat.chik = dat.k * dat.chi)
+## retrieve chi(k) and k*chi(k) from ifeffit
+k = get_array(dat.k) chi = get_array(dat.chi) chik = get_array(dat.chik) e0 = get_scalar(e0) step = get_scalar(edge_step)
+## print out data retrieved from ifeffit
+print "e0 = ", e0, " edge step = ", step print " chi(k) data has ", len(chi), " points." Figure 1 Example script using the IFEFFIT Python extension to perform a simple AUTOBK-like background subtraction. This example shows the execu- tion of IFEFFITs commands spline and set and also the passing back and forth of data from the script to the underlying IFEFFIT session with the put array, get array, and get scalar functions.
+4. G.I.FEFFIT: Graphical Interactive FEFFIT
+One of the most important aspects of the IFEFFIT programming li- brary is its ability to be called from high-level scripting languages.
+Such languages are excellent for rapid development of small to medium scientific applications, and often suitable for full appli- cations, especially when used as a wrapper or front-end to an un- derlying library. Moreover, such languages typically include sup- port for building graphical user interfaces. All three of the script- ing languages (Tcl, Perl, and Python) for which IFEFFIT currently has wrappers provide GUI toolkits for Windows and Unix systems.
+Both Tcl and Python also support GUIs on the Macintosh.
+Therefore, although IFEFFIT is not a GUI program itself, graph- ical form-based applications can be built fairly easily by combin- ing it with a high-level scripting language. As a demonstration of this ability, as a teaching tool, and as a quick on-line data anal- ysis system, G.I.FEFFIT has been written. While essentially an enhanced command-line program, G.I.FEFFIT provides graphical forms to assist common analysis tasks such as reading and writ- ing data files, plotting arrays, and simple XAFS analysis tasks like pre-edge subtraction, normalization, post-edge background re- moval and Fourier transforms. G.I.FEFFIT is still in development.
+At this writing it does not have a complete form-based interface to FEFFIT-type fitting of XAFS data, but it is an easy-to-use, flexible program for simple data processing, plotting, background subtrac- tion, and Fourier transforms. G.I.FEFFIT is written in Python, and has been written and tested on linux and other Unix systems using X Windows. A port to Windows is in progress. Figs 2, 3, and 4 show example forms from G.I.FEFFIT, and Fig. 5 shows an exam- ple plot of data resulting from the background removal window.
+Figure 2 Main Window for G.I.FEFFIT showing the enhanced command-line in- terface, and notebook selections for different types of data in IFEFFIT.
+Commands can be typed here, or pre-defined forms can be used for data plotting and common analysis tasks such as background removal. data analysis 324 Received 31 July 2000 Accepted 11 October 2000
+J. Synchrotron Rad. (2001). 8, 322324
+Figure 3 An enhanced batch file processor for G.I.FEFFIT, ideal for learning XAFS analysis with IFEFFIT. A file IFEFFIT commands can be executed in full or stepped through one at a time.
+Figure 4 A simplified form for AUTOBK-like background removal. After select- ing arrays for E and , the background 0
+(E
+) is calculated and one of several pre-defined plots of the data and background is drawn.
+Figure 5 Sample background from G.I.FEFFITs AUTOBK form, showing the
+(E
+) and 0
+(E
+) data for Cu K-edge of Cu metal.
+5. Conclusions
+IFEFFIT is free software, distributed under an Open Source license.
+It is still in a relatively early stage of development, though most of the algorithms needed for XAFS analysis are supported. In com- parison to the advanced fitting capabilities of FEFFIT(Newville,2000a), IFEFFIT is missing a few important features, most notably simultaneous fitting of multiple data sets and improved background refinement. Such advanced features as well as other algorithms such as principle component analysis, and anomalous scattering factors are planned or partially implemented at this writing. IFEF- FIT already has many capabilities not found in most XAFS analysis packages, and has the potential for much larger command set and more complete analysis tools.
+I thank Bruce Ravel, Julie O. Cross and John Rehr for helpful discussions on the structure of IFEFFIT, and the many users of AU- TOBK and FEFFIT for providing kind and encouraging feedback.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do CO and H2 chemisorption techniques compare in their effectiveness for characterizing bimetallic catalysts, including their respective methodologies, applications in determining active metal sites and metal dispersion, advantages, limitations, and key considerations for data interpretation and normalization of reaction rates?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

@@ -1,0 +1,88 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Carbon dioxide activation and dissociation on ceria (110): A density functional theory study Zhuo Cheng; Brent J. Sherman; Cynthia S. Lo Author & Article Information
+J. Chem. Phys. 138, 014702 (2013)
+https://doi.org/10.1063/1.4773248 Article history element not found 为了改善您的体验在您同意我们所有网站和应用的情况下我们和我们的合作伙伴在您连接的终端上存储和/或访问您终端上的信息cookie或对应信息 我们的网站可能会将这些cookie用于 不通过资料收集而判定我们网站上广告的受众 根据您的导航和个人资料展示个性化广告 根据您的导航个性化我们的编辑内容 允许您在我们网站上的社交网络或平台上分享内容 根据您的位置向您发送广告 隐私政策 设定偏好 全部接受 全部拒绝 All Content AIP Publishing Portfolio The Journal of Chemical Physics Advanced Search
+Citation Search Institutional Accounts Sign In
+HOME
+BROWSE
+COLLECTIONS
+PUBLISH WITH US
+ABOUT
+Volume 138, Issue 1 7 January 2013 Previous Article Next Article
+I. INTRODUCTION
+II. COMPUTATIONAL METHODS
+III. RESULTS AND DISCUSSION
+A. Oxygen Vacancy Formation On Ceria (110)
+B. CO2 Adsorption On Stoichiometric And Reduced Ceria (110)
+C. Electronic Analysis Of Ceria As A Catalyst For CO2 Activation
+D. CO2 Dissociation On Reduced Ceria (110)
+IV. CONCLUSIONS
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Describe and compare the various halogen-assisted methods for selectively dehydrogenating propane to propene, including dehydrogenation with halogens, oxidative dehydrogenation, oxyhalogenation, and molten metal halide salt approaches. Explain the reaction conditions for each method and analyze why propane's reactivity in these processes differs significantly from that of other alkanes such as methane and ethane.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

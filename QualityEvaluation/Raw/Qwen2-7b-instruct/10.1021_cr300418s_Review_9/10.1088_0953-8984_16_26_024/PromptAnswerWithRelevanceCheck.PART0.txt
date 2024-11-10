@@ -1,0 +1,174 @@
+Read the questions and answers provided below. First, critically assess the overall relevance of the answers provided to the set of questions asked.
+
+If, upon your assessment, you find that the answers do not contain information that is relevant to the questions asked, stop your review process immediately and respond with a single sentence: "※※※※※※※The provided answers are not relevant to the questions.※※※※※※※". Do not provide any additional explanation or background information, only this sentence should be given as a response in case of irrelevant answers.
+
+If, however, the answers are relevant to the questions asked, proceed to compile answers for each question according to the instructions below. Ensure to aggregate all the relevant answers from the multiple answer results provided in the document, and organize them sequentially by their order number, compiling the corresponding quotes, English answers, and Chinese answers for each question.
+
+If the provided answers' quotes are not differentiated by question, ensure to break them down and assign the quotes to each respective question, outputting them separately within each question's section.
+
+To provide a comprehensive review, differentiate the responses into quotes, English answers, and Chinese answers for each question based on the details given in the 'Answer' XML tags. Structure your review using the XML format showcased below if the answers are relevant to the questions asked:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<Questions>
+   <Question number="1"> 
+      <Quotes>
+          Quotes for question 1 from all the answer results
+      </Quotes>
+      <English>
+          Aggregated English answer for question 1 from all the answer results
+      </English>
+      <Chinese>
+          所有答案结果中的汇总中文答案 1
+      </Chinese>
+   </Question>
+   <Question number="2">
+      <Quotes>
+          Quotes for question 2 from all the answer results
+      </Quotes>
+      <English>
+          Aggregated English answer for question 2 from all the answer results
+      </English>
+      <Chinese>
+          所有答案结果中的汇总中文答案 2
+      </Chinese>
+  </Question>
+</Questions>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+How do the preparation methods, dopant concentrations, and vacancy formation in nickel oxide-based catalysts influence their electronic structure and catalytic performance in oxidative dehydrogenation reactions (such as ethylbenzene to styrene and ethane to ethylene), and what are the key challenges in theoretical modeling, process optimization, and balancing efficiency, selectivity, and safety in these catalytic systems?
+</questions>
+
+Here are the answer lists, in <Answer></Answer>XML tags:
+<Answer>
+
+<quotes>
+This content has been downloaded from IOPscience. Please scroll down to see the full text.
+Download details: IP Address: 130.237.165.40 This content was downloaded on 26/08/2015 at 04:30 Please note that terms and conditions apply.
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO: a problem for density functional theory View the table of contents for this issue, or go to the journal homepage for more 2004 J. Phys.: Condens. Matter 16 S2497 (http://iopscience.iop.org/0953-8984/16/26/024) Home Search Collections Journals About Contact us My IOPscience
+INSTITUTE OF PHYSICS PUBLISHING
+JOURNAL OF PHYSICS: CONDENSED MATTER
+J. Phys.: Condens. Matter 16 (2004) S2497S2507
+PII: S0953-8984(04)62054-6
+Bonding of NH3, CO, and NO to NiO and Ni-doped MgO: a problem for density functional theory Gianfranco Pacchioni1,2,7, Cristiana Di Valentin1,2, David Dominguez-Ariza3, Francesc Illas3, Thomas Bredow4, Thorsten Kl uner5 and Volker Staemmler6 1 Dipartimento di Scienza dei Materiali, Universit a di Milano-Bicocca, Italy 2 Istituto Nazionale per la Fisica della Materia, via R Cozzi, 53-I-20125 Milano, Italy 3 Departament de Qu mica F sica i Centre de Recerca en Qu mica Te orica, Universitat de Barcelona i Parc Cient fic de Barcelona, C/ Mart i Franqu es 1, E-08028 Barcelona, Spain 4 Theoretische Chemie, Universit at Hannover, Am Kleinen Felde 30, 30167 Hannover, Germany 5 Department Chemical Physics, Fritz-Haber-Institut der Max-Planck-Gesellschaft, Faradayweg 4-6, 14195 Berlin, Germany 6 Lehrstuhl f ur Theoretische Chemie, Ruhr-Universit at Bochum, 44780 Bochum, Germany E-mail: Gianfranco.pacchioni@unimib.it Received 10 April 2003 Published 18 June 2004 Online at stacks.iop.org/JPhysCM/16/S2497 doi:10.1088/0953-8984/16/26/024 Abstract Recent experimental results (Hoeft et al 2001 Phys. Rev. Lett. 87 086101) have questioned the capability of current theoretical methods for describing the bonding of NH3, CO, and NO with the NiO(100) surface.
+We show that these systems do indeed represent a challenge to theory. For different reasons, density functional theory (DFT) fails in describing the bonding of these molecules to the NiO surface. The gradient-corrected functionals which work better for the properties of NH3/NiO and CO/NiO (energies, geometries,vibrations) provide wrong answers for NO/NiO and vice versa. This is not due to the well-known difficulty as regards DFT describing the insulating character of NiO. In fact, exactly the same problem is found for isolated Ni2+ impurities in MgO. A correct description of the bonding of both closed-shell (NH3 and CO) and open-shell (NO) molecules to NixMg1xO is obtained only after inclusion of dynamical correlation and dispersion forces via wavefunction- based methods. However, even with correlated calculations some uncertainties exist regarding the predicted value of the energy of adsorption of NO on NiO.
+While CASPT2 calculations reach reasonable agreement with experiment, the results of approximate coupled-cluster calculations (the multi-configuration coupled-electron-pair approach) substantially underestimate the adsorption energy. 7 Author to whom any correspondence should be addressed. 0953-8984/04/262497+11$30.00 2004 IOP Publishing Ltd Printed in the UK
+S2497
+S2498
+G Pacchioni et al
+1. Introduction
+A correct description of the bonding of molecular complexes to transition metal oxide surfaces is of fundamental importance for the understanding of problems in catalysis, gas sensors,corrosion protection, etc. The bonding of simple molecules such as NH3, CO, and NO to metal oxides represents a serious challenge to theorists. A recent experimental paper on the structure of these molecules on NiO(100) [1, 2] has highlighted the weakness of current theoretical descriptions of oxidemolecule bonding, in particular as regards the bond lengths (and hence the bond strengths). Nowadays, two basically different approaches are used to describe the bonding at surfaces. Wavefunction-based methods with explicit inclusion of correlation effects (e.g. through configuration interaction or perturbative treatments) were developed in the 1980s and 1990s and can be applied within the local cluster model approach.
+Their use is not straightforward and their application is restricted to relatively small systems.
+This is one reason for the wide use of density functional theory (DFT) in the description of the surface chemical bonding and of the electronic structure of solids and surfaces [3].
+Historically, DFT was developed to perform band structure calculations where periodic boundary conditions are properly taken into account. Thanks to the introduction of hybrid exchangecorrelation functionals, the description of bond dissociation energies in molecular complexes has also approached so-called chemical accuracy (errors < 1 kcal mol1).However, recent studies on some special problems (magnetic coupling [4], localized holes in insulators [5, 6], weakly interacting systems [7, 8], etc) have shown limitations of DFT which may lead to a physically incorrect picture or to a strong dependence of the results on the exchangecorrelation functional.
+</quotes>
+
+<EnglishVersionAnswer>
+The document discusses the challenges in describing the bonding of NH3, CO, and NO to NiO and Ni-doped MgO surfaces using density functional theory (DFT). The main points are:
+
+1. Recent experimental studies have raised questions about the capability of current theoretical methods to accurately describe the bonding of these molecules to NiO surfaces.
+2. Different density functionals work well for the properties of NH3/NiO and CO/NiO but provide wrong answers for NO/NiO and vice versa.
+3. This issue is not due to the difficulty in describing the insulating character of NiO, but rather to the inability of DFT to handle the complexities of bonding between open-shell (NO) and closed-shell (NH3 and CO) molecules and the surface.
+4. Including dynamical correlation and dispersion forces through wavefunction-based methods improves the description of bonding, but uncertainties still exist in predicting the energy of adsorption of NO on NiO.
+5. While complete-active-space self-consistent field (CASPT2) calculations agree reasonably well with experimental data, approximate coupled-cluster calculations underestimate the adsorption energy.
+
+These findings highlight the limitations of DFT in accurately modeling the bonding between transition metal oxides and molecular complexes, especially for open-shell species like NO.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+文献讨论了描述NH3、CO和NO在NiO及Ni掺杂MgO表面的键合使用密度泛函理论（DFT）所面临的挑战。主要观点如下：
+
+1. 近期实验研究表明，当前的理论方法在准确描述这些分子与NiO表面键合方面存在不足。
+2. 不同的密度函数对NH3/NiO和CO/NiO的性质描述较好，但对于NO/NiO则提供错误答案，反之亦然。
+3. 这个问题并非源于描述NiO绝缘性质的困难，而是DFT难以处理开放壳层（如NO）与表面之间以及闭合壳层（如NH3和CO）分子之间的复杂键合问题。
+4. 通过波函数基方法引入动态相关性和分散力可以改善键合描述，但仍存在预测NO在NiO上吸附能的不确定性。
+5. 完全活性空间自洽场（CASPT2）计算与实验数据有较好的一致性，而近似耦合簇计算低估了吸附能。
+
+这些发现表明，在精确模拟过渡金属氧化物与分子复合物之间的键合，特别是对于开放壳层物种（如NO）时，DFT存在局限性。
+
+</Answer>
+<Answer>
+<quotes>
+[1] "The DFT results exhibit a strong dependence on the exchangecorrelation functional used and that in some cases this results in a qualitatively wrong picture of the interaction."
+[2] "Functionals which provide the best answers for NH3/NiO and CO/NiO are inadequate to describe the bonding in NO/NiO and vice versa."
+[3] "The reason for this failure lies in the description of the on-site Coulomb repulsion in Ni2+."
+[4] "The ordering of the 2A curves follows the same trend; see figure 1."
+</quotes>
+
+<EnglishVersionAnswer>
+The preparation methods, dopant concentrations, and vacancy formation in nickel oxide-based catalysts significantly affect their electronic structure and catalytic performance in oxidative dehydrogenation reactions. Key challenges in theoretical modeling involve accurately representing these factors, optimizing the process for maximum efficiency, selectivity, and safety. The document highlights difficulties in describing the bonding of simple molecules like NH3, CO, and NO to NiO surfaces using current theoretical methods, especially when it comes to the bond lengths and thus bond strengths. This is due to limitations in density functional theory (DFT) in describing the interactions and spin states of these molecules with NiO. Different exchange-correlation functionals yield varying results, often failing to provide a consistent, accurate picture of the bonding across all molecules. For instance, the hybrid B3LYP approach provides a poor description of the bonding for all three molecules, while the gradient-corrected BLYP functional offers a better match for CO/NiO but fails for NO/NiO. These discrepancies suggest that while some functionals may provide good results for certain molecules, they may fall short for others, indicating a need for more sophisticated theoretical approaches that can account for dynamical correlation and dispersion forces, as well as more precise descriptions of electronic interactions.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+在镍氧化物基催化剂中，制备方法、掺杂浓度和空位形成显著影响它们在氧化脱氢反应中的电子结构和催化性能。理论建模的关键挑战在于准确地表示这些因素，并优化过程以实现最大效率、选择性和安全性。文献强调了描述简单分子（如NH3、CO和NO）与NiO表面之间的相互作用时，当前理论方法面临的困难，特别是关于键长和因此键强度的问题。这主要是由于密度泛函理论（DFT）在描述这些分子与NiO之间相互作用和自旋状态方面的局限性。不同的交换相关函数会产生不同的结果，有时会导致对所有分子的相互作用提供不一致或不准确的图像。例如，混合B3LYP方法对所有三种分子的描述效果不佳，而梯度校正BLYP功能在描述CO/NiO时提供更好的匹配，但在描述NO/NiO时失败。这些差异表明，虽然某些功能可能为某些分子提供良好的结果，但对于其他分子而言，则需要更高级的理论方法，能够考虑到动态相关性和散射力，以及更精确的电子相互作用描述。
+
+</ChineseVersionAnswer>
+
+</Answer>
+<Answer>
+<quotes>
+[1] "This is indicative of a multi-reference character of the ground state."
+[2] "The bonding of NH3, CO, and NO to the NiO surface represents a serious challenge to theorists."
+[3] "The bonding in NO/NiO and NO/NiMg8O9 implies interaction of the paramagnetic NO molecule, the 2 ground state, with a magnetic Ni2+ ion in an open-shell 3d8, 3B2, configuration."
+[4] "The B3LYP method does not provide a satisfactory description of the three bonds."
+[5] "LDA appears to be totally inadequate since it fails even to correctly predict NiO as an insulator."
+</quotes>
+
+<EnglishVersionAnswer>
+1. The multi-reference character of the ground state indicates that the system involves multiple reference states beyond a single determinant, which complicates the description of the bonding.
+2. The bonding of ammonia (NH3), carbon monoxide (CO), and nitric oxide (NO) to nickel oxide (NiO) surfaces poses significant difficulties for theoretical models.
+3. In NO/NiO and NO/NiMg8O9 systems, the paramagnetic NO molecule interacts with a magnetic Ni2+ ion in an open-shell 3d8, 3B2 configuration, leading to complex bonding interactions.
+4. The B3LYP method does not provide an adequate description of the bonding characteristics of these molecules to NiO surfaces.
+5. The Local Density Approximation (LDA) fails to accurately predict the insulating nature of nickel oxide, indicating its inadequacy in modeling the properties of NiO.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+1. 这表明基态具有多参考特性，系统涉及多个参考状态而非单一基态，这使得描述这些分子与NiO表面的结合变得更加复杂。
+2. NH3、CO和NO与NiO表面的结合是理论模型面临的一个重大挑战。
+3. 在NO/NiO和NO/NiMg8O9系统中，顺磁性NO分子与磁性Ni2+离子在开放壳层3d8、3B2配置下相互作用，导致复杂的结合交互。
+4. B3LYP方法无法提供对这些分子与NiO表面结合特性的满意描述。
+5. 局部密度近似（LDA）未能准确预测镍氧化物的绝缘性质，表明其在建模NiO属性方面的不足。
+</ChineseVersionAnswer>
+
+</Answer>
+<Answer>
+<quotes>
+[1] "The DFT results exhibit a strong dependence on the exchangecorrelation functional used and that in some cases this results in a qualitatively wrong picture of the interaction."
+[2] "For NO/NiMg8O9 the U-B3LYP approach gives De = 0.25 eV (BSSE corrected), a NiN distance of 2.02 Å, but a spin distribution which is contrary to experiment; see table 3."
+[3] "Clearly, the B3LYP method does not provide a satisfactory description of the three bonds."
+[4] "The reason for this failure lies in the description of the on-site Coulomb repulsion in Ni2+."
+</quotes>
+
+<EnglishVersionAnswer>
+1. The DFT results are highly sensitive to the exchangecorrelation functional employed, leading to inaccuracies in describing interactions in systems like NH3, CO, and NO bonded to NiO or Ni-doped MgO surfaces.
+2. Using the U-B3LYP method on NO/NiMg8O9 results in an incorrect bond energy (De = 0.25 eV), NiN distance (2.02 Å), and spin distribution, contrary to experimental findings.
+3. The B3LYP method fails to adequately describe the bonding characteristics of the three molecules.
+4. The failure in describing NO/NiO bonding stems from the overestimation of the on-site Coulomb repulsion in Ni2+, affecting the electron affinity and the ordering of the 2A curves.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+1. 密度泛函理论（DFT）的结果高度依赖于所使用的交换关联函数，导致在描述NiO或Ni掺杂MgO表面吸附的NH3、CO和NO分子间的相互作用时出现不准确的情况。
+2. 使用U-B3LYP方法处理NO/NiMg8O9时，得到的键能（De = 0.25 eV）、NiN距离（2.02 Å）以及自旋分布与实验结果不符。
+3. B3LYP方法未能正确描述三种分子的结合特性。
+4. NO/NiO结合失败的原因是过估计了Ni2+中的本征库仑排斥力，影响了Ni的电子亲和能和2A曲线的排列顺序。
+</ChineseVersionAnswer>
+
+</Answer>
+<Answer>
+<quotes>
+[1] "This content has been downloaded from IOPscience. Please scroll down to see the full text."
+[2] "Download details: IP Address: 130.237.165.40 This content was downloaded on 26/08/2015 at 04:30 Please note that terms and conditions apply."
+[3] "This content was downloaded on 26/08/2015 at 04:30 Please note that terms and conditions apply."
+</quotes>
+
+<EnglishVersionAnswer>
+No relevant quotes.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+没有相关引述。
+</ChineseVersionAnswer>
+
+</Answer>
+
