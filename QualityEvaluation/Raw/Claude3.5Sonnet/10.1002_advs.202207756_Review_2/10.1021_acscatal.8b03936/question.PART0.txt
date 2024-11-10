@@ -1,0 +1,940 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Subscriber access provided by University of Winnipeg Library
+is published by the American Chemical Society. 1155 Sixteenth Street N.W.,
+Washington, DC 20036
+Published by American Chemical Society. Copyright  American Chemical Society.
+However, no copyright claim is made to original U.S. Government works, or works
+produced by employees of any Commonwealth realm Crown government in the course
+of their duties.
+Article
+Nature and Catalytic Properties of In Situ
+Generated Brnsted Acid Sites on NaY
+Brian M Murphy, Jingcheng Wu, Hong Je Cho, Juliana
+Soreo, Chenguang Wang, Longlong Ma, and Bingjun Xu
+ACS Catal., Just Accepted Manuscript • DOI: 10.1021/acscatal.8b03936 • Publication Date (Web): 19 Dec 2018
+Downloaded from http://pubs.acs.org on December 19, 2018
+Just Accepted
+Just Accepted manuscripts have been peer-reviewed and accepted for publication. They are posted
+online prior to technical editing, formatting for publication and author proofing. The American Chemical
+Society provides Just Accepted as a service to the research community to expedite the dissemination
+of scientific material as soon as possible after acceptance. Just Accepted manuscripts appear in
+full in PDF format accompanied by an HTML abstract. Just Accepted manuscripts have been fully
+peer reviewed, but should not be considered the official version of record. They are citable by the
+Digital Object Identifier (DOI). Just Accepted is an optional service offered to authors. Therefore,
+the Just Accepted Web site may not include all articles that will be published in the journal. After
+a manuscript is technically edited and formatted, it will be removed from the Just Accepted Web
+site and published as an ASAP article. Note that technical editing may introduce minor changes
+to the manuscript text and/or graphics which could affect content, and all legal disclaimers and
+ethical guidelines that apply to the journal pertain. ACS cannot be held responsible for errors or
+consequences arising from the use of information contained in these Just Accepted manuscripts.
+1
+ 
+Nature and Catalytic Properties of In Situ Generated Brnsted Acid Sites on NaY 
+ 
+Brian M. Murphy1, Jingcheng Wu1,2,3,4,5, Hong Je Cho1, Juliana Soreo1, Chenguang Wang2,3,4,5, 
+Longlong Ma2,3,4,5 and Bingjun Xu*,1 
+ 
+1Center for Catalytic Science and Technology, Department of Chemical and Biomolecular 
+Engineering, University of Delaware, 150 Academy Street, Newark DE, 19716 
+2Guangzhou Institute of Energy Conversion, Chinese Academy of Sciences, Guangzhou, 
+Peoples Republic of China, 510640 
+3Key Laboratory of Renewable Energy, Chinese Academy of Sciences, Guangzhou, Peoples 
+Republic of China, 510640 
+4Guangdong Provincial Key Laboratory of New and Renewable Energy Research and 
+Development, Chinese Academy of Sciences, Guangzhou, Peoples Republic of China, 510640 
+5University of Chinese Academy of Sciences, Beijing, Peoples Republic of China, 101408 
+ 
+*bxu@udel.edu 
+ 
+ 
+ 
+ 
+ 
+ 
+Page 1 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+2
+Abstract 
+Aluminosilicate zeolites are widely used as acid catalysts, and different types of acid sites 
+on these materials have been identified and characterized thoroughly. However, distinct acid sites 
+on zeolites generated during reaction, such as the Brnsted acid sites on NaY upon exposure to 
+organic acids and esters shown in our recent works (referred to as extrinsic sites), remain largely 
+unexplored. In this work, we determine the density of extrinsic Brnsted acid sites generated on 
+NaY by acetic acid and methyl acetate by quantitative FTIR spectroscopy. Kinetic investigations 
+using isopropanol dehydration as a model reaction show that the catalytic characteristics of the 
+extrinsic Brnsted acid sites on NaY are not only different from intrinsic Brnsted acid sites on 
+proton-exchanged faujasites, but also dependent on the precursor molecule, e.g., acetic acid and 
+methyl acetate. The rate of isopropanol dehydration on NaY is found to scale linearly with the 
+square root of the partial pressure of co-fed acetic acid, rather than the quantity of spectroscopically 
+measured Brnsted acid sites. We propose that the self-dissociation of acetic acid in the highly 
+ionic zeolite pore network generates protons that are active for the dehydration reaction, and only 
+fraction of these protons, i.e., those that are associated with the zeolite framework, can be identified 
+spectroscopically. When co-feeding methyl acetate, the rate of isopropanol dehydration on NaY 
+increases linearly with the quantity of spectroscopically measured Brnsted acid sites, which is 
+attributed to the fact that the self-dissociation of methyl acetate does not generate active protons 
+within the zeolite pore.  
+ 
+ 
+ 
+ 
+Page 2 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+3
+1. Introduction 
+ 
+Zeolites are crystalline, microporous materials with well-defined and tunable acid sites, 
+and are used extensively as catalysts for a broad range of chemical transformations, especially in 
+the petrochemical industry.1-3 The isomorphic substitution of Al for Si within the zeolite topology 
+generates a negative framework charge, which must be balanced by a cation in the zeolite pore. 
+The acid-base properties of zeolites can be tuned by changing the identity of this balancing cation. 
+Proton-exchanged zeolites are Brnsted acidic, while metal cation-exchanged zeolites exhibit 
+Lewis acidic or even basic characteristics.4-8 Due to their industrial significance, acid sites on 
+several common zeolite frameworks have been thoroughly characterized by numerous research 
+techniques, including various spectroscopies, computational models, temperature-programmed 
+desorption of probe molecules, and model reactions.3-13 Experimental techniques generally aim to 
+characterize intrinsic zeolitic acid sites, i.e., those present on the material regardless of the reaction 
+system, because these sites are generally assumed to be exclusively responsible for the catalytic 
+properties of the zeolite. However, our recent works demonstrate that Brnsted acid sites (BAS) 
+can be generated on a solely Lewis acidic zeolite, NaY, upon the dissociative adsorption of organic 
+acids (Scheme 1). The acidic hydrogen of the organic species exchanges with surface Na+ cations, 
+generating an adsorbed sodium salt and a BAS on the zeolite framework. The BAS generated via 
+ 
+Scheme 1. Schematic of the ion exchange process which generates extrinsic Brnsted acid sites on NaY 
+(left) and intrinsic Brnsted acid sites present on the zeolite prior to reaction (right). 
+Al O
+Si
+Na+
+R
+OH
+O
+Al O
+Si
+Na+
+R
+O
+O
+H+
+extrinsic Brnsted acid site
+intrinsic Brnsted acid site
+Al O
+Si
+H+
+Page 3 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+4
+this ion exchange process, referred to as extrinsic BAS in this study, produce an infrared band at 
+3645 cm-1 on the NaY sample, indistinguishable from the (AlOH) mode of intrinsic BAS on 
+faujasites.14 Like carboxylic acids, methyl esters can also undergo ion exchange with Na+-
+exchanged faujasite, generating adsorbed sodium salts and surface methoxy groups.15 When the 
+latter interact with water, extrinsic BAS are generated, confirmed by FTIR spectroscopy with 
+pyridine as the probe molecule. We have shown that the extrinsic BAS on NaY are catalytically 
+active in the decarbonylation of methyl lactate to acetaldehyde.16,17 However, catalytic properties 
+of the extrinsic BAS are entirely unknown because these sites are not observed by standard ex situ 
+characterization techniques, i.e., in the absence of an organic acid or ester which serves to generate 
+new sites in situ.  
+ 
+In this work, we employ a combination of spectroscopic and kinetic techniques to 
+demonstrate that the catalytic properties of the extrinsic BAS on NaY are not only fundamentally 
+different from those of intrinsic BAS on faujasites, but also dependent on the identity of the organic 
+acid or ester precursor. Acetic acid (AA) and methyl acetate (MA) are used as precursors to 
+generate the extrinsic BAS on NaY, and the density of generated sites is determined using 
+quantitative FTIR spectroscopy. The ion exchange is governed by a Langmuir-type adsorption 
+equilibrium, where framework negative charges act as immobile adsorption sites. Employing 
+isopropanol (IPA) dehydration as a model reaction, the activation energies and TOF over both 
+extrinsic and intrinsic BAS are measured, demonstrating the two types of sites have different 
+catalytic properties. The IPA dehydration rate exhibits a linear dependence on the square root of 
+the partial pressure of co-fed AA, leading us to propose a novel model to describe how the 
+dissociative adsorption of AA on NaY generates the extrinsic BAS. The self-dissociation of AA 
+within the highly ionic and confined zeolite pore generates two types of extrinsic BAS with 
+Page 4 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+5
+equivalent catalytic activity in IPA dehydration. However, only protons which associate with 
+the zeolite framework generate distinct spectroscopic modes, causing the quantitative FTIR to give 
+inaccurate values for total site concentration. We show that this model is also consistent with the 
+observed activity of the extrinsic BAS generated by MA on NaY.  
+ 
+2. Experimental 
+2.1 Materials Preparation 
+ 
+NaY (nominal Si/Al = 2.5) was purchased from Zeolyst International (CBV-100). 
+Materials characterization measurements of this commercial sample have been previously 
+reported.18 The Si/Al ratio measured by 29Si solid-state magic-angle spinning nuclear magnetic 
+resonance (SS-MAS-NMR) is 2.2; X-ray fluorescence (XRF) measurements show good agreement 
+with the SS-MAS-NMR results. 27Al SS-MAS-NMR shows no detectable level of signal 
+corresponding to octahedrally coordinated extra-framework alumina species. The powder X-ray 
+diffraction (XRD) pattern is consistent with that of faujasite zeolite crystals, and XRF 
+measurements indicate the Na+/Al ratio is 1; no additional Na+ exchange treatments were 
+performed prior to activity testing. The partially proton-exchanged materials were synthesized ex 
+situ using an aqueous solution of NH4NO3 with a predetermined total ion ratio NH4+/Na+ < 1. The 
+resulting samples are denoted as NaHYX, where X is the number of protons (in mol) per gram 
+measured via quantitative pyridine adsorption FTIR (described below). The silicalite-1 sample was 
+synthesized using the following procedure: 1.85 g of Cabosil M-5 was mixed with 6.89 g of 
+tetrapropylammonium hydroxide (TPAOH) and 23.6 g of H2O under stirring for 1 h, and then HF 
+(0.65 g) was added to the mixture. The final gel composition of 50 H2O /0.44 TPAOH/1 SiO2/0.5 
+Page 5 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+6
+HF was placed in Teflon-lined autoclave at 175 C for 5 days. All zeolite samples were calcined 
+at 500 C (1 C/min temperature ramp) for 6 h before use.  
+Double deionized water was produced in-house by a Thermo Barnstead Mega Pure-1 Still 
+deionizer. Isopropanol was obtained from ThermoFisher Scientific, while acetic acid, methyl 
+acetate, pyridine, di-isopropyl ether, and sodium acetate were obtained from Sigma-Aldrich; all 
+chemicals were used without further purification. Grade 5 (>99.99%) purity gaseous propylene for 
+gas chromatograph calibration, Grade 5 (>99.99%) purity gaseous N2 for balancing carrier gas 
+during activity testing, and Grade 5 (>99.99%) purity helium and hydrogen for product analysis 
+and quantification were all obtained from Keen Gas. 
+ 
+2.2 Materials Characterization 
+ 
+XRD patterns were collected on a Bruker D8 Discover powder diffractometer with a Cu 
+K source ( = 1.5418 Å) over the range 2 = 5  50 with a step size of 0.025 at 2 s per step. 
+Textural characterization of the samples was performed using N2 adsorption at 77 K after 
+degassing at 623 K for 6 h under vacuum. Isotherms were collected on a Micrometrics ASAP 2020 
+instrument, and micropore volumes were calculated using the t-plot method. X-ray fluorescence 
+measurements were performed on a Rigaku WD-XRF instrument utilizing provided spectral 
+analysis software. Solid-state 29Si (99.83 MHz, 10 kHz rotational speed, 512 scans) and 27Al 
+(130.29 MHz, 10 kHz rotational speed, 512 scans) magic-angle spinning nuclear magnetic 
+resonance (SS-MAS-NMR) were performed on a Bruker AVIII500 NMR spectrometer with a 44 
+mm HZ MAS probe for all measurements. We employed the standard method for calculating the 
+Si/Al ratio from 29Si-MAS-NMR described by Engelhardt, et al., using the relative area of each Si 
+peak (corresponding to particular Si(nAl) coordination).19 
+Page 6 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+7
+2.3 Transmission FTIR Spectroscopy 
+ 
+In-situ Fourier transform infrared (FTIR) spectra were obtained on a ThermoFisher 
+Scientific Nicolet 6700 FTIR Spectrometer equipped with an MCT detector and a custom in situ 
+transmission cell, collecting 128 scans per spectrum at a spectral resolution of 2 cm-1. Temperature 
+control in the transmission cell is achieved through the use of heating tapes and insulation 
+connected to a tuned PID controller. Vacuum levels of <0.1 mTorr are achieved through 
+connection to a vacuum manifold containing both a mechanical pump and a diffusion pump. For 
+experimental tests, a self-standing zeolite wafer is loaded into a custom-made sample holder for 
+vertical alignment in the infrared beam. The samples were annealed at 450 C under vacuum to 
+completely remove surface adsorbates before cooling to the desired temperature. The appropriate 
+species or mixture was then introduced to the transmission cell via the vacuum manifold. The 
+amount of species in each dose, measured via the total system pressure, is controlled via a vacuum 
+manifold. 
+ 
+Integrated molar extinction coefficients (IMEC) for protonated pyridine (pyridinium) was 
+measured using the following procedure. The density of Brnsted acid sites on a proton-exchanged 
+faujasite sample was measured via an isopropylamine decomposition quantification procedure as 
+described in a previous publication.20 This sample was then loaded into the transmission FTIR cell, 
+annealed, and cooled to 225 C; a background spectrum was taken at this temperature. Pyridine 
+was then introduced into the transmission cell for several minutes prior to evacuation, and this 
+dosing procedure was repeated until the adsorbed pyridinium band increased by less than 1% 
+between doses, after which the final spectrum was collected (Figure S1). The 1545  1540 cm-1 
+spectral band associated with pyridinium was integrated using OMNIC software, and the IMEC 
+(Py) was calculated using the following equation: 
+Page 7 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+8
+   
+  
+ 
+ 
+  
+ 
+ 
+[2.1] 
+where Sp is the catalyst wafers cross-sectional surface area in cm2, mp is the dry mass of the 
+catalyst wafer in grams, and [H+] is the density of Brnsted acid sites in mol/gcatalyst. To calculate 
+the dry mass of the catalyst, the mass loss between room temperature and 450 C was measured 
+by thermogravimetric analysis (TGA) in air. The water mass percentage of samples in this work 
+varied between 1016%. After the extinction coefficient was measured (10%), the same 
+procedure and equation were applied to measure the Brnsted acid site density of other zeolite 
+samples. The measured value of Py at 225 C is 1.0  0.1 cm/mol. 
+ 
+To determine the IMEC of sodium acetate (Acet), an incipient wetness impregnation 
+procedure was used to distribute a known quantity of sodium acetate salt (50  200 mol/gcatalyst) 
+within the pore network of the commercial NaY sample. The peak area of the 1585 cm-1 vibrational 
+band was measured at 275 C using OMNIC software over multiple trials at various loadings. The 
+Acet was then calculated using Equation 2.2:  
+   
+   
+  
+ 
+ 
+[2.2] 
+Where  (in cm/mol) is the slope of a linear fit between the band area (in cm-1) and the total molar 
+loading (dry mass multiplied by loading per gram) over surface area of the pellet (units = 
+mol/cm2). The calibration curve is presented in Figure S2. No sodium acetate was lost during the 
+heating procedure. The same procedure was then applied to determine the sodium acetate 
+concentration after adsorption of AA and MA to NaY. 
+ 
+2.4 Catalytic Activity and Activation Energy Measurements 
+Page 8 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+9
+ 
+Catalytic activities were evaluated using an up-flow fixed bed reactor consisting of a quartz 
+tube with an inner diameter of 4 mm at atmospheric pressure inside a ThermoFisher Lindberg Blue 
+M furnace with a PID temperature control via a custom LabVIEW program. An inert thermocouple 
+(no detectable catalytic activity at the temperatures employed) was placed directly above the 
+catalyst bed, and temperature fluctuations in the catalyst bed were restricted less than  0.5 C. All 
+catalysts were pressed and sieved (20-40 mesh) prior to loading into the reactor. When the required 
+loading of active material was < 10 mg, the catalyst was diluted with inert quartz powder prior to 
+the press/sieve procedure. Catalysts were pretreated at 500 C for 0.5 1 h under 50 mL/min dry 
+air flow to remove water and other adsorbates. The liquid-phase feed was introduced to the reactor 
+via a syringe pump, and the partial pressures of reactants were controlled via the composition and 
+flow rate of the solutions. The N2 carrier gas flow rate was constant at 50 mL/min, and total reactor 
+pressure was 1 bar. All reactor lines were heat-traced to > 125 C to prevent condensation of 
+reactants, co-feeds, or products (all lines show no detectable catalytic activity). An on-line gas 
+chromatograph/mass spectrometer (Agilent 7890B GC and 5973 MS) equipped with a DB-FFAP 
+capillary column and a flame ionization detector was used for product identification and 
+quantification. Conversion, product yields, and turnover frequencies (TOF) were calculated as 
+follows:  
+1 
+,  100%  
+ 
+ 
+   
+[2.2] 
+ 
+
+,  100%    
+ 
+ 
+      
+[2.3] 
+
+  
+    
+ 
+ 
+ 
+ 
+ 
+[2.4] 
+Page 9 of 38
+ACS Paragon Plus Environment
+ACS Catalysis
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+10
+where nR is the number of moles of reactant detected, ni is the number of moles of species i, ci is 
+the carbon number of species i, n is the number of moles of active sites in the catalyst bed, and FR 
+is the flow rate of reactant in moles per unit time.  
+ 
+For activity measurements, the catalyst bed temperature was allowed to settle at 275 C for 
+at least 30 min to minimize temperature gradients. The reactant solution was then introduced, and 
+initial rates were measured at 10 min time on stream. Activation energy measurements were 
+conducted at 255  295 C with data points in 10 C increments, varying T randomly while keeping 
+propylene yield to < 10% to remain within the differential conversion regime. At TOS > 1 h, the 
+temperature was returned to 275 C to check for catalyst deactivation. Deactivation was < 5%
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the variability in intraporous Ga species structure and distribution in H-ZSM-5 zeolites, influenced by factors such as Ga loading and Si/Al ratio, challenge the assumption of uniform PDH activity, and what implications does the observed non-monotonic relationship between Ga/Al ratio and catalytic performance have for understanding the true nature of active sites and optimizing Ga/H-ZSM-5 catalysts?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 
