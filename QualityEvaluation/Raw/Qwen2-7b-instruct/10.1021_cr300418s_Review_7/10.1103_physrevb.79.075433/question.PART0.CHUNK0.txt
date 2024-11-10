@@ -1,0 +1,121 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Oxygen vacancy clusters on ceria: Decisive role of cerium f electrons Changjun Zhang,1 Angelos Michaelides,2 David A. King,1 and Stephen J. Jenkins1,* 1Department of Chemistry, University of Cambridge, Lensfield Road, Cambridge CB2 1EW, United Kingdom 2Department of Chemistry, Materials Simulation Laboratory, and London Centre for Nanotechnology, University College London, London WC1H 0AH, United Kingdom Received 27 November 2008; published 20 February 2009 Defects such as oxygen vacancies dominate the electronic and chemical properties of ceria. However,fundamental understanding of such defects, especially clusters of vacancies, is sparse. In this work, we use density-functional theory with the addition of the Hubbard U term to investigate various oxygen vacancies,including the vacancy monomer, dimer, trimer, and tetramer, in which subsurface vacancies can also be involved. We show that the individual surface and subsurface vacancies have very similar stabilities; the vacancy dimer consisting of two surface vacancies, which is not reported experimentally, is stable in theory;between the two vacancy trimers observed in experiments, the triangular surface vacancy cluster is more stable than the double linear surface vacancy cluster containing a subsurface vacancy, which agrees with some experiments but disagrees with some others; and the linear vacancy tetramer emerges as the most stable among the possible tetramers containing subsurface vacancies, although it is less stable than those containing no subsurface vacancies. These findings are rationalized in terms of the electronic change upon the removal of oxygen, namely, the localization of resulting excess electrons on Ce f orbitals. We identify a correlation between the energy levels of the occupied f states of reduced Ce ions and their coordination numbers, which proves pivotal in interpreting formation energy and stability of various vacancies. Comparisons are made with experiments and apparent discrepancies are discussed. Results for gold adsorption on the vacancy clusters are presented, and the implications these have in catalysis are briefly discussed.
+DOI: 10.1103/PhysRevB.79.075433
+PACS numbers: 73.20.At, 61.72.jd, 71.15.Nc, 71.15.Mb
+I. INTRODUCTION
+The rare-earth oxide ceria CeO2 has recently emerged as one of the most interesting oxides both technologically and scientifically. Materials based on CeO2 are finding novel use in a variety of processes such as automotive exhaust cataly- sis, water-gas shift WGS reactions, fuel cells, and produc- tion and purification of hydrogen.1,2 These applications of CeO2 are largely attributed to its remarkable oxygen-storage capability, i.e., the ability to undergo rapid redox cycles by releasing and storing oxygen.3 Consequently, oxygen va- cancy defects can play a central role: surface lattice oxygen may act as an oxidant for adsorbates, thus creating oxygen vacancies i.e., Marsvan Krevelen mechanism4; and vacan- cies may serve as binding sites for catalytically active spe- cies, thus promoting activity of the catalyst e.g., in the WGS reaction catalyzed by Au/CeO2.5,6 To elucidate the roles of ceria played in those applications, it is therefore of great importance to understand the nature of oxygen vacancies.
+With scanning tunneling microscopy STM and dynamic force microscopy DFM, structures of O vacancies at the reduced CeO2111 surfaces have been investigated.712 In the first atomically resolved images produced by Nrenberg and Briggs,7 oxygen vacancy clusters denoted as VCs here- after were observed at the topmost layer of the surface, and the dominant type of VC was of triangular shape containing three O vacancies, schematically shown in Fig. 1. In contrast, Namai et al.9 suggested that linear alignments of O vacan- cies, consisting of two or more vacancies, are the major mul- tiple defects, which appear in three different orientations re- flecting the threefold symmetry of the 111 surface. The discrepancy between these experiments was attributed to different sample treatments.9 More detailed structures of O vacancies were recently shown by Esch et al.11 With STM and STM simulations, they found that for the slightly re- duced CeO2111 surface, both SV and SSV were present with similar concentrations. Upon prolonged annealing, VCs appeared, with linear surface vacancy clusters LSVCs be- ing the most dominant and triangular SVTs being the next most abundant. The authors also proposed that VCs with more than two vacancies exclusively expose reduced Ce ions Fig. 1, and that to satisfy this interesting trend, each LSVC must incorporate a subsurface oxygen vacancy. In a more recent DFM study by Torbrgge et al.,12 explicit evidence of isolated SSV buried at the third layer of the CeO2111 sur- face was found. Furthermore, SSVs themselves exhibited in- teresting structures: at high concentrations, SSVs appear in ordered arrays with a tendency to form linear patterns, leav- ing defect-free spacing of two lattice constants in between.
+The discovery of VCs in ceria is of great significance. As pointed out by Campbell and Peden,13 the groups of exposed Ce3+ ions in the VCs would become a potentially potent surface site for catalysis, as adsorbed gases or reaction inter- mediates could interact simultaneously with several Ce3+ ions. Such VCs may even direct adsorbed metal nanopar- ticles into specific shapes that may have advantages in ca- talysis. However, images of VCs, particularly the shapes of VCs, are not consistent in previous studies.7,9,11 There is also a notable lack of theoretical understanding of VCs in ceria,and most studies have so far concentrated on an isolated vacancy.1416 In the present work, we have therefore under- taken a detailed theoretical investigation on a series of oxy- gen vacancies on CeO2111, including vacancy monomer,dimer, trimer, and tetramer. We focus here on two fundamen- tal aspects: i the energy required to form the oxygen defects
+PHYSICAL REVIEW B 79, 075433 2009
+1098-0121/2009/797/07543311 2009 The American Physical Society 075433-1 and ii the electronic structure of the reduced systems, as highlighted in a recent review paper on O vacancies in transition-metal and rare-earth oxides.17 In particular, owing to the strong fCe electron localization effect, reduction of the ceria surface leads to a change of valence from Ce4+ to Ce3+, which differs from situations on many other oxide sur- faces where either F center or electron delocalization would occur upon reduction.17 This rather unique electron localiza- tion feature therefore holds the key to understanding the in- triguing nature of the vacancies on ceria and their implica- tions in catalysis.
+The present paper is organized as follows. Calculation details are given in Sec. II. In Sec. III, we introduce all types of vacancies considered and report vacancy formation ener- gies. Following that, we discuss electronic structures and il- lustrate the physical origin of the relative stabilities of those vacancies in Sec. IV. In Sec. V, we make comparisons with available experimental data and discuss the discrepancies that have been found. In Sec. VI, we present some results of Au adsorption on VCs which are likely to be relevant to and have implications for catalysis. Our conclusions are summa- rized in Sec. VII.
+II. METHODOLOGY
+We carry out spin-polarized calculations within the density-functional theory DFT framework, as implemented in the Vienna Ab initio Simulation Program VASP, a plane- wave pseudopotential
+DFT
+package.1820 We use the projector-augmented wave method to describe the effect of the core electrons on the valence electrons in the system.21,22 The Ce 5s, 5p, 5d, 4f, and 6s electrons; the O 2s and 2p electrons; and the Au 5d, 6s, and 6p electrons are treated as valence electrons. For the electron exchange-correlation functional the generalized gradient approximation GGA of Perdew23 and Wang is used.
+We choose the DFT+U methodology,24,25 which has proven to be essential in descriptions of reduced ceria systems.17 In this approach, the Hubbard parameter U is in- troduced to account for the strong on-site Coulomb repulsion among the localized Ce 4f electrons. In practice, however,the choice of this parameter is often empirical, which is to say that the U value is adjusted to reproduce properties known from experiments. There are a host of papers devoted to the discussion of appropriate U values.14,15,2630 In study- ing reduced ceria, Nolan et al.14 suggested U=5.0 eV for GGA+U, as for U5.0 eV significant delocalization still persists. Fabris et al.15 derived U=5.3 eV for local-density approximation LDA and U=4.5 eV for GGA+U when us- ing the maximally localized Wannier orbital as the projector function. Andersson et al.29 showed that U6.0 eV for LDA+U and U5.0 eV for GGA+U provide a consistent description of pure CeO2 and Ce2O3 plus vacancies in CeO2.
+Castleton et al.30 also suggested that the best overall choice is U6.0 eV for LDA+U and U5.5 eV for GGA+U.
+We note that although suggestions of U values vary, the op- timal ones appear to be around 5.0 eV for GGA+U and 6.0 eV for LDA+U. We therefore use GGA+U U=5.0 eV in the current work. We also carry out tests with GGA+U U=4.5 or 5.5 eV and LDA+U U=6.0 eV, and our con- clusions are not qualitatively affected by these choices.
+The 111 face of ceria features termination of stoichio- metric O-Ce-O trilayers stacked along the 111 direction Fig. 1, and is the thermodynamically most stable facet. In order to accommodate VCs as well as to minimize the inter- action between VCs, a large 44 unit cell is chosen. In some cases e.g., vacancy tetramers, tests with an even larger 46 cell are performed, and no significant differ- ence is found: the formation energy of vacancy tetramers differs by only 0.03 eV from the calculations in the two cells.
+The slabs employed in our calculations have nine atomic layers, which is a common choice in studying ceria surfaces.1416 The vacuum regions for the slabs are generally around 12 Å. During structure optimizations atoms are al- lowed to relax until the forces are smaller than 0.03 eV/Å,except those in the lowest three layers that are constrained to the equilibrium positions calculated for the defect-free super- cell. We note that in the cases involving subsurface O vacan- cies and the reduction of inner Ce ions, further relaxation of the inner atoms might be necessary. Therefore, calculations are also performed with slabs containing 12 atomic layers including up to 192 atoms for vacancy dimers and trimers.
+However, we find that characteristic electronic features, va-
+FIG. 1. Color online a Examples of a surface vacancy SV,
+a subsurface vacancy SSV, a vacancy dimer, a triangular surface vacancy trimer SVT, a double linear surface vacancy cluster DLSVC, and a linear vacancy tetramer at the CeO2111 surface.
+We adopt the same abbreviations as used in Ref. 11. The reduced Ce ions and the O ions around them are highlighted in green and blue, respectively, in the online version of this article; in black and white print, those refer to the Ce ions exposed to the vacancies and the rim O atoms around the vacancies, respectively. Note that the spin arrangement for the dimer proposed in Ref. 11 is likely to be incorrect, as discussed in Sec. IV B. b The color coding for atoms at different layers is depicted.
+ZHANG et al.
+PHYSICAL REVIEW B 79, 075433 2009
+075433-2 cancy formation energies, and relative stabilities are very similar between calculations from the 9-layer and the 12- layer slabs. To reduce the computational cost, we therefore use the 9-layer slab for the calculations of vacancy tetramers.
+The sampling of the Brillouin zone was performed with a 221 Monkhorst-Pack k-point mesh. The number of plane waves, used to expand the Kohn-Sham orbitals, is con- trolled by a cutoff energy of 400 eV, which is sufficient to obtain well-converged results.31 It is well known that upon creation of an O vacancy, the two excess electrons left behind by the removed O would localize on the two neighboring Ce ions, leading to the re- duction of Ce4+ to Ce3+.17 As will be shown shortly, the location of the Ce3+ ions is vital in interpreting the stability of reduced surfaces. Thus, for each vacancy or VC, we have examined different starting spin configurations i.e., dif- ferent locations of Ce3+, in order to identify the most stable configuration. We find that the energy differences between different spin configurations obtained for each vacancy or VC are almost negligible. For example, for the surface with SV, both ferromagnetic and antiferromagnetic ground states are found,15,32 but the antiferromagnetic arrangement is only
+0.02 eV more stable. For the surface with SSV, the antifer-
+romagnetic state is marginally more stable by 0.01 eV than the ferromagnetic one. Therefore, we report below only the most stable configurations, without overinterpreting the alignment of neighboring spins.
+III. VARIOUS VACANCIES AND VACANCY FORMATION
+ENERGIES
+We first consider single-oxygen vacancies by removing either a topmost surface O atom or a subsurface O atom at the third layer from the stoichiometric surface, as shown in Fig. 2. Also shown are electron densities of the spin states i.e., the occupied f states of Ce3+ ions, which will be de- tailed in Sec. IV. To illustrate stability of these vacancies, we list in Table I the formation energy per vacancy Ev a,
+FIG. 2. Color online a The
+electron densities of the gap states green and yellow areas in the on- line version of this article or the dark areas around Ce atoms in the black and white print, which are localized on the two Ce ions neighboring the SV and SSV. The color coding of the atoms is the same as in Fig. 1. Two different Ce neighbors for SSV are indi- cated. b The spin-resolved total density of states DOS, which are calculated with a smearing width of 0.04 eV. The Fermi levels of each system are set to zero. For comparison, the DOS of the sur- face with a bulk vacancy, defined in the text, is also included. For best viewing, the DOS corre- sponding to the f states at the band gaps is multiplied by a factor of 5 in order to allow the features to be more clearly seen.
+OXYGEN VACANCY CLUSTERS ON CERIA: DECISIVE
+PHYSICAL REVIEW B 79, 075433 2009
+075433-3 Ev a =Eslab n Eslab stoi + n 2EO2/n,1 where Eslab n , Eslab stoi, and EO2 are energies of a surface with n O vacancies, the perfect stoichiometric surface, and an O2 mol- ecule, respectively. As can be seen, the two reduced surfaces have similar energies: the surface with SSV is slightly more stable by 0.06 eV than that with SV. We note that previous GGA+U calculation also slightly preferred SSV to SV by
+0.26 or 0.14 eV, but previous LDA+U calculation predicted
+SV to be more stable by 0.03 or 0.15 eV, when using the atomic orbitals or the localized Wannier orbitals as the pro- jector functions, respectively, in the expression of the U term.15 Although the relative stability of these defects ap- pears to depend on the methodology, we consider that the energy differences are insignificant since the vacancy forma- tion energy is large
+2.2 eV in Table I. Moreover, the
+similar energies of the two defects calculated in the present work agree with the experiment finding that SVs and SSVs have similar concentrations on the slightly reduced surfaces.11 There are in principle two possible dimer vacancies Fig. 3, which could consist of either one SV plus one SSV dimer I or two SVs dimer II, although Esch et al.11 claimed dimer I to be the only vacancy dimer that has been observed. Our calculations find that both dimers I and II are stable, with the former being 0.05 eV lower in energy than the latter, as can be seen from Table I. In addition to Ev a, we also list in Table I the energy for the nth vacancy formation Ev n, given by Ev n = Eslab n Eslab n1 + 1
+2EO2,
+2 where Eslab n and Eslab n1 are the energies of surfaces with n and n1 O vacancies. With respect to the most stable single va- cancy i.e., SSV, we calculate the formation energies for the second vacancy Ev 2 to be 2.53 and 2.58 eV for dimers I and II, respectively, which are somewhat higher than Ev
+1.
+Moving to the vacancy trimer, we investigate the triangu- lar SVT and the DLSVC,711 both of which were observed in experiments, although conclusions vary as to which of these is dominant. As shown in Fig. 4, SVT contains three surface vacancies, whereas DLSVC contains two surface vacancies and one subsurface vacancy. A common feature of the two VCs is that both are exposed to six Ce neighbors, which are just enough to accommodate the six excess electrons left behind by the three released O atoms. Our calculations show that SVT is 0.97 eV more stable than DLSVC: with respect to the most stable dimer i.e., dimer I, the energies in form- ing the third O vacancy in SVT and DLSVC are 2.30 and
+3.28 eV, respectively. This result agrees with the experiment
+of Nrenberg and Briggs,7 who stated that the defects first appear as triangular ones and form linear defects only at higher temperatures, but disagree with experiments of Namai et al.9 and Esch et al.,11 who stated that the linear defects are the main type.
+The vacancy tetramers are created by removing a further O atom from either DLSVC or SVT. Starting from DLSVC,we can create three distinct yet stable vacancy tetramers by removing one of the following O atoms, i.e., OI, OII, and OIII Fig. 4, which are neighboring a sixfold, a fivefold, and a fourfold Ce3+ ion, respectively.33 The resultant tetramers are denoted as tetramers I, II, and III in Fig. 5. Starting from trimer SVT, we can create two more tetramers by removing a surface O neighboring a fivefold Ce3+ or a surface O neigh- boring a sixfold Ce3+, which are denoted as tetramers IV and V, respectively, in Fig. 6. In each of tetramers IV, the two excess electrons left behind by the newly released O would find two adjacent Ce ions, so the trend that the VCs exclu- sively expose Ce3+ ions is preserved.
+From values of Ev a in Table I, tetramers IV and V are clearly more stable by at least 0.9 eV than tetramers IIII,i.e., analogous to the relative stability between trimer SVT and DLSVC. With respect to the most stable trimer i.e., SVT, the formation energies of the fourth O vacancy Ev 4 in tetramers IV and V are
+2.3 eV, which is close to Ev
+3 for trimer SVT or Ev 1 for monomers. The values of Ev 4 in tetramers IIII would obviously be much higher if the same
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the Mars-van Krevelen mechanism operate in oxide-catalyzed oxidation reactions, and what is the significance of the energy required for oxygen vacancy formation (ΔEv) in determining both the catalytic activity and the oxidizing ability of the oxide surface?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

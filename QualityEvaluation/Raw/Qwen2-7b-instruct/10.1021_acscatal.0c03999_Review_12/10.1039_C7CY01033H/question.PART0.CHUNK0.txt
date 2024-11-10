@@ -1,0 +1,337 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+This is an Accepted Manuscript, which has been through the Royal Society of Chemistry peer review process and has been accepted for publication.
+Accepted Manuscripts are published online shortly after acceptance, before technical editing, formatting and proof reading.
+Using this free service, authors can make their results available to the community, in citable form, before we publish the edited article. We will replace this Accepted Manuscript with the edited and formatted Advance Article as soon as it is available.
+You can find more information about Accepted Manuscripts in the author guidelines.
+Please note that technical editing may introduce minor changes to the text and/or graphics, which may alter content. The journals standard Terms & Conditions and the ethical guidelines, outlined in our author and reviewer resource centre, still apply. In no event shall the Royal Society of Chemistry be held responsible for any errors or omissions in this Accepted Manuscript or any consequences arising from the use of any information it contains.
+Accepted Manuscript rsc.li/catalysis www.rsc.org/catalysis
+ISSN 2044-4753
+Catalysis
+Science &
+T
+echnology
+PAPER
+Qingzhu Zhang et al.
+Catalytic mechanism of CF bond cleavage: insights from QM/MM analysis of fluoroacetate dehalogenase Volume 6 Number 1 7 January 2016 Pages 1308
+Catalysis
+Science &
+T
+echnology View Article Online View Journal This article can be cited before page numbers have been issued, to do this please use:  V. D. B. C.
+Dasireddy, M. Hu and B. Likozar, Catal. Sci. Technol., 2017, DOI: 10.1039/C7CY01033H. 1
+Effect of O2, CO2 and N2O on NiMo/Al2O3 Catalyst Oxygen Mobility in n-Butane Activation and Conversion to 1,3-Butadiene Venkata D.B.C. Dasireddy*, Matej Hu, Bla Likozar Department of Catalysis and Chemical Reaction Engineering, National Institute of Chemistry, Hajdrihova 19, 1001, Ljubljana, Slovenia Abstract Commercial heterogeneous NiMo/Al2O3 catalyst was tested for the oxidative dehydrogenation (ODH) reaction of n-butane with different oxidant species: O2, CO2 and
+N2O. The effect of the lattice oxygen mobility and storage in NiMo/Al2O3 on catalytic
+conversion performance was investigated. Experiments indicated that a high O2- storing/release is beneficial for activity, however at the expense of selectivity. A significant amount of butadiene with no oxygenated compound products was formed upon using carbon dioxide and nitrous oxide, while O2 favoured the formation of cracked hydrocarbon chains and COx. The highest turnover yield to 1,3-butadiene was achieved at the oxidant-to- butane molar ratio of 2:1 at the temperatures of 350 C and 450 C. With CO2, significant amounts of hydrogen and carbon monoxide were evolving due to parallel reforming pathway. A partial nickel/molybdenum oxidation was also observed under CO2 and N2O atmospheres. TPR revealed the transformation of the high valence oxides into structurally distinct metal sub-oxides. In TPRO, three distinct peaks were visible and ascribed to surface oxygen sites and two framework positions. With N2O, these shifted towards lower temperature region, indicating a better diffusional accessibility and an easier bulk-to- surface migration. XRD revealed α-NiMoO4 active phase presence, which was used in DFT modelling as (110) plane. Theoretical ab initio calculations elucidated fundamentally different reactive chemical intermediates when using CO2/N2O or O2 as oxidant. The former promote Mo atom oxygen termination, while in O2 environment, Ni is also oxygenated. Consequently, CO2 and N2O selectively dehydrogenate C4H10 through serial hydrogen abstraction: butane  butyl  1-butene  1-butene-3-nyl  butadiene. With O2, butane is firstly transformed into butanol and butanal, which are prone to subsequent CC bond cleavage. The latter is mirrored in different mechanisms and rate-determining steps, which are essential for efficient butadiene monomer process productivity and the optimisation thereof.
+Keywords: alkane; buta-1,3-diene; dehydrogenating; nickelmolybdenum/alumina; oxygen uptake/releasing
+*Corresponding author: Tel.: +386 1 4760224; Fax: +386 1 4760300; E-mail:dasireddy@ki.si
+Page 1 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+2
+1 Introduction One of main tasks of chemical industry today is production of large amounts of organic compounds 1. Mono-olefins and di-olefins (butenes, butadiene, etc.) are extensively used in various chemical processes for production of synthetic resins, plastics, and other valuable products 2, 3. Nowadays, it is desirable to find substitute procedures for production of these compounds from more economically suitable raw materials and with smaller impact for the environment 4. The major industrial process for production of mono-olefins and di-olefins has a drawback of producing other raw materials, such as ethylene, propylene, and isobutene in high quantities 5, 6. Direct dehydrogenation of n-butane is an endothermic reaction that requires relatively high temperature in order to obtain high yields of butenes and butadiene 7.
+High reaction temperature favours thermal cracking reactions, production of lower alkanes and coke formation, resulting in decreased product yield and catalyst deactivation 8. On the other hand, oxidative dehydrogenation (ODH) of n-butane usually gives a lower yield of coke and cracking products because the reaction is exothermic 9, 10.
+Recent studies have focused on ODH of n-butane for producing butenes and butadiene (BD) 2,7, 8, 11. ODH of butenes can efficiently produce BD in high yields 9, 12. Molybdenum-based catalysts have been widely used for many selective oxidation reactions, especially the oxidation of butanes to butadiene 13. In particular, NiMoO4 shows potential for ODH of lighter paraffins, ethane, propane and n-butane 8, 14.
+Recently, metal molybdates have been proposed as selective catalysts for oxy- dehydrogenation reactions 15, 16, although they show lower catalytic activity than the vanadium-containing catalysts 17, 18. On the other hand, the ODH of short-chain alkanes on V- containing catalysts has been demonstrated to depend on the nature of the support 13, 19. Basic supports seem to be preferable for n-butane or propane 7, 8, 13 , whereas acid supports are more appropriate for obtaining ethylene from ethane 20, 21. In all cases, γ-Al2O3 (with a surface area ranging 150210 m2/g) was used 22, 23. Mesoporous alumina was used as support for vanadium oxide in the ODH of ethane 19, 22, showing high productivity towards ethylene as a consequence of a remarkable dispersion of vanadium on the support surface. However, an even better metal dispersion can be achieved using γ-Al2O3 as support 8, 12, 16, 18, 24, which makes it more interesting for use in ODH of n-butane.
+To the best of our knowledge, only ODH of butane using O2 or air as an oxidant has been reported in the literature and patents 5, 25. Due to the strong oxidative capacity of oxygen, the Page 2 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+3
+reported BD selectivity is not as high as desired. CO2 and N2O have been reported as soft oxidants for ODH of light alkanes 26, 27. The use of these soft oxidants has several benefits over molecular oxygen, such as minimising the total oxidation reaction, further improving the selectivity towards partially oxidized products, increasing the process safety by reducing the explosion risk and using up N2O and CO2, which are major greenhouse gases in the atmosphere 4, 26, 27. Recently, Fe2O3/Al2O3 catalysts have been used for ODH of 1-butene using CO2 as a soft oxidant 27. It has been found that CO2 is essential in activation of 1-butene over the Fe2O3 catalysts and thus BD production. N2O has also been used as an oxidant in the ODH of propane over NiMoO4 catalysts 26, with a small concentration of N2O leading to the increase in the selectivity and propylene yields.
+Based on these findings, in this work a commercial Ni-Mo on γ-Al2O3 catalyst was tested for ODH of butane in the presence of O2, CO2 and N2O. TPRO (temperature programmed re- oxidation) experiments were carried out to determine the oxygen properties of the catalyst.
+Effect of oxygen capacity and acidity of the catalyst on the catalytic performance was then discussed. The experimental results were supported with theoretical DFT calculations. 2 Experimental The Ni-Mo commercial catalyst with a Ni and Mo wt % of 1.8 and 6.5 on alumina support was used for this reaction. The physisorption analyses were carried out by degassing the catalysts under N2 flow for 2 h at 200 C. The degassed samples were analysed in a Micrometrics ASAP 2020. Temperature programmed reduction (TPR) was performed with Micromeritics 2920 Autochem II Chemisorption Analyser. Prior to the reduction of the sample in TPR, the catalyst was pre-treated by heating under a stream of argon (30 mL/min) at 400 C for 30 min and then cooled to 80 C. Thereafter, 4.9 % hydrogen in argon was used as a reducing agent at a flow rate of 30 mL/min. Samples were analysed from room temperature to 700 C using a ramp rate of 10 C/min.  In order to determine the oxygen capacity and oxygen mobility of the catalysts, temperature programmed re-oxidation (TPRO) experiments were carried out. For a TPRO experiment, each catalyst was reduced by n-butane (5 % n-butane in He) with a flow rate of 30 mL/min at 500 C for 2 h in the absence of oxygen feed in order to consume the lattice oxygen from the catalyst. After that the temperature was lowered to 60 C and an appropriate oxidant (10 % O2 in He, 10 % N2O in He, or 10 % CO2 in He) with a flow rate of 30 mL/min was passed through the catalyst, while Page 3 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+4
+the temperature was raised to 700 C at a heating rate of 10 C/min. The amount of oxidant consumed was measured using a thermal conductivity detector.
+Metal dispersion on the surface of the catalyst was measured with oxygen pulse chemisorption by Micromeritics AutoChemII 2920. Samples (200 mg), placed in a U-shaped quartz reactor with an inner diameter of 0.5 cm, were pre-treated under 5 % H2 in Ar at the temperature 350 C for 2 h. Then, the catalyst was cooled down to 80 C in He flow of 50 mL/min and kept at this temperature for 3 h before being heated to the desired temperature for chemisorption. This was done in order to clean the catalyst surface and to remove any residual adsorbed hydrogen. Oxygen pulse chemisorption was performed at the temperature of 350 C. Volume of the injection loop was 0.5 cm3, the carrier gas was Ar and pulses of O2 (5.0 % O2 in Ar), injected in the catalytic reactor, corresponded to 0.5 mol of O2  The O2 consumption was measured with the same TCD that was used for TPR, but equipped with a water trap. Pulses injection, sample temperature and TCD signals were controlled and monitored by a computer equipped with the Micromeritics AutoChemII software. TCD data were analysed in Origin program suite.
+Powder X-ray diffraction (XRD) studies were conducted using a PAN analytical XPert Pro instrument. Scans from 10 to 90 were carried out using a Cu/Kα radiation source with a wavelength of 1.5406 Å. Particle size, morphology and elemental mapping, performed by EDXS analysis, were further investigated using Cs-corrected scanning transmission electron microscope (TEM) (JEOL, JEM-ARM200CF), equipped with JEOL Centurio 100 mm2 EDXS system.
+The oxidative dehydrogenation (ODH) of n-butane was were carried out in a vertical fixed- bed U-shaped quartz reactor (100 cm length and 1.5 cm ID). Electric furnace fitted with a temperature-programmed controller heated the reactor and reactor temperature was monitored with a K-type thermocouple. The gas flow rates were measured and controlled by Brooks mass flow controllers. Prior to reaction, each catalyst was pre-treated in situ with He flow (50 mL/min) at 400 C for 1 h. The reaction was carried out at different temperatures from 250 to 550 C, with steps of 50 C. The oxidant-to-butane molar ratio (O2, CO2, or N2O) was varied from 1 to 2.75. The experiments were conducted at varying W/F ratio (0.1 to 0.7) at a fixed oxidant-to-butane ratio of 2.0 and temperature 450 C. Outlet gases, including butenes,butadiene (BD), cracked products (mainly propane and ethane), CO, CO2, H2 and H2O were analysed with online quadrupole mass spectrometry (MS). All catalytic tests were carried out Page 4 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+5
+in duplicates and the values obtained for CO conversion showed a standard deviation below
+3.0 %. Conversion of n-butane and product selectivity was calculated from mole fraction of
+products in outflow as shown in Electronic Supplementary Information 28. Carbon mass balances ranged between 96-99 % and all data points were obtained in duplicates with standard deviation of  2 %.
+Mass transport and heat transfer calculations were carried out for the highest rates for the reactions with CO2, N2O and O2 as shown by Oyama et al 29. The Mears criterion for external diffusion Ab c b
+A
+C
+k Rn r ρ '
+gave a value of 3.12 x 10-4 for O2 , 2.85 x 10-4 for CO2 and for N2O =
+1.72 x 10-4 which are less than 0.15. The Weisz-Prater criterion,
+As e c obs
+A
+WP
+C
+D
+R
+r
+C
+2 ) ( ' ρ
+= gave value of 4.9 x 10-4 for O2 , 4.07 x 10-4  for CO2 and for N2O = 2.28 x 10-4 which are less than 1, indicating no diffusion limitations 30. The full calculation for Mears criterion for external diffusion, Weisz-Prater criterion and Mears Criterion for combined interphase and intraparticle heat and mass transport is given in Electronic Supplementary Information.
+The values obtained through these calculations indicate that no interphase and intraparticle heat transfer or mass transport limitations involved in the present study 31, 32. 3 Theoretical Plane-wave density functional calculations (DFT) were carried out in Quantum Espresso program 33, using open-source PWscf code to calculate the electronic structure and energies.
+Electron-ion-core interactions were described with projector augmented wave (PAW) method 34 with generalized gradient approximation (GGA) exchange potential of Perdew, Burke and Ernzerhof (PBE) 35. Kinetic energy cutoff of 550 eV and electron density cut-off eight times as large were found to be sufficient to obtain accurate results, as proved with convergence testing. Cutoffs that large were needed as oxygen atoms require very large basis sets to converge. Dispersion effects were included semi-empirically via DFT-D2 method of Grimme 36, 37. Since PBE is known to overbind the oxygen molecule, the energy of isolated O2 molecule was corrected by E(O2) = 1.59 eV to have the experimentally determined bond energy of 5.15 eV, which is standard procedure.
+Page 5 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+6
+4 Results and discussion The Ni and Mo wt % are 1.7 and 6.3, respectively, obtained from the elemental analysis. This is in agreement with the nominal wt % of Ni and Mo on alumina support. No presence of phosphate, which is sometimes used as a promoter, was detected. Surface area of the catalyst was 154 m2/g as measured by N2 physisorption method. This is lower than the surface area of γ-Al2O3 (225 m2/g), which could be due to the blockage of pores of alumina with Ni and Mo.
+This is corroborated by total metal dispersion, which was measured as 38  2 % in the oxygen pulse chemisorption experiment.  The surface concentration of Ni and Mo was 0.4 mmol NiO g-1 and 1.042 mmol MoO3 g-1 and the number of Ni and Mo atoms are 2.5 x 1020 and 6.3 x
+1020. This catalyst is active and selective in the ODH of n-butane with oxygen. The main
+reaction products identified in the reaction mixture were butenes, butadiene, cracked products (ethane and propane) and carbon oxides. There were no other products, such as acetaldehyde,maleic anhydride, other oxygenates or products of significant catalyst coking when using O2 oxidant. The homogenous conversion of n-butane without the catalyst is about 0.1 % at 450 C, which is markedly lower that the conversions obtained with the catalyst.
+4.1 Oxidant-to-butane ratio
+The product distribution is given as a function of the oxygen-to-butane ratio at temperatures of 350 C and 450 C. The highest selectivity towards BD was achieved at a molar ratio of 2.0 at both temperatures (Figure 1). Selectivity towards BD was low, while the amount of CO2 formed increases with the temperature, which may be due to the increase of coke deposition at lower oxygen-to-butane molar ratios 2. At lower oxygen-to-butane molar ratio, more oxygen is used to burn the coke deposited on the catalyst surface, leaving no oxygen available for the
+ODH. Increased conversion at higher oxygen-to-butane molar ratio can be attributed to the
+participation of oxygen in the oxidation of n-butane and the intermediates, increasing the amount of carbon oxides formed and decreasing the selectivity towards BD 8. The amount of butenes formed decreases much more slowly with increased oxygen-to-butane molar ratio.
+Page 6 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+7
+Figure 1: Conversion and selectivity as function of the O2/butane molar ratio at (a) 350 C and (b) 450 C (GHSV = 6000 h-1) Carbon mass balances are ranged in between 97-99 %.
+(a) (b) Page 7 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+8
+Figure 2: Conversion and selectivity as function of the CO2/butane molar ratio at (a) 350 C and (b) 450 C (GHSV = 6000 h-1) Carbon mass balances are ranged in between 96-99 %.
+At higher temperature i.e. 450 C, an oxygen-to-butane molar ratio of 2.0 led to the highest selectivity towards BD being 42 %, which is higher than 34 % at 350 C (Figure 1). The amount of carbon oxides formed is lower at higher oxygen-to-butane ration, suggesting that ODH of butane is favoured at higher temperatures, which is also supported by higher conversion. Formation of cracked products is not favourable, being especially low for oxygen-to-butane molar ratios 1.5 to 2.2. They form more readily at 450 C than at 350 C,(a) (b) Page 8 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+9
+which is probably due to the thermal cracking of intermediates formed in the ODH of n- butane (Figure 1). Higher selectivity towards cracked products at low oxygen-to-butane molar ratio can be attributed to the oxidative cracking of butane or butene isomers (Figure 1). At both temperatures, the catalyst showed a steady state for more than 72 h at oxygen-to-butane molar ratio of 2.0.
+Figure 3: Conversion and selectivity as function of the N2O/butane molar ratio at (a) 350 C and (b) 450 C (GHSV = 6000 h-1) Carbon mass balances are ranged in between 96-99 %.
+(a) (b) Page 9 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+10
+0 5 10 15 20 25 30 35 40 45 0 10 20 30 40 50 60 70 80 90 100
+6.43
+4.29
+3.21
+2.57
+2.14
+1.93
+1.54
+C4H8 selectivity (%) n-butane conversion (%) W/F ( g.h/mol butane) Conversion with O2 Conversion with CO2 Conversion with N2O C4H8 selectivity with O2 C4H8 selectivity with CO2 C4H8 selectivity  with N2O After evaluating the catalytic activity of the catalyst in the presence of oxygen, the ODH of butane with CO2 as the oxidant was performed at temperatures of 350 C and 450 C. At both temperatures, the catalyst showed higher selectivity towards BD compared to oxygen (Figure 2). Very low conversion (< 10 %) of n-butane was obtained, showing that n-butane is not directly oxidised in the presence of CO2 but may undergo the oxidative cracking mechanism. This argument also supported by a high selectivity towards cracked products at a low CO2-to-butane molar ratio (Figure 2). A low amount of butane and butadiene was detected at low CO2-to-butane molar ratios despite the fact that C-H bond dissociation can occur on molybdenum metal 38. In the presence of CO2, significant amount of hydrogen and CO are formed. Instead of dehydrogenation reaction, CO2 reforming reaction can also take place. Hence the results obtained from ODH of n-butane with CO2 indicate that by using CO2 a new route of reaction is available, namely the formation of hydrogen and CO 39. Of course, CO2 can be converted to CO via reverse water-gas shift reaction by consuming the H2 formed through dehydrogenation 40. As the CO2-to-butane molar ratio increases, the catalytic activity increases, as well as the amount of CO and H2 formed. The butane reactivity studies with CO2 reveal that the activity of the catalyst also depends on the nature of the oxidant and the amount of oxidant present in the feed composition (Figure 2).
+Figure 4: The performance of Ni-Mo/Al2O3 catalyst under different weight hourly space velocity (WHSV) with O2, N2O and CO2 oxidants.  (Reaction conditions: oxidant/butane ratio of 2.0; Temperature = 450 C) Carbon mass balances are ranged in between 96-99 %.
+Page 10 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+11
+Effect of oxidative environment on the ODH of butane at various N2O-to-butane molar ratios is shown in Figure 3. With N2O, the main products are butenes and butadiene, while the formation of carbon oxides is low. The conversion is low compared to using O2 and increased from 2 to 9 % as N2O-to-butane molar ratio increased from 1 to 2.8. This is accompanied by increasing the selectivity towards butadiene (Figure 3). No molecular oxygen was detected in the effluent gas in these experiments, which evidences the high reactivity of oxygen species.
+At both temperatures, the conversion of butane increases dramatically with increasing N2O- to-butane ratio up to 2.0. As this ratio is further increases, conversion and selectivity towards BD only marginally increase.
+4.2 Flow-rate
+Flow rate of feed gas is an important parameter in catalytic reaction that warrants additional attention. The Ni-Mo/Al2O3 catalyst was tested under different weight-to-flow velocities at 450 C. With increase in W/F, the butane conversion exhibits an increase and the selectivity towards BD also increases in all oxidative atmospheres. Similar BD selectivity observed suggests that the surface ODH is a relatively slow reaction, favoured from high to low W/F.
+On the contrary, selectivity to both trans-2-butene and cis-2-butene monotonically increases as W/F increases, clearly proving that isomerisation of 2-butenes is a fast reaction 41.
+However, the isomerisation to iso-butene seems to be a relatively slow reaction, since a low flowrate favours its formation. As expected, formation of coke is concomitantly supressed as W/F increases 42. The coke content on the used catalysts seems to correlate well with the BD selectivity, suggesting that BD may be a coke precursor, thereby promoting coke formation (Table 1). Among the oxidants used, the catalyst used with N2O oxidant showed a high amount of coke formation (18 %) on the surface of the catalyst which was measured by TOC analysis.
+Page 11 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+12
+Table 1: Catalytic performance over various oxidants at a temperature of 450 C (GHSV = 6000 h-1,oxidant/butane ratio of 2.0; Temperature = 450 C) Oxidant Conversion of n-butane (%) Selectivity (%)
+Amount of H2 formed (mol/g)*
+Total organic carbon* (%) Butenes 1,3- butadiene Cracked products
+O2
+71 32 25 6
+0.7
+4.2
+CO2
+7.5
+21 45 8
+3.5
+14.1
+N2O
+6.8
+29 61 4
+5.1
+18.5
+*measured after 3 h of reaction
+4.3 Oxygen species
+The comparison of runs of butane oxidative dehydrogenation by different oxidizing agents,i.e. O2, N2O and CO2 at 450 C, are summarized in Table 1. It can be clearly seen that the substitution of O2 with N2O and leads to substantial increase in selectivity to butadiene from 25 % to 61 %. The higher selectivity to butadiene in the presence of N2O was also observed over Ni-Mo/Al2O3 catalyst. On the other hand, fewer carbon oxides were observed. The differences between runs with different oxidizing agents are caused by the different natures of oxygen species formed on the catalyst surface. The active species in oxidative dehydrogenation with oxygen is the O2 - ion, which is less selective and supports the total and incomplete combustion of hydrocarbons, in contrast to the oxygen species formed upon decomposition of nitrous oxide1, 43, 44. Most authors consider O- radical or neutral atomic oxygen to be the active oxidizing species in the presence of N2O. These oxygen species govern the activity and selectivity in dehydrogenation step.
+When using O2 as oxidant, there is a negligible amount of H2 formed as any would be instantly consumed by the oxygen. When using N2O and CO2 as oxidants, some hydrogen is formed as the two are weaker oxidants. Hydrogen can form via water-gas shift reaction from H2O, which is formed during butane oxidation, and a side product CO.
+Page 12 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+13
+In literature 1, 13, 39, 45, it was reported that the reaction of C1- C4 alkanes with O- gives significant amounts of olefins, but no oxygenated products over transition metal oxides. The remarkable selectivity of N2O relates to a particular state of anion radical oxygen species Oα - which is named as α-oxygen 1, 46. N2O forms α-sites on the surface of the catalysts, but cannot form an O2 site. It is assumed that oxygen, upon adsorption on the catalyst surface can accept electrons one by one until transforming into a fully reduced form 47. Oxygen species may differ not only in charge but also in coordination, bond energy etc. In general, molybdate catalysts contains terminal oxygen species, leading to a conclusion that the doubly bonded lattice oxygen is responsible for selective oxidation 1, 46, 48. Selective oxidation is provided by strongly bonded lattice oxygen having nucleophilic nature, and complete oxidation is provided by weakly bonded reactive oxygen having electrophilic nature 26, 48. Under the conditions employed in the present study, we couldnt distinct between different oxidation species available on the catalyst surface. Therefore, one cannot exclude that lattice oxygen may react via its preliminary conversion into come more reactive form i.e. O- radical species 1,26, 48.
+The reaction with oxygen as oxidant showed higher butane TOF compared to the reactions with CO2 and N2O as oxidants (Table 2). Obtained TOF over Ni-Mo/Al2O3 catalyst in the present study is higher compared to other catalytic systems (Electronic Supplementary Information, Table S1). Thus, the anion radical oxygen species (α-oxygen) are the selective oxygen species for the production of butadienes from butane as observed by the productivity with the reaction which used N2O as oxidant.Table 2: Catalytic performance over various oxidants at a temperature of 450 C (Mcat= 500 mg; GHSV = 6000 h-1, oxidant/butane ratio of 2.0; Temperature = 450 C) Oxidant Butadiene/butenes Productivity* Ea (kJ mol-1) Butane TOF (10-4 s-1)
+O2
+0.28
+0.15
+75
+13.8
+CO2
+2.14
+0.51
+161
+6.3
+N2O
+3.82
+0.75
+112
+8.1
+Page 13 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+14
+*Productivity = gbutadiene. gcat -1 h-1; calculated using Arrhenius relationship (Electronic supplementary information, Figure S5)
+4.4 Mars-van-Krevelen mechanism
+The oxidative dehydrogenation of n-butane to butene and 1,3-butadiene follows the Marsvan Krevelen mechanism, as also reported by several researchers 2, 7, 8, 38. In this mechanism,chemisorption of n-butane, activation of CH bond, and abstraction of hydrogen from n- butane to form alkyl radical-metal cation intermediate are important steps in the oxidative dehydrogenation of n-butane 27, 49, 50. The rates of ODH are enhanced if the cation present in the catalyst is a weak acid and can be reduced with two electrons transferred from C-H bonds.
+Additionally, a high concentration of surface oxygen can also enhance the rate of ODH 7, 8, 13.
+This suggests that oxygen properties and acid properties of the catalyst play a very important role in the oxidative dehydrogenation of n-butane. Considering the mechanism of n-butane activation reported by various researchers 2, 9, 13, 39, 51, 52, it can be inferred that the amount of oxygen in the catalyst involved in the reaction (oxygen capacity) may serve as a crucial factor determining the catalytic performance, while the intrinsic mobility of oxygen in the catalyst involved in the reaction (oxygen mobility) may affect the working regeneration cycles of the catalyst during this reaction. However, to the best of our knowledge, a systematic research to see the influence of oxygen capacity and mobility of the catalyst in the oxidative dehydrogenation of n-butane has not been endeavoured yet.
+Page 14 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+15
+(a) (b)
+4.5 Catalyst characterisation
+Figure 5: (a) TPR profile of Ni-Mo catalyst under H2 and n-butane /Al2O3  atmospheres (b) and TPRO profile of Ni-Mo /Al2O3 catalyst under O2, N2O and CO2 atmospheres An oxidative dehydrogenation of alkanes is considered to proceed by a redox mechanism in which the reducibility of active sites is a key factor the catalyst activity 53. In order to measure the reducibility of Ni and Mo species and metal oxide support interaction, TPR analyses were performed under 5 % H2 in Ar and 5 % butane in He. In both reducing atmospheres the Page 15 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+16
+catalyst exhibited similar reduction behaviour with the Tmax of hydrogen consumption between 400460 C. The catalyst reduced at lower temperature under butane, which is probably due to the strong reducing nature of butane compared to hydrogen 13, 52, 54. The TPR profiles indicate that the surface species on alumina widely modified the reduction behaviour of molybdenum and nickel oxides. Usually, the reduction of supported MoO3 species occurs in several steps 13, while the reduction of NiO occurs above 500 C 55. The single peak at low temperature (< 500 C) can be due to the partial reduction of molybdenum along with NiO 53,55, 56. The aggregated MoO3 may also promote Ni intermediate reducible species of Ni and Mo, which may also occur in a single step reduction. It was also reported 56, 57 that the Ni-Mo active phase over various supports is reduced at lower temperature (<500 C) and exhibited a single reduction peak (<500 C), which is in agreement with the observations in our work.The reducibility of the catalyst is 89 % and 51 % under n-butane and hydrogen respectively.The XPS spectra of the fresh catalyst shows only Mo6+ species with Mo 3d5/2 and Mo 3d3/2 binding energies at 233.1 and 236.2 eV, respectively. After reduction with n-butane, the catalyst shows the Mo species with 3d5/2 binding energies for Mo5+ and Mo4+ species at 231.2 and 229.0 eV, respectively (Electronic Supplementary Information, Figures S1). In addition to this, the XPS profile of the fresh catalyst showed the Ni peaks which can be identified with Ni2+ in NiO species, with Ni 2p3/2 binding energies appearing at 854 eV. After reduction, this peak shifted to 853 eV, which represented the formation of Ni0 after reduction.However, the interactions of support depend on different parameters, such as isoelectric point of the support and the number of hydroxyl groups present on the surface of the support.According to Banares 58, there is some disagreement arising from the fact that some reports show correlation between catalytic activity and bulk reducibility of the molybdate catalyst,which may differ significantly from that of the surface sites and lead to different conclusions.TPR studies performed in this work showed no a correlation between bulk reducibility and activity of the catalyst. In this study, TPR profiles reflect the structural transformation of the starting high valence oxides into structurally distinct suboxides. Numerous investigations 59-61 claim that what could have a major effect on the activity in oxidative dehydrogenation is the re-oxidation and not the reduction of the catalyst during reaction conditions.It has been reported in literature 7, 38, 48, 49 that oxygen capacity and oxygen mobility of catalyst serve as crucial factors determining the catalytic performance in oxidative dehydrogenation of n-butane. In order to investigate the effect of various oxidants on the oxygen property of catalysts, TPRO experiments were carried out, where we tried to correlate Page 16 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.View Article Online
+DOI: 10.1039/C7CY01033H
+17
+the catalytic performance under different oxygen sources with the oxygen capacity of catalysts. In the TPRO experiment, the TPRO peak temperature and TPRO peak area reflect the oxygen mobility and the oxygen capacity, respectively 50, 60, 61.  The lower TPRO peak temperature (< 350 C) and the larger TPRO peak area correspond to the higher oxygen mobility and the larger oxygen capacity, respectively.  Figure 5b shows the TPRO profile of the catalyst under various oxygen sources. The three peaks in the range of 150 to 450 C under oxygen atmosphere specify that under oxygen environment the reduced catalyst undergoes a step-wise re-oxidation (Mo4+  Mo6+). The first peak can be ascribed to the surface oxygen sites of the catalyst, while the other two peaks can be attributed to fraction of lattice oxygens on the surface of the catalyst 62. Under CO2 atmosphere, there is a broad peak observed in the temperature range of 80-450 C, which indicates much adsorption and high activation ability of CO2 on the surface of the catalyst 39, 63. In general, the peak shift towards lower temperatures indicates a superior accessibility of the lattice oxygen. The peak shift towards lower temperatures was observed in the TPRO profile under N2O atmosphere along with a shoulder peak in the range of 250-350 C, suggesting that N2O has a stronger adsorption capability on the surface of the catalyst and it facilitates an easier migration of lattice oxygen from bulk to surface to complete the oxidation process 43, 62.  The degree of reduction is 84 % in the case of O2, 51 % in the case of CO2 and 61 % in the case of N2O. The XPS spectra of the re-oxidised catalyst ( with O2) showed Mo6+ species with Mo 3d5/2 and Mo 3d3/2 binding energies at 233.8 and 236.7 eV, respectively (Electronic Supplementary Information, Figures S1). The spectra were deconvoluted using the constraints of having equal spin-orbit splitting of Mo 3d peaks, and it showed most of the Mo species in the +6 oxidation state (68%).Among the oxidants used in this study, N2O showed an important difference in the catalytic performance. The observation made from both catalytic testing and TPRO experiments is that when N2O interacts with nickel molybdate catalysts, modifying the nature of the sites on the surface of the catalysts. When O2 is an oxidant, the amount of re-oxidised sites is higher than those observed in the presence of N2O. In other words, the surface of the catalysts is in a higher oxidation state in the presence of O2. Multiple peaks in the broad temperature range observed in TPRO profile are in agreement with this. To the contrary, the oxidation of surface is limited in the presence of N2O. These results suggest that under reaction conditions, N2O inhibits the total oxidation of the catalyst.Page 17 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.View Article Online
+DOI: 10.1039/C7CY01033H
+18
+To investigate the rates of reduction and oxidation a series of experiments with various heating rates were conducted (Electronic Supplementary Information, 4).  The rate of reduction (in the presence of 5 % H2) was obtained as 2.4 x 10-7 mol g-1 s-1 which is similar to the rate of oxidation (in the presence of 5 % O2) was obtained as 2.1 x 10-7 mol g-1 s-1.  The lower rate of oxidation could be due to the oxygen mobility in the Ni-Mo/Al2O3 catalyst. The activation energies were obtained as 110.3 kJ/mol for reduction and 132.2 kJ/mol for oxidation (Electronic Supplementary Information, Figures S2-S4). The similarity in the oxidation and reduction rates along with TPRO profiles indicates that the oxidative dehydrogenation of n-butane to butene and 1,3-butadiene over the Ni-Mo/Al2O3 catalyst follows the Marsvan Krevelen mechanism.
+To investigate the phases present after re-oxidation under various atmospheres, powder XRD was done. In the XRD profile of the present catalyst, two prominent diffraction peaks shown in the 2θ range at 46 and 67, which can be assigned to γ-Al2O3. An amorphous peak at 37 indicates the presence of NiO. On the other hand, lack of characteristic diffraction peaks for NiO at 43 and 67 indicates the presence of amorphous phase or monocrystalline NiO phases (PDF card no. 47-1049). Similar pattern was observed for the diffraction peaks of MoO3. The amorphous peak at 26 indicates the presence of MoO3 (PDF card no. 65-2421). The other characteristic peaks at 39, 46 and 66  were not observed clearly, which might be due to the presence of amorphous or monocrystalline phase of molybdenum oxide.
+After re-oxidation with O2, the catalyst showed the similar XRD pattern, which is supported by the TPRO profile that the surface oxygen species and the lattice oxygen species are completely redistributed into catalyst after TPRO experiment. After TPRO with N2O and CO2, catalyst showed an XRD pattern, different from that observed with O2, with some additional peaks. The peaks at 23, 32, 38 and 62 indicate the formation of NiMoO4 phase (PDF, card no.9-175) on the surface of alumina after TPRO experiment. The enhancement of peak intensity at 37, 46 and 67 suggested the conversion of NiO and MoO3 to NiMoO4 phase. The formation of peak at 23 with a shoulder indicates the overlap of MoO3 and NiMoO4 phase. The enhancement in the characteristic peak intensity of NiO and MoO3 suggests the formation of crystalline oxide phases of Ni and Mo after the oxidation with N2O and CO2. This could be due to the partial oxidation of metal oxides due to the low oxidation environment. In addition to NiMoO4 phase, the increase in the peak intensity at 46 and 67 might be due to the formation of stoichiometric NiAl2O4 spinel phase, as well.
+Page 18 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+19
+Figure 6: Powder XRD patterns of the catalyst after oxidising under different atmospheres
+4.6 Activation energy
+The activation energies (EA) for oxidative dehydrogenation of butane were determined through Arrhenius equation in the temperature range from 250 C to 550 C. The activation energy depend on the oxidant used, as shown in Table 2. When using O2 as oxidant, EA is 75 kJ mol-1. In CO2 and N2O atmosphere, however, EA is 161 and 112 kJ mol-1. Together with noticeably different conversion and selectivity, this further proves that reaction proceeds via fundamentally different mechanism and rate-determining step in O2 atmosphere.
+In O2 atmosphere, we postulate the rate-determining step to be the re-oxidation of active site on the catalyst, namely the formation of O-Mo and O-Ni species. In milder conditions, e.g. when using N2O and CO2, the surface oxygen is less reactive and the rate-determining step is abstraction of the first hydrogen atom from butane. This was further investigated and corroborated (vide infra) with DFT theoretical studies.
+4.7 Density functional theory calculations
+In DFT calculations, active catalyst phase was modelled as {110} facet of α-NiMoO4 64. In bulk, Ni and Mo atoms are octahedrally coordinated with oxygen atoms. The {110} facet can Page 19 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+20
+be additionally oxygen-terminated on Mo atoms, Ni atoms, or both. We found that Mo atoms were oxygen-terminated regardless of the oxidant used, while Ni atoms are oxygen- terminated only in the presence of O2, but with CO2 and N2O (see Figure 7). α-NixMoxO4x{110} +  O2 (g)  α-Nix(O)MoxO4x{110} E = 0.43 eV α-NixMoxO4x{110} +  O2 (g)  α-NixMox(O)O4x{110} E = 3.76 eV α-NixMoxO4x{110} + N2O (g)  α-Nix(O)MoxO4x{110} + N2 (g) E = +0.19 eV α-NixMoxO4x{110} + N2O (g)  α-NixMox(O)O4x{110} + N2 (g) E = 3.14 eV α-NixMoxO4x{110} + CO2 (g)  α-Nix(O)MoxO4x{110} + CO (g) E = +3.63 eV α-NixMoxO4x{110} + CO2 (g)  α-NixMox(O)O4x{110} + CO (g) E = +0.30 eV It should be noted that oxygen termination of Mo atoms in the presence of CO2 is also energetically favoured, as the CO produced is adsorbed atop Ni atoms in the first irreversible exothermic step, only to be subsequently desorbed. α-NixMoxO4x{110} + CO2 (g)  α-NixMox(O)O4x{110} + CO* E = 0.19 eV
+Figure 7: (left) O-Mo terminated {110} surface of NiMoO4 catalyst in CO2 and N2O atmosphere and (right) fully O-terminated surface in O2 atmosphere. Colour code: oxygen  red, nickel  green, molybdenum  grey.
+This difference in surface composition has profound effects on the conversion and selectivity,as fully oxygen-terminated facet favours oxidative decomposition of butane into cracked products and COx, while surfaces with only oxygen-terminated Mo atoms favour selective oxidation of butane into butenes and 1,3-butadiene, as shown below.
+Page 20 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+21
+Figure 8: Adsorbed butane over O-Mo terminated {110} facet of NiMoO4 catalyst. Colour code: carbon yellow, hydrogen  blue, oxygen  red, nickel  green, molybdenum  grey.
+Figure 9: Reaction pathway for selective oxidation of butane over O-Mo terminated {110} facet of NiMoO4 catalyst, i.e. in N2O and CO2 atmosphere. Activation barriers are in bold, reaction energies are in parentheses, all values in kJ mol-1.
+On O-Mo terminated surface (in CO2 and N2O atmosphere), butane preferentially adsorbs in the groove between O-Mo groups, above Ni atoms (see Figure 8). Energy of adsorption was calculated to be Eads = 0.58 eV (56 kJ mol-1). Activation energy for the abstraction of methyl Page 21 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+22
+hydrogen is +1.49 eV (144 kJ mol-1), while the abstraction of methylenic hydrogen is somewhat less likely with the barrier of +1.71 eV (165 kJ mol-1). These are the rate- determining steps with values in good agreement with experimental data from Section 4.6.
+Further dehydrogenation steps lead first to the formation of 1-butene and 2-butene, which have similar activation energies for desorption and further dehydrogenation, thus all products are expected and were identified among the products. Ultimately, butadiene is formed. As shown in Figure 9, the most likely pathway for selective oxidation to butadiene is therefore CH3-CH2-CH2-CH3  ·CH2-CH2-CH2-CH3  CH2=CH-CH2-CH3  CH2=CH-CH·-CH3
+CH2=CH-CH=CH2.
+Figure 10: Scheme of Mars van Krevelen mechanism of selective oxidation of butane over O-Mo terminated {110} facet of NiMoO4 catalyst in CO2 or N2O atmosphere. Bold numbers are activation barriers in kJ mol-1.
+Abstraction of hydrogen atom from the reactant results in the formation of OH groups on the catalyst, which is typical of Mars van Krevelen mechanism of catalysis (Figure 10). Hydrogen atoms are extremely mobile on the surface; activation barrier for migration of hydrogen between two adjacent OH groups was found to be 0.02 eV (2 kJ mol-1). This results in the recovery of one oxygen site and the formation of adsorbed water molecule with adsorption energy of 1.10 eV (106 kJ mol-1), which then desorbs. Oxygen vacancies are replenished Page 22 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+23
+with oxygen from the oxidant. Activation barriers for the reaction with N2O is 0.74 eV (71 kJ mol-1) and for CO2 is 0.73 eV (70 kJ mol-1), which is clearly not a rate-determining step.
+When molecular oxygen is used as oxidant, however, the barrier for vacancies replenishment drops to 0.64 eV (62 kJ mol-1) and leads to non-negligible formation of both, O-Mo and O-Ni surface species. Pathway for selective oxidation would remain as in Figure 10, but new pathway for total oxidation becomes possible. Such fully oxygen-terminated surface shows much greater reactivity towards butane decomposition. Butane weakly physisorbs (Eads =
+0.27 eV). It immediately reacts with surface O-Ni species into strongly bound butan-1-ol
+(EA = 0.05 eV, E = 3.57 eV) in a very exothermic reaction. Butan-1-ol is then quickly decomposed into cracked products and COx. Hydroxyl hydrogen quickly migrates across the surface O-Ni groups (EA = 0.10 eV),yielding butyloxidanyl
+(CH3CH2CH2CH2O·).
+Subsequently, both hydrogen atoms are abstracted, yielding butanal (CH3CH2CH2CHO) and butyloxidanyl (CH3CH2CH2CO·) in the process with activation barriers of 0.25 eV (24 kJ mol- 1) and 0.49 eV (48 kJ mol-1), respectively. Butyloxidanyl is prone to C-C bond cleavage,ultimately yielding cracked products and COx. These results support experimental data.
+Different surface species when using O2 (O-Ni and O-Mo) as oxidant in comparison to using N2O and CO2 (only O-Mo) are responsible for markedly different conversion and selectivity.
+Our calculations show the abstraction of first hydrogen atom to be the rate-determining step in selective oxidation of butane with activation energy of 144 kJ mol-1. This is in good agreement with experimental values of 161 kJ mol-1 and 112 kJ mol-1 when using N2O and CO2, respectively. CO2 is deemed a weaker oxidant on the account of having higher activation energy, lower productivity, and lower butadiene/butenes ratio. Despite the same reaction mechanism postulated in DFT modelling, we aim to explain these differences by different affinity of the surface for replenishing oxygen with CO2 (E = 0.19 eV) and N2O (E =
+3.14 eV). In case of N2O, all Mo atoms are believed to be oxygen-terminated, which might
+not be the case with CO2. Additionally, CO2 is converted into CO in the process, which can stay adsorbed on the catalyst, diminishing its active surface further.
+Fully oxygen-terminated surface favours total oxidation of butane to cracked products and COx, as butane immediately and irreversibly transforms into butan-1-ol. The rate-determining step is replenishing surface vacancies with oxygen, which has a calculated reaction barrier of Page 23 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+24
+62 kJ mol-1, which is also in good agreement with experimentally determined value of 75 kJ mol-1.
+Conclusions From our experimental and theoretical results, we conclude the following:
+1. CO2 and N2O are useful reagents for oxidative dehydrogenation of n-butane over Ni-
+Mo/Al2O3 catalyst, exhibiting advantageous selectivity over using oxygen.
+2. The most abundant product of selective oxidation was butadiene with productivity up
+to 0.89 gbutadiene. gcat -1 h-1 when using N2O as an oxidant, 0.61 gbutadiene. gcat -1 h-1 when using CO2 as an oxidant and 0.21 gbutadiene. gcat -1 h-1when using O2 as an oxidant.
+Cumulative selectivity of all C4 olefins was up to 80 % when CO2 and N2O were used as oxidants.
+3. Using soft oxidants like N2O and CO2 limits the formation of electrophilic oxygen
+species, which promote the oxidation of alkenes to carbon oxides, on the surface of the catalyst, thereby increasing the selectivity towards butadiene. The coke content on the used catalysts correlates well with the selectivity towards butadiene, suggesting that butadiene may be a coke precursor.
+4. TPRO profiles showed N2O had a stronger adsorption capability on the surface of the
+catalyst compared to CO2 and O2 and that it facilitates easier migration of lattice oxygen from bulk to surface to complete the oxidation process. After TPRO experiment with CO2 and N2O, a partial oxidation of the catalyst was observed in
+XRD.
+5. The experimentally determined activation energy (EA) with CO2 and N2O as oxidants,
+161 and 112 kJ mol-1, respectively, is in good agreement with theoretically predicted activation energy 144 kJ mol-1 for the abstraction of first hydrogen atom from butane,suggesting that this is the rate-determining step.
+6. In oxygen atmosphere, the experimentally determined activation energy 75 kJ mol-1.
+This is in close agreement with theoretically calculated value of 62 kJ mol-1 for re- oxidation of the surface. Calculated activation barriers for other steps are lower,confirming that the re-oxidation of surface is the rate-determining step.
+7. Calculated reaction barriers from DFT are in excellent agreement with experimental
+data, proving the postulated reaction mechanism to be sound. Selective oxidation of butane to butenes and, ultimately, butadiene proceeds with the transfer of hydrogens to Page 24 of 28 Catalysis Science & Technology Catalysis Science & Technology Accepted Manuscript Published on 21 June 2017. Downloaded by University of California - San Diego on 23/06/2017 17:52:55.
+View Article Online
+DOI: 10.1039/C7CY01033H
+25
+O-Mo species on the catalyst. Total oxidation proceeds on fully oxygen-terminated surface via O-Ni species and yields cracked products and COx. As typical for Mars van Krevelen mechanism, surface oxygen species (O-Mo and O-Ni) are recovered via recombination with two hydrogen atoms to water molecule, its desorption and the replenishment of the ensuing vacancy with oxygen from gaseous oxidant (O2, N2O, or
+CO2).
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the mechanisms of C-H bond activation and catalyst regeneration in oxidative dehydrogenation of alkanes for redox-active and redox-inactive metal oxide catalysts, explaining the role of traditional oxidants and CO2. Include a discussion on the effectiveness of different catalysts (such as V2O5, VOx/SiO2, CeO2, and transition metal clusters) in activating CO2 for oxidative dehydrogenation of propane, considering the proposed mechanisms and energy barriers for CO2 dissociation.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

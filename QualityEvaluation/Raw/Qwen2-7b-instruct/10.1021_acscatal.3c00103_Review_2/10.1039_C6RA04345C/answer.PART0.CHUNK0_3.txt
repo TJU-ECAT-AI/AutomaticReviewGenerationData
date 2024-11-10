@@ -1,0 +1,42 @@
+<quotes>
+[1] "The d-band center for metals and bimetals has been widely used in order to understand activity trends in metal-surface-catalyzed reactions."
+[2] "Machine learning (ML) methods are being increasingly used in molecular science and materials science."
+[3] "Considering that first-principles calculations are too time-consuming to explore the full spectrum of possibilities, and on the other hand, a great amount of data is being generated and accumulated in the field, ML methods can give a fast and high-precision alternative to the first-principles models."
+[4] "We report herein the ML-based prediction of d-band center for metals and bimetallic compounds."
+[5] "In order to demonstrate the potential use of ML methods in catalysis, we report herein the ML-based prediction of d-band center for metals and bimetallic compounds."
+[6] "Using the DFT method, Nrskov's group first calculated the d-band centers for 11 kinds of metals (Fe, Co, Ni, Cu, Ru, Rh, Pd, Ag, Ir, Pt, Au) and their 110 pairwise bimetals with two different structures (surface impurities and overlayers on clean metal surfaces)."
+[7] "In the original tables, the d-band centers for bimetals are given as shifts relative to the clean metal values, and they are converted to the values relative to the Fermi level."
+[8] "Our result shows sufficient predictability of d-band center by ML methods using a small set of readily available properties of metals as descriptors."
+[9] "This paper quantitatively investigates a fully data-driven approach based on ML that infers the d-band center of a metal or a bimetal from those of some other metals and bimetals."
+[10] "Given the rapid growth of various data in recent years, this would suggest the promising role of ML methods that bypass or complement the first-principles calculations."
+[11] "Regarding the choice of descriptors for metals, we pre-tested several candidates and chose nine physical properties (Table 3), which are readily available from the periodic table and a handbook."
+[12] "From a practical point of view, it is important to choose readily accessible but characteristic values as descriptors in order to effectively bypass time-consuming DFT calculations with keeping good prediction accuracy."
+[13] "For prediction of the d-band center for bimetals made of Mh and Mg, an 18-dimensional concatenated vector of Mh and Mg is used."
+[14] "We also searched for smaller subsets of descriptors yielding simpler models by assessing the relevance or redundancy of each descriptor."
+[15] "Note that this method is well established in statistics, and called Monte Carlo cross validation, or other various names such as leave-n-out, random permutation cross validation (shuffle and split), and random subsampling cross validation."
+[16] "For ML methods, we use two linear and two nonlinear regression methods (Table 6)."
+[17] "In this paper, we use a widely used package, scikit-learn (http://scikit-learn.org)."
+[18] "In practice, besides the target parameters to be estimated from the training set, some models also have tuning parameters that need to be set before training, and appropriate setting of this parameter is the key to the success in prediction."
+[19] "Among the various nonlinear methods we pre-tested, GPR and GBR showed two of the best prediction performances."
+[20] "Clearly, the test set of the linear models (OLS and PLS) show larger deviations than the nonlinear models (GPR and GBR), and those of the GBR model shows the least deviation from the line."
+[21] "For more quantitative evaluation, we perform 100 random trials of this single-shot leave-25%-out."
+[22] "As seen in Table 7, the mean RMSE values of the linear models, OLS (0.26 ± 0.03 eV for test) and PLS (0.26 ± 0.03 eV for test), are larger than those of the nonlinear models, GPR (0.21 ± 0.05 eV for test) and GBR (0.17 ± 0.04 eV for test), suggesting that the nonlinear models are more accurate than the linear models."
+[23] "From these results, we concluded that GBR would be the best choice for the prediction of the d-band centers for the surface impurities (Table 1)."
+[24] "Next, we investigated the relevance or redundancy of each of the 18 descriptors in Table 3, which were used in the GBR model."
+[25] "To evaluate the effect of the number of descriptors on the predictive performance of GBR, the prediction results with 18 (all), the top 6 and the top 4 descriptors are compared as shown in Fig. 3."
+[26] "Furthermore we observed that the prediction accuracy with 6 descriptors were better than with 4 descriptors when we increased the test set from 25% to a higher percentage."
+[27] "Thus we used the GBR model with the top 6 descriptors for the subsequent analysis."
+[28] "Lastly, we investigated how large training set is required for ML to achieve sufficient prediction performance."
+[29] "These results quantitatively showed a general trend of ML where the more data we have, the better we get, and also showed that we can predict the d-band center for the surface impurities (Table 1) with a moderate level of accuracy (RMSE = 0.38 ± 0.07 eV) even when only 25% of the data are available and 75% are missing."
+[30] "Similar to the results in Fig. 1, the comparison of the four ML methods with the 18 descriptors (Fig. 5) showed that the predictions with GBR were better than with the other methods."
+[31] "Thus again, we adopted GBR for further analysis."
+[32] "From these results, we can conclude that the d-band centers for the surface overlayers (Table 2) can be predicted by the GBR method using 6 descriptors with a moderate accuracy (RMSE = 0.41 ± 0.08 eV), even when only 25% of the data are available and 75% are missing."
+</quotes>
+
+<EnglishVersionAnswer>
+The document discusses the application of machine learning (ML) techniques in predicting the d-band center for metals and bimetals. The d-band center is crucial in understanding the activity trends of metal-surface-catalyzed reactions. By using ML methods, the study aims to infer the d-band center of a metal or bimetal based on those of other metals and bimetals, providing a faster and more precise alternative to traditional first-principles methods. The document highlights the use of ML methods like gradient boosting regression (GBR) for predicting the d-band center, showing that these methods can achieve a sufficient level of accuracy even with a limited dataset, which suggests the potential role of ML in catalyst design. The predictive power of ML models is demonstrated through Monte Carlo cross-validation, which evaluates the models' ability to predict unseen data. The study also emphasizes the selection of descriptors (properties of metals) that are readily available and characteristic, allowing for efficient prediction while bypassing time-consuming computational methods. The results indicate that GBR is particularly effective in predicting the d-band center, even when using a reduced set of descriptors, highlighting its potential in enhancing the design and performance optimization of supported metal catalysts for industrial applications.
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+本文讨论了在金属和双金属的d带中心预测中机器学习（ML）技术的应用。d带中心对于理解金属表面催化反应的活性趋势至关重要。通过使用ML方法，研究旨在根据其他金属和双金属的d带中心推断出金属或双金属的d带中心，提供了一种比传统第一原理方法更快更精确的替代方案。本文强调了在预测d带中心时使用ML方法（如梯度增强回归）的重要性，显示即使使用有限的数据集，这些方法也能达到足够的准确度，这表明ML在催化剂设计中的潜在作用。通过蒙特卡洛交叉验证，研究评估了模型预测未见数据的能力，以展示ML模型的预测能力。研究还强调了选择可用于高效预测的描述符（金属属性），这些描述符是现成的且具有特征性，允许绕过耗时的计算方法。结果表明，梯度增强回归在使用减少的描述符集时特别有效于预测d带中心，突显了其在工业应用中增强支持金属催化剂设计和性能优化的潜力。
+</ChineseVersionAnswer>

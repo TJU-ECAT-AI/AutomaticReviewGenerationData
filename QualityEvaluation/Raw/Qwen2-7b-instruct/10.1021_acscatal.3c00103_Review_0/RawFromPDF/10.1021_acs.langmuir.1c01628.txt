@@ -1,0 +1,283 @@
+element not found
+
+LangmuirVol 37/Issue 43Article
+Cite
+Share
+Jump to
+Expand
+ARTICLEOctober 24, 2021
+Sintering Rate and Mechanism of Supported Pt Nanoparticles by Multiscale Simulation
+Wei Wang
+Senjun Yao
+Shengwei Deng*
+Yinbin Wang
+Chenglong Qiu
+Chengli Mao*
+Jian-guo Wang*
+Open PDF
+Supporting Information (1)
+Abstract
+Thermal stability is the key issue in the industrial application of supported metal nanocatalysts. A combination method of density functional theory calculations, machine learning, and molecular dynamics simulation is adopted to study the sintering behavior of supported platinum (Pt) nanoparticles on graphene or TiO2 nanosheet, and analyze sintering mechanisms under different temperatures, particle sizes, and metal support interactions (MSIs). The results show that the agglomeration of supported nanoparticles is mainly based on the mechanism of small particle migration and growth. Small-sized particles with high surface energy determine the sintering rate. In addition, the increase of temperature is conducive to the agglomeration of particles, especially for systems with strong MSI. Based on the analysis of the sintering process, a sintering kinetic model of supported Pt nanoparticles related to particle size, temperature, and MSI is established, which provides theoretical guidance for the design of supported metal catalysts with high thermal stability.
+This publication is licensed under the terms of your institutional subscription. Request reuse permissions.
+Copyright © 2021 American Chemical Society
+Subjects
+what are subjects
+Metal Nanoparticles
+Nanoparticles
+Oxides
+Platinum
+Sintering
+1. Introduction
+Supported noble-metal catalysts have been widely used in various fields of industrial production (such as fine medicine and chemical industry, petrochemical industry, energy chemical industry, etc.). (1−4) Noble-metal particles with high catalytic activity are dispersed on support materials with high specific surface area. Previous research proves that high-performance (such as high turnover frequently) supported catalysts often use nanoscale or subnanoscale metal particles, which can not only improve the atomic utilization rate of noble metals, but also take advantage of the size effect, surface, and interface effects of the material to improve the reactivity. (5,6) However, small-sized active metals have high surface energy and are prone to sintering and agglomeration under the reaction environment, resulting in reduced catalytic activity and even inactivation. (7) In particular, such catalysts often encounter severe reaction conditions such as high temperature and high pressure. (8) Therefore, how to maintain the catalytic activity of highly dispersed noble metal nanoparticles is a bottleneck restricting the wide application of supported noble-metal catalysts, and the research on the thermal stability of these catalysts is of high importance.
+In the reaction environment, there are many factors that affect the thermal stability of the supported metal nanoparticles, and they correspond to different sintering mechanisms. For example, in a high-temperature reaction environment, the surface sintering rate of metal atoms increases as the kinetic energy of metal particles increases, which lead to an increase in the probability of collisions between particles and result in the particle agglomeration. (9) Noninert gases in the environment will also affect the stability of the supported particles. For example, metal oxides produced by metal oxidation in an oxygen atmosphere have a tendency to move along the surface, resulting in a significant increase in the sintering rate of the particles, relative to an inert gas environment. (10) Driven by the Gibbs free energy, small particles will diffuse on the surface to form larger three-dimensional particles. According to the different movement modes of the particles, the growth mechanism of particles can be roughly divided into the Ostwald effect and particle migration and growth. (2,11) The above influencing factors and sintering mechanism can explain the experimental phenomenon to a certain extent, but to design a highly stable supported noble metal catalyst based on the real reaction environment, it is necessary to conduct an in-depth analysis of its sintering process and mechanism for the specific system. However, the current experiments to investigate the influence of a single adjustable factor on the sintering behavior of particles have put forward high requirements and a large workload for material preparation, especially the use of in situ experimental technology to study the sintering and migration process of atoms in nanoparticles is relatively difficult. As an effective research method, computer simulation has shown its unique advantages in studying the movement of particles on the nanomicroscale. (12,13) At present, there have been many studies on the nanoparticle morphology and structure evolution using computational simulation methods, such as the sintering process of metal nanoparticles in vacuum. (14) However, there are few works on the sintering behavior of supported noble-metal nanoparticles.
+The molecular dynamics method is an effective simulation method for studying the sintering process of metal nanoparticles at the atomic level. For the sintering behavior of supported noble-metal nanoparticles, the accurate force field of the interaction between the particles and the support is the key to the reliability of the simulation results. However, there is still a lack of mature molecular force fields for this system, and it is very important to propose an efficient and reliable force field fitting scheme for the study of the sintering behavior and mechanism of this system. In recent years, thanks to the wide application of artificial intelligence in materials chemistry and other fields, machine learning has played an important role in the efficient fitting of force field parameters. (15,16) The introduction of intelligent algorithms is also expected to provide an efficient strategy for the construction of the molecular force field of the supported nanocatalysts. The supported noble-metal catalyst made of metallic platinum (Pt) as the main active component is a catalyst often used in chemical, petroleum, and chemical reaction processes. Therefore, in this paper, two typical support materials (graphene (17−20) and two-dimensional TiO2 (21,22)) with different MSIs are selected, based on density functional theory (DFT) calculation data (23) and machine learning algorithms to fit the molecular force field between the metal and the support, and molecular dynamics methods are used to study the sintering behavior of the particles under different conditions. Finally, a sintering kinetics model of supported Pt nanoparticles is established based on the simulation data.
+2. Simulation Methods
+2.1. Interaction Energy Calculation and Initial Structure Construction
+All calculations based on DFT calculation were performed using Vienna ab initio simulation package (VASP). (24) The generalized gradient approximation (GGA) and the projector-augmented wave (PAW) method were applied to optimize the structure and minimize energy. (25,26) The cutoff energy of the plane wave basis-set accompanied the convergence criteria of geometry and energy was set to be 400 eV, 0.01 eV/Å, and 10–4 eV, respectively. The charge density difference was analyzed using the VESTA code. (27) The climbing-image nudged-elastic-band (CI-NEB) method (28) was applied to calculate the interaction between Pt clusters and support. The coordinates of each atom and binding energy are used for subsequent data analysis.
+The cubic PtN particles (N = 55, 147, 309, 561, and 923, which represent the number of Pt atoms in corresponding Pt particles), graphene and TiO2 are all built by Forcite module in Materials Studio software with geometric optimization and charge balance, and the visualization after simulation is obtained with OVITO software. In order to improve calculation efficiency, all bases are fixed. Periodic boundaries are applied to the x- and y-directions, and fixed boundaries are applied to the z-direction. The target temperature is set to 500, 600, 700, 800, 900, or 1000 K, the size of the graphene substrate is 170.434 Å × 98.400 Å × 80.000 Å, with 6521 atoms, and the size of the TiO2 substrate is 143.088 Å × 157.1112 Å × 80.000 Å, with 20 736 atoms.
+2.2. MD Simulation of the Sintering Process
+All molecular dynamics (MD) simulations are performed on the Large Atomic/Molecular Parallel Simulator (LAMMPS). (29) The interaction between metal particles is described by the EAM (embedded-atom method) potential, (30) and the Morse potential (31) of the interaction between the metal and the support is calculated. The EAM potential is a multibody potential that can effectively predict metal structures, including the Pt-related force field parameters used in this work. The total potential energy is defined as
+(1)
+where Fi(ρ) is the energy required for the atom i to embed the background electron density, ρj is the electron density of the atom j, and φij(rij) is the repulsion energy corresponding to the distance rij between the nuclei of the atom i and j.
+The definition of Morse potential is
+(2)
+where α and D respectively correspond to the reciprocal distance and the constant of energy, and r* corresponds to the equilibrium distance between two atoms.
+In order to obtain the equilibrium structure of the supported particles, a single particle is placed on the support, and the MD simulation is used to perform a 500 ps equilibrium simulation under the NVT ensemble (canonical ensemble) at a temperature of 300 K with a time step of 2.5 fs. And then, the temperature is increased to 1200 K within 1250 ps, and the equilibrium simulation of 2500 ps is performed, and finally the temperature is cooled to 10 K within 5000 ps, and then the equilibrium simulation of 500 ps is performed. When studying the sintering process, two PtN particles of the same or different sizes are placed on the support with an initial spacing of ∼5 Å (that is, the distance between the nearest two atoms on the two particles). Based on our simulation result, 5 Å is an ideal distance, which can well show the particle sintering behavior of the current system at different temperatures. The time step of MD simulation is 1 fs, 200 ps is simulated under the temperature of 10 K and NVT ensemble, and then, the temperature is quickly (within 40 ps) raised to the specified temperature before the upcoming simulation of the sintering process. The NVE ensemble (microcanonical ensemble) is used in the sintering stage, and the simulation time of each system is 20 ns.
+3. Results and Discussion
+3.1. Determination of Pt/Support Interaction Potential Parameters
+The universal force field (32) is unable to accurately describe the structural evolution of Pt nanoparticles on the above-mentioned two supports. Therefore, to accurately describe the interaction between the metal and the support atoms, we used fitting interatomic potential parameters for Pt and graphene or TiO2, which were determined by fitting the Morse potential function to the interaction energies between Pt and graphene or TiO2 calculated by DFT. The use of the interaction between a single Pt atom and the support to fit the force field parameters often leads to excessive MSI, which does not agree with the actual experimental observations. Therefore, the interaction energies between the Pt clusters and the support calculated by the DFT method are used as the force field parameter fitting target. First, the DFT method is used to optimize the geometric structure of clusters of different sizes (containing 4, 7, 10, 13, and 16 Pt atoms, respectively), and then the optimized clusters are placed on the top of graphene or two-dimensional TiO2. The distance R from the surface of the support varies from 1.5 Å to 5.0 Å, with an interval of 0.1 Å. Therefore, 36 binding energy data can be obtained by DFT calculation for each cluster on the same support material. The binding energy calculation formula is as follows:
+(3)
+where Eint is the interaction energy between the Pt cluster and substrate, EPtN is the total energy of the N-atom Pt cluster supported on substrate, and EPtN and Esub are the total energy of the DFT-optimized N-atom Pt cluster and substrate, respectively. In the calculation process, when the distance between the cluster and the support is equal to or greater than 8 Å, the interaction energy between the two species is almost negligible. Therefore, the cutoff distance of the interaction force is set to 8 Å, that is, the interaction energy Eint is the sum of the interaction forces between all Pt atoms (total number of N) in the cluster and all support atoms within the cutoff distance.
+In the process of force field parameter fitting, the two-body potential function model uses the common Lennard-Jones (LJ) potential (33) and Morse potential. Taking the force field parameter fitting between Pt/TiO2 as an example, a total of 5 × 36 = 180 binding energy data is generated between 5 clusters of different sizes and the support. The interaction between Pt atoms in the cluster and Ti or O atoms in TiO2 can be described by one of two potential functions. Each potential function has two or three unknown parameters, and these parameters have a certain reasonable range. In view of the characteristics of the data and computational complexity, the parameter fitting using traditional optimization algorithms (such as the Levenberg–Marquardt method) is time-comsuming. (34,35) To obtain the appropriate force field parameters efficiently and accurately, this paper uses genetic algorithms (GAs) to implement the fitting of force field parameters. Genetic algorithm (36) is an artificial intelligence global probability search methodology that uses the process of evolution and natural selection theory and is under the umbrella of evolutionary computing algorithm. This method can be effectively used for the optimization and nonlinear fitting of the force field parameters of the current system. This problem may be expressed by minimizing the root mean squared error (RMSE) value under a combination of different potential functions for each atom pair.
+GA is a discrete and nonlinear process, which makes it a stochastic global search method. Each parameter (force field parameters in LJ or Morse potential functions) to be optimized is a gene. The collection of these comprises a chromosome. Using mathematical operations to mimic biological functions-crossover (mating), mutation, and selection of the fittest, the GA seeks to isolate optimum parameters in a complex, multidimensional error surface. In the present application, a fit chromosome corresponds to force field parameters that accurately reproduce the interaction energies between Pt clusters and graphene or TiO2 calculated by DFT. The two potential functions used in the fitting process are as follows. The LJ potential contains two unknown parameters: equilibrium distance (σ) and constant energy (ε). The Morse potential (eq 2) contains three unknown parameters: α, r*, and D.
+The general idea of force field fitting is shown in Figure 1. First, the reasonable ranges (upper bound and lower bound) of each force field parameter (gene) are set (e.g., r0 should be in the interval of [0, 8 Å]), and then select the potential function used between each atom pair, using the method of generating random numbers within a reasonable range to generate the initial parameter set (chromosome), through a series of operations such as evolution, selection, crossover, and mutation, to obtain multiple parameter sets that meet the RMSE standard (less than the set threshold), that is, the binding energy Er′ with different sites or cluster sizes are calculated by the parameter set and potential function. These data then are compared with the corresponding DFT calculation value (Er) and the RMSE is calculated:
+Figure 1
+Figure 1. Flowchart of the genetic algorithm for fitting the force field.
+According to the different potential functions selected by each atom pair, we can get a variety of parameter groups. To prevent the solution of the problem falling into the local optimal solution, we set the number of groups to obtain multiple solutions with reasonable differences, and set the RMSE threshold of each group of solutions. The calculation result shows that all the parameters estimated can lead to the final RMSE values under 0.2, some of which even can be under 0.05. With the help of OpenMP API of C++, the entire process has been highly accelerated. To ensure that the selected parameter group can effectively describe the interaction between the particle and the support, we simulate the morphology of particles of different sizes in MD simulation based on selected parameter group (shown in Table 1). The particle structures are not destroyed and reasonable to show the influence of MSI.
+Table 1. Morse Potential Parameters for Pt/TiO2 and Pt/Graphene
+  Pt/Graphene Pt/TiO2
+Morse force field parameter Pt–C Pt–O Pt–Ti
+D (eV) 0.06836 0.03143 0.38842
+α (1/Å) 2.28 1.99 2.02
+r0 (Å) 2.58 2.89 2.75
+3.2. Analysis of the Morphology and Structure of Supported Nanoparticles
+3.2.1. Interfacial Control of the Crystal Structure of Pt Nanoparticles
+The crystal structure of the supported nanoparticles is significantly different from that of the nanoparticles in vacuum, because of the MSI. (37) In order to study the crystal structure of Pt nanoparticles after loading, the topological analysis tool known as the common neighbor analysis (38) (CNA) is used for the structural analysis. The cutoff radius of Pt particles in CNA is 3.34593 Å, which is derived from the value of the first trough in the radial distribution function (RDF) graph of bulk Pt materials (Figure S3 in the Supporting Information). First, Pt nanoparticles with atoms arranged in face-centered cubic stacking (FCC) were constructed, and then placed on a graphene or two-dimensional TiO2 support. Because of the MSI, the morphology and structure of the particles began to change at 1200 K. In the initial stage of structural evolution, Pt particles have only two ways of stacking; more than 60% of the atoms are FCC, and the rest are amorphous atoms (Figure 2). After a certain period of equilibrium simulation, the composition of Pt particles assumes three types of atomic arrangements: FCC, amorphous, and hexagonal closest packing (HCP). There are obvious differences in the atomic arrangements of Pt particles on different MSI supports. Pt nanoparticles supported on graphene have more FCC than HCP when the structure is at equilibrium, while the HCP is more than FCC when supported on TiO2, which is related to the strong MSI between PtN and TiO2. In addition, temperature has a significant effect on the crystal structure of the supported Pt nanoparticles. When the temperature is close to the melting point of the Pt particles, the atoms overcome the binding energy between the crystal lattices and become a disordered structure (amorphous); when the temperature decreases, the Pt returns to the crystalline state with order arrangement structure. Through the above analysis, MSI has great influence on the morphology and structure of Pt particles, which, in turn, affects the sintering behavior on different supports.
+Figure 2
+Figure 2. CNA diagrams of Pt923 during the annealing process on (a) graphene and (b) TiO2 substrates.
+3.2.2. Melting Point of Supported Nanoparticles of Different Sizes
+The surface energy increases sharply when the size of metal particles is reduced to the nanometer level, and the melting point also decreases significantly compared with bulk materials. (39) Melting point analysis can help us analyze the influence of particle size during the sintering process. In order to obtain the melting points of the particles on supports with different MSIs, the potential energy mutation of Pt particles is selected as the criterion (as shown in Figure 3a and b). (40) The simulation of the melting point is performed under the NVT ensemble with a time step of 2.5 fs. During the simulation process, the system was gradually heated (the temperature range was 100–1800 K, with an interval of 100 K), 2 million steps were simulated for each temperature, and the average of the potential energy of the Pt particles in the last 100 000 steps of each simulation was recorded. After obtaining the melting point range for a specified particle size, keep other simulation conditions unchanged, and change the heating step length from 100 K to 10 K to rerun the simulation in this range, to obtain more accurate melting point data.
+Figure 3
+Figure 3. Variation of potential energy (Pe) with temperature for different systems: (a) PtN/graphene and (b) PtN/TiO2. (c) The melting point varies with the number of Pt atoms on different substrates.
+From the results of the melting point, the melting point of the nanoparticles is significantly lower than the melting point of the bulk Pt material. The melting point of Pt particles increases as the particle size increases, and as the particle size increases, the increase in melting point gradually gets smaller. Especially, in the case of the same particle size, the melting point of the supported particles is significantly higher than that of the particles in vacuum. Comparing the melting points of Pt particles supported on the surface of graphene and TiO2, it can be found that the properties of the support have a great influence on the melting point of the Pt particles. The Pt particles supported on the strong MSI support (TiO2) have a higher melting point than those supported on weak MSI support (graphene), especially when the particle size is small, this difference is more significant (see Figure 3c, Pt particles with N = 147). The above results indicate that there is a one-to-one correspondence between the melting point of the particles and the particle size, and the melting point of the supported particles will increase significantly. In the presence of the substrate, van der Waals forces inhibit the sintering between the nanoparticles. For example, graphene-supported copper nanoparticles have a relatively higher sintering start temperature than isolated nanoparticles. (37) Therefore, the movement of atoms on the particles is limited by MSI, which concludes that Pt particles has better thermal stability under strong MSI.
+3.3. Simulation of the Sintering of Two Pt Nanoparticles on the Graphene or TiO2 Surfaces
+3.3.1. Structural Evolution during the Sintering Process
+For the supported metal catalyst in a reaction environment, the Ostwald effect and particle migration are recognized as the two main growth mechanisms of support particles. The simulation results show that when the temperature is not too high (below the melting point of the Pt bulk material), the sintering of Pt particles on graphene and two-dimensional TiO2 conforms to the particle migration mechanism. As shown in Figure 4, during the sintering process of particles on the graphene support, because of the weaker MSI between the Pt and graphene, the Pt particles migrate from small particles to large particles with almost no deformation; meanwhile, on the TiO2 support, when one of the Pt particles is small, the surface energy of the small particle is large, and it quickly migrates to the large particle after overcoming the strong interaction between the Pt particle and TiO2; when the two Pt particles are both large in size, the particle will be affected by strong MSI, making it difficult to migrate. Some of the atoms on the relatively small Pt particles will first break away from themselves and sinter with the larger particles, forming a neck between the two particles, and then sintering as a whole. The formation of the neck is mainly due to the strong MSI between Pt and TiO2.
+Figure 4
+Figure 4. Sintering morphology evolution of Pt923–Pt561 at 1000 K on (a–c) TiO2 and (d–f) graphene.
+Taking the sintering process of Pt923 and Pt561 as an example, a clear neck is formed between the particles. We select the 5 Å area in the middle as the neck area. The width of the neck is generally defined as the size of the neck. The size of the neck is divided into three stages (Figure 5). In the first stage, the size of the neck is ∼3 Å. At this time, only part of the atoms in the particles move to form the neck; the second stage is the sudden increase in the size of the neck, and there are more particles at this time migrating to the neck, and the particles are moving from the neck sintering stage to the overall sintering stage. In the third stage, the neck remains at a constant value, which is approximately equal to the average of the two particle radii. At this time, there is already a large range of atomic exchanges inside the particles. Temperature has little effect on the size of the neck, which mainly affects the time length for the existence of the neck. The higher the temperature, the shorter the time the neck exists. In summary, metal particles exhibit different sintering behaviors on different MSI supports. On the graphene substrate, the sintering behavior is migration due to the weak MSI, while on the TiO2 substrate, the particle is difficult to migrate due to the strong MSI, and necks are generated as the particles increase. This also provides a reference for the MSI control of the thermal stability of supported nanoparticles.
+Figure 5
+Figure 5. (a) Neck morphology during the sintering process of Pt923–Pt561 on TiO2 and (b) the variation of the radius in the neck region of Pt923–Pt561 on TiO2 at 700–1000 K.
+3.3.2. Effect of Particle Size and Temperature on the Sintering Process
+To explore the sintering rate of two particles under various impact factors, we introduced the concepts of shrinkage ratio (S) and shrinkage rate (V), (41) which are defined as follows:
+(4)
+(5)
+where L0 is the initial centroid distance of the two particles, and L is the real-time centroid distance of the two particles. It can be seen from the Figure 6 that the shrinkage ratio has a strong temperature dependence. In order to visualize the sintering rate of particles, we define the sintering rate as the integral of the shrinkage ratio, with respect to time. The maximum value of this integral area is numerically related to the selected simulation time, but does not affect the qualitative comparison of sintering rates among different systems or systems with different sintering conditions.
+Figure 6
+Figure 6. Curves of shrinkage ratio over time on different systems: (a) Pt309-Pt147/graphene and (b) Pt309-Pt147/TiO2.
+For different chemical reactions, the catalytic activity and selectivity are closely related to the size and morphology of the supported nanoparticles. (42) Therefore, it is necessary to study the effect of particle size on the sintering behavior for the design of highly stable supported catalysts. In the simulation process, one Pt55 particle and one PtN particle are loaded on the graphene or TiO2 supports, where N = 55, 147, 309, 561, and 923. The sintering rate of each system at different temperatures is obtained by MD simulation. On a graphene support with weak MSI, the sintering of particles is mainly determined by the size of the particles (namely, surface energy) at the same temperature. The sintering between two small particles is significantly faster than that between a small particle and a large particle. Comparing the sintering processes at different temperatures, it can be found that, as the temperature increases, the kinetic energy of the metal atoms on the particles continues to increase, and the sintering between the particles also becomes significantly faster. On the strong MSI TiO2 support, when the temperature is low (500 K), although the surface energy of small particles is large, the strong MSI restricts the movement of the particles, which causes the sintering rate between the particles to decrease significantly. As the temperature increases, the kinetic energy increases and overcomes the strong MSI, and thus, the sintering of the particles accelerates. Similarly, the sintering between small particles is significantly faster than the sintering between small particles and large particles.
+When calculating the sintering rate, the calculation of the sintering data is based on the sintering of two particles rather than the statistical average of the sintering rate of a large number of particles, and the support is not homogeneous, because of the difference in atomic arrangement. These factors will cause the data to deviate for a certain amount, especially for the sintering between small particles, this deviation is more significant. For example: Pt55–Pt147 system appears faster than the Pt55–Pt55 system, with regard to the sintering rates (see Figure S7 in the Supporting Information). It concludes that the sintering rate between supported nanoparticles is closely related to the particle size. Since the sintering of particles mainly follows the particle migration mechanism, the process is mainly dominated by particles with larger surface energy, that is, particles with small sizes (for example, the simulation results in Figure 7 show that Pt561–Pt561 cannot sinter below 800 K on TiO2). Because of the synergistic effect of two small-sized particles, the sintering between small particles is significantly faster than the sintering between small particles and large particles. Strong MSI restricts the movement of atoms on particles and has a significant impact on the sintering rate between small particles.
+Figure 7
+Figure 7. Sintering rate of the same particle on different substrates varies with temperature: (a) graphene and (b) TiO2.
+The supported metal catalyst must exist stably in a high-temperature reaction environment. Therefore, we analyze the influence of temperature on the sintering behavior. In practical applications, a supported metal nanocatalyst with relatively uniform particle size distribution is usually synthesized. As shown in Figure 7, particles of the same size exhibit different sintering rates at different temperatures or on different supports. In the study of the effect of particle size on the sintering rate, it shows that high temperature increases the kinetic energy of the particles and accelerates the sintering rate of the particles. From the RDF analysis results, it can be seen that as the temperature increases, the microstructure of the nanoparticles gradually changes from order to disorder. (43) Especially above the melting point, the influence of size, support structure, and other factors on the particle sintering rate is almost negligible. For example, on the graphene support, the melting points of Pt55 and Pt147 are both lower than 1000 K; at this time, the sintering rates of Pt55–Pt55 and Pt147–Pt147 are almost the same. Therefore, the simulated maximum temperature of this part is 1000 K, and the sintering law of particles below the melting point is studied.
+On the graphene support, the sintering rate increases with the increase of temperature without changing the particle size; in the aforementioned calculations, it is found that the melting point of the particles decreases with the increase of the particle sizes, that is, the surface energy of the large particles is lower than that of small particles, and the sintering rate of particles decreases significantly as the particle size increases. It can be seen that on a weak MSI support, the sintering of particles is mainly related to the temperature and the characteristics of the particles (surface energy). On the two-dimensional TiO2 support, the melting point of the particles is significantly higher than that of the same size particles on the weak MSI support, because of strong MSI, and the movement of the particles is restricted. Therefore, the sintering rate of the particles at a lower temperature (<800 K) is significantly reduced, compared with the situation on weak MSI support, especially for large-size particles (PtN, N > 300), the surface energy is relatively low and limited by the strong MSI, the large-size particles on TiO2 cannot sinter. In summary, the particle sintering process is closely related to temperature and size. Increased temperature obviously promotes the sintering of particles. Strong MSI supports will effectively slow down or inhibit the sintering of particles. The smaller the particles, the easier it is to sinter, and as the particle size increases, the more difficult it is to sinter, but the sintering of large-sized particles can be promoted by temperature. These results are also in good agreement with the experimental results.
+3.4. Modeling the Sintering Process of Supported Pt Nanoparticles
+Based on the previous results, it can be seen that the sintering rate (V) is positively correlated with time (t) and sintering temperature (T), but is negatively correlated with particle size and MSI. The particle size and MSI jointly determine the surface energy of the nanoparticle, and the size of the surface energy can be described indirectly by the melting point. Table 2 shows that the melting point is not only closely related to the particle size, but is also proportional to the MSI. Therefore, based on the above analysis, we have established the correlation between the sintering rate and the above influencing factors:
+where m, n, and k are exponential constants. As for the relationship between V and t, we have calculated the average sintering rate of nanoparticles at 5, 10, 15, and 20 ns. The result is shown in Figure 8a. The average sintering rate V is proportional to t, so k = 1 in the correlation formula. Subsequently, we further calculated the data of different sizes, sintering temperatures, and particle sintering rates on the support. By excluding some data points, such as unsintered, low degree of sintering (V < 100), and fully sintered (e.g., Pt55–Pt55, Pt147–Pt55, Pt147–Pt147) data points. We finally obtained 551 sets of data (including sintering rate, temperature, the melting points of each nanoparticle on the corresponding support), we substitute the above data into the formula, and then use the grid search method to do linear fitting, as shown in Figure 8b, to get m and n when the correlation coefficient (R2) is the largest. When m = 1.3 and n = 1.7, the maximum value of R2 is 0.846. From this, the expression V ≈ of the relationship between V and each influencing factor is obtained.
+Table 2. Melting Point of PtN on Different Substrates
+  Melting Point (K)
+  Pt/graphene Pt/TiO2 Pt
+Pt55 800 1000 410
+Pt147 950 1110 670
+Pt309 1170 1200 990
+Pt561 1270 1290 1090
+Pt923 1310 1320 1230
+Figure 8
+Figure 8. (a) Average sintering rate of all systems with different times. (b) Function of V varying with (t × T)m/(Tm1 + Tm2)n, where the blue dots are simulation results and the red line is the linear fitting straight line.
+Based on the derived relationship V = (where A = 4567.256, B = −117.707), we calculated the influence of the sintering time t, the environmental temperature T, and the sum of the melting point of two particles (Tm1 + Tm2) on the sintering rate V. Figure 9 shows that the two particles with the lower melting point will get a higher sintering rate as the sintering time and ambient temperature increase. This regular result is also in full agreement with the previous simulation results, and it can also be used to predict the sintering process of related systems.
+Figure 9
+Figure 9. Variation of the sintering rate with time (t), ambient temperature (T), and the melting point of the two particles (Tm1 + Tm2).
+4. Conclusion
+The sintering behavior of supported nanoparticles is closely related to the particle size, temperature, MSI, and other factors. This work combines machine learning, DFT calculations, and molecular dynamics simulation to study the dynamic sintering process of platinum nanoparticles with different sizes on graphene or TiO2 support materials. We also analyzed the influence of various influencing factors on the sintering rate and structure evolution. The results show that high temperature is conducive to accelerating the movement of atoms in the nanoparticles, and their microstructure gradually changes from order to disorder, especially for relatively large particles with lower surface energy; high temperature has a significant accelerating effect on the sintering process. Different particle sizes have different surface energies, in the absence of grain-boundary diffusion, the mobility of high-surface-energy atoms increases, and the sintering process is mainly performed through surface diffusion, causing small particles to determine the sintering rate; in addition, MSI also has a great influence on the sintering behavior, where TiO2 substrate with strong MSI has better antisintering effect, and graphene substrate with weak MSI has a greater sintering rate. In order to comprehensively consider the influence of various factors, we have established a correlation formula between the sintering rate and the sintering time and each influencing factor. This formula can describe the sintering behavior of platinum particles on different MSI carriers and can also be extended to similar systems for the establishment of the sintering kinetics model and the prediction of sintering behavior.
+This work has explained the sintering process and corresponding mechanism of platinum particles at the atomic level. In addition to surface diffusion, the contributions of grain-boundary diffusion, viscous flow, plastic deformation, and surface tension gradients are also important for the sintering process of nanoparticles of different sizes. These can be used as future research content for in-depth research. Especially, the force field construction methods and simulation strategies mentioned here provide theoretical guidance for the simulation of the sintering process of supported metal nanoparticles.
+Supporting Information
+The Supporting Information is available free of charge at https://pubs.acs.org/doi/10.1021/acs.langmuir.1c01628.
+Structures optimized by DFT (Figure S1); fitted Morse potential curve (Figure S2); RDF diagrams of PtN on different substrates (Figure S3); curves of shrinkage ratio over time on different systems (Figure S4); CNA diagrams of PtN during annealing process (Figure S5); structures of PtN after annealing process (Figure S6); sintering rate of Pt55 and PtN at different temperatures (Figure S7); discussion of the sintering process (PDF)
+la1c01628_si_001.pdf (554.91 kb)
+Terms & Conditions
+Most electronic Supporting Information files are available without a subscription to ACS Web Editions. Such files may be downloaded by article for research use (if there is a public use license linked to the relevant article, that license may permit other uses). Permission may be obtained from ACS for other uses through requests via the RightsLink permission system: http://pubs.acs.org/page/copyright/permissions.html.
+Author Information
+Corresponding Authors
+Shengwei Deng - Institute of Industrial Catalysis, State Key Laboratory Breeding Base of Green-Chemical Synthesis Technology, College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China;  Email: swdeng@zjut.edu.cn
+Chengli Mao - Shanghai Xinli Power Equipment Research Institute, Shanghai 201100, People’s Republic of China;  Email: 13916963232@139.com
+Jian-guo Wang - Institute of Industrial Catalysis, State Key Laboratory Breeding Base of Green-Chemical Synthesis Technology, College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China;  https://orcid.org/0000-0003-2391-4529;  Email: jgw@zjut.edu.cn
+Authors
+Wei Wang - Institute of Industrial Catalysis, State Key Laboratory Breeding Base of Green-Chemical Synthesis Technology, College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China
+Senjun Yao - College of Computer Science and Technology, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China;  https://orcid.org/0000-0003-4104-3675
+Yinbin Wang - Institute of Industrial Catalysis, State Key Laboratory Breeding Base of Green-Chemical Synthesis Technology, College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China
+Chenglong Qiu - Institute of Industrial Catalysis, State Key Laboratory Breeding Base of Green-Chemical Synthesis Technology, College of Chemical Engineering, Zhejiang University of Technology, Hangzhou 310014, People’s Republic of China
+Notes
+The authors declare no competing financial interest.
+Acknowledgments
+The authors acknowledge the financial support from the National Natural Science Foundation of China (Nos. NSFC-22178309, NSFC-21706229, NSFC-21625604, and NSFC-21671172).
+References
+This article references 43 other publications.
+1Liu, L.; Corma, A. Metal Catalysts for Heterogeneous Catalysis: From Single Atoms to Nanoclusters and Nanoparticles. Chem. Rev. 2018, 118 (10), 4981– 5079,  DOI: 10.1021/acs.chemrev.7b00776
+Google Scholar
+2Rahmati, M.; Safdari, M. S.; Fletcher, T. H.; Argyle, M. D.; Bartholomew, C. H. Chemical and Thermal Sintering of Supported Metals with Emphasis on Cobalt Catalysts During Fischer–Tropsch Synthesis. Chem. Rev. 2020, 120 (10), 4455– 4533,  DOI: 10.1021/acs.chemrev.9b00417
+Google Scholar
+3He, Z.; Ning, X.; Yang, G.; Wang, H.; Cao, Y.; Peng, F.; Yu, H. Selective oxidation of glycerol over supported noble metal catalysts. Catal. Today 2021, 365, 162– 171,  DOI: 10.1016/j.cattod.2020.04.019
+Google Scholar
+4Kim, S.; Park, C.; Lee, J. Reduction of polycyclic compounds and biphenyls generated by pyrolysis of industrial plastic waste by using supported metal catalysts: A case study of polyethylene terephthalate treatment. J. Hazard. Mater. 2020, 392, 122464,  DOI: 10.1016/j.jhazmat.2020.122464
+Google Scholar
+5Liu, J. J. Advanced Electron Microscopy of Metal-Support Interactions in Supported Metal Catalysts. ChemCatChem 2011, 3 (6), 934– 948,  DOI: 10.1002/cctc.201100090
+Google Scholar
+6Zhu, M.; Ge, Q.; Zhu, X. Catalytic Reduction of CO2 to CO via Reverse Water Gas Shift Reaction: Recent Advances in the Design of Active and Selective Supported Metal Catalysts. Trans. Tianjin Univ. 2020, 26 (3), 172– 187,  DOI: 10.1007/s12209-020-00246-8
+Google Scholar
+7Shrestha, S.; Wang, B.; Dutta, P. Nanoparticle processing: Understanding and controlling aggregation. Adv. Colloid Interface Sci. 2020, 279, 102162,  DOI: 10.1016/j.cis.2020.102162
+Google Scholar
+8Iwamoto, M.; Horikoshi, M.; Hashimoto, R.; Shimano, K.; Sawaguchi, T.; Teduka, H.; Matsukata, M. Higher Activity of Ni/γ-Al2O3 over Fe/γ-Al2O3 and Ru/γ-Al2O3 for Catalytic Ammonia Synthesis in Nonthermal Atmospheric-Pressure Plasma of N2 and H2. Catalysts 2020, 10 (5), 590,  DOI: 10.3390/catal10050590
+Google Scholar
+9Wang, J.; Shin, S.; Hu, A. Geometrical Effects on Sintering Dynamics of Cu–Ag Core–Shell Nanoparticles. J. Phys. Chem. C 2016, 120 (31), 17791– 17800,  DOI: 10.1021/acs.jpcc.6b05515
+Google Scholar
+10Plessow, P. N.; Abild-Pedersen, F. Sintering of Pt Nanoparticles via Volatile PtO2: Simulation and Comparison with Experiments. ACS Catal. 2016, 6 (10), 7098– 7108,  DOI: 10.1021/acscatal.6b01646
+Google Scholar
+11Dai, Y.; Lu, P.; Cao, Z.; Campbell, C. T.; Xia, Y. The physical chemistry and materials science behind sinter-resistant catalysts. Chem. Soc. Rev. 2018, 47 (12), 4314– 4331,  DOI: 10.1039/C7CS00650K
+Google Scholar
+12Frenkel, D.; Smit, B.; Ratner, M. A. Understanding Molecular Simulation: From Algorithms to Applications. Phys. Today 1997, 50 (7), 66– 66,  DOI: 10.1063/1.881812
+Google Scholar
+13Zeng, P.; Zajac, S.; Clapp, P. C.; Rifkin, J. A. Nanoparticle sintering simulations. Mater. Sci. Eng., A 1998, 252 (2), 301– 306,  DOI: 10.1016/S0921-5093(98)00665-0
+Google Scholar
+14Liu, Z.; Cheng, Q.; Wang, Y.; Li, Y.; Zhang, J. Sintering neck growth mechanism of Fe nanoparticles: A molecular dynamics simulation. Chem. Eng. Sci. 2020, 218, 115583,  DOI: 10.1016/j.ces.2020.115583
+Google Scholar
+15Rajan, A. C.; Mishra, A.; Satsangi, S.; Vaish, R.; Mizuseki, H.; Lee, K.-R.; Singh, A. K. Machine-Learning-Assisted Accurate Band Gap Predictions of Functionalized MXene. Chem. Mater. 2018, 30 (12), 4031– 4038,  DOI: 10.1021/acs.chemmater.8b00686
+Google Scholar
+16Deng, S.; Qiu, C.; Yao, Z.; Sun, X.; Wei, Z.; Zhuang, G.; Zhong, X.; Wang, J. g. Multiscale simulation on thermal stability of supported metal nanocatalysts. Wiley Interdiscip. Rev.: Comput. Mol. Sci. 2019, 9 (4), e1405,  DOI: 10.1002/wcms.1405
+Google Scholar
+17Cabria, I.; López, M. J.; Alonso, J. A. Theoretical study of the transition from planar to three-dimensional structures of palladium clusters supported on graphene. Phys. Rev. B: Condens. Matter Mater. Phys. 2010, 81 (3), 1718– 1720,  DOI: 10.1103/PhysRevB.81.035403
+Google Scholar
+18Kou, R.; Shao, Y.; Mei, D.; Nie, Z.; Wang, D.; Wang, C.; Viswanathan, V. V.; Park, S.; Aksay, I. A.; Lin, Y.; Wang, Y.; Liu, J. Stabilization of electrocatalytic metal nanoparticles at metal-metal oxide-graphene triple junction points. J. Am. Chem. Soc. 2011, 133 (8), 2541– 7,  DOI: 10.1021/ja107719u
+Google Scholar
+19Fampiou, I.; Ramasubramaniam, A. Binding of Pt Nanoclusters to Point Defects in Graphene: Adsorption, Morphology, and Electronic Structure. J. Phys. Chem. C 2012, 116 (11), 6543– 6555,  DOI: 10.1021/jp2110117
+Google Scholar
+20Geim, A. K.; Novoselov, K. S. The rise of graphene. Nat. Mater. 2007, 6 (3), 183– 91,  DOI: 10.1038/nmat1849
+Google Scholar
+21Matthey, D.; Wang, J. G.; Wendt, S.; Matthiesen, J.; Schaub, R.; Laegsgaard, E.; Hammer, B.; Besenbacher, F. Enhanced bonding of gold nanoparticles on oxidized TiO2(110). Science 2007, 315 (5819), 1692– 6,  DOI: 10.1126/science.1135752
+Google Scholar
+22Mikolajczyk, A.; Pinto, H. P.; Gajewicz, A.; Puzyn, T.; Leszczynski, J. Ab Initio Studies of Anatase TiO2 (101) Surface-supported Au8 Clusters. Curr. Top. Med. Chem. 2015, 15 (18), 1859– 67,  DOI: 10.2174/1568026615666150506151826
+Google Scholar
+23Li, J.; Fan, J.; Ali, S.; Lan, G.; Tang, H.; Han, W.; Liu, H.; Li, B.; Li, Y. The origin of the extraordinary stability of mercury catalysts on the carbon support: the synergy effects between oxygen groups and defects revealed from a combined experimental and DFT study. Chin. J. Catal. 2019, 40 (2), 141– 146,  DOI: 10.1016/S1872-2067(19)63271-7
+Google Scholar
+24Kresse, G.; Hafner, J. Ab initio molecular-dynamics simulation of the liquid-metal-amorphous-semiconductor transition in germanium. Phys. Rev. B: Condens. Matter Mater. Phys. 1994, 49 (20), 14251– 14269,  DOI: 10.1103/PhysRevB.49.14251
+Google Scholar
+25Perdew, J. P.; Chevary, J. A.; Vosko, S. H.; Jackson, K. A.; Pederson, M. R.; Singh, D. J.; Fiolhais, C. Atoms, molecules, solids, and surfaces: Applications of the generalized gradient approximation for exchange and correlation. Phys. Rev. B: Condens. Matter Mater. Phys. 1992, 46 (11), 6671– 6687,  DOI: 10.1103/PhysRevB.46.6671
+Google Scholar
+26Perdew, J. P.; Burke, K.; Ernzerhof, M. Generalized Gradient Approximation Made Simple. Phys. Rev. Lett. 1996, 77 (18), 3865– 3868,  DOI: 10.1103/PhysRevLett.77.3865
+Google Scholar
+27Momma, K.; Izumi, F. VESTA3for three-dimensional visualization of crystal, volumetric and morphology data. J. Appl. Crystallogr. 2011, 44 (6), 1272– 1276,  DOI: 10.1107/S0021889811038970
+Google Scholar
+28Henkelman, G.; Uberuaga, B. P.; Jónsson, H. A climbing image nudged elastic band method for finding saddle points and minimum energy paths. J. Chem. Phys. 2000, 113 (22), 9901– 9904,  DOI: 10.1063/1.1329672
+Google Scholar
+29Plimpton, S. Fast Parallel Algorithms for Short-Range Molecular Dynamics. J. Comput. Phys. 1995, 117 (1), 1– 19,  DOI: 10.1006/jcph.1995.1039
+Google Scholar
+30Daw, M. S.; Baskes, M. I. Embedded-atom method: Derivation and application to impurities, surfaces, and other defects in metals. Phys. Rev. B: Condens. Matter Mater. Phys. 1984, 29 (12), 6443– 6453,  DOI: 10.1103/PhysRevB.29.6443
+Google Scholar
+31Abraham, R. J.; Sto̅levik, R. The morse curve as a non-bonded potential function. Chem. Phys. Lett. 1978, 58 (4), 622– 624,  DOI: 10.1016/0009-2614(78)80033-5
+Google Scholar
+32Rappe, A. K.; Casewit, C. J.; Colwell, K. S.; Goddard, W. A.; Skiff, W. M. UFF, A Full Periodic Table Force Field for Molecular Mechanics and Molecular Dynamics Simulations. J. Am. Chem. Soc. 1992, 114 (25), 10024– 10035,  DOI: 10.1021/ja00051a040
+Google Scholar
+33Lennard-Jones, J. E. Cohesion. Proc. Phys. Soc. 1931, 43 (5), 461– 482,  DOI: 10.1088/0959-5309/43/5/301
+Google Scholar
+34Levenberg, K. A method for the solution of certain non-linear problems in least squares. Q. Appl. Math. 1944, 2, 164,  DOI: 10.1090/qam/10666
+Google Scholar
+35Marquardt, D. W. An algorithm for least-squares estimation of non-linear parameters. J. Soc. Ind. Appl. Math. 1963, 11 (2), 431– 441,  DOI: 10.1137/0111030
+Google Scholar
+36Mondal, A.; Young, J. M.; Barckholtz, T. A.; Kiss, G.; Koziol, L.; Panagiotopoulos, A. Z. Genetic Algorithm Driven Force Field Parameterization for Molten Alkali-Metal Carbonate and Hydroxide Salts. J. Chem. Theory Comput. 2020, 16 (9), 5736– 5746,  DOI: 10.1021/acs.jctc.0c00285
+Google Scholar
+37Tsai, P.-C.; Jeng, Y.-R. Coalescence and epitaxial self-assembly of Cu nanoparticles on graphene surface: A molecular dynamics study. Comput. Mater. Sci. 2019, 156, 104– 110,  DOI: 10.1016/j.commatsci.2018.09.039
+Google Scholar
+38Faken, D.; Jónsson, H. Systematic analysis of local atomic structure combined with 3D computer graphics. Comput. Mater. Sci. 1994, 2 (2), 279– 286,  DOI: 10.1016/0927-0256(94)90109-0
+Google Scholar
+39Yao, Y.; Wei, Y.; Chen, S. Size effect of the surface energy density of nanoparticles. Surf. Sci. 2015, 636, 19– 24,  DOI: 10.1016/j.susc.2015.01.016
+Google Scholar
+40Sankaranarayanan, S. K. R. S.; Bhethanabotla, V. R.; Joseph, B. Molecular dynamics simulations of the structural and dynamic properties of graphite-supported bimetallic transition metal clusters. Phys. Rev. B: Condens. Matter Mater. Phys. 2005, 72 (19), 195405,  DOI: 10.1103/PhysRevB.72.195405
+Google Scholar
+41Song, P.; Wen, D. Molecular dynamics simulation of the sintering of metallic nanoparticles. J. Nanopart. Res. 2010, 12 (3), 823– 829,  DOI: 10.1007/s11051-009-9718-7
+Google Scholar
+42Long, N. V.; Chien, N. D.; Hayakawa, T.; Hirata, H.; Lakshminarayana, G.; Nogami, M. The synthesis and characterization of platinum nanoparticles: a method of controlling the size and morphology. Nanotechnology 2010, 21 (3), 035605,  DOI: 10.1088/0957-4484/21/3/035605
+Google Scholar
+43Jiang, J.; Chen, P.; Sun, W. Monitoring micro-structural evolution during aluminum sintering and understanding the sintering mechanism of aluminum nanoparticles: A molecular dynamics study. J. Mater. Sci. Technol. 2020, 57, 92– 100,  DOI: 10.1016/j.jmst.2020.03.068
+Google Scholar
+Cited By
+Citation Statements
+beta
+Supporting
+0
+Mentioning
+4
+Contrasting
+0
+Explore this article's citation statements on scite.ai
+powered by  
+This article is cited by 5 publications.
+Shengwei Deng, Feng Shi, Yudi Huang, Chenglong Qiu, Jian-guo Wang. Sintering Kinetics and Interfacial Heat Transfer Process of Binary Alloy Nanoparticles Catalysts: Molecular Dynamics Simulation. Industrial & Engineering Chemistry Research 2024, 63 (30) , 13356-13365. https://doi.org/10.1021/acs.iecr.4c01029
+Ming-Lei Sun, Zhong-Pan Hu, Hao-Yu Wang, Yu-Jun Suo, Zhong-Yong Yuan. Design Strategies of Stable Catalysts for Propane Dehydrogenation to Propylene. ACS Catalysis 2023, 13 (7) , 4719-4741. https://doi.org/10.1021/acscatal.3c00103
+Shengwei Deng, Yudi Huang, Chengli Mao, Jian-guo Wang. Size-dependent interfacial thermal transport in supported platinum nanocatalysts. Chemical Engineering Science 2023, 269 , 118456. https://doi.org/10.1016/j.ces.2023.118456
+Julia Bord, Björn Kirchhoff, Matthias Baldofski, Christoph Jung, Timo Jacob. An Atomistic View of Platinum Cluster Growth on Pristine and Defective Graphene Supports. Small 2023, 19 (10) , 2207484. https://doi.org/10.1002/smll.202207484
+Yuanqing Sun, Bohan Feng, Qian Lian, Chengshu Xie, Jing Xiong, Weiyu Song, Jian Liu, Yuechang Wei. Ordered Hierarchical Porous Structure of PtSn/3DOMM-Al2O3 Catalyst for Promoting Propane Non-Oxidative Dehydrogenation. Nanomaterials 2023, 13 (4) , 728. https://doi.org/10.3390/nano13040728
+Download PDF
+Get e-Alerts
+Langmuir
+Cite this: Langmuir 2021, 37, 43, 12529–12538
+https://doi.org/10.1021/acs.langmuir.1c01628
+Published October 24, 2021
+Copyright © 2021 American Chemical Society
+Request reuse permissions
+Article Views
+1087
+Altmetric
+-
+Citations
+5
+Learn about these metrics
+Recommended Articles
+Sintering of Catalytic Nanoparticles: Particle Migration or Ostwald Ripening?
+May 1, 2013Accounts of Chemical Research
+Thomas W. Hansen, Andrew T. DeLaRiva, Sivakumar R. Challa
+Metal Affinity of Support Dictates Sintering of Gold Catalysts
+November 3, 2022Journal of the American Chemical Society
+Jin-Cheng Liu, Langli Luo, Hai Xiao, Junfa Zhu, Yang He*, and 
+Show more
+recommended articles
+Figures
+References
+Supporting Info
+Abstract
+Figure 1
+Figure 1. Flowchart of the genetic algorithm for fitting the force field.
+Figure 2
+Figure 2. CNA diagrams of Pt923 during the annealing process on (a) graphene and (b) TiO2 substrates.
+Figure 3
+Figure 3. Variation of potential energy (Pe) with temperature for different systems: (a) PtN/graphene and (b) PtN/TiO2. (c) The melting point varies with the number of Pt atoms on different substrates.
+Figure 4
+Figure 4. Sintering morphology evolution of Pt923–Pt561 at 1000 K on (a–c) TiO2 and (d–f) graphene.
+Figure 5
+Figure 5. (a) Neck morphology during the sintering process of Pt923–Pt561 on TiO2 and (b) the variation of the radius in the neck region of Pt923–Pt561 on TiO2 at 700–1000 K.
+Figure 6
+Figure 6. Curves of shrinkage ratio over time on different systems: (a) Pt309-Pt147/graphene and (b) Pt309-Pt147/TiO2.
+Figure 7
+Figure 7. Sintering rate of the same particle on different substrates varies with temperature: (a) graphene and (b) TiO2.
+Figure 8
+Figure 8. (a) Average sintering rate of all systems with different times. (b) Function of V varying with (t × T)m/(Tm1 + Tm2)n, where the blue dots are simulation results and the red line is the linear fitting straight line.
+Figure 9
+Figure 9. Variation of the sintering rate with time (t), ambient temperature (T), and the melting point of the two particles (Tm1 + Tm2).

@@ -1,0 +1,77 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Coke Deposition on Pt-Based Catalysts in Propane Direct Dehydrogenation: Kinetics, Suppression, and Elimination
+1. Introduction
+ARTICLE SECTIONSJump To As one of the most important building blocks for the chemical industry, the demands of propene have dramatically increased in recent years. (1) The conventional routes of obtaining propene are mainly related to stream or catalytic cracking of downstream products of the petroleum industry, which are extremely energy intensive with low selectivity. With the large-scale Shale gas discovery worldwide, (24) the abundance of light alkanes including methane, ethane, and propane open new opportunities to propene production. The on-purpose catalytic direct dehydrogenation of propane (PDH, C3H8  C3H6 + H2) is one of the most promising and effective routes to massively produce propylene, which has been already exploited in industry. PDH is highly endothermic (ΔH298 = 124.3 kJ/mol), and the reaction temperature is normally above 500 C. The reaction is limited by thermodynamics, and the yields of propene can be increased by lowering propane partial pressure or raising temperature. The catalysts of PDH could be divided into two classes: metal and metal oxide. The most representative catalysts of these two categories are platinum and chromium oxide, respectively. Platinum-based catalysts have been already employed in Oleflex commercial PDH process from the UOP company. (1) Polymer-quality propylene can be obtained from Oleflex technology. The regeneration of the catalyst in Oleflex proceeds via combustion of cokes with a chlorine-air mixture. Chromium oxide is another major industrial catalyst of PDH applied in Catofin process from Lummus. The chromium oxide is generally supported on alumina. One disadvantage of chromium oxide catalyst is the toxicity, which potentially causes issues with regard to safety and post-treatment. Except for platinum and chromium oxide, there are a bunch of other materials which are also investigated as PDH catalysts, including Fe, (57) Co, (8,9) Ru, (10) Rh, (11) VOx, (12,13) WOx, (14) GaOx, (15,16) and ZrOx. (1719) Although these catalyst candidates show excellent activity in a laboratory test, they are still not industrially implemented.
+Because of its high selectivity and decent durability in PDH, Pt-based catalysts have been extensively investigated for several decades. (20,21) However, there is still much room for further improvements of Pt catalysts in PDH. In particular, the coke formation during the reaction severely undermine the catalytic performance and stability. The deceptively simple reaction formula of PDH, in which two hydrogens are abstracted from propane, does not fully represent the complex network as shown in Figure 1. The various intermediates and propylene in PDH are prone to precede the deep reaction at elevated temperature, which ultimately leads to coke. Consequently, coke covers the metal catalysts and blocks access to the active site. Even worse, the removal of coke is not trivial. For example, the duration of the regeneration is the same as dehydrogenation in Catofin technology. Another side effect of coke removal is that the catalyst could agglomerate and lose activity under harsh conditions during regeneration. Therefore, it is urgent to find the effective ways to reduce coke during PDH.
+In fact, there are several different methods proposed in literature to lessen the coke formation in PDH. The cofeeding reductive gas such as hydrogen with propane can significantly reduce the coke formation. The alloying Pt with second metal such as Sn is extensively explored to reduce coke besides other beneficial effects. (2224) It is indicated that Sn promoter could constrain Pt in a small ensemble, which is detrimental to side reactions. In addition to Sn, there are many reports of various transition metals, including Cu and Zn, which can be helpful to curb coke. (25,26) Supports are also of relevance to control coke formation. For example, the acid sites on the support are suggested to favor side reaction like polymerization. (27) Therefore, the modification of nature of support is a useful way to improve coke resistance. The size of the Pt catalyst is also a factor with significant influence on the reactivity and side reactions in PDH. The role of small-sized (around 3 nm) Pt particles is not yet clear in the literature. (2830) Some studies indicated that they are very coke resistance, but the opposites were also reported. Interestingly, the single Pt atom catalyst recently was also examined in PDH, which reveals a different mechanism when reaching the size limit. (24,25) The computational simulations based on density functional theory (DFT) were very active in the exploration of PDH catalyst and provide important insight on the deactivation mechanism. A descriptor between the barrier of the CH bond activation and propylene desorption are proposed from several DFT studies. (3133) The descriptor can be a measure of balance between activity and selectivity. Moreover, the complex reaction network of PDH is also mapping out from DFT study. In our previous study, the kinetic Monte Carlo simulation based on DFT was performed to give a detailed description of coke precursor formation during PDH. (34) It is revealed that the geometry of the active sites has a pivotal importance to side reactions.
+Recently, there were several excellent reviews which provide a comprehensive description of light alkane activation including propane dehydrogenation. (21,3537) Although these articles supplied a solid ground to understand the CH bond activation on metal or metal oxide catalysts, the coke formation is not a particular focus in these articles compared with the reaction mechanism, the nature of the active site, catalyst design, and so on. However, the broad subjects covered in these reviews limited the contents associated with coke formation, leading to a lack of in-depth analysis. Overall, there is still an absence of an updated and systematic account of coke formation on Pt catalysts, which has an apparent importance on reactivity and stability in propane dehydrogenation.
+In this Review, we are striving to give a concise and coherent description of coke formation on Pt catalysts in PDH from a comprehensive survey of literatures and provide the origin and nature of coke, which is scarcely discussed previously. The kinetic aspects of coke formation are also examined, which is also not covered in previous reviews. Moreover, the development and comparison of different methods to inhibit coke are elaborated. At the end, the catalyst regeneration and outlook for future improvements are supplied. The current work can be a timely summary for the stability of the metal catalyst in catalytic conversion of short alkane molecules.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the catalytic direct dehydrogenation of propane (PDH) function as a method for propene production, and what are the key considerations regarding reaction conditions, catalyst types, and industrial applications? Furthermore, how does coke formation on Pt-based catalysts impact the process efficiency, and what strategies can be implemented to mitigate its formation and improve catalyst regeneration?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

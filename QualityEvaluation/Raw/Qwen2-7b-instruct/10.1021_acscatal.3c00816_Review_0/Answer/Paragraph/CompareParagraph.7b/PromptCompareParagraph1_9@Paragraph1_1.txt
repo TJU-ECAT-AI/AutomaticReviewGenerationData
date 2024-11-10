@@ -1,0 +1,532 @@
+You are a professional literature review expert. Your task is to evaluate and compare two review articles on the topic of "The emergence of propane direct dehydrogenation (PDH) as a promising and advantageous technology to address the challenges of meeting the growing global demand for propylene production, in the context of limitations faced by conventional methods." based on the provided scoring criteria. Please carefully read the following instructions and scoring criteria, then evaluate the two provided articles.
+
+The scoring criteria are as follows:
+
+{
+  "Content Quality": {
+    "Topic Relevance": {
+      "Description": "Relevance and importance to the topic",
+      "Maximum Score": 8
+    },
+    "Comprehensiveness of Information": {
+      "Description": "Breadth and depth of topic coverage",
+      "Maximum Score": 8
+    },
+    "Accuracy of Information": {
+      "Description": "Correctness of data and statements",
+      "Maximum Score": 8
+    },
+    "Innovativeness of Viewpoints": {
+      "Description": "Novel insights and unique perspectives",
+      "Maximum Score": 8
+    },
+    "Integration of Interdisciplinary Perspectives": {
+      "Description": "Degree of multidisciplinary knowledge integration",
+      "Maximum Score": 8
+    }
+  },
+  "Structure and Organization": {
+    "Clarity of Logical Structure": {
+      "Description": "Coherence of argumentation process",
+      "Maximum Score": 10
+    },
+    "Reasonableness of Chapter Arrangement": {
+      "Description": "Balance and sequence of content distribution",
+      "Maximum Score": 8
+    },
+    "Quality of Introduction and Conclusion": {
+      "Description": "Effectiveness of opening and closing",
+      "Maximum Score": 7
+    }
+  },
+  "Academic Standards": {
+    "Accuracy and Completeness of Citations": {
+      "Description": "Correctness of citation format and content",
+      "Maximum Score": 10
+    },
+    "Timeliness and Relevance of References": {
+      "Description": "Recency and relevance of literature",
+      "Maximum Score": 8
+    },
+    "Avoidance of Plagiarism and Appropriate Citation": {
+      "Description": "Originality and appropriateness of citations",
+      "Maximum Score": 7
+    }
+  },
+  "Innovation and Contribution": {
+    "Critical Analysis of Existing Research": {
+      "Description": "Depth of analysis and insight",
+      "Maximum Score": 8
+    },
+    "Proposal of New Research Directions or Questions": {
+      "Description": "Foresight and inspirational quality",
+      "Maximum Score": 9
+    },
+    "Potential Contribution to the Field": {
+      "Description": "Degree of theoretical or practical advancement",
+      "Maximum Score": 8
+    }
+  },
+  "Methodology Assessment": {
+    "Clarity of Research Method Description": {
+      "Description": "Clarity of methodological explanation",
+      "Maximum Score": 7
+    },
+    "Rationality of Method Selection": {
+      "Description": "Match between method and research question",
+      "Maximum Score": 7
+    },
+    "Rigor of Research Design": {
+      "Description": "Scientific nature and reliability of design",
+      "Maximum Score": 6
+    }
+  },
+  "Timeliness and Cutting-edge Nature": {
+    "Inclusion of Latest Research Results": {
+      "Description": "Degree of citation of latest literature",
+      "Maximum Score": 8
+    },
+    "Reflection of Current Research Hotspots": {
+      "Description": "Coverage of hot issues",
+      "Maximum Score": 7
+    }
+  },
+  "Writing Quality": {
+    "Fluency of Language Expression": {
+      "Description": "Smooth writing, easy to understand",
+      "Maximum Score": 5
+    },
+    "Appropriateness of Professional Terminology Use": {
+      "Description": "Accuracy and consistency of terminology use",
+      "Maximum Score": 5
+    },
+    "Conciseness of Expression": {
+      "Description": "Degree of language refinement",
+      "Maximum Score": 5
+    }
+  },
+  "Practicality and Application Value": {
+    "Practical Application Potential of Research Results": {
+      "Description": "Guiding significance for practice",
+      "Maximum Score": 8
+    },
+    "Feasibility of Proposed Suggestions": {
+      "Description": "Realism and operability of suggestions",
+      "Maximum Score": 7
+    }
+  },
+  "Critical Thinking": {
+    "Logic of Argumentation": {
+      "Description": "Rationality of reasoning process",
+      "Maximum Score": 7
+    },
+    "Multi-angle Analysis of Problems": {
+      "Description": "Diversity and comprehensiveness of perspectives",
+      "Maximum Score": 7
+    },
+    "Identification and Discussion of Research Limitations": {
+      "Description": "Recognition and analysis of limiting factors",
+      "Maximum Score": 6
+    }
+  }
+}
+
+Please follow these steps for the evaluation:
+
+1. Carefully read the two provided review articles.
+2. Score each article based on every evaluation dimension and specific item in the scoring criteria.
+3. Provide a concise scoring rationale for each point, and indicate the strengths and weaknesses of both articles.
+4. Calculate the overall score for each article.
+5. Determine which review is superior based on the overall scores and analysis.
+6. Output the evaluation results in the specified JSON format.
+
+During the evaluation process, please note the following:
+
+- Maintain objectivity: Base your evaluation on facts and article content, avoiding subjective bias.
+- Provide concise scoring rationales: Summarize the basis for scoring in brief sentences or phrases.
+- Consider disciplinary characteristics: Judge the quality and contribution of the reviews based on the characteristics of their respective disciplines.
+- Note subtle differences: Even if the overall quality is similar, strive to identify and articulate the differences between the two articles.
+- Weigh pros and cons: When drawing final conclusions, consider performance across all dimensions comprehensively.
+
+<file-attachment-contents filename="Review A.txt"> 
+Recent Progress in Metal-Molecular Sieve Catalysts for Propane Dehydrogenation
+1. Introduction
+ARTICLE SECTIONSJump To
+Propylene is the important raw material for producing a wide variety of chemicals such as acrolein, polypropylene, acetone, propylene oxide, etc. (Figure 1a). (1) According to a report from IHS Markit Ltd. and Dow Chemical Inc., the global propylene supply demand market renders a big gap since 2015, and the propylene demand would keep growing at an average annual rate of 2% to 3% up to 2030 (Figure 1b). (2,3) Conventional propylene production mainly comes from fluid catalytic cracking and steam cracking of naphtha and heavy oil. Due to the rapid consumption of crude oil, these traditional propylene production technologies cannot satisfy current and future demands well. Therefore, the development of highly efficient propylene production technologies is of vital importance. Over the past few decades, researchers have developed several new technologies for propylene production, including propane direct dehydrogenation (PDH), propane oxidative dehydrogenation (ODH), methanol-to-olefin (MTO), and Fischer&ndash;Tropsch to olefin (FTO). Especially, PDH is recognized as the most promising method considering following aspects: (1) The shale gas can be extracted on a massive scale, which produces cheap and plentiful propane feedstock for the PDH process; (2) The undesired overoxidation in ODH can be inhibited in PDH; (4,5) (3) PDH is a proprietary technology with high propylene selectivity, which differentiates it from the hybrid products in MTO and FTO processes (Figure 1c). (2)
+To date, several PDH technologies have been developed and industrialized. Among them, Oleflex and Catofin have the widest applications, which, respectively, rely on Pt-based and CrOx-based catalysts. The high cost of Pt and environmental issues of CrOx drive researchers to explore efficient nonprecious and nontoxic alternatives. (2,4) PDH is acknowledged as a structure-insensitive reaction where the C&ndash;H bond cleavage can occur on every metal or metal&ndash;oxygen site, while the undesired C&ndash;C cracking reactions are typical structure-sensitive reactions that prefer to occur on aggregated sites. (6) Therefore, the design of subnanometric or single-site reactive centers could benefit the propylene yield, which is also the general trend for developing PDH catalysts. (1,2,4,7−9) However, PDH is a typical thermodynamically limited process that requires a high reaction temperature. In the meantime, the removal of coke deposits from spent catalysts requires frequent regeneration. The harsh PDH conditions (i.e., high temperature, strongly reductive atmosphere, and frequent regeneration) easily cause catalyst deactivation through sintering and structural reconstruction. The stabilization of subnanometric active sites requires large surface area support with a strong metal&ndash;support interaction, which cannot be fully satisfied by conventional Al2O3 support. Researchers have developed defective Al2O3 to improve the metal stabilization and catalytic performance. (10−12) Unfortunately, the insufficient Al3+5c concentration (∼27%) restricts the amount of stabilized metal sites (10) and thereby limits the catalytic performance. Besides, the relatively complicated synthesis procedure (synthesis of 0.5 g of defective Al2O3 nanosheets requires ∼180 mL of precursor) also limits the large-scale application. (10,13)
+Valuable lessons could be learned from the mature fluid catalytic cracking (FCC) technologies that also operate in harsh conditions, which initially employ the SiO2&ndash;Al2O3-based catalysts and gradually turn to molecular sieve (zeolite)-based catalysts. (14) Compared to Al2O3 or other oxide supports, the molecular sieve supports possess a larger specific surface area and well-defined pores/cavities, which have been proven to possess stronger capability to prevent subnanometric metal species from sintering. (15)
+Considering these advantages of molecular sieves, researchers have developed several efficient strategies to stabilize highly dispersed active sites on/within molecular sieves, which exhibit outstanding catalytic PDH performance, especially in catalytic lifetime and propylene selectivity. (16−40) In the past decade, the number of studies about molecular sieve-based PDH catalysts has reached up to 783 and is still rapidly growing based on the data from Web of Science (Figure 1d).
+PDH serves as an important industrial reaction, and there have been several reviews involving the PDH technologies and catalyst development. (1,2,4,6−9) In 2014, Sattler (1) reported a pioneering review that summarized the catalytic alkane dehydrogenation on metals and metal oxides. The advances in catalyst design, such as single-atom catalysis, subsurface modification, organometallic chemistry, metal-hydrides chemistry, and so on, were further summarized in several recent reviews. (2,6−8,41) Othroshchenko (9) reviewed the developments of defective bulk oxide catalysts (e.g., ZrO2, TiO2, and γ-Al2O3) for the PDH reaction, wherein the coordinative unsaturated metal sites (MCus) due to oxygen vacancies display promising PDH performance. In addition to catalyst design, Li et al. (4) reviewed the advances in understanding PDH mechanisms (stepwise or concerted pathway) as well as the novel moving-bed and fluidized-bed PDH reactors. These previous PDH reviews generally summarize the catalytic systems based on elements of the active site, which describe the metal-molecular sieve catalysts as a part of support regulation. Recently, Sun et al. (42) summarized the advances in zeolite-based PDH catalysts. As indicated in Figure 1e, apart from zeolites, ordered mesoporous silica (OMS) and hierarchical zeolites are also typical molecular sieves. To provide a direct impression of the catalyst development based on molecular sieve supports, Tables 1&ndash;2 provide an overview of metal-molecular sieve PDH catalysts and representative catalysts on the basis of metal-oxide supports or bulk catalysts. Figure 2 illustrates an activity comparison of catalysts tested under industrial relevant conditions (propane conversion of at least 20% at reactants contain at least 20 vol % propane (9)) with respect to propylene productivity and the deactivation rate.
+Table 1. Summary of the Catalytic Performance of Promising Pt Catalysts Based on Molecular Sieves and Metal Oxide Supports
+catalyst Mmetal (wt %) SARa temp (°C) WHSV (h&ndash;1) feed (vol %) Conv (%) X (%)b Sele (%) STY(kg·kgcat&ndash;1·h&ndash;1) Kd (h&ndash;1)c lifetime ref
+OMS Supported Catalysts
+Pt/Sn-SBA-15 Pt/Sn = 1/0.5 ─ 580 8.25 C3H8/Ar = 70/30 43.8 ∼100 98.5 3.545 0.040 6 (28)
+PtFe/Sn-SBA-15 Pt/Sn/Fe = 1/0.5/1   580 4.05 C3H8/N2 = 20/80 56.8 91.4 95.2 2.181 0.016 35 (29)
+PtSn/Mg-SBA-15 Pt/Sn/Mg = 1/2/2   580 8.3 C3H8/Ar = 70/30 43 98.7 97.8 3.476 0.031 6 (30)
+PtIn/Sn-SBA-15 Pt/Sn/In = 1/0.5/1   600 4.05 C3H8/N2 = 20/80 46.9 67.5 99 1.873 0.021 60 (32)
+PtFe@Pt/SBA-15 Pt/Fe = 0.75/0.25   600 3.48 C3H8/H2/N2 = 27/26/47 35 77.3 85 1.031 0.083 2 (43)
+Pt/Mn-DMSN Pt/Mn = 0.5/0.52   590 2.40 C3H8/N2 = 67/33 53 ∼100 98 2.520 0.07 100 (44)
+Pt/Sn-HMS Pt/Sn = 0.53/0.68   550 9 C3H8/H2/N2 = 40/20/40 25 84 93 2.084 ∼0 85 (45)
+Zeolite Supported Catalysts
+NaPt/Sn-ZSM-5 Pt/Sn/Na = 0.5/1/1 400 590 3 C3H8/H2 = 80/20 42 ∼100 96 1.205 0.010 9 (33)
+PtSn@ ZSM-5 Pt/Sn = 0.32/0.75 129 600 5.2 C3H8/N2 = 23/77 35 52.0 ∼100 1.813 0.027 25 (22)
+PtNa/Zn-ZSM-5 Pt/Zn/Na = 0.5/1/1 400 590 3 C3H8/H2 = 75/25 41 88.3 93 1.139 0.01 10 (34)
+K-PtSn@ MFI Pt/Sn/Na = 0.42/0.9/0.65 ∞ 600 1.85 C3H8/N2 = 23/77 65 96.5 92 1.102 0.008 65 (24)
+PtSn/TS-1 Pt/Sn = 0.5/0.6   590 3 C3H8/H2/N2 = 17/17/66 53.5 ∼100 93 1.487 0.034 7 (46)
+PtZn4@S-1 Pt/Zn = 0.7/2.8   550 3.6 C3H8/N2 = 25/75 47.4 ∼100 93.2 1.584 0.001 210 (23)
+      550 108 C3H8/N2 = 25/75 21.2 45.3 98.3 22.414 0.072 10  
+      600 3.6 C3H8/N2 = 25/75 66.7 ∼100 90.8 2.171 0.017 60  
+PtZn@S-1 Pt/Zn = 0.41/0.95   600 5.9 C3H8/H2/N2 = 25/25/50 46.6 ∼100 98.5 2.697 0.003 90 (47)
+PtZn/TS-1 Pt/Zn = 0.5/0.67   600 12 C3H8/H2/N2 = 17/17/66 54.4 92.9 98.2 6.093 0.016 97 (48)
+        48   47.3 85.3 99.3 21.431 0.020 12  
+PtGa@S-1 Pt/Ga = 0.47/0.56   600 5.9 C3H8/H2/N2 = 25/25/50 22.5 49.7 98.5 1.324 0.106 20 (49)
+PtInK@S-1 Pt/In = 0.33/0.36   550 6.75 C3H8/N2 = 25/75 41.8 89.3 95.7 2.567 0.003 20 (50)
+PtZn/Na-Beta Pt/Zn = 0.5/2.6 26 555 2.6 C3H8 = 100 40 ∼100 55 0.570 0.04 12 (51)
+PtCe/Beta Pt/Ce = 0.4/0.57 39 550 1.18 C3H8/H2/Ar = 2.5/2.5/95 71.1 ∼100 81.2 0.648 0.141 20 (52)
+    557       42.2 60.9 91.9 0.435 0.013    
+Pt/Sn-Beta Pt/Sn= 0.55/0.57 ∞ 570 140 C3H8/H2/N2 = 10/10/80 50 98.7 95 66.227 0.006 48 (53)
+Pt/Sn-Beta Pt/Sn= 0.38/1.25   500 0.39 C3H8/N2 = 10/90 46.4 ∼100 97 0.175 0.001 410 (36)
+Pt/Sn-Beta Pt/Sn = 0.28/0.42   550 1 C3H8/N2 = 5/95 27.5 37.8 99.1 0.271 0.058 5 (54)
+Pt/Zn-Beta Pt/Zn = 0.04/0.36   550 11.8 C3H8/He = 25/75 40 85.4 ∼100 3.832 0.004 160 (37)
+PtSnNa/SUZ-4 Pt/Sn/Na = 0.5/2/1 21 590 3 C3H8/N2 = 25/75 20.5 32.8 92.4 0.550 0.10 10 (55)
+PtSn/SAPO-34 Pt/Sn = 0.3/1 0.5 600 5.6 C3H8/N2 = 75/25 10 19.9 86.7 0.480 0.347 8 (56)
+Pt/NaX Pt = 1.19 N.A. 550 106 C3H8/N2 = 90/10 21.4 68.8 67.0 14.45   18 (57)
+Hierarchical Zeolite Supported Catalysts
+PtSn/MFI Pt/Sn= 0.42/0.30 ∞ 570 7.07 C3H8/H2/N2 = 10/10/80 45 88.8 98 3.105 0.015 12 (58)
+Pt/MFI Pt = 1   550 2.82 C3H8/N2 = 50/50 8 21.6 90 0.202 N.A. 12 (59)
+PtCe/deGa-MFI Pt/Ce = 1/1 ∞ 580 11 C3H8 = 100 35 89.5 90 3.451 0.042 >140 (38)
+PtLa/deGa-MFI Pt/La = 1/1   580 11 C3H8 = 100 42 ∼100 ∼100 4.601 0.009 >300  
+PtY/deGa-MFI Pt/Y = 1/1   580 11 C3H8 = 100 42 ∼100 ∼100 4.601 0.018 >500  
+PtY/MFI Pt/Y = 0.5/1   580 11 C3H8 = 100 43 ∼100 85 4.004 0.001 >700 (60)
+PtZn/MFI Pt/Zn = 0.7/0.7   580 13 C3H8 = 100 35 87.5 98 5.075 0.004 480 (39)
+PtZn@ S-1-Fin Pt/Zn = 0.45/1.1   600 12 C3H8 = 100 50 ∼100 97 5.796 0.003 80 (61)
+PtGa/MFI Pt/Zn = 1/1   580 13 C3H8 = 100 32 81.8 98 4.060 0.005 600 (39)
+Pt/Fe-S-1 Pt/Fe = 0.12/1.62   550 6 C3H8/N2 = 25/75 47.5 ∼100 90.5 2.452 0.002 20 (62)
+      600     66.2 ∼100 89 3.361 0.013 20  
+      580 17 C3H8 = 100 39.2 ∼100 90 5.701 0.002 72  
+PtSn/TS-1 @SBA-16 Pt/Sn = 0.5/0.6   590 3 C3H8/H2/N2 = 17/17/66 54.5 ∼100 96 1.506 0.016 7 (63)
+Metal Oxide Supported Catalysts
+PtZn/SiO2 Pt/Zn = 0.09/0.168 ─ 600 11 C3H8/H2 = 67/33 38 73.4 97.2 3.86 0.002 160 (64)
+PtIn/SiO2 Pt = 0.3   600 3 C3H8/H2/N2 = 14/14/72 17.5 26.6 96 0.479 0.073 2 (65)
+Pt/Al2O3 Pt = 0.5   550 4 C3H8/H2 = 80/20 33.0 ∼100 35.0 0.439 0.167 5 (66)
+Pt/Al2O3 Pt/Cl = 0.3/0.48   600 3.8 C3H8/H2 = 67/33 31 82.7 87 0.97 0.061 14 (67)
+PtSn/Al2O3 Pt/Sn = 0.35/0.68   590 9.4 C3H8/H2/N2 = 16/20/64 48.7 94.2 99.1 4.13 0.007 25 (10)
+PtCu/Al2O3 Pt/Cu = 0.1/10   520 4 C3H8/H2/N2 = 17/12/66 24.1 44.8 88 0.81 0.012 12 (68)
+Pt/TiO2-Al2O3 Pt = 1   600 10 C3H8/H2/N2 = 25/25/50 45.5 98.9 92.7 4.01 0.14 10 (69)
+PtZn/Al2O3 Pt/Zn = 0.1/15   600 3 C3H8/H2/N2 = 25/25/50 35 76.1 94 0.94 0.045 5 (70)
+PtSn/CeO2 Pt/Sn = 1/3   680 2.2 C3H8/H2O = 99.75:0.25 39.5 52.2 84.5 0.698 0.14 6 (71)
+Pt/Mg(Sn) (Al)@Al2O3 Pt = 0.50   550 14 C3H8/H2/N2 = 28/14/58 29 55.1 98 3.78 0.0003 240 (72)
+Pt-Cu/MgAl2O4 Pt/Cu = 1/1   580 6.8 C3H8/H2 = 50/50 25.7 78.1 87.5 1.41 0.011 24 (73)
+Pt-Sn/ZnAl2O4 Pt/Sn = 3   600 32.4 C3H8/N2 = 23/77 50 74.2 98 15.09 0.331 4 (74)
+aNote: SAR means the SiO2/Al2O3 molar ratio.
+bX represents the Conv/Conveq wherein Conveq is the equilibrium conversion (calculated by Aspen Plus) under corresponding conditions.
+ckd means deactivation rate, which was calculated as kd = (ln[(100-ConvFinal)/ConvFinal] &ndash; ln[(100-ConvIni)/ConvIni])/t, where ConvFinal and ConvIni are the final and initial propane conversions, t is the reaction time.
+Table 2. Summary of Catalytic Performance of Promising Pt-free Catalysts Based on Molecular Sieves and Metal Oxide Supportsa
+catalyst Mmetal (wt %) SAR temp (°C) WHSV (h&ndash;1) feed (vol %) Conv (%) X (%) Sele (%) STY (kg·kgcat&ndash;1·h&ndash;1) Kd (h&ndash;1) lifetime ref
+OMS Supported Catalysts
+Cr/SBA-15 Cr = 1 ─ 580 11.78 C3H8/He = 10/90 11.8 12.3 90 1.189 0.593 2 (75)
+Dir Re Co/SBA-15 Co = 2   600 1.48 C3H8/N2 = 14/86 37.0 49.6 96 0.524 0.027 10 (76)
+Cr/MCM-41 Cr = 10   630 1.11 C3H8/N2 = 14/86 40.0 47.8 80 0.338 0.372 2 (77)
+CrOx/MCM-41 Cr = 1.6   550 0.94 C3H8/N2 = 40/60 27.0 55.0 80 0.182 0.032 25 (78)
+VOx/MCM-41 V = 4.3         24.0 48.8 92 0.197 0.019    
+VOx/MCM-41 V = 1.4   550 0.57 C3H8/N2 = 40/60 ∼15 N.A. 90 ∼0.073 0.181 23 (79)
+VOx/HMS V = 8   550 9.47 C3H8/N2 = 40/60 ∼9 22.5 92.9 0.753 0.546 1 (80)
+Sn-HMS Sn = 5   600 0.39 C3H8 = 100 40 86.0 90 0.140 ∼0 155 (17)
+Pd-HMS N.A.   600 0.06 C3H8/N2 = 3/97 27 29.6 85 0.013 0.821 1 (81)
+Sn-DMSN Sn = 2.5   600 3.15 C3H8 = 100 17.3 37.2 88 0.478 ∼0 7 (82)
+VOx-OMS V = 5   580 0.65 C3H8/N2 = 10/90 65.0 89.2 92.0 0.387 0.128 4 (83)
+Co SAs/SiO2 NMs Co = 0.48   550 2.9 C3H8/N2 = 24/76 25 52.7 95.1 0.655 0.009 24 (84)
+Co-OMS Co = 1.3   590 2.9 C3H8/H2/N2 = 20/16/64 ─ 14.3 95.1 0.571 0.075 6 (16)
+Co-OMS Co = 5   600 0.71 C3H8/He = 10/90 40 53.1 92 0.273 0.071 8 (18)
+Zeolite Supported Catalysts
+ZnOx/ZSM-5 Zn = 10 250 600 0.59 C3H8/N2 = 5/95 75 86.2 65 0.286 0.14 10 (85)
+CrOx/ZSM-5 Cr = 5 260 580 0.59 C3H8/N2 = 5/95 60.8 73.9 78.2 0.279 0.023 50 (86)
+        5.9 ─ 30.9 ─ 75.6 1.310 0.007 50  
+Ga2O22+/ZSM-5 Ga = 0.28 15 550 N.A. C3H8/N2 = 5/95 <5.5 <6.1 87.5 2.933 N.A. N.A. (87)
+Ga/H-MFI Ga = 1.21 16.5 460 0.0025 C3H8/He = 0.18/99.92 9 10.5 82.6 1.591 0.0002 7 (88)
+ZnOx/S-1 Zn = 5 ∞ 550 0.5 C3H8/N2 = 5/95 50 68.8 90 0.214 0.054 6 (89)
+Zn/S-1 Zn = 3.85   580 4.8 C3H8/He = 10/90 32 43.9 97 1.416 0.18 6 (25)
+ZnO@NC/S-1 Zn = 2   600 0.88 C3H8/H2/N2 = 14/14/72 55 95.3 85 0.410 0.067 5 (90)
+ZnO\_S-1\_3 ─   550 3.16 C3H8/H2/N2 = 40/20/40 ∼22 86.4 91.9 0.607 0.019 ∼50 (91)
+      550 7.9 C3H8/N2 = 40/60 ∼30 75.0 ∼90 2.028 0.074 2  
+      600 15.8 C3H8/N2 = 40/60 ∼40 67.7 ∼90 5.407 0.490 2  
+ZnO/S-1(Mg) Zn/Mg = 4/1.8   550 2.36 C3H8/N2 = 40/60 29.6 74.0 92 0.611 0.007 2 (92)
+Cu-ZnO@S-1 Zn = 2.05   550 3.55 C3H8/N2 = 67/33 28.9 86.4 95.7 0.988 0.004 65 (93)
+Cu-ZnO@S-1 Zn = 2.05   600 7.1 C3H8/H2 = 70/30 34.4 67.7 86.5 2.116 0.025 65  
+NiZn@S-1 Ni/Zn = 0.16/0.07   600 7.4 C3H8/Ar = 23/77 32 47.5 90 2.122 0.072 7 (26)
+NiZn/S-1 Ni/Zn = 0.46/2.36   550 1.2 C3H8/N2 = 10/90 13.4 21.8 97 0.148 0.019 16 (94)
+CoOx@NC/S-1 Co = 1.1   520 1.5 C3H8/N2 = 21/79 40 74 96 0.548 0.021 5 (95)
+Co&ndash;S-1 Co = 1.57   550 1.18 C3H8/N2 = 5/95 20 27.5 99 0.233 ∼0 20 (20)
+Co&ndash;S-1-Ar Co = 1.6   550 2.36 C3H8/N2 = 5/95 27.8 38.3 95.0 0.621 0.093 10 (96)
+Co-MFI Co = 1.12 ∞ 580 0.6 C3H8/N2 = 5/95 60 65.9 97 0.332 0.125 10 (97)
+Co@MFI Co = 6.4   550 1.18 C3H8/N2 = 20/80 16 31.8 96 0.172 ∼0 150 (98)
+Co@MFI Co = 6.4   600 1.18 C3H8/N2 = 20/80 60 86.4 90 0.606 0.127 5  
+CoO@S-1 Co = 3.28   600 0.4 C3H8/N2 = 5/95 43 49.4 94.7 0.159 0.009 24 (21)
+CoO@MFI-P50 Co = 3.14   600 7.5 C3H8 = 100 41.8 90.3 95 2.785 0.083 10 (99)
+Co/TS-1 Co = 1   590 3.9 C3H8/H2/N2 = 36/28/36 32 83.8 96 1.139 0.097 7 (100)
+        0.79 C3H8/H2/N2 = 5/7.5/87.5 52 76.2 ∼98 0.383 0.013 40  
+Fe-MFI Fe = 3.8   530 0.16 C3H8/N2 = 16/84 7.2 15.8 78 0.009 N.A. 3 (101)
+Fe-MFI Fe = 3.2   600 0.6 C3H8/N2 = 5/95 30 33 72 0.124 0.030 45 (102)
+ZnOx/Si-Beta Zn = 10   600 0.39 C3H8/N2 = 5/95 53 60.9 92.9 0.191 0.10 6 (103)
+Co/Si-Beta Co = 0.5   600 0.39 C3H8/N2 = 5/95 53 60.9 98.2 0.202 0.09 6 (104)
+Co@Si-Beta Co = 0.49   590 3.9 C3H8/H2/N2 = 36/28/36 25 65.5 93 0.862 0.012 24 (105)
+VOx/Si-Beta V = 3   600 0.59 C3H8/N2 = 5/95 40 46 ∼90 0.211 0.12 6 (106)
+Sn-Beta Sn = 2.5   630 0.47 C3H8/N2 = 20/80 37 47 80 0.132 ∼0 72 (107)
+Ga-CHA Ga = 7.54 12 550 0.12 C3H8/H2/N2 = 5/10/85 18 40.9 90 0.018 0.015 60 (108)
+In-CHA In = 14.2 11 600 ─ C3H8/N2 = 2.5/97.5 <6% ─ 85 ∼0.071 0.004 14 (109)
+Hierarchical Zeolite Supported Catalysts
+LayeredGa-MFI Ga = 1.39 ∞ 600 1.18 C3H8/N2 = 5/95 6.3 6.9 82 0.058 ∼0 5 (110)
+Ga-MFI-MPS Ga = 2.7   600 5.07 C3H8/N2 = 5/95 12.0 13.2 84 0.434 1.039 5 (111)
+Metal Oxide Supported Catalysts
+Cr/Al2O3 Cr = 7.5 ─ 600 2.40 C3H8/N2 = 20/80 62 89.3 90 1.273 0.269 2 (112)
+Cr/Sn&ndash;Al2O3 Cr/Sn = 13/1   610 1.14 C3H8 = 100 59 ∼100 94 0.591 0.313 3 (113)
+V/ZrO2 V = 1   550 2.07 C3H8/H2/N2 = 14/14/72 24 69.9 90 0.425 0.288 1 (114)
+Zn/TiZrOx Zn = 4.06   550 4.71 C3H8/H2/N2 = 40/5/55 29 84.5 85 1.233 0.690 1 (115)
+Co&ndash;Al2O3 Co = 5.3   590 2.90 C3H8/H2/N2 = 20/16/64 24.8 50.6 94 0.643 0.05 5 (116)
+Co/SiO2 Co = 2.1   650 0.20 C3H8/Ar = 3/97 60 92.3 86 0.093 0.051 20 (117)
+Ga/Al2O3 Ga = 1.97   550 1.45 C3H8/Ar = 20/80 24 47.7 90 0.298 0.055 24 (118)
+Ni/Al2O3 Ni = 1   580 0.30 C3H8/He = 20/80 29.4 47.3 93 0.078 0.021 12 (119)
+ZrO2 Bulk ZrO2   550 6.70 C3H8/He = 40/60 28.4 71.0 90 1.58 N.A. 1 (120)
+Ru/YZrOx Ru = 0.06   550 1.57 C3H8/He = 40/60 32 79.9 98 1.411 0.381 1 (121)
+aSee the definitions of SAR, X, and Kd in the captions of Table 1.
+The hierarchical zeolite supported Pt catalysts typically show propylene productivity of 4&ndash;6 kgC3H6·kgcat&ndash;1·h&ndash;1 at a deactivation rate of 0&ndash;0.02 h&ndash;1, which are superior to those on OMS, zeolite, and metal-oxide supports. Several promising Pt-hierarchical zeolite materials exhibit outstanding catalytic lifetimes that lasted longer than 300 h under industrially relevant conditions. (38,39,60) As for Pt-free catalysts, the promising Co and Zn-containing molecular sieve catalysts exhibit propylene productivity of 0.5&ndash;2 kgC3H6·kgcat&ndash;1·h&ndash;1) at a deactivation rate of 0&ndash;0.2 h&ndash;1, which exhibits certain superiority compared to the counterparts on metal-oxide supports and the represented bulk ZrO2. In this regard, a review about the synthesis and structure&ndash;function relationships of these molecular sieve-supported materials for PDH reaction is necessary and informative. Hereafter, we will discuss the advances in PDH based on metal-OMS materials (section 2), metal-zeolites (section 3), and metal-hierarchical zeolites (section 4). Several representative metal&ndash;organic framework (MOF) derived PDH catalysts on MFI zeolites were also introduced in section 3. Afterward, the challenges and perspectives on molecular sieve-based PDH materials were proposed (section 5). We expect that this perspective can provide some scientific guidance for designing more efficient PDH catalysts.
+</file-attachment-contents>
+
+<file-attachment-contents filename="Review B.txt"> 
+Detailed analysis established from the study of reference \[10.1021/acscatal.1c05921\]. Synthesized comprehension stemming from references \[10.1016/j.jcat.2017.05.024\], \[10.1021/acscatal.5b02878\], \[10.1021/acsami.1c15892\], \[10.1021/acscatal.2c00928\], \[10.1021/ie1024694\], \[10.1021/jacs.8b11443\], \[10.1016/j.cej.2015.01.008\], \[10.1021/jacs.2c03941\], \[10.1021/acscatal.1c05778\], \[10.1021/acs.cgd.2c01479\], \[10.1021/acsanm.9b01293\], \[10.1021/acscatal.0c01580\], \[10.1021/acscatal.8b00936\], \[10.1039/D1GC03700E\], \[10.1021/jacs.2c02636\], \[10.1126/sciadv.aar5418\], \[10.1016/j.micromeso.2022.112115\], \[10.1039/D0CS00814A\], \[10.1021/acscatal.7b02264\], \[10.1021/acscatal.1c04092\], \[10.1021/acscatal.9b03527\], \[10.1021/acscatal.2c05860\], and \[10.1021/acscatal.2c05042\].
+            
+            Integrative understanding and prospective outlook: Considering the advancements and findings discussed in the file, there lies an opportunity to explore emerging fields and innovative methodologies. Future research endeavors might focus on refining the PDH process through the development of novel catalysts that enhance activity, stability, and selectivity. There is also potential in exploring the integration of PDH with other renewable energy sources, such as solar or wind power, to further reduce the environmental impact. Additionally, the scalability of PDH processes to industrial levels while maintaining high efficiency and selectivity is a critical area for future investigation. The exploration of PDH's applicability in regions with abundant natural gas resources could also open new markets for propylene production, potentially leading to more sustainable and diversified supply chains.
+</file-attachment-contents>
+
+Please output the evaluation results in the following JSON format:
+
+{
+  "Content Quality": {
+    "Topic Relevance": {
+      "Requirement": "Relevance and importance to the topic",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Comprehensiveness of Information": {
+      "Requirement": "Breadth and depth of topic coverage",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Accuracy of Information": {
+      "Requirement": "Correctness of data and statements",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Innovativeness of Viewpoints": {
+      "Requirement": "Novel insights and unique perspectives",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Integration of Interdisciplinary Perspectives": {
+      "Requirement": "Degree of multidisciplinary knowledge integration",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Structure and Organization": {
+    "Clarity of Logical Structure": {
+      "Requirement": "Coherence of argumentation process",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Reasonableness of Chapter Arrangement": {
+      "Requirement": "Balance and sequence of content distribution",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Quality of Introduction and Conclusion": {
+      "Requirement": "Effectiveness of opening and closing",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Academic Standards": {
+    "Accuracy and Completeness of Citations": {
+      "Requirement": "Correctness of citation format and content",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Timeliness and Relevance of References": {
+      "Requirement": "Recency and relevance of literature",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Avoidance of Plagiarism and Appropriate Citation": {
+      "Requirement": "Originality and appropriateness of citations",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Innovation and Contribution": {
+    "Critical Analysis of Existing Research": {
+      "Requirement": "Depth of analysis and insight",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Proposal of New Research Directions or Questions": {
+      "Requirement": "Foresight and inspirational quality",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Potential Contribution to the Field": {
+      "Requirement": "Degree of theoretical or practical advancement",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Methodology Assessment": {
+    "Clarity of Research Method Description": {
+      "Requirement": "Clarity of methodological explanation",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Rationality of Method Selection": {
+      "Requirement": "Match between method and research question",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Rigor of Research Design": {
+      "Requirement": "Scientific nature and reliability of design",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Timeliness and Cutting-edge Nature": {
+    "Inclusion of Latest Research Results": {
+      "Requirement": "Degree of citation of latest literature",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Reflection of Current Research Hotspots": {
+      "Requirement": "Coverage of hot issues",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Writing Quality": {
+    "Fluency of Language Expression": {
+      "Requirement": "Smooth writing, easy to understand",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Appropriateness of Professional Terminology Use": {
+      "Requirement": "Accuracy and consistency of terminology use",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Conciseness of Expression": {
+      "Requirement": "Degree of language refinement",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Practicality and Application Value": {
+    "Practical Application Potential of Research Results": {
+      "Requirement": "Guiding significance for practice",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Feasibility of Proposed Suggestions": {
+      "Requirement": "Realism and operability of suggestions",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Critical Thinking": {
+    "Logic of Argumentation": {
+      "Requirement": "Rationality of reasoning process",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Multi-angle Analysis of Problems": {
+      "Requirement": "Diversity and comprehensiveness of perspectives",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    },
+    "Identification and Discussion of Research Limitations": {
+      "Requirement": "Recognition and analysis of limiting factors",
+      "Scoring Rationale": "",
+      "Review A Score": 0,
+      "Review B Score": 0,
+      "Superior Article": ""
+    }
+  },
+  "Overall Evaluation": {
+    "Review A Total Score": 0,
+    "Review B Total Score": 0,
+    "Superior Review": "",
+    "Summary": ""
+  }
+}
+
+In your output, please ensure:
+1. The scoring rationale for each point is concise yet substantive, not exceeding 20 words.
+2. Scores are precise to one decimal place and show differentiation.
+3. Indicate the superior article for each scoring point (output "A" or "B", if scores are equal, mark as "AB").
+4. The total score is the sum of all scoring point scores.
+5. Provide a brief comparison and conclusion in the overall evaluation, explaining why one review is superior, not exceeding 50 words.
+
+When evaluating, please note:
+- Maintain objectivity and conciseness.
+- Provide accurate scores based on the content of the articles.
+- Only provide the most critical observations or judgments in the scoring rationales.
+- When comparing the two articles, focus on their significant differences.
+
+Now, please begin your evaluation work. Remember, your goal is to provide a concise yet comprehensive comparison, highlighting the key differences between the two reviews.

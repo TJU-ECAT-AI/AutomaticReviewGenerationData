@@ -1,0 +1,1092 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Computers and Chemical Engineering 43 (2012) 55 67 Contents lists available at SciVerse ScienceDirect Computers and Chemical Engineering jo u rn al hom epa ge :www.elsevier.com/locate/compchemeng Computing the correlation between catalyst composition and its performance in the catalysed process Martin Hole na a,b,,  Norbert Steinfeldt a,  Manfred Baerns c,  David Stefka b a Leibniz Institute for Catalysis, Albert-Einstein-Str. 29a,
+D-18059
+Rostock, Germany b Institute of Computer Science, Academy of Sciences, Prague, Czech Republic c Fritz-Haber Institute of Max-Planck Society, Faradayweg 4-6,
+D-14195
+Berlin, Germany a  r  t  i c  l  e i  n f  o Article history: Received 28 August 2011 Received in revised form 28 March 2012 Accepted 4 April 2012 Available online 13 April 2012 Keywords: Catalysed process Catalyst performance Correlation measures Estimating correlation value Analysis of variance Regression trees a b  s  t  r  a  c  t The methodology for  computing correlations between continuous descriptors of catalytic materials and their performance in  the  catalysed process is  addressed.
+Continuous descriptors are  typically molar  frac- tions of individual components of  the  catalyst,whereas  the performance is represented most frequently by yield or  selectivity of reaction products  or  conversion of  key feed  components.
+Measures of  various kinds of  correlation are  recalled,and  their  descriptor-wise application to  catalytic data for  computing cor- relations between the  composition and  performance of  catalysts is  presented.
+The  paper  also compares the application of  correlation measures to  catalytic  data on  the  one  hand  with the  analysis of variance,on the other hand  with  the application of regression trees.
+As  a  case  study,  the  presented approaches are applied to data  from  high-temperature synthesis of  hydrocyanic acid. 2012 Elsevier Ltd. All rights reserved.
+1.
+Introduction The overall objective of the analysis of data from catalytic exper- iments with different solid materials is typically stated as follows: Find correlations between the composition of catalytic materials (and possibly other descriptors of their properties,or also of reac- tion conditions) and their performance in the catalysed process,usually represented by yield or selectivity of reaction products and conversion of key reactants,or by some more complicated perfor- mance function incorporating them (Gobin, Martinez,& Schth,2007; Omata, Kobayashi,& Yamada,2005; Suh et al.,2009; Valero et al.,2009).
+In statistics,the correlation of a pair or a group of random variables denotes in general some departure from fully independent behaviour of those variables,and it is taken as an indication of the existence of some relationship between them.
+Several kinds of such a departure exist,and various correlation measures have been proposed to quantify the extent to which a given pair or group of variables shows a correlation of the partic- ular kind (cf.Section 2).
+In catalysis,most of those measures have not been in use yet,in spite of the well-known importance of corre- lation analysis in system identification and event detection (Fontes & Embiruc u,2001; Nishiguchi & Takai,2010).
+As far as catalysed Corresponding author at: Leibniz Institute for Catalysis, Albert-Einstein-Str. 29a,
+D-18059
+Rostock, Germany.
+Tel.:+420 731915728,fax:+420
+286585789.
+E-mail address:martin.holena@catalysis.de
+(M.
+Hole na). processes are concerned,however,correlation between properties and performance has usually been only indirectly deduced from modelling the quantitative relationships between catalyst descrip- tors and performance with some nonlinear regression model.
+Such a model is frequently called quantitative structure-activity rela- tionship
+(QSAR),
+quantitative compositionactivity relationship,or quantitative structureproperty relationship in this context (Farrusseng, Clerc, Mirodatos,& Rokotomalala,2009; Rothenberg,2008; Serna, Baumes, Moliner,& Corma,2008; Sieg, Stutz, Schmidt, Hamprecht,& Maier,2006).
+The attractive feature of regression models is that they do not restrict the characterization of how catalyst descriptors correlate with performance to only one sin- gle number,like correlation measures do.
+Instead,they reveal how the performance changes with changing values of descriptors (e.g.,with changing values of molar fractions of individual components).
+To this end,they use functions of many variables (as many as there are descriptors),which represent not only the influence of individ- ual descriptors on the catalyst performance,but also the influence of interactions between theoretically arbitrary groups of descrip- tors.
+However,this feature is at the same time the source of a serious difficulty with regression models
+compared to correlation mea- sures,they need a very large amount of data.
+A
+general rule is that this amount increases exponentially with the number of considered descriptors (Cawse,2001; Myers, Motgomery,& Anderson-Cook,2009).
+Hence,even if data about as few as 2 catalysts were suffi- cient to model with a desired reliability a performance that depends solely on a single descriptor,then data about 210 = 1024 materials 0098-1354/$
+see front matter
+2012 Elsevier Ltd. All rights reserved. http://dx.doi.org/10.1016/j.compchemeng.2012.04.001 56
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 are needed to model with the same reliability a performance that depends on 10 descriptors (a rather modest number in nowadays catalysed processes).
+So many catalytic materials are not expected to be tested in a single experiment
+as a matter of fact,some pub- lished applications of the
+QSAR
+model most popular in catalysis,artificial neural networks,involved only several dozens of catalysts (Corma, Serra, Argente, Botti,& Valero,2002; Gnay & Yildirim,2008; Hou, Dai, Wu,& Chen,1997; Kito, Hattori,& Murakami,1994).
+Therefore,the objective of this paper is to present the descriptor- wise application of important kinds of correlation measures for computing correlations between the composition and performance of catalysts.
+The application of those measures is illustrated by a detailed case study using data from high-temperature synthesis of hydrocyanic acid,and compared with the analysis of variance and with the application of regression trees.
+2.
+Methodology for computing different kinds of correlation As was already recalled in the introduction,different measures of correlation between two random variables exist,indicating dif- ferent kinds of relationships between those variables,e.g.,between a particular descriptor of the catalytic material and a variable representing its catalytic performance.
+In this section,all impor- tant correlation measures encountered in the literature will be explained.
+The explanation underlies two restrictions:(i) It deals only with ordinal data and ordinal variables (though not necessary continuous ones).
+This has two important reasons:• Most usually,a positive correlation between random vari- ables is understood as a concordance between the tendencies of the correlated variables to assume high or low values.
+This is,of course,applicable only to ordinal variables.
+Below,also a more general approach based on general dependence will be explained.
+However,the commonly encountered measures corresponding to that approach, Spearmans correlation coef- ficient and Schweizer and Wolffs measure,are actually also used only for ordinal data (Maritz,1981; Myers & Well,2003; Nelsen,2006; Schweizer & Wolff,1981).
+Although their gen- eral definition covers also nominal variables,the methods for their estimation from measured data require the data to be ordinal,and some of their properties,which will be described below,actually hold only for continuous random variables. • The variable representing the performance of catalyst in the catalysed process (such as yield,selectivity or conversion) is not only ordinal,but even continuous,and we are primarily interested in correlation between the performance and ordi- nal descriptors,mainly fractions of individual components.
+To correlate the performance with nominal variables,such as the kind of employed support,methods applicable to nom- inal data need to be used (see,e.g., Agresti,2002; Reynolds,1977; Sahai & Ageel,2000; Scheff,1999),among which we consider the analysis of variance most useful,briefly recalled in Section
+2.5.
+(ii) It concerns only pairs of random variables and is intended to be applied to the correlation between a descriptor (e.g.,fraction of a particular component) and the performance of a catalyst in the process.
+Technically,most of the measures can be gen- eralized to groups of three or more random variables (Block & Ting,1981; Joe,1990,1997; Wolff,1981),for some of them even various such generalizations are possible (Joe,1990,1997).
+However,it is not appropriate to apply such measures to groups of more than two descriptors because a relationship between different descriptors (e.g.,between the fractions of two compo- nents in catalyst) is typically not random (due to stoichiometry and other chemical properties),thus it cannot be interpreted as a relationship between two random variables.
+2.1.
+Correlation corresponding to general dependence Generally,correlation between random variables
+X
+and
+Y
+only means some departure from their independence.
+From a stochastic point of view,
+X
+and
+Y
+are independent if their joint distribution
+H
+is the product of the distribution
+F
+of
+X
+and the distribu- tion
+G
+of
+Y,
+i.e.,if H(x,y) = F(x)·G(y),for all x and y.
+Equivalently, H(x,y)
+F(x)·G(y) = 0 for all x and y.
+Hence,if H(x,y)
+F(x)·G(y) > 0 or H(x,y)
+F(x)·G(y) < 0 for any pair x,y,then this already indicates some correlation between
+X
+and
+Y.
+As an example,think of
+X
+as describing the molar fraction of Mo-oxides in the active shell of some catalyst,of
+Y
+as describing the yield of a particular reaction product.
+Let the ratio of the fraction of considered catalysts containing Mo  in their active shell to that not containing Mo be
+2:8,
+whereas the ratio of the fraction of considered catalysts with yield above 25% to the fraction with yield up to 25% be
+4:6.
+If now the yield is independent of the fraction of Mo-oxides in the active shell of the catalyst,the set of all available catalysts divides as follows:• the fraction of catalysts containing Mo and with yield up to 25% is
+0.12;
+• the fraction of catalysts containing Mo  and with yield above 25% is
+0.08;
+• the fraction of catalysts not containing Mo  and with yield up to 25% is
+0.48;
+• the fraction of catalysts not containing Mo  and with yield above 25% is
+0.32.
+If any of these four fractions is different,then this indicates cor- relation between yield and the fraction of Mo-oxides.
+Moreover,the whole sequence of those four fractions is different in such a case: For example,if the fraction of catalysts containing Mo and with yield up to 25% is actually only
+0.1,
+then this sequence is
+0.1,
+0.1,
+0.5,
+0.3,
+indicating a positive correlation,whereas if that fraction is
+0.15,
+the sequence is
+0.15,
+0.05,
+0.45,
+0.35,
+indicating a negative correlation.
+A
+simple way how to measure such a general dependence is to average the difference H(x,y)
+F(x)·G(y) with respect to the random vector
+(X,
+Y),
+i.e.,to compute the expectation
+E(H(X,
+Y)
+F(X)G(Y)).
+(1) Calculating this expectation always gives values in the interval [1/12,1/12],where the lower bound 1/12 is reached,e.g.,for
+Y
+=
+X,
+the upper bound 1/12 is reached,e.g.,for
+Y
+=
+X
+(Nelsen,2006).
+Usually,a normalization by the constant 12 transforms the interval [1/12,1/12] to the interval [1,1],leading to the measure
+X,Y =
+12E(H(X,
+Y)
+F(X)G(Y)),
+(2) called Spearmans correlation coefficient (Lehmann,1975; Maritz,1981; Myers & Well,2003).
+An unbiased estimate rX,Y of X,Y based on a measured sample (x1,y1),. . .,(xn,yn) can be computed accord- ing to (Lehmann,1975):rX,Y = 1
+6k=1 n (xrank(k)
+yrank(k))2 n(n2 1) .
+(3) In (8) an increasing ordering of the values x1,. . .,xn and an increasing ordering of the values y1,. . .,  yn are considered,and xrank(i) is the position of xi within the former,whereas yrank(i) is the position of yi within the latter.
+If
+X
+and
+Y
+are,in addition to ordi- nality,even continuous,then Spearmans correlation coefficient has the following important properties (Scarsini,1984):
+M.  Hole
+na et al. / Computers and Chemical Engineering 43 (2012) 55 67 57 (i) 1
+X,Y
+1;(ii)
+Y,X =
+X,Y,
+whereas
+X,Y =
+X,Y =
+X,Y;
+(iii) if
+X
+and
+Y
+are independent,then
+X,Y =
+0;(iv) if f is a function strictly increasing on the value set of
+X
+and g is a function strictly increasing on the value set of
+Y,
+then f(X),g(Y) =
+X,Y;
+(v) if
+X
+and
+Y
+are with probability 1 strictly increasing functions of each other,then
+X,Y =
+1,whereas if they are with probability 1 strictly decreasing functions of each other,then
+X,Y =
+1.
+The properties (ii) and (iii) actually hold even if
+X
+and
+Y
+are only ordinal,and the properties (ii)(iv) hold also for the not-normalized measure (1).
+The implications in the properties (iii) and (v) cannot be reversed,i.e.,from
+X,Y =
+0 cannot be concluded that
+X
+and
+Y
+are independent,and from
+X,Y =
+1/X,Y =
+1 cannot be concluded that they are increasing/decreasing functions of each other.
+For exam- ple,the difference H(x,y)
+F(x)·G(y) can have large positive values in some areas and large negative values in other areas,but they still can average out to zero.
+Consequently, Spearmans correlation coefficient can serve neither as an indicator of the extent to which two variables (e.g.,the fraction of a particular catalyst component and yield of a particular product) are independent,nor the extent to which they are increasing or decreasing functions of each other.
+Therefore,a modification of Spearmans correlation coefficient has been proposed in Schweizer & Wolff,
+1981.
+That modification con- sists in replacing H(x,y)
+F(x)·G(y) in (2) with its absolute value H(x,y)
+F(x)·G(y).
+Hence, Schweizer and Wolffs measure is given by:
+X,Y =
+12EH(X,
+Y)
+F(X)G(Y).
+For continuous
+X
+and
+Y,
+Schweizer and Wolffs measure in addi- tion to changing the implications in the properties (iii) and (v) to equivalences also modifies the remaining properties (i),(ii) and (iv),as follows:(i) 0
+x,y
+1;(ii)
+Y,X =
+X,Y;
+(iii)
+X,Y =
+0
+if and only if
+X
+and
+Y
+are independent;(iv) if f is a function either strictly increasing or strictly decreasing on the value set of
+X
+and g is a function either strictly increasing or strictly decreasing on the value set of
+Y,
+then f(X),g(Y) =
+X,Y;
+(v)
+X,Y =
+1 if and only if
+X
+and
+Y
+are with probability 1 strictly monotone functions of each other.
+Due to the properties (i),(iii) and (v), Schweizer and Wolffs measure can be interpreted as an intensity of correlation between
+X
+and
+Y,
+in the sense of a distance of the relationship between them from the situation that they are completely independent,and closeness of that relationship to the situation that they are strictly monotone functions of each other.
+In the catalytic context,such an intensity of correlation between,e.g.,yield and the fraction of a par- ticular component means the distance from the situation that yield is completely independent of the fraction of that component and closeness to the situation that yield is a strictly increasing or strictly decreasing function of the fraction of a particular component.
+An estimate sX,Y of X,Y based on a sample ((x1,y1),. . .,(xn,yn)) can be obtained through replacing
+H,
+F
+and
+G
+with the correspond- ing empirical distribution functions.
+Consequently,sX,Y = 12 n3 n
+i=1 n
+j=1
+#{k :xrank(k)
+i,yrank(k)
+j} ij n
+,
+(4) where # stands for the number of elements.
+2.2.
+Correlation corresponding to concordance The most frequently encountered meaning of correlation between
+X
+and
+Y
+is the concordance of higher and lower val- ues between both variables: In the situation when
+X
+describes the fraction of some catalyst component and
+Y
+describes its cat- alytic performance,positive correlation means smaller fractions of that component are associated with lower performance and higher fractions with higher performance,whereas negative correlation means that higher fractions of the component are associated with lower performance and lower fractions with higher performance.
+A
+possible measure of that association is the probability that for two independent realizations (x1,y1) and (x2,y2) of
+(X,
+Y),
+x1 < x2 coincides with y1 < y2 and x1 > x2 coincides with y1 > y2 minus the probability that for such realizations,x1 < x2 coincides with y1 > y2 and x1 > x2 coincides with y1 < y2. In the context of the above exam- ple with
+X
+describing the fraction of Mo-oxides and
+Y
+describing the yield of reaction product,this is the probability that from two random catalysts,the one with higher Mo  fraction will also lead to a higher yield minus the probability that it will lead to a lower yield.
+That probability is called Kendalls correlation coefficient (Hollander & Wolfe,1973; Lehmann,1975):
+X,Y =
+P[(X1
+X2)(Y1
+Y2)
+> 0]
+P[(X1
+X2)(Y1
+Y2)
+< 0],
+(5) where
+(X1,
+Y1)
+and
+(X2,
+Y2)
+are independent random vectors gov- erned by the considered joint distribution
+H.
+If at least one of the variables
+X
+and
+Y
+is continuous (which is always the case when one of them represents catalytic performance,as was already men- tioned),then an unbiased estimate tX,Y of X,Y based on a sample ((x1,y1),. . .,(xn,yn)) can be obtained by replacing the probabilities in (5) with frequencies:tX,Y = 2 #{(i,j) :(xi xj)(yi yj) > 0}
+#{(i,j) :(xi xj)(yi yj) < 0} n(n
+1) .
+(6) Another possible measure of the concordance of higher and lower values between
+X
+and
+Y
+is the probability that a realiza- tion x of
+X
+differs from a particular summary statistic of
+X
+(such as expectation or median) in the same direction as a realization y of
+Y
+differs from the corresponding summary statistic of
+Y.
+Most frequently,median is employed as the summary statistic,because of its robustness,in which case the measure is called medial corre- lation coefficient or Blomquists measure (Nelsen,2006).
+Similarly to (5),it equals
+X,Y =
+P[(X
+mX)(Y
+mY) > 0]
+P[(X
+mX)(Y
+mY) < 0],
+(7) where mX and mY denote the medians of
+X
+and
+Y,
+respectively.
+Moreover,it can be shown (Nelsen,2006) that (7) substantially simplifies to
+X,Y =
+4H(mX,mY)
+1.
+(8) An estimate bX,Y of X,Y based on a sample ((x1,y1),. . .,(xn,yn)) can again be obtained by replacing the distribution function
+H
+and the medians mX and mY with their empirical counterparts.
+Consequently,bX,Y = 4 n #{k :xk mX,yk mY}
+1,
+(9) 58
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 where mX and mY are the empirical medians of
+X
+and
+Y,
+thus for example,
+mX = xk + xk+1 2 if n = 2k,xk+1 if n = 2k +
+1.
+Very important is that for
+X
+and
+Y
+continuous,both the Kendalls and the medial correlation coefficient can be shown to have the properties (i)(v) listed above (Nelsen,2006; Scarsini,1984),replacing X,Y with X,Y or
+X,Y.
+This means that for continuous random variables,also the Spearmans X,Y actually measures the concordance of higher and lower values between them,in spite of being defined in a more general setting.
+2.3.
+Correlation based on bounding probability distributions Besides the Spearmans, Kendalls and medial correlation coef- ficients,there is one more frequently encountered correlation measure that has the above properties (i)(v),therefore can be interpreted as concordance of higher and lower values between the fraction of a particular catalyst component,and a variable describ- ing the performance of the catalyst in the catalysed process.
+This is the Ginis coefficient (Nelsen,2006; Scarsini,1984),defined
+X,Y =
+P[(X1
+X2)(Y1
+Y2)
+> 0]
+P[(X1
+X2)(Y1
+Y2)
+< 0] +
+P[(X1
+X3)(Y1
+Y3)
+> 0]
+P[(X1
+X3)(Y1
+Y3)
+< 0],
+(10) where
+(X1,
+Y1),
+(X2,
+Y2)
+and
+(X3,
+Y3)
+are independent random vectors,
+(X1,
+Y1)
+governed by a particular joint distribution
+H,
+(X2,
+Y2)
+governed by the 2-dimensional distribution U(x,y) = min(F(x), G(y)),and
+(X3,
+Y3)
+governed by the 2-dimensional distribution L(x,y) = max(F(x) + G(y)
+1,0).
+To understand the meaning of this definition,let us recall that
+L
+and
+U
+are bounding probability distributions for the joint distribution
+H
+(Nelsen,2006): L(x,y)
+H(x,y)
+U(x,y).
+According to (10),the Ginis coefficient is the sum of two differ- ences of probabilities:• the probability that for independent realizations (x1,y1) and (x2,y2) of random vectors governed by a particular joint distribution
+H
+and by the lower bounding distribution
+L,
+respectively,x1 < x2 coincides with y1 < y2 and x1 > x2 coincides with y1 > y2 minus the probability that for such realizations,x1 < x2 coincides with y1 > y2 and x1 > x2 coincides with y1 < y2,• and the probability that for independent realizations (x1,y1) and (x3,y3) of random vectors governed by a particular
+H
+and by the upper bounding distribution
+U,
+respectively,x1 < x3 coincides with y1 < y3 and x1 > x3 coincides with y1 > y3 minus the proba- bility that for such realizations,x1 < x3 coincides with y1 > y3 and x1 > x3 coincides with y1 < y3.Using again the above example with
+X
+describing the fraction of Mo-oxides and
+Y
+describing the yield,this sum is the probability that from two catalysts,one of which was randomly obtained from a population obeying some joint distribution
+H,
+and the other from a population obeying in 50% the lower and in 50% the upper bounding distribution,the one with higher Mo  fraction will also lead to a higher yield minus the probability that it will lead to a lower yield.
+An estimate gX,Y of X,Y based on a sample ((x1,y1),. . .,  (xn,yn)) can be obtained using the fact that it is possible to simplify (10) to (Nelsen,2006):
+X,Y =
+2E(F(X)
++
+G(Y)
+1
+F(X)
+G(Y)),
+and then replacing the distributions
+F
+and
+G
+with their empirical counterparts.
+This leads to the estimate 2 n n
+k=1
+xrank(k) n + yrank(k) n
+1
+xrank(k) n yrank(k) n
+= 2 n2 n
+k=1 [xrank(k) + yrank(k)
+n
+xrank(k)
+yrank(k)].
+(11) The statistician Gini,when introducing this correlation,actually employed a different estimate:gX,Y = 1 n2/2 n
+k=1 [xrank(k) + yrank(k)
+n
+1
+xrank(k)
+yrank(k)],
+(12) where
+denotes the integer part of a real number.
+However,the difference between both estimates vanishes with increasing n.
+2.4.
+Correlation corresponding to linear dependence According to the properties (v) and (v),the correlation mea- sures reviewed so far achieve their highest value,1,whenever the dependence between the correlated variables
+X
+and
+Y,
+e.g.,between a particular component fraction and yield,is described by a strictly increasing function.
+Similarly,the measures
+X,Y,
+X,Y,
+X,Y,
+X,Y achieve their lowest value,1,whenever this dependence is described by a strictly decreasing function
+(X,Y =
+1 also in this case).
+Sometimes,the correspondence of the values 1 and 1 to such broad classes of functions can be disadvantageous.
+That dis- advantage is for the measures
+X,Y,
+X,Y,
+X,Y,
+X,Y further increased through the already mentioned fact that the implication in the property (v) cannot be reversed,i.e.,the measure can achieve the value 1/1  even if the variables are not increasing/decreasing func- tions of each other.
+In such situations,another correlation measure is used,for which those values correspond to a more specific depen- dence,namely to linear dependence.
+This is the linear correlation coefficient of
+X
+and
+Y
+(Cox & Hinkley,1974; Kendall & Stuart,1979),also called Pearsons correlation coefficient and commonly denoted corr(X,
+Y),
+which is defined corr(X,
+Y)
+= cov(X,
+Y)
+var(X)var(Y) (13) and has the following properties:(i)(iii),listed above for the Spearmans correlation coefficient (replacing X,Y with corr(X,
+Y));
+(iv+) corr(X,
+Y)
+= 1 if and only if
+Y
+= aX + b with probability 1,where a > 0,whereas corr(X,
+Y)
+= 1 if and only if
+Y
+= aX + b with probabil- ity 1,where a <
+0.
+For example,if again
+X
+describes the fraction of a particular component,and
+Y
+describes yield,then corr(X,
+Y)
+= 1 indicates an increasing linear dependence of yield on that fraction,whereas corr(X,
+Y)
+= 1 indicates a decreasing linear dependence.
+An estimate cX,Y of corr(X,
+Y)
+based on a sample ((x1,y1),. . .,(xn,yn)) can be obtained by replacing the covariance and variances in (13) with their empirical counterparts:cX,Y = n i=1
+xi 1 n n j=1xi
+yi 1 n n j=1yi
+n i=1
+xi 1 n n j=1xi 2n i=1
+yi 1 n n j=1yi 2 .
+(14)
+M.  Hole
+na et al. / Computers and Chemical Engineering 43 (2012) 55 67 59
+2.5.
+Comparison with analysis of variance and regression trees Correlation measures are not the only way how to quantify the strength of a relationship between random variables.
+Specifi- cally,a quantitative analysis of the influence of random variables of arbitrary kinds (including nominal variables) on a dependent con- tinuous variable is the objective of the analysis of variance.
+There is also an important kind of regression models,regression trees,the construction of which incorporates information about the com- binations of individual independent variables with the strongest influence on the dependent variable.
+A.
+Analysis of variance is an approach based on statistical hypotheses testing that quantitatively analyses the influence of varying the values of individual independent variables on the value of a continuous dependent variable (Sahai & Ageel,2000; Scheff,1999).
+In the area of catalysis,independent variables include most importantly variables describing the composition of the catalytic material,both qualitative (whether a particular component is or is not present in the material,or what has been used as sup- port),and quantitative (fraction of a particular component in the material).
+Dependent variables,on the other hand,are the vari- ables describing some kind of catalytic performance,notoriously exemplified by yield and conversion.
+Recently published exam- ples of the analysis of variance of data from catalysed processes include Cawse, Baerns,and Holena (2004),  and Moehmel et al.
+(2008).
+Analysis of variance assumes that each dependent variable fol- lows some basic statistical model,in which the expectation of that variable is viewed as the sum of the effects of individual inde- pendent variables,called main effects,possibly superimposed by their interactions of various complexity.
+The amount of available data for each combination of values of input variables determines how complex the basic model can be.
+The principle of the analy- sis of variance consists in testing the hypothesis that a particular main effect or interaction can be left out from that model with- out significantly changing the value of the output variable.
+If the tested hypothesis is valid,then both models will give the same error,otherwise leaving out the main effect or interaction will cause the error of the model to increase.
+Therefore,the ratio of both errors is computed in the analysis-of-variance method,and if that ratio is significantly higher than one,the tested hypothesis is rejected.
+Provided that the individual errors are normally dis- tributed,also the distribution of the error ratio is known (it is the FisherSnedecor distribution).
+Using this distribution,the proba- bility can be computed that the error ratio is as high as the value corresponding to the measured data,or even higher.
+That proba- bility is called achieved significance of the test.
+The lower it is,the more unlikely it is that the measured data could occur if the simpli- fied model is valid.
+Consequently,the more significant is then the effect/interaction that was left out from the model.
+For example,if the catalytic material consists of support and active components selected from a pool of 10 compounds,c1,. . .,  c10,then in the basic model,the expectation
+EY
+of the yield
+Y
+equals the sum of main effects,
+EY
+= support + c1 + · · · + c10,
+(15) to which interactions of two variables can be added,
+EY =
+support + c1 + · · · + c10 + support,c1 + · · · + support,c10 + c1,c2 + · · · + c9,c10,or even interactions of more variables,
+EY
+= support + c1 + · · · + c10 + support,c1 + · · · + c9,c10 + support,c1,c2 + · · ·.
+The connection between analysis of variance and correlation is twofold:(i) If the statistical test in the analysis of variance rejects the hypothesis that a particular main effect (e.g.,cj for the compound cj in (15)) can be left out,then this indicates a cor- relation between the corresponding independent variable and the dependent variable (in (15):between the fraction of cj and yield).
+(ii) If an application of correlation measures reveals that that there is no correlation between certain independent variables and the dependent variable,then the main effects for such indepen- dent variables do not need to be included into the basic model.
+Consequently,the same amount of data allows more interac- tions among the remaining variables to be included instead of those main effects.
+Statistical testing whether each of the added interactions can be left out from the model can provide valu- able information that would not be available if they were not at first included
+for example,the information that a partic- ular combination of active components or a combination of a particular active component and a particular support tend to increase yield or conversion.
+Importantly,neither from (i) nor from (ii) it follows that a if there is a high correlation between the dependent variable and the independent variable corresponding to a particular compound cj in the basic statistical model (15),then the analysis of vari- ance has to reject the hypothesis that the main effect cj can be left out from (15).
+Indeed,the test takes into account the con- text of all the independent variables corresponding to any of the main effects in the basic model.
+On the other hand,the correlation measures between the dependent variable and the independent variable corresponding to cj are computed only from values of those two variables,ignoring the context of the other independent variables.
+B.
+Regression trees are regression models that,similarly to the analysis of variance,allow dependent variables of arbitrary kinds (Breiman, Friedman, Olshen,& Stone,1984; Hastie, Tibshirani,& Friedman,2001).
+Their principle consists in splitting the value set of some input variable into two parts S1 and S2 in such a way that the sum of squared errors,based on (x1,y1),. . .,  (xn,yn),of the means of the regression variable y corresponding to S1 and
+S2,
+xi
+S1
+yi
+xi S1yi #{i :xi
+S1}
+2 +
+xi
+S2
+yi
+xi S2yi #{i :xi
+S2}
+2 (16) is minimized over all possible splits
+(S1,
+S2)
+of the value sets of all input variables.
+If the considered input variable is continuous,than only splits of the form
+(S1 =
+{x < v},
+S2 =
+{x
+v}) for some value v are considered.
+Both S1 and S2 are then split again in the same way,possibly using different input variables.
+Such splitting continues as long as needed,forming a hierarchy of rectangular areas in the space of continuous input variables.
+The name of the method orig- inated from the fact that such hierarchies can easily be visualized as tree-like graphs.
+The sum of squared errors in (16) is actually the sum of sample variances of the regression variable y on the sets S1 and
+S2.
+Since that sum is minimized over all input variables,the fact that a partic- ular input variable has been selected in this minimization indicates its influence on the regression variable y.
+More precisely,it indi- cates the influence of the selected variables in the sense that these variables allow to split the input space in a way leading to minimal sum of sample variances of y over the two parts. 60
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 Depending on the number of such splits that are consecutively performed,trees of different sizes can be obtained.
+The most appro- priate tree size is usually chosen using cross-validation.
+The set of available data about catalytic materials is randomly partitioned into k parts of approximately equal size.
+With each pos- sible tree size,k trees are constructed,using for the construction of each of them k
+1 parts,and leaving the remaining kth part (a dif- ferent one for each of the k trees) to measure the sum of squared errors of predictions by the constructed tree
+T:
+SSE(T)
+=
+xi k-th part (T(xi)
+yi)2.
+To assess the appropriateness of each tree size,the
+SSE
+values are averaged over all k trees with that size.
+Recently published examples of the application of regression trees to data from catalysed processes include Corma, Serra, Serna,and Moliner (2005), Cuki c et al.
+(2007),  Farrusseng et al.
+(2005),  and Klanner et al.
+(2004).
+3.
+Data from the synthesis of
+HCN
+for a case study The correlation measures described in Section 2,as well as their comparison with analysis of variance and regression trees,will be illustrated by a case study using data from the investigation of 696 catalytic materials for the high-temperature synthesis of hydrocyanic acid.
+H4 +
+NH3
+HCN
++
+H2
+(17)
+2NH3
+N2 +
+3H2.
+(18)
+HCN
+is formed by catalytic reaction of methane and ammo- nia (17).
+The decomposition of ammonia limits the yield of the desired
+HCN
+formation (18).
+The available data were obtained through high-throughput experiments in a circular 48-channel reactor (Moehmel et al.,2008).
+In most of these experiments,the composition of the materials was designed using a genetic algorithm developed specifically for the optimization of solid cat- alysts (Buyevskaya, Wolf,& Baerns,2000; Wolf, Buyevskaya,& Baerns,2000).
+This fact makes the case study well representative because genetic and other evolutionary algorithms are often used to search appropriate compositions of catalysts for catalysed pro- cesses (Baerns & Holena,2009; Mariano, Costa, Vasco de Toledo, Melo,& Filho,2011).
+The catalysed process,as well as composition and preparation of the tested catalytic materials have been described in detail in Moehmel et al.
+(2008).  Here,only those facts are recalled that are important for understanding which variables were considered in the case study.
+All the tested catalysts consisted of a support and up to six metal additives.
+Support was chosen among 15 materials:pure -Al2O3 (alsint),as well as the compounds AlN, Mo2C, TiB2, TiN, Nb2O3,
+BN,
+ZrO2, Sm2O3, SrO, CaO, MgO, TiO2, SiC,and Si3N4,bound in an alumina matrix.
+Eleven metal additives were used as active elements:
+Y,
+La, Zr, Mo, Re, Ir, Ni, Pt, Zn, Ag and Au.
+It is important to realize that the fractions of these compounds are not completely independent since their weight fractions sum up to the total weight fraction of the active part,which was fixed to
+2.2
+wt%.
+As far as catalyst performance is concerned,the primary interest is in
+HCN
+yield.
+It was calculated from the CH4 concentration and the reactor inlet and outlet,assuming
+HCN
+as the only product.
+The degree of conversion of NH3 was considered as of no interest due to a low variability,the conversion of NH3 being always nearly complete.
+The inlet composition of the feed gas amounted to
+10.7
+vol. %
+NH3,
+9.3
+vol. % CH4 and 80 vol.% Ar.
+The reaction temperature was Fig.
+1.
+Number of tested catalytic materials with each of the employed supports. 1373
+K.
+At this temperature,it is thermodynamically possible to convert the introduced CH4 completely to
+HCN.
+For data analysis,the data collected are described by the follow- ing variables:
+• A
+nominal input variable describing the support of the catalyst. • Eleven continuous input variables describing the fractions of the metal additives
+Y,
+La, Zr, Mo, Re, Ir, Ni, Pt, Zn, Ag,and Au in the active shell of the catalyst. • One continuous output variable describing the
+HCN
+yield.
+3.1.
+Choice of support Recall from Section 2 that the correlation measures can be applied only to the 11 continuous input variables and the 3 con- tinuous output variables.
+Nevertheless,there is a simple way how to take into account also the influence of the remaining,nominal variable,i.e. the influence of support:to apply the measures for each support separately.
+The distribution of the 696 tested cata- lysts according to their support is depicted in Fig.
+1.
+We decided to restrict the subsequent illustration of applying correlation mea- sures to the supports Si3N4 (160 catalysts) and SiC (123 catalysts).
+Fig. 2 shows how frequently catalytic materials with those two sup- ports contain each of the 11 active metals.
+It can be seen that,with the exception of La and Pt in SiC-supported catalysts,each of them was contained in less than 50% of the tested catalytic materials,though with the exception of Zr in Si3N4-supported catalysts and Zr, Mo  in SiC-supported catalysts,each of them occurred in at least 10% of the materials.
+M.  Hole
+na et al. / Computers and Chemical Engineering 43 (2012) 55 67 61 Fig.
+2.
+Proportions of tested catalysts with supports Si3N4 and SiC containing each of the active metal additives.
+Finally in Fig. 3,percentiles of
+HCN
+yield values are shown for combinations of the supports Si3N4 and SiC and the metal additives occurring together with each of those supports in at least 10% of the tested catalysts.
+As we have seen above,these are the additives
+Y,
+La, Re, Ir, Ni, Pt, Zn, Ag,and Au.
+4.
+Case study results and discussion The 6 correlation measures introduced in Section 2 were applied data concerning the 283 catalytic materials supported by Si3N4 or SiC.
+For each metal additive,the correlation measures were applied only to those catalysts that contained,in addition to the respective support,also the additive.
+The reason for this restriction is that most properties of correlation measures are valid only if both random variables for which the correlation is calculated are continuous.
+Whereas it is quite natural to view values of yield as realizations of a continuous random variable,this is not the case for the values of fractions of metal additives if they should include also the value 0 (meaning that additive is not at all contained in the catalytic material).
+Indeed,the high number of catalysts not containing the additive,apparent from Fig. 2,would mean equally high number of realizations equal 0,which is extremely unlikely for a contin- uous variable,even if its values have a very low discernibility.
+It is much more natural to view the value 0 as the realization of a discrete random variable describing whether the additive is con- tained in the material or not.
+Only for the subpopulation of the catalytic materials in which it is contained,there is a continuous random variable providing the fraction of the considered additive in the material.
+To achieve sufficient reliability,correlation mea- sures have been applied only to those additives that were contained in at least 10% of the investigated catalytic materials.
+These were all additives except Zr (i.e.,10 metal additives) in the case of Si3N4- supported catalysts,and all additives except Zr and Mo  (i.e.,9 metal additives) in the case of Si3C-supported catalysts.
+4.1.
+Correlation results for Si3N4-supported catalysts,with discussion The results for catalytic materials with support Si3N4 are depicted in Fig.
+4.
+They can be described as follows:(a) The fraction of Pt has a positive correlation with the
+HCN
+yield according to all measures except medial correlation coefficient.
+In all such cases,the correlation of its fraction is also the highest positive one.
+In addition,the fraction of Ir has consistently a low positive correlation with the
+HCN
+yield (including medial corre- lation coefficient),and with the exception of linear correlation coefficient,the same is also true for the fraction of Au.
+There- fore,also an increasing molar fraction of these two elements might improve
+HCN
+yield.
+Moreover,the values of the corre- lation measures,most importantly the values of the Schweizer and Wolffs measure,which reflects the intensity of the corre- lation between a molar fraction and the
+HCN
+yield (cf.Section 2),imply that the positive impact of the Pt molar fraction on the
+HCN
+yield is higher than that of the Au or Ir molar fraction.
+(b) The most negative correlation with the
+HCN
+yield according to the correlations measures indicating the direction of correla- tion (all measures except the Schweizer and Wolffs,cf.Section 2) was obtained for the fractions of elements
+Y,
+Ni, Zn and Ag.
+Moreover,the fractions of
+Y,
+Ni, Zn and Ag have also the highest intensity of correlation according to the Schweizer and Wolffs measure.
+Those facts indicate that catalyst compositions with high molar fraction of these elements should be avoided,whereas small molar fractions of them have a positive influence on the
+HCN
+yield.
+Consequently,
+Y,
+Ni, Zn and Ag may act as pro- moters,which is in agreement with findings in Moehmel et al.
+(2008).
+(c) The fractions of La, Mo  and Re have less negative correlation with the
+HCN
+yield than the fractions of
+Y,
+Ni, Zn and Ag,and also the intensity of their correlation with the
+HCN
+yield according to the Schweizer and Wolffs measure is lower.
+Therefore,the negative influence of high molar fraction of these elements on the
+HCN
+yield is low,and their fraction in catalysts with a high
+HCN
+yield can be larger compared to
+Y,
+Ni, Zn and Ag.
+Indeed,in one of the catalysts with highest yield reported in Moehmel et al.
+(2008),  the fraction of Re was 36%.
+4.2.
+Correlation results for SiC-supported catalysts,with discussion Similarly,the results for SiC-supported materials,depicted in Fig. 5,can be described as follows:62
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 Fig.
+3.
+Percentiles of
+HCN
+yield values in catalytic materials with supports Si3N4 and SiC and metal additives except Zr and Mo.
+(a) Positive correlation of the molar fraction with the
+HCN
+yield for catalysts with support SiC was found for the elements Pt and Au using the Spearmans, Kendalls and Ginis correlation coef- ficient.
+As was the case for catalysts with support Si3N4,the linear correlation coefficient is positive,but the medial correla- tion coefficient is negative for the fraction of Pt.
+In contrast,both the linear and the medial correlation coefficient are negative for the fraction of Au.
+The values of the correlations measures indicating the direction of correlation,as well as the intensity of correlation according to the Schweizer and Wolffs measure show that the molar fraction of Pt has a dominating positive influence on the
+HCN
+yield.
+Compared to Pt,the influence of the molar fraction of Au is only marginal.
+(b) The most negative correlation with the
+HCN
+yield according to the correlations measures indicating the direction of cor- relation was obtained for the fractions of Re, Ni ad Zn,which have also the highest intensity of correlation according to the Schweizer and Wolffs measure.
+Therefore,high molar fraction of these elements should be avoided.
+Recall that a strong nega- tive correlation between the fraction of Ni and Zn and the
+HCN
+yield was observed already in the case of Si3N4-supported cata- lysts.
+It might be concluded that independently of the support,high molar fraction of those two elements is inappropriate for achieving high
+HCN
+yield.
+On the other hand,the strong nega- tive correlation between the fractions of Re, Ni, Zn and the
+HCN
+yield implies also that the presence of these elements in low molar fractions has a positive influence on the
+HCN
+yield.
+(c) The fractions of La, Ir and Ag have less negative correlation with the
+HCN
+yield than the fractions of Re, Ni and Zn,and also the intensity of their correlation with the
+HCN
+yield accord- ing to the Schweizer and Wolffs measure is lower.
+Therefore,it is expected that the fraction of La, Ir and Ag in cata- lysts with a high
+HCN
+yield can be larger compared to Re, Ni and Zn.
+4.3.
+Comparison with the analysis of variance In Moehmel et al.
+(2008),  analysis of variance of the
+HCN
+yield was performed using data about all 696 catalytic materials.
+For comparison with the application of correlation measures,we now
+M.  Hole
+na et al. / Computers and Chemical Engineering 43 (2012) 55 67 63 Fig.
+4.
+Correlations between fractions of metal additives and
+HCN
+yield for catalytic materials supported by Si3N4 and the 10 additives contained in at least 10% such materials. performed it only with data about the 283 materials supported by Si3N4 or SiC,separately for each of those supports.
+Moreover,the choice of independent variables differs from Moehmel et al.
+(2008) in two respects:(i) Since support is now the same for all materials in each of the performed analyses of variance,it does not any more serve as an independent variable.
+(ii) In the analysis of variance in Moehmel et al.
+(2008),  the metal additives were described with 2-valued independent variables that only indicate the presence of the respective additive in the catalyst.
+Needless to say,those independent variables sub- stantially differ from the fractions of individual additives in the material,which are used in the calculations of correlation mea- sures.
+On the other hand,it is not possible to use directly those fractions as independent variables in the analysis of variance because they can have many different values in the data (the- oretically as many as the number of considered catalysts) and would impose more parameters to the basic statistical model underlying the analysis than can be estimated from the data (in statistical terms,they would add too many degrees of freedom to the model).
+Therefore,we used auxiliary variables as inde- pendent variables describing the metal additives in the analysis of variance,each of which adds at most 5 degrees of freedom to the basic statistical model,at the same time attempting to mimic the behaviour of the fraction of the respective metal additive.
+For a metal additive a,such an auxiliary independent variable Xa was defined as follows:
+1. If
+the set of values of the fraction of a, Fa,in data has at most 5 elements,{Fa(x) :x
+C}
+5,where
+C
+denotes the set of considered catalysts (thus
+C
+has 160 elements if support is Si3N4,and 123 elements if support is SiC),then Xa(x) = Fa(x)
+for x
+C.
+2.
+Otherwise,construct the sets
+C1,
+. . ., C5 as
+C1 =
+{x
+C
+:0 < Fa(x)
+d1}, Table 1 Results of the analysis of variance of the
+HCN
+yield on the presence of the 11 con- sidered metal additives for the data about the 283 materials supported by Si3N4 or SiC (highly significant main effects:
+,significant main effects:
+).
+Dependent variable
+Main factor
+Achieved significance Support Si3N4 Support SiC
+HCN
+yield
+Y
+0.16
+0.32
+La
+0.32
+0.65
+Zr
+0.95
+0.83
+Mo
+3.6
+× 104
+0.83
+Re
+0.35
+0.073
+Ir
+4.7
+× 107
+0.1
+Ni
+0.016
+0.37
+Pt
+2.0
+× 1012
+4.5
+× 105 Zn
+0.058
+0.18
+Ag
+0.042
+0.65
+Au
+0.19
+5.0
+× 103 64
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 Fig.
+5.
+Correlations between fractions of metal additives and
+HCN
+yield for catalytic materials supported by SiC and the 9 additives contained in at least 10% such materials.
+Cj = {x
+C
+:dj 1 < Fa(x)
+dj},
+j = 2,,5,where d1,. . .,d5 are the even deciles of the set {Fa(x):xC and Fa(x) / = 0},and then define Xa(x) =
+0
+if Fa(x) = 0 mean{Fa(x) :x
+Cj}
+if x
+Cj,j = 1,,5 The results of the analysis are listed in Table
+1.
+In Si3N4- supported catalysts, Pt, Ir and Mo were significant at the 1% level of significance (i.e.,highly significant),whereas Ni and Ag were sig- nificant only at the 5% level but not at the 1% level.
+In SiC-supported catalysts,on the other hand, Pt, Au,were significant at the 1% level in SiC-supported catalysts.
+Observe that for SiC-supported catalysts,the achieved significance is much lower than for catalysts with sup- port Si3N4.
+Therefore,it can be assumed that the interaction of Pt with SiC is lower than its interaction with Si3N4.
+There is one clear correspondence between the results of anal- ysis of variance and results obtained with correlation methods: The fraction of Pt,which is in combination with both considered supports the most significant metal additive at all (achieved signif- icance 1012 in Si3N4-supported catalysts,105 in SiC-supported catalysts),has also irrespectively of support the highest positive correlation with the
+HCN
+yield,according to all measures except medial correlation coefficient.
+On the other hand,this is also the only unquestionable corre- spondence.
+Whereas the fractions of the metal additives Ni and Ag,which are significant in Si3N4-supported catalysts,have in those catalysts a high intensity of correlation according to Schweizer and Wolffs measure,the same is not true for the fractions of the highly significant additives Mo  and Ir in Si3N4-supported catalysts,nei- ther for the fractions of the highly significant Au in SiC-supported catalysts.
+At the same time,the fraction of Ni has a high intensity of correlation also in SiC-supported catalysts,although Ni is not at all significant in them (achieved significance
+0.37).
+Sometimes,a new insight into the influence of catalyst compo- sition on the
+HCN
+yield can be obtained through combining results obtained using correlation measures with the results of analysis of variance.
+For example,the very high significance of Ir in Si3N4- supported catalysts,combined with the fact that the fraction of Ir has a low positive correlation with the
+HCN
+yield in that case,indicates that for most of the possible values of the above defined auxiliary variable XIr,the variance of the
+HCN
+yield is quite low.
+Con- sequently,the influence of the fractions of the remaining elements is mostly low once the fraction of Ir is fixed.
+For similar reasons,the variance of the
+HCN
+yield is quite low for most of the possible values of the above defined auxiliary variable XAu in the case of SiC- supported catalysts.
+In such catalysts the influence of the fractions of the remaining elements is thus mostly low once the fraction of Au is fixed.
+4.4.
+Comparison with the application of regression trees Also a regression tree with the
+HCN
+yield as dependent variable was for the
+HCN
+data constructed already in Moehmel et al.
+(2008),taking into account all 696 catalytic materials.
+For comparison with the application of correlation measures,we  now constructed regression trees using only data about the 283 materials to which they were applied,a separate tree for each support.
+We employed
+M.  Hole
+na et al. / Computers and Chemical Engineering 43 (2012) 55 67 65 Fig.
+6.
+Regression tree for
+HCN
+yield in catalysts with support Si3N4. the Matlab implementation of the original regression trees pro- posed in Breiman et al.
+(1984),  putting a single restriction on the resulting trees,namely the minimal size of data in leafs to be
+10.
+The constructed regression tree for Si3N4-supported catalytic materials is visualized in Fig.
+6.
+Observe that the primary split is according to the fraction of Pt,and the secondary splits for catalysts with lower fractions of Pt according to the fraction of Ir,whereas for those with higher fractions of Pt once again according to the fraction of Pt.
+The tertiary splits are according to the fractions of Mo, Zn,once again Ir,and Au.
+The regression tree shows that on the Si3N4 support,especially the combination of Pt with the elements Au and Pt can give high
+HCN
+yield.
+Furthermore,that fact that Pt determines the primary and one secondary split,and that Ir deter- mines one secondary and one tertiary split,imply a great impact of those two elements on
+HCN
+formation,a conclusion supported also by high significance of those elements according to the analysis of variance.
+The regression tree for SiC-supported catalysts is visualized in Fig.
+7.
+Its smaller size (i.e.,lower number of nodes) compared to the tree for Si3N4-supported catalysts is a consequence of the different number of catalysts with both kinds of support in the available data.
+Also for SiC-supported catalysts,the primary split is according to the fraction of Pt,and the secondary splits according to the fraction of Ir for catalysts with lower fractions of Pt,and again according to the fraction of Pt for those with higher fractions of Pt.
+The tertiary splits are,for this support,only according to fractions of two ele- ments: Zn and Au.
+The regression tree shows that also for the SiC support,the addition of further elements,here in particular Ir and Au,can lead to high
+HCN
+yield.
+Also for regression trees,like for the analysis of variance,a clear correspondence with the results obtained with correlation meth- ods can be found only in emphasizing the importance of the fraction of Pt.
+That fraction determines not only the primary splits of
+HCN
+yield and of the conversion of
+CH4,
+but also the secondary splits in the branches corresponding to higher values.
+In Si3N4-supported catalysts,two more fractions determining splits at the first three levels of the tree,the fractions of Ir and Au,tend to have a pos- itive correlation with the
+HCN
+yield.
+The fraction of Ir is actually Fig.
+7.
+Regression tree for
+HCN
+yield in catalysts with support SiC. 66
+M.
+Hole na et al. / Computers and Chemical Engineering 43 (2012) 55 67 Table  2 Metal additives most important for
+HCN
+yield according to correlation measures,analysis of variance,and regression trees.
+Support Si3N4 SiC Fraction of the additive has a strong positive or negative correlation with
+HCN
+yield Pt,
+Y,
+Ni, Ag
+Pt, Re, Ni, Zn Presence of the additive is significant according to the analysis of variance of
+HCN
+yield Pt, Ir, Mo, Ni, Ag
+Pt, Au Fraction of the additive determines splits at the three highest levels of the regression tree for
+HCN
+yield Pt, Ir, Mo, Zn, Au Pt, Ir, Zn, Au the only one for which that correlation is consistently positive.
+In SiC-supported catalysts,however,this is not true,although the frac- tions of Ir and Au determine for them splits on the same layers.
+Even more importantly,the proportion of Zn,which also deter- mines splits on the third layer,has on the contrary a consistently negative correlation with the
+HCN
+yield.
+5.
+Conclusions In the paper,the methodology of computing the correlations between continuous descriptors of catalytic materials and their performance in the catalysed process was addressed.
+In particu- lar,descriptor-wise application of various correlation measures for computing those correlations was proposed.
+The paper also pointed out the similarities and dissimilarities between the results obtained by the application of correlation measures to catalytic data,and those obtained by two other approaches,based on different prin- ciples:the analysis of variance and the application of regression trees.
+The presented methods were illustrated by a detailed case study using data from high-temperature synthesis of
+HCN
+(Moehmel et al.,2008),which has shown that correlation measures can help to increase our insight into the behaviour of the tested catalytic mate- rials in the considered reaction.
+It has also shown that an additional insight into the influence of individual components of a catalytic material on its properties can be obtained through combining the results of different approaches.
+The metal additives that were,in this case study,found most important for
+HCN
+yield by the correla- tion measures and by the two other approaches were discussed in detail in Section
+4.
+They are now once more summarized in Table
+2.
+The findings of the case study are in agreement with existing knowledge about
+HCN
+synthesis.
+The catalytic components should be suited for breaking hydrogencarbon bonds of methane as well as hydrogennitrogen bonds from ammonia.
+The remaining CHx and NHx should then couple on the surface resulting finally in
+HCN.
+M.
+Diefenbach, Brnstrup, Aschi, Schrder,and Schwarz (1999) have shown in experimental and computational studies that
+C
+N
+bond formation is mediated by Pt+.
+CH4 is first dehydrogenated to PtAuCH2+ while dehydrogenation of ammonia does not occur on Pt due to its endothermicity.
+The major pathway is found via PtH and
+CH2NH2+.
+Compared to other transition metal cations like Fe*, Co+, Rh+,
+W+,
+Os+, Ir+ and Au+, Pt+ is assumed to be unique for its ability to activate methane and to mediate
+C
+N
+bond formation as a precursor for
+HCN.
+According to the present results it is likely that also Ir, Au,and Re as well as possibly Mo  facilitate
+HCN
+formation in a similar manner.
+In a later paper, Koszinowski, Schrder,and Schwarz (2004) argued that
+CN
+coupling of methane and ammonia might occur on PtmAun+ clusters;however,they proved only that the binuclear carbene complex PtAuCH2+ mediates
+C
+N
+formation.
+Au itself was shown not to form
+HCN.
+This is not in contradic- tion to the present work,in which Pt and a support was present in the catalytic reaction.
+Tentatively,it may be assumed that also Ir and Re follow similar mechanisms for the mechanisms of the HCN-formation reaction.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the Mars-van Krevelen mechanism operate in oxide-catalyzed oxidation reactions, and what is the significance of the energy required for oxygen vacancy formation (ΔEv) in determining both the catalytic activity and the oxidizing ability of the oxide surface?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

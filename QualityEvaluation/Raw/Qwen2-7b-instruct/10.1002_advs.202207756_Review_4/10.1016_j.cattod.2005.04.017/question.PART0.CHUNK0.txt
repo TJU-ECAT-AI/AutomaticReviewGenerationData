@@ -1,0 +1,763 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+The roles of gallium hydride and Brnsted acidity in light alkane dehydrogenation mechanisms using Ga-exchanged HZSM-5 catalysts: A DFT pathway analysis Yogesh V. Joshi, Kendall T. Thomson * School of Chemical Engineering, Purdue University, West Lafayette, IN 47907, USA Abstract We have used density functional theory (DFT) to study light alkane dehydrogenation by Ga-exchanged HZSM-5 by considering two types of catalytic sites: a mono-Al site of the form Z[HGaX]+ (X = H, CH3, OH, Cl) and a di-Al site of the form Z2[GaH]2+. For the mono-Al site, we report a new, direct one-step dehydrogenation mechanism; however, we conclude in general that mono-Al sites in ZSM- 5 are not likely responsible for alkane dehydrogentation, as calculated activation energies are too high compared to experimental values (60 kcal/mol versus 39 kcal/mol). Instead, we propose [GaH]2+ residing near di-Al sites (Z2[GaH]2+) are more active sites for dehydrogenation. We report a three-step mechanism for di-Al sites consisting of (1) CH activation, followed by (2) alkene desorption and (3) H2 removal. We find that as AlAl distance increases, the activation barrier for CH activation decreases (ranging from 85.72 to 38.38 to 19.69 kcal/mol), while the barrier for H2 removal increases (ranging from 15.49 to 36.71 to 47.38 kcal/mol)resulting in an optimal AlAl separation distance of 4.53 A arising from these competing trends. As a result, we propose a simple structure-to- activity correlation based on the Sabatier principle, which could be used to model and design the catalyst with required dehydrogenation activity.
+# 2005 Published by Elsevier B.V.
+Keywords: Ga-HZSM-5; Density functional theory; Dehydrogenation; Light alkane aromatization; Bifunctional mechanism; Sabatier principle
+1. Introduction
+Light alkane aromatization using shape selective MFI- based catalysts is an important chemical process to upgrade light alkane feedstocks like liquefied petroleum gas (LPG).
+The valuable aromatics produced by this process find important commercial applications in downstream pro- cesses. Unfortunately, the substantial cracking activity of unmodified HZSM-5 catalyst leads to a large selectivity for C1 and C2 products. This problem is overcome by adding additional dehydrogenation function in the form of extra- framework species like Ga, Zn and Pt. The improved activity and selectivity due to these extra-framework species has made possible commercial applications such as the Cyclar and Aeroforming processes. The elevated hydrogenolysis activity of Pt-based catalysts and the volatility of Zn species in H2 at higher temperatures, has lead to the identification of Ga-HZSM-5 catalysts as a commercially viable choice [1].
+See the recent review by Fricke et al. [2] covering various applications of Ga-based zeolite catalysts.
+There has been a constant effort to improve the selectivity of these catalytic systems by understanding the role of the extra-framework species. A large number of experimental investigations of gallium oxides and Ga-HZSM-5 catalysts have been reported [323] in the literature. Some review articles [2426] provide a concise summary of all the experimental work done in the past. For a pure Brnsted acid catalyzed mechanism, hydride transfer has been identified as an important reaction path for initial removal of hydrogen from light alkanes. However, this redistribution of the hydrogen in the lower alkanes causes reduction in the aromatics selectivity. A study involving careful comparison of the initial cracking rates versus dehydrogenation rates www.elsevier.com/locate/cattod Catalysis Today 105 (2005) 106121 * Corresponding author. Tel.: +1 765 496 6706; fax: +1 765 494 0805.
+E-mail address: thomsonk@purdue.edu (K.T. Thomson). 0920-5861/$  see front matter # 2005 Published by Elsevier B.V. doi:10.1016/j.cattod.2005.04.017 [27] for HZSM-5 concluded that the same Brnsted acid site is involved in the dehydrogenation as in cracking. Thus, to enhance dehydrogenation in comparison with cracking one needs to change the initial dehydrogenation mechanism completely. Hence, the additional dehydrogenation function by extra-framework Ga improves selectivity with simulta- neous generation of molecular hydrogen as a valuable side product. Also, experimentally it has been observed [11,28] that propene is far more reactive than propane, and hence it was concluded that initial dehydrogenation is likely to be the rate-limiting step.
+Initially, it was suggested that the gallium oxide phase was the source of the catalytic activity in Ga-HZSM-5, as it was shown that Ga2O3 is capable of H2 dissociation [7],dehydrogenation and dehydrocyclization [6,12]. However, it was found that the intrinsic dehydrogenation activity of Ga2O3-HZSM-5 is better than that of Ga2O3 alone. The decrease in the dehydrogenation activity of Ga2O3-HZSM-5 upon exchange of Brnsted protons with Na+ lead to the conclusion that this catalyst operates via a bifunctional mechanism [4]. In the proposed mechanism by Meriaudeau and Naccache [4], the GaO coordination from oxide phase activates the CH bond and the alkoxide species is exchanged with a Brnsted acid site. Eventually, both H2 and the alkene desorb to regenerate the active sites. There are several other studies [15,29,30] proposing bifunctional mechanisms; however, they differ with respect to the details of the mechanistic steps. Iglesia et al. [29] concluded that Brnsted acid sites cause CH activation, while Ga is responsible for recombinative desorption of the surface hydrogen atoms. Gnep et al. [30] proposed that Ga sites and Brnsted sites work independently, where Ga carries out dehydrogenation, while regular Brnsted acid sites catalyze oligomerization, b-scission and cyclization steps. This hypothesis was further supported by the work from Kwak and Sachtlers group [16], where they located an optimum [Ga]/([Ga] + [H+]) ratio for activity and selectivity in Ga- HZSM-5. A hydrogen back-spillover phenomenon [31] has been proposed to support the H2 removal ability of Ga species from the distant Brnsted sites.
+Some experimental efforts were also aimed at elucidating the nature of the active site. By studying the extent of reduction of GaH/Na-ZSM-5, Price and Kanazirev [23] concluded that the active catalyst consists of Ga in its reduced state. They concluded that Brnsted acid sites play an important role in the reduction of gallium oxide species.
+Using in situ Ga K-edge X-ray adsorption spectroscopy, Meitzner et al. [32] showed that for the catalysts under working conditions, the nature of the active Ga species is GaHx. This was further confirmed by recent work from Kazansky et al. [33] using DRIFTS. The authors showed that the characteristic GaH bond stretching frequency indicates the heterogeneity of GaHx species on the catalyst surface.
+Also, CO adsorption studies pointed out the presence of the three types of sites in the reduced catalyst: (a) [HGaH]+, (b) [HGaOH]+ and (c) low coordinated Ga+. The authors pointed out that the relative populations of these sites were very sensitive to the H2 partial pressure and temperature.
+The GaH stretching band showed decreased intensity after evacuation at the higher temperature. However, it is not clear, which one is the active site for dehydrogenation.
+Compared to the experimental literature, theoretical investigations of the dehydrogenation mechanism, and the nature of the active site for this system, are limited. Methane activation on [Ga O]+ species was studied by Himei et al.
+[34] and Broclawik et al. [35]. Gonzales et al. [36] studied the reduction process of [Ga(OH)2]+ by considering inter- conversion of different gallium species such as [Ga O]+,[HGaOH]+, Ga+ and [HGaH]+. Their study concluded that [HGaOH]+ species are kinetically the most favored species.
+However, this study could not explain the experimentally observed higher activity of the Ga-HZSM-5 for H2/D2 exchange. Frash and van Santen [37] considered a similar gallium site to study the ethane dehydrogenation reaction pathway. The authors classified the reaction paths as of two types: (i) a carbenium activation pathway consisting an alkoxide-like intermediate along the reaction path after the activation of the CH (Rd+Hd) bond and (ii) an alkyl activation pathway supporting the formation of GaC coordination after the activation of the CH bond (Rd Hd+). After a detailed analysis the authors concluded that the alkyl activation path for [HGaH]+ species is the actual path for dehydrogenation. However, this conclusion was based on the observation that at higher temperatures, the initial CH activation step becomes the rate-determining step, and the calculated activation barrier (3940 kcal/mol) for this first step is in close agreement with the experimentally estimated value of 39 kcal/mol [20]. These trends in the reaction rate and change in the rate-determining step at higher temperature were mainly contributed by the entropy loss during the formation of the surface activated complex. With explicit consideration of physisorbed species under the influence of van der Waals interactions, it will be difficult to draw similar conclusions. The entropy loss from a gas phase reactant to an active intermediate cannot be entirely assigned to the initial step of the reaction mechanism, as the motion of the molecule is already confined to the zeolite channel system. However, to study initial adsorption process quantitatively, a QM/MM model of the active site [38] is needed as it explicitly accounts for the van der Waals attractive interactions. In general, we can say there are disagreements between the experimental results and the calculations. Hence, further investigations are necessary to confirm the nature of the active sites and other possible dehydrogenation mechanisms.
+In this contribution, we used electronic density functional theory
+(DFT)
+to study dehydrogenation mechanisms catalyzed by Ga-exchanged HZSM-5. For the active sites like Z[HGaX]+ (X H, CH3, OH, Cl), we first proposed a direct dehydrogenation (one-step) mechanism for light alkane dehydrogenation. These extra-framework species can possibly exist as an active site under reaction conditions and
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+107 provide an opportunity to study the effect of polar environment on one-step dehydrogenation mechanisms.
+These sites consist of gallium species next to one framework aluminum. There have been significant disagreements [39,40] in the literature regarding the distribution of Al in the zeolite framework. It has been shown [41] that pairs of framework Al provide a significant polar environment.
+Hence, we have also considered the possibility of Ga species near two-framework Al for our investigations. In doing so,we have concentrated on the effect of the AlAl distance on the energetics of the carbenium activation reaction path.
+The rest of this paper is organized as follows. In Section 2,we describe the details of the computational method and cluster selection. Section 3 consists of the results and discussions. In this section, we report the direct dehydro- genation path on Z[HGaX]+ and the carbon number dependence of the activation barrier. In the same section, we put fort the reaction path for Z2[GaH]2+ catalytic site (dual Al-sites). In Section 4, we summarize the conclusions of our work.
+2. Cluster models and computational details
+The ZSM-5 pore structure (MFI) consists of straight channels and sinusoidal channels running perpendicular to each other. The most active sites are generally thought to be located at the cross-section of these channels, as they are easily accessible by the reactants. In this work, we employed a cluster approximation to model the active sites in Ga- ZSM-5. All the clusters we used employed Si-H termina- tions with fixed bond lengths of 1.4979 A (the computed bond distance for free SiH4 using the equivalent level of the theory). The terminal Si and H atoms were then held fixed at their initial Cartesian positions for all subsequent calcula- tions. The clusters were selected to represent two types of active sites; sites consisting of one framework aluminum and sites consisting of two-framework Al atoms. For the first type of site, our cluster consisted of 11 T sites from the ZSM- 5 lattice structure as reported in the literature [42]. These lattice positions were located around the T12 position at the cross-section of the straight channel and the sinusoidal
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+108 Fig. 1. Four different forms of the Z[HGaX]+ species (I, II, III, IV): (a) X = H, (b) X = CH3, (c) X = OH and (d) X = Cl. Location of the cluster in the MFI framework: (e) view along the straight channel and (f) view along the sinusoidal channel showing plane of symmetry. channel. It has been shown that this size of the cluster is sufficiently accurate for the system under consideration, as Gonzales et al. [36] showed near-convergence of the various heats of reactions for a five T cluster. Si4+ at the T12 position was replaced by Al3+ and charge-compensated by an extra- framework cationic species. In our investigation, we considered the effect of different extra-framework gallium species on the one-step reaction pathway for dehydrogena- tion. The geometries of these clusters (IIV) are shown in Fig. 1. The location of the 11 T cluster in the MFI framework is shown in Fig. 1e and f. The Mulliken charge on the Ga atom increases as the electronegativity of the bonded atom increases as listed in Table 1.
+Our second type of active site model consisted of a gallium species [GaH]2+ next to two aluminum sites. We considered three different clusters for this type of site. The first cluster (V) was a six-membered ring located along the straight channel and consisted of two T11, two T12 and two T07 tetrahedral T sites. In total, the cluster model contained 10 T sites. The location of the 10 T cluster in the MFI framework is shown in Fig. 2d. The silicon atoms at the two T11 positions were replaced by Al atom. A charge compensating [GaH]2+ was symmetrically placed between the two Al atoms, coordinated with four proximal oxygens from the ring with an observed GaO distance of 2.02 A . For the optimized geometry, the distance between two Al atoms was 4.53 A . In order to study the effect of ring size on the dehydrogenation reaction, we considered a second type of Z2[GaH]2+ models (VI and VII) consisting of an elongated eight-membered ring. In total, this cluster consists of 14 T sites. The location of this cluster, representing an eight- membered ring, is shown in Fig. 2e. The bare silicalite structure has a plane of symmetry as shown in Fig. 2d or e.
+This gives rise to pairs of T12 and T07 positions in the
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+109 Table 1 Comparison of the geometry and charge parameters for four Z[HGaX]+ species: X = H (I), CH3 (II), OH (III) and Cl(IV)
+I
+II
+III
+IV
+GaX (A )
+1.566
+1.967
+1.817
+2.180
+GaH1 (A )
+1.557
+1.554
+1.548
+1.542
+GaO24 (A )
+1.967
+1.983
+1.955
+1.939
+GaO20 (A )
+2.001
+2.011
+1.964
+1.965
+Charge on Ga
+0.419
+0.523
+0.641
+0.553
+ENa
+2.20
+2.55
+3.44
+3.16
+DH0 (kcal/mol)b
+0.00
+3.334
+18.792
+27.853
+a Pauling electronegativity. b Heat of reduction for reaction Z[HGaX]+ + H2 , Z[HGaH]+ + HX at 298.15 K and 1 atm.
+Fig. 2. Three-different sites for Z2[GaH]2+-type: (a) six-membered ring with AlAl distance of 4.529 A , (b) eight-membered ring with AlAl distance of
+4.603 A
+, (c) eight-membered ring with AlAl distance of 5.534 A , (d) two views of the location of the six-membered ring in the MFI structure and (e) two views of the location if the eight-membered ring in MFI structure. clusters VI and VII. However, Al substitution at only one of the T12 (or T07) site breaks the symmetry. We substituted Si with Al at the T12 and T07 positions in these clusters.
+Although Al substitution was carried out at the same T positions, these two structures (VI and VII) are symme- trically non-equivalent geometries out of the four possible combinations for Al pair substitution. In the relaxed cluster (structure VI), the distance between the two Al atoms was
+4.60 A
+. We found that Ga coordinates with four lattice oxygen atoms in a square planar fashion. The GaO distance varied from 2.04 to 2.23 A , while the GaH bond distance
+(1.54 A
+) is slightly longer than that for site V.
+To study the effect of the position of Al atoms in the ring,we have studied an alternative cluster (VII) with [GaH]2+ species sitting in the same eight-membered ring. However,the Al pair in this model occupied the T12 and T07 positions (shown in Fig. 2) with a relaxed AlAl distance of 5.53 A . In this case, the gallium species was mainly coordinated with three-lattice oxygen having GaO distances from 2.04 to
+2.14 A
+. Important geometry and charge parameters of all seven-site models are listed in Tables 1 and 2. In this study,we considered Al substitution at different T sites like T12, T11 and T07. Schroder et al. [43] have used an ion-shell pair potential model to simulate the Al location at different framework positions. That study indicated a possibility of the random distribution of the framework Al due to narrow energy distribution among these structures. A similar conclusion was also drawn by Ricchiardi and Newsam [44] using force field methods. In the cluster models with two Al sites, Al substitutions are made in accordance with Lowensteins rule, which forbids the Al substitution on neighboring T sites.
+Our calculations were conducted using a double zeta 631g (d,p) basis set [45]. For gallium, this basis set corresponds to the compact contracted basis set by Binning and Curtiss [46] with d-polarization, and it has different structure than the traditional 631g basis set. For non- transition elements in the third row, mainly s- and p-type functions are involved in the bonding. However, the impor- tance of the d-functions in the geometry optimization [47,48] necessitates the presence of the d-polarization functions for the Ga basis set. Recently a true 631g basis set for third row elements [48] was put forth, although its performance is equivalent to the one by Binning and Curtiss [46].
+We have used a Becke three-parameter hybrid functional [49] (B3LYP) for this study. Previous work by Frash and van Santen [37] on the same system showed that this level of theory is adequate to draw consistent comparisons between different mechanisms. All of our calculations were done using the Gaussian03 program package [50]. Transition states were calculated using the quadratic synchronous transit (QST) method [51]. Validity of the critical transition states was confirmed using (1) imaginary frequency mode visualization, (2) relaxation by perturbing transition states along the imaginary frequency mode and (3) rigorous internal reaction coordinate (IRC) [52] relaxation. All the reported energies are corrected for zero point energy (ZPE) by doing normal mode analysis of the intermediates along the reaction paths. The inaccurate normal modes due to the frozen atoms in the cluster calculations are projected out of the Hessian to have consistent ZPE correction for a particular reaction path. The basis set superposition error (BSSE) was neglected, while calculating energetics for different mechanisms. A larger triple zeta (e.g. 6311g) basis set will reduce [53] the basis set superposition error.
+The popular counterpoise method by Boys and Bernardi [54] can be used to estimate the BSSE; however, this often leads to the overestimation of the error [53]. For both stable intermediates and transition states, default convergence criteria of
+0.00063 A
+for average displacement and
+0.35 kcal/A
+for average gradient was employed. Although these criteria are very strict for real world applications, they ensure the reproducibility and reliability of the calculations for future studies.
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+110 Table 2 Comparison of the geometry and charge parameters of four Z2[GaH]2+ species with two Al in six-membered ring (V), eight-membered ring with Al pair along the channel (VI) and eight-membered ring with Al pair across the channel surface (VII)
+V
+VI
+VII
+GaH1 A
+1.531
+1.541
+1.530
+GaO A
+2.014 (GaO11)c
+2.042 (GaO17)c
+2.272 (GaO17)
+GaO A
+2.014 (GaO11)
+2.102 (GaO23)
+2.042 (GaO23)
+GaO A
+2.030 (GaO22)
+2.146 (GaO20)
+2.141 (GaO20)
+GaO A
+2.030 (GaO22)
+2.226 (GaO24)
+2.051 (GaO24)
+AlAl A
+4.528 (T11T11)
+4.603 (T12T07)
+5.534 (T12T07)
+Charge on Gaa
+0.777
+0.644
+0.591
+DH0 (kcal/mol)b
+27.88
+0.15
+19.57
+a Mulliken charge on the atom. b Heat of reduction for reaction Z2[GaH]2+ + H2 , Z[HGaH]+ + ZH+ at 298.15 K and 1 atm. c For oxygen naming in structures V and VI refer to Figs. 7 and 8,respectively.
+Fig. 3. Reaction path for the alkyl activation mechanism of dehydrogena- tion of the ethane on Z[HGaH]+ species (I) (all energies reported are after zero point energy correction).
+3. Results and discussion
+To carry out a consistent comparison between several dehydrogenation mechanisms, we first investigated the alkyl activation pathway proposed by Frash and van Santen [37] using a larger cluster model (11 T cluster, site I) of the catalytic site than their original work. We find that the activation energy for initial CH activation is substantially higher (48.66 kcal/mol) compared to their previously calculated [37] value of 37.9 kcal/mol. We attribute the higher activation barrier to greater steric hindrance for CH insertion caused by the constrained geometry of our cluster model. We have also located an additional transition state (TS2) for the rotation of the tetrahedral [H2GaC2H5] species.
+The energetics for this mechanism is given in Fig. 3 with geometry and charge parameters listed in Table 3. The O24 H3 distances in the structures VIII and IX indicate the formation of the Brnsted acid site during the reaction path.
+Simultaneously, the Mulliken charge on the Ga is very close to zero. The structure VIII (as shown in Fig. 4) could be formed by adsorption of the H2GaC2H5 species on the Brnsted acid site. The adsorption energy we calculated for this transformation was 16.87 kcal/mol, indicating the strong binding for this intermediate.
+The stable intermediate in CH activation proceeds through rotation of the tetrahedral Ga species about the GaO20 coordination (process VIII ! TS2 ! IX in Fig. 4).
+As shown in Fig. 3, we observed very weakly activated transition states for this rotation followed by the removal of a H2 molecule (process IX ! TS3 ! X + H2 in Fig. 4). For TS3 in particular, the zero point energy correction was actually larger than the non-corrected activation energy (which within transition state theory corresponds to a net negative Gibbs free energy change at the transition state).
+We indicated this in Fig. 3 as a negative (ZPE corrected) activation barrier, which can be interpreted as essentially an unactivated process.The activation barrier for the alkyl desorption (process X ! TS4 in Fig. 3) was 61.67 kcal/mol, which is in close agreement with the previously reported [37] value of
+60.7 kcal/mol. This close agreement reflects the fact that
+the hydrocarbon species has very little interaction with the zeolite framework for this step of the mechanism. This high activationbarrierfor thealkylremovalstepshouldleadtovery low intrinsic reaction rate for the alkyl activation mechanism.
+This illuminates the essential problem with our understanding of CH activation that current computational studies have yet to adequately explain the relatively low experimental [20] activation energy of 39 kcal/mol. We conclude from the
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+111 Table 3 Geometry and charge parameters of the intermediates along the dehydro- genation reaction path at Z[HGaH]+ catalytic sites by alkyl activation mechanism
+TS1
+VIII
+TS2
+IX
+TS3
+X
+TS4
+GaO24 (A )
+2.759
+2.959
+3.026
+3.076
+3.054
+1.982
+1.992
+GaO20 (A )
+2.032
+2.105
+2.113
+2.084
+2.048
+2.014
+2.131
+GaH1 (A )
+1.571
+1.583
+1.597
+1.641
+1.689
+GaH2 (A )
+1.563
+1.572
+1.567
+1.570
+1.567
+1.562
+1.555
+GaH3 (A )
+2.028
+2.342
+2.229
+2.240
+2.137
+GaH4 (A ) b
+3.156
+1.698
+C1H3 (A
+)
+1.490
+2.077
+2.380
+3.053
+C1Ga (A )
+2.120
+2.026
+2.018
+1.981
+1.997
+1.973
+2.122
+C2H4 (A
+)
+1.094
+1.788
+O24H3 (A
+)
+1.180
+0.992
+0.981
+1.067
+1.203
+H1H3 (A
+)
+2.086
+1.184
+0.991
+C1C2 (A
+)
+1.536
+1.537
+1.536
+1.536
+1.536
+1.536
+1.409
+Charge on Gaa 0.178
+0.084
+0.062
+0.233
+0.268
+0.508
+0.346
+Charge on C1a 0.484 0.408 0.391 0.335 0.344 0.352 0.361 Charge on C2a 0.313 0.311 0.315 0.128 0.337 0.327 0.165 a Mulliken charge on the atom. b Not reported since not related to the relevant geometry transformation.
+Fig. 4. Molecular transformations during dehydrogenation of ethane on Z[HGaH]+ site (terminal SiH3 are not shown for clarity). previous literature, and from our extension here, that the single site, [HGaH]+, model does not represent the true mechanism for Ga-assisted dehydrogenation.
+3.1. Direct dehydrogenation mechanism
+In light of this conclusion, we investigated several other options, including the possibility of a direct (one-step) dehydrogenation of the hydrocarbon on a Z[HGaH]+ species. As shown in Scheme 1, hydrogen from one of the alkane carbons combines with hydrogen from the active Ga-site to form molecular hydrogen. At the same time the hydrogen from the b-carbon replenishes the GaH coordination. Thus, in one-step there is a formation of an alkene and molecular hydrogen, and at the same time the catalytic site is regenerated.
+Direct dehydrogenation involves breaking two CH and one GaH bond with the simultaneous formation of HH and GaH bonds. In addition the CC bond length decreases with a CC p-bond formation. In Fig. 5, we show the potential energy diagram for direct dehydrogenation for ethane, propane and n-butane. The comparison of the geometry parameters for transition states is reported in Table 4. The geometry parameters for all the transition states
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+112 Scheme 1. Direct (one-step) dehydrogenation mechanism for ethane.
+Fig. 5. Direct (one-step) dehydrogenation of light alkanes on the Z[HGaH]+: (a) reaction path; transition state geometries for (b) ethane, (c) propane and (d) n- butane giving trans-2-butene (terminal SiH3 groups were neglected for clarity). were very similar. The total Mulliken charge on the individual fragments (H2, CnH2n, Z+[HGaH]) in the transition state structures were nearly zero. Similarly, we observed very small individual charges on the hydrogen atoms involved in the geometry transformation. We also observe the activation barrier for dehydrogenation decreases with the presence of the secondary carbon. This was expected since the secondary carbon has higher tendency to donate H compared to the primary carbon. The activation barrier for n-butane is about 4 kcal/mol lower compared to that of the ethane. This trend agrees with the experimental finding [26] that dehydrogenation of the higher alkanes (C4) is easier than that of lower alkanes (C2).
+We note that the second hydrogen from the gallium dihydride extra-framework species is not involved in the reaction. Hence, to study the effect of the charge on the gallium atom on the activation barrier for the direct dehydrogenation path, we replaced this hydrogen with methyl (CH3), hydroxyl (OH) and chlorine (Cl) designated generically as X. From Table 1, we show that the charge on the Ga is proportional to the electronegativity of the bonded constituent X. In Table 1, we listed heats of reaction for removal of X using H2. We find that reduction of Z[HGaX]+ is endothermic when X is OH or Cl. Thus, the presence of these species is quite possible under reaction conditions unless an elaborate reduction procedure is used for catalyst pretreatment.
+At the same time,direct dehydrogenation on these catalytic sites yields lower activation barriers. Thus, more electronegative species introduce a polar environment around the gallium, which
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+113 Table 4 Comparison of the geometry and charge parameters of the transition states of direct (one-step) dehydrogenation at Z[HGaX]+ catalytic sites
+TS5
+TS6
+TS7
+TS8
+TS9
+TS10
+X
+H
+H
+H
+CH3
+OH
+Cl Alkane Cn
+C2
+C3
+C4
+C3
+C3
+C3
+GaX (A )
+1.572
+1.569
+1.574
+1.980
+1.830
+2.200
+GaO24 (A )
+1.994
+2.001
+2.003
+2.010
+1.994
+1.983
+GaO20 (A )
+2.045
+2.053
+2.052
+2.056
+1.994
+2.012
+GaH1 (A )
+2.073
+2.001
+2.060
+2.045
+2.006
+2.056
+GaH3 (A )
+1.697
+1.676
+1.709
+1.702
+1.675
+1.691
+H1H2 (A
+)
+0.834
+0.852
+0.843
+0.850
+0.840
+0.829
+C1H2 (A
+)
+1.657
+1.586
+1.606
+1.598
+1.619
+1.652
+C2H3 (A
+)
+1.435
+1.494
+1.431
+1.447
+1.466
+1.436
+C1C2 (A
+)
+1.391
+1.394
+1.401
+1.398
+1.394
+1.394
+Charge on Gaa
+0.447
+0.422
+0.416
+0.554
+0.668
+0.528
+Charge on H2 a
+0.011
+0.006
+0.005
+0.011
+0.004
+0.013
+Charge on C n a
+0.000
+0.020
+0.029
+0.000
+0.048
+0.059
+Eact (kcal/mol)b
+61.17
+59.15
+57.06
+58.51
+57.39
+56.13
+a Mulliken charges on the atom. b Activation energy for the direct dehydrogenation mechanism.
+Fig. 6. Direct dehydrogenation of the propane on the Z[HGaX]+: (a) reaction path; transition state geometries for (b) X = CH3, (c) X = OH and (d) X = Cl. facilitates the bond breaking and formation process. This results is in agreement with experimental results [19],which, starting from GaCl3-impregnated HZSM-5, reports higher initial activity for propane aromatization.
+Geometries of the transition states and the reaction path for direct dehydrogenation of propane on different [HGaX]+ species are shown in Fig. 6. The activation energy for [HGaCl]+ is 56.13 kcal/mol, which is lower than that for [HGaH]+ (59.15 kcal/mol). However, we like to note that the activation barrier for dehydrogenation by the direct dehydrogenation mechanism (61.17 kcal/mol) is similar to the highest barrier for the alkyl activation reaction path discussed above. Once again, we are forced to conclude that both direct activation on the reduced ([HGaH]+) single site as well as alternatively ligated single [HGaX]+ sites, are not correct representations of the true CH activation pathway.
+3.2. Carbenium activation pathway for Z2[GaH]2+
+species Examining the mechanism above (Fig. 3), we observe that during alkyl activation, the alkene desorption step (process X ! TS4) faces a very high activation energy (as high as 61.67 kcal/mol). Based on the work by Frash and van Santen [37] and our subsequent extension presented above,we conclude that for Z[HGaH]+ sites, it will generally be very difficult, if not impossible, to find a reaction path with low enough activation barriers to match experimental results [20]. At the same time, our results in the previous section indicate that a polar environment around the Ga species can have significant effect on reaction energetics. What we show now is that the polarity of the GaO coordination can be enhanced by placing Ga species in the vicinity of two Al T sites.
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+114 Fig. 7. Carbenium activation path of ethane dehydrogenation on Z2GaH2+ species (V) in six-membered ring: (a) reaction path consisting two-distinct steps and (b) geometry transformations during dehydrogenation path (naming convention for oxygen to define geometry parameters in Table 5).
+In an attempt to find a catalytic environment, which better facilitates alkene desorption, we considered three-different sites for this study. The first active site represents an a-type site as per the classification of pair sites by Dedecek et al.
+[55] These sites consist of a pair of five-membered rings fused to form a slightly elongated six-membered ring. As shown in Fig. 2a, the gallium species [GaH]2+ sits at the center of the rectangle of the four oxygen atoms. The GaO distance is about 2.02 A with significant positive charge on gallium. In Table 2, we provide the geometry and charge parameters for all sites considered containing pairs of Al.
+The bare gallium mono-hydride site can be reduced using H2 to form a regular gallium di-hydride and Brnsted acid site. For the a-typesite (V), we found this reaction (process V + H2 ! XII) to be endothermic with 27.88 kcal/mol heat of reaction. We will, hence forth, refer to this as H2 site- reduction and designate the heat of this reaction as DHred.
+The stability of the [GaH]2+ species, signified by the endothermic heat of H2 site-reduction, is in agreement with the similar results for Zn2+ species by Shubin et al. [56] and Barbosa et al. [57] Thus, at lower temperature most of the a-type sites will be in the dehydrogenated form as described above.
+Our investigation of the carbenium activation mechanism consists of three-distinct steps: (1) activation of the CH bond and formation of an alkoxide like intermediate, (2) removal of the primary alkoxide by desorption of an alkene and (3) desorption of molecular hydrogen to complete the catalytic cycle. For the a-type site (V), we report the reaction path for carbenium activation in Fig. 7a. We have limited our investigation only to the activation of the CH bond and removal of dihydrogen to regenerate the active site. Desorption of an alkene starting from the primary alkoxide has been extensively studied [58,59], and the activation barrier for this process should be about 35 40 kcal/mol.
+For catalytic site V, we find the energy barrier for CH activation is 85.72 kcal/mol, corresponding to the initial alkane adsorption and hydrogen removal. Schematically, the [GaH]2+ species is responsible for removing hydrogen from the alkane during this step, forming the traditional [HGaH]+ moiety residing on one of the Al atoms. The alkyl species subsequently adsorbs as an alkoxide near the second Al. The activation barrier for this step (process V + C2H6 ! TS11 in Fig. 7) is very high considering the other reaction paths we have presented so far. The transition state geometry (structure TS11 in Fig. 7) for CH activation shows the sp2 hybrid character of the carbon involved. As the tetrahedral carbon looses one of its hydrogens to gallium,it inverts to adsorb as an alkoxide on the opposite framework oxygen. This mechanism can be visualized as a sn2 attack by framework oxygen (conjugate base of the Brnsted acid site) on the tetrahedral carbon center. In Table 5, we list the geometry and charge parameters for all the species along the catalytic cycle. In the transition state (TS11), the hydro- carbon species carries more positive charge as electrons populate the covalent bond between the H and Ga. The gallium dihydride formed in this process is similar to the active site discussed in the previous sections. Ethene subsequently desorbs from the primary alkoxide, leaving behind the Brnsted acid site.
+We observe strong hydrogen bonding between the Brnsted proton and the hydridic hydrogen in structure XII (Fig. 7b). Due to this interaction, the Brnsted proton bends out of plane by an angle of 37.88. Also, the positive charge on the proton induces a small negative charge on the hydridic hydrogen. This polarization helps hydrogen removal step,which has an activation barrier of only 15.49 kcal/mol. The GaH stretching frequency (1914 cm1) for the polarized GaH bond is markedly lower than the non-polar GaH bond (1995 cm1). However, we note that the activation barrier for reverse reaction (H2 adsorption) is rather high (44.55 kcal/ mol), which makes the site kinetically stable (less active). We observe that the activation barrier for hydrogen removal is substantially smaller than that for CH activation. The activation barrier for CH activation is directly related to the large endothermicity of the CH activation step (DE =
+51.40 kcal/mol).
+The other two cluster models containing two Al T sites (VI and VII), represent the g-type site according to the classification by Dedecek et al. [55]. Model VI consists of two five-membered rings connected by a four-membered ring. This site is located along the walls of the sinusoidal channel near the cross-section of the straight and the sinusoidal channel. Comparing AlAl distances in the relaxed models, we find 4.60 A for structure VI (Fig. 2) compared to 5.53 A for structure VII (Fig. 2). Qualitatively,the Al pair was placed parallel to the sinusoidal channel for site VI and for site VII it was placed diagonally along the channel surface. The heats of H2 site-reduction (DHred) for these two models (processes VI ! XV and VII ! XVIII)
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+115 Table 5 Geometry and charge parameters of the intermediates along the dehydro- genation reaction path at Z2[GaH]2+ catalytic site (V) via carbenium activation mechanism Va
+TS11
+XI
+XII
+TS12
+GaO11.1 (A )
+2.014
+1.965
+1.995
+1.984
+2.135
+GaO22.1 (A )
+2.030
+1.955
+1.982
+1.972
+1.935
+GaO11.2 (A )
+2.014
+4.501
+4.256
+3.872
+2.984
+GaO22.2 (A )
+2.030
+4.160
+3.772
+3.538
+2.112
+GaH1 (A )
+1.531
+1.546
+1.553
+1.549
+1.548
+GaH2 (A ) c
+1.617
+1.556
+1.573
+1.730
+C1H2 (A
+)
+1.733
+2.807
+C1O11.2 (A
+)
+2.129
+1.503
+O11.2H3 (A
+)
+0.980
+1.285
+H2H3 (A
+)
+1.794
+0.919
+Charge on Gab
+0.777
+0.529
+0.446
+0.508
+0.580
+Charge on C1b
+0.315c
+0.106
+0.034
+Charge on H2b
+0.105d
+0.048
+0.063
+0.125
+0.045
+Charge on H3b
+0.382
+0.243
+a For oxygen naming refer to Fig. 7. b Mulliken charge on the atom. c Not reported since not related to the geometry transformation. d Mulliken charges for gaseous ethane molecule. were 0.15 and 19.57 kcal/mol (Table 2), respectively. Thus,the process of forming Brnsted acid/gallium dihydride pairs is thermo-neutral for site VI and exothermic for site VII;suggesting that the [GaH]2+ species are less stable in larger eight-membered ring structures. However, our reported energies of reaction for H2 site-reduction make the presence of both [GaH]2+ and [HGaH]+ species feasible under normal reaction conditions. Since structures VI and VII represent the same silicalite framework and have same stoichiometry, we can directly compare the total energy for these structures. We find VI is more stable compared to structure VII by
+12.55 kcal/mol. Considering the narrow energy distribution
+for framework substitution at different T sites, this stability could be attributed to the optimum coordination of the [GaH]+ species with framework oxygen atoms in case of structure VI.AfterreductionbyH2(aftertheformationoftheBrnstedacid site and Z[HGaH]+ pair) the stability order is reversed. We find structure XVIII more stable compared to XV by only
+3.68 kcal/mol. This small difference in the energies is
+expected as the Brnsted proton and [HGaH]+ occupy crystallographically equivalent positions (T12 and T07) individually in XV and XVIII. However, these structures are symmetrically non-equivalent as explained in Section 2.
+In Fig. 8, we report the energetics of the carbenium activation mechanism for site VI. We found that the CH activation part consists of two steps. In the first step (process VI ! XIII in Fig. 8), the GaO coordination opens such that Ga is coordinated with only two framework oxygens (O17 and O23). The coordinatively unsaturated GaH species is partially satisfied by the methyl group of ethane as shown in the structure XIII (Fig. 8b). In this structure we observed an increase in the negative charge on the primary carbon (C1)
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+116 Fig. 8. Carbenium mechanistic path of ethane dehydrogenation on Z2[GaH]2+ site (VI) with two Al atoms located in the eight-membered ring: (a) reaction path consisting two-distinct steps and (b) geometry transformations during dehydrogenation reaction path (naming convention for oxygen to define geometry parameters in Table 6). and an increase in the positive charge on the hydrogen bonded to it. Thus, the CH bonds of the methyl group become much more polar during insertion. This adsorption reaction (process VI ! TS13 ! XIII in Fig. 8) is activated by 38.38 kcal/mol. After the insertion, the methyl group slightly rotates, loosing hydrogen to form [HGaH]+ species and adsorbs itself as an alkoxide. The transition state for this second step (process XIII ! TS14 ! XIV in Fig. 8) is activated by 19.09 kcal/mol. As discussed previously the transient geometry has sp2 carbon character, which under- goes sn2 inversion. The presence of the intermediate (structure XIII) during the CH activation process is kinetically significant. It should enhance the dehydrogena- tion rate by reducing the apparent activation energy.
+However, the lower stability of the [GaH]2+ species results in a penalty for the hydrogen removal process. In this model,the hydrogen removal step (process XV ! TS15 ! VI+H2 in Fig. 8) is activated by 36.71 kcal/mol, but overall, the current catalytic site (structure VI) should have better dehydrogenation activity compared to the a-type site discussed previously. In Table 6, we listed the geometry and the charge parameters for all the intermediates along this reaction path.
+A similar reaction path for g-type site with different Al positions (VII) is shown in Fig. 9. The exothermic dissociative adsorption of H2 (Table 2) indicates that this catalytic site is more active than the models V and VI.
+Hence, the CH dissociation reaction faces a very low energy barrier. In model VII, the two-step process of dissociative adsorption of ethane has activation energies of
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+117 Fig. 9. Carbenium activation path of ethane dehydrogenation on Z2[GaH]2+ site (VII) with two Al atoms located in the eight-membered ring: (a) reaction path consisting two-distinct steps and (b) geometry transformations during dehydrogenation reaction path.
+19.69 kcal/mol (process VII + C2H6 ! TS16 ! XVI in
+Fig. 9) and 18.12 kcal/mol (process XVI ! TS17 ! XVII in Fig. 9), respectively. Thus, the activation barriers for the second step of CH activation are similar for the sites VI and VII, and hence the activation barrier for the initial insertion of the methyl group in GaO coordination can be easily correlated to the stability of the site. The H2 removal step (process XVIII ! TS18 ! VII + H2 in Fig. 9) has sig- nificantly higher activation barrier of
+47.38 kcal/mol
+compared to that for structure VI (36.72 kcal/mol). Thus,an increase in the AlAl distance will further increase the H2 removal activation barrier. Important geometry and charge parameters for the intermediates along this reaction path are reported in Table 7.
+A schematic representation of the energetics for three- catalytic sites is shown in the Scheme 2. Catalytic sites XII, XV and XVIII, before the removal of hydrogen, consist of a Brnsted acid site and [HGaH]+ species together. In the Scheme 2, we have shifted the energetics of all three-catalytic sites in such a way that the energies of the structures XII, XV and XVIII are aligned. Now, the relative energies of the species represent the relative activity or stability of the intermediates on individual scales. With our calculations we find that there is a natural optimum for the activity of the Z2[GaH]2+ site. If it is too stable, like in model V for the six-membered ring, the initial activation of the CH bond is very high, while regeneration of the catalyst site, and H2 removal, has a lower activation barrier. On the other hand, if the catalyst site is very active, like in model VII for the eight- membered ring, then the CH activation barrier is very low.
+However, the regeneration of the same active catalyst site by H2 removal faces a higher activation barrier.
+On closer examination of the Scheme 2, the Brnsted EvansPolanyi relations seems applicable for both CH activation and H2 removal steps as DHred and Eact are clearly correlated for the individual steps. This concept of optimum activity of the catalyst site is more popularly known as the Sabatier principle in the heterogeneous catalysis literature.
+In this particular case, we relate the activity directly to the catalyst site geometry. A simple correlation between the Al Al distance and the activity for dehydrogenation can then be formulated. Another possibility is to formulate such correlations in terms of the stability if the [GaH]+ species (DHred) at the different extra-framework positions. As shown in Table 2, stability of the site can be quantified in terms of the heat of reaction for H2 site reduction. In Fig. 10, we have plotted the important activation energies for both (i) CH activation and (ii) H2 removal against the DHred for H2 site reduction. For the thermo-neutral heat of reaction (model VI), we observe the optimum activity of the catalyst site.
+These kinds of correlations will provide simple structure activity relations, which could be used to manipulate the dehydrogenation activity of the catalyst. Although our investigation indicates the extra-framework Ga in the
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+118 Table 6 Geometry and charge parameters of the intermediates along the dehydro- genation reaction path at Z2[GaH]2+ catalytic site (VI) via carbenium activation mechanism VIa
+TS13
+XIII
+TS14
+XIV
+XV
+TS15
+GaO17 (A )
+2.043
+1.897
+1.905
+1.964
+2.000
+1.998
+1.908
+GaO23 (A )
+2.102
+1.892
+1.886
+1.943
+1.989
+1.982
+1.937
+GaO24 (A )
+2.226
+3.447
+4.451
+4.787
+4.996
+4.261
+2.891
+GaO20 (A )
+2.146
+3.432
+4.429
+4.790
+5.171
+4.244
+3.163
+GaH1 (A )
+1.541
+1.523
+1.529
+1.541
+1.553
+1.549
+1.532
+GaH2 (A ) c
+1.613
+1.558
+1.570
+2.125
+GaC1 (A )
+2.959
+2.332
+2.974
+3.750
+C1H2 (A
+)
+1.096
+1.103
+1.650
+2.787
+C1O24 (A
+)
+3.241
+3.161
+2.116
+1.494
+O24H3 (A
+)
+0.973
+1.743
+H2H3 (A
+)
+2.182
+0.777
+Charge on Gab 0.644
+0.685
+0.594
+0.563
+0.427
+0.427
+0.696
+Charge on C1b 0.315d 0.337 0.465 0.080 0.069
+Charge on H2b 0.105d
+0.062 0.057 0.100 0.032
+Charge on H3b
+0.388
+0.105
+a For oxygen naming refer to Fig. 8. b Mulliken charge on the atom. c Not reported since not related to the geometry transformation. d Mulliken charges for gaseous ethane molecule.
+Table 7 Geometry and charge parameters of the intermediates along the dehydro- genation reaction path at Z2[GaH]2+ catalytic site (VII) via carbenium activation mechanism
+VII
+TS16
+XVI
+TS17
+XVII
+XVIII
+TS18
+GaO17.2 (A ) 3.638
+1.925
+1.928
+1.982
+2.021
+2.026
+1.917
+GaO23 (A )
+2.042
+1.880
+1.882
+1.937
+1.984
+1.977
+1.863
+GaO24 (A )
+2.051
+4.500
+4.488
+4.806
+5.009
+4.291
+3.853
+GaO20 (A )
+2.141
+4.996
+4.996
+5.262
+5.678
+4.735
+4.417
+GaH1 (A )
+1.530
+1.522
+1.528
+1.540
+1.553
+1.547
+1.519
+GaH2 (A ) b
+1.612
+1.557
+1.569
+3.029
+GaC1 (A )
+2.534
+2.331
+2.975
+3.747
+C1H2 (A
+)
+1.097
+1.108
+1.637
+2.795
+C1O24 (A
+)
+3.755
+3.150
+2.120
+1.494
+O24H3 (A
+)
+0.972
+2.422
+H2H3 (A
+)
+2.187
+0.749
+Charge on Gaa 0.591
+0.606
+0.587
+0.568
+0.425
+0.428
+0.742
+Charge on C1a 0.315c 0.382 0.465 0.083 0.071
+Charge on H2a 0.105c
+0.058 0.052 0.096 0.068
+Charge on H3a
+0.388
+0.092
+a Mulliken charge on the atom. b Not reported since not related to the geometry transformation. c Mulliken charges for gaseous ethane molecule.
+Scheme 2. A schematic representation of the reaction path energetics for three-Z2[GaH]2+ sites: (- - -) site V, () site VI and (  ) site VII. vicinity of the two-framework Al (rather than one Al site) should have higher activity, questions still remain about the probability of finding the Al pairs in high Si/Al zeolites.
+However, our results indicate that the Al pairs in larger (eight-membered) rings should give better dehydrogenation activity. A recent study by Gabova et al. [60] suggests that the fraction of the Al pair sites depends on the source of the Al. They point out that although the majority of the Al represents the isolated sites, depending on the source of the Al, the faction representing the Al pair sites can be as high as 27%. Dedecek et al. [40] reported a significant faction (45%) of Al existing as pair sites even at higher Si/Al ratio for a particular sample of ZSM-5. Although the statistical probability of finding pair Al sites assuming a random distribution is low for high Si/Al ratio zeolite, the actual probability is a strong function of the synthesis method.
+Industrially, the choice of high Si/Al ratio zeolites is influenced by the improved selectivity and lower deactiva- tion of such material. Clearly, a further investigation is needed regarding the dehydrogenation activity of the Ga- HZSM-5 catalyst at different Si/Al ratio prepared using different synthesis procedures.
+In Table 8, we report the GaH stretching frequencies (both as calculated and scaled) for different structures.
+The recommended [61] scaling factor for the frequencies for the current level of theory [B3LYP/6-31g(d,p)] is 0.9614.
+We calculated a scaling factor of 0.9529 by comparing the experimental and calculated GaH frequency in GaH3 gas phase molecule.
+After scaling,the GaH stretching frequencies for the Z2[GaH]2+ catalytic sites match with the experimental [33] GaH stretching frequencies of 2041 and 2059 cm1. Although it is difficult to conclude these peaks correspond to Z2[GaH]2+, since we expect relatively low concentration of the [GaH]2+ moieties, the DRIFTS peaks are at least consistent with our Z2[GaH]2+ Al-pair site model.
+4. Conclusions
+A one-step dehydrogenation path was investigated and the effects of alkane chain length, and the relative charge on the gallium in Z[HGaX]+ catalyst site model were studied.
+We find the one-step dehydrogenation path, where several simultaneous bond scission and formation steps are involved, is favored by a polar environment surrounding Ga species.
+The activation barrier for the one-step dehydrogenation path is comparable with the maximum activation barrier for previously proposed alkyl mechanisms.
+However, activation barriers for all single-site GaH2-based mechanisms result in activation energies that are much too high to reconcile experimental observations (activation energy of 39 kcal/mol). Thus, we conclude that a single site,[HGaH]+, model does not represent the true mechanism for Ga-assisted dehydrogenation.
+We subsequently investigated the possibility of alkane activation mechanisms by gallium species [GaH]2+ in proximity to two aluminum T sites. Out of three- Z2[GaH]2+ sites investigated, all with varying AlAl distances, we find the gallium species in the six-membered ring represent the most stable site (highest DHred). In models of eight-membered rings, larger AlAl distances corre- sponded to lower site stability. The trends in reactivity show that higher site stability, and consequently smaller AlAl distances, resulted in larger activation barriers for CH activation (85.72 kcal/mol) and lower barriers for H2 desorption and site regeneration (15.49 kcal/mol). Thus,we found an optimal AlAl distance (4.53 A ) corresponding to a minimum overall barrier (38.38 kcal/mol for CH activation and 36.71 kcal/mol H2 removal) for dehydrogena- tion reaction as a result of the competition between these two trends. This competition between two trends exemplifies the
+Y.V. Joshi, K.T. Thomson / Catalysis Today 105 (2005) 106121
+119 Fig. 10. Important activation energies plotted against the heat of reaction for dissociative adsorption of H2 (i.e. Reduction of the Z2[GaH]2+ species).
+Table 8 GaH stretching frequencies for different intermediates Structure As calculated frequencies Scaled frequenciesa
+I
+2039b 1943b 2077 1979
+II
+2091 1993
+III
+2090 1992
+IV
+2117 2017
+V
+2177 2074
+VI
+2134 2033
+VII
+2170 2068
+XI
+2014c 1919c 2100 2001
+XV
+2024c 1929c 2110 2011
+XVIII
+2034c 1939c 2112 2013 a Scaling factor of 0.9529. b Low frequency stretch corresponding to more polar GaH bond out of the two GaH bonds. c GaH bond polarized by Brnsted acid site. applicability of the Sabatier principle. We conclude that out of several possible catalytic sites in Ga-HZSM-5, extra- framework gallium species near pairs of tetrahedral Al have higher activity, and the activity of these sites can be correlated to AlAl distance. We expect these results could be useful for systematic exploration of viable zeolite frameworks and site geometries in the interest of designing novel catalysts for alkane activation processes.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Provide a comprehensive explanation of the alkyl mechanism in propane dehydrogenation (PDH) reactions on gallium-based catalysts, detailing its key steps from initial propane activation to product formation. Compare this mechanism to the carbenium mechanism, discuss why the CH activation step is proposed as the rate-determining step (RDS), and explain how the alkyl mechanism applies to different Ga species structures.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

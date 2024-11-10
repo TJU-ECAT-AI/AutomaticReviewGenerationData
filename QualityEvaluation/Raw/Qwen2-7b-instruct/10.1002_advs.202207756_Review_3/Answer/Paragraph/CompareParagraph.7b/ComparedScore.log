@@ -1,0 +1,343 @@
+Author
+10     0.000000
+6      5.010556
+7      7.490024
+2      7.944076
+4     17.687636
+5     21.310325
+3     25.867430
+1     26.190748
+0     26.225672
+8     27.239914
+9     40.740741
+Name: Score, dtype: float64
+
+Results have been saved to 'pagerank_results_balanced.csv'
+Traceback (most recent call last):
+  File "/data/home/wusc/CatalGPT/AutomaticReviewGeneration/ComparedWithManual/Qwen2-7b-instruct/10.1002_advs.202207756_Review_3/Answer/Paragraph/CompareParagraph/../../../../py/ComparedScore.py", line 413, in <module>
+    icc = calculate_icc(df_sub, subcat)
+  File "/data/home/wusc/CatalGPT/AutomaticReviewGeneration/ComparedWithManual/Qwen2-7b-instruct/10.1002_advs.202207756_Review_3/Answer/Paragraph/CompareParagraph/../../../../py/ComparedScore.py", line 193, in calculate_icc
+    icc = pg.intraclass_corr(data=icc_data, targets='Pair', raters='Comparison', ratings='Score_Diff')
+  File "/data/home/wusc/CatalGPT/lib/python3.9/site-packages/pingouin/reliability.py", line 276, in intraclass_corr
+    raise ValueError(
+ValueError: Either missing values are present in data or data are unbalanced. Please remove them manually or use nan_policy='omit'.
+Author
+10     0.000000
+6      5.010556
+7      7.490024
+2      7.944076
+4     17.687636
+5     21.310325
+3     25.867430
+1     26.190748
+0     26.225672
+8     27.239914
+9     40.740741
+Name: Score, dtype: float64
+
+Results have been saved to 'pagerank_results_balanced.csv'
+Combined Results:
+                                          Subcategory  \
+0                                     Topic Relevance   
+1                    Comprehensiveness of Information   
+2                             Accuracy of Information   
+3                        Innovativeness of Viewpoints   
+4       Integration of Interdisciplinary Perspectives   
+5                        Clarity of Logical Structure   
+6               Reasonableness of Chapter Arrangement   
+7              Quality of Introduction and Conclusion   
+8              Accuracy and Completeness of Citations   
+9              Timeliness and Relevance of References   
+10   Avoidance of Plagiarism and Appropriate Citation   
+11             Critical Analysis of Existing Research   
+12   Proposal of New Research Directions or Questions   
+13                Potential Contribution to the Field   
+14             Clarity of Research Method Description   
+15                    Rationality of Method Selection   
+16                           Rigor of Research Design   
+17               Inclusion of Latest Research Results   
+18            Reflection of Current Research Hotspots   
+19                     Fluency of Language Expression   
+20    Appropriateness of Professional Terminology Use   
+21                          Conciseness of Expression   
+22  Practical Application Potential of Research Re...   
+23                Feasibility of Proposed Suggestions   
+24                             Logic of Argumentation   
+25                   Multi-angle Analysis of Problems   
+26  Identification and Discussion of Research Limi...   
+
+    ICC (Intraclass Correlation Coefficient) ICC 95% Confidence Interval  \
+0                                   0.199234                 [0.12, 0.3]   
+1                                   0.245062                [0.16, 0.36]   
+2                                   0.167334                 [0.1, 0.27]   
+3                                   0.247647                [0.16, 0.36]   
+4                                   0.246376                [0.16, 0.36]   
+5                                   0.098985                [0.05, 0.18]   
+6                                   0.117961                 [0.06, 0.2]   
+7                                   0.102826                [0.05, 0.19]   
+8                                   0.139032                [0.08, 0.23]   
+9                                   0.182854                [0.11, 0.29]   
+10                                  0.098198                [0.04, 0.18]   
+11                                  0.184166                [0.11, 0.29]   
+12                                  0.149835                [0.08, 0.25]   
+13                                  0.186157                [0.11, 0.29]   
+14                                  0.106408                [0.05, 0.19]   
+15                                  0.094330                [0.04, 0.17]   
+16                                  0.089928                [0.04, 0.17]   
+17                                  0.126910                [0.07, 0.22]   
+18                                  0.138785                [0.08, 0.23]   
+19                                  0.078424                [0.03, 0.16]   
+20                                  0.087903                [0.04, 0.17]   
+21                                  0.089741                [0.04, 0.17]   
+22                                  0.116445                 [0.06, 0.2]   
+23                                  0.129328                [0.07, 0.22]   
+24                                  0.107828                [0.05, 0.19]   
+25                                  0.102258                [0.05, 0.19]   
+26                                  0.095740                [0.04, 0.18]   
+
+    Transitivity Consistency Ratio (%)  
+0                            90.909091  
+1                            85.454545  
+2                            96.969697  
+3                            82.424242  
+4                            84.242424  
+5                            98.181818  
+6                            98.787879  
+7                            80.606061  
+8                            91.515152  
+9                            84.848485  
+10                           86.060606  
+11                           87.272727  
+12                           87.878788  
+13                           89.696970  
+14                           90.909091  
+15                           91.515152  
+16                           89.090909  
+17                           89.090909  
+18                           86.666667  
+19                           83.636364  
+20                           89.696970  
+21                           89.696970  
+22                           84.242424  
+23                           83.030303  
+24                           90.909091  
+25                           89.090909  
+26                           90.303030  
+
+Results have been saved to 'reliability_analysis.csv'
+Traceback (most recent call last):
+  File "/data/home/wusc/CatalGPT/AutomaticReviewGeneration/ComparedWithManual/Qwen2-7b-instruct/10.1002_advs.202207756_Review_3/Answer/Paragraph/CompareParagraph.7b/../../../../py/ComparedScore.py", line 4, in <module>
+    import pingouin as pg
+ModuleNotFoundError: No module named 'pingouin'
+Traceback (most recent call last):
+  File "/data/home/wusc/CatalGPT/AutomaticReviewGeneration/ComparedWithManual/Qwen2-7b-instruct/10.1002_advs.202207756_Review_3/Answer/Paragraph/CompareParagraph.7b/../../../../py/ComparedScore.py", line 4, in <module>
+    import pingouin as pg
+ModuleNotFoundError: No module named 'pingouin'
+Author
+10      0.000000
+6      22.022352
+2      28.859209
+7      40.080212
+4      68.389238
+3      70.890109
+5      77.009384
+1      77.757284
+0      82.418254
+8      84.974570
+9     100.000000
+Name: Score, dtype: float64
+
+Results have been saved to 'pagerank_results_balanced.csv'
+Combined Results:
+                                          Subcategory  \
+0                                     Topic Relevance   
+1                    Comprehensiveness of Information   
+2                             Accuracy of Information   
+3                        Innovativeness of Viewpoints   
+4       Integration of Interdisciplinary Perspectives   
+5                        Clarity of Logical Structure   
+6               Reasonableness of Chapter Arrangement   
+7              Quality of Introduction and Conclusion   
+8              Accuracy and Completeness of Citations   
+9              Timeliness and Relevance of References   
+10   Avoidance of Plagiarism and Appropriate Citation   
+11             Critical Analysis of Existing Research   
+12   Proposal of New Research Directions or Questions   
+13                Potential Contribution to the Field   
+14             Clarity of Research Method Description   
+15                    Rationality of Method Selection   
+16                           Rigor of Research Design   
+17               Inclusion of Latest Research Results   
+18            Reflection of Current Research Hotspots   
+19                     Fluency of Language Expression   
+20    Appropriateness of Professional Terminology Use   
+21                          Conciseness of Expression   
+22  Practical Application Potential of Research Re...   
+23                Feasibility of Proposed Suggestions   
+24                             Logic of Argumentation   
+25                   Multi-angle Analysis of Problems   
+26  Identification and Discussion of Research Limi...   
+
+    ICC (Intraclass Correlation Coefficient) ICC 95% Confidence Interval  \
+0                                   0.199234                 [0.12, 0.3]   
+1                                   0.245062                [0.16, 0.36]   
+2                                   0.167334                 [0.1, 0.27]   
+3                                   0.247647                [0.16, 0.36]   
+4                                   0.246376                [0.16, 0.36]   
+5                                   0.098985                [0.05, 0.18]   
+6                                   0.117961                 [0.06, 0.2]   
+7                                   0.102826                [0.05, 0.19]   
+8                                   0.139032                [0.08, 0.23]   
+9                                   0.182854                [0.11, 0.29]   
+10                                  0.098198                [0.04, 0.18]   
+11                                  0.184166                [0.11, 0.29]   
+12                                  0.149835                [0.08, 0.25]   
+13                                  0.186157                [0.11, 0.29]   
+14                                  0.106408                [0.05, 0.19]   
+15                                  0.094330                [0.04, 0.17]   
+16                                  0.089928                [0.04, 0.17]   
+17                                  0.126910                [0.07, 0.22]   
+18                                  0.138785                [0.08, 0.23]   
+19                                  0.078424                [0.03, 0.16]   
+20                                  0.087903                [0.04, 0.17]   
+21                                  0.089741                [0.04, 0.17]   
+22                                  0.116445                 [0.06, 0.2]   
+23                                  0.129328                [0.07, 0.22]   
+24                                  0.107828                [0.05, 0.19]   
+25                                  0.102258                [0.05, 0.19]   
+26                                  0.095740                [0.04, 0.18]   
+
+    Transitivity Consistency Ratio (%)  
+0                            31.818182  
+1                            35.135135  
+2                             0.000000  
+3                            57.971014  
+4                            62.318841  
+5                            97.600000  
+6                            98.181818  
+7                            73.109244  
+8                            81.081081  
+9                            74.489796  
+10                           78.504673  
+11                           80.909091  
+12                           83.606557  
+13                           86.614173  
+14                           87.288136  
+15                           88.235294  
+16                           85.000000  
+17                           85.000000  
+18                           83.582090  
+19                           78.225806  
+20                           87.313433  
+21                           86.718750  
+22                           79.365079  
+23                           77.235772  
+24                           87.288136  
+25                           86.466165  
+26                           86.440678  
+
+Results have been saved to 'reliability_analysis.csv'
+Author
+10      0.000000
+6      22.022352
+2      28.859209
+7      40.080212
+4      68.389238
+3      70.890109
+5      77.009384
+1      77.757284
+0      82.418254
+8      84.974570
+9     100.000000
+Name: Score, dtype: float64
+
+Results have been saved to 'pagerank_results_balanced.csv'
+Combined Results:
+                                          Subcategory  \
+0                                     Topic Relevance   
+1                    Comprehensiveness of Information   
+2                             Accuracy of Information   
+3                        Innovativeness of Viewpoints   
+4       Integration of Interdisciplinary Perspectives   
+5                        Clarity of Logical Structure   
+6               Reasonableness of Chapter Arrangement   
+7              Quality of Introduction and Conclusion   
+8              Accuracy and Completeness of Citations   
+9              Timeliness and Relevance of References   
+10   Avoidance of Plagiarism and Appropriate Citation   
+11             Critical Analysis of Existing Research   
+12   Proposal of New Research Directions or Questions   
+13                Potential Contribution to the Field   
+14             Clarity of Research Method Description   
+15                    Rationality of Method Selection   
+16                           Rigor of Research Design   
+17               Inclusion of Latest Research Results   
+18            Reflection of Current Research Hotspots   
+19                     Fluency of Language Expression   
+20    Appropriateness of Professional Terminology Use   
+21                          Conciseness of Expression   
+22  Practical Application Potential of Research Re...   
+23                Feasibility of Proposed Suggestions   
+24                             Logic of Argumentation   
+25                   Multi-angle Analysis of Problems   
+26  Identification and Discussion of Research Limi...   
+
+    ICC (Intraclass Correlation Coefficient) ICC 95% Confidence Interval  \
+0                                   0.199234                 [0.12, 0.3]   
+1                                   0.245062                [0.16, 0.36]   
+2                                   0.167334                 [0.1, 0.27]   
+3                                   0.247647                [0.16, 0.36]   
+4                                   0.246376                [0.16, 0.36]   
+5                                   0.098985                [0.05, 0.18]   
+6                                   0.117961                 [0.06, 0.2]   
+7                                   0.102826                [0.05, 0.19]   
+8                                   0.139032                [0.08, 0.23]   
+9                                   0.182854                [0.11, 0.29]   
+10                                  0.098198                [0.04, 0.18]   
+11                                  0.184166                [0.11, 0.29]   
+12                                  0.149835                [0.08, 0.25]   
+13                                  0.186157                [0.11, 0.29]   
+14                                  0.106408                [0.05, 0.19]   
+15                                  0.094330                [0.04, 0.17]   
+16                                  0.089928                [0.04, 0.17]   
+17                                  0.126910                [0.07, 0.22]   
+18                                  0.138785                [0.08, 0.23]   
+19                                  0.078424                [0.03, 0.16]   
+20                                  0.087903                [0.04, 0.17]   
+21                                  0.089741                [0.04, 0.17]   
+22                                  0.116445                 [0.06, 0.2]   
+23                                  0.129328                [0.07, 0.22]   
+24                                  0.107828                [0.05, 0.19]   
+25                                  0.102258                [0.05, 0.19]   
+26                                  0.095740                [0.04, 0.18]   
+
+    Transitivity Consistency Ratio (%)  
+0                            31.818182  
+1                            35.135135  
+2                             0.000000  
+3                            57.971014  
+4                            62.318841  
+5                            97.600000  
+6                            98.181818  
+7                            73.109244  
+8                            81.081081  
+9                            74.489796  
+10                           78.504673  
+11                           80.909091  
+12                           83.606557  
+13                           86.614173  
+14                           87.288136  
+15                           88.235294  
+16                           85.000000  
+17                           85.000000  
+18                           83.582090  
+19                           78.225806  
+20                           87.313433  
+21                           86.718750  
+22                           79.365079  
+23                           77.235772  
+24                           87.288136  
+25                           86.466165  
+26                           86.440678  
+
+Results have been saved to 'reliability_analysis.csv'
