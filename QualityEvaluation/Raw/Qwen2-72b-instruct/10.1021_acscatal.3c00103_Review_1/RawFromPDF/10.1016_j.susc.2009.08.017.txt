@@ -1,0 +1,291 @@
+Multi-scale theoretical study of support effect on sintering dynamics of Pt
+Abstract
+The capability of theoretical durability studies to offer an efficient alternative methodology for predicting the potential performance of catalysts has improved in recent years. In this regard, multi-scale theoretical methods for predicting sintering behavior of Pt on various catalyst supports are being developed. Various types of Pt diffusions depending on support were confirmed by the micro-scale ultra accelerated quantum chemical molecular dynamics (UA-QCMD) method. Moreover, macro-scale sintering behavior of Pt/γ-Al2O3, Pt/ZrO2 and Pt/CeO2 catalysts were studied using a developed 3D sintering simulator. Experimental results were well reproduced. While Pt on γ-Al2O3 sintered significantly, Pt on ZrO2 sintered slightly and Pt on CeO2 demonstrated the highest stability against sintering.
+1. Introduction
+A longstanding problem affecting many applications that use highly dispersed metal nanoparticles is loss of active surface area in the metal components as a result of sintering. This is a particularly pernicious problem in applications in which catalysts have to experience high temperatures. This sintering causes a decrease in the catalytic activity.
+The lifetime of a vehicle catalyst is especially important in maintaining low exhaust gas emissions. Mid-life catalyst durability performance has been experimentally examined in an engine dyno evaluations. In general, such a traditional confirmation of catalyst performance is done preparing many kinds of prototypes of catalysts, and using plenty of fuel in continuous evaluation tests. Whereas, so far, little work has been devoted to the theoretical evaluation of catalyst sintering behavior.
+Supported precious metals, such as platinum (Pt), rhodium (Rh), and palladium (Pd), are used to facilitate many industrial catalytic processes. Pt in particular is found at the core of catalysts for three-way (CO and hydrocarbon oxidation/NOx reduction) conversions within car exhausts.
+On the other hand, the most widely used ceramic materials as a support material in three-way catalysts (TWC) for the controls of notorious emissions from mobile sources are alumina, Al2O3, ceria, CeO2 and zirconia, ZrO2. Al2O3 has the advantages in its high hardness and wear resistance. Especially, γ-Al2O3 with large surface area and good thermal stability is widely used as a support material
+[1]
+.
+Ceria acts as an oxygen storage/release component by shifting the oxidation conditions between CeO2 and CeO2−x under reaction conditions made possible by the high availability of surface oxygen, thus allowing oxygen storage and release to occur easily. However, the oxygen storage/release capacity (OSC) and durability of pure ceria are still inadequate for practical use in TWC.
+ZrO2 additions increase the fracture toughness of ceramic materials although it has low surface area compared to other supports, especially, addition of ZrO2 into the CeO2 lattice, as a Ce–Zr mixed oxides, have been found to be effective in strongly preventing the ceria from sintering and promoting the OSC
+[2]
+,
+[3]
+. In order to develop more efficient and durable TWC, it is really meaningful to investigate and clarify the relationship between supported precious metal, Pt and support material. Therefore, we selected above three typical TWC support materials and tried to theoretically investigate what happened to its structure along with the thermal dynamics of Pt and its correlation with each support material.
+In this paper, we report the results of an alternative methodology to experimental durability testing schemes
+[4]
+,
+[5]
+. We investigated the thermal durability of supported precious metals, represented as Pt, from micro scale to macro-scale perspective. We focused not only microscopically on thermal diffusion dynamics of Pt at high temperatures, but also performed macroscopic long-term realistic time scale and particle-based sintering process simulation using a three-dimensional sintering simulator.
+2. Theoretical study on durability of catalysts
+2.1. Classification of theoretical study and our concept of multi-scale theoretical simulation
+In the theoretical study of thermal durability of catalysts, the factors of “time” and “temperature” are important ones. Although they are necessary to consider, too much variation exists in the way how to express in theoretical methodology. “Scale” or “scope” of calculation is also important. Methodology of covering large scale, i.e., μm scale, is phenomenologically important in understanding the rough trends of catalyst performance. On the other hand, focusing on limited scope, i.e., nm scale, is very useful for investigating and understanding the physics behind each phenomenon. First, we introduce some kinds of theoretical methodologies which are shown in
+Table 1
+. Static Monte Carlo methods cannot perform real-time scale calculations. Molecular dynamics method can include temperature, but time scales in this method are too short to trace aging phenomenon since a real-time scale is needed in actual durability tests. Some researchers perform particle-based surface evolution dynamics, but the models are often unrealistically simple. Ab initio quantum chemical methodology is suitable for the case where accurate calculation is desired. However, due to its heavy computational load, it cannot be applied to the large atomic scale models, or to thermal dynamics. This situation forces us to conduct calculations using models composed of too few atoms, and it is far from realistic catalyst simulation.
+Table 1. Specifications for theoretical methods.
+Methods Specifications
+Static Monte Carlo Non real-time
+Molecular dynamics Too short real-time
+Particle-based surface evolving dynamics Unrealistically simple model
+First principles quantum chemistry
+•
+Too small numbers of atoms to compare realistic structure
+•
+Difficult to perform thermal dynamics
+In summary, we try to perform theoretical studies by introducing “time” and “temperature” as important factors in simulating thermal durability. In order to trace a series of phenomena affecting catalyst durability and clarify physical mechanisms, we try to understand continuously from micro to macro “scale” perspective. Our concept can be achieved by multi-scale simulation which is conducted through different scale models which is shown in
+Fig. 1
+.
+Download: Download high-res image (302KB)
+Download: Download full-size image
+Fig. 1. (a) Three-dimensional porous model for sintering simulation and micro-scale model of (b) Pt37/γ-Al2O3, (c) Pt37/ZrO2 and (d) Pt37/CeO2 for ultra accelerated quantum chemical molecular dynamics.
+2.2. Ultra accelerated quantum chemical molecular dynamics (UA-QCMD) method
+We used our in-house code for ultra accelerated quantum chemical molecular dynamics (UA-QCMD) to investigate the adsorbed electronic, structural and diffusional characteristics of Pt on the surface of support metal oxides under high temperature conditions. We were also able to visualize the diffusion trajectories undergone in this system. UA-QCMD enables one to perform quantum chemical molecular dynamics (QCMD) calculations by reflecting binding energy and charges based on quantum calculations. Calculation of the electronic condition based on quantum chemistry was performed by tight-binding quantum chemical molecular dynamics.
+Since high-level quantum mechanical calculations in the combined quantum mechanical/molecular mechanical (QM/MM) approach are computationally intensive, it is very time consuming to do the full dynamical simulations. This means that semi-empirical QM methods have to be employed. To achieve the required accuracy, it is possible to use parameters optimized for the system of interest.
+Elstner et al. developed new approach, called the self-consistent charge density functional tight-binding (SCC-DFTB) method
+[6]
+. Moreover, Cui and Elstner implemented a QM/MM approach based on an approximate density functional theory, the SCC-DFTB method and tested on a number of systems
+[7]
+.
+Our novel UA-QCMD simulator consists of two parts. The first part is an original tight-binding (TB) simulator. In this simulator, an electronic structure calculation is performed by solving the Schrödinger equation HC = εSC (H, C, ε, and S refer to the Hamiltonian matrix, eigenvector, eigenvalue, and overlap integral matrix, respectively) with the diagonalization condition CTSC = I) (I refers to the unit matrix). To determine the off-diagonal elements of H, Hrs, the following corrected distance-dependent Wolfsberg–Helmholz formula
+[8]
+was used:
+(1)
+To solve the Schrödinger equation in this simulator, parameters for H are used. In electronic structure calculations using the TB simulator, the total energy of a system is obtained using the following equation:
+(2)
+where the first, second, and third terms on the right-hand side refer to the molecular orbital (MO) energy, Coulombic energy, and exchange-repulsion energy, respectively. The first term on the right-hand side of Eq.
+(2)
+is rewritten as follows:
+(3)
+where the first and second terms on the right-hand side refer to the monoatomic contribution to the binding energy and the diatomic contribution to the binding energy, respectively (nk is the number of electrons occupied in the kth molecular orbital). The binding energy calculated from the second term of Eq.
+(3)
+is used for the determination of the DAB parameter in the Morse-type two-body interatomic potential function described in the following equation:
+(4)
+where EAB, DAB, βAB, RAB, and
+are the interatomic potential energy between atoms A and B, the binding energy between atoms A and B, the factor for the potential curve, the interatomic distance between atoms A and B, and the equilibrium interatomic distance between atoms A and B, respectively.
+To set H and S in our TB simulator, the exponent of a Slater-type atomic orbital (AO)
+[3]
+, denoted as ζr, and valence-state ionization potentials (VSIPs) for the valence shell of an AO of Al, Zr, Ce, Pt, and O atoms are necessary. The former parameters are used to calculate the S matrix and Hrs in Eq.
+(1)
+. The latter ones are used for the diagonal element of H (Hrr or Hss in Eq.
+(1)
+). In our TB simulator, these are represented by the polynomial functions of atomic charges. ζr and Hrr are calculated by the polynomial functions of atomic charges described by Eqs.
+(5)
+,
+(6)
+, respectively. In Eqs.
+(5)
+,
+(6)
+, Zi corresponds to the atomic charge on atom i. The parameters regarding ζ, i.e., a0, a1, a2, a3, a4, and a5 in Eq.
+(5)
+, and regarding Hrr, i.e., b0, b1, b2, b3, b4, and b5 in Eq.
+(6)
+, were adjusted to reproduce the binding energies and electronic structures of each reactant obtained by first principles calculations; these are summarized in
+Table 2
+,
+Table 3
+, respectively.
+(5)
+(6)
+Table 2. Determined coefficients of a single ζ parameter in a Slater-type atomic orbital.
+Element AO a0 a1 a2 a3 a4 a5
+O s 2.1450 0.0802 0.0185 0.0007 0.0000 0.0000
+p 1.9664 0.5181 1.0817 1.1475 0.0000 0.0000
+
+Al s 1.7081 0.2004 0.0118 −0.0542 0.0190 −0.0015
+p 1.5542 0.2346 −0.0321 0.0150 0.0153 −0.0056
+
+Zr s 2.6003 0.1090 −0.0052 0.0000 0.0000 0.0000
+p 1.2752 0.0322 0.0125 0.0000 0.0000 0.0000
+d 2.7552 0.1984 −0.0112 0.0000 0.0000 0.0000
+
+Ce s 2.7165 0.0332 0.0208 0.0041 0.0000 0.0000
+p 2.6592 0.0010 −0.0127 0.0093 0.0000 0.0000
+d 3.1519 0.3368 0.0000 0.0000 0.0000 0.0000
+f 4.5582 0.3363 0.0000 0.0000 0.0000 0.0000
+
+Pt s 2.8195 3.3487 −0.0394 0.0000 0.0000 0.0000
+p 2.5502 3.2981 0.0073 0.0000 0.0000 0.0000
+d 2.9415 3.2317 0.0042 0.0000 0.0000 0.0000
+Table 3. Determined coefficients of the Hrr parameter.
+Element AO b0 b1 b2 b3 b4 b5
+O s −28.6066 −15.0328 −1.4510 −0.4949 0.0419 0.0000
+p −14.2851 −14.8159 −1.6244 0.0154 0.0434 0.0000
+
+Al s −11.0490 −6.5589 −1.4884 0.5003 0.0000 0.0000
+p −5.4369 −6.4464 −1.4776 −0.1125 0.0000 0.0000
+
+Zr s −4.7841 −5.3302 −0.2774 −0.2886 0.0000 0.0000
+p −2.2468 −4.9596 −0.1916 −0.1428 0.0000 0.0000
+d −4.8010 −6.6621 −0.4890 0.0123 0.0000 0.0000
+
+Ce s −5.5303 −5.0728 3.4414 −4.3070 1.5907 −0.1994
+p −0.0612 −4.6247 3.8922 −4.4481 1.6406 −0.2082
+d −8.4356 −4.8609 7.5711 −9.4497 3.5251 −0.4442
+f −7.1929 −8.1663 3.1559 −1.5706 0.0885 0.0000
+
+Pt s −6.1747 −26.8162 −0.3690 0.0172 0.0000 0.0000
+p −2.3585 −22.4454 −0.2117 0.0008 0.0000 0.0000
+d −5.4164 −37.8971 −0.4426 0.0000 0.0000 0.0000
+The second part of our methodology involves the classical MD simulator. Details of this method are described elsewhere
+[9]
+,
+[10]
+. To reflect the Morse-type function and the atomic charges into during the MD simulation process, TB calculations are performed at the beginning and at successive intervals during the MD simulation process.
+2.3. Sintering simulation by kinetic Monte Carlo simulation
+Diffusions of supported particles as well as support particles were simulated by kinetic Monte Carlo (KMC) method
+[11]
+. During the simulation a diffusion direction is randomly generated while the diffusion length for one KMC step, l, is calculated as
+, where D(r) and Δt are the diffusion coefficient given as a function of particle size and the real-scale diffusion time per one KMC step, respectively. Sintering dynamics simulator enables to reflect atomic scale characteristics of catalytic materials, i.e., the adsorption energies between Pt and each support. These atomic scale characteristics are significantly related to the diffusion behaviors of supported precious metals. The values affecting thermal diffusions can be directly calculated using by tight-binding based quantum chemical calculation program, COLORS. We estimated the activation energy for sintering of the supported metal diffusion, EM, from calculated adsorption energy of Pt on supports. It was reflected into sintering simulator for describing thermal diffusions as expressed in Eq.
+(7)
+which is dependent on Pt nanoparticle size, rM.
+(7)
+T, R and n denote the absolute temperature, the gas constant and particle size dependent coefficient of diffusions of supported metals or supports. DM0 denotes surface diffusion coefficient of supported metals.
+The KMC simulation proceeds by repeating a sintering event for a determined number of particles in the supports and supported precious metals for a determined number of steps. The coordinates outputted by the system are then used to map the sintering processes of the supported precious metals. This enables one to compare the characteristics of sintering process of supported precious metals with experimental results.
+3. Results and discussion
+3.1. Adsorption conditions of Pt on supports
+Modeling micro scale fresh catalyst structures were modeled based on transmission electron microscopy (TEM) images
+[12]
+, which has trapezoidal cross section when viewed edge-on. We explored the Pt-oxide-support interactions for Pt/γ-Al2O3, Pt/ZrO2 and Pt/CeO2. Binding energies of Pt37 and the oxygen of supports were estimated by tight-binding based quantum chemical calculation program, COLORS. Maximum Pt–O bond energies of Pt37 on supports decreased in the following order; 445.37 kJ/mol in Pt/CeO2, 363.83 kJ/mol in Pt/ZrO2 and 296.55 kJ/mol in Pt/γ-Al2O3. Range of other binding energies of each bond within Pt/γ-Al2O3, Pt/ZrO2 and Pt/CeO2 were also shown in
+Table 4
+,
+Table 5
+,
+Table 6
+. These differences in binding energies of Pt–O bonds lead to the difference of sintering of Pt on different support metal oxides.
+Table 4. Bond length, bond population, and bond energies of Pt/γ-Al2O3.
+Bonds Length (Å) Population (–) Binding energy (kJ/mol)
+Pt–O 1.63–4.20 0.001–0.394 0.93–296.55
+Pt–Pt 2.73–2.81 0.038–0.349 6.82–147.10
+Pt–Al 2.06–4.63 0.001–0.526 0.12–135.84
+Al–O 1.76–1.91 0.28–0.67 375.82–826.10
+Table 5. Bond length, bond population, and bond energies of Pt/ZrO2.
+Bonds Length (Å) Population (–) Binding energy (kJ/mol)
+Pt–O 2.03–3.17 0.001–0.414 12.51–363.83
+Pt–Pt 2.71–2.79 0.083–0.177 47.85–114.57
+Pt–Zr 3.14–3.47 0.051–0.074 3.08–17.86
+Zr–O 2.17–2.24 0.23–0.40 302.95–445.67
+Table 6. Bond length, bond population, and bond energies of Pt/CeO2.
+Bonds Length (Å) Population (–) Binding energy (kJ/mol)
+Pt–O 1.97–3.31 0.267–0.46 279.18–445.37
+(Pt)–O–Ce 2.29–3.30 0.001–0.25 0.91–198.94
+Pt–Pt 2.67–3.75 0.177–0.23 0.91–128.35
+Pt–Ce 2.96–3.14 0.003–0.04 1.87–29.75
+3.2. Diffusion characteristics of Pt
+Fig. 1
+b, c and d shows the initial structure of Pt/γ-Al2O3, Pt/ZrO2 and Pt/CeO2. The surface area of γ-Al2O3, ZrO2 and CeO2 are 2.29 nm × 2.65 nm, 2.48 nm × 2.15 nm and 2.48 nm × 2.15 nm, respectively.
+UA-QCMD calculations were carried out for 1.0 × 108 steps with a 1.0 fs time increment under a realistic durability temperature condition, 1073 K.
+Each trajectory of every atom is shown in
+Fig. 2
+,
+Fig. 3
+,
+Fig. 4
+. The red solid lines in
+Fig. 2
+,
+Fig. 3
+,
+Fig. 4
+mean trajectories of Pt diffusive motion. Diffusion of Pt is different by each support metal oxide. It can be revealed by atomic trajectories. Due to the smaller bond energy of the Pt–O bond compared with Al–O bonds, as shown in
+Table 4
+, Pt diffused easily on γ-Al2O3 as shown in
+Fig. 2
+. Due to slightly stronger binding energies of Pt–O bond in the system of Pt/ZrO2, as shown in
+Table 5
+, comparing with Pt/γ-Al2O3, diffusion of Pt was smaller than on γ-Al2O3. Whereas, as shown in
+Fig. 4
+, oxygen atoms from the most upper layer and the second layer of CeO2 surface entered into a Pt cluster. As a result, an oxygen layer was formed between Pt and CeO2. It reduced bonds of Pt–Pt, and increased stronger bonds of Pt–O. Therefore, as shown in
+Table 6
+, it was confirmed from our analysis of the binding condition that Pt was strongly anchored on CeO2 by Pt–O–Ce bonds and almost does not diffuse.
+Download: Download high-res image (2MB)
+Download: Download full-size image
+Fig. 2. Side (upper) and top (below) views of trajectories of Pt/γ-Al2O3 at 1073 K.
+Download: Download high-res image (1MB)
+Download: Download full-size image
+Fig. 3. Side (upper) and top (below) views of trajectories of Pt/ZrO2 at 1073 K.
+Download: Download high-res image (1MB)
+Download: Download full-size image
+Fig. 4. Side (upper) and top (below) views of trajectories of Pt/CeO2 at 1073 K.
+3.3. Porous structure of catalyst model
+We built a three-dimensional irregular complex porous structure with an automatic porous structure model generator based on an original overlap-allowed particle packing method
+[13]
+. In this program, support particles are allowed to overlap up to an inputted certain overlap ratio. Other parameters are such as particle shape, average particle size, particle size distribution and porosity. We prepared catalyst models of nm size platinum supported on three different kinds of support particles in box type sub-micron cell size. The cell sizes of which were set to x = 0.1 μm, y = 0.2 μm, and z = 0.2 μm as shown in
+Fig. 1
+a. The specific surface areas of the constructed support catalyst porous structures of γ-Al2O3, CeO2 and ZrO2 were 185 m2/g, 107 m2/g and 87 m2/g, respectively, and they were consistent with experimental values
+[14]
+obtained by the BET (Brunauer–Emmett–Teller) method. Supported Pt nanoparticles on the order of 1.0 nm in diameter in the pristine support catalyst porous structures, contained 2.0 wt.%, which was taken into account each density value, 7.132 g/cm3 for CeO2, 5.68 g/cm3 for ZrO2 and 3.9 g/cm3 for γ-Al2O3.
+3.4. Sintering of Pt particles
+A series of sintering simulations were conducted by the 3-dimensional sintering simulator, SINTA at constant temperature, 1073 K for 5 h with integral time step Δt = 0.01 s.
+Fig. 5
+,
+Fig. 6
+,
+Fig. 7
+show the temporal change of Pt dispersion on each support during sintering process. The Pt nanoparticle size distributions of the three catalysts are shown in
+Fig. 8
+,
+Fig. 9
+,
+Fig. 10
+.
+Download: Download high-res image (675KB)
+Download: Download full-size image
+Fig. 5. Sintering process of Pt supported on γ-Al2O3.
+Download: Download high-res image (477KB)
+Download: Download full-size image
+Fig. 6. Sintering process of Pt supported on ZrO2.
+Download: Download high-res image (764KB)
+Download: Download full-size image
+Fig. 7. Sintering process of Pt supported on CeO2.
+Download: Download high-res image (115KB)
+Download: Download full-size image
+Fig. 8. Pt nanoparticle size distribution on γ-Al2O3.
+Download: Download high-res image (146KB)
+Download: Download full-size image
+Fig. 9. Pt nanoparticle size distribution on ZrO2.
+Download: Download high-res image (128KB)
+Download: Download full-size image
+Fig. 10. Pt nanoparticle size distribution on CeO2.
+In the case of Pt/γ-Al2O3, as shown in
+Fig. 5
+, Pt particle size on γ-Al2O3 after aging was experimentally estimated about 23.6 nm by the CO pulse method and TEM (transmission electron microscopy) data
+[14]
+. In sintering dynamics simulation, the Pt particles, as shown in
+Fig. 8
+, were found to be sintered up to 23 nm, which is close to the experimental value.
+On the other hand, some Pt particles remained small particle as 1–5 nm. These particles were hindered from agglomeration in fine pore structures of thermally stable γ-Al2O3.
+In the case of Pt/ZrO2 as shown in
+Fig. 6
+, Pt particle size on ZrO2 after aging was estimated experimentally about 15 nm by the CO pulse method
+[14]
+. In sintering dynamics simulation, the Pt particles were found to be sintered, and the size increased over a range of 11–18 nm. The mean particle size is 14.5 nm as shown in
+Fig. 9
+, which is close to experimental value.
+On the other hand, as shown in
+Fig. 7
+, Pt particles remained highly dispersed on CeO2 support after aging 5 h and the Pt particle size was less than 2 nm as shown in
+Fig. 10
+. Simulation results agreed well with experimental result
+[14]
+showing Pt in the CeO2 catalyst did not sinter at all.
+Through this KMC method, we found some fine pore structures were remained in thermally stable γ-Al2O3 which hindered Pt particles from agglomeration each other. Therefore, small Pt particles were remained in fine pore structures, and calculated average size of Pt particles is 2.27 nm for Pt/γ-Al2O3 from the particle size distribution data in
+Fig. 8
+. However, if once agglomerated, due to weak adsorption between Pt andγ-Al2O3, the Pt particles were found to be sintered up to 23 nm. Ref.
+[14]
+shows large Pt particles ranging from 3 to 150 nm were observed in the aged Pt/γ-Al2O3.
+Whereas, calculated average size of Pt particles in Pt/ZrO2 is 14.83 nm from the particle size distribution data in
+Fig. 9
+.
+In contrast, calculated average size of Pt particles in is Pt/CeO2 is 1.24 nm from the particle size distribution data in
+Fig. 10
+. Ref.
+[14]
+indicates no explicit Pt particles were observed on the aged ceria based supports and this indicates that Pt particles are highly dispersed on the aged ceria based supports.
+4. Conclusion
+We have analyzed the multi-scale sintering dynamics in this review. We have investigated the sintering mechanisms as well as a structural change of the system. We have confirmed that our UA-QCMD method is very effective in investigating the fundamental aspects of diffusions on the sintering of Pt. Micro-scale study of Pt/support based on the UA-QCMD method successfully explained the difference in Pt sintering characteristics on different support metal oxides, and it also supported the experimentally suggested “Pt sintering inhibition mechanism of platinum supported on ceria-based oxide”
+[14]
+.
+Temporal change of Pt sintering could be simultaneously simulated at real-time for 5 h, 1073 K and at sub-micron size scale by the 3-dimensional KMC sintering simulator, which has been so far too difficult to conduct using the static Monte Carlo method or molecular dynamics. Through this KMC method, we found there were some fine pore structures of thermally stable γ-Al2O3 which hindered Pt agglomeration. However, if agglomerated, due to the weak adsorption between Pt and γ-Al2O3, the Pt particles were found to be sintered up to 23 nm. In the case of Pt/ZrO2, the average size of sintered Pt particles was found to be 14.5 nm. By contrast, Pt on CeO2 presented the highest stability against sintering. Experimental results, such as temporal changes of sintered Pt sizes as well as specific surface area of supports, were well reproduced.

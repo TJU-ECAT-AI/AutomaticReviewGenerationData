@@ -1,0 +1,183 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+This article was downloaded by: [Washington University in St Louis] On: 03 January 2015, At: 02:00 Publisher: Taylor & Francis Informa Ltd Registered in England and Wales Registered Number: 1072954 Registered office: Mortimer House,37-41 Mortimer Street, London W1T 3JH, UK Molecular Simulation Publication details, including instructions for authors and subscription information:http://www.tandfonline.com/loi/gmos20 New solid-state table: estimating d-band characteristics for transition metal atoms Nilay nolu a & John R. Kitchin a b a Department of Chemical Engineering , Carnegie Mellon University , Pittsburgh, PA, 15213,
+USA
+b National Energy Technology Laboratory , Pittsburgh, PA, 15236, USA Published online: 03 Aug 2010.
+To cite this article: Nilay nolu & John R. Kitchin (2010) New solid-state table: estimating d-band characteristics for transition metal atoms, Molecular Simulation, 36:7-8, 633-638, DOI: 10.1080/08927022.2010.481794 To link to this article:  http://dx.doi.org/10.1080/08927022.2010.481794
+PLEASE SCROLL DOWN FOR ARTICLE
+Taylor & Francis makes every effort to ensure the accuracy of all the information (the Content) contained in the publications on our platform. However, Taylor & Francis, our agents, and our licensors make no representations or warranties whatsoever as to the accuracy, completeness, or suitability for any purpose of the Content. Any opinions and views expressed in this publication are the opinions and views of the authors, and are not the views of or endorsed by Taylor & Francis. The accuracy of the Content should not be relied upon and should be independently verified with primary sources of information. Taylor and Francis shall not be liable for any losses, actions, claims, proceedings, demands, costs, expenses, damages, and other liabilities whatsoever or howsoever caused arising directly or indirectly in connection with, in relation to or arising out of the use of the Content.
+This article may be used for research, teaching, and private study purposes. Any substantial or systematic reproduction, redistribution, reselling, loan, sub-licensing, systematic supply, or distribution in any form to anyone is expressly forbidden. Terms & Conditions of access and use can be found at http:// www.tandfonline.com/page/terms-and-conditions New solid-state table: estimating d-band characteristics for transition metal atoms Nilay I nog lua and John R. Kitchinab* aDepartment of Chemical Engineering, Carnegie Mellon University, Pittsburgh, PA 15213, USA; bNational Energy Technology Laboratory, Pittsburgh, PA 15236, USA (Received 14 December 2009; final version received 28 March 2010) A tight-binding model parameterised by a database of density functional theory calculations is presented and used to estimate the d-band characteristics of bulk systems as well as mono- and bimetallic surface structures. The model incorporates the effects of both electronic and geometric contributions. A d-band width formalism relating surface reactivity with the surface electronic structure is presented and it is shown that the proposed model can be used to estimate the surface electronic structure as well as to explain trends in catalytic properties of metal and alloy surfaces in terms of surface and adsorbate orbital properties.
+Keywords: electronic structure modification; ligand; strain; d-band width formalism; solid-state table
+1.
+Introduction The rational design of surfaces with specific catalytic properties still remains one of the greatest challenges in surface science. Developments in computational surface science have enabled progress in this area by providing a basic understanding of the properties of metal surfaces that determine their catalytic reactivity [1]. The reactivity of the transition and noble metals (Cu, Ag and Au) is determined by the surface properties that determine the ability of metal atoms to make and break bonds [2]. Those surface properties include the surface d-band centre (1d),the degree of filling of the d-bands ( fd) and the coupling matrix elements between the adsorbate and the surface metal atoms [3]. It has been well established that the d-band model developed by Hammer and Nrskov [4,5] presents a theoretical framework for the description of basic trends in the reactivity of many different systems involving pure metals, surface alloys [6,7], surfaces with strain [8], poisons, promoters [9] and electron-deficient sites [8]. The basics of the framework can be explained in the following manner. The reactivity of surfaces is related to their ability to make chemical bonds. These bonds consist of a distribution of electrons over bonding and anti- bonding adsorbatesurface states involving the surface metal sp and d orbitals. Adsorption is then considered in two steps. First, the adsorbate orbitals interact with the surface sp states to form a stabilised adsorbate species. The contribution to bonding from this step is approximately the same for the transition metals because the sp states are broad and featureless [3]. Second, the adsorbate orbitals interact with the d-orbitals in the transition metal surface.
+This interaction results in a splitting of the adsorbate states into bonding and anti-bonding states. The strength of the bond depends on the occupation of these orbitals. If the anti-bonding states are above the Fermi level, they are unoccupied and the bond is strong. If the anti-bonding states are below the Fermi Level, they are occupied, and the bond is weak. Thus, features of the d-states are the primary factors for the altering interactions between adsorbates for different metal surfaces. The d-band model assumes that the variations between adsorbates and surface metal atoms are largely due to the variations in coupling of the metal d-states and adsorbate orbitals. The variation in coupling is due to the difference in the average energy (d-band centre) of the d-bands, which is sensitive to many factors including strain and ligand effects. Thus, the d-band model provides descriptive parameters based on a convenient characteristic value that is a representative of the entire d-band, d-band centre (1d) or d-band width (Wd),and connects them to surface reactivity.
+Given the importance of the d-band characteristics in providing explanations for the reactivity of metal surfaces [10], it is desirable to study and understand the modifications of these electronic properties with respect to different electronic and geometric effects. This can be achieved by considering density functional theory (DFT) calculations as computer experiments where the role of the electronic and geometric effects can be determined separately.
+The modifications in d-band characteristics can be estimated through a correlation between the width of the surface d-band for transition metals and the interatomic matrix element (Vdd) that describes bonding interactions between an atom and its environment [6,11,12]. If such an understanding can be established, then it would be possible ISSN 0892-7022 print/ISSN 1029-0435 online q 2010 Taylor & Francis
+DOI: 10.1080/08927022.2010.481794
+http://www.informaworld.com *Corresponding author. Email: jkitchin@andrew.cmu.edu Molecular Simulation Vol. 36, Nos. 78, JuneJuly 2010, 633638 Downloaded by [Washington University in St Louis] at 02:00 03 January 2015 to calculate d-band characteristics of any surface,including the effects of structure, alloying, etc., with dramatically reduced need for DFT calculations. This would constitute a new and fast way of screening potential alloy surfaces that could even be extended to include many different surface structures for the purpose of identifying surfaces with desired chemical properties.
+In this paper, we utilise the proportionality between the d-band widths and the interatomic matrix elements [11] describing the bonding between an atom and its nearest neighbours to develop a simple model for estimating the electronic structures of transition metal surfaces. In this paper, we first discuss the details of the computational parameters used in the DFT calculations and the details of the computational methods. Correlations between Vdd and Wd are used to propose a d-band width model for transition metal atoms utilising a characteristic length for each transition metal d-orbital that are parameterised from DFT calculations. These parameters are incorporated in a new solid-state table and presented in Section 3. With the use of the model, we predict d-band widths of bulk and surface atoms at different low Miller index facets of transition metals and compare the results of the simple model to detailed DFT calculations. The model is then used to estimate the electronic structure of many different overlayer/host as well as surface impurity/host combi- nations and compared to the literature data. Given the simplicity and the accuracy of the proposed d-band width formalism, we believe that the model presented here will be used as a first step towards predicting the reactivity of different surfaces and will serve as a main tool in many different applications involving transition metals.
+2.
+Calculation details This study involves the low Miller index (111, 100 and 110) surfaces of late transition metals modelled by a 2  2 unit cell using a four-layer slab that is repeated periodically in a cell geometry with 10 A vacuum space in between any two successive slabs. For the unit cell, the most upper two layers are relaxed until the forces are less than 0.05 eV/A , keeping the other layers at the frozen bulk coordinates. DACAPO code is utilised for all the DFT calculations in this work (http://www.fysik.dtu.dk/ CAMPOS), ionic cores are described by Vanderbilt ultrasoft pseudopotentials [13,14] and the one-electron valence eigenstates are expanded in a plane-wave basis set with a cut-off energy of 340 eV. The exchange correlation functional used was the generalised gradient approxi- mation due to PerdewWang (PW91) [15]. Bulk calculations were performed on 1  1  1 bulk unit cells at different volumes to determine the equilibrium volume using the Murnaghan equation of state. Brillouin-zone integrations are performed using an 8  8  1 Mon- khorstPack grid for the 2  2 surface unit cell and a 16  16  16 MonkhorstPack grid for the bulk 1  1  1 cells. The atom-projected d-bands were calculated by projecting the KohnSham orbitals onto atom-centred spherical harmonics with a cut-off radius of infinity. The d-band centre is computed as the first moment of the projected d-band density of states about the Fermi level,and the d-band width is the square root of the second moment of the projected d-band density of states about the Fermi level.
+3.
+Results and discussion
+3.1
+Details of the d-band width formalism The coupling matrix describing the interaction of an atom with its environment has been generalised based on the distance dependence between an orbital of angular momentum quantum number l and one of quantum number l0. It has been shown that the correlation can be expressed as Vll0  Cll0d 2ll01;1 with Cll0 being a constant value that contains a factor r ll01 [11]. This factor is metal specific. For the matrix element involving coupling of two d-states, the above equation can be written in the following form: Vdd  hdd h2r3 d md 5 ;2 where hdd is a constant, set to unity for convenience and h 2/m  7.62 eVA
+2. rd is a characteristic length for each
+transition metal that is related to the spatial extent of the d-orbitals. The derived values of the characteristic lengths are based on the high correlations between the band width (energy difference between the levels H12 H 0 25 for bcc and X1X5 for fcc structures) and computed matrix elements.
+The adjusted coefficients are set as the characteristic length and tabulated in the solid-state table by Harrison [11].
+Finally, d is the distance separating the orbitals [11].
+These parameters were established by fitting to exper- imental data, and are not directly useful for comparison to DFT-calculated d-band properties.
+The summation of all interactions of an atom with its neighbours leads to Vi / P jr3 d=d5 i . The tight-binding theory yields the d-band width to be proportional to the matrix element Vi. Here, the ligand effect is incorporated into the matrix element in the numerator through the rd of each metal, whereas the strain is included in the denominator through the distance between atoms. The proportionality between Wd and Vdd leads to a linear correlation between Wd and d 25. In Figure 1, we show Wd as a function of d 25, where the interatomic distance between atoms in the bulk has been modified by perturbing the bulk lattice constant over a range of 0.08 A . These perturbations lead to approximately 6.5% perturbation
+N. I
+nog lu and J.R. Kitchin 634 Downloaded by [Washington University in St Louis] at 02:00 03 January 2015 to the cell volume in each case. A linear correlation between the d-band width and d 25 is observed for each case, and the slope of that correlation is proportional to the matrix element Vi.
+3.2
+d-band width formalism and solid-state table The linear relationship between Wd and 1=d5 ij is utilised to derive a model predicting d-band width of a clean surface atom in a bulk structure. Based on the number of nearest neighbours, this can be expressed as Wd;i  Wo;i
+X
+j ri d rj d
+3=2 d5 ij :3 Wo,i is a constant accounting for the non-zero band width of an atom i at infinite separation due to the atom-projected density of states algorithm. dij represents the distance between the nearest-neighbour atoms. Finally, rd is a characteristic orbital size for each metal atom similar to Harrisons [11] but the values are not adjusted coefficients that fit experimental data; instead, the characteristic lengths are derived based on the d-band widths calculated from bulk calculations in unit cells with varying volumes.
+A plot of Wd vs. 1=d5 ij is linear from which rd and Wo can be obtained for each metal from the slope and the intercept,respectively. rd and Wo for the metals examined in this work are tabulated in a new solid-state table given in Table 1.
+The utility of the new solid-state table with the d-band width formalism needs to be checked for bulk structures as well as for some surfaces with different facets considering the number of nearest neighbours, coordination number of the surface atoms. The sum over nearest neighbours accounts for the reduced coordination of surface atoms,but not for the redistribution of electron density at surfaces compared to the bulk. We capture this contribution by the addition of another term that leads to the following expression: Wd;i  Wo;i
+X
+j ri d rj d
+3=2 d5 ij b;4 with b being a facet-specific term that accounts for electron density redistribution and surface relaxation effects, and b has different values for non-noble and noble metals as well as for different lower Miller index facets (Table 1). The values of the facet-specific b term have been obtained based on a least-squares fit of the DFT-calculated and estimated d-band widths of all the clean, relaxed metal surfaces. Utilising the characteristic orbital sizes for each metal and the suggested model, good agreement has been achieved in predicting the d-band widths for clean surfaces of Cu, Rh, Pd, Ag, Ir, Pt and Au at low miller index facets such as (111), (100) and (110) as well as their d-band widths in their bulk structures (Figure 2).
+The average error in estimating the d-band widths of the atoms in bulk and on surfaces at different facets has been calculated to be 2%, indicating the feasibility of the Figure 1.
+Linear correlations between DFT-calculated d-band widths of some bulk late transition metals at different unit cell volumes.
+Table 1.
+DFT-parameterised solid-state table for some transition metals.
+Metals Fe Co Ni Cu b
+2.39
+2.46
+2.46
+2.68
+0.49
+0.33
+0.36
+1.09
+Element Ru Rh Pd Ag rd
+3.22
+3.32
+3.38
+3.34
+111 facet 100 facet 110 facet Wo
+0.36
+0.20
+0.05
+2.44
+Noble TM
+0.24
+0.40
+0.41
+Ir Pt Au Other TM
+0.30
+0.41
+0.50
+3.72
+3.79
+3.88
+0.24
+0.04
+1.11
+Molecular Simulation 635 Downloaded by [Washington University in St Louis] at 02:00 03 January 2015 proposed model as well as the new solid-state table. The maximum error which is around 9% corresponds to the Cu(110) facet.
+3.3
+d-band width formalism for alloy structures The model presented here should be applicable for alloy systems in addition to monometallic systems. Here, the alloying effects (strain, ligand, ensemble effects) are taken into consideration through the characteristic orbital sizes and distances between metal atoms in the alloy.
+One possible application of the proposed d-band width formalism could be the sulphur poisoning of Pd-based membranes used for the separation of hydrogen where Pd-based surface alloy structures [16] formed with another transition metal can be considered. The suggested d-band formalismwouldbeutilisedtostudythealloyingofPd-based membranes with other transition metals in detail where the changes in d-band characteristics of the surfaces would provide explanations regarding the reactivity ofthe Pd-based membranes. A future paper will address the S-tolerant transition metal-based binary alloys utilising the developed d-band model within an atomistic thermodynamic frame- work that involves the effect of surface segregation.
+Considering the d-band width formalism, we keep the focus this time on surface alloys that are formed with different impurities of Fe, Co, Ni, Ru, Rh, Ag, Ir, Pt and Au over a Pd-based substrate. The surface structures are modelled using a 2  2 unit cell of Pd and by replacing one of the surface atoms with an impurity atoms leading to a 25% impurity over the surface. The presence of the impurity is taken into consideration through the interaction with the host atoms by their characteristic lengths. The estimated and the DFT-calculated surface d-band widths are tabulated in Table 1 for these surface alloy structures as well as for pure Pd-based surfaces.
+As seen from Figure 3, reasonable agreement has been achieved in estimating d-band widths considering alloy structures. The largest error is obtained with the Pd-based structure containing Co impurities which is an error of 6%.
+Even considering the Co impurity, the average error has been calculated to be less than 2.5%, indicating the feasibility of our proposed d-band width formalism.
+Moreover, when the interactions between the host Pd atoms and the impurity are considered, it is found that as the impurity moves to the right and down the periodic table, the contribution of the presence of the impurity gets larger in terms of broadening the d-band width of the nearest host atom. This is largely a geometric strain effect as the impurities get larger to the right and down the rows (inset of Figure 3). Thus, less reactive surface structures could be obtained with the Pd-based structures containing 5d metals in the first layer. The results also indicate that more reactive surface structures could be achieved with the presence of 3d metals as the impurity in the surface,causing a narrowing of the surface d-band width and a consequent shift in d-band centre closer to the Fermi level.
+We attribute this to an electronic strain, where the Pd Figure 3.
+Estimated and DFT-calculated d-band widths of impurities embedded in a Pd(111) surface. The inset shows the effect of the impurities on the electronic structure of the neighbouring Pd atoms.
+Figure 2.
+Parity plot of d-band widths for clean surface structures with different facets as well as for bulk systems for some late transition metals.
+N. I
+nog lu and J.R. Kitchin 636 Downloaded by [Washington University in St Louis] at 02:00 03 January 2015 d-orbitals are not as crowded by the smaller 3d orbitals as they would be by other Pd orbitals. Consequently, they are effectively under-coordinated, resulting in a sharpening of the d-band.
+The consideration of the interaction of different types of atoms is restricted neither to Pd-based structures nor to surface impurities. Binary transition metal alloys consist- ing of a substrate layer of a certain metal type and a surface layer of another metal type are of great interest [6]. In this study, our goal is to establish a model for capturing the electronic characteristics for a broad variety of transition metal alloys. The thermodynamic stability of the surface alloys in this work has not been considered even though this information is important for detailed analysis of catalytic systems. Databases of segregation energies exist [17], which could provide additional screening criteria.
+We now expand the utilisation of the solid-state table to predict the electronic structures of the binary combinations of 11 different metal atoms (Fe, Co, Ni, Cu, Ru, Rh, Pd, Ag, Ir, Pt and Au) similar to the work of Greeley and Nrskov [10]. The interactions of the different layers are taken into consideration through the characteristic orbital sizes of the metal atoms forming the alloy structure. Utilising the d-band width model and the new solid-state table, we estimate the surface d-band widths of different overlayer/host combi- nations and the results are presented below (Figure 4).
+As seen from Figure 4, for a fixed host substrate, as we select the overlayer metal closer to the right side or bottom of the periodic table, an increase in the estimated d-band widths has been observed [3,18]. This broadening of the d-band width leads to a shift in d-band centre to more negative values and thus to less reactive catalytic surfaces. The trends in the d-band centres of pure metal surfaces are shown in Figure 5, where it can be seen that reactivity decreases from left to right and from top to bottom in the periodic table with Ag having an even more negative d-band centre than Au.
+This explains why the highest estimated d-band widths have been achieved with Ag at the most top layer.
+As discussed earlier, the d-band centre is the primary descriptorof surface reactivity. Ourmodel provides a tool for estimating d-band widths, which are in many cases linearly Figure 5.
+Computed d-band centres of some late transition metals.
+6.0
+7.0
+5.0
+4.0
+3.0
+2.0
+Estimated d-band width (eV)
+1.0
+0.0
+[Fe] [Co] [Ni] [Cu] [Ru] Overlayer/host combinations [Rh] [Pd] [Ag] [Ir] [Pt] [Au] Figure 4.
+Estimated d-band widths for different overlayer/host combinations with overlayer being in the order of Fe, Co, Ni, Cu, Ru, Rh, Pd, Ag, Ir, Pt and Au. The vertical dashed red lines separate the host metals (colour online).
+Figure 6.
+Estimated d-band widths for different overlayer/host combinations vs. their DFT-calculated d-band centres for Ni-, Pd- and Ir-based surface structures.
+Molecular Simulation 637 Downloaded by [Washington University in St Louis] at 02:00 03 January 2015 correlated with the d-band centres. We now demonstrate the utility of the model for estimating d-band centres of different overlayer/substrate combinations by comparing the esti- matedbandwidthvaluesofeachsurfacefromourmodelwith its corresponding computed surface d-band centre. Linearity in this comparison shows that one can estimate the d-band centres from the estimated d-band widths. Reference [10] tabulates a large database of d-band centres for a variety of overlayer/substrate combinations. We have used our model to estimate the d-band widths of those systems. Based on a simple rectangular band model, the d-band centres and widths should be linearly correlated with each other with a slope of approximately 21. Figure 6 displays the correlation of our estimated d-band widths with the d-band centres for some of the data in Ref. [10], where quite reasonable correlation is demonstrated with a slope of approximately 21 as predicted by the rectangular band model. Similar linearity with a slope of 21 has also been observed with the other considered surface structures (not shown). Some disagreement occurs due to the need to estimate the atom atom distances in the matrix element computation.
+4.
+Conclusion The present paper demonstrates that the modifications in d-band characteristics due to the combined effect of electronic and geometric contributions from different surface structures and alloying can be estimated using the correlations between the d-band widths and the interatomic matrix elements. We have proposed a d-band formalism predicting d-band widths of bulk atoms, clean surface structures with different facets as well as bimetallic systems with different overlayer/substrate combinations and also with various surface impurities. We have constructed a new solid-state table with parameters derived from a set of DFT calculations. Themodelcanbeusedtoscreena widerange of alloysurfacesveryquicklytoidentifysurfaceswithdesirable electronic and thus chemical properties without the need to perform expensive DFT calculations.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do geometric and electronic effects in transition-metal alloys synergistically influence catalytic performance, and what innovative strategies can be developed to exploit this interplay in designing more efficient, selective, and tunable catalytic systems that outperform traditional monometallic catalysts?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

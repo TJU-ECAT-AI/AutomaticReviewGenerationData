@@ -1,0 +1,799 @@
+ARTICLE
+OPEN
+Molecular dynamics simulation of graphene sinking
+during chemical vapor deposition growth
+on semi-molten Cu substrate
+Ziwei Xu
+1,2✉, Guanghui Zhao1, Lu Qiu2,3, Xiuyun Zhang4, Guanjun Qiao1✉and Feng Ding
+2,3✉
+Copper foil is the most promising catalyst for the synthesis of large-area, high-quality monolayer graphene. Experimentally, it has
+been found that the Cu substrate is semi-molten at graphene growth temperatures. In this study, based on a self-developed C–Cu
+empirical potential and density functional theory (DFT) methods, we performed systematic molecular dynamics simulations to
+explore the stability of graphene nanostructures, i.e., carbon nanoclusters and graphene nanoribbons, on semi-molten Cu
+substrates. Many atomic details observed in the classical MD simulations agree well with those seen in DFT-MD simulations,
+conﬁrming the high accuracy of the C–Cu potential. Depending on the size of the graphene island, two different sunken-modes are
+observed: (i) graphene island sinks into the ﬁrst layer of the metal substrate and (ii) many metal atoms surround the graphene
+island. Further study reveals that the sinking graphene leads to the unidirectional alignment and seamless stitching of the
+graphene islands, which explains the growth of large single-crystal graphene on Cu foil. This study deepens our physical insights
+into the CVD growth of graphene on semi-molten Cu substrate with multiple experimental mysteries well explained and provides
+theoretic references for the controlled synthesis of large-area single-crystalline monolayer graphene.
+npj Computational Materials  (2020) 6:14 ; https://doi.org/10.1038/s41524-020-0281-1
+INTRODUCTION
+Following its ﬁrst preparation by exfoliation from graphite in 2004,
+graphene has attracted much attention both for fundamental
+studies and technological applications, owing to its unique
+morphology and excellent mechanical, electronic and optical
+properties.
+It
+is
+expected
+that
+wafer-scale
+single-crystalline
+graphene ﬁlms will function as ideal platforms for the develop-
+ment
+of
+future
+high-performance
+graphene-based
+devices1.
+Consequently, great efforts have been made to synthesize large
+single-crystalline graphene (SCG) monolayers2–4 on transition
+metal catalyst through chemical vapor deposition (CVD) growth
+—the most promising, cheap and readily accessible synthetic
+approach so far reported for graphene5. The graphene islands,
+formed during the initial nucleation process6–11, are crucial in the
+mechanism of graphene growth and determine the quality of the
+grown graphene by functioning either as nucleation seeds6,12,13 or
+as building blocks for the coalescence of graphene nano-islands9.
+In previous studies, large SCG was realized by the seamless
+stitching of highly oriented islands on single-crystal substrate,
+such as Cu(111)14 and Ge (110)15. Most recently, ultra-fast growth
+of meter-sized SCG has been achieved by producing super-large
+Cu (111) foil16. As an epitaxial growth, the unidirectionally aligned
+graphene islands on the Cu (111) surface are guided by the lattice
+symmetry of the single-crystal substrate17.
+Before graphene islands form, various intermediates such as
+carbon dimers, atomic carbon nanoarches or networks of carbon
+clusters, have been observed both in early experiments18,19 and
+theoretic
+calculations20–22.
+For
+instance,
+based
+on
+density-
+functional molecular dynamics simulations, the very intricate
+pathways of reaction for metal organic chemical vapor deposition
+(MOCVD) of AlN on graphene can be identiﬁed at the atomic level
+with rich chemistry uncovered23. Unexpected defects such as
+pentagons usually appear during the nucleation stage and
+degrade the ﬁnal quality of CVD-grown graphene. To circumvent
+the formation of these detrimental defects created during the
+initial stages of growth, defect-free polycyclic aromatic hydro-
+carbons (PAHs consisting of six-membered carbon rings) have
+been proposed as ideal precursors for the fabrication of graphene
+with low defect concentration, on Au (111)24, Pt (111)25 and Cu
+(111)26.
+Among
+these
+different
+carbonaceous
+motifs,
+the
+coronene-like cluster, C24, is widely regarded as the ideal carbon
+precursor for the growth of high-quality graphene by self-
+assembly on a Cu (111) surface27,28 due to its six-fold rotation
+symmetry and dome-shaped structure, a result of the interaction
+of the peripheral atoms of the carbon cluster with the substrate
+metal29–31. Although it is widely believed that these active carbon
+species readily move on the metal surface, coalescing into larger
+islands, and eventually forming the ﬁnal graphene domain27,32,
+the motion and coalescence dynamics at the atomic level of these
+carbon islands still remain elusive. For example, based on static
+DFT calculations, a new growth mode called “embedded” growth,
+has recently been proposed. In the embedded mode, it was found
+to be energetically favorable for graphene islands to “sink” into
+“soft” metals like Cu (111), during the growth of graphene33.
+Different from that on nickel surface, the growth of graphene
+on copper surface is a surface-mediated process due to the very
+low solubility of carbon in bulk Cu2–4,34,35. Typical experimental
+temperatures during growth are ~1273 K (1000 °C), which is very
+close to the melting point of bulk Cu at ~1358 K (1085 °C)4,14,16,36.
+Under this temperature, the surface of the Cu substrate is
+1School of Materials Science and Engineering, Jiangsu University, Zhenjiang 212013, China. 2Centre for Multidimensional Carbon Materials, Institute for Basic Science, Ulsan
+44919, Korea. 3School of Materials Science and Engineering, Ulsan National Institute of Science and Technology (UNIST), Ulsan 44919, Korea. 4College of Physics Science and
+Technology, Yangzhou University, Yangzhou 225002, China. ✉email: ziweixu2014@ujs.edu.cn; gjqiao@ujs.edu.cn; f.ding@unist.ac.kr
+www.nature.com/npjcompumats
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+1234567890():,;
+observed to be highly mobile37, which presents the characteristics
+of melting. Thus the Cu surface is thought to be nearly molten or
+liquid and can never be considered as a strict crystalline lattice as
+before38. How does the graphene island sink into such a “semi-
+molten” Cu surface? Why are the graphene islands aligned on the
+surface molten Cu surface? Will the graphene sinking create
+detrimental effects on the stitching mechanism of the graphene
+grains or affect the ﬁnal quality of larger merged graphene ﬁlm? In
+this article, based on a self-developed C–Cu classical potential and
+density functional theory, MD simulations were performed to
+study the sinking of the graphene on a semi-molten Cu substrate.
+Two different sunken-modes, which depend on graphene island
+size, were revealed. Further, the embedded graphene tends to be
+unidirectionally aligned and the seamless stitching of the adjacent
+graphene grains is preferred.
+RESULTS AND DISCUSSION
+Sinking of carbon nanocluster
+Figure 1a–f show the cross-sections of a C24 cluster on the Cu
+(111) substrate after 120 ps MD simulations at 1200, 1250, 1300,
+1350,
+1400,
+and
+1450 K,
+respectively.
+The
+3D
+views
+of
+the corresponding conﬁgurations are shown in Supplementary
+Fig. 2. In our MD simulations, only the top layer Cu atoms melt
+while other layers of the substrate remains in a crystalline shape
+even at 1450 K owning to the approach of semi-inﬁnite surface
+adopted in our model. Thus the substrate is in a state between
+liquid and solid. We name the substrate a “semi-molten” substrate.
+As shown in Fig. 1h, during the MD simulation, the Lindemann
+index39 of the substrate oscillates between those of liquid and
+solid. As shown in Fig. 1a, b, the upmost surface of Cu substrate is
+stable and retains its original crystallinity at lower temperatures (T
+Fig. 1
+Sinking of C24 on a Cu (111) surface at different temperatures. a–f Cross-sections of C24 on the Cu (111) surface after 120 ps MD
+simulations at 1200, 1250, 1300, 1350, 1400, and 1450 K, respectively, where the Cu atoms near the edge of C24 are highlighted in yellow. g The
+proﬁles of C24 extracted from (a–f) at different temperatures. Cyan and ochre balls represent C and Cu atoms, respectively. h The calculated
+Lindemann index of solid, semi-molten and liquid Cu substrate. i Average heights of C24 and surrounding atoms during the ﬁnal 20 ps at
+different temperatures.
+Z. Xu et al.
+2
+npj Computational Materials (2020)  14 
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+1234567890():,;
+< 1350 K). The C24 cluster ﬂoats on the surface during the whole
+simulation and no sinking is observed.
+Previous studies have reported that during graphene growth,
+graphene edges bound to a metal step are energetically
+preferred6,8,40. It has also been observed that graphene ribbons
+tended to stand upright on a ﬂat metal terrace41 while a graphene
+island like C24 prefers to form dome-like structure with its edge
+bent towards the terrace20. In our MD simulation, the C24 cluster
+also presents a dome-like geometry (Fig. 1a), similar to that
+reported in the previous studies20. The height of the dome-like C24
+on Cu surface is ~0.6 Å, which is ~50% of that of C24 on a Ni (111)
+surface42. At 1300 K, the top layer of Cu atoms start to melt slightly
+with a small proportion of Cu atoms diffusing out of the surface to
+attach to the edge of C24 (Fig. 1c). These diffused Cu atoms can be
+viewed as a newly-formed atomic layer passivating the edge of
+the C24 cluster. Therefore, different from the dome-like ﬂake on
+the Cu surface shown in Fig. 1a, C24 can form metal-carbon σ
+bonds with surrounding Cu atoms and its shape becomes ﬂat (Fig.
+1c). When the temperature approaches 1350 K, the substrate
+becomes highly disordered and the C24 starts to sink into the
+substrate (Fig. 1d). The higher the temperature, the deeper the C24
+cluster sinks (Fig. 1e, f). Besides, as it sinks deeper, the domelike
+structure of C24 becomes increasingly ﬂatter (Fig. 1g). To quantify
+the degree of sinking of the C24 cluster, the average heights
+(z coordinates relative to z = 0) along the z direction (see the axes
+in Fig. 2d) of the mass centers of C24 (h-C24) and the surrounding
+Cu atoms (h-SCu) during the ﬁnal 20 ps are compared in Fig. 1i.
+With the increase of the temperature, the h-C24 decreases
+obviously whereas h-SCu remains almost unchanged with only a
+slight ﬂuctuation at ~3.5 Å. The height difference Δh, where
+Δh ¼ h  C24  h  SCu, therefore drops to below 0 Å at tem-
+peratures higher than 1350 K, indicating the complete sinking of
+the C24 cluster.
+In order to investigate the detailed sinking process, the
+smoothed instantaneous heights of C24 (h-C24) and surrounding
+Cu atoms (h-SCu) as a function of MD time are also calculated. As
+shown in Supplementary Fig. 1, at temperatures <1300 K, the h-
+C24 and h-SCu are almost parallel, implying that both the sinking
+of C24 and the surface melting cannot take place (Supplementary
+Figs. 1a, b). At 1300 K, both h-C24 and h-SCu start to rise after
+90 ps, which can be mainly attributed to change in the mass
+centers of C24 and the surrounding Cu atoms (Supplementary Fig.
+1c). In other words, the original dome-like shape of C24, stable at
+lower temperatures, begins to ﬂatten at 1300 K due to edge
+passivation by several Cu atoms that diffused upwards. Therefore,
+the mass center of the C24 cluster is raised by ~0.3–0.5 Å, which is
+consistent with a previous density function theory (DFT) calcula-
+tion on the height difference between C24 and coronene on a
+metal substrate20. In addition, the mass center of the surrounding
+Cu atoms is also raised by ~0.5–0.75 Å because of their upward
+diffusion. Up to this point, we can see that the C24 ﬂoats on the Cu
+(111) surface without sinking. However, as shown in Fig. 2a, when
+the temperature is 1350 K, the h-C24 begins to drop sharply by
+~ 1 Å after ~60 ps (red arrow). The height difference between C24
+and Cu surface is greatly reduced from ~2.25 to ~0.5 Å at 66.5 ps.
+After 110 ps, the height difference is further reduced to be less
+than 0.20 Å, indicating that the C24 has already been fully
+embedded in the semi-molten Cu surface. The potential energy
+proﬁle in Fig. 2g shows that the sinking process after 60 ps is
+energetically preferred because of the downward trend. The
+snapshots of the sinking process at ﬁve different MD times are
+shown in Fig. 2d. Clearly, at 54.35 ps, the C24 is still on the Cu
+surface. At 66.5 ps, the C24 sinks into the Cu. After 70 ps, the C24
+rises up at 87.2 ps and fall down at 89.6 ps, corresponding to the
+height ﬂuctuation of the C24 in Fig. 2a. At 112.35 ps, the C24 is fully
+embedded in the Cu substrate with their height difference as
+small as 0.13 Å. With the increase of temperature, the onset time
+for C24 sinking, denoted by red arrows, is advanced from 60 (T =
+1350 K) ps to 40 ps (T = 1400 K) and then to 10 ps (T = 1450 K)
+(Fig. 2b, c). Moreover, the height difference between C24 and
+surrounding Cu atoms are further reduced even with higher Cu
+atoms observed in Fig. 2b, c. In previous studies, Yuan et al.
+proposed that the sinking of graphene in CVD growth can be
+achieved either by removing metal atoms under a graphene
+island, or by the adsorption of fast moving metal atoms around a
+graphene island to form a new atomic layer33. Clearly, the former
+pathway is the dominant sunk mechanism at high temperatures ≥
+1350 K. To distinguish this sunken-mode with the later one, we
+deﬁne it as “sunken-mode I”.
+For comparison, Fig. 2f shows the C24 embedded in the liquid
+substrate, 8-layers free Cu atoms, at 1350 K. Different with the
+semi-molten substrate, the crystallinity of the Cu layers completely
+disappears. As shown in Fig. 2e, the heights of the C24 cluster
+drops from 10.5 to 8.75 Å very quickly in only 20 ps with the
+height difference reduced to ~0.15 Å. After 67 ps, the h-SCu
+begins to exceed h-C24 with the height gap near 0.5–1 Å.
+Compared with the semi-molten substrate, it is, therefore, easier
+for C24 to sink and be embedded in the liquid surface. In order to
+verify the observations in the classical MD simulation shown
+above, we performed an extensive DFT-MD simulation to explore
+the behavior of a C24 cluster on a Cu (111) substrate at 1350 K.
+Owning to the high computational cost of DFT-MD, we use 3-free-
+layers Cu (111) substrate to accelerate the surface melting, which
+can reduce the computation time effectively. As shown in
+Supplementary Fig. 7, at 0.23 ps, the surface has not melted yet
+and the dome-like C24 appears with the dome height ~0.9 Å
+(Supplementary Fig. 7b), which is close to 0.6 Å in our classic MD
+simulations. After 2 ps, an obvious sinking of the C24 cluster into
+the substrate can be observed (Supplementary Fig. 7c-f) with the
+height difference ~0.5 Å (Supplementary Fig. 7g). Thus, the results
+of the classic and DFT MD are qualitatively consistent.
+After knowing the sunken-mode of C24 at higher temperatures,
+we may ask a question as to whether a larger graphene island also
+shows the same sunken-mode or not. To answer this question,
+larger carbon clusters of C54 and C96, including 19 and 37
+hexagons were selected for further simulations. As shown in Fig.
+3a, unlike C24, the C54 did not sink into the substrate but just ﬂoat
+on the substrate surface at 1350 K. Only some melted Cu atoms
+diffuse upwards and form metal step with C54 edge partially
+passivated. For this reason, Fig. 3d shows that there is no obvious
+drop of C54 height line and a height gap of ~1.5 Å between C54
+and the underlying Cu surface always exists (Fig. 3d). Even at
+higher temperatures like 1400 and 1450 K (Fig. 3b, c), C54 prefers
+to ﬂoat on the Cu surface and the surface Cu atoms eventually
+melt and diffuse upwards to surround it. Although the height gap
+between C54 and surrounding Cu atoms is greatly reduced in Fig. 3
+(e, f), this behavior can be attributed only to the lifting-up of the
+surrounding Cu atoms rather than the sinking down of C54. In
+other words, the C54 cluster cannot sink into the substrate as easily
+as C24. Thus, we deﬁne such a sunken-mode as “sunken-mode II”,
+which is different form “sunken-mode I” aforementioned. The
+reason for this difference is that, due to the larger size of the C54
+cluster, more underlying Cu atoms need to out-diffuse to form a
+basin for the cluster to sink, which in turn, requires a greater
+energy cost. Besides, the C54 cluster is energetically more stable
+on the Cu (111) surface owing to its lower edge atoms/inner
+atoms ratio. Thus, there is a smaller driving force for the sinking of
+the C54 cluster when compared to C24. In this respect, the sunken-
+mode II of C54 at high temperatures is achieved by the adsorption
+of fast moving metal atoms underlying a graphene island to form
+a new atomic layer. As for a much larger cluster like C96, it always
+ﬂoats on the Cu (111) surface for a wide range of temperatures
+from 1300 to1450 K (Supplementary Fig. 4). We can thus conclude
+that the larger carbon nanoclusters prefer the “sunken-mode II”
+with only the carbon edges embedded in the metal atoms
+diffused from the underlying semi-molten substrate.
+Z. Xu et al.
+3
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+npj Computational Materials (2020)  14 
+Orientation of carbon nanocluster
+It is well known that the orientation of the graphene islands
+formed at the early stage is very crucial to the ﬁnal formation of
+larger graphene, such as the morphology, grain boundary, moiré
+pattern and so on43,44. By controlling the orientation of graphene
+island as well as associated growth conditions, various shapes of
+graphene grains can be synthesized12,45–47. To eliminate the
+anisotropic effect of the solid surface on the orientation of
+graphene domain, the liquid Cu surface is proposed to provide
+isotropic surface for the uniform formation of the graphene
+grains35,48,49.
+Recent theoretic study shows that coalescence of randomly
+rotated graphene islands on the liquid Cu surface only has the 0°
+(single crystal) and 30°-twinned polycrystal as highly stable grain
+boundaries. In our simulation, the orientation of the C24 is proved
+to depend strongly on surface states of the metal catalyst at
+different temperatures. At the lower temperature far below the
+melting point, the C24 cluster only vibrates rigidly, and sporadi-
+cally, it rotates by ~20° and then returns to 0° very soon
+(Supplementary Fig. 5). These rotations only result in many sharp
+peaks but with no obvious orientation change. Based on our
+previous DFT calculation43, the orientation of graphene island, like
+C24 and C54, is mainly constrained in a speciﬁc alignment at lower
+temperatures by the interaction between the edge atoms and Cu
+surface with the rotation barrier as high as 0.96 and 5.18 eV,
+respectively. For this reason, the rotation freedoms of larger
+clusters of C54 and C96 are expected to be reduced compared with
+C24 at the same temperatures due to the higher rotation barriers
+(Supplementary Fig. 5). When the temperature rises to 1350 K or
+higher, the C24 starts to rotate gradually on the semi-molten
+surface as a function of MD time at temperature of 1350 K with its
+orientation changed apparently (Fig. 4e and Supplementary Fig.
+5). It is noticed that the distribution of the rotation angle for C24
+also depends strongly on the surface state. On one hand, as
+(a)
+(b)
+(c)
+(d)
+54.35 ps
+66.5  ps
+87.2  ps
+112.35 ps
+x
+y
+z
+Height (Å)
+1350 K
+(e)
+(g)
+C24
+Cu
+MD time (ps)
+(f)
+Height (Å)
+Height (Å)
+Height (Å)
+89.6  ps
+Energy (eV)
+MD time (ps)
+Fig. 2
+Details of C24 sinking on a Cu (111) surface. a–c Smoothed instantaneous heights of the C24 cluster and the surrounding Cu atoms as
+a function of MD time at 1350, 1400, and 1450 K, respectively. The outlines of cyan and orange areas represent h-C24 and h-SCu, respectively,
+and the red arrows represent the onset time of sinking. d Snapshots extracted from the MD trajectory of C24 on Cu (111) surface at 1350 K.
+Cyan and ochre balls represent C and Cu atoms, respectively. e, f C24 embedded in the liquid Cu substrate at 1350 K and h-C24, h-SCu during
+the MD simulations. g Energy proﬁle of C24 on semi-molten Cu substrate at 1350 K. The bold dark green line and light gray line corresponds to
+smoothed and unsmoothed instantaneous energies, respectively.
+Z. Xu et al.
+4
+npj Computational Materials (2020)  14 
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+shown in Fig. 4a, c, the rotation angles on the semi-molten surface
+at 1350 and 1400 K present narrow distributions only at 0° and 60°,
+respectively. Due to unique sunk- mode of the C24 aforemen-
+tioned, its orientation is constrained by the unmolten subsurface
+with six-fold lattice symmetry. On the other hand, there is a
+broader distribution of the rotation angles for the C24 on the liquid
+Cu surface at the same temperatures due to the isotropic lattice of
+liquid Cu (Fig. 4b, d).
+Stitching of graphene
+As mentioned before, the seamless stitching of the graphene
+during the merge of the graphene domains is a signiﬁcant step for
+formation of large-area single crystal graphene14–16,50. When the
+graphene sinking occurs, will these separated graphene domains
+coalescence into a larger one without defects? And, what are the
+atomistic details? To answer these questions, we select periodic
+graphene nanoribbons with a narrow gap as stereotypical model
+for mimicking the stitching process. Firstly, three graphene
+nanoribbons on Cu (111) surface, containing 3, 5, and 8 rows of
+hexagonal rings along the width direction (GNR-3, GNR-5, and
+GNR-8), are designed to study their structures on the Cu substrate.
+Figure 5 shows their structures after MD simulation of 200 ps at
+temperatures of 1200, 1350, and 1400 K, respectively. Clearly, at
+the lower temperature 1200 K, the upmost surface has not started
+to melt and the edges of all GNRs bend toward the Cu surface
+with arched ribbons formed (Fig. 5a–c). When the temperature is
+increased to 1350 K, the higher temperature leads to the
+formation of a metal step (Fig. 5d–f) with one-atom layer at one
+side of the GNR edges. The arched ribbons are therefore ﬂattened
+due to the edge passivation. With further increase of the
+temperature, more metal atoms in the substrate diffused out
+and form the metal steps for GNR-3 and GNR-5(Fig. 5g–i). Thus, the
+GNRs on the semi-molten Cu substrate can be viewed as
+embedded ribbon based on sunken-mode II. Again, the DFT-MD
+simulations are carried out to verify our classic MD results. As
+shown in Supplementary Fig. 8, the GNRs bend toward to the
+surface and form the arched ribbon at the early stage when the
+surface has not melted. After ~6–7 ps, the arched GNRs are
+ﬂattened with the metal step formed near the edges. Height of
+the ribbon edges and the metal steps during the ﬁnal stage
+indicate that the ribbon edges are embedded in the metal steps,
+which are highly consistent with our classic MD results in Fig. 5.
+So far, a clear conclusion is that with increase of the size, the
+carbon nanoclusters and/or GNRs can be well ﬂattened on the Cu
+surface by the edge passivation of the metal steps, particularly on
+the substrate with surface melting. The following question,
+however, is that will these metal steps affect the ﬁnal formation
+of the high-quality graphene, particularly on the semi-molten
+1400 K
+1450 K
+(a)
+(b)
+(c)
+(d)
+T = 1350 K
+T = 1400 K
+T = 1450 K
+MD time (ps)
+Height (Å)
+Height (Å)
+Height (Å)
+C54
+Cu
+(e)
+(f)
+1350 K
+Fig. 3
+C54 on a Cu (111) surface. a–c Final structures of C54 on Cu (111) surface during MD at 1350, 1400, and 1450 K, respectively. Cyan and
+ochre balls represent C and Cu atoms, respectively. The surrounding melted Cu atoms diffused upwards are highlighted in yellow. d–f
+Smoothed instantaneous heights of the C54 cluster and the surrounding Cu atoms as a function of MD time at 1350, 1400, and 1450 K,
+respectively.
+Z. Xu et al.
+5
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+npj Computational Materials (2020)  14 
+substrate. Or say, will these metal steps remain there and create
+defects during the stitching of the GNRs or disappear eventually
+with perfect graphene left? To solve this problem, we performed a
+MD simulation by adding carbon atoms randomly into the gap
+between two edges of GNR-8 on the Cu substrate. Very
+surprisingly, as shown in Fig. 6a–j, the metal step (yellow atoms),
+which is clamped by the two GNR edges, disappears with the
+stitching of graphene (red carbons) and a near perfect graphene
+sheet is eventually formed with only one 5|7 defect left. The
+atomistic details show that the atoms of metal steps can not only
+diffuse into the substrate below but also facilitate the defect
+healing and the hexagon formation. As shown in white rectangles
+of Fig. 6c, d, with the assistance of the yellow atoms, the two
+carbon chains are connected and transformed to a hexagon
+successfully. Also, a 5|7 defect in Fig. 6e is healed to be two
+hexagons (Fig. 6f, g). Besides, a carbon vacancy can also be healed
+by a carbon atom newly added on the upmost Cu atom. As shown
+in Fig. 6h-j, with the sinking of upmost Cu atom (yellow) into the
+substrate beneath graphene, the adatom C ﬁlls the carbon
+vacancy perfectly. The stitching of graphene on Ni (111) substrate
+can also occur between two adjacent graphene ribbons as shown
+in Supplementary Fig. 9 although the atomic details are different
+from Cu. Because of the higher melting point of the nickel
+substrate as well as the large carbon solubility in Ni, our
+simulations show that a simulated graphene ribbon cannot sink
+as easily as on a Cu substrate and tends to maintain an arc-bridge
+shape on the ﬂat Ni substrate. Further, compared with graphene
+stitching on a Cu substrate at the same temperatures, more
+defects in the stitching area are observed. Therefore, the sinking of
+the graphene on a Cu substrate promises a better method for
+graphene stitching.
+Here, we may propose a new explanation to the mysteries that
+why semi-molten substrate is suitable for the growth of large SCG
+graphene from another point of view by fully addressing the
+signiﬁcance of the unique sinking kinetics discovered in our
+results. In details, the orientations of the small carbon clusters at
+the early stage of graphene growth can be well aligned on the
+semi-molten substrate via the sunken-mode I and the grain
+boundaries can be therefore greatly reduced. When the graphene
+islands grow larger, they can be well ﬂattened by metal steps
+attached to their edges due to the sunken-mode II. Such ﬂat
+graphene islands can not only facilitate the seamless merge of the
+graphene islands but also prevent the small interstitial atoms (e.g.,
+carbon precursors) from diffusing into the subsurface beneath the
+graphene sheets and reduce the formation probability of the
+defects and new nuclei for the growth of second-layer graphene.
+In conclusion, the sinking kinetics of graphene islands on semi-
+molten Cu (111) substrate, including carbon nanoclusters and
+graphene nanoribbons, were systematically investigated at the
+atomic scale via classical MD simulations. It was conﬁrmed that C24
+Fig. 4
+Rotation angle distributions of C24 during MD. a Semi-molten surface, 1350 K, b Liquid surface, 1350 K, c Semi-molten surface, 1400 K,
+d Liquid surface, 1400 K. e Snapshots of C24 on the semi-molten Cu surface at 0, 29, 37, 46, and 116 ps, respectively. For visualization, the Cu
+atoms beneath C24 are not shown. Cyan balls represent C atoms. The yellow arrow selected at 0 ps rotates rigidly with C24 and the white
+dashed line denotes the original direction of yellow arrow at 0 ps. The rotation angle is deﬁned as the angle between the yellow arrow and the
+white dashed line.
+Z. Xu et al.
+6
+npj Computational Materials (2020)  14 
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+can sink into the semi-molten Cu substrate at temperatures T ≥
+1350 K. However, such a sunken-mode (Sunken-mode I) trans-
+formed to the second mode (Sunken-mode II) with the increase of
+cluster sizes. Thus, large clusters like C54 and C96 preferred ﬂoating
+on the upmost surface with its edges passivated by molten Cu
+atoms. Compared with the liquid substrate, the orientation of the
+C24 on semi-molten substrate showed a narrow distribution with
+the rotation angle concentrating around 0° and 60° owning to the
+speciﬁc sunken-mode and the lattice symmetry of unmolten Cu
+layers. For graphene nanoribbons, the sunken-mode II was
+preferred. They also present arched or ﬂattened shapes depend-
+ing on the metal steps formed. These metal steps, surprisingly, can
+assist in defects healing during the seamless stitching of graphene
+nanoribbons instead of creating defects. This study serves to
+deepen our physical insights into the CVD growth of graphene on
+semi-molten Cu substrates and explains multiple experimental
+mysteries. These calculations can also provide theoretic references
+for the controlled synthesis of large single-crystal graphene.
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+GNR-3
+T = 1200 K
+GNR-5
+T = 1200 K
+GNR-8
+T = 1200 k
+GNR-3
+T = 1350 K
+GNR-5
+T = 1350 K
+GNR-8
+T = 1350 K
+(g)
+(h)
+(i)
+GNR-3
+T = 1450 K
+GNR-5
+T = 1450 K
+GNR-8
+T = 1450 K
+Fig. 5
+Graphene nanoribbons (GNRs) on the semi-molten Cu substrates at different temperatures. a–c 1200 K, d–f 1350 K and g–i 1450 K.
+GNR-3, GNR-5, and GNR-8 represent the ribbons with 3, 5, and 8 rows of hexagonal rings along the width direction, respectively. The Cu atoms
+of the metal step are highlighted in yellow.
+Z. Xu et al.
+7
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+npj Computational Materials (2020)  14 
+Finally, the modeling approach, including the C-M potential and
+classic MD developed in this article were conﬁrmed against DFT-
+MD and can thus be applied to many simulations of graphene
+growth on similar metals.
+METHODS
+Four-layer Cu (111) slabs with periodicities of 35.75 × 39.84 × 100 Å and
+23.00 × 22.14 × 100 Å were adopted as the metal substrates for the
+exploration of carbon nanoclusters (i.e., C24, C54, C96) and graphene
+nanoribbons, respectively. To mimic the semi-inﬁnite surface, Cu atoms in
+the bottom layer were ﬁxed during the simulation.
+Pure classical molecular dynamics (MD) simulations were performed
+with a time step of 0.5 fs. Similar to our previous work51, the velocity
+Verlet algorithm and the Berendsen thermostat52 (see the Supplementary
+Methods) were adopted in MD simulations. The empirical potential energy
+surface (PES) employed in this study has already been successfully applied
+to simulate the growth of carbon nanotubes and graphene on Ni
+surface42,51. More speciﬁcally, this new PES is based on the modiﬁed
+second generation of the reactive empirical bond order (REBO2) potential
+of carbon-carbon interaction53, the carbon-metal interaction54–56 and the
+many-body tight-binding (TB) potential for metal–metal interaction57. With
+26 parameters, we can further tune the carbon-metal interactions
+precisely. In particular, the angle-dependent graphene edge-substrate
+interaction was included in order to simulate the dome-like shape of
+graphene clusters on a Cu surface42.
+The benchmarked structures used for the parameters ﬁtting is similar to
+those used in our previous work42. The energies listed in Supplementary
+Tables 1 and 2 are the calculated formation energies of the benchmark
+structures. After parameter ﬁtting, three graphene clusters (C20, C21, and
+C24) on Cu (111) surface were adopted to test the PES with the results
+shown in Supplementary Table 3. The low carbon solubility in the Cu
+substrate has been considered in our potential (Supplementary Fig. 10).
+Moreover, to further verify the results of classical MD simulations, DFT-MD
+simulations were also carried out for comparison with the calculation
+details presented in the Supplementary Methods.
+DATA AVAILABILITY
+All data generated and/or analyzed during this study are included in this article and
+its Supplementary Information ﬁle. The raw simulation data and the other datasets
+are available from the author on reasonable request.
+CODE AVAILABILITY
+The results were simulated by using a code developed by us. We will consider
+releasing the code later and the usage of this code requires signing an agreement
+with the code developer.
+Received: 13 August 2019; Accepted: 13 February 2020;
+REFERENCES
+1. Lin, L. & Liu, Z. On-the-spot growth. Nat. Mater. 15, 9 (2015).
+2. Li, X. S. et al. Large-area synthesis of high-quality and uniform graphene ﬁlms on
+copper foils. Science 324, 1312–1314 (2009).
+3. Bae, S. et al. Roll-to-roll production of 30-inch graphene ﬁlms for transparent
+electrodes. Nat. Nanotech 5, 574 (2010).
+4. Hao, Y. et al. The role of surface oxygen in the growth of large single-crystal
+graphene on copper. Science 342, 720–723 (2013).
+5. Mattevi, C., Kim, H. & Chhowalla, M. A review of chemical vapour deposition of
+graphene on copper. J. Mater. Chem. 21, 3324–3334 (2011).
+6. Gao, J. et al. Graphene nucleation on transition metal surface: Structure transfor-
+mation and role of the metal step edge. J. Am. Chem. Soc. 133, 5009–5015 (2011).
+7. Zhang, W., Wu, P., Li, Z. & Yang, J. First-principles thermodynamics of graphene
+growth on Cu surfaces. J. Phys. Chem. C. 115, 17782–17787 (2011).
+89.795 ps
+124.7 ps
+164.75 ps
+184.5 ps
+248.55
+249.25 ps
+250.5 ps
+320.35 ps
+(a)
+(b)
+(c)
+(d)
+(e)
+(f)
+(g)
+(h)
+(i)
+(j)
+325.75 ps
+500.0 ps
+Fig. 6
+Stitching process of graphene nanoribbons at 1350 K. a–j Snapshots extracted from the MD trajectory at different times. Cyan and
+ochre balls represent C and Cu atoms, respectively. The Cu atoms of metal step and the added C atoms are highlighted in yellow and red,
+respectively.
+Z. Xu et al.
+8
+npj Computational Materials (2020)  14 
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+8. Gao, J. F. et al. Formation of carbon clusters in the initial stage of chemical vapor
+deposition graphene growth on Ni(111) surface. J. Phys. Chem. C. 115,
+17695–17703 (2011).
+9. Elena, L., Norman, C. B., Peter, J. F. & Kevin, F. M. Evidence for graphene growth by
+C cluster attachment. N. J. Phys. 10, 093026 (2008).
+10. Han, G. H. et al. Inﬂuence of copper morphology in forming nucleation seeds for
+graphene growth. Nano Lett. 11, 4144–4148 (2011).
+11. Gao, J. & Ding, F. The study on the medium-sized carbon islands on Ru(0001)
+surface. J. Clust. Sci. 26, 347–360 (2015).
+12. Wofford, J. M. et al. Graphene islands on cu foils: The interplay between shape,
+orientation, and defects. Nano Lett. 10, 4890–4896 (2010).
+13. Dai, J. et al. How graphene islands are unidirectionally aligned on the Ge(110)
+surface. Nano Lett. 16, 3160–3165 (2016).
+14. Nguyen, V. L. et al. Seamless stitching of graphene domains on polished copper
+(111) foil. Adv. Mater. 27, 1376–1382 (2015).
+15. Lee, J.-H. et al. Wafer-scale growth of single-crystal monolayer graphene on
+reusable hydrogen-terminated germanium. Science 344, 286–289 (2014).
+16. Xu, X. et al. Ultrafast epitaxial growth of metre-sized single-crystal graphene on
+industrial cu foil. Sci. Bull. 62, 1074–1080 (2017).
+17. Wang, L. et al. Epitaxial growth of a 100-square-centimetre single-crystal hex-
+agonal boron nitride monolayer on copper. Nature 570, 91–95 (2019).
+18. Niu, T. et al. Growth intermediates for CVD graphene on Cu(111): Carbon clusters
+and defective graphene. J. Am. Chem. Soc. 135, 8409–8414 (2013).
+19. Wang, B. et al. Size-selective carbon nanoclusters as precursors to the growth of
+epitaxial graphene. Nano Lett. 11, 424–430 (2011).
+20. Yuan, Q. et al. Magic carbon clusters in the chemical vapor deposition growth of
+graphene. J. Am. Chem. Soc. 134, 2970–2975 (2012).
+21. Gao, J. & Ding, F. The structure and stability of magic carbon clusters observed in
+graphene chemical vapor deposition growth on Ru(0001) and Rh(111) surfaces.
+Angew. Chem. Int. Ed. 53, 14031–14035 (2014).
+22. Gao, J. & Ding, F. First-principles phase diagram of magic-sized carbon
+clusters on ru(0001) and rh(111) surfaces. J. Phys. Chem. C. 119, 11086–11093
+(2015).
+23. Sangiovanni, D. G., Gueorguiev, G. K. & Kakanakova-Georgieva, A. Ab initio
+molecular dynamics of atomic-scale surface reactions: Insights into metal organic
+chemical vapor deposition of aln on graphene. Phys. Chem. Chem. Phys. 20,
+17751–17761 (2018).
+24. Cai, J. et al. Atomically precise bottom-up fabrication of graphene nanoribbons.
+Nature 466, 470 (2010).
+25. Otero, G. et al. Ordered vacancy network induced by the growth of epitaxial
+graphene on Pt(111). Phys. Rev. Lett. 105, 216102 (2010).
+26. Treier, M. et al. Surface-assisted cyclodehydrogenation provides a synthetic route
+towards easily processable and chemically tailored nanographenes. Nat. Chem. 3,
+61 (2010).
+27. Wan, X. et al. High-quality large-area graphene from dehydrogenated polycyclic
+aromatic hydrocarbons. Chem. Mater. 24, 3906–3915 (2012).
+28. Sun, H. et al. Synthesis of large-area monolayer and bilayer graphene using solid
+coronene by chemical vapor deposition. Carbon 108, 356–362 (2016).
+29. Lacovig, P. et al. Growth of dome-shaped carbon nanoislands on Ir(111): The
+intermediate between carbidic clusters and quasi-free-standing graphene. Phys.
+Rev. Lett. 103, 166101 (2009).
+30. Cui, Y., Fu, Q., Zhang, H. & Bao, X. Formation of identical-size graphene
+nanoclusters on ru(0001). Chem. Commun. 47, 1470–1472 (2011).
+31. Lu, J. et al. Transforming C60 molecules into graphene quantum dots. Nat.
+Nanotech 6, 247 (2011).
+32. Li, Z. et al. Low-temperature growth of graphene by chemical vapor deposition
+using solid and liquid carbon sources. ACS Nano 5, 3385–3390 (2011).
+33. Yuan, Q., Yakobson, B. I. & Ding, F. Edge-catalyst wetting and orientation control
+of graphene growth by chemical vapor deposition growth. J. Phys. Chem. Lett. 5,
+3093–3099 (2014).
+34. Geng, D. et al. Uniform hexagonal graphene ﬂakes and ﬁlms grown on liquid
+copper surface. Proc. Nat. Acad. Sci. USA. 109, 7992–7996 (2012).
+35. Geng, D. et al. Controlled growth of single-crystal twelve-pointed graphene
+grains on a liquid cu surface. Adv. Mater. 26, 6423–6429 (2014).
+36. Vlassiouk, I. et al. Graphene nucleation density on copper: Fundamental role of
+background pressure. J. Phys. Chem. C. 117, 18919–18926 (2013).
+37. Wang, Z.-J. et al. Direct observation of graphene growth and associated copper
+substrate dynamics by in situ scanning electron microscopy. ACS Nano 9,
+1506–1519 (2015).
+38. Enstone, G., Brommer, P., Quigley, D. & Bell, G. R. Enhancement of island size by
+dynamic substrate disorder in simulations of graphene growth. Phys. Chem.
+Chem. Phys. 18, 15102–15109 (2016).
+39. Lindemann, F. A. The calculation of molecular vibration frequencies. Phys. Z. 11,
+609–612 (1910).
+40. Page, A. J. et al. Nucleation of graphene precursors on transition metal sur-
+faces: Insights from theoretical simulations. J. Phys. Chem. C. 117, 14858–14864
+(2013).
+41. Yuan, Q. et al. Upright standing graphene formation on substrates. J. Am. Chem.
+Soc. 133, 16072–16079 (2011).
+42. Xu, Z., Yan, T. & Ding, F. Atomistic simulation of the growth of defect-free carbon
+nanotubes. Chem. Sci. 6, 4704–4711 (2015).
+43. Zhang, X. et al. How the orientation of graphene is determined during chemical
+vapor deposition growth. J. Phys. Chem. Lett. 3, 2822–2827 (2012).
+44. Murdock, A. T. et al. Controlling the orientation, edge geometry, and thickness of
+chemical vapor deposition graphene. ACS Nano 7, 1351–1359 (2013).
+45. Wu, B. et al. Equiangular hexagon-shape-controlled synthesis of graphene on
+copper surface. Adv. Mater. 23, 3522–3525 (2011).
+46. Robertson, A. W. & Warner, J. H. Hexagonal single crystal domains of few-layer
+graphene on copper foils. Nano Lett. 11, 1182–1189 (2011).
+47. Wang, H. et al. Controllable synthesis of submillimeter single-crystal monolayer
+graphene domains on copper foils by suppressing nucleation. J. Am. Chem. Soc.
+134, 3627–3630 (2012).
+48. Zeng, M. et al. Self-assembly of graphene single crystals with uniform size and
+orientation: The ﬁrst 2d super-ordered structure. J. Am. Chem. Soc. 138,
+7812–7815 (2016).
+49. Guo, W. et al. Governing rule for dynamic formation of grain boundaries in grown
+graphene. ACS Nano 9, 5792–5798 (2015).
+50. Zeng, M. et al. Isotropic growth of graphene toward smoothing stitching. ACS
+Nano 10, 7189–7196 (2016).
+51. Xu, Z. et al. Large scale atomistic simulation of single-layer graphene growth on
+ni(111) surface: Molecular dynamics simulation based on a new generation of
+carbon-metal potential. Nanoscale 8, 921–929 (2016).
+52. Berendsen, H. J. C. et al. Molecular dynamics with coupling to an external bath. J.
+Chem. Phys. 81, 3684–3690 (1984).
+53. Donald, W. B. et al. A second-generation reactive empirical bond order (rebo)
+potential energy expression for hydrocarbons. J. Phys. Condens. Matt 14, 783 (2002).
+54. Yamaguchi, Y. & Maruyama, S. A molecular dynamics study on the formation of
+metallofullerene. Eur. Phys. J. D. 9, 385–388 (1999).
+55. Ding, F., Bolton, K. & Rosén, A. Molecular dynamics study of swnt growth on catalyst
+particles without temperature gradients. Comput. Mater. Sci. 35, 243–246 (2006).
+56. Martinez-Limia, A., Zhao, J. & Balbuena, P. B. Molecular dynamics study of the
+initial stages of catalyzed single-wall carbon nanotubes growth: Force ﬁeld
+development. J. Mol. Model. 13, 595–600 (2007).
+57. Karolewski, M. A. Tight-binding potentials for sputtering simulations with fcc and
+bcc metals. Radiat. Eff. Defects Solids 153, 239–255 (2001).
+ACKNOWLEDGEMENTS
+This work is supported by the National Natural Science Foundation of China
+(11774136, 11404144, 11574262), Project funded by China Postdoctoral Science
+Foundation (2016M601722, 2018T110445), China Scholarship Council program
+(201908320231), Jiangsu Qinlan Project ([2019], 3), the Advanced Talents Foundation
+of Jiangsu University (14JDG120). The authors are thankful for the High Performance
+Computing Platform of Jiangsu University and useful discussions of Dr. Junfeng Gao
+in Dalian University of Technology, China. We also thank Dr. Izaac Mitchell in Centre
+for Multidimensional Carbon Materials, Institute for Basic Science, Korea, for his help
+in manuscript revision.
+AUTHOR CONTRIBUTIONS
+F.D., Z.X., and G.Q. conceived the research. Z.X and G.Z. carried out the theoretic
+simulations. Z.X., G.Z., L.Q., X.Z., and F.D. wrote the paper. All authors discussed the
+results and commented on the work.
+COMPETING INTERESTS
+The authors declare no competing interests.
+ADDITIONAL INFORMATION
+Supplementary information is available for this paper at https://doi.org/10.1038/
+s41524-020-0281-1.
+Correspondence and requests for materials should be addressed to Z.X., G.Q. or F.D.
+Reprints and permission information is available at http://www.nature.com/
+reprints
+Z. Xu et al.
+9
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences
+npj Computational Materials (2020)  14 
+Publisher’s note Springer Nature remains neutral with regard to jurisdictional claims
+in published maps and institutional afﬁliations.
+Open Access This article is licensed under a Creative Commons
+Attribution 4.0 International License, which permits use, sharing,
+adaptation, distribution and reproduction in any medium or format, as long as you give
+appropriate credit to the original author(s) and the source, provide a link to the Creative
+Commons license, and indicate if changes were made. The images or other third party
+material in this article are included in the article’s Creative Commons license, unless
+indicated otherwise in a credit line to the material. If material is not included in the
+article’s Creative Commons license and your intended use is not permitted by statutory
+regulation or exceeds the permitted use, you will need to obtain permission directly
+from the copyright holder. To view a copy of this license, visit http://creativecommons.
+org/licenses/by/4.0/.
+© The Author(s) 2020
+Z. Xu et al.
+10
+npj Computational Materials (2020)  14 
+Published in partnership with the Shanghai Institute of Ceramics of the Chinese Academy of Sciences

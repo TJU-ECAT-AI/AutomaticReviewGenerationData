@@ -1,0 +1,388 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Membrane Reactors for Hydrogen Production Processes Marcello De Falco • Luigi Marrelli • Gaetano Iaquaniello Editors Membrane Reactors for Hydrogen Production Processes 123 Editors Dr. Marcello De Falco Faculty of Engineering University Campus Bio-Medico of Rome via Alvaro del Portillo 21 00128 Rome Italy e-mail: m.defalco@unicampus.it Prof. Luigi Marrelli Faculty of Engineering University Campus Bio-Medico of Rome via Alvaro del Portillo 21 00128 Rome Italy e-mail: l.marrelli@unicampus.it Dr. Gaetano Iaquaniello Tecnimont-KT S.p.A.
+Viale Castello della Magliana 75 00148 Rome Italy e-mail: Iaquaniello.G@tecnimontkt.it
+ISBN 978-0-85729-150-9
+e-ISBN 978-0-85729-151-6
+DOI 10.1007/978-0-85729-151-6
+Springer London Dordrecht Heidelberg New York British Library Cataloguing in Publication Data A catalogue record for this book is available from the British Library Springer-Verlag London Limited 2011 HYSEP is a registered trademark of GEA Westfalia Separator GmbH, Werner-Habig Strae, D-59302 Oelde, Germany.
+Ole-flex is a registered trademark of Flex-Europa Ltd, Europa House, 4 & 5 Swan Court, Station Road, Pulborough, West Sussex, RH20 1RL.
+PSS is a registered trademark of PSS Interservice AG, Rebbergstr. 10, Geroldswil, Switzerland, 8954.
+STAR is a registered trademark of ChromaGenics B.V., Archimedesweg 4, Leiden, Netherlands, 2333 CN.
+Apart from any fair dealing for the purposes of research or private study, or criticism or review, as permitted under the Copyright, Designs and Patents Act 1988, this publication may only be reproduced,stored or transmitted, in any form or by any means, with the prior permission in writing of the publishers, or in the case of reprographic reproduction in accordance with the terms of licenses issued by the Copyright Licensing Agency. Enquiries concerning reproduction outside those terms should be sent to the publishers.
+The use of registered names, trademarks, etc., in this publication does not imply, even in the absence of a specific statement, that such names are exempt from the relevant laws and regulations and therefore free for general use.
+The publisher makes no representation, express or implied, with regard to the accuracy of the information contained in this book and cannot accept any legal responsibility or liability for any errors or omissions that may be made.
+Cover design: eStudio Calamar S.L.
+Printed on acid-free paper Springer is part of Springer Science+Business Media (www.springer.com) Foreword A significant increase of interest in membrane reactors in recent years together with several research programs which are in progress nowadays has pushed the authors to consolidate their experiences into this book focusing on the more attracting and promising processes. Few authors have been working together in an R&D project started in 2006. The goal of this project was the development of a new scheme for hydrogen production through stream reforming based on inte- grating chemical reaction and membrane separation.
+One of the main objectives of the project was to build a pilot plant with industrial-size components. Today the pilot plant (see figure below) is running and the experimental campaigns are allowing to verify the reliability of the novel scheme and at the same time useful information is generated to assess the plant operation and for scaling-up the design to future industrial size units.Semi-industrial membrane-based steam reformer installed in Chieti Scalo (Italy) The R&D project was financially supported by the Italian Research Ministry,and managed by the Chemical Engineering Department of the University of LAquila.
+In the next year the experimental program will be oriented both to the theo- retical aspects of the process and to the technological ones, focusing on the reli- ability and on the scaling-up criteria for process design of industrial plants.
+The research project allowed to compare two different ways of integrating catalytic reaction and hydrogen separation: one in which the membranes are set inside the reaction environment (e.g. the membranes constitute the catalytic tube walls) and another one in which the catalytic module is separated from the hydrogen permeation one.
+With reference to the book content, the authors divided it into 11 chapters. The book starts with an overview on membrane selective membranes integrated in the chemical reaction environment. The thermodynamics and kinetics of membrane reactors are also formulated and assessed for different membrane reactor architectures.
+The rest of the book is divided into three parts. The first part deals with the membranes, membranes manufacturing and mathematical modeling. The second v reviews the most attracting application from an industrial point of view. The third is dedicated to the description of the pilot plant where the novel configuration was implemented at a semi-industrial scale.
+In Chap. 2, an extensive overview concerning palladium-based membranes is presented. In particular, an assessment of the problems associated with palladium membranes is given followed by a description of the preparation methods.
+Chapter 3 focuses on a proper membrane manufacturing strategy to improve their industrial competitiveness by lowering production costs. In Chap. 4, the mathe- matical modeling strategies focused on the simulations of membrane reactors (MR) and reactor membrane modules (RMM) are presented. In Chap. 5, the membrane reactor application to natural gas steam reforming is presented and assessed in the MR and in the RMM configuration. Chapter 6 is dedicated to the autothermal reforming reaction (ATR) for syngas production. An higher efficiency can be achieved integrating in the reactor an H2 permselective membrane. In Chap. 7, the watergas shift reaction is studied. The integration of membranes inside or outside the shift environment is also analyzed. A techno-economic analysis is dedicated to the shift reactor integrated with the membrane module Semi-industrial membrane-based steam reformer installed in Chieti Scalo (Italy) vi Foreword compared to the conventional process. In Chap. 8 the H2S catalytic cracking process is analyzed. Also in this case the benefits derived by coupling the Claus reaction and the hydrogen module separation are examined with reference to different process configurations. In particular, the high Claus reaction temperature (900C) and the low working temperature of ceramic membrane modules (600C) are taken into account in the definition of process multi-staged configuration.
+Chapter 9 deals with alkanes dehydrogenation. Olefins production by catalytic dehydrogenation of light alkanes might be an alternative to conventional heavy hydrocarbons cracking. Also in this case the catalytic membrane reactor might improve the process yield. In particular is studied the coupling of the PdAg membrane and catalysts usually used in the dehydrogenation process that need to operate at low H2 partial pressures. In Chap. 10 the characteristics of the pilot plant discussed at the beginning of this foreword are shown in more detail referred to the process design and to the first positive experimental results.
+Each chapter was developed as a whole that can be read without reference to the others.
+Professor Diego Barba Scientific Director Foreword vii Contents 1 Integration of Selective Membranes in Chemical Processes: Benefits and Examples . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 1 Luigi Marrelli, Marcello De Falco and Gaetano Iaquaniello 2 Pd-based Selective Membrane State-of-the-Art . . . . . . . . . . . . . . 21
+A. Basile, A. Iulianelli, T. Longo, S. Liguori and Marcello De Falco
+3 Hydrogen Palladium Selective Membranes: An Economic Perspective . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 57
+G. Iaquaniello, A. Borruto, E. Lollobattista, G. Narducci
+and D. Katsir 4 Membrane Reactors Modeling . . . . . . . . . . . . . . . . . . . . . . . . . . 79 Marcello De Falco 5 Membrane Integration in Natural Gas Steam Reforming. . . . . . . 103 Marcello De Falco 6 Autothermal Reforming Case Study . . . . . . . . . . . . . . . . . . . . . . 123 Paolo Ciambelli, Vincenzo Palma, Emma Palo and Gaetano Iaquaniello 7 Technical and Economical Evaluation of WGSR . . . . . . . . . . . . . 143 Paolo Ciambelli, Vincenzo Palma, Emma Palo, Jan Galuszka, Terry Giddings and Gaetano Iaquaniello 8 Membrane-Assisted Catalytic Cracking of Hydrogen Sulphide (H2S) . . . . . . . . . . . . . . . . . . . . . . . . . . . . 161 Jan Galuszka, Gaetano Iaquaniello, Paolo Ciambelli, Vincenzo Palma and Elvirosa Brancaccio ix 9 Alkanes Dehydrogenation . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 183 Moshe Sheintuch and David S. A. Simakov 10 Steam Reforming of Natural Gas in a Reformer and Membrane Modules Test Plant: Plant Design Criteria and Operating Experience . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 201 Marcello De Falco, G. Iaquaniello and A. Salladini 11 Future Perspectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 217 Marcello De Falco, Gaetano Iaquaniello and Luigi Marrelli About the Editors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 225 About the Contributors . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 227 Index . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 233 x Contents List of Contributors
+A. Basile, Institute on Membrane Technology of National Research Council (ITM-
+CNR), Via P. Bucci Cubo 17/C c/o University of Calabria, Rende (CS), 87036, Italy
+A. Borruto, Department of Chemical Engineering, Materials and Environment,
+University of Rome La Sapienza, via Eudossiana 18, 00184, Rome, Italy
+E. Brancaccio, Processi Innovativi S.r.l., Corso Federico II 36, 67100, LAquila,
+Italy
+P. Ciambelli, Department of Industrial Engineering, University of Salerno, 84084,
+Fisciano (SA), Italy Marcello De Falco, Faculty of Engineering, University Campus Bio-Medico of Rome, via Alvaro del Portillo 21, 00128, Rome, Italy
+J. Galuszka, Natural Resources Canada, CanmetENERGY, 1 Haanel Drive,
+Ottawa, ON, K1A 1M1, Canada
+T. Giddings, Natural Resources Canada, CanmetENERGY, 1 Haanel Drive,
+Ottawa, ON, K1A 1M1, Canada
+G. Iaquaniello, Tecnimont KT, Viale Castello della Magliana 75, 00148, Rome,
+Italy
+A. Iulianelli, Institute on Membrane Technology of National Research Council
+(ITM-CNR), Via P. Bucci Cubo 17/C c/o University of Calabria, Rende (CS),87036, Italy
+D. Katsir, Acktar Ltd., 1 Leshem St, P.O.B. 8643, Kiryat-Gat, 82000, Israel
+S. Liguori, Institute on Membrane Technology of National Research Council
+(ITM-CNR), Via P. Bucci Cubo 17/C c/o University of Calabria, Rende (CS),87036, Italy xi
+T. Longo, Institute on Membrane Technology of National Research Council
+(ITM-CNR), Via P. Bucci Cubo 17/C c/o University of Calabria, Rende (CS),87036, Italy
+E. Lollobattista, Processi Innovativi S.r.l., Corso Federico II 36, 67100, LAquila,
+Italy
+L. Marrelli, Faculty of Engineering, University Campus Bio-Medico of Rome, via
+Alvaro del Portillo 21, 00128, Rome, Italy
+G. Narducci, Department of Chemical Engineering, Materials and Environment,
+University of Rome La Sapienza, via Eudossiana 18, 00184, Rome, Italy
+V. Palma, Department of Industrial Engineering, University of Salerno, 84084,
+Fisciano (SA), Italy
+E. Palo, Tecnimont KT, Viale Castello della Magliana 75, 00148, Rome, Italy
+A. Salladini, Processi Innovativi S.r.l., Corso Federico II 36, 67100, LAquila,
+Italy
+M. Sheintuch, Technion, Technion City, 32000, Haifa, Israel
+D. S. A. Simakov, Technion, Technion City, 32000, Haifa, Israel
+xii List of Contributors Chapter 1 Integration of Selective Membranes in Chemical Processes: Benefits and Examples Luigi Marrelli, Marcello De Falco and Gaetano Iaquaniello
+1.1 Introduction
+Integration of reaction and separation in a single unit is a powerful tool to increase efficiency and economic advantages of many chemical processes. Reactive dis- tillation, extraction, and adsorption are well-known examples of this technological resource. Recently, a very promising solution is offered by membrane reactors (MRs).
+A MR is a system coupling reaction and separation of one or more products,with the separation operation performed by a selective membrane. Although not yet very used at industrial scale, MRs are attracting the attention of scientists and engineers in the last two decades, and many interesting articles have appeared in the literature on their performance and possible application in many fields of chemical and biochemical industries. An excellent review about these topics has appeared in 2002 by Sanchez Marcano and Tsotsis [1].
+For biotechnological applications, synthetic membranes entrapping enzymes,bacteria, or animal cells are used in membrane bioreactors disclosing new important developments mainly due to the increased stability of immobilized enzymes, the possibility of their continuous reuse and the absence of pollution of the products. Membrane bioreactors are of great interest as well for the possibility of continuously removing metabolites whose presence in the reaction environment could reduce the productivity of the reactor.
+In the field of inorganic heterogeneous catalysis, metallic or ceramic membranes are used to bear the generally more severe thermal conditions. Both dense and
+L. Marrelli (&) and M. De Falco
+Faculty of Engineering, University Campus Bio-Medico of Rome,via Alvaro del Portillo 21, 00128 Rome, Italy e-mail: l.marrelli@unicampus.it
+G. Iaquaniello
+Tecnimont KT, Viale Castello della Magliana 75, 00148 Rome, Italy
+M. De Falco et al. (eds.), Membrane Reactors for Hydrogen Production Processes,
+DOI: 10.1007/978-0-85729-151-6_1,  Springer-Verlag London Limited 2011
+1 porous, inert and catalytically active membranes have been used in the different processes analyzed in the scientific or technical literature. Dense Pd-based mem- branes or almost dense SiO2 membranes offer very good selectivity and perme- ability features in all reactions involving generation or consumption of hydrogen [2]. Composite membranes made of a dense selective layer supported on a porous material can represent a technical solution when strong mechanical stresses are imposed to the membrane. Palladium and its alloy membranes were prepared on stainless steel supports by the electroless plating technique and on alumina supports by sputtering or by metalorganic chemical vapor deposition [36].
+Two main advantages are offered by MRs. If the membrane is very selective with regard to a specific product, then it is possible to obtain a very pure compound in the same equipment used to produce it. Furthermore, in the case of reversible reactions, removing one or more reaction products as they are generated allows conversions higher than equilibrium values to be reached.
+The use of inorganic MRs has been investigated for a number of reactions.
+Pd-based membranes, mainly PdAg (23%wt), have been extensively tested for natural gas steam reforming, which is the main process to produce large amount of hydrogen. Many experimental works are reported in the literature [711], attesting the good performance in terms of natural gas conversion at much lower operating temperature than traditional process (methane conversions up to 9095% at 450550 vs. 8501000C).
+The dehydrogenation of cyclohexane to benzene [12] and of ethylbenzene to styrene [13, 14] have been studied in MRs using glass or alumina membranes.
+Even if a conversion increase beyond the equilibrium value has been observed in all the cases, compared with Pd-based membranes, which are much more selective with respect to hydrogen, porous membranes are less efficient in improving the conversion. For example, the conversion of cyclohexane to benzene at 200C and 1 atm (equilibrium conversion 19%) is 45% in a Vycor glass MR whereas it becomes 99.7% in a PdAg MR.
+A growing interest in the membrane assisted WaterGas Shift reaction (WGSR) is manifested by a substantial volume of the published pertinent literature that could be grouped around the two most popular hydrogen permselective mem- branes, based either on palladium [1519] or silica [2022]. Among them, Basile et al. [15] studied the WGSR in a palladium MR and showed the importance of the membrane preparation method in obtaining high-quality membrane materials. The best membrane increased CO conversion up to 99.89% at about 330C with a performance claimed stable for more than 2 months [16].
+The most recent application of a silica membraneprepared by counter-dif- fusion CVD of TMOS (TetraMethylOrthoSilicate) and oxygento H2S decom- position was reported by Akamatsu et al. [23]. It was claimed that using this membrane and a commercial desulphurization catalyst at 600C, about 70% H2S diluted in 99% nitrogen was converted in a relatively short residence time of 7 s.
+A similar application but with a different process architecture was proposed by Galuzka et al. [24] and is reported in Chap. 8. 2
+L. Marrelli et al.
+In general, membrane integration inside the reaction environment involves the following main benefits:
+1. The ability of such a reactor to circumvent thermodynamic limitation of an
+equilibrium-controlled process allows the same reactants conversion to be obtained at a lower temperature or a higher conversion to be reached at the same temperature.
+2. Operating at lower reaction temperatures, new heat integration strategies to
+supply heat duty to reactors can be proposed. The use of gas exhausts from a gas turbine as suggested by [25] or solar heated molten salts [26] could become applicable and reliable industrial solutions.
+3. Lower operating temperatures reduce materials cost as well as increase oper-
+ation safety.
+4. The expected significant process simplification and intensification would cap-
+italize on a new industrial paradigm offered by equipments combining reaction and separation in one step. New reactors and overall plant design strategy have to be defined.
+In this chapter, a theoretical demonstration of operating benefits for chemical processes in integrating selective membrane is given to the readers. For practical cases refer to the following chapters.
+1.2 Thermodynamics and Kinetics Background
+Reversible reactions are thermodynamically limited since equilibrium conditions cannot be overcome in the reacting mixture. From a thermodynamic point of view,equilibrium is represented by a constraint (equilibrium constant) on mole fractions (or concentrations), temperature, and pressure; this constrain derives from the second principle of thermodynamics. At equilibrium conditions, no net change in state variables is observed.
+From a kinetic point of view this means that at equilibrium the reaction rate of the direct reaction is equal to the reaction rate of the inverse reaction. As known,the reaction rates of the direct and of the inverse reactions generally increase with the reactant and the product concentrations, respectively. Only when product concentrations are high enough and reactant concentrations are low enough, i.e.,when the conversion of a key reactant is high enough, the equilibrium is reached.
+Some kinds of reactions (irreversible reactions) require very high conversions to reach equilibrium conditions at a given temperature, whereas for other reactions a quite low value of the conversion corresponds to equilibrium. These latter reac- tions are named reversible reactions according to the thermodynamic statement that each transformation close to equilibrium is a reversible transformation. In the case of reversible reactions, the thermodynamic limit can prevent acceptable conversions to be obtained. 1 Integration of Selective Membranes in Chemical Processes 3 The equilibrium composition depends on temperature and pressure of the system as well as on the composition of the charge or feed.
+A very simple numerical example can be useful to illustrate these subjects.
+Lets consider the following synthesis reaction in gas phase:
+A  B , R
+Let be K = 1.5 the equilibrium constant, at a given temperature T. At a not too high pressure P, the equilibrium composition in terms of mole fraction is easily obtained from the definition of K:
+K
+yR yA  yB
+P1
+1:1
+If the charge is composed of nA 0 = 5 mol of A and nB 0 = 5 mol of B, equi- librium conversion of A at P = 1 atm, is XA = 0.367.
+This conversion depends on the charge composition. For example, with nA 0 = 5 and nB 0 = 3, at the same temperature and pressure, we get XA = 0.274 at equi- librium, whereas with nA 0 = 3 and nB 0 = 5 we get XA = 0.399.
+The effect of the pressure depends on the phase of reacting system and on the stoichiometry of the reaction. In the present case of reaction in gas phase with a negative sum of stoichiometric coefficients, high values of P promote the conversion.
+In any case, higher values of equilibrium conversion can be obtained with a higher value of the equilibrium constant. For example, with K = 1.5, P = 15 atm and nA 0 = nB 0 = 5 we get XA = 0.75.
+Since the equilibrium constant K depends on the temperature, a way to change its value is to change T. In particular, K increases with T for endothermic reactions and decreases for exothermic reactions according the well-known Vant Hoff equation:d ln K dT
+DH
+R  T2
+1:2
+with DH [ 0 for endothermic reactions and DH \ 0 for exothermic reactions.In the case of exothermic reactions, low temperatures should be required to get acceptable equilibrium conversions but the corresponding slow reaction rates should require very high residence time in the reactor.On the contrary, in the case of endothermic reactions, suitable values of K are often obtained only at very high temperatures with corresponding unacceptable heat duties, quick deactivation of catalysts, and technical and economic problems in construction materials.These shortcomings can be overcome by removing one or more products from the reaction environment to prevent the equilibrium composition can be reached,i.e. maintaining yR in Eq. 1.1. at lower values than equilibrium. 4
+L. Marrelli et al.
+1.2.1 Thermodynamics of Reacting Systems
+It is well known that a way to express equilibrium condition in a closed system is to set Gibbs free energy at its minimum value at constant P and T. dG  0
+P; T
+1:3
+Equation 1.3, that is a consequence of the second Principle of Thermodynamics,states that any change from the equilibrium state at constant T and P involves an increase of G.
+If the system is a multi-component reacting system, Eq. 1.3 can be expressed in the following form:
+X
+c i1 aili  0
+1:4
+where ai are the stoichiometric coefficients of the components (assumed to be positive for products and negative for reactants) and li are the chemical potentials defined as:oG oni
+P;T;nj6i li
+1:5
+If chemical potentials at system conditions are expressed in terms of fugacities fi,and components are assumed to be pure in the reference state, Eq. 1.4 becomes: Dg0 R  T  ln
+Y
+fiP; T; zeq i f 0 i P; T
+ai
+1:6
+where Dg0  P ai  g0 i , g0 i are the molar free energies of pure components and zeq i are the mole fractions at equilibrium conditions.
+The product at the r.h.s. of Eq. 1.6 is the thermodynamic constant K of the reaction.
+KP; T
+Y
+fiP; T; zeq i f 0 i P; T
+ai
+1:7
+Therefore, Eq. 1.6 can be written in the following form:ln KP; T   Dg0
+R  T
+1:8
+The value of K depends on the temperature and on the pressure and composition conditions assumed as reference state. Once pressure and composition are fixed,equilibrium constant depends on the temperature only. 1 Integration of Selective Membranes in Chemical Processes 5
+1.2.2 Affinity and Evolution of Reacting Systems
+If a closed system is not at equilibrium, a change of its state variables is observed.
+The direction of the system evolution is stated by the second Principle of Ther- modynamics and corresponds to a positive production of entropy diS [ 0:diS
+X
+c j1 lj T dnj  0
+1:9
+where the equality holds at equilibrium conditions. The presence of chemical reactions in a closed system causes changes in the mole number of reactants and products which are not independent each other since the stoichiometry of reactions imposes some constraints.
+In the case of r simultaneous reactions and c components, we have:dnj
+X
+r k1 aj;k  dnk j  1. . .c
+1:10
+where nk is the degree of advancement of reaction k and aj,k indicates the stoi- chiometric coefficient of component j in reaction k.
+Using conditions 1.10 in Eq. 1.9 we get:diS  1
+T
+X
+nr k1 Akdnk  0
+1:11
+or in terms of entropy production rate:diS dt  1
+T
+X
+nr k1 Ak dnk dt  0
+1:12
+In Eqs. 1.11 and 1.12, Ak is the affinity of reaction k defined as follows: Ak
+X
+c j1 ajk  lj
+1:13
+In the case of a single reaction, Eq. 1.12 states that the reaction proceeds in the direction of increasing n when the affinity is positive while n decreases for A \ 0.
+At equilibrium, the affinity of the reaction is zero:
+A
+X
+c j1 ajlj  0 Equilibrium condition
+1:14
+In the case of multiple reactions, Eq. 1.12 is satisfied even with some terms Ak dnk \ 0 if the summation is greater than 0. Obviously, at equilibrium conditions,6
+L. Marrelli et al.
+since diS must be zero for every infinitesimal variation of degrees of advancement,the affinity of each reaction has to be zero: A1  A2     Anr  0
+1:15
+At non-equilibrium conditions, the reaction proceeds from left to right (dn [ 0) only if A [ 0.This means (Eqs. 1.6 and 1.13): Dl  R  T  ln
+K
+\0 R  T  ln K  ln K
+\0
+1:16
+where:
+K
+Y
+fiP; T; zi f i P; T
+ai
+1:17
+In other terms, if K\K mole fractions of products are lower than equilibrium values and mole fractions of reactants are higher than equilibrium values and the reaction evolves from left to right.
+Vice versa, if K [ K the evolution is from right to left. Finally, if K  K, the reaction is at equilibrium and its evolution stops.In each case, outside equilibrium condition, the reaction evolves in the direction corresponding to a decrease of free energy G of the system.Selective membrane application allows products mole fraction to be reduced and consequently the condition K\K, i.e., mole fractions of products lower than equilibrium values, is verified, promoting continuously the reaction from left to right.
+1.2.3 Kinetics of Reversible Reactions
+The reaction rate of a reversible reaction is the result of two contributions: the forward reaction that generates the products (chemical species at the right of the stoichiometric equation) from the reactants (chemical species at the left of the stoichiometric equation) and the reverse reaction that proceeds in the opposite direction.
+For instance, in the case of a general reaction:a1A1  a2A2 , a3A3  a4A4
+1:18
+the net disappearance rate of A1 is given by:r1  r1;forward  r1;reverse
+1:19
+1 Integration of Selective Membranes in Chemical Processes 7 where the forward reaction rate generally increases with the concentration of reactants A1 and A2 whereas the reaction rate of the reverse reaction generally increases with the concentration of the products A3 and A4.
+If the concentrations of the reactants and of the products are such as the forward reaction rate is higher than the reverse reaction rate, the reaction evolves from left to right; vice versa the direction of the reaction is from products to reactants when the product and reactant concentrations make the reverse reaction faster than the forward reaction.
+At equilibrium, no net change is observed in the reaction mixture so that forward and reverse reaction rates are equal.
+Removing a product from the reaction environment usually reduces the reaction rate of the reverse reaction allowing the reaction to evolve further from left to right.
+1.3 Membrane Reactors
+Thermodynamics and kinetics conclusions reported in the previous sections show that removing one or more products from the reaction environment allows the reaction to proceed without reaching equilibrium conditions.
+A technical way to fulfill this plan is to surround the reacting mixture by a membrane selectively permeable to one of the products at least (Integrated Membrane Reactor). As a result, the reaction rate of the reverse reaction is lower than that of the forward reaction and the conversion increases theoretically to the value corresponding to the complete depletion of the limiting reactant.
+A tubular MR is simply composed of two co-axial tubes with the inner one made of a material selectively permeable to a product of the reaction.
+The reacting stream can be fed to the annular region or to the inner tube. The region where the reactants are fed and the reaction takes place is called reaction or retentate region whereas the part of the reactor where the products permeated through the membrane are collected is the permeate chamber.
+In the permeate region, the products are usually swept by a gas easily separable from them (often water vapor). The sweep gas can move co-currently or counter- currently with respect to the reacting mixture. Each of these schemes has advantages and drawbacks.
+A schematic representation of these two possibilities is shown in Fig. 1.1. The reaction chamber is the inner tube where a fixed bed of catalyst is assumed to be present. The permeate chamber is the annular region between the inner tube and the shell. In the permeate region, the sweep gas flows in co-current mode in the case (a) and in counter-current mode in the case (b). One or more products of the reaction are shown to flow through the membrane from the catalytic-fixed bed toward the permeate region. However, in co-current scheme an inversion of the flux is theoretically possible at some distance from the inlet section since the flux 8
+L. Marrelli et al.
+of a compound occurs from regions with high partial pressures toward those with lower partial pressures. In co-current mode, both reacting mixture and sweep gas are relatively poor of products in the inlet section so that some compounds gen- erated by the reaction can diffuse from the reactor to the permeate chamber; but,along the axis of the reactor the sweep gas is more and more rich of these com- pounds where their partial pressure in the reacting mixture decreases due to the transport through the membrane, the slowing of the reaction rate and the pressure drop along the catalytic bed. When partial pressures have the same value in the reaction and permeate chambers, the flux stops. In the next sections of the reactor,an inverse transport from permeate to the reaction region could occur if the effect of pressure drop is prevailing on the generating rate due to the reaction.
+This anomalous behavior is to be taken into account, but it is usually only a theoretical oddness.
+Obviously, this anomaly is not generally allowed in counter-current mode where the end section of the reactor is characterized by low pressures of removable compounds in the reacting region but by a practically pure sweep gas entering into the permeate region.
+In Fig. 1.2, a draft of a reactor for methane steam reforming with multiple membrane tubes for hydrogen separation, operating in co-current mode, is shown.
+Unfortunately, the integrated solution of MRs, although very intriguing for the compactness of the equipments, presents some technical problems.
+Some membranes are sensitive to high temperatures so that they could be incompatible with the reactor temperature. Furthermore, in an integrated MR,damage to the membrane needs to stop the system, to unload the catalyst (if present), to substitute the membrane, and a new start-up of the system.
+Due to these main reasons, new configurations called Staged Membrane Reactor (SMR) or Reformer and Membrane Modules (RMMs) have been proposed in the technical literature [2529].
+A SMR is a series of modules (RMM) each composed of a traditional reactor followed by a membrane separation unit. The stream flowing out of the reactor,rich of reaction products, enters into the separation unit where the selective membrane removes one of the products. The retentate of the membrane unit is then fed to the subsequent module. A system of heat exchangers can be present between each unit and the following one. A system composed of two modules is shown in Fig. 1.3.
+(b) Counter-current mode (a) Co-current mode Fig. 1.1 Schemes of feed and sweep gas motion 1 Integration of Selective Membranes in Chemical Processes 9 Fig. 1.2 Multiple membranes reactor for methane steam reforming (http://fcre.tnw.utwente.nl/) Fig. 1.3 Staged membrane reactor with two modules 10
+L. Marrelli et al.
+A SMR is not strictly a single equipment but each module and the whole system offer enhanced performance in terms of separation, selectivity, and yield [1].
+An optimized design of a SMR requires the evaluation of a number of parameters such as number of modules, conversion to be achieved in each reactor,degree of product removal in each membrane unit, temperature distribution etc.
+It is easy to realize that a system composed of an infinite number of modules approaches the behavior of an integrated MR if the reaction volume and the product removal degree are infinitesimal in each module.
+Figure 1.4 shows the RMM test plant having the capacity of 20 Nm3/h of pure hydrogen, developed and fabricated by Tecnimont KT and deeply described in Chap. 10. The plant, composed by a two-stages natural gas steam reformer ? Pd- based separation modules, has demonstrated the feasibility of SMR configuration.
+Fig. 1.4 20 Nm3/h of pure H2 capacity RMM plant (Courtesy from Tecnimont KT) 1 Integration of Selective Membranes in Chemical Processes 11
+1.4 Theoretical Study of Staged Membrane Reactor
+Performance The following very simple reversible reaction in gaseous phase can be used to show the effect of separation units on the attainable conversion:
+A , B
+rA
+k1  PA  k2  PB
+1:20
+If the equilibrium constant KP at a certain temperature T is assumed to be KP = 0.4, the equilibrium conversion is: Xeq
+A
+KP
+KP  1  0:8
+This is the maximum value of conversion attainable in an isothermal reactor operating at the temperature T. It is easy to show that the reaction volume needed to achieve a conversion XA in an isobaric and isothermal plug flow reactor is:
+VXA  F0
+A
+k1  P  XA  ln Xeq
+A
+Xeq
+A  XA
+1:21
+In order to achieve the equilibrium conversion an infinite volume V of reactor is required since forward and reverse reaction rates tend to become equal as equi- librium is approached.However, if the scheme of Fig. 1.3 is adopted and a membrane unit (Membrane 1) is used to remove a fraction c of the product B generated in the first reactor of finite volume V1, the reaction can proceed in the second reactor and a conversion even higher than the equilibrium value can be reached in a finite reaction volume given by the sum of the two reactor volumes, V1 and V2.
+In Fig. 1.5, the reaction volume required to achieve a conversion XA is shown for three values of removal fraction c. 0
+0.2
+0.4
+0.6
+0.8
+0 2 4 Conversion X Reaction volume Fig. 1.5 Reaction volume versus conversion: c = 0 solid line; c = 0.3 dash and dot line; c = 0.5 dash line (parameters used in this simulation: k1 = 1 mol/ (m3 min atm); P1 = P2 = 5 atm;
+FA
+0 = 5 mol/min.) 12
+L. Marrelli et al.
+An infinite volume is required to get XA = 0.8 if no product removal is implemented, whereas the same conversion can be obtained by very lower vol- umes (about V = 2 and V = 1.5) when removal ratios (c = 0.3 and 0.5, respec- tively) are used.
+Likewise, in a reaction volume of 1, a conversion XA = 0.572 is achieved when no product removal is carried out, while conversions XA = 0.625 and XA = 0.674 are obtained with removal fractions c = 0.3 and c = 0.5, respectively.
+Figure 1.6 shows the effect of product removal on conversion profiles along the first and the second reactor (see Fig. 1.3).
+A removal ratio c = 0.5 used in the first membrane unit (Fig. 1.3) located at the outlet of a reactor with a volume V1 = 0.8 allows the conversion profile in the second reactor to be higher than in the case of absence of membrane unit.
+1.5 Recycle of Retentate
+The fluid not permeated at the end of the set of modules contains reaction products as well as un-reacted compounds which could be a valuable material. This mixture undergoes different treatments depending on the nature of the material and the kind of the process. In some cases, a further separation and purification operation are used after the reaction step to recover useful compounds. For example, in the case of steam reforming of light hydrocarbons for producing hydrogen, a pressure swing adsorption (PSA) step could be used for recovering pure hydrogen not permeated through the membrane of the reaction system.
+An interesting solution is used in cogeneration processes when the retentate gas has a high energetic content. In this case, a part of the exiting gas is burned to give power to an electric generator whereas the residual part is recycled to the reaction system to convert the un-reacted compounds. A simple scheme of the recycle system is shown in the Fig. 1.7, while a complete process scheme of a two steps 0 1 2 3 0
+0.5
+1 Reaction Volume Conversion profiles Fig. 1.6 Conversion profiles along the reactors. Dash line:only a reactor without product removal; solid line:50% product removal at
+V1 = 0.8
+1 Integration of Selective Membranes in Chemical Processes 13 RMM plant with a recycle stream and electricity power production by retentate gas is reported in Fig. 1.8 (refer to [25, 29] for a complete description and assessment of the plant).
+It is known that, in a traditional tubular reactor, the recycle of a portion of the exiting stream makes worse the performance of the reactor; however, the case of MRs is very different due to the removal of a product and considerable improvements can be achieved.
+Figure 1.9 shows the effect of recycle ratio R on the conversion.
+The conversion XA is defined as the reacted fraction of A in the feed leaving the system with the effluent. The removal percentage q is the ratio between the flow rate of B in permeate and the flow rate of this product entering the membrane module.
+Fig. 1.7 Membrane system with recycle Fig. 1.8 Two-steps RMM natural gas steam reforming process with electric power production and recycle layout [25, 29] 14
+L. Marrelli et al.
+Calculations have been performed at the indicative values of parameters reported in Table 1.1 with the simplifying assumptions of isothermal and isobaric reactor and infinite selectivity of membrane.
+Fixing the flow rate of B in the permeate is a realistic basis since in many cases the aim in using a membrane system with recycle is just to obtain a specific flow rate of the product with a high conversion of the reactant. Obviously, the dependence on the recycle ratio R of the fraction of B to be removed in the membrane requires a suitable design of the membrane module which depends on the adopted value of R.
+1.6 Design of Membrane Module
+The flux JB through a membrane layer depends on the properties of the layer material and of the compound B, on the thickness of the membrane and on the difference of partial pressures between the two chambers of the module. The properties of materials are taken into account by means of the membrane 0
+0.2
+0.4
+0.6
+0.8
+0
+0.5
+1 Recycle Ratio R Conversion and fraction of B removed
+XA
+ρ
+R
+(R)
+(R)
+Fig. 1.9 Improving effect of recycle ratio R on the conversion and fraction of B to be removed in the membrane module at a fixed flow rate of B in the permeate stream Table 1.1 Reference parameters used in calculations Reactor volume V, m3 Flow rate of A in the feed FA 0 , mol/min Pressure P, atm Kinetic constant of forward reaction k1,mol m3 min atm
+1.2
+5 5 1 Kinetic constant of forward reaction k2,mol m3 min atm Flow rate of B in the permeate FB,perm, mol/min
+2.5
+1 1 Integration of Selective Membranes in Chemical Processes 15 permeability which is affected by the temperature as well. A detailed description of mass transport through Pd-based membrane is given in Chap. 2 of this book. When Sieverts-Fick law is valid, the flux of B is given by: JB  PeBT d
+p0:5 B;ret  p0:5 B;perm
+1:22
+where d is the thickness of the dense membrane, pB,ret and pB,perm are the partial pressures of B in the retentate and permeate regions, respectively and: PeBT  Pe0 B  exp  Ea
+R  T
+1:23
+is the permeability which depends on the temperature T according to the Arrhenius behavior.
+PeB 0 is the pre-exponential factor, and Ea is the apparent activation energy. The partial pressure in the permeate side can be controlled by means of the total pressure and by the flow rate of the sweeping gas.
+However, in order to allow a given flow rate of a product to be removed from the reaction mixture a suitable membrane surface area must be available.
+Once flow rate WB and the other operating parameters are given, the calculation of the membrane surface area S is straightforward since is:
+S  WB
+JB
+1:24
+When pB,ret and pB,perm are constant at each point of the membrane, the cal- culation is very simple. This could be the case of a membrane module located outside the reactor.
+However, in the case of integrated MBRs, with the membrane inside the reactor, partial pressures pB,ret and pB,perm and, often, temperature T change, in general, along the tubular reactor. Therefore, Eq. 1.22 gives the local flux at a given section of the MBR, and Eq. 1.24 must be given in differential form:dS  dWB
+JB
+1:25
+where dWB indicates the infinitesimal flow rate of B crossing the membrane through the surface dS. The overall surface area is, then, calculated by integration of Eq. 1.25.
+Anyway, the surface area of a given membrane depends on the flow rate, the thickness of the layer, the pressure difference, and the temperature. Compatibly with specific requirements of the process, required membrane surface can be minimized through a suitable choice of the operating parameters, especially of the pressures. This is an important issue due to the generally high specific cost of selective membranes. 16
+L. Marrelli et al.
+1.7 Final Remarks
+The potential of MRs is enormous. In particular, they play a key role in reversible endothermic reactions where their use can provide high reactant conversion at relatively lower temperatures. This will make possible to avoid fuel combustion in fired heaters to supply the required reaction heat and could allow multiple heat sources at low temperature to be used, ranging from gas turbine exhausts to solar heated molten salts or even helium from a nuclear power [24, 25, 29].
+A new configuration will then emerge where heat and power are cogenerated and a considerable energy saving is achieved, reducing the products manufac- turing costs. The cogenerative scheme presented in Fig. 1.8 refers to natural gas steam reforming, but this concept can easily be extended to other chemical processes.
+The number of possible applications of MRs is indeed large, but commercial applications are emerging slowly due to a number of practical issues to be solved such as membrane stability, mass transfer limitation (low flux), high membrane production costs etc. This is still a task far from completion and will require a close cooperation of catalyst scientists, material scientists, and chemical engineers.
+Chap. 2 was then devoted to the membranes state of the art to better understand what kind of progress is required in terms of materials and engineering problems.
+Cost of manufacture could be considerably reduced if membranes will find bulk applications; Chap. 3 of this book deals with technical solutions aimed to such cost reduction. Chap. 4 is devoted to mathematical modeling which is a tool widely used in process development and optimisation.
+A part from the steam reforming there are other interesting applications in the petrochemical industry: methane dry reforming, catalytic partial oxidation, auto- thermal reforming, water gas shift, H2S cracking, and hydrocarbon dehydroge- nation. More details about some of these applications are given in Chaps. 5, 6, 7, 8,and 9.
+Finally, in Chap. 10 the RMM pilot plant shown in Fig. 1.4 is described, and some preliminary operational data are presented and discussed.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do light olefins, such as propylene and ethylene, contribute to the chemical industry in terms of their applications and market trends, and what are the key production methods and thermodynamic challenges associated with their synthesis, particularly in relation to temperature, pressure, and alkane chain length effects?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

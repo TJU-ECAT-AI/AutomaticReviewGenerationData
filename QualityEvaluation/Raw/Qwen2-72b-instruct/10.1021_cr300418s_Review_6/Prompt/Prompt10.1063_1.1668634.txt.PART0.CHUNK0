@@ -1,0 +1,559 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+Assessment and validation of a screened Coulomb hybrid density functional Jochen Heyd and Gustavo E. Scuseria
+Citation: J. Chem. Phys. 120, 7274 (2004); doi: 10.1063/1.1668634 View online: http://dx.doi.org/10.1063/1.1668634 View Table of Contents: http://jcp.aip.org/resource/1/JCPSA6/v120/i16 Published by the AIP Publishing LLC.
+Additional information on J. Chem. Phys.
+Journal Homepage: http://jcp.aip.org/ Journal Information: http://jcp.aip.org/about/about_the_journal Top downloads: http://jcp.aip.org/features/most_downloaded Information for Authors: http://jcp.aip.org/authors Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions Assessment and validation of a screened Coulomb hybrid density functional Jochen Heyd and Gustavo E. Scuseria Department of Chemistry, Rice University, Houston, Texas 77005-1892 Received 11 December 2003; accepted 21 January 2004!
+This paper presents a revised and improved version of the HeydScuseriaErnzerhof screened Coulomb hybrid functional. The performance of this functional is assessed on a variety of molecules for the prediction of enthalpies of formation, geometries, and vibrational frequencies, yielding results as good as or better than the successful PBE0 hybrid functional. Results for ionization potentials and electron affinities are of slightly lower quality but are still acceptable. The comprehensive test results presented here validate our assumption that the screened, short-range HartreeFock HF! exchange exhibits all physically relevant properties of the full HF exchange.
+Thus, hybrids can be constructed which neglect the computationally demanding long-range part of HF exchange while still retaining the superior accuracy of hybrid functionals, compared to pure density functionals. 2004 American Institute of Physics. @DOI: 10.1063/1.1668634#
+I. INTRODUCTION
+KohnSham density functional theory DFT! has proven to be a highly competitive method for a wide range of appli- cations in solid state physics and more recently in chemistry.
+While the local density approximation LDA!1 has been used in solid state physics for quite some time, the advent of func- tionals based on the generalized gradient approximation GGA!2 has made DFT a valuable tool in chemistry. Hybrid density functionals,3 which include a certain amount of HartreeFock HF! exchange, further improve upon the GGA results. For molecules, recently developed meta-GGA functionals4 have been shown to yield accuracy comparable to hybrid functionals.5 In addition, meta-GGAs yield signifi- cant improvements in solids.6 However, a comparison with hybrid functionals in solids is difficult due to the high com- putational demands of traditional hybrids.
+Methods scaling linearly with system size7 are available for pure DFT calculation, allowing simulations of large mol- ecules and solids. However, the HF exchange in hybrid DFT methods is much less tractable in large systems. Schemes for linear scaling HF calculations depend on the natural decay of the HF exchange interactions over distance. This decay is highly system dependent and can range from a few A ng- strom to thousands of A ngstrom.8,9 A general hybrid DFT method which can be used over a wide range of system sizes is highly desirable. We present a possible approach to such a method in this paper.
+To render the HF exchange tractable in extended sys- tems, either the exchange interactions need to be truncated artificially or their spatial decay accelerated. Truncation schemes are very useful for systems with localized charge distributions where the HF exchange decays rapidly over dis- tance. In delocalized systems, however, truncation leads to severe convergence problems in the self-consistent-field SCF! procedure as well as uncertainties in the predicted energy of the system. The second option, accelerating the spatial decay, circumvents both these problems but still ne- glects interactions which might be physically important. The present work takes this second approach but attempts to compensate for the neglected interactions.
+The decay of the HF exchange interaction can be accel- erated by substituting the full 1/r Coulomb potential with a screened potential. Such screened Coulomb potentials are widely used in solid state physics10 and more recently also in quantum chemistry.1115 A screened Coulomb potential is based on a splitting of the Coulomb operator into short-range SR! and long-range LR! components. The choice of split- ting function is arbitrary as long as SR and LR components add up to the original Coulomb operator. The present work uses the error function to accomplish this split since it leads to computational advantages in evaluating the short-range HF exchange integrals.9 The following partitioning is used:1! where the complementary error function erfc(vr)51 2erf(vr) and v is an adjustable parameter. For v50, the long-range term becomes zero and the short-range term is equivalent to the full Coulomb operator. The opposite is the case for v.
+This work extends our earlier approach9 which used the above splitting to design a screened Coulomb potential hy- brid functional. The main improvement over the vPBEh functional proposed in Ref. 9 is the satisfaction of two addi- tional theoretical limits that the exact density functional is known to satisfy. The accuracy of the improved functional is assessed on a wide variety of molecules. The examined prop- erties include enthalpies of formation, equilibrium geom- etries, vibrational frequencies, ionization potentials, electron affinities, and charge transfers in transition metal complexes.
+While the ultimate goal of this project is a widely appli- cable method for large systems, extensive testing using
+JOURNAL OF CHEMICAL PHYSICS
+VOLUME 120, NUMBER 16
+22 APRIL 2004
+7274 0021-9606/2004/120(16)/7274/7/$22.00 2004 American Institute of Physics Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions smaller systems is necessary to validate the approach taken.
+In the following sections, we first discuss two modifications to our previous hybrid functional and then examine the per- formance of the proposed method.
+II. THE REVISED SCREENED COULOMB POTENTIAL
+HYBRID FUNCTIONAL
+Our earlier work9 proposed a screened Coulomb hybrid functional vPBEh! based on the PBE GGA functional16 and the corresponding, parameter-free PBE0 hybrid functional.17 The screened Coulomb hybrid is designed to balance the loss of HF exchange energy due to the screened potential with a DFT long-range contribution. For the present, revised screened Coulomb hybrid functional, we resort to the stan- dard acronym of HeydScuseriaErnzerhof HSE03!. The exchange-correlation term of HSE03 takes a form identical to vPBEh, Exc HSE035aEx HF,SRv!112a!Ex rev-vPBE,SRv! 1Ex rev-vPBE,LRv!1Ec
+PBE,
+2! where v is an adjustable parameter governing the extent of short-range interactions and the exchange mixing parameter a51/4 is determined by perturbation theory.18 The HSE03 hybrid functional is equivalent to PBE0 for v50 and as- ymptotically reaches PBE for v.
+Whereas the SR HF exchange is evaluated as before, the short- and long-range vPBE DFT exchange terms are modi- fied to satisfy two additional constraints. The following sec- tions first describe the form of the revised vPBE exchange functional and then discuss the additional constraints which were enforced.
+A. The revised vPBE screened Coulomb potential
+exchange functional The starting point for our screened Coulomb exchange functional is the exchange hole formulation of the PBE func- tional by Ernzerhof et al. see Ref. 19 for a detailed descrip- tion!. The PBE exchange energy is defined as an integral over the exchange energy density Ex PBE5E dr rr!ex PBErr!,sr!!. 3!
+The energy density ex PBE depends on the electron density r(r) and the reduced gradient s5uru/(2kFr) with kF 5(3p2r)1/3. ex PBE is defined as a product of the LDA ex- change energy density and an enhancement factor Fx
+PBE
+which depends on the gradient of the electron density,ex PBErr!,sr!!5ex LDArr!!3Fx PBEsr!!. 4!
+Whereas the original, energy-based, PBE functional uses an explicitly defined enhancement factor, the exchange-hole based formulation defines Fx PBE as an integral over the PBE exchange hole JPBE(s,y), Fx PBEs!52 8
+9E
+0
+dy yJPBEs,y!. 5!
+A detailed description of the PBE exchange hole and its deri- vation is given in Ref. 19.
+The short-range PBE exchange energy is defined the same way, except that the exchange hole itself is screened by employing the short-range Coulomb potential defined in 1!, JvPBE,SRr,s,y!5JPBEs,y!3erfcS vy kFD . 6!
+This formulation introduces an electron density dependence into both the exchange hole and the enhancement factor. The SR exchange hole has the form JvPBE,SRr,s,y!5F2
+A
+y2 1 114/9!Ay2
+1S
+A
+y2 1B1C@11s2Fs!#y2 1E@11s2Gs!#y4D exp2Dy2!G 3exp@2s2Hs!y2#3erfcS vy kFD ,7! where A2H are parameters and parametrized functions of the PBE exchange hole. These parameters are not empirical but derived from the functional form of the original,exchange-energy-based PBE functional.
+The vPBE long-range exchange contribution is then de- fined as the difference of the exchange-hole based PBE and the SR vPBE exchange energy densities, Ex vPBE,LR5E dr rr!@ex PBErr!,sr!! 2ex vPBE,SRrr!,sr!!#. 8!
+Up to this point, the present functional is identical to the previous vPBE functional. The improvements originate in the way the SR vPBE exchange hole, which yields Fx rev-vPBE, is integrated @Eq. 5!#. The integral over the short- range exchange hole cannot be solved analytically due to the terms in 7! which contain y in the denominator. Previously,the problematic terms were approximated by a linear combi- nation of Gaussian functions. The present functional, how- ever, uses a different approach to evaluate Eq. 5!. Instead of approximating a part of the exchange hole, the error function is approximated as detailed in Sec. II B. This approach has distinct advantages. The enhancement factor Fx rev-vPBE is now identical to one for v5s50 which recovers the LDA limit of the uniform electron gas. Furthermore, the new approach yields derivatives which are numerically more stable, allow- ing the implementation of analytical first and second planned! derivatives. In addition, the new functional also satisfies the LiebOxford bound Sec. II C! which the origi- nal PBE satisfies, but which is violated in both the exchange- hole based PBE and the previous vPBE.
+These improvements lead to the revised HSE03 hybrid functional whose behavior is even closer to the PBE0 hybrid than our previous implementation was. The following two sections outline the changes made to the vPBE enhancement factor in more detail. 7275
+J. Chem. Phys., Vol. 120, No. 16, 22 April 2004
+Screened Coulomb hybrid density functional Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions
+B. Approximating the error function
+The complementary error function is defined as erfcx!5 2 ApE x
+e2t2 dt. 9!
+This integral does not have a closed-form solution. There- fore, erfc(x) is usually approximated numerically by a func- tion of the form erfcx!'Pnt!e2x2,10! where t51/(11px). The coefficients of Pn(t) as well as p are fitted to the true complementary error function.20 Various fits use polynomials of orders ranging from four to six. For highly accurate approximations, several such fits over sub- intervals are often used. In the present case, the rational form of t again precludes the analytical evaluation of Eq. 5!. We use a slightly simplified version of 10! instead:erfcx!'P8x!e2bx2. 11!A higher eighth! order polynomial gives more accurate re- sults in this case since the functional form of 11! is inferior to 10!. This approximation is accurate to 1026 in the inter- val 0<x<14 and the resulting exchange hole can be inte- grated analytically. The final form of the chosen approxima- tion is erfcx!'11a1x1a2x21a3x31a4x41a5x51a6x6 1a7x71a8x8!e2bx2,12! where the following parameters were fitted via the least- squares method:a1521.128 223 947,a251.452 736 266,a3521.243 162 299,a450.971 824 836,a5520.568 861 080,a650.246 880 515,a7520.065 032 364,a850.008 401 793,b51.455 915 450.For x.14, 5! exhibits numerical instabilities when evaluated using the approximation 12!. However, in this range the Gaussian term becomes dominant and a much sim- pler approximation can be used:erfcx.14!'e22x2. 13!Additional numerical approximations are necessary to ensure numerical stability over all possible values of the electron density and its gradient. All these approximations are accurate to better than 10210 and are not discussed in detail here. They can, however, be found in our reference implementation of the revised vPBE enhancement factor.21 In general, all numerical approximations employed in the revised vPBE functional achieve an accuracy much higher than the underlying exchange-hole based implemen- tation of PBE. The PBE exchange hole was fitted to the original PBE functional by Ernzerhof et al.19 and produces errors in the order of 0.5% in the enhancement factor, com- pared to PBE.
+C. The LiebOxford bound
+Lieb and Oxford22 derived a theoretical bound for the maximum value of the exchangecorrelation energy Exc .
+The PBE exchange functional enforces the LiebOxford LO! bound Ex>21.679E dr rr!4/3 14! by ensuring that the enhancement factor Fx satisfies Fxs!<1.804. 15!The exchange-hole based formulation of PBE violates this bound and therefore so does the previous vPBE functional.The LO bound is not satisfied for reduced gradients s .8.57. This is beyond the range of s in regions of the elec- tron density relevant to molecules. However, the LO bound can easily be enforced by smoothly rescaling s beyond a threshold sthresh.8.3. The rescaling is performed by snew5smax2 c s2 ,16! where smax58.572 844 and c518.796 223. These values en- sure the same maximum enhancement factor Fx(s) as the original PBE functional.In practice, enforcing the LiebOxford bound in the rev- vPBE functional only changes the exchange energies by less than a mHartree for all examined systems.
+III. COMPUTATIONAL DETAILS
+We incorporated the HSE03 functional into the Gaussian suite of programs.23 Unless noted otherwise, the revised HSE03 functional was used in all calculations. A reference implementation of the revised vPBE enhancement factor is available electronically.21 The 6-31111G(3df,3pd) basis set was used in self- consistent, spin unrestricted KohnSham calculations of en- thalpies of formation, geometry optimizations, vibrational frequencies, and ionization potentials, as well as electron af- finities. This basis, when used in hybrid DFT calculations,provides a model chemistry which gives results close to the basis set limit. In addition, geometry optimizations and vi- brational frequency calculations were also carried out using the 6-31G* basis set which is commonly used for these types of calculations.
+The enthalpies of formation were calculated both using geometries optimized at the MP2/6-31G* level and then us- ing geometries optimized with each functional and the 6-31111G(3df,3pd) basis set. Standard enthalpies of for- mation were obtained by the procedure described in Ref. 24.
+For both the zero point energy and the thermal enthalpy cor- rections, HF/6-31G* frequencies scaled with a factor of f
+50.8929 were used.
+Geometry optimizations employed analytical gradients while harmonic vibrational frequencies were calculated via numerical differentiation of analytic first derivatives for HSE03 only, all other functionals used analytic second derivatives!. 7276
+J. Chem. Phys., Vol. 120, No. 16, 22 April 2004
+J. Heyd and G. E. Scuseria
+Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions The transition metal hexacarbonyl geometry optimiza- tions used a Stuttgart 97 small core relativistic effective core potential ECP! on the metal and 6-311G(d) basis sets on carbon and oxygen. The partial charges were determined by natural bond orbital NBO! analysis25 using the same ECP on the metal and the 6-311G(2df ) basis set on carbon and oxygen.
+IV. RESULTS AND DISCUSSION
+The HSE03 functional was assessed on a wide range of systems and its performance is compared to the established B3LYP,3 PBE,16 and PBE017 functionals. The following sec- tions show the results for enthalpies of formation, geometry optimizations, vibrational frequencies, ionization potentials,electron affinities, and charge transfers in a variety of mol- ecules.
+A. Standard enthalpies of formation
+The G3/99 set of 223 small molecules24,26 was used to assess the performance for predicting standard enthalpies of formation. Results for two subsets of the G3 set, the G2-1 55 molecules! and G2-11G2-2 148 molecules, denoted G2! sets, are presented as well since a large amount of data for these test sets exists in the literature.
+The HSE03 and PBE0 functionals exhibit similar perfor- mance with HSE03 producing slightly better results. The mean absolute errors MAE! of HSE03 are 2.89, 4.64, and
+6.57 kcal/mol for the G2-1, G2, and G3 sets, respectively.
+The errors for PBE0 are 3.01, 5.15, and 7.29 kcal/mol. On all three test sets, the B3LYP functional yields the best results.
+The MAEs are 2.46, 3.04, and 4.31 kcal/mol for the G2-1, G2, and G3 sets, respectively. The nonhybrid PBE functional produces errors which are 46 times larger than any of the tested hybrid functionals 8.19, 17.19, and 22.88 kcal/mol!.
+For comparison, the G2-1 and G2 results of our earlier vPBEh functional are 2.93 and 4.16 kcal/mol, respectively.
+This performance is better than the present implementation but most likely due to spurious error cancellation. The new implementation is closer to PBE0 in both functional form and results it produces. Table I shows a full summary of the results.
+While neither HSE03 nor PBE0 yield accuracy compa- rable to B3LYP, the latter functional contains empirical pa- rameters which were optimized on the G2-1 set of mol- ecules. PBE0 does not contain any empirical parameters, and HSE03 employs only the short-range/long-range splitting pa- rameter v50.15. The dependence on v has been shown to be fairly small9 and while v has been chosen to give good results for the G2-1 set, it does not represent a fully opti- mized empirical parameter.
+To estimate the effect of the molecular geometries, the 148 molecules in the G2-1 and G2-2 test sets were reopti- mized with the individual functionals instead of using the MP2 optimized geometries!. The enthalpies of formation predicted in this case Table II!, all exhibit errors within 0.25 kcal/mol of the calculations using MP2 geometries. This agreement is no surprise since geometry optimizations using any of the above functionals yield excellent accuracy, as shown in the next section.
+TABLE I. Summary of results for enthalpies of formation at MP2 optimized geometries. All errors in kcal/mol.a Method G2-1 setb MAEe RMSf Max.2!g Max.1!h
+B3LYP
+2.46
+3.28
+28.2
+9.9
+PBE
+8.19
+10.40
+229.1
+10.1
+PBE0
+3.01
+3.76
+26.1
+10.6
+vPBEhi
+2.93
+3.78
+27.2
+10.7
+HSE03j
+2.89
+3.70
+27.3
+10.3
+Method G2-1 and G2-2 setc
+MAE
+RMS
+Max.2!
+Max.1!
+B3LYP
+3.04
+4.40
+28.2
+20.0
+PBE
+17.19
+21.00
+250.8
+10.1
+PBE0
+5.15
+6.78
+220.8
+21.7
+vPBEhi
+4.16
+5.68
+217.4
+20.5
+HSE03j
+4.64
+6.21
+219.3
+20.0
+Method Complete G3 setd
+MAE
+RMS
+Max.2!
+Max.1!
+B3LYP
+4.31
+5.83
+28.2
+21.0
+PBE
+22.88
+27.71
+283.3
+10.1
+PBE0
+7.29
+9.75
+237.9
+21.7
+HSE03j
+6.57
+8.90
+235.5
+20.0
+a6-31111G(3df,3pd) basis. b55 molecules. c148 molecules. d223 molecules. eMean absolute error. fRoot mean square error. gMaximum negative deviation. hMaximum positive deviation. iPrevious screened Coulomb hybrid Ref. 9!. jPresent work.
+TABLE II. Summary of results for enthalpies of formation at geometries optimized with each functional. All errors in kcal/mol.a Method G2-1 setb MAEd RMSe Max.2!f Max.1!g
+B3LYP
+2.33
+3.07
+28.2
+7.7
+PBE
+8.33
+10.60
+229.2
+10.0
+PBE0
+2.79
+3.43
+26.1
+9.8
+HSE03
+2.73
+3.37
+27.3
+9.5
+Method G2-1 and G2-2 setc
+MAE
+RMS
+Max.2!
+Max.1!
+B3LYP
+2.99
+4.29
+28.2
+19.8
+PBE
+17.40
+21.24
+250.8
+10.0
+PBE0
+5.35
+6.92
+221.2
+21.1
+HSE03
+4.86
+6.31
+219.8
+19.4
+a6-31111G(3df,3pd) basis. b55 molecules. c148 molecules. dMean absolute error. eRoot mean square error. fMaximum negative deviation. gMaximum positive deviation. 7277
+J. Chem. Phys., Vol. 120, No. 16, 22 April 2004
+Screened Coulomb hybrid density functional Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions
+B. Geometry optimizations
+To further assess the accuracy of geometry optimiza- tions, the geometries of 96 molecules, radicals and ions of the T-96R Ref. 27! set were optimized and compared to experimental bond lengths see references in Ref. 27!. This recently compiled test set contains 86 neutral molecules and 10 molecular cations. It is comprised of diatomic molecules as well as well as several high-symmetry polyatomics whose geometries are fully defined by a single bond length.
+Using the 6-31111G(3df,3pd) basis set, all three hy- brid functionals yield excellent accuracy with a MAE of around 0.010 Å. The pure PBE functional exhibits slightly larger errors MAE of 0.016 Å!. The HSE03 functional per- forms slightly better than any of the established functionals which were tested.
+In other works, geometry optimizations are usually car- ried out with the more modest 6-31G* basis set. Using this basis set, the results for the three hybrid functionals are not as uniform as with the larger basis. The MAE of B3LYP increases by 100% to 0.020 Å while the errors of both HSE03 and PBE0 increase by only 50% to 0.014 and 0.015 Å, respectively. Table III shows a summary of all the results.
+C. Vibrational frequencies
+The recently compiled T-82F set27 of diatomic mol- ecules, radicals, and cations provides a broad range of test systems for the prediction of harmonic vibrational frequen- cies. Vibrational frequencies, just like geometry optimiza- tions, are usually performed using smaller basis sets. The geometries of all systems in the T-82F set were therefore optimized using both the 6-31111G(3df,3pd) and 6-31G* basis sets and vibrational frequency calculations were performed using the same basis sets. Table IV shows a summary of the results.
+HSE03 is in close agreement with PBE0. Both yield MAEs of 44 cm21 using the large basis set and 47 cm21 with the smaller basis. The PBE functional gives results similar to its hybrid cousins: 42 and 48 cm21 with the large and small basis sets, respectively. B3LYP outperforms all other func- tionals in this test with MAEs of 34 and 39 cm21. However,as in the geometry optimizations in Sec. IV B, using a smaller basis set has a significantly larger effect on B3LYP than on the other functionals.
+D. Ionization potentials and electron affinities
+The performance of the HSE03 functional for ionization potentials IPs! and electron affinities EAs! was examined using the G2/97 ion test set.28 The calculations of the H2S1 and N2 1 cations do not converge with pure DFT methods28 and these two species were dropped from the test set. Our test set thus comprised 86 ionization potentials and 58 elec- tron affinities. Geometry optimizations of all ions and neutral molecules were performed with each tested functional using the 6-31111G(3df,3pd) basis set. Both IPs and EAs were calculated as the difference in energy of the charged versus the neutral species at 0 K.
+For ionization potentials, B3LYP produces the smallest mean absolute error of 0.176 eV, compared to experiment.
+The MAEs of PBE, PBE0, and HSE03 are 0.220, 0.197, and
+0.227 eV, respectively. Table V shows a more detailed sum-
+TABLE III. Summary of results for bond length optimization of the 96 diatomic molecules, radicals and ions in the T-96R set Ref. 27!. All values in Å.
+Method 6-31111G(3df,3pd) basis set MAEa RMSb Max.2!c Max.1!d
+B3LYP
+0.010
+0.014
+20.040
+0.041
+PBE
+0.016
+0.019
+20.013
+0.055
+PBE0
+0.010
+0.015
+20.052
+0.063
+HSE03
+0.009
+0.013
+20.050
+0.039
+Method 6-31G* basis set MAEa RMSb Max.2!c Max.1!d
+B3LYP
+0.020
+0.025
+20.041
+0.074
+PBE
+0.028
+0.032
+20.019
+0.078
+PBE0
+0.015
+0.020
+20.038
+0.080
+HSE03
+0.014
+0.018
+20.040
+0.057
+aMean absolute error. bRoot mean square error. cMaximum negative deviation. dMaximum positive deviation.
+TABLE IV. Summary of results for harmonic vibrational frequencies of the 82 diatomic molecules, radicals and cations in the T-82F set Ref. 27!. All values in cm21.
+Method 6-31111G(3df,3pd) basis set MAEa RMSb Max.2!c Max.1!d
+B3LYP
+33.5
+48.5
+299.2
+161.9
+PBE
+42.0
+57.6
+2175.3
+82.5
+PBE0
+43.6
+66.8
+226.2
+236.3
+HSE03e
+43.9
+66.7
+232.9
+236.2
+Method 6-31G* basis set MAEa RMSb Max.2!c Max.1!d
+B3LYP
+39.5
+57.3
+2187.8
+148.5
+PBE
+47.7
+70.1
+2266.2
+101.9
+PBE0
+46.8
+70.1
+2126.8
+230.7
+HSE03e
+47.0
+70.2
+2129.9
+230.0
+aMean absolute error. bRoot mean square error. cMaximum negative deviation. dMaximum positive deviation. eNumerical second derivatives from analytic gradients.
+TABLE V. Summary of results for ionization potentials of 86 molecules of the G3 set. All values in eV.
+Method MAEa RMSb Max.2!c Max.1!d
+B3LYP
+0.176
+0.261
+20.56
+1.59
+PBE
+0.220
+0.291
+21.15
+0.45
+PBE0
+0.197
+0.273
+20.67
+1.63
+HSE03
+0.227
+0.348
+20.39
+1.99
+aMean absolute error. bRoot mean square error. cMaximum negative deviation. dMaximum positive deviation. 7278
+J. Chem. Phys., Vol. 120, No. 16, 22 April 2004
+J. Heyd and G. E. Scuseria
+Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions mary of the results. As noted in previous studies,27,28 the errors of all functionals are similar and close to 0.2 eV.
+Calculations of electron affinities by density functional methods have sparked discussions whether approximate DFT is a valid approach to calculate EAs.29,30 Negative ions are usually unstable when described via not completely self- interaction-free functionals.31 The success of DFT to predict EAs seems to rest on error cancellation and basis set effects.
+Nonetheless, we calculated electron affinities using HSE03 and the three other functionals. The established functionals exhibit MAEs ranging from 0.123 eV for PBE to 0.126 and
+0.163 eV for B3LYP and PBE0, respectively. The HSE03
+functional produces a slightly larger error of 0.210 eV. See Table VI.!
+The lower performance of HSE03, compared to PBE0, is unexpected given the close agreement of these two function- als for all other examined properties. A closer inspection of results for individual molecules shows HSE03 to overesti- mate both IPs and EAs by 0.230.25 eV compared to PBE0.
+Subtracting 0.24 eV from each IP and EA renders the HSE03 results virtually identical to the PBE0 results. This shift is independent of the magnitude of the EA or IP and points toward a deficiency in the theoretical model of HSE03. The source of this behavior remains uncertain and we are cur- rently investigating its origin.
+E. Transition metal complexes
+DFT methods have always been quite successful in de- scribing molecules and complexes containing transition metals.32 Therefore, the HSE03 functional was also tested on a series of transition metal hexacarbonyls. Geometry optimi- zations of the hexacarbonyls of chromium, molybdenum and tungsten were performed and charge transfer within the com- plexes was analyzed using natural bond orbital theory.
+The optimized geometries of all four functionals are close to experiment see Table VII!. HSE03 gives the best overall agreement with experimental bond lengths MAE of
+0.008 Å!. PBE0 and B3LYP are close seconds with MAEs of
+0.009 Å, followed by PBE with an error of 0.010 Å. The
+metal-ligand distance is best described by HSE03 and PBE MAE of 0.010 Å!, while all three hybrid functionals yield better results for the carbonoxygen bond lengths than PBE.
+No experimental data exists for the partial charges of atoms inside these hexacarbonyl complexes. Nonetheless,examining natural bond orbital NBO! derived charges is in- structive since some general information about the methods can be obtained. The PBE pure DFT functional polarizes bond less than all three hybrid functionals. HSE03 gives re- sults similar to PBE0 and B3LYP Table VIII!. Thus, ne- glecting the long-range HF exchange does not adversely af- fect the wave function of the calculated system.
+V. CONCLUSIONS
+The HSE03 screened Coulomb hybrid density functional yields results similar to the established, nonempirical PBE0 hybrid functional on which HSE03 is based. Enthalpies of formation, optimized geometries, and vibrational frequencies are predicted with similar or higher accuracy than that achieved by PBE0. When the common 6-31G* basis set is used for geometry optimizations, both HSE03 and PBE0 yield significantly better results than the B3LYP functional.
+For ionization potentials and electron affinities, the three other tested functionals produced smaller errors than HSE03.
+However, the errors produced by HSE03 are acceptable and might be reduced by enhancing the construction of the func- tional.
+The comprehensive test results, presented here, validate our original assumptions in designing HSE03. The short- range HF exchange exhibits all of the physically relevant properties of the full HF exchange. The same approach used in constructing HSE03 based on PBE0 can be employed to construct screened Coulomb hybrid functionals based on newer, meta-GGA functionals such as TPSS.4 TABLE VI. Summary of results for electron affinities of 58 molecules of the G3 set. All values in eV.
+Method MAEa RMSb Max.2!c Max.1!d
+B3LYP
+0.126
+0.213
+20.10
+1.10
+PBE
+0.123
+0.171
+20.30
+0.78
+PBE0
+0.163
+0.219
+20.38
+1.09
+HSE03
+0.210
+0.300
+20.11
+1.32
+aMean absolute error. bRoot mean square error. cMaximum negative deviation. dMaximum positive deviation.
+TABLE VII. Transition metal hexacarbonyls: Optimized geometries.a All values in Å.
+Metal Bond
+B3LYP
+PBE
+PBE0
+HSE03
+Expt.b Cr rMC
+1.920
+1.898
+1.892
+1.897
+1.914
+rCO
+1.141
+1.155
+1.139
+1.139
+1.141
+Mo rMC
+2.007
+2.061
+2.056
+2.060
+2.063
+rCO
+1.141
+1.154
+1.139
+1.138
+1.145
+W
+rMC
+2.083
+2.071
+2.065
+2.068
+2.058
+rCO
+1.143
+1.155
+1.140
+1.139
+1.148
+MAE
+rMC
+0.015
+0.010
+0.012
+0.010
+rCO
+0.003
+0.010
+0.005
+0.006
+Total
+0.009
+0.010
+0.009
+0.008
+aOh symmetry, Stuttgart 97 RSC ECP on metal and 6-311G(d) on carbon and oxygen. bSee Ref. 32 and references therein.
+TABLE VIII. Transition metal hexacarbonyls: Natural bond orbital derived charges.a Metal Atom
+B3LYP
+PBE
+PBE0
+HSE03
+Cr
+M
+21.357
+21.386
+21.466
+21.445
+C
+0.677
+0.645
+0.695
+0.691
+O
+20.451
+20.414
+20.450
+20.451
+Mo
+M
+21.203
+21.183
+21.281
+21.261
+C
+0.641
+0.599
+0.652
+0.649
+O
+20.441
+20.402
+20.438
+20.439
+W
+M
+20.998
+20.975
+21.076
+21.056
+C
+0.602
+0.560
+0.614
+0.611
+O
+20.436
+20.398
+20.434
+20.435
+aOh symmetry, optimized geometries from Table VII, Stuttgart 97 RSC ECP on metal and 6-311G(2df ) on carbon and oxygen. 7279
+J. Chem. Phys., Vol. 120, No. 16, 22 April 2004
+Screened Coulomb hybrid density functional Downloaded 20 Jul 2013 to 128.171.57.189. This article is copyrighted as indicated in the abstract. Reuse of AIP content is subject to the terms at: http://jcp.aip.org/about/rights_and_permissions While the present work assesses the HSE03 functional for a variety of small and medium sized molecules, the func- tional is designed with solids and large molecules in mind.
+Our current research focuses on applying HSE03 to hybrid DFT calculations in solids, where the use of a screened Cou- lomb potential drastically reduces the computational de- mands of hybrid calculations.
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How do computational methods, particularly density functional theory (DFT) and cluster models, enhance our ability to predict, analyze, and understand the catalytic activity of doped oxide catalysts in alkane activation, and what are the key considerations, challenges, and potential benefits of these approaches in terms of accuracy, efficiency, and the exploration of new catalytic materials?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

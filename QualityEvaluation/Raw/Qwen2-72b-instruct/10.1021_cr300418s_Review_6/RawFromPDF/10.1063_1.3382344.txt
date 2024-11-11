@@ -1,0 +1,2735 @@
+A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu
+Special Collection: JCP 90 for 90 Anniversary Collection
+Stefan Grimme;
+Jens Antony;
+Stephan Ehrlich;
+Helge Krieg
+Author & Article Information
+J. Chem. Phys. 132, 154104 (2010)
+https://doi.org/10.1063/1.3382344
+Article history
+element not found
+为了改善您的体验，在您同意我们所有网站和应用的情况下，我们（和我们的合作伙伴）在您连接的终端上存储和/或访问您终端上的信息（cookie或对应信息）。
+我们的网站可能会将这些cookie用于：
+不通过资料收集而判定我们网站上广告的受众
+根据您的导航和个人资料展示个性化广告
+根据您的导航个性化我们的编辑内容
+允许您在我们网站上的社交网络或平台上分享内容
+根据您的位置向您发送广告
+隐私政策
+设定偏好
+全部接受
+全部拒绝
+All Content
+AIP Publishing Portfolio
+The Journal of Chemical Physics
+                             Advanced Search
+|
+Citation Search
+Institutional Accounts
+Sign In
+HOME
+BROWSE
+COLLECTIONS
+PUBLISH WITH US
+ABOUT
+Volume 132, Issue 15
+21 April 2010
+Previous Article
+Next Article
+I. INTRODUCTION
+II. THEORY
+A. General
+B. Dispersion Coefficients
+C. Three-Body Term
+D. Cutoff Radii
+E. Coordination Number Dependent Dispersion Coefficients
+F. Discussion
+G. Technical Details
+III. RESULTS
+A. Molecular
+C
+6
+Coefficients
+B. Noncovalent Interactions And Conformational Energies
+C. Noncovalently Bound Complexes Of Molecules With Heavier Elements
+D. Binding Energy Between Graphene Sheets And In Large Aromatic Complexes
+E. Thermochemistry
+F. Metallic Systems
+IV. SUMMARY AND CONCLUSION
+ACKNOWLEDGMENTS
+REFERENCES
+Supplementary Material
+RESEARCH ARTICLE| APRIL 16 2010
+A consistent and accurate ab initio parametrization of density functional dispersion correction (DFT-D) for the 94 elements H-Pu
+Special Collection: JCP 90 for 90 Anniversary Collection
+Stefan Grimme;
+Jens Antony;
+Stephan Ehrlich;
+Helge Krieg
+Author & Article Information
+J. Chem. Phys. 132, 154104 (2010)
+https://doi.org/10.1063/1.3382344
+Article history
+Split-Screen
+Views
+PDF
+Share
+Tools
+The method of dispersion correction as an add-on to standard Kohn–Sham density functional theory (DFT-D) has been refined regarding higher accuracy, broader range of applicability, and less empiricism. The main new ingredients are atom-pairwise specific dispersion coefficients and cutoff radii that are both computed from first principles. The coefficients for new eighth-order dispersion terms are computed using established recursion relations. System (geometry) dependent information is used for the first time in a DFT-D type approach by employing the new concept of fractional coordination numbers (CN). They are used to interpolate between dispersion coefficients of atoms in different chemical environments. The method only requires adjustment of two global parameters for each density functional, is asymptotically exact for a gas of weakly interacting neutral atoms, and easily allows the computation of atomic forces. Three-body nonadditivity terms are considered. The method has been assessed on standard benchmark sets for inter- and intramolecular noncovalent interactions with a particular emphasis on a consistent description of light and heavy element systems. The mean absolute deviations for the S22 benchmark set of noncovalent interactions for 11 standard density functionals decrease by 15%–40% compared to the previous (already accurate) DFT-D version. Spectacular improvements are found for a tripeptide-folding model and all tested metallic systems. The rectification of the long-range behavior and the use of more accurate
+C
+6
+coefficients also lead to a much better description of large (infinite) systems as shown for graphene sheets and the adsorption of benzene on an Ag(111) surface. For graphene it is found that the inclusion of three-body terms substantially (by about 10%) weakens the interlayer binding. We propose the revised DFT-D method as a general tool for the computation of the dispersion energy in molecules and solids of any kind with DFT and related (low-cost) electronic structure methods for large systems.
+Topics
+Density functional theory, Basis sets, Dispersion, Physics of gases, Graphene, Optical fibers, Dissociation energy, Dimerization, Heterocyclic compounds, Chemical bonding
+I. INTRODUCTION
+The development of approximate density functional theory (DFT) approaches that accurately model the physically and chemically very important London dispersion interactions1,2 is a very active field of research (for recent papers with some review character, see Refs. 3–6). It has now become very clear especially for the chemistry and physics of large systems as, e.g., in bio- or nanoarchitectures, that these interactions are indispensable in order to reach the so-called chemical accuracy. The various approaches currently in use are given and characterized in Table I. This overview includes the DFT-D method (atom pairwise sum over
+C
+6
+R
+−
+6
+potentials7–9), the nonlocal van der Waals functional (vdW-DF10–12), dispersion-corrected atom-centered potentials [DCACPs,13 in a variant called localized atomic potentials (LAP)14] and “pure” density functionals (DFs) which are highly parametrized forms of standard metahybrid approximations.15 We have not included the rigorous symmetry-adapted perturbation theory (SAPT) based on a DFT description of monomers (Refs. 16 and 17) because this approach (although being very accurate for weakly interacting molecular or atomic fragments) cannot account also for intramolecular interactions as the other methods (for a related method based on perturbation theory, see also Ref. 18). Special virtual orbital dependent DF methods are also not discussed in detail because of their significantly higher computational cost.
+Table I.
+Overview of current DFT methods to account for London dispersion interactions.
+Property DFT-D vdW-DF DCACP DFa
+Correct
+R
+−
+6
+  Yes  Yes  No  No 
+Good thermochemistry  Yes  ?  ?  Yes 
+Numerical complexity  Low  High  Low  Medium 
+Simple forces  Yes  No  Yes  Yes 
+System dependency  No (yesb)  Yes  Noc  Yes 
+Electronic effect  No  Yes  Yes  Yes 
+Empiricism  Medium (lowb)  No  High  Medium 
+Analysis/insight  Good  ?  ?  No 
+a
+Specially developed functionals that recover medium-range correlation effects.
+b
+Revised version presented here.
+c
+Due to the nonlocality of the potential a small system dependency is included.
+The methods in Table I clearly have their pros and cons. They all claim to provide an accuracy of about 5%–20% for the typical dissociation energy of a noncovalently bound molecular complex. However, only the DFT-D method really can be considered as “robust” as it has been tested thoroughly and applied successfully now on thousands of different systems including inter- as well as intramolecular cases ranging from rare gas dimers to huge graphene sheets. The method is also more and more used successfully in surface science and for solid state problems (see, e.g., Refs. 19–21). As shown recently, high accuracy is potentially also accessible with the vdW-DF method and its successors.22,23 While this might also hold for DCACP and pure DF methods for small systems, both do not show the correct asymptotic
+R
+−
+6
+potential for large intermolecular (interfragment) distances. This leads to problems for large (infinite) systems with many long-range interactions for which these methods are expected to underbind (for a recent example, see Ref. 24). Highly parametrized DFs sometimes also exhibit problems of numerical stability.25 The DFT-D method furthermore has the very nice properties of minor numerical complexity, that the “normal” thermochemistry (intramolecular dispersion) is also improved significantly compared to many “dispersion blind” standard functionals and that the results can easily be analyzed. Because it combines the best properties of all other approaches, it can be anticipated that some kind of DFT-D will remain the most widely used approach to the dispersion problem for at least the next 5–10 years. This is the main reason to develop it further in this work. Our main goal is to obtain with a minimum of empiricism (that is also not avoidable in most of the other methods) in an almost ab initio fashion consistent parameters (atom pairwise cutoff distances
+R
+0
+A
+B
+and dispersion coefficients
+C
+n
+A
+B
+⁠) for the entire set of chemically relevant elements. However, its most serious drawback (that is also not lifted in this work) is that the correction is not dependent on and does not affect the electronic structure. Although we think that these effects are small in the majority of practical applications (and often negligible compared to many other sources of error), this restriction ultimately limits the accuracy, in particular, for chemically very unusual cases. Thus, very high accuracy like, e.g., with perturbatively corrected coupled-cluster methods such as CCSD(T) together with complete basis set (CBS) extrapolations can never be reached although in practice typically small deviations of 5%–10% from this “gold standard” for dissociation or (relative) conformational energies are possible and often adequate (for recent reviews of wave function based techniques for noncovalent interactions, see Refs. 26 and 27).
+In this context it should be noted that a large part of the residual error is attributed to the underlying DF approximation used in DFT-D. Furthermore, it has been designed from the very beginning as a correction for common functionals (such as B3LYP, PBE, or TPSS) that may be not optimal for noncovalent interactions (for an interesting new idea in this context, see Ref. 28) but perform well for other important properties. This is a clear advantage over other approaches (such as vdW-DF or Becke’s approach mentioned below) that have proven good performance only with specially designed or selected functionals. We here present results for a wide variety of standard functionals (BLYP,29,30 BP86,29,31,32 PBE,33 revPBE,34 B97-D,35 TPSS,36 B3LYP,37,38 PBE0,39 PW6B95,40 and B2PLYP41). We also test TPSS0 which is a hybrid meta-generalized gradient approximation (hybrid meta-GGA) in which the Fock-exchange mixing parameter
+a
+x
+is set to 1/4 as in PBE0 and that performs better than TPSSh (with
+a
+x
+=
+0.1
+⁠) for thermochemical problems.42 The extension to other (future) DFs is straightforward.
+The almost ab initio version of the DFT-D method as proposed here seems to be most similar to the work of Becke and Johnson,43,44 Sato and Nakai,6 and Tkatchenko and Scheffler.45 The first authors calculated the
+C
+6
+dispersion coefficients specifically for the system under investigation from the dipole moment of the exchange hole43,44 (see also Ref. 46), distributed these coefficients between the atoms, and also used an empirical damping function. It was subsequently extended to include
+C
+8
+and
+C
+10
+coefficients as well.47 Calculations with this method and a specially chosen functional for 45 complexes resulted in remarkably accurate binding energies compared to high-level reference data.48,49 Sato and Nakai6 used a similar strategy that mainly differs in the computation of dispersion coefficients of the atoms in the molecule and an asymptotic correction of the exchange-correlation part. Their so-called
+LC-BOP
++
+LRD
+method provides high accuracy for the standard benchmark set of noncovalent interactions (S2250). Tkatchenko and Scheffler45 also computed system-dependent
+C
+6
+coefficients for atoms in molecules by a scaling of free atom values by a density-derived, Hirschfeld-partitioned effective atomic volume. These values are then used in a standard (damped) DFT-D-type treatment and good results have been reported with the PBE functional for the S22 set. The most serious drawback of the two latter models compared to “conventional” DFT-D is that analytical gradients (atomic forces) are not readily available (for an implementation in the exchange-hole dipole moment method, see Ref. 51) so that structure optimizations (the major area of application of “low-cost” DFT methods) cannot routinely be performed. Extensive testing on intramolecular cases, heavier systems, or thermochemical problems has not been reported yet with these methods.
+Compared to our previous8,35 and other recent DFT-D implementations and variants,7,9,45,52–57 the current version has the following properties and advantages.
+It is less empirical, i.e., the most important parameters are computed from first principles by standard Kohn–Sham (KS)-(TD)DFT.
+The approach is asymptotically correct with all DFs for finite systems (molecules) or nonmetallic infinite systems. It gives the almost exact dispersion energy for a gas of weakly interacting neutral atoms and smoothly interpolates to molecular (bulk) regions.
+It provides a consistent description of all chemically relevant elements of the periodic system (nuclear charge
+Z
+=
+1
+–
+94
+⁠).
+Atom pair-specific dispersion coefficients and cutoff radii are explicitly computed.
+Coordination number (geometry) dependent dispersion coefficients are used that do not rely on atom connectivity information (differentiable energy expression).
+It provides similar or better accuracy for “light” molecules and a strongly improved description of metallic and “heavier” systems.
+Inclusion of dispersion nonadditivity by three-body (dipolar) terms is also tested but finally at this stage of knowledge not recommended as a default (see Secs. II C and III B). From a physical and conceptual perspective the widest change compared to our previous DFT-D versions is the fifth point as hitherto the (atomic) dispersion parameters were completely system independent. This is a very drastic restriction as these values depend, e.g., on the hybridization state of the atom in the molecule. We here present for the first time a simple account for this effect, that is, however, only geometry but not electronic structure dependent in order to keep the numerical complexity low. In contrast to other methods, for DFT-D the electronic KS-DFT computation (including forces) by far dominates the overall computation time. This new idea enables us to describe in a seamless and physically reasonable fashion the change in dispersion energy in many chemical transformation processes.
+After a general outline of the theory in Sec. II A we discuss in detail the computation of the pairwise dispersion coefficients, cutoff radii, and the approach to system dependency. After some technical details of the KS-DFT calculations, results for a wide range of benchmark systems (noncovalently bound complexes and conformational energies, graphene sheets, metallic systems, and vdW complexes of heavier elements) are presented. From now on we will refer to our previous versions of the approach as DFT-D1 (Ref. 8) or DFT-D2,35 respectively, and label the new method as DFT-D3 (or with “-D3” appended to a functional name).
+II. THEORY
+A. General
+The total DFT-D3 energy is given by
+E
+DFT-D
+3
+=
+E
+KS-DFT
+−
+E
+disp
+,
+(1)
+where
+E
+KS-DFT
+is the usual self-consistent KS energy as obtained from the chosen DF and
+E
+disp
+is the dispersion correction as a sum of two- and three-body (see Sec. II C) energies,
+E
+disp
+=
+E
+(
+2
+)
++
+E
+(
+3
+)
+,
+(2)
+with the most important two-body term given by
+E
+(
+2
+)
+=
+∑
+A
+B
+∑
+n
+=
+6
+,
+8
+,
+10
+,
+…
+s
+n
+C
+n
+A
+B
+r
+A
+B
+n
+f
+d
+,
+n
+(
+r
+A
+B
+)
+.
+(3)
+Here, the first sum is over all atom pairs in the system,
+C
+n
+A
+B
+denotes the averaged (isotropic)
+n
+th
+-order dispersion coefficient (orders
+n
+=
+6
+,
+8
+,
+10
+,
+…
+⁠) for atom pair
+A
+B
+⁠, and
+r
+A
+B
+is their internuclear distance. If not mentioned otherwise, atomic units are used throughout our work. Global (DF dependent) scaling factors
+s
+n
+are adjusted only for
+n
+>
+6
+to ensure asymptotic exactness which is fulfilled when the
+C
+6
+A
+B
+are exact. This is a fundamental difference to DFT-D1 and DFT-D2, where, in general,
+s
+6
+was not equal to unity and only a scaled asymptotic value is obtained. However, for DFs that inherently account for parts of the long-range dispersion energy (e.g., for double-hybrid DFs such as B2PLYP58), it is physically reasonable to set
+s
+6
+<
+1
+⁠. Note that the contribution of the higher-ranked multipole terms
+n
+>
+6
+is more short ranged and rather strongly interferes with the (short-ranged) DF description of electron correlation. In DFT-D3 in which the
+C
+6
+terms are no longer scaled, the higher
+C
+n
+terms are necessary to adapt the potential specifically to the chosen DF in this midrange region. After some testing it was found out that the terms
+n
+>
+8
+(in particular, for
+n
+>
+10
+⁠) make the method somewhat unstable in more complicated situations and also do not improve the results considerably for “normal” molecules. In the spirit of Ockham’s razor we make the simplest choice and therefore truncate after
+n
+=
+8
+⁠. Compared to DFT-D1/2 only the eighth-order term is included as a new ingredient. Note that compared to an ab initio SAPT description of intermolecular interactions even the eighth-order contributions do not have a real physical meaning in a supermolecular DFT treatment due to their short-ranged character. The scale factor
+s
+8
+is the first (DF dependent) empirical parameter of the method.
+In order to avoid near singularities for small
+r
+A
+B
+and (mid-range) double-counting effects of correlation at intermediate distances, damping functions
+f
+d
+,
+n
+are used which determine the range of the dispersion correction. After a lot of testing and careful consideration of other more general functions,59 we came to the conclusion that the effect and importance of their choice are overemphasized in some of the previous studies.54,59 When results are averaged over a wide range of systems and DFs, the overall performance of the DFT-D model is only weakly dependent on its choice. We have chosen a variant proposed by Chai and Head-Gordon60 which turns out to be numerically stable and convenient also for higher dispersion orders. It is given by
+f
+d
+,
+n
+(
+r
+A
+B
+)
+=
+1
+1
++
+6
+(
+r
+A
+B
+/
+(
+s
+r
+,
+n
+R
+0
+A
+B
+)
+)
+−
+α
+n
+,
+(4)
+where
+s
+r
+,
+n
+is the order-dependent scaling factor of the cutoff radii
+R
+0
+A
+B
+⁠. This type of scaling has been first introduced by Jurečka et al.9 to adapt the correction at small and medium range distances to the specific form of the chosen DF. It replaces
+s
+6
+-scaling in DFT-D1/2 and is the main and most important parameter that has to be adjusted for each DF. After some testing we propose to optimize only
+s
+r
+,
+6
+by a standard least-squares error fitting procedure as described below and fix
+s
+r
+,
+8
+for all DFs to unity. The “steepness” parameters
+α
+n
+are also not fitted but adjusted manually such that the dispersion correction is
+<
+1
+%
+of
+max
+(
+|
+E
+disp
+|
+)
+⁠) for typical covalent bond distances. This is achieved by setting
+α
+6
+=
+14
+(which is slightly larger than the previously used value60 of
+α
+6
+=
+12
+⁠) and by taking
+α
+n
++
+2
+=
+α
+n
++
+2
+⁠.
+As an example we show the dispersion energy computed for two carbon atoms with the BLYP and TPSS functionals in Fig. 1. The correction is largest at the typical vdW distance between the atoms (3.3–3.4 Å for carbon). It is larger (smaller
+s
+r
+,
+6
+value) for more “repulsive” DFs such as BLYP, BP86 or revPBE that have a stronger dependence on the gradient-enhancement factor in low-density regions. For these DFs also the relative value of the higher-order terms is larger than for DFs such as PBE or TPSS. Note the very similar energies starting at about 6 Å for both DFs that mark the asymptotic region as determined by
+C
+6
+alone. Compared to DFT-D2 the new potential is less binding for small distances but more attractive in the typical vdW region. It provides a more clear-cut separation between short-range (in the intramolecular context this has first been termed overlap dispersive and later medium-range correlation, see the original Refs. 61 and 62) and long-range dispersion effects. This is a main reason for the improved description of “weak” interactions but also responsible for a slightly deteriorated performance (compared to DFT-D2) for dispersion-sensitive thermochemical problems of organic molecules (see Sec. III E).
+FIG. 1.
+VIEW LARGEDOWNLOAD SLIDE
+Total dispersion energy and eighth-order contribution for two (threefold coordinated) carbon atoms with BLYP and TPSS. For comparison the corresponding curve with DFT-D2 is also given.
+B. Dispersion coefficients
+Instead of using an empirically derived interpolation formula as in DFT-D2, the dispersion coefficients are now computed ab initio by time-dependent (TD)DFT employing known recursion relations for the higher-multipole terms. The starting point is the well-known Casimir–Polder formula,2,63
+C
+6
+A
+B
+=
+3
+π
+∫
+0
+∞
+α
+A
+(
+i
+ω
+)
+α
+B
+(
+i
+ω
+)
+d
+ω
+,
+(5)
+where
+α
+(
+i
+ω
+)
+is the averaged dipole polarizability at imaginary frequency
+ω
+⁠. This description of long-range dispersion by DFT has been pioneered by Gross et al.64 (for a recent application, see, e.g., Ref. 65). The higher-order coefficients are computed recursively66–68 according to
+C
+8
+A
+B
+=
+3
+C
+6
+A
+B
+Q
+A
+Q
+B
+,
+(6)
+C
+10
+A
+B
+=
+49
+40
+(
+C
+8
+A
+B
+)
+2
+C
+6
+A
+B
+,
+(7)
+and
+C
+n
++
+4
+=
+C
+n
+−
+2
+(
+C
+n
++
+2
+C
+n
+)
+3
+,
+(8)
+with
+Q
+A
+=
+s
+42
+Z
+A
+⟨
+r
+4
+⟩
+A
+⟨
+r
+2
+⟩
+A
+.
+(9)
+In Eq. (9)
+⟨
+r
+4
+⟩
+and
+⟨
+r
+2
+⟩
+are simple multipole-type expectation values derived from atomic densities which are averaged geometrically to get the pair coefficients (for another recent approach to compute the higher multipole coefficients, see Ref. 69). This seems to be sufficiently accurate because the
+C
+6
+value in Eq. (6) is computed explicitly for the pair
+A
+B
+(see below). The ad hoc nuclear charge dependent factor
+Z
+A
+in Eq. (9) is found to be necessary in order to get consistent interaction energies also for the heavier elements. The factor
+s
+42
+is redundant because the higher-order contributions in Eq. (3) are scaled individually for each DF. Its value has been chosen for convenience such that reasonable
+C
+8
+A
+A
+values for He, Ne, and Ar are obtained. According to detailed tests, the
+Z
+A
+dependence tends to disappear when very high multipole ranks (up to
+n
+=
+14
+⁠) are included. This, however, amplifies errors in
+C
+6
+and makes the correction “unstable” in situations when this value changes considerably (see below). We thus decided to include only
+C
+8
+and account for the higher importance of the
+n
+>
+8
+terms for heavier systems in this empirical manner. Note that from a physical point of view it also does not make much sense to include highly ranked terms derived from multipole-based perturbation theory that becomes inappropriate at short interatomic distances anyway in a DFT-D approach.
+Although the
+C
+6
+A
+B
+values can be computed easily for any pair of free atoms by using Eq. (5) in principle, this would lead to a rather inconsistent treatment of dispersion in and between molecules. The polarizabilities of many atoms are strongly influenced by energetically low-lying atomic states (open valence shells) which leads to very large dispersion coefficients. This is mostly quenched in molecules by bond formation or electron transfer (see also Sec. II E). If the focus is on the interactions in “dense” materials, it thus seems reasonable not to compute the
+α
+(
+i
+ω
+)
+values for free atoms but for simple molecules with a preferably well-defined electronic structure. Because (except for the rare gases) every element in the Periodic Table forms a stable hydride, we decided to base these calculations on separate computations for
+A
+m
+H
+n
+and
+B
+k
+H
+l
+reference molecules and remove the contribution of the hydrogens, i.e.,
+C
+6
+A
+B
+=
+3
+π
+∫
+0
+∞
+d
+ω
+1
+m
+[
+α
+A
+m
+H
+n
+(
+i
+ω
+)
+−
+n
+2
+α
+H
+2
+(
+i
+ω
+)
+]
+1
+k
+[
+α
+B
+k
+H
+l
+(
+i
+ω
+)
+−
+l
+2
+α
+H
+2
+(
+i
+ω
+)
+]
+,
+(10)
+where
+α
+H
+2
+(
+i
+ω
+)
+is the corresponding value for the dihydrogen molecule,
+m
+,
+n
+,
+k
+,
+l
+are stoichiometric factors, and
+α
+A
+m
+H
+n
+(
+i
+ω
+)
+corresponds to the reference molecule
+A
+m
+H
+n
+(and analogously for
+B
+k
+H
+l
+⁠). Note that Eq. (10) becomes identical to Eq. (5) for
+m
+,
+k
+=
+1
+and
+n
+,
+l
+=
+0
+⁠. At first sight this new approach seems to be a disadvantage because it leads to reference molecule dependent (ambiguous) coefficients. However, as will be discussed in detail below (Sec. II E), it opens a route to system [coordination number (CN)] dependent “atomic”
+C
+6
+(
+CN
+)
+coefficients. Table II shows a comparison of computed and accurate reference
+C
+6
+values for simple systems taken from the literature. The agreement for the rare gases can be considered as being excellent and, in fact, is close to the uncertainty of the reference data (about ±1%, see Ref. 70). For the TDDFT computations we employ a hybrid DF based on PBE in which the amount of Fock exchange has been increased from a fraction of
+a
+x
+=
+1
+/
+4
+in PBE0 (Ref. 39) to
+a
+x
+=
+3
+/
+8
+⁠. This is known to yield much better electronic excitation energies71 which improves (decreases) the computed polarizabilities and
+C
+6
+coefficients. Together with the extended basis set used (for details see Sec. II G), this efficiently yields very accurate coefficients for our reference molecules with a conservatively estimated error of less than 5%–10% (a comparison with experimental values for molecules is given in Sec. III A). This is in any case better than the remaining deficiencies of standard DFs for the description of the other terms in noncovalent interactions (e.g., of electrostatics and induction). Note also the good reproduction of the hybridization-dependent values for carbon as derived from ethane, ethene, and ethyne as
+A
+m
+H
+n
+molecules. The change in the
+C
+6
+for carbon between the very common
+s
+p
+3
+and
+s
+p
+2
+electronic situations of about 25% seems to be very important for the accuracy of DFT-D3 in bio-organic systems.
+Table II.
+Computed
+C
+6
+coefficients (in a.u.).
+Atom pair Reference valuea TDDFTb
+He–He  1.46  1.54 
+He–Ne  3.03  3.05 
+Ne–Ne  6.35  6.14 
+Ar–Ar  64.4  64.2 
+Kr–Kr  130.1  129.7 
+Xe–Xe  287.5  288.6 
+Rn–Rn  420.6  410.5 
+C–C
+(
+s
+p
+3
+)
+  22.4  18.1 
+C–C
+(
+s
+p
+2
+)
+  27.4  25.7 
+C–C
+(
+s
+p
+)
+  29.7  29.3 
+a
+From Refs. 54, 64, and 70.
+b
+PBE38/daug-def2-QZVP, for details, see Sec. II G. The C–C values have been computed using Eq. (10) by using ethane, ethene, and ethyne as reference molecules.
+C. Three-body term
+The long-range part of the interaction between three ground-state atoms is not exactly equal to the interaction energies taken in pairs. To the best of our knowledge we are not aware of any consideration of this effect in a DFT-D-type framework. The leading nonadditive (called Axilrod–Teller–Muto or triple dipole) dispersion term as derived from the third-order perturbation theory for three atoms
+A
+B
+C
+is1,72,73
+E
+A
+B
+C
+=
+C
+9
+A
+B
+C
+(
+3
+cos
+θ
+a
+cos
+θ
+b
+cos
+θ
+c
++
+1
+)
+(
+r
+A
+B
+r
+B
+C
+r
+C
+A
+)
+3
+,
+(11)
+where
+θ
+a
+⁠,
+θ
+b
+⁠, and
+θ
+c
+are the internal angles of the triangle formed by
+r
+A
+B
+⁠,
+r
+B
+C
+and
+r
+C
+A
+⁠, and
+C
+9
+A
+B
+C
+is the triple-dipole constant defined by
+C
+9
+A
+B
+C
+=
+3
+π
+∫
+0
+∞
+α
+A
+(
+i
+ω
+)
+α
+B
+(
+i
+ω
+)
+α
+C
+(
+i
+ω
+)
+d
+ω
+.
+(12)
+Because the total three-body contribution is typically
+<
+5
+–
+10
+%
+of
+E
+disp
+⁠, it seems reasonable to approximate the coefficients by a geometric mean as
+C
+9
+A
+B
+C
+≈
+−
+C
+6
+A
+B
+C
+6
+A
+C
+C
+6
+B
+C
+.
+(13)
+The accuracy of this simplification has been tested for various element combinations and deviations from Eq. (12) are found to be mostly less than 10%–20% (see Table III). For various rare gas trimers, the accuracy compared to recent experimental data70 is on average 10%, while TDDFT without further approximations [Eq. (12)] yields excellent results (mean percentage deviation of 1.4%).
+Table III.
+Comparison of computed (PBE38/daug-def2-QZVP) and experimental
+C
+9
+coefficients (in a.u.,
+−
+C
+9
+is given) for rare gas trimers.
+Atoms DFT-D3 [Eq. (13)] TDDFT [Eq. (12)] Expt.a
+Ne Ne Ne  15.8  11.6  11.9 
+Ne Ar Kr  219.1  203.5  204.8 
+Ar Ar Ar  519.8  523.0  519 
+Ar Kr Kr  1047  1100  1087 
+Kr Kr Kr  1489  1600  1577 
+Ar Kr Xe  1554  1669  1647 
+Kr Xe Xe  3306  3716  3656 
+Xe Xe Xe  4944  5694  5595 
+a
+Reference 70.
+By applying the concept of short-range damping analogously as for the pairwise term, we arrive at the finally used formula for the nonadditive energy contribution,
+E
+(
+3
+)
+=
+∑
+A
+B
+C
+f
+d
+,
+(
+3
+)
+(
+r
+¯
+A
+B
+C
+)
+E
+A
+B
+C
+,
+(14)
+where the sum is over all atom triples
+A
+B
+C
+in the system and Eq. (4) with
+α
+=
+16
+⁠,
+s
+r
+=
+4
+/
+3
+⁠, and geometrically averaged radii
+r
+¯
+A
+B
+C
+is used as a damping function. As recommended in Ref. 1 this contribution is made less short ranged than the pair contribution. Due to the geometrical factor in Eq. (11) and because of the negative sign of the
+C
+9
+coefficient, the correction is repulsive in densely packed systems in which many “atomic triangles” with angles
+<
+90
+°
+are present. The contribution becomes negative, although much smaller, for more linear arrangements. In general, the three-body energy is insignificant for small
+(
+<
+10
+atoms
+)
+molecules and can be neglected but might be substantial for larger complexes.
+Although inclusion of the three-body energy increases the formal scaling behavior of the computational effort with system size from
+O
+(
+N
+atoms
+2
+)
+to
+O
+(
+N
+atoms
+3
+)
+⁠, this investment may be worthwhile in a DFT framework in which the computation time for the KS-DFT part is still at least two to three orders of magnitude larger. The result of this cost/performance analysis, however, might change when our approach is coupled with inherently less accurate but much faster semiempirical or force-field treatments. Currently little is known how
+E
+(
+3
+)
+in overlapping density regions is treated by standard DFs (for an intriguing recent report on DFT problems for this property, see Ref. 74). We will further comment on this in Sec. III B.
+D. Cutoff radii
+The damping function in Eq. (4) requires the specification of an atom pairwise cutoff radius
+R
+0
+A
+B
+which determines in which interatomic distance region the dispersion energy is decreasing (in absolute value) and eventually vanishing. Physically it describes the beginning of the DFT description of the exchange-correlation energy. These quantities are often termed vdW radii
+(
+R
+vdW
+)
+which is misleading because they do not describe the minimum of a potential energy curve. In DFT-D1/2 their values were determined as simple average of (density contour derived) atomic radii. We here propose a more sophisticated approach in which they are specifically computed for all atom pairs
+A
+B
+leading in total to 4465 values for all 94 elements considered here.
+The values are derived from the distance for which the first-order
+(
+E
+1
+)
+DFT interaction energy between the atoms
+A
+and
+B
+equals a cutoff energy. This is illustrated for C–C, C–N, and C–O pairs in Fig. 2. The value of the cutoff energy is chosen for convenience such that for carbon the same
+R
+0
+C
+C
+value as in the DFT-D2 method (2.91 Å) is obtained. Because the radii are scaled for each DF anyway [Eq. (4)], there is practically no influence of this choice on the results (for reasonable values between 2 and 10 kcal/mol). The
+E
+1
+values are computed by adding properly antisymmetrized, spherical ground state atomic KS determinants to build the diatomic A-B. The KS energy of this system without electronic relaxation of the orbitals minus the energies of separate A and B equals
+E
+1
+⁠. It differs from the true interaction energy by charge-transfer and polarization effects. If the atoms contain open shells, these are coupled to a high-spin state. In this way, chemical bond formation is avoided and repulsive potential curves are computed specifically for all 4465 pairs. In Fig. 3 we compare the
+R
+0
+A
+A
+values for
+Z
+=
+1
+–
+94
+to recently revised75 atomic
+R
+vdW
+values. It is seen that across the entire Periodic Table both data sets show similar trends. Further support of our approach comes from the observation that the sum of
+E
+1
+and
+E
+disp
+yields typical vdW potentials for, e.g., rare gas dimers (not shown) with approximately the right depth and position of the minima. This opens a route to compute ab initio vdW radii not only for the atoms but specifically for all element pairs (that is, however, not followed further here). We also compared the new with the old35 cutoff radii and observed significant differences, in particular, for metals and when
+A
+and
+B
+are very different in “size.” We strongly believe that our new values physically come closest to the concept of an atomic cutoff radius. The choice of the DF in the computation of
+E
+1
+has only a minor impact on the results and becomes negligible when the scaling factors
+s
+r
+,
+n
+are considered. In passing we note that our new pair-specific
+R
+0
+A
+B
+values may be beneficial also in other recent approaches that require a damping function (e.g., Refs. 6, 9, 43, and 45).
+FIG. 2.
+VIEW LARGEDOWNLOAD SLIDE
+First-order
+(
+E
+1
+)
+energies (PBE0/def2-QZVP) for C–C, C–N, and C–O interactions. The cutoff distance is determined as the distance for which the energy equals the cutoff energy (4.5 kcal/mol).
+FIG. 3.
+VIEW LARGEDOWNLOAD SLIDE
+Comparison of
+R
+0
+A
+A
+and
+R
+vdW
+values from Ref. 75.
+E. Coordination number dependent dispersion coefficients
+The contribution of an atom to the total dispersion coefficient of a molecule depends on its “chemical” environment. Two main electronic effects can be identified. First, the atom can change its oxidation state by electron transfer. This is generally considered as being important and was a major criticism to the simple DFT-D1/2 method. However, its relevance for typical applications is probably overemphasized as the electrons obviously do not disappear in the process. Although the
+C
+6
+value of the formally oxidized atom normally decreases, this is compensated at least partially by an accompanied increase in the
+C
+6
+value for the reduced atom. Because any attempt to account accurately for such effects would lead to a complicated dependence on the electronic density (or on the orbitals in more sophisticated approaches), we neglect this also in DFT-D3. Thus, if oxidation/reduction processes with charge transfer over long distances and the accompanied change in dispersion energy are of primary interest, one should keep this fundamental limitation of all current DFT-D methods in mind.
+The second effect is induced by (covalent) bond formation which drastically changes the electronic structure. Fractionally occupied atomic orbitals become mostly doubly occupied, energetically lower-lying molecular orbitals. Because this typically increases the electronic excitation energies, the resulting atomic polarizabilities and derived
+C
+6
+coefficients are often much smaller in molecules than in free atoms (in particular, for metals). This quenching of the atomic states is more effective for valence saturated compared to unsaturated structures. Empirically this is well known and already in the early DFTB-D implementation7 and other DFT-D versions,54 different coefficients, e.g., for the different hybridization states of carbon had been used. As Table II shows, this effect is significant. Note that such changes are not included in the DCACP (Ref. 13) method which (similar to DFT-D1/2) employs the same (fixed) parameters for each element in a system.
+The picture of hybridization-dependent dispersion coefficients has never been generalized nor has the assignment problem (when is a carbon atom in a molecule in an
+s
+p
+3
+hybridization state?) and the problem of differentiability (e.g., during a chemical reaction) been solved. We propose here a radically new “geometric” approach that is based on the concept of a fractional coordination number. The key idea is that not the hybridization state (an anyway not very well-defined concept) is responsible for the change in the dispersion coefficient but the above mentioned atomic state “quenching” induced by the bond partners. We base our ansatz on a fractional CN for an atom
+A
+⁠, that is a sum of a “counting” function over all atoms in the system,
+CN
+A
+=
+∑
+B
+≠
+A
+N
+a
+t
+1
+1
++
+e
+−
+k
+1
+(
+k
+2
+(
+R
+A
+,
+cov
++
+R
+B
+,
+cov
+)
+/
+r
+A
+B
+−
+1
+)
+,
+(15)
+where
+R
+A
+,
+cov
+is a scaled covalent (single-bond) radius of atom
+A
+(and analogously for
+R
+B
+,
+cov
+⁠). We take the recently proposed consistent values of Pyykkö and Atsumi76 and use a scale factor of
+k
+2
+=
+4
+/
+3
+to adapt these to our purpose. This yields chemically very reasonable CN values for normally bonded molecules (e.g., of about 2, 3, and 4 for the carbon atoms in ethyne, ethene, and ethane, respectively) but yields too large CNs for metallic systems. It was thus decided to decrease all covalent radii for metals by 10%. The other parameter
+k
+1
+=
+16
+has been chosen by taking the following points into consideration: first, for many chemical reactions involving carbon it is known that a C–C covalent single bond is broken between
+r
+(
+C
+–
+C
+)
+1.5–3 Å (for which CN should be in a range of 0–1). Second,
+k
+1
+must be large enough that very distant atoms are not “counted” so that the CN does not significantly depend on the size of the system. We tested this for graphene sheets of increasing size (from 24 to 150 carbon atoms) and found changes in the computed
+C
+6
+CC
+coefficients by
+<
+1
+%
+[see Eq. (16) below].
+Figure 4 shows CN values for a hypothetical molecule with a variety of different atoms and bonding situations. The values are close to integer for normal bonding situations and in perfect agreement with chemical intuition (including transition metals as demonstrated in the example). Significant differences from integer values are found in transition states of chemical reactions [e.g.,
+CN
+(
+C
+)
+=
+4.1
+and in particular
+CN
+(
+F
+)
+=
+0.57
+in the
+S
+N
+2
+reaction of
+F
+⋯
+CH
+3
+⋯
+F
+−
+] and for metals. In any dissociation reaction, the computed CN of an initially bonded atom exponentially decays to zero as it is physically plausible from the exponential decay of the (fragment) wave function overlap.
+FIG. 4.
+VIEW LARGEDOWNLOAD SLIDE
+Structure of a hypothetical molecule (PBE/TZVP optimized) to illustrate the concept of fractional coordination numbers.
+Turning back to the dispersion coefficients we propose the following general approach. For each element in the Periodic Table, at least one reference molecule is used to compute
+α
+(
+i
+ω
+)
+values in Eq. (10). Inclusion of the free atom values makes our approach exact for a “gas” of neutral atoms at large interatomic distances. If an element is commonly investigated and/or often found in different chemical environments, we suggest to use several representatives for which values are computed. In the case of carbon for example, ethyne, ethene, and ethane can be used for CNs between 2 and 4. Values computed for C–H and the carbon atom complete the set. For the atom of interest in any of the reference systems also the CN is calculated and stored. Using Eq. (10) the
+C
+6
+,
+ref
+A
+B
+(
+CN
+A
+,
+CN
+B
+)
+values are computed for this pair with the two atoms in their specific environments. These serve as supporting points in an interpolation procedure to derive the coefficient for any combination of fractional CN values. Because we base our approach on pair-specific coefficients
+C
+6
+A
+B
+⁠, a two-dimensional (2D) interpolation scheme must be used. After extensive testing we propose a simple Gaussian-distance
+(
+L
+)
+weighted average,
+(16)
+C
+6
+A
+B
+(
+CN
+A
+,
+CN
+B
+)
+=
+Z
+W
+,
+Z
+=
+∑
+i
+N
+A
+∑
+j
+N
+B
+C
+6
+,
+ref
+A
+B
+(
+CN
+i
+A
+,
+CN
+j
+B
+)
+L
+i
+j
+,
+W
+=
+∑
+i
+N
+A
+∑
+j
+N
+B
+L
+i
+j
+,
+L
+i
+j
+=
+e
+−
+k
+3
+[
+(
+CN
+A
+−
+CN
+i
+A
+)
+2
++
+(
+CN
+B
+−
+CN
+j
+B
+)
+2
+]
+,
+where
+N
+A
+and
+N
+B
+are the number of supporting points (⁠
+=
+number
+of reference molecules) for atoms
+A
+and
+B
+⁠, respectively. The
+CN
+A
+and
+CN
+B
+are coordination numbers for the atom pair
+A
+B
+in the system of interest, and the
+CN
+i
+A
+and
+CN
+j
+B
+are those for the two reference systems
+i
+and
+j
+⁠, for which
+C
+6
+,
+ref
+A
+B
+(
+CN
+i
+A
+,
+CN
+j
+B
+)
+is the precomputed value. The basic idea is outlined schematically in Fig. 5 where interpolation curves for carbon, nitrogen, and oxygen are also shown. The choice of the parameter
+k
+3
+was guided by the basic requirement to get smooth curves that avoid “sharp” parts in the resulting potential and concomitantly display clear plateaus close to integer CN values. Reasonable choices for this value (between 3 and 5) do not significantly affect the results and we finally took
+k
+3
+=
+4
+⁠.
+FIG. 5.
+VIEW LARGEDOWNLOAD SLIDE
+2D interpolation scheme for the dispersion coefficients (top) and cut through the surface for CC, NN, and OO atom pairs with
+CN
+A
+=
+CN
+B
+=
+CN
+⁠. Note the mentioned increase in the
+C
+6
+value for decreasing CN.
+For most of the elements only two reference values are necessary to cover the typical bonding situations. For “important” elements such as carbon, however, more values (5 in this case) seem appropriate. Currently we have computed in total 227 reference systems for the elements up to
+Z
+=
+94
+(see Sec. II G) which leads to about
+2.6
+×
+10
+4
+different values
+C
+6
+,
+ref
+A
+B
+(
+CN
+i
+A
+,
+CN
+j
+B
+)
+⁠. They are computed once and read at the beginning of any computation. This list is continuously updated on our homepage.77 For further details, see the supporting information.78 
+A very challenging test for the proposed model are (earth)alkaline metal complexes and clusters in which the dispersion coefficients as well as the CNs vary by large amounts (see Sec. III F). In this regard it is important to mention that for the chosen value of
+k
+3
+the steepness of the
+C
+6
+A
+B
+(
+CN
+A
+,
+CN
+B
+)
+function in between integer values does not pose problems for the calculation of smooth energy surfaces. These changes typically occur at interatomic distances much smaller than the cutoff radii so that “sudden” changes in the dispersion energy by a change in the
+C
+6
+value are effectively damped out. Some “bumps” in potential curves can been observed for metals in the midrange region when in addition to the free atom only one supporting point is used (e.g., the natural choice
+MH
+2
+with
+CN
+≈
+2
+for earth alkaline metals). The problem disappears when in this case a point for
+CN
+≈
+1
+(i.e., MH) is included. While this does not pose any problem for most molecule/bulk situations, one should keep it in mind when dissociating systems are investigated.
+F. Discussion
+Because some authors79 discredit the DFT-D approach as a “molecular mechanics” (MM)-type correction (which have the common flavor of being rather inaccurate) we want to clarify some general aspects at this point.
+Concerning empiricism (which is very high in typical MM methods) we have all in all only two adjustable parameters that are specific for each DF (⁠
+s
+r
+,
+6
+and
+s
+8
+⁠). This is an order of magnitude less compared to the highly parametrized DF and DCACP methods that have been mentioned in Sec. I. Both parameters affect only the medium distance range and are necessary to merge two different correlation contributions in a seamless fashion. As shown below (see Sec. III B) their values reflect construction principles of the underlying DF. All other important input data of the method (⁠
+⟨
+r
+n
+⟩
+⁠,
+R
+0
+A
+B
+⁠, and
+C
+n
+A
+B
+⁠) are computed from first principles. The interpolation of the coordination number dependent
+C
+6
+coefficients requires three further global ad hoc parameters that are adjusted by chemical reasoning and not by fitting. The covalent single-bond radii used in Eq. (15) could also be computed fully ab initio but have been taken from a standard compilation for convenience. The square-root scaling in Eq. (9) results from the prescription to avoid very highly ranked multipole terms which makes the approach robust. The damping function, Eq. (4), uses an additional exponent
+α
+n
+for each order. No other (hidden) parameters are required and the only remaining “freedom” is the choice of the reference molecules to compute the
+C
+6
+,
+ref
+A
+B
+(
+CN
+A
+,
+CN
+B
+)
+values. As long as chemically meaningful structures are used we expect systematically improved results. With only one value per element the new approach becomes identical to DFT-D1/2 in this respect.
+In principle, all input data for DFT-D3 could be computed specifically for each DF. We decided not to do so for the following reasons. First, all semilocal DF approximations yield too large
+C
+6
+coefficients because this property is mainly determined by the excitation spectrum which at this level is energetically too low compared to, e.g., that of hybrid functionals. This would introduce an (unnecessary) error and we thus decided to use the same rather accurate set of
+C
+6
+coefficients. The
+R
+0
+A
+B
+values from different DFs differ merely by a constant factor, and because these values are scaled anyway, the use of different data sets is not justified and furthermore would hamper the comparability of results from different DFs.
+The accuracy of some functionals could be improved slightly when
+s
+6
+in Eq. (3) is allowed to vary. Because this would deteriorate the long-range description it is not recommended. However,
+s
+6
+values smaller than unity are physically reasonable for double-hybrid functionals41 that asymptotically account for parts of the dispersion energy by virtual orbital dependent terms. For semiempirical methods that need more “variational freedom,” or when very large systems are not of interest, it may be sensible to vary
+s
+6
+as the restriction of asymptotic exactness may limit the achievable accuracy for (midrange sensitive) molecular complexes. Considering the uncertainty in the
+C
+6
+coefficients used, deviations of
+s
+6
+from unity of about ±10% would be tolerable.
+In summary we consider DFT-D3 as an approach to interpolate between two regions: the asymptotic part that is described very accurately by TDDFT (for atomic or molecular fragments) and the short-range regime for which standard DF approximations often yield a rather accurate description of the exchange-correlation problem. The method is of MM type in the sense that it is very fast and only geometric (structure) information is employed.
+The asymptotic correctness of DFT-D3 also leads to a nice “universal” feature: if the distant vdW energy is computed by a sum of
+R
+−
+6
+contributions between microscopic elements (e.g., atoms), “standard” power laws
+E
+∝
+−
+D
+−
+p
+for the interaction energy between various macroscopic bodies separated by distance
+D
+are obtained (e.g.,
+p
+=
+4
+for 2D layers and
+p
+=
+5
+for one-dimensional insulators). Note also that the practically important case of thick metal slabs is correctly described by an
+R
+−
+6
+sum.80 Small modifications of these power laws that are not covered by the DFT-D approach (and that are of special electronic origin) have recently been derived for metals and zero-gap insulators.80 This minor problem, however, is in sharp contrast to the complete failure of standard DFs (that are recommended in Ref. 79 for many practical purposes) for which the decay of the interaction with
+D
+is always incorrectly exponential.
+G. Technical details
+We here only give a summary of the computational details, for a complete description, see supplementary material.78 
+The DFT calculations and most of the MP2 calculations used to obtain reference data have been performed with the TURBOMOLE 5.9 or TURBOMOLE 6.0 (Ref. 81) programs. The coupled-cluster results were obtained with the ORCA (Ref. 82) or MOLPRO packages.83 If not mentioned otherwise the DFT results refer to calculations using the very large def2-QZVP Gaussian AO basis84,85 [for the lanthanides, francium, radium, and the actinides only def2-TZVP (Refs. 85 and 86) was available] and are based for open-shell systems on unrestricted (symmetry broken) KS-wave functions. The def2-QZVP sets are, e.g., for the first-row atoms of [7s4p] quality and are augmented with polarization functions typically taken from Dunnings quadruple-zeta sets leading finally to [7s4p3d2f1g] sets. They provide results quite close to the KS limit for many properties and are also essentially free of basis set superposition error (BSSE). The exponents of the outmost primitive Gaussian functions in these sets can be considered as being semidiffuse so that def2-QZVP can be used for large systems without risking linear dependencies and concomitantly yield acceptable polarizabilities with most GGA functionals. For the heavier elements
+(
+Z
+>
+36
+)
+small core effective pseudopotentials of the Stuttgart/Cologne groups87,88 were used. Except for the systems in the already established benchmark sets, the molecular geometries were optimized with the PBE0 (Ref. 39) hybrid functional. Numerical quadrature grids of size
+m
+4
+or
+m
+5
+(in TURBOMOLE notation) were generally employed. In order to speed up the calculations, the RI approximation for the SCF-part [RI-J or RI-JK (Refs. 89 and 90)] and the perturbation part of the double-hybrid functional91 was used. Matching auxiliary basis functions92–94 were taken from the TURBOMOLE basis set library. For the calculations of DFT-D3 parameters (⁠
+C
+6
+and
+R
+0
+⁠) RI was not used.
+Reference structures of hydrides
+A
+m
+H
+n
+and computation of
+α
+A
+m
+H
+n
+(
+i
+ω
+)
+⁠: For most elements, commonly known hydride structures were taken. Additionally
+d
+-block hydrides were generated in two different ways. The first was to saturate the heavy atom with hydrogens up to the 18-electron rule by placing hydrogen atoms spherically around it and subsequent energy optimization. In the second approach we keep the
+d
+-electrons unpaired which results in high-spin complexes of the stoichiometry
+AH
+2
+⁠. For the
+f
+-block elements, a similar technique was employed by keeping the
+f
+-electrons unpaired which results in structures of
+AH
+3
+type.
+The calculations of the dynamic polarizabilities are based on TDDFT employing the PBE38 functional
+(
+a
+x
+=
+3
+/
+8
+)
+⁠, a doubly augmented (diffuse 2s2p/2s2pd/2s2pdf set for helium and hydrogen/main group/
+d
+-block elements, respectively) def2-QZVP basis (termed daug-def2-QZVP), and the TURBOMOLE program
+e
+s
+c
+f
+⁠.95 The numerical integration in Eq. (10) is based on a spline-interpolation of typically 10–15 supporting points in a frequency range of up to
+10
+E
+h
+and exponential extrapolation to higher frequencies. The estimated numerical accuracy is better than 0.1%. The calculations of the cutoff radii and the atomic expectation values in Eq. (9) are based on (spherical atom) PBE0/def2-QZVP treatments.
+As reference data for the determination of the
+s
+r
+,
+6
+and
+s
+8
+parameters standard benchmark sets were used. Most of these data are based on estimated CCSD(T)/CBS results by assuming a standard additivity relation for higher-order correlation effects of the form
+est
+.
+CCSD
+(
+T
+)
+large
+basis
+=
+MP
+2
+large
+basis
++
+(
+CCSD
+(
+T
+)
+−
+MP
+2
+)
+small
+basis
+as suggested by Hobza (see, e.g., Ref. 96) and Klopper et al.,97 where large basis usually refers to an extrapolated CBS value. The accuracy is typically better than 1%–2% of the reference energy.
+In the fitting procedure, the following sets were taken: noncovalent interactions [S22 (Ref. 50)], tripeptide (PCONF), sugar (SCONF), alkane (ACONF), and cysteine (CCONF) conformers (see Ref. 98 and references therein), the
+S
+22
++
+set introduced here, alkane [ADIM6 (Ref. 99)], and rare gas dimers [RG6 (Refs. 100 and 101)]. The
+S
+22
++
+set contains the same systems as S22 but each complex at three larger intermolecular distances. ADIM6 contains the six dimerization energies of the alkanes ethane to heptane. The RG6 set includes the five homonuclear rare gas dimers from Ne to Rn and Xe–Rn. Their reference energies are weighted by a factor of 20 in the fitting procedure.
+As cross validation the following test sets were considered: the newly generated HEAVY28 benchmark set of noncovalently bound complexes of heavy element hydrides, the WATER27 (water clusters), DARC (Diels–Alder reactions), and AL2X (dimerization energies of aluminum compounds) test sets (see Ref. 98), graphene sheet dimers from Ref. 102, the porphyrine dimer structure F from Ref. 103, a “bucky-ball catcher” complex with
+C
+60
+(for experimental work, see Ref. 104), the ALK6 set of alkaline metal complexes and clusters introduced in this work, a cluster model for a benzene-Ag(111) surface adsorbate composed of 56 Ag atoms described below (in Sec. III F), and
+Au
+8
+clusters.105 
+III. RESULTS
+A. Molecular
+C
+6
+coefficients
+Molecular
+C
+6
+coefficients are experimentally known from dipole oscillator strength distributions (DOSDs) and a set of 174 pair coefficients for common molecules (with a size ranging from dihydrogen to octane but including also species like
+O
+2
+or
+SF
+6
+being difficult for our approach) has already been used in Refs. 45 and 49 to benchmark approximate theoretical procedures for their computation. We take the same set and compare DFT-D3 results as obtained by summing the computed
+C
+6
+A
+B
+values [Eq. (16)] over all intermolecular atom pairs. The results are shown graphically in Fig. 6. It is seen that our method provides very reliable coefficients over the entire range with a mean percentage deviation of only 8.4% which is better than for the data reported in Ref. 49. Note that even for diatomic molecules such as
+N
+2
+or
+O
+2
+(which are some kind of worst case because the atomic values have been derived from the very “different” molecules
+H
+2
+O
+and
+NH
+3
+⁠, respectively), the results are not in error by more than 20%.
+FIG. 6.
+VIEW LARGEDOWNLOAD SLIDE
+Comparison of molecular
+C
+6
+coefficients from DFT-D3 results and from Ref. 49 with experimental DOSD values. The solid line has a slope of unity and an intercept of zero.
+B. Noncovalent interactions and conformational energies
+The two empirical parameters for each DF have been determined by a least-squares fit to (relative) reference energies in the benchmark sets described above (S22,
+S
+22
++
+⁠, PCONF, SCONF, ACONF, CCONF, ADIM6, RG6). A total of 130 reference data values were included in the fit.
+The optimized DFT-D3 parameters as well as mean absolute deviation (MAD) values for the different functionals are given in Table IV and are also graphically shown in comparison with DFT and DFT-D2 statistical data in Fig. 7 (for a complete list for all benchmarks, see the supporting information78). Because these data are based on calculations with the very large def2-QZVP AO basis sets, the resulting parameters are essentially free of BSSE and other significant incompleteness effects and thus directly applicable, e.g., for typical plane wave basis set calculations. We also optimized corresponding values using Ahlrichs’ TZVPP AO basis85,86 that would be more appropriate for an efficient treatment of very large molecular systems and that accounts implicitly for the then more relevant BSSE effects (see supporting information78). Before we want to discuss these data a remark on the three-body terms [Eq. (14)] is necessary. First we note that their inclusion has only a minor impact on the optimized parameter values so that these terms can simply be switched on and off without changing the pairwise correction (e.g., for analysis reasons or for very large systems because of computational considerations). The reason for this is that
+E
+(
+3
+)
+makes an almost negligible contribution to small- and medium-sized systems as contained in the fit set. In fact, for important parts of it (e.g., S22) the performance for the majority of DFs deteriorated slightly (increase in MAD by about 0.02 kcal/mol). This may be attributed to an inherent overestimation of three-body effects in overlapping density regions with current DFs.74 Because little is currently known about this problem (and how to avoid it) and because of missing accurate reference data for larger systems (an attempt has been made recently by us, see Ref. 106), we finally decided to switch off this term by default. Thus, all data given above and in the following refer to Eq. (2) without
+E
+(
+3
+)
+⁠. The importance of the long-range part of the three-body energy, however, is expected to be larger for infinite systems, and numerical evidence for this is given in Sec. III D. We therefore propose to study its effect carefully in the future by the current (pairwise) additive DFT-D3 and to simply add then
+E
+(
+3
+)
+as calculated here or by future versions of Eq. (14).
+Table IV.
+Optimized DFT-D3 parameter values and MAD for the fit set and for the S22 benchmark set (values for DFT-D2 in parentheses). The entries are ordered according to increasing MAD.
+Functional
+s
+r
+,
+6
+s
+8
+MAD MAD for S22
+B2PLYPa  1.332  1.000  0.21  0.29 (0.40) 
+PW6B95  1.532  0.862  0.32  0.42 (0.36) 
+B97-D  0.892  0.909  0.37  0.43 (0.41) 
+revPBEb  0.923  1.010  0.37  0.45 (0.45) 
+B3LYP  1.261  1.703  0.37  0.46 (0.57) 
+BLYP  1.094  1.682  0.38  0.23 (0.29) 
+TPSS0c  1.252  1.242  0.39  0.56 (0.62) 
+PBE0  1.287  0.928  0.45  0.70 (0.77) 
+TPSS  1.166  1.105  0.48  0.46 (0.56) 
+PBE  1.217  0.722  0.56  0.62 (0.66) 
+BP86  1.139  1.683  0.65  0.62 (0.45) 
+a
+Global scaling factor of
+s
+6
+=
+0.5
+similar to that of Ref. 58 is used.
+b
+s
+6
+=
+1.25
+for DFT-D2 as determined by optimization for the S22 set.
+c
+s
+6
+=
+0.85
+for DFT-D2 as determined by optimization for the S22 set.
+FIG. 7.
+VIEW LARGEDOWNLOAD SLIDE
+Left: Comparison of MAD values for different functionals without dispersion correction (DFT), with the old (DFT-D2), and new (DFT-D3) versions. Right: MAD values averaged over nine DFs (excluding BP86 and PBE) for the different subsets.
+Turning now back to the fit set, it is first noted that the MAD values without any dispersion correction are about one order of magnitude larger than for DFT-D2 and DFT-D3, i.e., ranging from 3.3 kcal/mol for B97-D and revPBE to 1.2 and 1.4 kcal/mol for PW6B95 and B2PLYP, respectively (see Fig. 7 left). This demonstrates the importance of the correction for our test systems and underlines how well already the old DFT-D2 performs.
+The enhancement of DFT-D3 over DFT-D2 without any exception is evident from Fig. 7. The MAD decreases in a range from about 15% (for B2PLYP) to 40% (for TPSS). According to Table IV, the two best functionals are B2PLYP and PW6B95 followed by a group of five functionals that perform very similarly. Although the MAD values of about 0.6 kcal/mol for PBE and BP86 cannot be considered as bad, we cannot recommend these two functionals because much better semilocal alternatives (e.g., revPBE or BLYP) are available. The comparison of BP86 and BLYP also underlines the (often overlooked) effect of the correlation functional, i.e., the LYP variant, in general, performs very well for noncovalent interactions. There seems to be no relation of the overall functional performance to the value of the two empirical parameters. This, however, is different for the performance in thermochemical studies for which less repulsive DFs (large
+s
+r
+,
+6
+⁠, small
+s
+8
+values) seem to be better (see Sec. III E).
+It is striking that DFT-D3 also works much better than DFT-D2 for the B97-D functional for which the electronic part has been parametrized explicitly in the presence of the old dispersion correction. This very clearly demonstrates that the new approach does not simply represent a more sophisticated empirical fitting procedure but contains new and important physical ingredients. This also suggests further possible improvements by functional parametrization together with the new correction.
+The Table IV also compares the overall performance of the different DFs for the important S22 benchmark of noncovalent interactions that has become the de facto standard test. A comparison of “best so far” values from the literature are given in Table V.
+Table V.
+Comparison of “best” MADs for the S22 benchmark set with DFT (and for comparison) some wave function (WF) based methods.
+Method Type MAD (S22) Ref.
+BLYP-D3  GGA  0.23  This work 
+B2PLYP-D3  Double hybrid  0.29  This work 
+ω
+B
+97
+X-D
+  Hybrid GGA  0.22  60  
+vdW-DF(optB88)a  GGA  0.23  23  
+ω
+B
+97
+X-
+2
+  Double hybrid  0.26  107  
+LC-BOP
++
+LRD
+  Hybrid GGA  0.27  6  
+M06–2X  Metahybrid GGA  0.41  108  
+DFT
+(
+revPBE
+)
++
+LAP
+  GGA  0.57  14  
+FN-DMC  WF  0.68  109  
+MP2/CBS  WF  0.78  110  
+vdW-DF(PBE)  GGA  1.19  111  
+a
+Used with an empirically adjusted (for the S22 set) Becke88 exchange functional (optB88).
+The MAD (for the full fit set) and the MAD(S22) values show only a rather rough correlation with each other. Similar observations have been made for other subsets. This in essence means that one can always find a better performing functional for a particular property (e.g., hydrogen bonding or
+π
+-stacking), but when the problem is not so well defined it is advisable to use a more general good performer. The best DFs for S22 with very small MADs of 0.23 and 0.29 kcal/mol, respectively, are BLYP and B2PLYP followed by PW6B95. Although MAD values slightly below 0.2 kcal/mol could be achieved by special parametrization to this set, we think that values of about 0.2–0.25 kcal/mol mark some kind of limit that is achievable for general purpose methods. This is also rather close to the estimated accuracy of the CCSD(T) reference data. We thus consider the first six methods in Table V as giving the same very high accuracy for this set. Pure wave function based methods that have a perspective of being applicable to large systems are not competitive. Note also the bad performance of the nonempirical vdW-DF method when used together with a standard GGA (last compared to the fourth entry of Table V). This in essence means that also with a formally nonempirical vdW functional similarly good results compared to DFT-D3 can only be obtained with a similar amount of empiricism.
+Figure 7 also displays a comparison of the performance of all functionals considered (averaged MADs) for each of the subsets. In all cases (except
+S
+22
++
+⁠) DFT-D3 is significantly better than DFT-D2. The by far largest enhancements are found for the peptide and alkane conformers and the rare gas dimer binding energies. This is clearly related to the use of
+C
+6
+(
+CN
+)
+values (which is of particular importance for carbon) and much more accurate parameters for the heavier elements in RG6 (up to
+Z
+=
+86
+⁠).
+As a cross validation we furthermore considered the so-called WATER27 benchmark set (Fig. 8, for details, see Ref. 98). It consists of 27 neutral
+(
+H
+2
+O
+)
+n
+⁠, positively charged
+H
++
+(
+H
+2
+O
+)
+n
+and negatively charged
+OH
+−
+(
+H
+2
+O
+)
+n
+clusters. It can be regarded as a tough test for the description of strong hydrogen bonds and is sensitive to the midrange (due to the small intermolecular distances) as well as the asymptotic region (due to the large size of the clusters up to
+n
+=
+20
+⁠). For this set the def2-QZVP basis was augmented with diffuse sp-functions on the oxygen atoms, as recommended in Ref. 98. If one considers the large average binding energy of 82.0 kcal/mol, the DFT-D3 results can be regarded as mostly very accurate and an MAD value of about 2 kcal/mol for PW6B95 is close to the accuracy of the reference values (and to remaining basis set incompleteness effects). For all 11 DFs the average MAD decreases from 7.8 (DFT) to 5.2 (DFT-D2) and 4.3 kcal/mol for DFT-D3. Only for PBE and PBE0 which have a clear overbinding tendency already without any correction, (both) versions worsen the results. Note, however, that these two DFs without correction do not give the right answer for the right reason: they simulate the effects of dispersion (that become more important as the size of the system increases) by overbinding of each hydrogen bond. This eventually will lead to wrong results in the bulk and we strongly recommend all other DFs (in particular, BLYP, revPBE, and B97-D at the semi-local level) together with DFT-D3 for water-related problems.
+FIG. 8.
+VIEW LARGEDOWNLOAD SLIDE
+Comparison of MAD values for different functionals without dispersion correction (DFT), with the old (DFT-D2), and new (DFT-D3) versions. Left: WATER27 benchmark set. Right: HEAVY28 benchmark set.
+The most striking conclusion from the analysis of the statistical benchmark data is the enhanced accuracy of the new version for the very important and difficult tripeptide folding test set (PCONF, see Refs. 98, 112, and 113) with all DFs. In Fig. 9 we compare ten conformational energies with the old and new methods for selected DFs and note in passing that deviations for most uncorrected functionals are so large
+(
+MAD
+=
+2
+–
+5
+kcal
+/
+mol
+)
+that the curves would not fit within the chosen energy scale. As pointed out previously,58 theoretical peptide folding without dispersion corrections makes absolutely no sense! Generally, the MAD values for DFT-D3 are about a factor of 1/2 lower compared to DFT-D2 (see also Fig. 7) which can be considered as a big step toward an accurate modeling of such folding processes. Even for B2PLYP (which is already rather accurate with DFT-D2), the new correction improves and the remaining deviation
+(
+MAD
+=
+0.16
+kcal
+/
+mol
+)
+is now definitely within the error of the estimated CCSD(T)/CBS reference values. While previously such high accuracy seemed to be limited to more costly double-hybrid DFs, good accuracy can now be obtained also with hybrid DFs [e.g.,
+MAD
+(
+B
+3
+LYP-D
+3
+)
+=
+0.32
+kcal
+/
+mol
+] or even computationally inexpensive DFs [e.g.,
+MAD
+(
+BLYP-D
+3
+)
+=
+0.51
+kcal
+/
+mol
+]. This opens the efficient and accurate treatment of (large) protein-folding models as a new field to DFT. Although all functionals strongly benefit from the improved dispersion description, it is again noted that the PBE/TPSS-type functionals perform worse compared to LYP based methods [
+MAD
+(
+TPSS-D
+3
+)
+=
+1.10
+kcal
+/
+mol
+⁠,
+MAD
+(
+PBE-D
+3
+)
+=
+1.51
+kcal
+/
+mol
+].
+FIG. 9.
+VIEW LARGEDOWNLOAD SLIDE
+Comparison of relative energies for tripeptide conformations (PCONF benchmark set) with different functionals. Left: old (DFT-D2) and right, new versions of DFT-D. The lines are just drawn to guide the eye.
+C. Noncovalently bound complexes of molecules with heavier elements
+Neither the DFT-D1/2 methods nor any of the other DFT approaches to the dispersion problem have hitherto been thoroughly tested for complexes of molecules involving heavier elements. Here we want to improve this situation and propose a new benchmark set of noncovalently bound complexes of simple hydrides involving the elements Pb, N, Sb, Bi, O, S, Te, Cl, Br, and I in various combinations. The complexes and reference dissociation energies [est. CCSD(T)/CBS//MP2/def2-QZVP] together with results for selected DFs are given in Table VI. Note that we cannot be sure that in all cases the global minimum structure of the complex has been found (although the structures are in any case close by). This, however, should not influence the assessment as the same fixed geometries are used for all methods. The deviations from the reference data with the new correction are remarkably small. The MAD values are typically only between 0.1 and 0.2 kcal/mol compared to 0.2–0.5 kcal/mol with DFT-D2 (see Fig. 8). The errors for pure DFT are an order of magnitude larger with MAD values in the range 0.6–1.5 kcal/mol which is of the same size as the average dissociation energy. The very small remaining errors are randomly distributed and no bias in favor of particular combinations of light and heavier elements are observed. Note that none of these complexes has been included in the fitting set. One should, however, keep in mind that the hydrides considered are the reference molecules for the determination of the dispersion coefficients which might limit the significance of this benchmark. The best of the tested DFs for this set are B2PLYP, PW6B95, and TPSS0.
+Table VI.
+Results for a benchmark set of 28 complexes containing heavy nuclei (termed HEAVY28). Reference dissociation energies (CCSD(T)/CBS with counterpoise correction) and deviations for three different DFs with DFT-D3 are given in kcal/mol.
+Complex Reference value B2PLYP B3LYP revPBE
+BiH
+3
+⋯
+BiH
+3
+  1.29  −0.01  −0.13  0.02 
+BiH
+3
+⋯
+H
+2
+O
+  2.42  0.28  0.22  0.01 
+BiH
+3
+⋯
+H
+2
+S
+  1.40  −0.02  −0.16  −0.04 
+BiH
+3
+⋯
+HBr
+  1.16  0.05  0.03  0.05 
+BiH
+3
+⋯
+HCl
+  0.85  −0.04  −0.06  −0.08 
+BiH
+3
+⋯
+HI
+  1.42  −0.13  −0.47  −0.42 
+BiH
+3
+⋯
+NH
+3
+  0.69  −0.02  0.04  0.25 
+PbH
+4
+⋯
+PbH
+4
+  1.32  −0.07  −0.38  −0.25 
+PbH
+4
+⋯
+BiH
+3
+  0.68  0.06  0.08  0.14 
+PbH
+4
+⋯
+H
+2
+O
+  0.44  −0.12  −0.14  −0.15 
+PbH
+4
+⋯
+HBr
+  1.04  0.10  0.14  0.14 
+PbH
+4
+⋯
+HCl
+  0.80  0.16  0.27  0.23 
+PbH
+4
+⋯
+HI
+  1.29  0.25  0.15  0.17 
+PbH
+4
+⋯
+TeH
+2
+  0.70  0.23  0.22  0.23 
+SbH
+3
+⋯
+SbH
+3
+  1.30  −0.19  −0.61  −0.39 
+SbH
+3
+⋯
+H
+2
+O
+  1.70  −0.03  −0.17  −0.20 
+SbH
+3
+⋯
+H
+2
+S
+  1.14  −0.05  −0.15  −0.00 
+SbH
+3
+⋯
+HBr
+  2.07  0.03  −0.10  0.03 
+SbH
+3
+⋯
+HCl
+  2.20  0.08  0.01  0.15 
+SbH
+3
+⋯
+HI
+  1.64  0.16  0.02  0.22 
+SbH
+3
+⋯
+NH
+3
+  2.80  0.08  −0.11  −0.12 
+TeH
+2
+⋯
+TeH
+2
+  0.58  0.15  0.02  0.13 
+TeH
+2
+⋯
+H
+2
+O
+  0.68  0.06  0.02  0.04 
+TeH
+2
+⋯
+H
+2
+S
+  0.50  −0.04  −0.15  −0.03 
+TeH
+2
+⋯
+HBr
+  1.24  −0.01  −0.17  −0.15 
+TeH
+2
+⋯
+HCl
+  1.24  0.02  −0.12  −0.12 
+TeH
+2
+⋯
+HI
+  0.84  0.18  0.20  0.33 
+TeH
+2
+⋯
+NH
+3
+  3.29  0.27  0.16  0.19 
+D. Binding energy between graphene sheets and in large aromatic complexes
+Recently,102 DFT-D2 at the B97-D/TZVP level has been applied to graphene sheet model dimers of increasing size [up to
+(
+C
+216
+H
+36
+)
+2
+]. The interaction energies have been extrapolated to infinite lateral size of the sheets. The value of 66 meV/atom obtained for the dissociation energy of two sheets supports the most recent experimental estimate for the exfoliation energy of graphite [
+52
+±
+5
+meV
+/
+atom
+(Ref. 114)] but clearly is too large mainly due to an inaccurate treatment of the asymptotic region (⁠
+s
+6
+=
+1.25
+in DFT-D2). Because this as well as related systems and the problem of asymptotic behavior are so important, we reconsidered it here and computed the dissociation energies for the previously used structures (but with a better basis set, see Table VII). All uncorrected DFs do not yield bound graphene sheets. Except for PBE the old dispersion correction overbinds considerably which can also be traced back to a too large
+C
+6
+value for carbon (30.4 versus 25.7 a.u. for
+CN
+=
+3
+in DFT-D3). For recommended DFs (i.e., except PBE) the dissociation energies with DFT-D3 are lower (by 5%–20%) and much closer to the experimental value. Remaining basis set incompleteness effects are expected to be 1–2 meV/atom. If the effect of more graphene layers is considered, an experimental value slightly less than 50 meV/atom for two sheets seems reasonable (which is also consistent with the vdW-DF value of 50 meV/atom). Because most of the functionals still provide larger values, we also included
+E
+(
+3
+)
+in our treatment. As can be seen in Table VII (rightmost column), its effect on the dissociation energy is rather large (5 meV/atom or about 10%). This correction brings the B97-D, revPBE, and TPPS values in very close agreement with the experimental estimate for a two sheet interaction.
+Table VII.
+Computed interlayer dissociation energy of two graphene sheets in meV/atom with different DFs. Structures with fixed interlayer distance. Extrapolated to infinite sheet size from graphene models with 24, 54, 96, and 150 carbon atoms in one sheet using the TZV(2d,p) AO basis. The estimated numerical (extrapolation) accuracy is ±2%. For details, see Ref. 102.
+(meta)GGA functional DFTa DFT-D2   DFT-D3
+  With
+E
+(
+3
+)
+BLYP  −29  62     59  54 
+B97-D  −32  63     52  46 
+revPBE  −31  65     55  49 
+PBE  −1  47     41  35 
+TPSS  −16  59     48  43 
+vdW-DFb  50 
+Exptc 
+52
+±
+5
+  a
+The negative sign indicates unbound layers.
+b
+Reference 115.
+c
+Exfoliation energy for graphite from extrapolation of PAH adsorption energies, see Ref. 114 This value should be about 5% larger than the graphene sheet interlayer dissociation energy (Refs. 102 and 116).
+The overbinding tendency of DFT-D2 for large carbon systems is in part also observable for large molecular complexes as shown for the two examples of the porphine dimer (structure F, for details, see Ref. 103) and a “bucky-ball catcher” complex with
+C
+60
+(Ref. 104) as shown in Fig. 10. While for the porphine dimer the old and new versions yield similar binding energies of about 20 kcal/mol with BLYP, for the much larger fullerene complex, we notice a significant reduction of about 15%–25% with DFT-D3 compared to DFT-D2. The new values for the “catcher” complex of 32–34 kcal/mol are in better agreement with estimates from dispersion-uncorrected M05–2X and M06–2X treatments117,118 that yield smaller dissociation energies of 20.7 and 26.4 kcal/mol, respectively, probably due to the neglect of the long-range dispersion energy which is included in the DFT-D3 values.
+FIG. 10.
+VIEW LARGEDOWNLOAD SLIDE
+Dissociation energies [TZV(2d,p) AO basis] for the porphine dimer (left) and a bucky-ball catcher complex with
+C
+60
+for two DFs and DFT-D3. Values for DFT-D2 in parentheses.
+E. Thermochemistry
+A detailed study of the effects of the dispersion correction on chemical reaction energies is beyond the scope of the present work. However, because this aspect is important for many practical problems in chemistry we want to discuss the topic briefly using two examples. The first is the so-called DARC set (taken from the GMTKN24 database98) in which 14 typical bimolecular Diels–Alder reactions are considered. Reference values are based on CCSD(T)/CBS calculations and the average reaction energy is 32.2 kcal/mol. In order to see if effects are related to the presence of carbon in addition, the so-called AL2X set98,119 is investigated which contains covalent dimerization energies of seven aluminum compounds of the type
+AlX
+3
+(
+X
+=
+H
+,
+CH
+3
+,
+F
+,
+Cl
+,
+Br
+)
+⁠. The average reaction energy is similar as for DARC (33.9 kcal/mol). The statistical data are presented in Fig. 11. The MAD values given in Fig. 11 mostly represent the mean (signed) deviations meaning that the exothermicity of the reactions is underestimated without dispersion correction. This is clear because a bimolecular addition product has a larger amount of intramolecular dispersion energy which is mostly neglected in standard DFs. Inspection of the statistical data reveals that for the dimerization of the
+AlX
+3
+compounds the old and new DFT-D versions provide almost the same accuracy and that both strongly improve upon pure DFT for all functionals. The new version seems to perform better for the more “attractive” functionals that are already best without correction (e.g., PBE, TPSS, and PW6B95) and which better account for medium-range correlation effects. The opposite holds for the more repulsive functionals such as BLYP, revPBE, B97-D, or B3LYP.
+FIG. 11.
+VIEW LARGEDOWNLOAD SLIDE
+Comparison of MAD values for two thermochemical benchmarks without dispersion correction (DFT), with the old (DFT-D2) and new DFT-D3 versions. Left: Diels–Alder reaction energies (DARC set); right: dimerization energies of
+AlX
+3
+molecules.
+The picture is a bit different for the Diels–Alder reactions for which DFT-D3 is worse than DFT-D2 for all functionals except PBE0 and TPSS0. The effect is, in particular, significant for the combinations of Becke exchange with LYP correlation. However, in any case DFT-D3 provides still much better results than pure DFT so that there is no reason to abandon the new correction for such thermochemical problems. The fact that there is a significant worsening of the results with DFT-D3 only for the organic reactions underlines the conclusion from Sec. III C that the “wrong”
+C
+6
+coefficient for carbon in DFT-D2 compensates for deficiencies in the functionals. Even though the results for DARC are apparently worse than before we find it encouraging that the ab initio design of DFT-D3 uncovers such (uncontrollable) error compensations and more strictly separates long- and short-range correlation effects. As discussed in detail in Ref. 119, part of the remaining deviations can be attributed to the self-interaction error (SIE).
+F. Metallic systems
+In general, the DFT-D2 parameters are not very well defined for metal compounds, and in part this is related to the typically less clear bonding situations. For example, in a recent attempt to redetermine consistent
+R
+vdW
+values for large parts of the Periodic Table, Mantina et al.75 reported a very strong dependence of the optimum radius on the type of “probe” molecule to compute the noncovalent interaction energy (from which
+R
+vdW
+can be derived), in particular, for the alkaline metals. Problems also arise for the strongly varying
+C
+6
+values which are fixed in DFT-D2, and, in fact, this is one of the oldest and most basic criticisms of the DFT-D1/2 methods.
+In this section we want to show using three examples how much these problems have been overcome. This study was also motivated by observations of K. Baldridge120 who found significant overbinding of DFT-D2 for alkaline metal cation-benzene complexes
+(
+BzM
++
+)
+⁠. We consider the dissociation energies of these complexes here and take neutral, three-dimensional (3D) metal clusters with eight atoms in which dispersion effects show up significantly as the other extreme. Aromatic cation complexes are very important also in many biological systems and for the most recent study on this and related problems with many references see Ref. 121. In order to minimize effects of SIE the closed-shell reaction
+M
+8
+→
+4
+M
+2
+(instead of atomization) is investigated. The reference dissociation energies [est. CCSD(T)/CBS which are for
+BzM
++
+in very close agreement to those of Feller122] and deviations for TPSS and B2PLYP as two examples are shown in Table VIII. The dissociation energies decrease very significantly (by almost a factor of 1/2) when going from
+M
+=
+Li
+to Na and less from Na to K. The absolute errors for cations with the two uncorrected DFs are small (0.4–2.6 kcal/mol), while they have a span of almost 16 kcal/mol for the neutral systems. For these, TPSS is close to the reference while B2PLYP significantly underbinds. Both functionals increasingly underbind for Na and K. These results qualitatively indicate that dispersion effects are small (quenched) for the cationic complexes, while they are more important for the heavier element clusters. However, also for
+BzK
++
+the importance of dispersion is clear from our data, which is in agreement with SAPT results.121 
+Table VIII.
+Reference [est. CCSD(T)/CBS] dissociation energies for alkaline metal complexes and clusters and deviations (including mean values) for B2PLYP and TPSS functionals (all data in kcal/mol). Negative values indicate underbinding.
+System Reference DFT DFT-D2 DFT-D3
+TPSS B2PLYP TPSS B2PLYP TPSS B2PLYP
+BzLi
++
+  38.4  1.0  0.8  11.0  6.3  1.1  0.9 
+BzNa
++
+  25.0  −0.8  0.4  7.7  5.1  −0.1  1.1 
+BzK
++
+  19.2  −2.6  −1.1  2.9  1.9  −1.4  −0.1 
+Li
+8
+  83.2  4.9  −4.1  13.7  0.8  7.1  −2.5 
+Na
+8
+  54.6  −1.7  −7.7  7.0  −2.9  4.2  −2.9 
+K
+8
+  47.1  −2.6  −10.9  0.6  −9.1  6.0  −3.5 
+MD     −0.3  −3.8  7.2  0.4  2.8  −1.2 
+MAD     2.7  4.2  7.2  4.4  3.3  1.9 
+With DFT-D2 all
+BzM
++
+complexes are overbound and the different metals are inconsistently described (increasing error from K to Li). For the neutral clusters, DFT-D2 improves upon DFT for B2PLYP (and similarly for BLYP, B97-D, and B3LYP) but TPSS (and also PBE) are apparently overcorrected. Again, an inconsistency for the heavier metals is observed, i.e., the correction is largest for
+M
+=
+Li
+and very small for
+M
+=
+K
+⁠. This disturbing behavior cannot be explained by system independent
+C
+6
+coefficients alone but also inaccurate
+R
+0
+A
+B
+values seem to be responsible.
+Our modifications have a dramatic impact on the quality of the results. The MAD for B2PLYP-D3 is only 1.9 kcal/mol compared to 4.4 kcal/mol for DFT-D2. Most notably, the neutral and ionic systems are described almost equally well and the strong overbinding tendency for the cations is not observed anymore. Similar results are found for other repulsive DFs such as B3LYP or revPBE. For TPSS which performs much worse with DFT-D2 than without any correction the situation is also improved. The
+BzM
++
+complexes are now described slightly better than uncorrected and the neutral clusters are relatively consistently overbound (which is known from other metal systems123) but not as strong as with DFT-D2. The overall MAD value for TPSS-D3 of 3.3 kcal/mol is acceptable.
+The main reason for the improved description are the larger cutoff radii that strongly influence the distance range of the dispersion correction through the damping function. The increased values in DFT-D3 (and this holds for many metals) reduce the overbinding for the cation complexes because of their rather short M–C distances (2.33–3.10 Å) but this does not affect the neutral systems much because their M–M distances (in particular, for Na and K) are much larger on average (bond lengths are 3.48 and 4.57 Å for
+Na
+8
+and
+K
+8
+⁠, respectively).
+Similar good accuracy can also be obtained for transition metal clusters, and in Fig. 12 we show as an example energies for the 2D-3D transition in
+Au
+8
+(for details see Ref. 105). While uncorrected DFT underestimates the stability of the 3D structures by 6–8 kcal/mol due to missing intramolecular dispersion effects, DFT-D2 slightly overcorrects one of the systems. The new method yields accurate results that are within the estimated error of the reference values.
+FIG. 12.
+VIEW LARGEDOWNLOAD SLIDE
+Relative energies (in kcal/mol, def2-QZVP-ECP60 for DFT) in comparison to CCSD(T) reference values for 2D (left) and 3D (middle and right) forms of the
+Au
+8
+cluster with and without dispersion correction and the PBE functional.
+Our third example is concerned with the asymptotic behavior of the method. We take the dissociation of
+Li
+2
+in its lowest triplet state (in order to avoid multireference state problems) as an example. The asymptotic region of the interatomic potential (the covalent Li–Li bond length is about 2.7 Å) is shown in Fig. 13. As can be clearly seen, DFT-D3 dramatically improves the description. For all DFs a very good agreement with the CCSD(T) reference data is observed while the DFT-D2 dispersion energy (the dashed curve) is close to zero. The reason for this is the constant (and small)
+C
+6
+coefficient for Li–Li that is appropriate for molecules/bulk but not for the weakly interacting situation. On the contrary, DFT-D3 smoothly interpolates between the very large value of the free atoms (1169 a.u.) and the typical value for lithium in molecules (89 a.u. as derived from LiH). This smaller value, however, is not relevant at these large distances far away from the covalent bonding region and thus the DFT-D3 description becomes almost exact as long as the
+C
+6
+coefficient of the free atom is (close) to exact. Note, however, that this strictly holds only for neutral systems and, e.g., in the dissociation of the
+BzM
++
+complexes, DFT-D3 would asymptotically use the incorrect dispersion coefficient of the neutral metal atom instead of that of
+M
++
+⁠.
+FIG. 13.
+VIEW LARGEDOWNLOAD SLIDE
+Asymptotic region of the potential energy curves for dissociation of
+Li
+2
+(
+Σ
+3
+u
+)
+⁠. We compare the dispersion energy of the DFT-D methods with the correlation energy contribution in the CCSD(T) treatment which is
+E
+disp
+to a very good approximation at these distances.
+As the last example we investigate the interaction of a transition metal (silver) surface (conveniently modeled by a cluster composed of 56 atoms) with benzene. Experimentally, the adsorption enthalpy of benzene on Ag(111) is about 13 kcal/mol.124 As can be seen from Fig. 14, the adsorption is essentially “dispersion driven” as the two uncorrected DFs (revPBE and TPSS as examples) provide almost no binding. Similar to the case of the alkaline metal systems, also here DFT-D2 strongly overbinds yielding adsorption energies of 28–30 kcal/mol and relatively short interplane distances
+<
+2.9
+Å
+⁠. This is at least in part corrected with DFT-D3 and both functionals yield more realistic distances (which unfortunately is experimentally not known) and a binding energy of about 22 kcal/mol which compares better with the experimental value of 13 kcal/mol. Consideration of vibrational zero-point energies would bring theory and experiment in even closer agreement. Note also that the differences between the two functionals nicely diminish with DFT-D3 compared to DFT-D2 which has been also observed for other test systems. The correctly reduced dispersion energy in DFT-D3 compared to DFT-D2 results from both, the increased cutoff radius of Ag (1.665 versus 1.49 Å) and a reduced
+C
+6
+coefficient (269 versus 428 a.u.). Note, that neither a silver containing system nor any metal surface-related problem has been included in the fit set for the determination of the DF specific parameters. The question if the remaining substantial differences between theory and experiment are due to errors of the latter, an inadequateness of the GGA functionals (e.g., overpolarization effects), finite cluster size effects, or deficiencies of DFT-D for extended metals, in general, will be an interesting topic for future research. Preliminary work on this problem indicates already that the effective
+C
+6
+coefficient of Ag in the bulk is only slightly different from that derived from the AgH molecule with
+CN
+=
+1
+and that finite cluster size effects are the most likely source of error.
+FIG. 14.
+VIEW LARGEDOWNLOAD SLIDE
+Potential energy curves (def2-TZVP-ECP28) for dissociation of benzene from an Ag(111) surface with and without dispersion corrections. The inset shows the cluster model composed of 56 Ag atoms. Unrelaxed monomer structures using the experimental lattice constant
+a
+=
+4.09
+Å
+for bulk Ag are taken.
+IV. SUMMARY AND CONCLUSION
+It is very likely that the DFT-D method in its present form is close to the limit of what can be achieved in the framework of a “nonelectronic” approach to the computation of the dispersion energy. The new DFT-D3 method can be coupled with any standard DF, is applicable to all elements of the Periodic Table, to molecules and solids, and achieves (within about 10% typically) CCSD(T) accuracy. This holds for van der Waals complexes as well as for intramolecular noncovalent interactions that very often occur in conformational problems. It seems as if with the new version of DFT-D at least in principle accurate simulations of protein-folding with standard functionals are possible. The method is furthermore robust, numerically stable, easily programmable, very fast, and allows for the straightforward computation of analytical gradients (forces). All necessary input parameters (cutoff radii and dispersion coefficients) are computed ab initio by KS-DFT/TDDFT methods using extended AO basis sets close to the limit. The main conceptual advantage that is mostly responsible for the increased accuracy, is the use of structure (coordination number) dependent dispersion coefficients that are based on accurate first-principles (TDDFT) calculations. Previously observed problems for metallic systems are remedied by a more consistent calculation of pair-specific cutoff radii.
+One of the very big advantages of the present approach is that structural data are used but no atom connectivity information is required and everything is computed solely from Cartesian coordinates and atomic numbers. The apparent disadvantage of DFT-D that no electronic information is used is less problematic in typical applications than often assumed. This (computationally motivated) simplification turns into an advantage when the method is used to compute the dispersion energy accurately in, e.g., semiempirical or even sophisticated force-field methods. This is not possible with pure density (or orbital based) approaches. Another strong point (that is often ignored) is the ease in which the dispersion contributions can be analyzed in order to get qualitative insight and understanding, e.g., regarding the contributions from parts of a system (for a recent example, see, e.g., Ref. 125) or with respect to a range partitioning of the dispersion energy.
+The new method has been thoroughly tested not only on common organic, noncovalently bound complexes but also large, infinite, “heavy”, and metallic systems have been considered. In all cases tested, high accuracy and no “outliers” have been obtained. Typically, the MADs decrease by 0%–30% compared to the previous (already accurate) DFT-D2 version. For the S22 benchmark set, the MAD averaged over nine different DFs decreases from 0.5 to 0.4 kcal/mol. The two best functionals B2PLYP and BLYP yield very small MADs for S22 of 0.29 and 0.23 kcal/mol, respectively, which is competitive with results from the best other DFT approaches reported so far in the literature.
+Notable exceptions of the generally increased accuracy are related to the dispersion corrections for some chemical reaction energies, in particular, those involving many carbon atoms. We attribute this to an (mostly) accidental compensation of errors in the old DFT-D2 treatment (overestimation of midrange dispersion) and a respective “undercorrelation” of typical DFs. We nevertheless think that the new DFT-D method provides a more clear and physically sound separation of mid- and long-range effects. It is expected that DFT-D3 will be also superior for such thermochemical, intramolecular dispersion effects by using specially adapted electronic parts. Work along this line is in progress.
+The method has been implemented in a FORTRAN program that is freely available on our web page77 where we also keep a continuously updated file with available
+C
+6
+coefficients ready. It can easily be interfaced with any electronic structure or molecular modeling software package. We hope that the new dispersion correction (which represents our “last” major revision of this method) serves as an accurate computational tool for many purposes in theoretical chemistry and physics.
+ACKNOWLEDGMENTS
+This work was supported by the Deutsche Forschungsgemeinschaft in the framework of the SFB 858 and by Grant No. AN 793/1-1. The authors thank C. Mück-Lichtenfeld for valuable discussions, T. Bredow (University of Bonn) for kindly providing us the Bz-Ag(111) structures, and K. Baldridge (University of Zürich) for bringing the problem of alkaline metal complexes to our attention.
+REFERENCES
+1.A. J. Stone, The Theory of Intermolecular Forces (Oxford University Press, Oxford, 1997).
+Google Scholar 
+2.I. G. Kaplan, Intermolecular Interactions (Wiley, Chichester, 2006). https://doi.org/10.1002/047086334X
+Google ScholarCrossref  
+3.S. Grimme, J. Antony, T. Schwabe, and C. Mück-Lichtenfeld, Org. Biomol. Chem. 5, 741 (2007). https://doi.org/10.1039/b615319b
+Google ScholarCrossref PubMed 
+4.J. Gräfenstein and D. Cremer, J. Chem. Phys. 130, 124105 (2009). https://doi.org/10.1063/1.3079822
+Google ScholarCrossref PubMed 
+5.E. R. Johnson, I. D. Mackie, and G. A. DiLabio, J. Phys. Org. Chem. 22, 1127 (2009). https://doi.org/10.1002/poc.1606
+Google ScholarCrossref  
+6.T. Sato and H. Nakai, J. Chem. Phys. 131, 224104 (2009). https://doi.org/10.1063/1.3269802
+Google ScholarCrossref PubMed 
+7.M. Elstner, P. Hobza, T. Frauenheim, S. Suhai, and E. Kaxiras, J. Chem. Phys. 114, 5149 (2001). https://doi.org/10.1063/1.1329889
+Google ScholarCrossref  
+8.S. Grimme, J. Comput. Chem. 25, 1463 (2004). https://doi.org/10.1002/jcc.20078
+Google ScholarCrossref PubMed 
+9.P. Jurečka, J. Černý, P. Hobza, and D. R. Salahub, J. Comput. Chem. 28, 555 (2007). https://doi.org/10.1002/jcc.20570
+Google ScholarCrossref PubMed 
+10.Y. Andersson, D. C. Langreth, and B. I. Lundqvist, Phys. Rev. Lett. 76, 102 (1996). https://doi.org/10.1103/PhysRevLett.76.102
+Google ScholarCrossref PubMed 
+11.D. C. Langreth, M. Dion, H. Rydberg, E. Schröder, P. Hyldgaard, and B. I. Lundqvist, Int. J. Quantum Chem. 101, 599 (2005). https://doi.org/10.1002/qua.20315
+Google ScholarCrossref  
+12.T. Sato, T. Tsuneda, and K. Hirao, Mol. Phys. 103, 1151 (2005). https://doi.org/10.1080/00268970412331333474
+Google ScholarCrossref  
+13.O. A. von Lilienfeld, I. Tavernelli, U. Röthlisberger, and D. Sebastiani, Phys. Rev. Lett. 93, 153004 (2004). https://doi.org/10.1103/PhysRevLett.93.153004
+Google ScholarCrossref PubMed 
+14.Y. Y. Sun, Y. -H. Kim, K. Lee, and S. B. Zhang, J. Chem. Phys. 129, 154102 (2008). https://doi.org/10.1063/1.2992078
+Google ScholarCrossref PubMed 
+15.Y. Zhao and D. G. Truhlar, Acc. Chem. Res. 41, 157 (2008). https://doi.org/10.1021/ar700111a
+Google ScholarCrossref PubMed 
+16.B. Jeziorski and K. Szalewicz, in Encyclopedia of Computational Chemisty, edited by P. von Rague-Schleyer (Wiley, New York, 1998), Vol. 2, p. 1376.
+Google Scholar 
+17.G. Jansen and A. Heßelmann, J. Phys. Chem. A 105, 11156 (2001). https://doi.org/10.1021/jp0112774
+Google ScholarCrossref  
+18.M. Pitoňák and A. Heßelmann, J. Chem. Theory Comput. 6, 168 (2010). https://doi.org/10.1021/ct9005882
+Google ScholarCrossref PubMed 
+19.C. Tuma and J. Sauer, Phys. Chem. Chem. Phys. 8, 3955 (2006). https://doi.org/10.1039/b608262a
+Google ScholarCrossref PubMed 
+20.K. E. Yousaf and E. N. Brothers, J. Chem. Theory Comput. 6, 864 (2010). https://doi.org/10.1021/ct900536n
+Google ScholarCrossref PubMed 
+21.F. Shimojo, Z. Wu, A. Nakano, R. K. Kalia, and P. Vashishta, J. Chem. Phys. 132, 094106 (2010). https://doi.org/10.1063/1.3336452
+Google ScholarCrossref PubMed 
+22.O. A. Vydrov and T. Van Voorhis, Phys. Rev. Lett. 103, 063004 (2009). https://doi.org/10.1103/PhysRevLett.103.063004
+Google ScholarCrossref PubMed 
+23.J. Klimeš, D. R. Bowler, and A. Michaelides, J. Phys.: Condens. Matter 22, 022201 (2010). https://doi.org/10.1088/0953-8984/22/2/022201
+Google ScholarCrossref PubMed 
+24.N. Marom, A. Tkatchenko, M. Scheffler, and L. Kronik, J. Chem. Theory Comput. 6, 81 (2010). https://doi.org/10.1021/ct900410j
+Google ScholarCrossref PubMed 
+25.E. G. Hohenstein, S. T. Chill, and C. D. Sherrill, J. Chem. Theory Comput. 4, 1996 (2008). https://doi.org/10.1021/ct800308k
+Google ScholarCrossref PubMed 
+26.C. D. Sherrill, in Reviews in Computational Chemistry, edited by K. B. Lipkowitz and D. B. Boyd (Wiley-VCH, New York, 2009), Vol. 26, pp. 1–38. https://doi.org/10.1002/9780470399545.ch1
+Google ScholarCrossref  
+27.G. S. Tschumper, in Reviews in Computational Chemistry, edited by K. B. Lipkowitz and D. B. Boyd (Wiley-VCH, New York, 2009), Vol. 26, pp. 39–90. https://doi.org/10.1002/9780470399545.ch2
+Google ScholarCrossref  
+28.K. Pernal, R. Podeszwa, K. Patkowski, and K. Szalewicz, Phys. Rev. Lett. 103, 263201 (2009). https://doi.org/10.1103/PhysRevLett.103.263201
+Google ScholarCrossref PubMed 
+29.A. D. Becke, Phys. Rev. A 38, 3098 (1988). https://doi.org/10.1103/PhysRevA.38.3098
+Google ScholarCrossref  
+30.C. Lee, W. Yang, and R. G. Parr, Phys. Rev. B 37, 785 (1988). https://doi.org/10.1103/PhysRevB.37.785
+Google ScholarCrossref  
+31.J. P. Perdew, Phys. Rev. B 33, 8822 (1986). https://doi.org/10.1103/PhysRevB.33.8822
+Google ScholarCrossref  
+32.J. P. Perdew, Phys. Rev. B 34, 7406 (1986). https://doi.org/10.1103/PhysRevB.34.7406
+Google ScholarCrossref  
+33.J. P. Perdew, K. Burke, and M. Ernzerhof, Phys. Rev. Lett. 77, 3865 (1996). https://doi.org/10.1103/PhysRevLett.77.3865
+Google ScholarCrossref PubMed 
+34.Y. Zhang and W. Yang, Phys. Rev. Lett. 80, 890 (1998). https://doi.org/10.1103/PhysRevLett.80.890
+Google ScholarCrossref  
+35.S. Grimme, J. Comput. Chem. 27, 1787 (2006). https://doi.org/10.1002/jcc.20495
+Google ScholarCrossref PubMed 
+36.J. Tao, J. P. Perdew, V. N. Staroverov, and G. E. Scuseria, Phys. Rev. Lett. 91, 146401 (2003). https://doi.org/10.1103/PhysRevLett.91.146401
+Google ScholarCrossref PubMed 
+37.A. D. Becke, J. Chem. Phys. 98, 5648 (1993). https://doi.org/10.1063/1.464913
+Google ScholarCrossref  
+38.P. J. Stephens, F. J. Devlin, C. F. Chabalowski, and M. J. Frisch, J. Phys. Chem. 98, 11623 (1994). https://doi.org/10.1021/j100096a001
+Google ScholarCrossref  
+39.C. Adamo and V. Barone, J. Chem. Phys. 110, 6158 (1999). https://doi.org/10.1063/1.478522
+Google ScholarCrossref  
+40.Y. Zhao and D. G. Truhlar, J. Phys. Chem. A 109, 5656 (2005). https://doi.org/10.1021/jp050536c
+Google ScholarCrossref PubMed 
+41.S. Grimme, J. Chem. Phys. 124, 034108 (2006). https://doi.org/10.1063/1.2148954
+Google ScholarCrossref PubMed 
+42.S. Grimme, J. Phys. Chem. A 109, 3067 (2005). https://doi.org/10.1021/jp050036j
+Google ScholarCrossref PubMed 
+43.A. D. Becke and E. R. Johnson, J. Chem. Phys. 122, 154104 (2005). https://doi.org/10.1063/1.1884601
+Google ScholarCrossref PubMed 
+44.A. D. Becke and E. R. Johnson, J. Chem. Phys. 123, 154101 (2005). https://doi.org/10.1063/1.2065267
+Google ScholarCrossref PubMed 
+45.A. Tkatchenko and M. Scheffler, Phys. Rev. Lett. 102, 073005 (2009). https://doi.org/10.1103/PhysRevLett.102.073005
+Google ScholarCrossref PubMed 
+46.P. W. Ayers, J. Math. Chem. 46, 86 (2009). https://doi.org/10.1007/s10910-008-9451-y
+Google ScholarCrossref  
+47.A. D. Becke and E. R. Johnson, J. Chem. Phys. 124, 014104 (2006). https://doi.org/10.1063/1.2139668
+Google ScholarCrossref  
+48.E. R. Johnson and A. D. Becke, J. Chem. Phys. 124, 174104 (2006). https://doi.org/10.1063/1.2190220
+Google ScholarCrossref PubMed 
+49.E. R. Johnson and A. D. Becke, J. Chem. Phys. 123, 024101 (2005). https://doi.org/10.1063/1.1949201
+Google ScholarCrossref  
+50.P. Jurečka, J. Šponer, J. Černý, and P. Hobza, Phys. Chem. Chem. Phys. 8, 1985 (2006). https://doi.org/10.1039/b600027d
+Google ScholarCrossref PubMed 
+51.J. Kong, Z. Gan, E. Proynov, M. Freindorf, and T. R. Furlani, Phys. Rev. A 79, 042510 (2009). https://doi.org/10.1103/PhysRevA.79.042510
+Google ScholarCrossref  
+52.F. A. Gianturco and F. Paesani, J. Chem. Phys. 113, 3011 (2000). https://doi.org/10.1063/1.1287055
+Google ScholarCrossref  
+53.X. Wu, M. C. Vargas, S. Nayak, V. Lotrich, and G. Scoles, J. Chem. Phys. 115, 8748 (2001). https://doi.org/10.1063/1.1412004
+Google ScholarCrossref  
+54.Q. Wu and W. Yang, J. Chem. Phys. 116, 515 (2002). https://doi.org/10.1063/1.1424928
+Google ScholarCrossref  
+55.U. Zimmerli, M. Parrinello, and P. Koumoutsakos, J. Chem. Phys. 120, 2693 (2004). https://doi.org/10.1063/1.1637034
+Google ScholarCrossref PubMed 
+56.G. Murdachaew, S. de Gironcoli, and G. Scoles, J. Phys. Chem. A 112, 9993 (2008). https://doi.org/10.1021/jp800974k
+Google ScholarCrossref PubMed 
+57.S. N. Steinmann, G. Csonka, and C. Corminboeuf, J. Chem. Theory Comput. 5, 2950 (2009). https://doi.org/10.1021/ct9002509
+Google ScholarCrossref PubMed 
+58.T. Schwabe and S. Grimme, Phys. Chem. Chem. Phys. 9, 3397 (2007). https://doi.org/10.1039/b704725h
+Google ScholarCrossref PubMed 
+59.Y. Liu and W. A. Goddard III, Mater. Trans. 50, 1664 (2009). https://doi.org/10.2320/matertrans.MF200911
+Google ScholarCrossref  
+60.J. -D. Chai and M. Head-Gordon, Phys. Chem. Chem. Phys. 10, 6615 (2008). https://doi.org/10.1039/b810189b
+Google ScholarCrossref PubMed 
+61.S. Grimme, Chem.-Eur. J. 10, 3423 (2004). https://doi.org/10.1002/chem.200400091
+Google ScholarCrossref  
+62.S. Grimme, Angew. Chem., Int. Ed. 45, 4460 (2006). https://doi.org/10.1002/anie.200600448
+Google ScholarCrossref  
+63.H. Casimir and D. Polder, Phys. Rev. 73, 360 (1948). https://doi.org/10.1103/PhysRev.73.360
+Google ScholarCrossref  
+64.M. Lein, J. F. Dobson, and E. K. U. Gross, J. Comput. Chem. 20, 12 (1999). https://doi.org/10.1002/(SICI)1096-987X(19990115)20:1<12::AID-JCC4>3.0.CO;2-U
+Google ScholarCrossref  
+65.C. Kamal, T. K. Ghanty, A. Banerjee, and A. Chakrabarti, J. Chem. Phys. 131, 164708 (2009). https://doi.org/10.1063/1.3256238
+Google ScholarCrossref PubMed 
+66.G. Starkschall and R. Gordon, J. Chem. Phys. 56, 2801 (1972). https://doi.org/10.1063/1.1677610
+Google ScholarCrossref  
+67.A. Thakkar, H. Hettema, and P. Wormer, J. Chem. Phys. 97, 3252 (1992). https://doi.org/10.1063/1.463012
+Google ScholarCrossref  
+68.K. T. Tang and J. P. Toennies, J. Chem. Phys. 80, 3726 (1984). https://doi.org/10.1063/1.447150
+Google ScholarCrossref  
+69.N. A. deLima, J. Chem. Phys. 132, 014110 (2010). https://doi.org/10.1063/1.3282265
+Google ScholarCrossref PubMed 
+70.A. Kumar and A. J. Thakkar, J. Chem. Phys. 132, 074301 (2010). https://doi.org/10.1063/1.3315418
+Google ScholarCrossref PubMed 
+71.M. Dierksen and S. Grimme, J. Phys. Chem. A 108, 10225 (2004). https://doi.org/10.1021/jp047289h
+Google ScholarCrossref  
+72.B. M. Axilrod and E. Teller, J. Chem. Phys. 11, 299 (1943). https://doi.org/10.1063/1.1723844
+Google ScholarCrossref  
+73.J. Muto, Proc. Phys. Math. Soc. Jpn. 17, 629 (1943).
+Google Scholar 
+74.A. Tkatchenko and O. A. von Lilienfeld, Phys. Rev. B 78, 045116 (2008). https://doi.org/10.1103/PhysRevB.78.045116
+Google ScholarCrossref  
+75.M. Mantina, A. C. Chamberlin, R. Valero, C. J. Cramer, and D. G. Truhlar, J. Phys. Chem. A 113, 5806 (2009). https://doi.org/10.1021/jp8111556
+Google ScholarCrossref PubMed 
+76.P. Pyykkö and M. Atsumi, Chem.-Eur. J. 15, 186 (2009). https://doi.org/10.1002/chem.200800987
+Google ScholarCrossref  
+77.See http://www.uni-muenster.de/Chemie.oc/grimme/ for a FORTRAN program implementing the DFT-D3 method and a file with available
+C
+6
+coefficients.
+78.See supplementary material at http://dx.doi.org/10.1063/1.3382344 for optimized DFT-D3 parameter values for triple-zeta calculations, computational details, and details on the benchmark sets.
+79.C. J. Cramer and D. G. Truhlar, Phys. Chem. Chem. Phys. 11, 10757 (2009). https://doi.org/10.1039/b907148b
+Google ScholarCrossref PubMed 
+80.J. F. Dobson, A. White, and A. Rubio, Phys. Rev. Lett. 96, 073201 (2006). https://doi.org/10.1103/PhysRevLett.96.073201
+Google ScholarCrossref PubMed 
+81.R. Ahlrichs, F. Furche, C. Hättig et al, TURBOMOLE, version 6.0, Universität Karlsruhe 2009. See http://www.turbomole.com.
+82.F. Neese, ORCA—An Ab Initio, Density Functional and Semiempirical Program Package (University of Bonn, Germany, 2007).
+Google Scholar 
+83.H. -J. Werner, P. J. Knowles, R. Lindh et al, MOLPRO, version 2006.1, a package of ab initio programs,” see http://www.molpro.net.
+84.F. Weigend, F. Furche, and R. Ahlrichs, J. Chem. Phys. 119, 12753 (2003). https://doi.org/10.1063/1.1627293
+Google ScholarCrossref  
+85.F. Weigend and R. Ahlrichs, Phys. Chem. Chem. Phys. 7, 3297 (2005). https://doi.org/10.1039/b508541a
+Google ScholarCrossref PubMed 
+86.A. Schäfer, C. Huber, and R. Ahlrichs, J. Chem. Phys. 100, 5829 (1994). https://doi.org/10.1063/1.467146
+Google ScholarCrossref  
+87.B. Metz, H. Stoll, and M. Dolg, J. Chem. Phys. 113, 2563 (2000). https://doi.org/10.1063/1.1305880
+Google ScholarCrossref  
+88.K. A. Peterson, D. Figgen, E. Goll, H. Stoll, and M. Dolg, J. Chem. Phys. 119, 11113 (2003). https://doi.org/10.1063/1.1622924
+Google ScholarCrossref  
+89.O. Vahtras, J. Almlöf, and M. W. Feyereisen, Chem. Phys. Lett. 213, 514 (1993). https://doi.org/10.1016/0009-2614(93)89151-7
+Google ScholarCrossref  
+90.F. Weigend, Phys. Chem. Chem. Phys. 4, 4285 (2002). https://doi.org/10.1039/b204199p
+Google ScholarCrossref  
+91.F. Weigend and M. Häser, Theor. Chem. Acc. 97, 331 (1997). https://doi.org/10.1007/s002140050269
+Google ScholarCrossref  
+92.F. Weigend, M. Häser, H. Patzelt, and R. Ahlrichs, Chem. Phys. Lett. 294, 143 (1998). https://doi.org/10.1016/S0009-2614(98)00862-8
+Google ScholarCrossref  
+93.K. Eichkorn, O. Treutler, H. Öhm, M. Häser, and R. Ahlrichs, Chem. Phys. Lett. 240, 283 (1995). https://doi.org/10.1016/0009-2614(95)00621-A
+Google ScholarCrossref  
+94.A. Hellweg, C. Hättig, S. Höfener, and W. Klopper, Theor. Chem. Acc. 117, 587 (2007). https://doi.org/10.1007/s00214-007-0250-5
+Google ScholarCrossref  
+95.F. Furche and D. Rappoport, in Theoretical and Computational Chemistry, edited by M. Olivucci (Elsevier, Amsterdam, 2005), Vol. 16.
+Google Scholar 
+96.M. Pitoňak, T. Janowski, P. Neogrády, P. Pulay, and P. Hobza, J. Chem. Theory Comput. 5, 1761 (2009). https://doi.org/10.1021/ct900126q
+Google ScholarCrossref PubMed 
+97.W. Klopper and H. P. Lüthi, Mol. Phys. 96, 559 (1999).
+Google ScholarCrossref  
+98.L. Goerigk and S. Grimme, J. Chem. Theory Comput. 6, 107 (2010). https://doi.org/10.1021/ct900489g
+Google ScholarCrossref PubMed 
+99.S. Tsuzuki, K. Honda, T. Uchimaru, and M. Mikami, J. Chem. Phys. 124, 114304 (2006). https://doi.org/10.1063/1.2178795
+Google ScholarCrossref PubMed 
+100.E. Goll, H. -J. Werner, and H. Stoll, Phys. Chem. Chem. Phys. 7, 3917 (2005). https://doi.org/10.1039/b509242f
+Google ScholarCrossref PubMed 
+101.N. Runeberg and P. Pyykkö, Int. J. Quantum Chem. 66, 131 (1998). https://doi.org/10.1002/(SICI)1097-461X(1998)66:2<131::AID-QUA4>3.0.CO;2-W
+Google ScholarCrossref  
+102.S. Grimme, C. Mück-Lichtenfeld, and J. Antony, J. Phys. Chem. C 111, 11199 (2007). https://doi.org/10.1021/jp0720791
+Google ScholarCrossref  
+103.C. Mück-Lichtenfeld and S. Grimme, Mol. Phys. 105, 2793 (2007). https://doi.org/10.1080/00268970701635543
+Google ScholarCrossref  
+104.A. Sygula, F. R. Fronczek, R. Sygula, P. W. Rabideau, and M. M. Olmstead, J. Am. Chem. Soc. 129, 3842 (2007). https://doi.org/10.1021/ja070616p
+Google ScholarCrossref PubMed 
+105.T. Schwabe and S. Grimme, Acc. Chem. Res. 41, 569 (2008). https://doi.org/10.1021/ar700208h
+Google ScholarCrossref PubMed 
+106.J. Antony, J. Brüske, and S. Grimme, Phys. Chem. Chem. Phys. 11, 8440 (2009). https://doi.org/10.1039/b907260h
+Google ScholarCrossref PubMed 
+107.J. -D. Chai and M. Head-Gordon, J. Chem. Phys. 131, 174105 (2009). https://doi.org/10.1063/1.3244209
+Google ScholarCrossref PubMed 
+108.Y. Zhao and D. G. Truhlar, J. Phys. Chem. C 112, 4061 (2008). https://doi.org/10.1021/jp710918f
+Google ScholarCrossref  
+109.M. Korth and S. Grimme, J. Chem. Theory Comput. 5, 993 (2009). https://doi.org/10.1021/ct800511q
+Google ScholarCrossref PubMed 
+110.J. Antony and S. Grimme, J. Phys. Chem. A 111, 4862 (2007). https://doi.org/10.1021/jp070589p
+Google ScholarCrossref PubMed 
+111.A. Gulans, M. J. Puska, and R. M. Nieminen, Phys. Rev. B 79, 201105(R) (2009). https://doi.org/10.1103/PhysRevB.79.201105
+Google ScholarCrossref  
+112.D. Řeha, H. Valdés, J. Vondrášek, P. Hobza, A. Abu-Riziq, B. Crews, and M. S. de Vries, Chem.-Eur. J. 11, 6803 (2005). https://doi.org/10.1002/chem.200500465
+Google ScholarCrossref  
+113.J. Černý, P. Jurečka, P. Hobza, and H. Valdés, J. Phys. Chem. A 111, 1146 (2007). https://doi.org/10.1021/jp066504m
+Google ScholarCrossref PubMed 
+114.R. Zacharia, H. Ulbricht, and T. Hertel, Phys. Rev. B 69, 155406 (2004). https://doi.org/10.1103/PhysRevB.69.155406
+Google ScholarCrossref  
+115.E. Ziambaras, J. Kleis, E. Schröder, and P. Hyldgaard, Phys. Rev. B 76, 155425 (2007). https://doi.org/10.1103/PhysRevB.76.155425
+Google ScholarCrossref  
+116.A. G. Donchev, Phys. Rev. B 74, 235401 (2006). https://doi.org/10.1103/PhysRevB.74.235401
+Google ScholarCrossref  
+117.B. M. Wong, J. Comput. Chem. 30, 51 (2009). https://doi.org/10.1002/jcc.21022
+Google ScholarCrossref PubMed 
+118.Y. Zhao and D. G. Truhlar, Phys. Chem. Chem. Phys. 10, 2813 (2008). https://doi.org/10.1039/b717744e
+Google ScholarCrossref PubMed 
+119.E. R. Johnson, P. Mori-Sánchez, A. J. Cohen, and W. Yang, J. Chem. Phys. 129, 204112 (2008). https://doi.org/10.1063/1.3021474
+Google ScholarCrossref PubMed 
+120.K. Baldrigde (private communication).
+121.M. S. Marshall, R. P. Steele, K. S. Thanthiriwatte, and C. D. Sherrill, J. Phys. Chem. A 113, 13628 (2009). https://doi.org/10.1021/jp906086x
+Google ScholarCrossref PubMed 
+122.D. Feller, D. A. Dixon, and J. B. Nicholas, J. Phys. Chem. A 104, 11414 (2000). https://doi.org/10.1021/jp002631l
+Google ScholarCrossref  
+123.A. Ruzsinszky, J. P. Perdew, and G. I. Csonka, J. Phys. Chem. A 109, 11015 (2005). https://doi.org/10.1021/jp053905d
+Google ScholarCrossref PubMed 
+124.T. J. Rockey, M. Yang, and H. -L. Dai, J. Phys. Chem. B 110, 19973 (2006). https://doi.org/10.1021/jp062225n
+Google ScholarCrossref PubMed 
+125.S. Grimme, C. Mück-Lichtenfeld, and J. Antony, Phys. Chem. Chem. Phys. 10, 3327 (2008). https://doi.org/10.1039/b803508c
+Google ScholarCrossref PubMed 
+© 2010 American Institute of Physics.
+Supplementary Material
+Supplementary Material- zip file
+View Metrics
+Citing Articles Via
+Web Of Science (31978)
+Google Scholar
+CrossRef (38813)
+Submit your article
+  Sign up for alerts
+Most Read
+Most Cited
+Special Topic Preface: Nucleation—Current understanding approaching 150 years after Gibbs
+Pablo G. Debenedetti, Yi-Yeoun Kim, et al.
+Energy landscapes—Past, present, and future: A perspective
+J. C. Schön
+DeePMD-kit v2: A software package for deep potential models
+Jinzhe Zeng, Duo Zhang, et al.
+Online ISSN 1089-7690 Print ISSN 0021-9606
+Resources
+For Researchers
+For Librarians
+For Advertisers
+Our Publishing Partners 
+Explore
+Journals
+Physics Today
+Conference Proceedings
+Books
+Special Topics
+Publishers
+pubs.aip.org
+About
+User Guide
+Contact Us
+Register
+Help
+Privacy Policy
+Terms of Use
+Connect with AIP Publishing
+Facebook
+LinkedIn
+Twitter
+YouTube
+© Copyright 2024 AIP Publishing LLC

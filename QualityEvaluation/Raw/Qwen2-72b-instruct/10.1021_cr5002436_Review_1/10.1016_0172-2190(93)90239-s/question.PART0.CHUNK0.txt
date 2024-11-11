@@ -1,0 +1,115 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+World Patent Information, Vol. 15, No. 4, p. 256, 1993.
+Pergamon Press Ltd Printed in Great Britain Literature Review
+1.
+Reflection of the legal status of pa- tents in patent databases.
+Tribiahn,
+R.
+and Milde, S. Nachr.
+Dok.
+(Germany), Vol. 44, No. 4, pp. 241-2.53, 1993. The authors review the contents of a number of online and CD-ROM databases with respect to legal status information.
+A
+patent family including an international and a European application is used as an example to compare the information presented in the various databases.
+An mtroduction is given to the internation- al, European and national application procedures.
+2.
+Computer storage and retrieval of generic chemical structures in patents.
+15. Generation
+of topological fragment descriptions from nontopological repre- sentations of generic structure compo- nents. Hollidav, J. D.., Downs, G. M., Gillet, V. J. a;d Lynch, M. F. j. Chem.
+Inf. ComDut. Sci. (USA). Vol. 33. No. 3. p;.
+369-1377, 1993. T&
+generation oi topological fragments from generically expressed components of generic struc- tures is described.
+Fragments derived wholly from within a component or partial structure (PS) are termed intra-PS fragments, while those which span partial structures are termed inter-PS fragments.
+Generic partial structures,described in intensional terms by homologous series identifiers (HSIS!, are represented in the extended connection table representation
+(ECTR)
+as a list of default or explicit parameter values. The method described compares the numerical parameters of the HSI with similar parameters de- rived from each topological fragment descriptor in the screen set in order that a subset of fragments can be identified.
+This subset represents those fragments of the screen set which lie within the scope of the intensional description.
+These fragments are thus identified by means of a search of the entire fragment set.
+A tree-structured dictionary of fragments (augmented atoms and linear atom/bond sequences) is used as the basis for gen- eration,ising a depth-first trace. The leaves of the dictionarv tree uoint to the parameter descriptions of the fragment being generated- All fragments which are identified in this wav are regarded as being optional to the structure and contribute to the optional component (poss screen) of the two-part bit screen representation of the generic structure.
+3.
+Chinese patent law and patent in- formation sekice.
+Qi, Yi. 8ID News Bulletin.
+Vol. 43. No.
+5.
+DD.
+99-103.
+1993. Chinas Patent Law bidame effec:
+tive from 1 April 1985. It protects three kinds of patent:patent for invention;patent for utility mode1 and patent for design.
+Chinas patent system adopts deferred examination for the patent of invention.
+The Chinese Patent Office publishes a lot of documents including specifications, Official Gazette,indexes,etc., has created the databases of Chinese patent documents,and provides online retrieval services both at home and abroad. The Chinese patent information system includes three kinds of lever insti- tute: the Patent Documentation Division and Automation Division of the Chinese Patent Office. more than 20 oatent infor- mation divisibns in provincial institutes of sci-tech information and 64 Chinese patent document depository libraries.
+4.
+Protecting your biotechnology inven- tions. Halluin, A. P. Chemtech, Vol. 23, No. 3, pp. 52-58,1993. The value of your patent portfolio may depend on how well you can defend it against infringement and other litigation.
+5.
+Reflections on innovation,invention,and industrial policy. Heilmeier,
+G. H.
+Chemtech Vol. 23, No. 5, pp. 7-9, 1993.
+The invention and commercialization of liquid crystal display technology is an example of a breakthrough that was not exploited where it was invented.
+A No Excuse technology transfer policy can keep this from happening. 256
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+Compare and contrast the noble metal-based catalysts (particularly Platinum) and metal oxide-based catalysts (such as CrOx, gallium, indium, vanadium, zinc, and molybdenum oxides) used in the nonoxidative dehydrogenation of light olefins. Discuss their compositions, effectiveness, industrial applications, recent developments, and potential advantages in the field.
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

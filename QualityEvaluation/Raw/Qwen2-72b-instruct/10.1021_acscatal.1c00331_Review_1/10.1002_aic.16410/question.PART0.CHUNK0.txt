@@ -1,0 +1,118 @@
+I'm going to give you a scientific literature. Then I'm going to ask you some questions about it. I'd like you to first write down exact quotes of parts of the document word by word that would help answer the question, and then I'd like you to answer the question using facts from the quoted content. Do not omit any relevant information from the text, and avoid introducing any falsehoods or assumptions that aren't directly supported by the literature. Here is the literature, in <literature></literature> XML tags:
+
+<literature>
+
+
+REACTION ENGINEERING, KINETICS AND CATALYSIS Pore Network Modeling of Catalyst Deactivation By Coking, from Single Site to Particle, During Propane Dehydrogenation Guanghua Ye, Haizhi Wang, Xuezhi Duan , Zhijun Sui and Xinggui Zhou* State Key Laboratory of Chemical Engineering, East China University of Science and Technology, Shanghai, 200237, China Marc-Olivier Coppens* Dept. of Chemical Engineering, University College London, London, WC1E 7JE, U.K.
+Weikang Yuan State Key Laboratory of Chemical Engineering, East China University of Science and Technology, Shanghai, 200237, China DOI 10.1002/aic.16410 Published online in Wiley Online Library (wileyonlinelibrary.com) A versatile pore network model is used to study deactivation by coking in a single catalyst particle. This approach allows to gain detailed insights into the progression of deactivation from active site, to pore, and to particleproviding valuable information for catalyst design. The model is applied to investigate deactivation by coking during propane dehydrogenation in a Pt-Sn/Al2O3 catalyst particle. We find that the deactivation process can be separated into two stages when there exist severe diffusion limitation and pore blockage, and the toxicity of coke formed in the later stage is much stronger than of coke formed in the early stage. The reaction temperature and composition change the coking rate and apparent reaction rate, informed by the kinetics, but, remarkably, they do not change the capacity for a catalyst particle to accommodate coke. Conversely, the pore network structure significantly affects the capacity to contain coke.  2018 The Authors. AIChE Journal published by Wiley Periodicals, Inc. on behalf of American Institute of Chemical Engineers. AIChE J, 00: 000 000, 2018 Keywords: propane dehydrogenation, deactivation by coking, pore network model, pore blockage, catalyst design Introduction Propylene is a key feedstock in the petrochemical industry,which is widely used in the production of many important che- micals (e.g., polypropylene, acrylonitrile, propylene oxide, and cumene).1,2 Propylene is traditionally produced as a byproduct from steam cracking and fluid catalytic cracking, but these processes cannot satisfy the ever-growing demand for propyl- ene in recent years.3 Hence, techniques for the purposeful pro- duction of propylene (including propane dehydrogenation, Fischer-Tropsch-to-olefins, and methanol-to-olefins) have been developed and commercialized.4 Among these, propane dehy- drogenation is currently one of the most economical, due to the large price gap between propane and propylene.1 A major problem during propane dehydrogenation is the fast catalyst deactivation by coke formation. This problem per- sists in industrial processes. For example, the Pt-Sn/ZnAl2O3 catalyst used in the Uhde STAR process is significantly deacti- vated by coke after 7 h on stream; the CrOx/Al2O3 catalyst used in the Catofin process should be regenerated after only 12 min.1,5,6 Hence, it is of great importance to design robust catalysts against deactivation by coke formation for propane dehydrogenation. To achieve such robust catalysts, it is essen- tial to understand coking and deactivation at different length scales.
+Froment7-9 classified catalyst deactivation phenomena asso- ciated with coke deposition into three levels: micro-level,meso-level, and macro-level. At the micro-level or the active site level, coke covers active sites and isolates these sites from reactants. At this level, it is essential to understand chemical pathways leading to coke precursors, as well as the interaction of these precursors with active sites. At the meso-level or the particle level, coke narrows and even blocks pores, leading to reduced active sites and enhanced diffusion resistance. Hence,at this level, the effect of the pore network structure on coking and deactivation must be accounted for. Finally, at the macro- level or the reactor level, flow and heat transfer affect coking and deactivation of catalysts packed in the reactor, resulting in transient behavior.
+For propane dehydrogenation, coking and deactivation at the active site level and the reactor level were extensively investigated. Many density functional theory calculations10-13 were performed to probe pathways and mechanisms of coke formation over active sites; some kinetic experiments14-18 were also conducted to correlate deactivation with coking in a quan- titative way. Such studies can guide the rational design of cat- alysts at the active site level, to screen promoters and tailor Additional Supporting Information may be found in the online version of this article.
+Correspondence concerning this article should be addressed to X. Zhou, and M.-O.
+Coppens at xgzhou@ecust.edu.cn and m.coppens@ucl.ac.uk This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited. 2018 The Authors. AIChE Journal published by Wiley Periodicals, Inc. on behalf of American Institute of Chemical Engineers.
+AIChE Journal Month 2018 Vol. 00, No. 0 1 active sites. Fixed bed, moving bed, and fluidized bed reactors have been successfully applied in commercial processes for propane dehydrogenation, and much effort19-23 has been devoted to exploring coking and deactivation in these reactors.
+This work has contributed to novel reactor designs, such as two-zone fluidized bed reactors.20-22 However, up to now, coking and deactivation at the particle or meso-level during propane dehydrogenation has not been reported in the literature, although the knowledge of this is essential to design the catalyst particle, which includes its pore network structure and active site distribution.24-26 The process of coking and deactivation in a catalyst particle is very com- plex. Coke can be nonuniformly distributed through the cata- lyst particle, and the distribution of coke is largely affected by the pore network structure and reaction conditions.27-30 Coke narrows and eventually plugs pores during reaction, leading to significant changes in pore network structure.31-33 Some large pores can be surrounded by plugged pores and then become inaccessible to reactants, which further adds to the complexity of the coking process. In addition, a percolation phenomenon occurs when the fraction of unplugged or open pores drops below a critical threshold, in which the previously connected,particle-spanning cluster of open pores becomes discon- nected.24,30,34,35 In this case,macroscopic properties (e.g., effective diffusivity and the observed reaction rates) would experience a sudden change.24,30,34 This critical fraction of open pores is known as the percolation threshold.35 Finally,coke deactivates catalyst particles in several ways, not just by covering active sites; a significant loss in activity can also be caused by the increased diffusion resistance and inaccessible active sites when coke narrows and plugs pores.27,28,33 Con- sidering the above complications, a proper mathematical model is needed to probe coking and deactivation at the parti- cle level, which is what this article sets out to do.
+Continuum and discrete models34,36 can be used to simulate coking and deactivation in a catalyst particle. Continuum models are characterized by a pseudo-homogeneous description of diffu- sivities, reaction rates, tortuosity factors, and many other macro- scopic properties at a length scale much larger than the dimension of individual pores.29,30,34 Due to this characteristic,continuum models cannot describe percolation phenomena and their associated impacts on catalyst performance. Zhang and Seaton37 compared continuum models with discrete models, and they proved that continuum models break down when the pore network is close to a percolation threshold. Examples of discrete models are the Bethe lattice38 and various pore network models39,40 to describe both morphology and topology of the pore space in catalyst particles. Moreover, pore network models have been successfully used to describe percolation phenomena in some reaction systems, such as hydrodemetallation,24,29,30 hydrodesulphurization,41,42 benzene hydrogenation,43,44 and deactivation of immobilized glucose isomerase.40,45,46 Therefore,a pore network model should be used to probe coking and deac- tivation during propane dehydrogenation in a catalyst particle.
+In this work, a pore network model is first proposed to describe the coupled diffusion, reaction, coking, and deactiva- tion processes in a catalyst particle for propane dehydrogena- tion. With this pore network model, we obtain and analyze representative distributions of coke in the catalyst particle,concentration profiles of reactant and products, and the relation between coke content and apparent reaction rate.
+Eventually, we probe the effects of coking kinetics, reaction conditions, and pore network structure on coking and deacti- vation processes in the catalyst particle.
+Model Formulation The proposed pore network model can be divided into three interconnected parts, namely, the pore network, diffusion and reaction, and coking and deactivation. Before introducing these parts, the following important assumptions are made. Pt- Sn/Al2O3 is taken as the model catalyst, as it is a widely used catalyst for propane dehydrogenation in industry. The gradi- ents of temperature and total pressure in the catalyst particle are neglected, which is proven to be reasonable in Supporting Information Figure S1. Only the main reaction and coke for- mation reaction are considered, as other side reactions, like propane cracking, can be neglected under the relevant reaction conditions for propane dehydrogenation.1 Coke is assumed to be noncatalytic and its formation is irreversible; the density of coke is set to 1200 kg/m3, which is within the range reported in the literature.47,48 Finally, at 1 bar, the gas mixture follows the ideal gas law.
+Pore network The pore space of a catalyst particle is represented by the pore network within a two-dimensional disc domain, as illustrated in Figure 1. Two-dimensional pore networks should be adequate to describe the primary features of the pore struc- ture in real catalyst particles and to investigate the effects of the pore structure on deactivation by coke formation, although the dimensionality of the pore network would quantitatively,but not qualitatively, influence the results.29 Using two- dimensional pore networks reduces the computational time to within a reasonable limit: it takes several hours to conduct a simulation when using a two-dimensional pore network in this work, while the computational time for the same simulation is about 25 times longer (this is, several days) when using a three-dimensional pore network.
+The method for generating the pore network is adopted from the work by Ye et al.,40 in which more details of this Figure 1. An illustration of the pore network within a disc domain.
+In this illustration, the pore connectivity (Z) is 4, and the number of nodes is 253. [Color figure can be viewed at wileyonlinelibrary.com] 2 DOI 10.1002/aic Published on behalf of the AIChE Month 2018 Vol. 00, No. 0 AIChE Journal method are given. The nodes in the pore network are treated as zero-volume intersections, while the bonds are assumed to be cylindrical pores. The pore connectivity (Z) is kept the same for all inner nodes to simplify the pore network. The original pore radius (ro) for the fresh catalyst particle is ran- domly assigned, but follows a log-normal distribution44:f ro
+Vt ffiffiffiffiffi 2π p roσ exp lnro lnra
+2 2σ2 " # 1 Here, Vt is the total pore volume of the catalyst particle, ra is the volume-averaged pore radius, and σ is the standard devi- ation of the natural logarithm of the pore radius. The above structural parameters can be obtained from nitrogen sorption and mercury porosimetry measurements.49 Diffusion and reaction In the pore network, the process of diffusion and main reac- tion can be mathematically described using different equations in pore channels and nodes; the solution of these equations yields concentration profiles of reactant and products. In a pore channel, the diffusionreaction equation for compo- nent i is: Ci t  Ji l + 2roRi r2 2 where Ci is the concentration of component i, l and r are the length and radius of the pore, Ji is the diffusion flux of compo- nent i, and Ri is the reaction rate of component i per unit pore surface area. As, the coking rate is much slower than the rate of diffusion and reaction in this reaction system,1 the quasi-steady- state condition is satisfied, and Eq. 2 can be simplified to:0  dJi dl + 2roRi r2 3 The diffusion flux (Ji) is described by Ficks law with an effective diffusivity calculated by the WilkeBosanquet equation: Ji  Di,e dCi dl 4 Di,e  Di,MDi,K Di,M + Di,K 5 Di,M 1xi Pn i1 j6i xj Di,j 6 Here, Di,e is the effective diffusivity of component i, Di,K is the Knudsen diffusivity of component i that can be obtained from the kinetic theory of gases,50 Di,j is the binary diffusivity of component i in a mixture of i and j that can be calculated from the ChapmanEnskog equation,51 and xi is the mole frac- tion of component i. The WilkeBosanquet model is a very good approximation of the Dusty Gas model in this case, as proven in Supporting Information Figure S2. Besides, the WilkeBosanquet model is computationally less demanding. It should be noted that coke deposition can narrow pores signifi- cantly, so that restricted, configurational diffusion becomes important. To account for this restricted diffusion, the equation for the effective diffusivity, Eq. 5, is modified24,25,32: Di,e 1r ro
+4 Di,MDi,K Di,M + Di,K 7 The reaction rate per unit pore surface area (Ri) is obtained from the work of Li et al.16: Ri  avi k1 PC3H8 PC3H6PH2=K
+Sk 1 + K2PC3H6 + K0:5
+3 P0:5
+H2
+2 8 Here, a represents the level of activity of the catalyst for the main reaction (for a fresh catalyst, a = 1; for a spent catalyst,a < 1), which is calculated by Eqs. 12 and 13; vi is the stoi- chiometric number of component i; k1 is the reaction rate con- stant of the main reaction; Sk = 56.6 m2/g is the specific surface area of the Pt-Sn/Al2O3 catalyst16; K is the reaction equilibrium constant of the main reaction; K2 and K3 are the adsorption equilibrium constants; and PC3H8,PC3H6, and, PH2are the partial pressures of propane, propylene, and hydrogen,respectively. In Eq. 8, the values of the kinetic and thermody- namic parameters (k1, K, K2, and K3), which are functions of temperature, can be found in the work by Li et al.16 In an inner node, due to the zero-volume assumption, Kirchhoffs Law for currents is satisfied: XnZ n1πr2 nJi,n  0 9 where Z is the pore connectivity, rn is the radius of pore n,and Ji,n is the diffusion flux of component i in pore n. In a boundary node, a Dirichlet boundary condition is imposed, as we only concentrate on processes inside the catalyst particle: Ci  Ci,b 10 where Ci,b is the bulk concentration of component i.Coking and deactivation In the pore network, coking and deactivation occur simulta- neously; they affect each other in three ways, namely, through site coverage, pore narrowing, and pore blockage,7-9 as shown in Figure 2. First, coke causes deactivation by covering active sites, which is reflected by the catalyst activity (a) in Eq. 8.Then, coke narrows pores and, subsequently, reduces the effective diffusivity (Di,e) in Eq. 7. Finally, coke plugs pores,and some open pores become isolated from the bulk phase;meanwhile, active sites in these pores become inaccessible to reactant and products. The coke formation reaction also deacti- vates itself in the same three ways.The coking rate per unit pore surface area (Rc) is adopted from the literature16: Rc  dCc dt  ac kcPC3H6
+1 + K3PH2
+11 where Cc (g/m2) is the loading of coke in a pore channel per unit surface area; ac is the catalyst activity for coke formation,which is described by Eqs. 12 and 13; and kc is the reaction rate constant of the coking reaction. When assuming that the coke formation reaction and main reaction occur by a single site mechanism on the same active sites, and coke uniformly deactivates these active sites, the relation between coke load- ing and activity can be described by8,32,52:a  ac  Ccm Cc Ccm 12 where Ccm is the maximum loading of coke required to completely deactivate the active sites on the catalyst surface,which is constant for a specific catalyst. Equation 12 is a good AIChE Journal Month 2018 Vol. 00, No. 0 Published on behalf of the AIChE DOI 10.1002/aic 3 approximation to describe the relation between coke loading and activity, as proven by Li et al.16 Combining Eqs. 11 and 12, we can obtain:da dt  a kdPC3H6
+1 + K3PH2
+kd  kc Ccm 13 where the deactivation rate constant (kd) is a function of temperature and its value is adopted from the literature.16 The loading of coke at time t + Δt is calculated by: Cc t + Δt
+Cc t + Rc t Δt 14 where Δt is the time step. As coking proceeds, the pore net- work structure changes accordingly. The coke can accumulate on both metal sites (Pt-Sn) and support (Al2O3), due to the shift of the coke from metal sites to support, especially in the presence of Sn in the catalyst.53 Thus, we assume that coke uniformly covers the pore surface, and the pore radius can be determined for a given coke loading32:r ffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffiffi ffi r2 o 2Ccro=ρc q 15 where ρc is the density of coke. If r is less than the molecu- lar radius of propane (0.215 nm),54 the pore is considered plugged by coke. Some open pores can become inaccessible to reactant and products when they are surrounded by these plugged pores (see Figure 2c). In our work, the extended HoshenKopelman algorithm55 is used to identify these inac- cessible pores.
+Implementation The algorithm to solve the pore network model consists of three tightly coupled steps (see Figure 3); the details of these steps are given in the previous three subsections. In step 1, the pore network is constructed according to predefined topologi- cal and morphological parameters, and an initial guess for the concentrations is assigned to the pore network. In step 2, equa- tions for diffusion and reaction in the pore network are solved by iteration to yield concentration profiles of reactant and products at time t, and the parameters for the pore network and catalyst activities used in this step are adopted from step
+3. In step 3, equations for coking and deactivation are solved
+to update the pore network structure and catalyst activities at time t + Δt, in which the concentration profiles calculated in step 2 are used. If time t + Δt does not reach the maximum time for reaction (tm), the process returns to step 2; if time t + Δt exceeds tm, the results are output and the process is ended. The above algorithm is implemented in MATLAB 2010b, however, using a newer version of MATLAB can increase the computational speed. Some data are visualized using Rhinoceros 4.0.
+The solution of the pore network model yields concentration profiles of reactant, products, and coke in the pore network, as well as distributions of reaction rates for propane dehydroge- nation and coke formation. With these results, the dimension- less coke content in the catalyst particle (Wc) can be calculated by32: Wc  coke content in the pore network maxmuim coke content
+P
+N
+n1 2πro,nlnCc,n
+P
+N
+n1 2πro,nlnCcm
+16 where N is the total number of pores in the pore network.
+As coking proceeds, Wc increases with time and the value of Wc at the end of reaction (or at the final reaction time) reflects the capacity for a catalyst particle to accommodate coke. The apparent reaction rate for propane dehydrogenation (Rapp) can be calculated using a scaling rule24,36: Rapp  RPNf
+X
+N
+n1 2πro,nlnRC3H6,n
+S
+P
+N
+n1 2πro,nln
+17 where RPN is the overall reaction rate in the pore network,f is the thus-defined scaling factor, RC3H6,n is the formation rate of propylene in pore n, and S is the internal surface area of the catalyst particle. The decrease of Rapp with time directly reflects the deactivation process. Meanwhile, Rapp can also correlate with Wc, which gives the relationship between deacti- vation and coking.
+The parameters used in the simulations are presented in Table 1. The number of nodes, 1393, is adequate and reason- able, because adding more nodes does not change the simula- tion results, but increases computational cost significantly (see
+
+
+</literature>
+
+Here are the question lists, in <questions></questions>XML tags:
+<questions>
+
+
+How does the composition of coke deposits in catalytic systems, particularly in propane dehydrogenation (PDH) reactions, vary across different reaction conditions and catalyst types, and what analytical techniques have been employed to elucidate the complex nature and diversity of coke constituents in these systems?
+
+
+</questions>
+
+First, you need to sequentially extract any quotes in the literature that are most relevant to each question, and print them in numbered order, separated by newlines. Quotes should be relatively brief. Do not attempt to summarize or answer questions at this stage, but simply repeat exactly what the corresponding part of the literature says.
+
+Please enclose the full list of quotes in <quotes></quotes> XML tags. If there are no relevant quotes, write "No relevant quotes" instead.
+
+Then, answer the question, starting with "Answer:".  Do not include or reference quoted content verbatim in the answer. Don't say "According to Quote [1]" when answering. Do not write reference number of quotes after answer. Put your answer to the user inside <EnglishVersionAnswer></EnglishVersionAnswer> XML tags. Output formatted text, with line breaks for each question.Separate quotes and answers with a blank line. Provide the answers to all questions in English. After completing the English answers, translate all those answers into Chinese and provide the Chinese version inside <ChineseVersionAnswer></ChineseVersionAnswer> XML tags.
+
+Thus, the format of your overall response should look like what's shown between the <example></example> tags.  Make sure to follow the formatting and spacing exactly.
+
+<example>
+
+<quotes>
+
+[1] "Company X reported revenue of $12 million in 2021."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+1.Company X earned $12 million in 2021.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+1.X公司在2021年赚了1200万美元。
+
+</ChineseVersionAnswer>
+
+<quotes>
+
+[1] "Almost 90% of revenue came from widget sales, with gadget sales making up the remaining 10%."
+
+</quotes>
+
+<EnglishVersionAnswer>
+
+2.Almost 90% of it came from widget sales.
+
+</EnglishVersionAnswer>
+
+<ChineseVersionAnswer>
+
+2.几乎90%的收入来自小部件销售。
+
+</ChineseVersionAnswer>
+
+</example>
+
+
+If the question cannot be answered by the document, say so.If deemed necessary, the answer to the question can be extended entirely from the content of the document.
+
+Answer all of the questions immediately without preamble. 

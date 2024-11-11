@@ -1,0 +1,2145 @@
+ADVANCES IN CATALYSIS, VOLUME 45
+Theoretical Surface Science and
+Catalysis—Calculations and Concepts
+B. HAMMER
+Institute of Physics
+Aalborg University
+DK-9220 Aalborg, Denmark
+AND
+J. K. NØRSKOV
+Center for Atomic-Scale Materials Physics
+Department of Physics
+Technical University of Denmark
+DK-2800 Lyngby, Denmark
+The application of density functional theory to calculate adsorption properties, reac-
+tion pathways, and activation energies for surface chemical reactions is reviewed.
+Particular emphasis is placed on developing concepts that can be used to understand
+and predict variations in reactivity from one transition metal to the next or the effects
+of alloying, surface structure, and adsorbate–adsorbate interactions on the reactivity.
+Most examples discussed are concerned with the catalytic properties of transition metal
+surfaces, but it is shown that the calculational approach and the concepts developed
+to understand trends in reactivity for metals can also be used for sulﬁde and oxide
+catalysts.
+2000 Academic Press.
+I.
+Introduction
+When a solid catalyst is used to speed up a chemical process, the overall
+reaction usually consists of a series of elementary steps. These include
+Abbreviations:
+B3LYP, Beckes hybrid description of exchange-correlation effects; bcc, body
+centred cubic; DFT, density functional theory; DOS, density of (one-electron) states; fcc, face
+centred cubic; GGA, generalized gradient approximation; hcp, hexagonal close packed; LDA,
+local density approximation; LEED, low energy electron diffraction; LMTO, linerized mufﬁn
+tin orbital; PBE, Perdew, Burke, Ernzerhof exchange-correlation; PW91, Perdew, Wang 91
+version of exchange-correlation; RPBE, Hammer, Hansen, Norskov modiﬁed PBE exchange-
+correlation; TS, transition state; Echem, chemisorption energy; W, band width; F, fermi energy;
+d, center of d-band; a, adsorbate energy level; V, coupling matrix element; Vad, adsorbate-
+metal d coupling matrix element; Vdd, metal d–metal d coupling matrix element; r, chemical
+reaction rate; v, frequency factor; Ea, activation energy; k, Boltzmann’s constant; Ees; electro-
+static energy difference; ii, sum of one-electron energies; Edip, dipole–dipole interaction
+energy; , dipole moment; , electric ﬁeld strength; Esegr, segregation energy.
+71
+Copyright 2000 by Academic Press. All rights of reproduction in any form reserved.
+0360-0564/00 $35.00
+72
+B. HAMMER AND J. K. NØRSKOV
+adsorption of the reactants on the surface of the solid, diffusion on the
+surface, breaking of some reactant bonds, and the creation of new ones to
+form the product molecules, which eventually desorb from the surface. The
+complexity of these processes and of the catalysts makes it a demanding
+task to establish a molecular-level understanding of heterogeneous catalysis.
+The appraoch taken in surface science has been to study elementary reac-
+tions on well-deﬁned single-crystal surfaces in order to build an understand-
+ing of some of the basic processes involved in catalysis. Single-crystal sur-
+faces are only crude models of the high-surface-area catalysts used
+industrially. Catalysts need to have a high surface area, and they often
+consist of mixtures of phases, some of which have the catalytically active
+surface, whereas others support the small particles of active phases or
+keep them from sintering. Recently, the methods of surface science have
+developed further and it has become possible to produce and study models
+of supported catalysts and to investigate them under realistic high-pressure
+and -temperature conditions (1–8). This rapidly closes the gap between the
+surface science studies and studies of real catalysts. Simultaneously, the
+methods used to characterize high-surface-area catalysts have been reﬁned
+considerably, and it has become possible to characterize the structure and
+other properties of the working catalysts in situ (9–12). Together, these
+different types of experiments have provided us with a wealth of detailed
+information
+about
+surface
+structures,
+adsorption
+geometries,
+bond
+strengths, and elementary reaction steps.
+The rapidly increasing amount of data emphasizes the need for a concep-
+tual framework for understanding or rationalizing the results. It would be
+extremely helpful to have an understanding of the most important factors
+determiningtheabilityofasurfacetobindorreactwithaparticularmolecule.
+An important step toward a fundamental description of surface chemical
+processes has been taken recently with the development of quantum theo-
+retical methods allowing us to calculate equilibrium structures, adsorption
+energies, reaction paths, and activation energies for simple processes on
+metal surfaces. The accuracy is still not sufﬁcient to calculate rates of
+chemical reactions, but it is sufﬁcient for a semiquantitative description of
+adsorption and reaction processes, and in particular for comparing different
+systems. The latter is particularly important if one wants theoretical input
+into a search for surfaces with a desired activity or selectivity for a given
+chemical reaction.
+In this review, we discuss how the calculational methods in close conjunc-
+tion with experiments can be used to develop some useful concepts to
+describe and understand adsorption and reactions on surfaces. We concen-
+trate mainly on metal surfaces because this is the area in which both the
+experiments and the calculations are most advanced. Many of the concepts
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+73
+developed for metal surfaces are more generally applicable also to semicon-
+ductors, oxides, and sulﬁdes, and we illustrate this point at the end of
+this review. We show how we are beginning to understand which surface
+properties govern the variations in reactivity from one metal to the next and
+how adsorbate–adsorbate interactions, surface structure, strain, alloying,
+defects, and impurities may affect the reactivity.
+The basis for our discussion of adsorbate–surface reactions is the density
+functional theory. We use density functional theory in accurate self-consis-
+tent calculations of adsorption properties and also as a basis for the develop-
+ment of models that discern the important physical quantities determining
+the reactivity of a given surface. We therefore start in Section II by giving
+a short description of the theoretical methods used and a discussion of
+their accuracy. We also discuss simple models of the electronic structure
+to be used in the following sections. In Section III, we discuss adsorption
+and surface reactions by treating in detail the simplest surface process,
+adsorption. We discuss in particular how the adsorption energy varies from
+one metal to the next. We also discuss the similar variation from one
+adsorbate to the next. We use the adsorption theory to introduce the
+parameters describing the surface which determine its ability to interact
+with an adsorbate. In Section IV we treat the more complex processes of
+molecules or atoms reacting on the surface. We focus in particular on trends
+in activation energies from one system to the next and show that the
+reactivity measures developed for simple atomic adsorption also work here.
+We use this as a starting point for a discussion in Section V of ways to
+change the reactivity of a given metal by changing the structure, by alloying,
+or by poisoning or promoting the surface by coadsorbed atoms and mole-
+cules. In Section VI, we summarize our results for metallic surfaces and
+establish a connection to the ﬁeld of nonmetal catalysis.
+II.
+Theory of Adsorbate–Surface Interactions
+The theoretical description of adsorbate–surface interactions is divided
+into two levels: (i) the accurate, but computationally demanding, calculation
+of adsorption properties, and (ii) the model description which is approxi-
+mate but computationally simple. The large-scale calculations can be viewed
+as computer experiments. They complement real experiments in several
+ways. Often, it is a good check of an experiment or an interpretation of
+an experiment to have a calculation for comparison. There are also cases
+for which the calculation is simpler than the experiment. For example,
+consider an important fundamental property of a surface such as the surface
+energy. It is very difﬁcult to measure, and currently the best source of
+74
+B. HAMMER AND J. K. NØRSKOV
+surface energies is calculations, which have been performed for all the
+metals in the periodic table (13). Finally, the calculation can sometimes be
+performed for situations that are not realizable experimentally. For in-
+stance, it is very simple to change the lattice constant of a metal in a
+calculation and bring out the effect of strain on the reactivity without
+concern about the problems associated with straining a crystal in real life
+(14). The ability to use the computer experiments to test models and theories
+of catalysis has recently breathed new life into the development of models
+and understanding of catalysis. The models are needed to bring out the
+concepts around which our description and understanding of catalysis re-
+volves. What are the parameters of a surface determining its ability to
+adsorb a molecule or let one molecule react with another? Why are some
+adsorbates more reactive than others on a given surface? It is not possible,
+or even desirable, to have to perform a complete calculation or an experi-
+ment for each new system considered. We would like to be able to under-
+stand directly how a change in the catalyst composition or structure should
+change its reactivity. The models are essential in bringing out this under-
+standing.
+In the following sections, we ﬁrst discuss brieﬂy the calculational strate-
+gies and the strengths and limitations of the calculations. We then introduce
+some simple models and concepts to be used in the rest of the review to
+discuss and understand and the results of the calculations.
+A.
+DENSITY FUNCTIONAL THEORY CALCULATIONS
+There are two basically different approaches to the calculation of the
+electronic structure and total energies of molecules and solids: the wave
+function-based methods (15) and the density functional theory (DFT) meth-
+ods (16–18). The former, which can be very accurate if a high level of
+conﬁguration interactions is included, is currently limited to 10–100 elec-
+trons. If we consider transition metal surfaces, this limits the number of
+atoms that can be treated to about 10 since each transition metal has on
+the order of 10 valence electrons. This generally makes these methods
+unattractive for routine treatments of the complex systems needed to model
+catalysts. There are elegant ways of embedding a very accurately described
+region into a less accurately described surrounding region, which can in-
+crease the system sizes and make wave function-based methods very useful
+(19). The computational cost of such calculations and the limited size of
+systems that can be treated mean that, in a surface science and catalysis
+context, they are primarily useful as benchmarks, which can be used to
+gauge the accuracy of the less computationally demanding DFT methods.
+In the following, we therefore concentrate on the DFT methods.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+75
+Density functional theory describes how the ground state electron density
+and total energy can be obtained by solving a set of one-electron Schro
+¨d-
+inger equations (the Kohn–Sham equations) instead of the complicated
+many-electron Schro
+¨dinger equation. This results in an enormous computa-
+tional simpliﬁcation, and systems with more than 1000 electrons can be
+treated.
+There are several different methods used to solve the Kohn–Sham equa-
+tions. In short, they can be characterized by the model used to describe
+the surface, by the kind of basis set used, and by the approximation used
+in the treatment of exchange-correlation effects:
+1.
+The Model Used to Describe the Surface
+The calculations cannot describe all the atoms in a solid or a catalyst
+particle, and a strategy must be chosen to limit the number of atoms treated
+explicitly. Two basic types of methods exist:
+ Cluster methods, which describe only a limited cluster of the surface
+atoms in the hope that the surface atoms farther away from the adsorbates
+of interest are not important.
+ Slab methods, whereby the surface is described as a slab with a periodic
+structure along the surface. The size of the surface unit cell determines the
+computational effort, and in principle the unit cell should be chosen to be
+large enough so that the adsorbates in neighboring unit cells do not interact.
+The two types of models are illustrated in Fig. 1. The slab method can
+be viewed as a particular choice for the boundary conditions in the cluster
+approach, which, however, is generally found to describe the surface proper-
+ties better than the cluster approach for a given number of atoms in the
+super cell or the cluster, respectively. In both methods, only a ﬁnite number
+of atomic layers can be included, and this will always represent an approxi-
+mation. In addition, there are Greens function-based methods which can,
+in principle, treat a single adsorbate on a semi-inﬁnite substrate (20–22),
+but they are not widely used.
+2.
+The Basis Set
+Two basic types of basis sets are most widely used:
+ Localized functions [gaussians, atomic orbitals, linearized mufﬁn tin
+orbitals (LMTOs), etc.]
+ Plane waves [including augmented plane waves (LAPWs), etc.]
+The choice depends on preference and the kind of problem studied.
+Localized functions are thus the usual choice in cluster-type models,
+76
+B. HAMMER AND J. K. NØRSKOV
+FIG. 1.
+Illustration of cluster and slab representations of an H2 molecule (small circles)
+interacting with a semi-inﬁnite surface. Replicas of the super cell atoms are shown with
+open circles.
+whereas both localized (LMTOs) and plane waves are used in slab-type
+calculations. Usually, the core electrons are not treated explicitly, but in-
+stead are included as ‘‘frozen’’ or through a pseudopotential description
+of the ionic core (23). There are also elegant methods whereby the localized
+states are projected out and treated differently from the valence elec-
+trons (24).
+3.
+The Description of Exchange Correlation
+The error made by the choice of model used to describe the surface or
+the basis set can be controlled by increasing the size up to the point of
+convergence. This leaves the choice of exchange correlation functional as
+the main approximation in the DFT calculations. The most accurate method
+for treating exchange and correlation is probably Becke’s hybrid de-
+scription of exchange-correlation effects (B3LYP) (25). In this method,
+a Hartree–Fock calculation is performed to derive the exact exchange
+energy, which is mixed with the DFT-based exchange energy. This hybrid
+method is therefore computationally very demanding. Less computationally
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+77
+demanding are calculations which make use of one form or another of the
+generalized gradient approximation (GGA) (26–28). As illustrated in Table
+I, different GGA ﬂavors can give quite different adsorption energies—they
+all, however, represent a great improvement over the local density approxi-
+mation (LDA) description of the adsorption bond (29–33). The variations
+between different GGAs may be viewed as the intrinsic uncertainty of
+these methods. Adsorption energies or energy barriers are therefore not
+TABLE I
+Calculated Chemisorption Energies as a Function of the Exchange-Correlation Energy
+Functional, Compared with Measured Chemisorption Energiesa
+Echem
+LDA
+PW91
+PBE
+RPBE
+E exp
+chem
+O(fcc)/Ni(111)
+6.68
+5.38
+5.27
+4.77
+4.84
+O(hol)/Ni(100)
+6.97
+5.66
+5.55
+5.03
+5.41
+O(hol)/Rh(100)
+6.64
+5.34
+5.23
+4.71
+4.56
+O(fcc)/Pd(111)
+5.34
+4.08
+3.98
+3.49
+O(hol)/Pd(100)
+5.39
+4.14
+4.04
+3.53
+O
+1.84
+0.57
+0.47
+0.24
+CO(fcc)/Ni(111)
+2.85
+1.99
+1.88
+1.49
+1.35
+CO(hol)/Ni(100)
+3.05
+2.11
+2.00
+1.58
+1.26
+CO(brd)/Rh(100)
+3.02
+2.28
+2.16
+1.81
+1.19
+CO(fcc)/Pd(111)
+2.95
+2.07
+1.96
+1.56
+(1.47)
+CO(brd)/Pd(100)
+2.77
+1.98
+1.87
+1.50
+1.69
+CO
+1.58
+0.78
+0.67
+0.37
+(1.49)
+(0.64)
+(0.54)
+(0.23)
+NO(hol)b/Ni(100)
+6.31
+4.52
+4.41
+3.68
+3.99
+NO(brd)/Rh(100)
+3.73
+2.76
+2.67
+2.28
+NO(fcc)/Pd(111)
+3.27
+2.20
+2.12
+1.67
+(1.86)
+NO(hol)/Pd(100)
+3.19
+2.12
+2.04
+1.58
+1.61
+NO
+1.98
+0.52
+0.43
+0.22
+tot
+1.76
+0.66
+0.56
+0.30
+(1.76)
+(0.58)
+(0.48)
+(0.23)
+a LDA is the local density approximation, and PW91 (Perdew, Wang 91 version of ex-
+change correlation), PBE (Perdew, Burke, Ernzerhof exchange correlation), and RPBE (Ham-
+mer, Hansen, Nørshov modiﬁed PBE exchange correlation) are different GGAs. All values
+are in eV per adsorbate. The rms deviations for the calculated chemisorption energies for O,
+CO, and NO (O, CO, and NO, respectively) and for all three adsorbates (tot) have been
+compiled only against the highly accurate microcalorimetric experimental results from Brown
+et al. (34). Chemisorption energies derived from temperature-programmed desorption experi-
+ments are given in parentheses. The  values in parentheses occur when the CO/Rh(100)
+data are neglected. The Echem value is relative to atomic O in the gas phase. From Hammer
+et al. (28). b Dissociative adsorption.
+78
+B. HAMMER AND J. K. NØRSKOV
+determined with uncertainties less than about 0.25 eV or 25 kJ/mol. Fortu-
+nately, energy differences and variations among systems are usually more
+accurate than because the errors tend to cancel for like systems. This means
+that vibrational frequencies and structures are usually extremely good in
+any of the methods. It also means that trends are better, and this is what
+we mainly focus on.
+B.
+SIMPLE MODELS
+We consider in this section the simplest one-electron description of the
+quantum mechanics of atoms and molecules interacting with a metal surface.
+The idea is not to give an accurate description (this was discussed pre-
+viously) but instead to bring out the essential physics.
+A one-electron state in an atom or molecule outside a metal surface will
+interact with all the valence states of the surface atoms. These states form
+a band or several bands of states. Figure 2 shows a typical density of states
+for a transition metal. The broad s band is half ﬁlled—all the transition
+metals have one s electron (in the metallic state)—and the d states are
+seen to form much narrower bands. The occupancy of the d bands varies
+along the transition metals as they shift through the Fermi level. The narrow
+d bands are a consequence of the small coupling matrix element Vdd between
+the localized d states; one of the important conclusions from tight binding
+theory is that the band width is proportional to Vdd (35).
+Since d bands are narrow, the interaction of an adsorbate state with the
+d electrons of a surface often gives rise to bonding and antibonding states
+just as in a simple two-state problem. This is illustrated in Fig. 3, which
+also illustrates what happens in the case of interaction with a broad band
+such as the s band of a metal. The adsorbate state only broadens. The
+broad band limit with a single resonance is often called ‘‘weak chemisorp-
+FIG. 2.
+Schematic illustration of the density of states of a transition metal, showing the
+broad s band and the narrow d bands (width W) around the Fermi level, F.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+79
+FIG. 3.
+The local density of states at an adsorbate in two limiting cases: (a) for a broad
+surface band; (b) for a narrow metal band. Case a corresponds to the interaction with a metal
+s band and case b is representative of the interaction with a transition metal d band.
+tion,’’ whereas when there are split-off bonding and antibonding states we
+refer to ‘‘strong chemisorption’’ (36).
+Figure 4 shows the result of a model calculation whereby a single ad-
+sorbate level is coupled by a matrix element V to a band of states. In the
+calculation, V is kept ﬁxed as the band is shifted up in energy. The ﬁlling
+of the band is kept ﬁxed so that as the center of the band d is shifted up
+toward the Fermi level, the band width W decreases. When the band is
+low and broad, only a single resonance can be seen at the bottom of the
+band, but as d shifts up a distinctive antibonding state appears above the
+band. Since these antibonding states are above the Fermi level, they are
+empty, and the bond becomes increasingly stronger as the number of empty
+antibonding states increases. The model calculation illustrates the transition
+between ‘‘weak’’ and ‘‘strong’’ chemisorption. The model calculation also
+illustrates a general principle about bonding at a surface: Strong bonding
+occurs if antibonding states are shifted up through the Fermi level (and
+become empty). The same is true if bonding states are shifted down through
+the Fermi level (and become ﬁlled). We use this general principle exten-
+sively in the following section.
+III.
+The Chemisorption Bond
+In this section, we consider the bonding of an adsorbate to a surface.
+First, we discuss the simplest example of an atomic adsorbate and then
+increase the level of complexity by considering molecular adsorbates.
+A.
+ATOMIC ADSORBATES
+To illustrate the general quality of the DFT calculations for the calcula-
+tion of chemisorption properties, consider as a ﬁrst example oxygen adsorp-
+80
+B. HAMMER AND J. K. NØRSKOV
+FIG. 4.
+The local density of states projected onto an adsorbate state interacting with the
+d bands at a surface. The strength of the adsorbate–surface coupling matrix element V is
+kept ﬁxed as the center of the d bands d is shifted up toward the Fermi energy (F  0) and
+the width W of the d bands is decreased to keep the number of electrons in the bands constant.
+As d shifts up, the antibonding states are emptied above F and the bond becomes stronger
+(bottom). The calculation was done by using the Newns–Anderson model (37). Adapted from
+Hammer (38).
+tion on the Pt(111) surface. This system has been studied in detail experi-
+mentally (39) and in several theoretical investigations (40, 41). We
+concentrate on the ordered p(2  2) oxygen overlayer structure observed
+at a quarter of a monolayer of oxygen atoms. Figure 5 shows the geometry
+of this structure including relaxations of the platinum atoms at the surface
+and three layers down, as deduced from results of low-energy electron
+diffraction experiments. We also show the result of a DFT calculation (40).
+The equilibrium structure is determined by allowing all the coordinates of
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+81
+FIG. 5.
+The experimental and theoretical (PW91) equilibrium structure of the Pt(111)–
+p(2  2)–O system. From Hammer and Nørskov (40). The experimental results are from
+Starke et al. [39].
+the atoms in the oxygen adlayer and in the two ﬁrst layers to vary until
+the lowest-energy geometry is found. Clearly, all bond lengths and the
+relaxation pattern are reproduced by the calculation down to the 1%
+level.
+The chemisorption potential energy, including relaxations of the platinum
+substrate, is calculated to be EO  4.29 eV per oxygen atom relative
+to an atom in the gas phase [GGA and PW91 (Perdew, Wang 91 version
+of exchange correlation)]. The corresponding calculated bond energy per
+oxygen atom in O2 is 2.95 eV, so the heat of adsorption is 2.68 eV per
+molecule [the value found by using the RPBE (Hammer, Hansen, Nørskov
+modiﬁed PBE exchange correlation) functional would be 0.2–0.3 eV higher
+(28)]. This result is in reasonable agreement with results from microcalori-
+metry, which gives an integral heat of adsorption for a quarter of a mono-
+layer of oxygen of about 2.4 eV/O2 (34).
+We can also deduce the vibrational frequency for the oxygen vibration
+perpendicular to the surface. The experimental value is 58 meV (42), and
+the value calculated from the curvature of the total energy as a function
+of the height of the oxygen atoms above the surface is 59 meV.
+To illustrate the variations in adsorption energies from one metal to the
+next, consider the adsorption of atomic oxygen on many transition metals
+82
+B. HAMMER AND J. K. NØRSKOV
+(Fig. 6). It is seen that copper, silver, and gold bind most weakly, and the
+unique nobleness of gold is clearly borne out. The O–Au surface bond is
+weaker than the O–O bond so that oxygen molecules will not readily
+dissociate on gold at all.
+To understand the differences in chemisorption energy from one metal
+FIG. 6.
+Oxygen chemisorption at many close-packed late transition and noble metal
+surfaces hexagonal close packed [hcp(0001)] for ruthenium, but face-centered cubic [fcc(111)]
+for the other metals. A quarter monolayer of oxygen is adsorbed at the three-fold fcc site
+(the three-fold hcp for ruthenium) in a p (2  2) pattern. The adsorbate height is varied, and
+the metal ions are ﬁxed at the truncated bulk positions. The chemisorption energy,
+E(O/surface)  E(O atom)  E (surface) is calculated by use of the PW91 functional.
+From Hammer and Nørskov (40).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+83
+to the next, consider in Fig. 7 the density of states projected onto one of
+the O 2p states for oxygen chemisorbed on copper, silver, gold, nickel,
+palladium, platinum, and ruthenium. In each case, the density of states has
+a similar structure, and in Fig. 8 we show how one can think about the
+origin of the main peaks in the density of states. We imagine that the bond
+formation takes place in two steps (36, 40, 43). First, we let the adsorbate
+valence 2p state that we consider interact with the metal s electrons. As
+discussed previously, this gives rise to a single resonance. All three oxygen
+2p-derived resonances are well below the Fermi level and hence completely
+FIG. 7.
+Local density of states projected onto the oxygen 2px state (dark-shaded area)
+for atomic oxygen 1.3 A
+˚ above close-packed surfaces of late transition metals (cf. Fig. 6).
+The light-shaded areas give the metal d-projected DOS for the respective metal surfaces
+before the oxygen chemisorption. From Hammer and Nørskov (40).
+84
+B. HAMMER AND J. K. NØRSKOV
+FIG. 8.
+Schematic illustration of the change in local electronic structure at an oxygen atom
+upon adsorption on simple and transition/noble metal surfaces. First, the sharp atomic states
+of the gas phase are broadened into resonances and shifted down due to the interaction with
+the metal sp states. Next, these renormalized states interact with the narrow d bands at the
+transition and noble metal surfaces, forming covalent bonding and antibonding states below
+and above the initial adsorbate and surface states. The coupling to the metal d electrons can
+roughly be viewed as a two-level coupling. The O/Pt(111) and Pt(111) DOS are from the
+self-consistent calculations in Fig. 7.
+ﬁlled (one could say that the oxygen is in a 2 state). We then turn on the
+coupling to the d electrons. Since the d bands are narrow, this gives rise
+to strong interaction; that is, it gives rise to a splitting of the oxygen reso-
+nance into two: one state which is bonding with respect to the adsorbate
+and metal d states and another above the d bands which is antibonding.
+The interpretation of the changes in electronic structure discussed pre-
+viously has some immediate consequences for our understanding of the
+trends in the binding energies. We can also think of the binding energy as
+having two components—one from the coupling to the metal s states and
+one due to the extra coupling to the d states (36, 40, 43–45). Judging from
+the calculated densities of states in Fig. 7, we arrive at two conclusions: (i)
+The coupling to the d states is essentially a two-level problem giving rise
+to a bonding and an antibonding state, and (ii) the d bands can to a large
+extent be characterized by the band center, d, only.
+There are two general trends in Fig. 6 that must be explained. First in
+general, the farther to the left in the periodic table, the stronger the bond.
+Second, the farther down the periodic table, the weaker the interaction;
+the 5d metals are more noble than the 4d and 3d metals.
+To understand these two effects, we ﬁrst note that since the contribution
+from the coupling to the metal s states is approximately the same for each
+of the metals considered, the main trends in the chemisorption energies
+should be given by the coupling to the d electrons (45).
+The ﬁrst effect is simple to understand in light of the previous discussion.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+85
+As we move to the left from copper, silver, or gold, the d bands move up
+in energy, and increasingly more antibonding adsorbate–metal d states
+become empty. This is clearly shown in Fig. 7. For copper, silver, and gold,
+the antibonding states are completely ﬁlled because the d bands are well
+below the Fermi level. As we move farther to the left in the 3d, 4d, or 5d
+series, the d bands shift up and the antibonding states become depopulated.
+The effect is illustrated more fully in Fig. 9, in which it is shown that the
+oxygen chemisorption energies become increasingly stronger as we move
+to the left in the 4d transition metal series. Figure 9 includes experimental
+values, and the effect is evident in both the calculated and the measured
+values. In Fig. 9, it is also shown that the adsorption energy varies with
+the position of the d band center relative to the Fermi level, just as in the
+model calculation in Fig. 4, showing that the d band center is one possible
+measure of the reactivity of the transition metals. We note that the band
+FIG. 9.
+Comparison of DFT-based oxygen chemisorption energies, E(O/surface) 
+
+E(O2)  E (surface) (PW91), experimental values, and model estimates of the bond strengths
+for the various close-packed transition and noble metal surfaces. Data represented by open
+circles were determined by using the Newns–Anderson model. The experimental values are
+from Toyoshima and Somorjai (49). (Bottom) The calculated adsorption energies correlate
+well with the d band center d.
+86
+B. HAMMER AND J. K. NØRSKOV
+center, the ﬁlling, and the width of the d bands vary through the 4d series,
+i.e., the three quantities are strongly coupled. We choose to focus here on
+the band center, but we could also have chosen either of the other two
+parameters. It is shown below that this choice provides a very general
+picture. It is clear from the previous argument that the same trends should
+be expected of all simple atomic adsorbates with a ﬁlled valence level (after
+interaction with the metal s band), including hydrogen, carbon, nitrogen,
+ﬂuorine, sulfur, and chlorine (40, 46–48).
+To understand the second effect a slightly deeper analysis is required.
+We start by considering copper, silver, and gold, each of which has a ﬁlled
+d band and, according to Fig. 7, a negligible contribution to the bonding
+from the emptying of antibonding oxygen 2p–metal d states. There is,
+however, still a contribution from the interaction between the metal d
+electrons and the oxygen 2p states. The Pauli principle states that no two
+electrons can be in the same state, which means that the oxygen 2p states
+have to become orthogonal to the metal d states when they come into
+contact (40, 46). This raises the kinetic energy by an amount that is approxi-
+mately proportional to the square of the adsorbate–metal d coupling matrix
+element V2
+ad; the stronger the overlap, the larger the repulsion.
+FIG. 10.
+Section of the periodic table with the 3d, 4d, and 5d transition metals. Shown in
+the lower right corner for each element is bulk Wigner–Seitz radius, s. In the lower left corner,
+the center of the d band is calculated for the most close-packed surface for each of the metals
+[(111) for fcc, (001) for hcp, and (110) for bcc]. In the upper right corner is shown the behavior
+of the adsorbate (s or p)–metal d-coupling matrix element squared, V 2
+ad. The V 2
+ad’s generally
+decrease for increasing nuclear charge within a row and increase down the groups. All the
+values, except for the properties of zinc, cadmium, and mercury were compiled from Andersen
+et al. (50). In the upper left corner, the idealized d band ﬁllings are shown. These are similar
+to the actual, calculated bulk d band ﬁllings considering the uncertainties in interpreting
+them (50).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+87
+The absolute magnitude of V2
+ad depends on the metal, the adsorbate,
+and the position of the adsorbate relative to the metal, but for a given
+adsorbate and a ﬁxed adsorbate geometry the variations of the matrix
+element depend only on the extent of the metal d states. The variation in
+V2
+ad from one metal to the next for a ﬁxed adsorbate and adsorbate geometry
+is therefore a property of the metal. For each element we know the relative
+strength of the coupling matrix element directly from tabulated values of
+the LMTO potential functions (40, 50). The values are shown in Fig. 10
+for a large section of the periodic table.
+Using the data in Fig. 10, we can test the hypothesis that the variation
+in adsorption strength from copper to gold is given mainly by the Pauli
+repulsion. In Fig. 11 we plot the calculated bond energies as a function of
+V2
+ad, and the proportionality is clearly seen. Gold has the most extended
+d states, the largest V2
+ad, and therefore the largest repulsion. This makes
+oxygen least stable on gold, and thus gold is the most noble metal (46).
+The same is true for hydrogen (46) and sulfur (40) and should, according
+tothemodel,holdforotherelectronegativeadsorbates(suchasthehalogens)
+with deep-lying valence states after coupling with the metal sp states. For
+carbon and nitrogen, the picture is very similar, but here the adsorbate va-
+FIG. 11.
+The calculated chemisorption energy, Echem, for 
+ ML oxygen on Cu(111),
+Ag(111), and Au(111) (cf. Fig. 6) plotted versus the coupling matrix elementes squared,
+V 2
+ad, from Fig. 10. The proportionality conﬁrms that the variations in bond strength are given
+by the strength of the Pauli repulsion between the oxygen 2p states and the metal d states.
+88
+B. HAMMER AND J. K. NØRSKOV
+lencestatesaresufﬁcientlyhigh-lyingthatthecouplingtothedstatesisstrong
+enough to push antibonding states above the Fermi level for gold. This is not
+possible for silver, which has a deeper-lying d band and a smaller coupling
+matrix element. For these adsorbates, silver is slightly more noble than gold.
+Examination of the values of V2
+ad for the metals to the right for copper,
+silver, and gold in the periodic table (Fig. 10) shows that the smallest value
+is for zinc. These metals also have low-energy d states and no bonding
+contribution due to the emptying of antibonding states, and the strength
+of the oxygen bonding should therefore also be given primarily by the size
+of V2
+ad. The previously discussed scenario would therefore suggest that
+oxygen and the other electronegative adsorbates should bind most strongly
+to zinc and that after gold, mercury should be the most noble.
+The transition metals to the left of copper, silver, and gold will have the
+repulsive Pauli repulsion in addition to the attractive interaction due to
+the empty antibonding states disucssed previously. Both the Pauli repulsion
+and the attractive interaction due to bond formation become stronger as
+the matrix elements become larger. As long as the repulsion is stronger
+than the attraction, the 5d metals will be more noble than the 4d metals,
+which will be more noble than the 3d metals just above them in the periodic
+table. This reﬂects the fact that the 5d orbitals are always more extended
+than the 4d orbitals, which are in turn more extended than the 3d orbitals
+(Fig. 10). Since the bond strength increases as a result of moving to the
+left and up in the transition metal series, the platinum group metals in the
+lower right corner should be the most noble.
+B.
+MOLECULAR ADSORBATES
+The adsorption of molecules is only slightly more complicated to describe
+than atomic adsorption. The main complication arises from the fact that
+usually several adsorbate valence states are important for the interaction
+with a surface.
+As the ﬁrst example, consider the adsorption of CO. Several theoretical
+studies (51–54) suggest that the ﬁlled 5 and the doubly degenerate, empty
+2* electronic states are mainly responsible for the bonding to metal sur-
+faces.
+It is possible to understand the changes in electronic structure during
+CO chemisorption using exactly the same two-step process as for the atomic
+adsorbates. This is illustrated in Fig. 12. We consider here the change in
+the adsorbate density of states when a CO molecule interacts with a metal
+with only s electrons and the case in which there are also d electrons with
+which the CO states can interact. It is seen that the interaction with the
+metallic s electrons gives rise to a downshift and broadening of both the
+2 and 5 states, whereas the coupling to the metallic d states gives rise
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+89
+FIG. 12.
+The self-consistent electronic DOS projected onto the 5 and 2* orbitals of CO:
+in vacuum and on Al(111) and Pt(111) surfaces. Also shown is the DOS from the d bands
+in the Pt(111) surface. The sharp states of CO in vacuum are seen to broaden into resonances
+and shift down in energy on the simple metal surface (mixing with the 4 state causes additional
+structure in the 5 resonance). On the transition metal surfaces the CO resonances further
+hybridize with the metal d states. This leads to shifts in the 5 and 2* levels and to antibonding
+5–d states at the top of the d bands and bonding 2*–d states at the bottom. These states
+have low weight in the 5 and 2* projections shown. Adapted from Hammer et al. (55).
+to bonding and antibonding states below and above the two original states.
+As a consequence of the different symmetries, the 2 and 5 states interact
+with different d orbitals, and the two interactions can be treated indepen-
+dently.
+The current model of CO bonding is in complete agreement with the
+theoretical interpretations developed by Blyholder (53), Bagus and Pacchi-
+oni (52), and Van Santen and Neurock (54). Usually, the CO–metal bond
+is described in terms of electron donation from the CO 5 to the metal
+and back-donation from the metal to the CO 2*. With the current division
+of the donation and back-donation into separate metal s and d steps, which
+follows the reasoning of Bagus and Pacchioni (52), we obtain a simple
+picture that can even be developed into a quantitative model of the trends
+in the CO chemisorption energies on metal surfaces and overlayers (55).
+Two important effects can be observed immediately from Fig. 12. First,
+the 5 contribution to the bonding is quite small. There are few antibonding
+states shifted above the Fermi level, and if we include the Pauli replusion
+this interaction with the metal d electrons is repulsive (54). This is true for
+transition metals to the right in the periodic table and for copper, silver,
+and gold. The 2 interaction, on the other hand, is attractive and dominates
+the variations from one metal to the next to the right in the periodic table.
+The large difference from the 5 case is that the 2 state is above the Fermi
+level before interaction with the d states, and in this case new bonding
+states are shifted below the Fermi level. Note that there is an attractive
+90
+B. HAMMER AND J. K. NØRSKOV
+2–metal d interaction even for the noble metals. As we move to the left
+in the periodic table from the noble metals, the bond strength increases,
+again mainly because the d states move up in energy. The effect is consider-
+ably weaker than for the atomic adsorbates, however. This point is illus-
+trated in Fig. 13, in which the calculated adsorption strength for adsorbed
+CO is compared with that of adsorbed carbon atoms and adsorbed oxygen
+atoms on some 4d transition metals. The molecular adsorption is strongest
+to the right, but farther to the left there is a crossover, and the dissociated
+state becomes the most stable. This type of behavior is quite general. In
+Fig. 13, a similar comparison for NO and adsorbed N  O is shown. The
+situation is the same, except that the crossover is farther to the right (56).
+For each of the simple molecular adsorbates there is such a crossover
+between atomic and molecular adsorption somewhere in the group of transi-
+tion metals, as illustrated by the experimental results collected by Broden
+FIG. 13.
+(Left) Calculated (PW91) and model estimates of the variation in the adsorption
+energy of molecular CO compared to atomically adsorbed C and O for the most close-packed
+surface of the 4d transition metals. (Right) Calculated (PW91) molecular and dissociative
+chemisorption of NO. Solid symbols are DFT calculations; open symbols are Newns–Anderson
+model calculations. For CO, dissociative chemisorption appears to the left of rhodium. For
+NO, dissociative chemisorption appears farther to the right, i.e., also on rhodium.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+91
+et al. (57) (Fig. 14). The crossover point depends on the transition metal
+row—the 5d’s tend to cause molecular dissociation less willingly than the
+4d’s and 3d’s. The origin of this effect is the increase in nobleness from the
+3d’s to the 4d’s and 5d’s discussed previously. The crossover also depends on
+the molecule adsorbed, as reﬂected largely by the variations in atomic
+adsorption energies.
+The above description of the bonding of molecules to surfaces is readily
+extended to even larger and more complicated molecules (58, 59). In Fig.
+15, the analysis of Pallassana and Neurock (58) of the interaction between
+ethylene and a Pt(111) surface is shown.
+C.
+ADSORBATE–ADSORBATE INTERACTIONS
+So far, we have mostly considered trends in adsorption energies for a
+ﬁxed surface coverage. The surface coverage of reactants, intermediates,
+and products on a catalyst can vary signiﬁcantly depending on reaction
+FIG. 14.
+Compilation of experimental data for the ability of transition metals to adsorb
+and dissociate CO, N2, and NO molecules. M, molecular adsorption; D, dissociative adsorption.
+Adapted from Broden et al. (57).
+92
+B. HAMMER AND J. K. NØRSKOV
+FIG. 15.
+Illustration of the interaction between C2H2 and a Pd(111) surface. From
+Pallassana and Neurock (58).
+conditions, and often the coverages are so large that adsorbate–adsorbate
+interactions are signiﬁcant and should be included in the description. In
+fact, these interactions are often so large that a variation in the coverage
+can change the state of the surface more than the variation from one metal
+to the next in the periodic table.
+As an example of a calculated coverage dependence, consider in Fig. 16
+the nitrogen adsorption energy as a function of nitrogen atom coverage on
+various iron surfaces (60). The results illustrate that interactions can be
+both attractive and repulsive. The former leads to island formation at low
+coverages (and temperatures); even at relatively low coverages, adsorbates
+prefer to cluster together to take advantage of the attractive interaction.
+Such effects have been observed for the N/Fe(100) system (61), as suggested
+by the results shown in Fig. 16. Repulsive interactions do not lead to island
+formation but instead to dispersed overlayers and a strongly coverage-
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+93
+FIG. 16.
+Adsorption energies (PW91) for dissociated N2 on bcc-iron as a function of
+coverage. The squares correspond to (1  1), c(2  2), and (2  2)–N/Fe(100) structures;
+the triangles represent (1  1) and (3  3)R30	–N/Fe(111) structures; and the circles
+represent (1  1) and (2  2)–N/(110) structures. From Mortensen et al. (60).
+dependent heat of adsorption. Although attractive interactions are often
+quite weak and depend on the details of the system, repulsive interactions
+are very common, particularly at high coverages (62–64). They are often
+observed experimentally as a strong decrease in the heat of adsorption with
+coverage, as for example in the calorimetric results reported by Brown et
+al. (34) (Fig. 17).
+The attractive interactions are usually dependent on details in the elec-
+tronic structure. Attraction may also be a result of reconstructions of the
+surface. Consider for example the N/Fe system of Fig. 16. It is evident that
+the nitrogen atoms strongly prefer the local geometry provided by the
+Fe(100) surface relative to the two other low-index surfaces. The nitrogen
+atoms may therefore prefer to completely restructure the (110) or (111)
+surfaces to obtain a similar local geometry. For such a major restructuring
+to occur, an island of a certain size is needed in order for the reconstruction
+to be stable, and the result may be an effective attractive interaction between
+the nitrogen atoms mediated by the reconstruction on these surfaces, even
+though the intrinsic N–N interaction is strongly repulsive.
+There are four common causes for interactions between like adsorbates:
+1. Direct interactions due to overlap of wavefunctions: Direct overlap
+between adsorbate states may lead to attraction if there are states close
+94
+B. HAMMER AND J. K. NØRSKOV
+FIG. 17.
+The measured differential heat of adsorption of NO on Pd(100) as a function of
+coverage. Reprinted with permission from Brown et al. (34) 1998 American Chemical
+Society.
+enough to the Fermi level that the interaction can shift states through the
+Fermi level. This is often not the case, and the interaction is then dominated
+by the Pauli repulsion. The detailed analysis of O–O interactions on a
+Pt(100) surface by Ge and King (65) illustrates this effect in detail (Fig. 18).
+2. Indirect interactions: One adsorbate may change the electronic struc-
+ture of the surface in such a way that the adsorption energy of a second
+adsorbate is changed. One commonly observed effect is that adsorption
+leads to a downshift of the d states of the neighboring transition metal
+atoms (47, 66). As shown previously, a downshift of the d states usually
+leads to a weaker interaction with an adsorbate. This means that a second
+adsorbate trying to bond to the same transition metal atoms as the ﬁrst
+may be bound less strongly. This effect is discussed later.
+3. Elastic interactions: Adsorption usually leads to local distortions of
+the surface lattice. This distortion is experienced by other adsorbates as a
+repulsion (67, 68).
+4. Nonlocal electrostatic effects: These can, to lowest order, be described
+as dipole–dipole interactions.
+In addition to interactions with other adsorbates of the same kind, interac-
+tions with other kinds of adsorbates may also be important. We return to
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+95
+FIG. 18.
+Charge density contours for oxygen-induced states 5 or 6 eV below the Fermi
+level on Pt(100). For adsorption in the fourfold sites, in which the O–O repulsion is large,
+the oxygen p-like states are seen to overlap substantially more than for oxygen atoms in the
+twofold sites, in which the repulsion is weaker. From Ge et al. (65).
+this topic in connection with our discussion of poisoning and promotion in
+Section V.C.
+The strong coverage dependence of adsorption energies profoundly af-
+fects the reactivity of a surface. A more weakly bound adsorbate may be
+more reactive, and changing the reaction conditions (temperature and/or
+partial pressures) can therefore change the reactivity considerably. This
+has recently been exploited by Bradlay et al. (69) to suggest new reaction
+conditions for the ammonia oxidation on platinum catalysts.
+96
+B. HAMMER AND J. K. NØRSKOV
+IV.
+Bond-Making and -Breaking at a Surface
+We now discuss the question of how to describe reactions at surfaces.
+Any chemical reaction can be described as a transition between two local
+minima on the potential energy surface of the system as a function of the
+coordinates of all the involved atoms. The reaction path we deﬁne as the
+minimum energy path leading from the reactant minimum to the product
+minimum. The saddle point on this path deﬁnes the transition state, and
+the energy difference between the saddle point and the reactant minimum
+is the activation energy (Ea) of an elementary process. Figure 19 illustrates
+a potential energy surface in two important degrees of freedom for a
+dissociative adsorption process (or, equivalently, a recombinative desorp-
+tion process). Figure 19 also shows the minimum energy path as well as
+the usual one-dimensional representation of such a reaction, in which the
+energy is shown as a function of the distance along the reaction path (the
+reaction coordinate). We stress that in general there are not just a few
+degrees of freedom taking part in the reaction. Usually, several of the
+adsorbate degrees of freedom are important, and there are cases for which
+deformation of the surface is also an important part of the reaction (47, 70).
+FIG. 19.
+(a) The potential energy surface (RPBE) for N2 dissociating on a Ru(0001)
+surface. The energy zero is a molecule far from the surface. The adsorption geometry is shown
+in the inset. The distance of the center of mass of the molecule above the surface, Z, and
+the N–N bond length, d, are varied. The minimum energy path is indicated, and in (b) the
+energy along the path is shown. Note that here only two degrees of freedom have been
+included. When the rest are included, the minimum energy path has a lower energy barrier
+(Fig. 34). Adapted from Murphy et al. (71).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+97
+The rate of an elementary step is given in general by an Arrhenius
+expression such as
+r  
+eEa/kT,
+(1)
+where Ea is the activation energy, k is Boltzmann’s constant, and T is the
+temperature. The prefactor 
+ is also given by the properties of the potential
+energy surface. We do not discuss this aspect but refer, for example, to the
+review by Van Santen and Neurock (54). We also note that the modeling of
+particular experiments, e.g., molecular beam and state-resolved desorption
+studies, may require that the dynamics of a surface reaction be considered.
+For a further discussion of this topic, see recent reviews by Darling and
+Holloway (72), Groß (73), and Kroes (74). In the following sections, we
+concentrate on the factors controlling the activation energy. We show that
+trends in activation energies can be understood by using the same concepts
+developed previously to understand atomic and molecular adsorption en-
+ergies.
+A.
+THE REACTION PATH AND THE NATURE OF THE TRANSITION STATE
+In Fig. 20, the transition states of some elementary reaction steps on
+close-packed surface of transition metals are shown. Two types of reaction
+FIG. 20.
+Transition states for some dissociation reactions of small molecules on transition
+metal surfaces. The geometries are taken from Hammer (84) (NO/Ru), Dahl et al. (83)
+(N2/Ru), Mavrikakis et al. (14) (CO/Ru), Hammer et al. (32) (H2/Cu), and Kratzer et al. (86)
+(CH4/Ni).
+98
+B. HAMMER AND J. K. NØRSKOV
+paths can be observed. For the dissociation of diatomics such as CO,
+NO, and N2, the transition state is a highly stretched molecule (75–78).
+One of the atoms is already close to the ﬁnal, threefold-coordinated site,
+whereas the other is on its way to the nearest similar (fcc or hcp) site.
+At the transition state it is more or less in a twofold coordination site
+corresponding to the top of the barrier for diffusion of one of the atoms.
+The same is true for the transition state of, e.g., the CO  O reaction (or,
+equivalently, the CO2 dissociation) (79–81) and for C–C bond breaking or
+formation (82).
+The other type of path shown in Fig. 20 is one in which the transition
+state is much less stretched. This type of reaction is characterized by an
+initial state with a very short bond (typically involving hydrogen), and the
+stretched transition state observed for the ‘‘longer bonds’’ is well beyond
+the point at which the bond is broken.
+The electronic structure at the transition state reﬂects the two different
+kinds of reaction paths. For ‘‘short’’ transition states, such as for H2 dissocia-
+tion, the transition state has bonding and antibonding states, as in the
+molecule (Fig. 21). Clearly, the interaction of these states with the surface
+electrons can be thought of in the same way as for the atomic and molecular
+adsorbates. The coupling to the metal s electrons gives rise to a broadening,
+and the coupling to the transition metal d electrons gives rise to bonding
+and antibonding states. Just as for CO adsorption, the adsorbate states of
+different symmetry (the bonding g and the antibonding u H2 states) can
+be treated independently.
+For the ‘‘stretched’’ transition states, the electronic structure of the transi-
+tion state is much more like that of the adsorbed atoms than that of the
+FIG. 21.
+The DOS projected onto g and *
+u for H2 in the dissociation transition state on
+Cu(111), Ni(111), and Au(111), and Pt(111) surfaces. From Hammer and Nørskov (40).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+99
+adsorbed molecule. This is illustrated in Fig. 22, in which the density of
+states projected onto the two nitrogen atoms in the transition state for N2
+dissociation on Ru(0001) is shown. Becuase of the highly stretched N–N
+bond length in the transition state (1.9 A
+˚ ), the electronic structure of the
+molecule is very ﬁnal state-like. The distinct splitting of the nitrogen 2p
+states into 2u, 1v, 3g, and 1g molecular-like states for adsorbed N2
+(not shown) is thus disappeared in the transition state.
+B.
+VARIATIONS IN REACTIVITY FROM ONE METAL TO THE NEXT
+Since the electronic structure is understandable in the same language as
+that developed to describe atomic and molecular adsorption, the variation
+in the energy of the transition states—or, equivalently, the activation barri-
+ers—follows along the same lines.
+Consider as the ﬁrst example the H2 dissociation on copper, nickel, gold,
+and platinum. The energy along the reaction path is shown in Fig. 23. In
+agreement with experimental knowledge, nickel and platinum each has a
+low barrier and dissociates H2 readily (87, 88), whereas copper has a sizable
+barrier (89) and H2 dissociation is impossible on gold (90). Just as for the
+adsorption cases discussed previously, there are two effects involved. Nickel
+and platinum are more reactive than copper and gold, mostly because more
+bonding states between the initially empty antibonding H2 state and the
+metal d states are shifted below the Fermi level. Again, the general rule
+is that the higher the d band center, the more reactive the metal (that is,
+the lower the transition state energy) (46, 45, 91).
+FIG. 22.
+DOS projected onto 2p orbitals of the two nitrogen atoms in the transition states
+for N2 dissociation on Ru(0001). One atom is close to an hcp site and one close to a bridge
+site. Both DOS are compared with the DOS projected onto the 2p orbitals of a nitrogen
+atom absorbed at an hcp site (dashed lines). From Mortenson et al. (47).
+100
+B. HAMMER AND J. K. NØRSKOV
+FIG. 23.
+The potential energy (PW91) along the atop reaction path for H2 dissociating on
+copper, nickel, gold, and platinum. Z is the H2 height above the plane of the surface atomic
+position. From Hammer and Nørskov (46). Reprinted by permission from Nature (46) 1995
+Macmillan Magazines Ltd.
+Gold (and to a lesser extend platinum) is less reactive than copper (or
+nickel) because the Pauli repulsion is larger for the 5d metals than for the
+3d metals, just as discussed previously for atomic adsorbates. The dissocia-
+tion of H2 on rhodium, palladium, silver, and tungsten surfaces has been
+investigated with DFT methods, with the results being consistent with the
+current picture (91–95).
+The picture is even simpler for the streched transition states. Since they
+are very ﬁnal state-like, the variations in the transition state energies closely
+follow the variations in the adsorption energies of the products, as illustrated
+in Fig. 24.
+The strong coupling between transition state energies and ﬁnal state
+energies has as an important consequence, namely, that the search for the
+perfect transition metal to catalyze a certain reaction is always a compro-
+mise. Moving to the left in the transition metal series gives a lower activation
+energy but also stronger bonding of the reactants and thus less free surface
+area. The ‘‘Sabatier principle’’-type behavior usually leads to ‘‘volcano
+curves’’ describing the relation between catalytic activity and position in
+the periodic table (2).
+For the ‘‘late’’ barrier processes, the transition state energy is consider-
+ably higher than the ﬁnal state energy for two reasons: (i) In the transition
+state, one of the atoms is in the twofold site, which is higher in energy than
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+101
+FIG. 24.
+The variation in energy (PW91) of the initial, transition, and ﬁnal state for NO
+adsorption on the tcc(111) surfaces of the 4d transition metals Ru, Rh, and Pd. The correlation
+between the transition and ﬁnal state energies is clearly evident. Data from Mavrikakis et al.
+(75) and Hammer (84, 110).
+the equilibrium threefold site, and (ii) the two dissociating atoms share two
+surface metal atoms in the transition state, giving rise to a large repulsion.
+V.
+Changing the Reactivity
+In the preceding sections, we discussed variations in the stability of
+adsorbed atoms and molecules or of the transition state complex for surface
+chemical reactions from one metal to the next. Here, we focus on even
+more subtle variations in reactivity. Often, the reactivity of a given metal
+can be changed substantially by changing the surface structure, by alloying,
+or by introducing additional adsorbates onto the surface. In the following
+sections, we discuss each of these cases separately and show that the under-
+lying mechanisms responsible for the variations in reactivity are the same.
+A.
+STRUCTURE SENSITIVITY
+The chemisorption and reaction properties of a metal surface depend
+on the electronic as well as the geometric structures of the surface. Although
+the electronic and geometric structures of a surface usually cannot be varied
+independently, it is very useful to consider the two as causing independent
+effects on the reactivity of a surface. The two effects are usually termed
+102
+B. HAMMER AND J. K. NØRSKOV
+‘‘electronic’’ and ‘‘geometric’’ effects. The electronic effects originate from
+the local electronic structure of the surface and are given by the one-
+electron spectrum of the metal states that interact with the adsorbates. In
+most cases, in continuation of the previous discussion, the local average of
+the d electron energies, d, sufﬁces to describe the electronic effect.
+The geometric effect is ‘‘the rest,’’ so to speak. If adsorbates or reaction
+complexes interact in different geometric arrangements with surface atoms
+with identical local electronic properties, the differences in chemisorption
+bonds and energy barrier heights are ascribed to the differences in the
+bonding geometry. The simplest measure of the geometric effect is thus
+the coordination number of the adsorbate with respect to the surface atoms.
+1.
+Strain
+We start by considering a transition metal surface subject to strain. The
+geometric arrangement of the surface atoms changes only slightly when
+the interatomic distances parallel to the surface are modiﬁed. Threefold
+adsorption sites, for example, are still threefold adsorption sites (only the
+bond lengths have changed), and an adsorbate may compensate for this
+change by relaxing in the direction perpendicular to the surface. Studying
+surface processes as a function of strain therefore offers a means of evaluat-
+ing the magnitude of the electronic effect.
+When a surface undergoes compressive or tensile strain, the overlap of
+metal d states at neighboring sites will either increase or decrease and so
+will the d bandwidths. It is a general ﬁnding of our density functional
+calculations that no charging or decharging of the d states of late transition
+metal sites follows from a change in d bandwidth. Rather, the d bands
+move in energy to maintain a constant ﬁlling. Compressive or tensile strain
+therefore leads to downshifts and upshifts of the d band centers, respec-
+tively. The effect is illustrated in Fig. 25.
+Figure 26 illustrates two ways in which strained surfaces can be realized
+experimentally in connection with single-crystal surfaces. Gsell et al. (96)
+modiﬁed a ruthenium surface through ion implantation by a noble gas.
+This treatment causes regions of the surface to buckle out. The middle of
+these regions is subject to tensile strain, whereas the periphery of the regions
+is subject to compressive strain. Another experimental possibility involves
+evaporation of one metal onto another (97–102). By choosing combinations
+of metals that give pseudomorphic growth of a monolayer of one metal on
+the other, highly strained surfaces of the one metal can be realized. Both
+of these strained metals are easily modeled by DFT calculations—either
+as slabs under uniform lateral strain or as ‘‘sandwich slabs’’ of one metal
+on another with the surface unit cell area determined by the substrate
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+103
+FIG. 25.
+Illustration of the effect of tensile strain on the d band center. Increasing the
+lattice constant shrinks the band width, and, to keep the number of d electrons ﬁxed, the d
+states have to move up in energy.
+FIG. 26.
+Two ways of inducing strain on a single-crystal surface: (a) by Ar bubbles; (b)
+by the growth of strained pseudomorphic overlayers. Dark circles indicate adsorbates bound
+in regions of tensile strain.
+104
+B. HAMMER AND J. K. NØRSKOV
+metal. A third possibility involves characterization of dislocations ending
+at the surface (103).
+Figure 27 shows the DFT results for adsorption and dissociation of CO
+on strained Ru(0001). The chemisorption potential energies and reaction
+energy barriers are plotted versus the d band center. A clear correlation
+between the chemisorption energies or energy barriers and the d band
+center is established. This correlation can be understood by comparison
+with the model calculation in Fig. 4. Here it was found that the higher the
+energy of the d bands, the more likely antibonding metal d adsorbate states
+are to be pushed above the Fermi level and the more likely the metal
+d–adsorbate interaction is to become net attractive.
+The strain effect is not limited to CO adsorption and dissociation on
+ruthenium. Figure 28 shows the activation energy for N2 dissociation on
+hexagonally close-packed iron surfaces with different lattice constants.
+Again, large lattice constants with high-lying d states are the most reactive.
+FIG. 27.
+Calculated (PW91) variation in the adsorption energy of CO, the adsorption
+energy of atomic oxygen, and the energy barriers for CO dissociation on a Ru(0001) surface
+for different lattice constants. The variations in energy are shown to be correlated with the
+variations in the d band center d. Adapted from Mavrikakis et al. (14).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+105
+FIG. 28.
+Variation in the energy barrier for N2 dissociation on a close-packed fcc–Fe(111)
+surface as a function of the nearest-neighbor separation in the surface. Also included is the
+result for a single layer of iron on Ru(0001). This point is placed at the equivalent ruthenium
+nearest-neighbor separation. The fact that it falls in line with the other points suggests that the
+main effect of the ruthenium substrate is to stretch the iron overlayer. From Logadottir (104).
+Furthermore, one point corresponding to a monolayer of iron on Ru(0001)
+is included. It can be seen that the effect is the same and that the Fe/
+Ru(0001) point falls in line with the general trends. This result shows that
+in this case the main effect of the ruthenium is to increase the iron lattice
+constant. One would get the same result even without the ruthenium under-
+neath.
+Additional examples are shown in Fig. 29. Here, results from Pallassana
+and Neurock (58) for the activation energy for dehydrogenation of ethylene
+and of ethyl on different palladium overlayers are shown. Palladium on
+gold is more reactive than pure palladium because the gold lattice constant
+is larger than the palladium lattice constant and vice versa for ruthenium.
+The palladium/rhenium result represents an exception to the general rule
+that the main effect of the substrate is to change the lattice constant of the
+overlayer. The two metals have essentially the same lattice constant, but
+the palladium overlayer is less reactive than pure palladium. We note,
+however, that the shift in d does capture the correct trend. In this case,
+the shift must be caused primarily by the interaction between the electrons
+in the palladium overlayer and the rhenium atoms underneath. We there-
+fore conclude this section by noting that the reactivity scales very well with
+shifts in d for both strained crystals and overlayers.
+For nanosized supported catalysts, not just overlayers of one metal on
+another can have a changed reactivity due to strain. Small metal particles
+on an oxide support may also have a lattice constant (and thus a reactivity)
+106
+B. HAMMER AND J. K. NØRSKOV
+FIG. 29.
+Variations in the transition state energy for dehydrogenation of ethylene and of
+ethyl on Pd(111) and on palladium overlayers on various other metals. The variations in
+activation energy correlate well with the variations in the d band centers for the surface
+palladium atoms. From Pallassana and Neurock (58).
+different from that of a large facet. Two factors play a role: (i) the surface
+tension and (ii) the interaction with the support. The former usually tends
+to decrease the lattice constant, whereas the latter may both increase and
+decrease the lattice constant. There are many examples in which lattice
+constants different from the bulk value have been observed for supported
+metal nanoparticles (105–107), and we expect this to be a very general
+phenomenon. Both the surface tension effect and the strain induced by the
+oxide support will be most important for very small particles, and the effect
+will decrease with increasing particle size.
+2.
+Different Facets
+When comparing the reactivities of different surface facets [e.g., fcc(111)
+and fcc(100)], both the electronic and the ion structure change. The change
+of the electronic structure is a consequence of the change of the ionic
+structure. We maintain, however, the strict division into electronic and
+geometric effects.
+If an adsorption or reaction conﬁguration is sufﬁciently simple, it is
+sometimes possible to disentangle the electronic and geometric effects,
+even when comparing different facets. Figure 30 shows examples of this:
+an atop bonding of CO on a range of platinum surfaces (108) and an H2
+transition state complex on two different copper surfaces (109). Because
+the local chemisorption conﬁguration of CO is the same on all platinum
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+107
+FIG. 30.
+Different ways of changing the adsorption or reaction geometry while not changing
+the local geometry. The chemisorbed CO and the H2 transition state complex are probing
+the local electronic structure effects.
+surfaces in Fig. 30, the variations in the CO chemisorption potential en-
+ergy must be ascribed primarily to the electronic effects (although second-
+neighbor effects may also be of some importance). Likewise, because the
+H2 reaction geometry (over the atop site into bridge sites) is the same on
+the two copper surfaces considered, the variations in the H2 dissociation
+energy barriers must be ascribed to the changes in the electronic structure
+between the facets. The correlation of the CO chemisorption energy and
+H2 dissociation energy barrier with our parameter for the electronic effect,
+the local center of the metal d states, is presented in Fig. 31, which shows
+that when the adsorption or reaction geometry is kept ﬁxed, the effect of
+the facet is well described by the d band center.
+The magnitude of the geometric effect can be estimated by allowing the
+108
+B. HAMMER AND J. K. NØRSKOV
+FIG. 31.
+(Left) Calculated variations in the chemisorption energy (PW91) for CO adsorbed
+atop platinum atoms in different surroundings. (Right) DFT energy barriers (PW91) for
+dissociative adsorption of H2 atop copper atoms in two different copper surfaces. The correla-
+tion between chemisorption energy and the d band center for the relevant platinum atoms
+is evident. Adapted from Hammer et al. (108) and Kratzer et al. (109).
+adsorbate or transition state complex to exploit all available ionic degrees
+of freedom in the bond formation rather than restricting the geometry as
+was done previously. For the H2 dissociation, new optimum transition state
+complexes result on the different copper surfaces. These are shown in Fig.
+32. On Cu(100), a tilted conﬁguration of the H2 transition state complex
+is found in which a hydrogen atom is almost in a fourfold hollow site (33).
+On Cu(111), the H2 axis is parallel to the surface and both hydrogen atoms
+are in threefold-like positions. The transition state potential energies are
+reduced by 0.14 and 0.03 eV for Cu(111) and Cu(100), respectively, com-
+FIG. 32.
+The calculated transition states and (PW91) energy barriers (in eV) for H2 dissocia-
+tion on Cu(100) and Cu(111). Both the transition state for the atop path used to probe the
+electronic effect and the optimum energy path are shown. Adapted from Kratzer et al. (109).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+109
+pared with the values obtained by using the restricted transition state con-
+ﬁgurations of Fig. 30. The difference, 0.11 eV, is thus a measure of the
+geometric effect for H2 dissociation on a low-index copper surface.
+3.
+Steps and Defects
+When considering high-Miller-index surfaces with steps and kinks, or
+surfaces with other defects such as adatoms or vacancies, the variations in
+the electronic structure become larger (i.e., d varies more). Again, the
+smaller the metal coordination number of the surface atom, the smaller
+the d band width and hence the higher energy of the d band center (if the
+d band is more than half ﬁlled). The electronic effect is completely analogous
+to what we have previously demonstrated. This may be seen from Fig. 31,
+in which the CO bonding to step and kink platinum atoms is also included.
+The electronic effect may become so large at the step edges of metal
+surfaces that it can change the site preference of atomic adsorbates. For
+example, on a ﬂat Ru(0001) surface, an oxygen atom prefers threefold
+bonding at an hcp site by 0.54 eV over twofold bonding at a bridge site.
+On Ru(0001), all ruthenium atoms have the same d band center, and
+therefore the site preference is a purely geometrical effect, originating
+from the change in coupling matrix element, adsorbate coordination, and
+nonlocal electrostatic effects caused by the change in adsorption site. On
+a monoatomic step on Ru(0001), however, the oxygen is as stable (within
+the calculational accuracy) in a hang-off-the-edge, twofold bonding conﬁg-
+uration at the step edge as at an hcp threefold site behind the step edge, and
+it is preferred in the hang-off-the-edge conﬁguration over the fcc threefold
+conﬁguration by 0.27 eV. The conﬁgurations are depicted in Fig. 33 (110).
+The reason for the change in site preference from threefold at Ru(0001)
+to twofold at a monoatomic step can (with our division) be ascribed to the
+electronic effect (i.e., the ﬁnding that at the step edge the lower coordination
+of the surface atoms leads to energetically higher d bands and hence to
+higher reactivity). Similar effects have been observed, for example, by
+Feibelman et al. (111) for the O/Pt(111) system.
+The electronic effect at steps is quite general. In addition to the examples
+stated previously, it has been shown in calculations that steps increase the
+stability of NO, N, and O on palladium (38, 66) and of N2 on platinum
+(112) and that they lower the barrier for CH4 dissociation on nickel (113),
+increase the stability of various C2Hx species on platinum, and lower the
+barriers for C–H and C–C bond breaking on the same surfaces (82).
+The geometric effect, however, may also become more prominent at a
+step edge. This has been illustrated in two recent studies of activation of
+NO and N2 at monoatomic steps on Ru(0001) (83, 84). It was found that
+110
+B. HAMMER AND J. K. NØRSKOV
+FIG. 33.
+Chemisorption of oxygen on a ﬂat and stepped Ru(0001) surface. The chemisorp-
+tion potential energy is given in eV. On the ﬂat Ru(0001) surface threefold hcp chemisorption
+(h) is highly preferred over twofold bridge chemisorption (b). At the step edges, hcp chemisorp-
+tion (h1) is comparable to bridge chemisorption (1) for one-step geometry (step I), and
+bridge chemisorption (2) even becomes preferred over fcc chemisorption (f1) at the other
+step geometry (step II). Adapted from Hammer (110).
+the N–O and N–N bond activation barriers almost vanish for a reaction
+geometry in which the molecules initially are positioned at the base of the
+step. The effect is too large to be ascribed solely to the electronic effect
+at the step edge, the size of which is known from the NO and N2 dissociation
+in conﬁgurations at the top of the step edges. Rather, a stabilization of the
+transition state complex on the order of 0.3 eV must be explained as
+originating from the geometric effect. In Fig. 34, the NO and N2 transition
+state complexes are shown for reaction on ﬂat and stepped Ru(0001), and
+the potential energy diagram is given for N2. The NO and N2 are seen to
+coordinate to ﬁve ruthenium atoms in the highly reactive conﬁgurations at
+the base of the step edges, whereas they coordinate to only four ruthenium
+atoms on ﬂat Ru(0001). The coordination to more ruthenium atoms at the
+step increases the total coupling matrix element between metal d states and
+adsorbate valence states. Simultaneously, the indirect repulsion between the
+reaction products (the chemisorbed nitrogen and oxygen atoms) is reduced
+(see Section III.C).
+There is extensive experimental evidence that bonding is stronger at
+steps than at facets (2, 114, 115). The generality of the effect suggests that
+it may even be more important than has been realized. In the case of NO
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+111
+FIG. 34.
+(Top) Transition state geometries and corresponding energies (PW91) for NO
+dissociation on Ru(0001) terraces and steps. (Bottom) Reaction path and energies (RPBE)
+for N2 dissociation on the same surface. Again, both a terrace and a step conﬁguration have
+been considered. In both cases the energy zero is the molecule far from the surface. Adapted
+from Dahl et al. (83) and Hammer (84).
+dissociation on Ru(0001) steps, it has been shown by direct observation
+of the dissociation products by scanning tunneling microscopy that the
+dissociation occurs primarily at steps (116). In the case of N2 dissociation
+on Ru(0001), the reactivity of the steps is so much greater than that of the
+terraces that even the few steps present on any single-crystal surface (on
+the order of 1%) are enough to completely dominate the experiments. In
+this case, it was the large barrier found in the calculations that led to the
+discovery that the experiments were actually not measuring the reactivity
+of the terrace atoms (83, 117).
+Traditionally, reactions in heterogeneous catalysis have been divided
+112
+B. HAMMER AND J. K. NØRSKOV
+into structure-sensitive and structure-insensitive reactions, depending on
+whether the reaction rate depends on particle size (118–120). A particle-
+size-dependent activity is usually a simple consequence of the structure
+dependence discussed previously. For small catalyst particles, the ratio of
+the different facets and the density of steps and other defects will be strongly
+dependent on particle size. Such structure sensitivity, however, may also be
+a consequence, for example, of the strain effect discussed in Section V.A.1.
+B.
+ALLOYING
+Another way of changing the reactivity is through alloying. The addition
+of one or more chemical elements to a metallic surface increases the possible
+bonding geometries of adsorbates and reaction complexes and simultane-
+ously changes the electronic structure of the alloy surface from that of the
+pure metallic surface alone. The effect of alloying may also be more indirect,
+however, if, for example, one of the alloy elements segregates to the surface.
+In this case, effects such as strain in the surface due to a difference in bulk
+lattice parameters of the alloy and its elemental components can be used
+to understand the effect of alloying (see Section V.A.1).
+The reactivities of many alloy surfaces have been studied by density
+functional theory. H2 dissociation, which is nonactivated on Ni(111), was
+found to experience large energy barriers—even on nickel sites—on
+NiAl(110), and the increased repulsion can be assigned the electronic effect
+and traced to a downshift of the nickel d bands in the alloy (45, 121).
+Similarly, the platinum sites in a Cu3Pt(111) surface were found to be more
+reactive with respect to H2 bond activation than platinum sites in the Pt(111)
+surface, and again it is an electronic effect originating from an upshift of
+the platinum d bands on alloying (45).
+An interesting type of alloy, Au/Ni, was investigated by Kratzer et al. (86)
+for its ability to dehydrogenate methane. Gold and nickel are immiscible in
+the bulk, but a two-dimensional (2-D) surface alloy exists in which gold
+alloys into the outermost layers of a Ni(111) crystal (Fig. 35). The alloy is
+interesting from a synthesis point of view because the gold does not dissolve
+into the nickel bulk, which implies that only small traces of gold are required
+to create the alloy (122, 123). The gold is inert for methane decomposition,
+and because the gold causes a downshift of the nickel d bands at neighboring
+sites, the ability of the alloy to catalyze the C–H bond activation is slightly
+inferior to that of the clean Ni(111) (Fig. 36). A nickel-based catalyst,
+however, suffers from carbon deposition (growth of carbon whiskers) during
+operation (124). Due to the electronic effect, carbon is found to bond
+less favorably to the Au/Ni(111) surface than to the Ni(111) surface. The
+inhibition of the carbon formation process is often more important than a
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+113
+FIG. 35.
+Two STM images of a Ni(111) surface with 2% (A) and 7% (B) of a monolayer
+of gold. The gold atoms appear black in the images. The nickel atoms next to the gold atoms
+appear brighter due to a change in geometry and electronic structure, indicating that the
+chemical reactivity of the nickel atoms may be modiﬁed by nearest-neighbor gold atoms.
+Reprinted with permission from Besenbacher et al. Science 279, 1913 (1998). Copyright 1998
+American Association for the Advancement of Science.
+high reactivity with respect to the primary reaction channel, the methane
+decomposition. On the basis of DFT studies it was therefore suggested that
+the 2-D alloy of Au/Ni would be a better catalyst for methane dehydrogena-
+tion. Subsequent synthesis of an Au/Ni catalyst has shown this to be true
+(Fig. 37) (122).
+114
+B. HAMMER AND J. K. NØRSKOV
+FIG. 36.
+Illustration of the calculated minimum energy path (reaction coordinate, in A
+˚ )
+for the CH4 dissociation on a Ni(111) surface. The energy (PW91) among the path is shown
+below. The shift in the barrier for dissociation when one or two gold atoms are nearest
+neighbors to the nickel atom under the dissociating CH4 molecule is also included. Adapted
+from Holmblad et al. (123).
+FIG. 37.
+Conversion of n-butane as a function of time (in seconds) during steam reforming
+in a 3% n-butane/7% hydrogen/3% water in helium mixture at a space velocity of 1.2 h1.
+The dashed curve shows the n-butane conversion for the nickel and the solid curve is for the
+gold/nickel supported catalyst. Reprinted with permission from Besenbacher et al. Science
+279, 1913 (1998). Copyright 1998 American Association for the Advancement of Science.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+115
+Several DFT calculations have been reported that show the effect of
+alloying on adsorption and reactions. Delbecq and Sautet (125, 126) investi-
+gated the bonding of CO and of NO on surfaces of Pd3Mn alloys. Pallassana
+et al. (127) also investigated the effect of alloying on hydrogen chemisorp-
+tion on Pd–Re alloys and found that the adsorption energy varies with the
+average d band center, as has been previously determined.
+The strong correlation between d and bond energies and activation
+barriers makes it interesting to have an overview of the way the d band
+centers change when one metal forms a monolayer on top of (or is alloyed
+into) the ﬁrst layer of another metal. These shifts can be calculated by
+using the DFT, and Table II summarizes results for many combinations of
+catalytically interesting metals (128). We stress that the results are for
+TABLE II
+Shifts in d Band Centers of Surface Impurities and Overlayers Relative to the Clean Metal
+Values (Bold)a
+Fe
+Co
+Ni
+Cu
+Ru
+Rh
+Pd
+Ag
+Ir
+Pt
+Au
+Fe
+0.92
+0.05
+0.20
+0.13
+0.29
+0.54
+1.24
+0.83
+0.36
+1.09
+1.42
+0.14
+0.04
+0.05
+0.73
+0.72
+1.32
+1.25
+0.95
+1.48
+2.19
+Co
+0.01
+1.17
+0.28
+0.16
+0.24
+0.58
+1.37
+0.91
+0.36
+1.19
+1.56
+0.01
+0.20
+0.06
+0.70
+0.95
+1.65
+1.36
+1.09
+1.89
+2.39
+Ni
+0.09
+0.19
+1.29
+0.19
+0.14
+0.31
+0.97
+0.53
+0.14
+0.80
+1.13
+0.96
+0.11
+0.12
+0.63
+0.74
+1.32
+1.14
+0.86
+1.53
+2.10
+Cu
+0.56
+0.60
+0.27
+2.67
+0.58
+0.32
+0.64
+0.70
+0.58
+0.33
+1.09
+0.25
+0.38
+0.18
+0.22
+0.27
+1.04
+1.21
+0.32
+1.15
+1.96
+Ru
+0.21
+0.26
+0.01
+0.12
+1.41
+0.17
+0.82
+0.27
+0.02
+0.62
+0.84
+0.30
+0.37
+0.29
+0.30
+0.12
+0.47
+0.40
+0.13
+0.61
+0.86
+Rh
+0.24
+0.34
+0.16
+0.44
+0.04
+1.73
+0.54
+0.07
+0.17
+0.35
+0.49
+0.31
+0.41
+0.34
+0.22
+0.03
+0.39
+0.08
+0.03
+0.45
+0.57
+Pd
+0.37
+0.54
+0.50
+0.94
+0.24
+0.36
+1.83
+0.59
+0.53
+0.19
+0.17
+0.36
+0.54
+0.54
+0.80
+0.11
+0.25
+0.15
+0.31
+0.04
+0.14
+Ag
+0.72
+0.84
+0.67
+0.47
+0.84
+0.86
+0.14
+4.30
+1.14
+0.50
+0.15
+0.55
+0.74
+0.68
+0.62
+0.50
+0.67
+0.27
+0.80
+0.37
+0.21
+Ir
+0.21
+0.27
+0.05
+0.21
+0.09
+0.15
+0.73
+0.13
+2.11
+0.56
+0.74
+0.33
+0.40
+0.33
+0.56
+0.01
+0.03
+0.42
+0.09
+0.49
+0.59
+Pt
+0.33
+0.48
+0.40
+0.72
+0.14
+0.23
+0.17
+0.44
+0.38
+2.25
+0.05
+0.35
+0.53
+0.54
+0.78
+0.12
+0.24
+0.02
+0.19
+0.29
+0.08
+Au
+0.63
+0.77
+0.63
+0.55
+0.70
+0.75
+0.17
+0.21
+0.98
+0.46
+3.56
+0.53
+0.74
+0.71
+0.70
+0.47
+0.67
+0.35
+0.12
+0.79
+0.43
+a The impurity/overlayer atoms are listed horizontally, and the host entries are listed vertically.
+For each combination, the ﬁrst of the two numbers listed represents the isolated surface impurity
+and the second the overlayer. The surfaces considered are the most close packed, and the overlayer
+structures are pseudomorphic. No relaxations from the host lattice positions are included. All values
+are in eV, and the elemental d band centers are relative to the Fermi level. From Ruban et al. (128).
+116
+B. HAMMER AND J. K. NØRSKOV
+overlayers and surface impurities occupying lattice positions of the sub-
+strate, and we have not taken into account here whether these structures
+are actually stable under experimental conditions. However, Table II can
+provide an idea about possible ways of modifying the electronic structure
+of a surface.
+Consider for example the case of platinum on Au(111). According to
+the results of Table II, both platinum overlayers and platinum impurities
+in a Au(111) surface have higher-lying d states than platinum atoms in a
+Pt(111) surface and should therefore bind adsorbates more strongly and
+have lower transition state energies. We note that this may still lead to
+higher activation barriers for certain elementary steps if the initial state
+for this step is stabilized more than the transition state. The somewhat
+counterintuitive prediction that gold should increase the reactivity of plati-
+num has been tested experimentally (102). In Fig. 38, it is clearly shown
+that CO is bonded more strongly to a monolayer of platinum on Au(111)
+than to Pt(111), in accordance with the prediction from Table II. The
+FIG. 38.
+CO thermal desorption spectra for different coverages of platinum Au(111). The
+spectrum for the clean Pt(111) surface is shown for comparison. Approximately one monolayer
+of platinum on the Au(111) surface is shown to bind CO more strongly (with a higher
+desorption temperature) than the clean Pt(111) surface. Reprinted from Pedersen et al. (102).
+Copyright 1999 with permission from Elsevier Science.
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+117
+experimental results also show that platinum impurities do not bind CO
+as strongly as Pt(111). This would not be expected from Table II. This
+discrepancy can be traced to contributions to the bonding from second-
+nearest neighbors in the surface (102), and the example shows that one must
+be careful in using Table II when the second-nearest neighbors signiﬁcantly
+change the reactivity. In the current case, platinum and gold are so different
+that even though only about 10% of the bonding comes from the second
+neighbors, it is enough to be important. This problem does not occur when
+pseudomorphic overlayers are considered.
+It is known from several theoretical investigations that the variation in
+the center of the d bands for metal overlayers is accompanied by a similar
+variation in the surface core level shifts—at least toward the right in the
+transition metal series (129–131). It has also been shown that the trends in
+variations in the surface core level shifts for different overlayers are often
+given by the initial state shift, i.e., by the changes in the electronic structure
+of the unperturbed surface. Therefore, we conclude that we can view the
+variation in the surface core level shifts as a measure of the variation in
+the d band center. This is fortuitous because it means that in the surface
+core level shifts there is an in situ experimental measure of the valence d
+band center shifts that are important for the chemical properties of metal
+surfaces, as discussed previously. As an outstanding example of the informa-
+tion carried by the surface core level shifts, Rodriguez and Goodman (97),
+in their detailed studies of metallic overlayers, observed a strong correlation
+between the surface core level shift of such overlayers and the CO chemi-
+sorption energy at these overlayers.
+When using Table II, for example, to decide which surface composition
+will be best for a given reaction, it must be borne in mind that the actual
+surface composition of a real catalyst particle cannot be varied at random.
+The tendency of one metal to segregate to the surface of another largely
+controls the surface composition. In the design of a catalyst, it therefore
+is of interest to have an overview of the tendency of different metals to
+segregate to the surface. Again, DFT calculations are a useful source of
+such information. Figure 39 shows a compilation of surface segregation
+energies of all transition metals (132). It can be seen from Fig. 39, for
+example, that even though the Pt/Au(111) system has interesting chemical
+properties is not a potential catalyst because the platinum is driven to the
+bulk by the energetics [the segregation energy for the Pt/Au(111) system
+is positive].
+In many cases, alloying effects have been shown experimentally to change
+the reactivities of single-crystal surfaces (99, 133–135), and alloying effects
+have been explored extensively in catalyst development (136). Testing of
+such catalysts may beneﬁt especially from new fast screening techniques
+118
+B. HAMMER AND J. K. NØRSKOV
+FIG. 39.
+Compilation of calculated segregation energies on the most close-packed surface
+of all binary combinations of transition metals. Adapted from Christensen et al. (132).
+(137). The concepts developed previously, in conjunction with databases
+such as those in Fig. 39 and Table II, may be useful in guiding the choice
+of candidate combinations of metals to test experimentally.
+C.
+PROMOTION AND POISONING
+The reactivity of a metal surface is modiﬁed by the presence of coadsor-
+bates. Alkali metal adsorbates, for instance, are added to the iron- and
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+119
+ruthenium-based industrial ammonia synthesis catalysts, causing an en-
+hanced reactivity with respect to N2 bond activation (138–140). Another
+example of a coadsorbate-modiﬁed catalyst is the nickel-based catalyst used
+in the SPARG process for steam reforming (124). In this process, H2S is
+added to the feed gas ﬂow, resulting in adsorbed sulfur atoms that inhibit
+coking of the surface in much the same way that gold inhibits coking in
+the Au/Ni catalyst discussed previously.
+The interaction of identical coadsorbates was considered in Section III.C,
+and four different interaction types were described. The direct overlap of
+orbitals is operative for small adsorbate–adsorbate distances. It always
+occurs and is usually repulsive. The same is true of the indirect elastic
+interaction through the substrate. The other two interaction types are
+more interesting:
+ Indirect interaction through the metal d bands
+ Direct electrostatic interaction
+The indirect interaction through the metal d bands is illustrated in Fig.
+40 (141). Here, the Ru 4d bands at a ruthenium atom next to a threefold
+site are shown before and after the adsorption of sulfur in the threefold
+site. Figure 40 shows how the ruthenium 4d band center is shifted down
+upon adsorption of sulfur. The sulfur atom effectively provides some of
+the coordination that a ruthenium atom in the surface lacks. Once the
+ruthenium atom is more highly coordinated, the d band width of the surface
+atom increases and the d band shifts down. This electronic effect weakens
+the bonding of other adsorbates in sites involving ruthenium atoms that have
+FIG. 40.
+The Ru(0001) d DOS including the effect of sulfur. Adapted from Mortensen
+et al. (141).
+120
+B. HAMMER AND J. K. NØRSKOV
+already reacted. For N2 dissociation on a Ru(0001) surface with coadsorbed
+sulfur, the energy barrier is increased substantially by the presence of the
+surface sulfur atoms (Fig. 41). Farther away, the effect is weaker, however,
+because it involves only the shift of d bands at immediate surface neigh-
+bor atoms.
+So far, we have implicitly assumed that the changes in adsorbate bond
+strengths and energy barriers resulting from changes in the electronic struc-
+ture of a metal surface can be traced to the Kohn–Sham eigenvalue spectra
+of the DFT calculations, i.e., to the change in the sum of Kohn–Sham eigen
+energies resulting from adsorption,  i i. A formal derivation, however,
+reveals that electronic structure changes may also be manifest in changes
+of the (nonlocal) electrostatic contributions, Ees, to the adsorbate bond
+strengths and energy barriers (40, 44, 142). The potential energy change
+from the electronic effect must therefore be written as follows:
+Ea  
+i
+i  Ees.
+(2)
+FIG. 41.
+(Bottom) Snapshots of the minimum energy path for the N2 dissociation reaction:
+Initial state in which the molecule is standing perpendicular to the surface (I), metastable
+state (M), transition state (TS), and ﬁnal state (F). (Top) The energy along the path. The
+effect on the transition state of adding one-eighth of a monolayer of sulfur or sodium or one-
+sixth of a monolayer of cesium is also shown. Adapted from Mortensen et al. (141).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+121
+When sodium or cesium is adsorbed on Ru(0001), there is no d band
+shift (relative to the Fermi level) at ruthenium sites farther than one lattice
+constant away. Consequently, the ﬁrst term in Eq. (2) is approximately
+zero. Because of charge transfer from the alkali metal adsorbates to the
+ruthenium surface, however, there are electrostatic effects. This is shown
+in Fig. 42, in which the d bands are shown to be essentially unchanged,
+whereas an electrostatic ﬁeld, , has been induced outside the ruthenium
+surface. In Fig. 41 the result of a full DFT description of the N2 dissociation
+on a Ru(0001) surface with coadsorbed sodium or cesium is also shown.
+The energy barrier is reduced by some amount ETS as a consequence of
+the presence of either sodium or cesium. These atoms thus act as promoters
+for the N2 bond activation. The effect can be traced to the electrostatic
+interaction between the dipole, , of the N2 transition state complex inter-
+acting with the induced electrostatic ﬁeld, , due the adsorbed alkali atoms.
+In Fig. 43, ETS is plotted as a function of the quantity
+Edip  .
+(3)
+A clear correlation is evident, conﬁrming that the electrostatic interaction
+is dominating (143).
+In the examples discussed previously, special care was taken to consider
+low coverages of poisons or promoters. This is usually the situation encoun-
+FIG. 42.
+Calculated change in the electrostatic potential outside a Ru(0001) surface as a
+result of the adsorption of a sodium or a cesium atom. The potential is shown along a line
+perpendicular to the ruthenium surface at a site 5.48 A
+˚ from the alkali metal atom. In the
+inset, the d DOS is shown with (dashed line) and without (solid line) the sodium illustrating
+that the d DOS is almost unaffected by the presence of the alkali metal atom. From Mortensen
+et al. (141).
+122
+B. HAMMER AND J. K. NØRSKOV
+FIG. 43.
+Interaction energy between alkali metal atoms and N2 in the transition state for
+dissociation as a function of . The alkali metal atoms are sodium (circles) and cesium
+(squares). Many different geometries have been considered corresponding to different dis-
+tances between the transition state complex and the alkali metal atoms. Adapted from Mor-
+tensen et al. (141).
+tered in practical catalysis, and it singles out the long- and short-range
+effects as well. If one instead considers high coverages, one ﬁnds that all
+the interaction types work simultaneously, and the picture becomes much
+more complicated (144, 145).
+VI.
+Summary and Extension of Concepts to Metal Sulﬁdes
+Density functional calculations of adsorption and reactions at metal sur-
+faces have reached a point at which the complexity of real catalytic surfaces
+and adsorbates can be treated at a level of accuracy that is sufﬁcient for
+understanding bonding mechanisms, for determining reaction pathways,
+and for comparing different systems. The calculations therefore provide a
+new and powerful source of input to the description of heterogeneous
+catalysis. The calculations will never replace experiments, but they may in
+many cases be the simplest or even the only possible way of obtaining
+some information.
+The calculations also provide new ways of testing whether the concepts
+we use to describe surface chemical processes are correct. For instance, it
+has been shown in this way that earlier reactivity measures such as the
+density of states at the Fermi level or the number of d holes cannot in
+general describe variations in reactivity from one transition metal to the
+next (45).
+FIG. 44.
+Molecular (ECO
+chem) and atomic (Eatomic
+chem ) binding energy as a function of the d
+band center (d) of the metal surface (top and middle, respectively). The barrier for dissociation
+of small molecules, referred to gas-phase zero, as a function of d is shown in the bottom.
+Common shadings are used for data corresponding to the same metal in each of the three
+panels. Lines drawn represent best linear ﬁts. X : XY reﬂects chemisorption or dissociation
+at atom X in an XY–alloy surface. X@Y means an X atom impurity in a Y surface. From
+Mavrikakis et al. (14).
+124
+B. HAMMER AND J. K. NØRSKOV
+In this review, we have focused on some simple concepts that can be
+used to classify the reactivities of transition metal surfaces. The goal is to
+gain an understanding of the properties of the clean surface that determine
+its reactivity. If we can single out these factors, we have powerful concepts
+that can be used to develop new and more effective catalysts.
+We have shown that electronic and geometrical factors can be separated
+and that both are important in determining the reactivity. The main conclu-
+sion of our work is that when considering variations in the reactivity of a
+particular metal or group of metals, a single parameter, the center of the
+d band (d), is strongly related to both the stabilities of atoms and molecules
+on the surface and the energies of transition states for surface processes.
+A summary of many calculations illustrating this point is shown in Fig. 44.
+We have shown in detail why this is the case, and we have shown what
+determines variations in d; low-coordinated or ‘‘expanded’’ metal atoms
+are more reactive than highly coordinated or ‘‘compressed’’ metal atoms.
+These concepts have been developed speciﬁcally for transition metal
+surfaces, but there are good reasons to believe that they are more general.
+To exemplify this, we show here as the ﬁnal example how very similar
+concepts can be used to understand the reactivities of transition metal
+sulﬁdes. MoS2 (on supports) is used, extensively as a catalyst for hydrotreat-
+ing processes. It is known that cobalt and nickel promote the catalysts,
+whereas iron (next to these elements in the periodic table) does not. It is
+also known that the promoter atoms are situated at the perimeter of the
+supported MoS2 nanoparticles. In this connection, it is interesting to know
+FIG. 45.
+Plot of the change in the S-binding energy to the edge of a MoS2 slab, with Fe,
+Co, and Ni substituted for one of the Mo atoms next to the S atom in question. The result
+is shown as a function of the center of the projected d density of states on the Fe, Co, or Ni
+atoms in questions. From Byskov et al. (146).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+125
+how iron, cobalt, and nickel affect the stability of edge sulfur atoms. If, for
+example, the sulfur atoms are more easily removed in the presence of
+cobalt, this might create more active sites with coordinatively unsaturated
+metal atoms and thus explain the promoting effect. In Fig. 45, the variations
+in the calculated sulfur binding energy (the reaction energy for H2S forma-
+tion from H2) for different promoter atoms are shown. Again, the variations
+correlate with the position of the d band center.
+ACKNOWLEDGMENTS
+We thank many colleagues and collaborators for contributing to the work described in this
+review, including H. Bengaard, F. Besenbacher, L. Byskov, I. Chorkendorff, B. S. Clausen,
+J. A. Dumesic, M. V. Ganduglia-Pirovano, A. Groß, L. B. Hansen, K. W. Jacobsen, P. Kratzer,
+J. H. Larsen, A. Logadottir, B. I. Lundqvist, E. Lægsgaard, M. Mavrikakis, Y. Morikawa,
+J. J. Mortensen, M. Neurock, O. H. Nielsen, V. Pallassana, J. Rostrup-Nielsen, A. Ruban,
+M. Schefﬂer, H. L. Skriver, Z
+ˇ . S
+ˇljivanc
+ˇanin, I. Stensgaard, K. Stokbro, P. Stoltze, E. To
+¨rnqvist,
+H. Topsøe, R. M. Watwe, and J. T. Yates. JKN gratefully acknowledges the hospitality of
+H. Metiu and the support from the Center for Quantized Electronic Structures, University
+of California, Santa Barbara, during the writing of the manuscript. This work was in part
+ﬁnanced by the Danish Research Councils through The Center for Surface Reactivity and
+Grants 9501775, 9800425, and 9803041. The Center for Atomic-Scale Materials Physics is
+sponsored by the Danish National Research Foundation.
+REFERENCES
+1. Barteau, A. M., and Vohs, J. M., in ‘‘Handbook of Heterogeneous Catalysis’’ (G. Ertl,
+H. Kno
+¨zinger, and J. Weitkamp, Eds.), p. 873. VCH, Weinheim, 1997.
+2. Somorjai, G. A., in ‘‘Introduction of Surface Chemistry and Catalysis.’’ Wiley, New
+York, 1994.
+3. Gunter, P. L. J., Niemantsverdriet, J. W., Ribeiro, F., and Somorjai, G. A., Catal. Rev.—
+Sci. Eng. 39, 77 (1997).
+4. Cambell, C. T., Surf. Sci. Rep. 27, 1 (1997).
+5. Valden, M., Lai, X., and Goodman, D. W., Science 281, 1647 (1998).
+6. Henry, C. R., Surf. Sci. Rep. 31, 235 (1998).
+7. Sandell, A., Libuda, J., Bru
+¨hwiler, P. A., Andersson, S., Maxwell, A. J., Ba
+¨umer, M.,
+Ma
+˚rtensson, N., Freund, H.-J., J. Vac. Sci. Technol. A 14, 1546 (1996).
+8. Højrup Hansen, K., Worren, T., Stempel, S., Lægsgaard, E., Ba
+¨umer, M., Freund,
+H.-J., Besenbacher, F., and Stensgaard, I., Phys. Rev. Lett. 83, 4120 (1999).
+9. Clausen, B. S., Topsøe, H., and Frahm, R., Adv. Catal. 42, 315 (1998).
+10. Thomas, J. M., and Lambert, R. M. (Eds.), ‘‘Characterization of Catalysts.’’ Wiley, New
+York, 1980.
+11. Delgass, W. N., Haller, G. L., Kellerman, R., and Lunsford, J. H. (Eds.), ‘‘Spectroscopy
+in Heterogeneous Catalysis.’’ Academic Press, New York, 1979.
+12. Niemantsverdriet, J. W., ‘‘Spectroscopy in Catalysis: An Introduction.’’ VCH, Wein-
+heim, 1993.
+13. Vitos, L., Ruban, A. V., Skriver, H., and Kollar, J., Surf. Sci. 411, 186 (1998).
+14. Mavrikakis, M., Hammer, B., and Nørskov, J. K., Phys. Rev. Lett. 81, 2819 (1998).
+15. Here, W. J., Radom, L., Schleyer, P. v. R., and Pople, J. A., ‘‘Ab Initio Molecular Orbital
+Theory.’’ Wiley, New York, 1987.
+126
+B. HAMMER AND J. K. NØRSKOV
+16. Hohenberg, P., and Kohn, W., Phys. Rev. 136, B864 (1964); Kohn, W., and Sham, L.,
+Phys. Rev. 140, A1133 (1965).
+17. Payne, M. C., Teter, M. P., Allan, D. C., Arias, T. A., and Joannopoulos, J. D., Rev.
+Mod. Phys. 64, 1045 (1992).
+18. Kresse, G., and Forthmu
+¨ller, J., Comput. Mat. Sci. 6, 15 (1996).
+19. Yang, H., and Whitten, J. L., J. Chem. Phys. 96, 5529 (1992).
+20. Inglesﬁeld, J. E., and Benesh, G. A., Phys. Rev. B 37, 6682 (1988).
+21. MacLaren, J. M., Crampin, S., Vvedensky, D. D., and Pendry, J. B., Phys. Rev. B 40,
+12164 (1989).
+22. Skriver, H. L., and Rosengaard, N. M., Phys. Rev. B 43, 9538 (1991).
+23. Vanderbilt, D., Phys. Rev. B 41, 7892 (1990).
+24. Blo
+¨chl, P. E., Phys. Rev. B 50, 17953 (1994).
+25. Becke, A. D., J. Chem. Phys. 98, 5648 (1993).
+26. Perdew, J. P., Chevary, J. A., Vosko, S. H., Jackson, K. A., Pederson, M. R., Singh,
+D. J., and Fiolhais, C., Phys. Rev. B 46, 6671 (1992).
+27. Perdew, J. P., Burke, K., and Ernzerhof, M., Phys. Rev. Lett. 77, 3865 (1996).
+28. Hammer, B., Hansen, L. B., and Nørskov, J. K., Phys. Rev. B 59, 7413 (1999).
+29. Hammer, B., Jacobsen, K. W., and Nørskov, J. K., Phys. Rev. Lett. 70, 3971 (1993).
+30. Philipsen, P. H. T., te Velde, G., and Baerends, E. J., Chem. Phys. Lett. 226, 583 (1994).
+31. Hu, P., King, D. A., Crampin, S., Lee, M.-H., and Payne, M. C., Chem. Phys. Lett. 230,
+501 (1994).
+32. Hammer, B., Schefﬂer, M., Jacobsen, K. W., and Nørskov, J. K., Phys. Rev. Lett. 73,
+1400 (1994).
+33. White, J. A., Bird, D. M., Payne, M. C., and Stich, I., Phys. Rev. Lett. 73, 1404 (1994).
+34. Brown, W. A., Kose, R., and King, D. A., Chem. Rev. 98, 797 (1998).
+35. Pettifor, D., ‘‘Bonding and Structure of Molecules and Solids.’’ Clarendon, Oxford, 1995.
+36. Lundqvist, B. I., Gunnarsson, O., Hjelmberg, H., and Nørskov, J. K., Surf. Sci. 89,
+196 (1979).
+37. Newns, D. M., Phys. Rev. 178, 1123 (1969); Grimley, T. B., J. Vac. Sci. Techno. 8, 31
+(1971); 9, 561 (1971).
+38. Hammer, B., Faraday Discuss. 110, 323 (1998).
+39. Starke, U., Van Hove, M. A., and Somorjai, G. A., Prog. Surf. Sci. 46, 305 (1994).
+40. Hammer, B., and Nørskov, J. K., in ‘‘Chemisorption and Reactivity on Supported Clusters
+and Thin Films’’ (R. M. Lambert and G. Pacchioni, Eds.), pp. 285–351. Kluwer Academic,
+Dordrecht, 1997.
+41. Bogicevic, A., Stromquist, J., and Lundqvist, B. I., Phys. Rev. B 57, R4289 (1998).
+42. Steininger, H., Lehwald, S., and Ibach, H., Surf. Sci. 123, 1 (1982).
+43. Nørskov, J. K., Rep. Prog. Phys. 53, 1253 (1990).
+44. Holloway, S., Lundqvist, B. I., and Nørskov, J. K., in ‘‘Proceedings of the International
+Congress on Catalysis,’’ Vol. 4, p. 85, Verlag Chemie Weinheim Berlin, 1984.
+45. Hammer, B., and Nørskov, J. K., Surf. Sci. 343, 211 (1995); 359, 306 (1996).
+46. Hammer, B., and Nørskov, J. K., Nature 376, 238 (1995).
+47. Mortensen, J. J., Morikawa, Y., Hammer, B., and Nørskov, J. K., J. Catal. 169, 85 (1997).
+48. Stokbro, K., and Baroni, S., Surf. Sci. 370, 166 (1997).
+49. Toyoshima, I., and Somorjai, G. A., Catal. Rev. Sci. Eng. 19, 105 (1979).
+50. Andersen, O. K., Jepsen, O., and Glo
+¨tzel, D., in ‘‘Highlights of Condensed Matter
+Theory,’’ LXXXIX, p. 59. Corso Soc. Italiana di Fisica, Bologna, 1985.
+51. Hoffmann, R., Rev. Mod. Phys. 60, 601 (1988).
+52. Bagus, P. S., and Pacchioni, G., Surf. Sci. 278, 427 (1992).
+53. Blyholder, G., J. Phys. Chem. 68, 2772 (1964).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+127
+54. Van Santen, R. A., and Neurock, M., Catal. Rev.—Sci. Eng. 37, 557 (1995).
+55. Hammer, B., Morikawa, Y., and Nørskov, J. K., Phys. Rev. Lett. 76, 2141 (1996).
+56. Loffreda, D., Simon, D., and Sautet, P., J. Chem. Phys. 108, 6447 (1998).
+57. Broden, G., Rhodin, T. N., Brukner, C., Benbow R., and Hurysh, Z., Surf. Sci. 59,
+593 (1976).
+58. Pallassana, V., and Neurock, M., J. Catal. in press (2000).
+59. Ge, Q., and King, D. A., J. Chem. Phys. 110, 4699 (1999).
+60. Mortensen, J. J., Ganduglia-Pirovano, M. V., Hansen, L. B., Hammer, B., Stoltze, P.,
+and Nørskov, J. K., Surf. Sci. 422, 8 (1999).
+61. Bozso, F., Ertl, G., Grunze, M., and Weiss, M., J. Catal. 49, 18 (1977); Imbihl, R., Behm,
+R. J., Ertl, G., and Moritz, W., Surf. Sci. 123, 129 (1982).
+62. Stampﬂ, C., Schwegmann, S., Over, H., Schefﬂer, M., and Ertl, G., Phys. Rev. Lett. 77,
+3371 (1996).
+63. Stampﬂ, C., Kreuzer, H. J., Payne, S. H., Pfnu
+¨r, H., and Schefﬂer, M., Phys. Rev. Lett.
+83, 2993 (1999).
+64. Diekho
+¨ner, L., Baurichter, A., Mortensen, H., and Luntz, A. C., submitted for publication.
+65. Ge, Q., King, D. A., Lee, M.-H., White, J. A., and Payne, M. C., J. Chem. Phys. 106,
+1210 (1997).
+66. Hammer, B., and Nørskov, J. K., Phys. Rev. Lett. 79, 4441 (1997).
+67. Lau, K. H., and Kohn, W., Surf. Sci. 65, 607 (1977).
+68. O
+¨ sterlund, L., Pedersen, M. O
+¨ ., Stensgaard, I., Lægsgaard, E., and Besenbacher, F., Phys.
+Rev. Lett. 83, 4812 (1999).
+69. Bradley, J. M., Hopkinson, A., and King, D. A., J. Phys. Chem. 99, 17032 (1995).
+70. Somorjai, G. A., and Borodko, Y., Catal. Lett. 59, 89 (1999).
+71. Murphy, M. J., Skelly, J. F., Hodgson, A., and Hammer, B., J. Chem. Phys. 110, 6954
+(1999).
+72. Darling, G. R., and Holloway, S., Rep. Prog. Phys. 58, 1595 (1995).
+73. Groß, A., Surf. Sci. Rep. 32, 291 (1998).
+74. Kroes, G. J., Prog. Surf. Sci. 60, 1 (1999).
+75. Mavrikakis, M., Hansen, L. B., Mortensen, J. J., Hammer, B., and Nørskov, J. K., in
+‘‘Transition State Modelling for Catalysis’’ (D. G. Truhlar and K. Morokuma, Eds.),
+ACS Symposium Series, 721, Oxford University Press, 1999.
+76. van Daelen, M. A., Li, Y. S., Newsam, J. M., and van Santen, R. A., Chem. Phys. Lett.
+266, 100 (1994).
+77. Eichler, A., and Hafner, J., Phys. Rev. Lett. 79, 4481 (1997).
+78. Gravil, P. A., Bird, D. M., and White, J. A., Phys. Rev. Lett. 77, 3933 (1996).
+79. Alavi, A., Hu, P., Deutsch, T., Silvestrelli, P. L., and Hutter, J., Phys. Rev. Lett. 80,
+3650 (1998).
+80. Eichler, A., and Hafner, J., Phys. Rev. B 59, 5960 (1999).
+81. Stampﬂ, C., and Schefﬂer, M., Phys. Rev. Lett. 78, 1500 (1997).
+82. Watwe, R. M., Cortright, R. D., Nørskov, J. K., and Dumesic, J. A., to be published.
+83. Dahl, S., Logadottir, A., Egeberg, R. C., Larsen, J. H., Chrokendorff, I., To
+¨rnqvist, E.,
+and Nørskov, J. K., Phys. Rev. Lett. 83, 1814 (1999).
+84. Hammer, B., Phys. Rev. Lett. 83, 3681 (1999).
+85. Morikawa, Y., Mortensen, J. J., Hammer, B., and Nørskov, J. K., Surf. Sci. 386, 67 (1997).
+86. Kratzer, P., Hammer, B., and Nørskov, J. K., J. Chem. Phys. 105, 5595 (1996).
+87. Berger, H. F., Leisch, M., Winkler, A., and Rendulic, K., Chem. Phys. Lett. 175, 425
+(1985); Robota, H. J., Vielhaber, W., Lin, M. C., Segner, J., and Ertl, G., Surf. Sci. 155,
+101 (1985).
+88. Brown, J. K., Luntz, A., and Schultz, P. A., J. Chem. Phys. 95, 3767 (1991).
+128
+B. HAMMER AND J. K. NØRSKOV
+89. Hayden, B. E., and Lamont, C. L., Phys. Rev. Lett. 63, 1823 (1989); Rasmussen, P. B.,
+Holmblad, P. M., Christoffersen, H., Taylor, P. A., and Chorkendorff, I., Surf. Sci. 287/
+288, 79 (1993).
+90. Sault, A. G., Madix, R. J., and Cambell, C. T., Surf. Sci. 169, 347 (1986).
+91. Eichler, A., Kresse, G., and Hafner, J., Surf. Sci. 397, 116 (1998).
+92. Wilke, S., and Schefﬂer, M., Phys. Rev. B 53, 4926 (1996).
+93. Groß, A., Wilke, S., and Schefﬂer, M., Phys. Rev. Lett. 75, 2718 (1995).
+94. White, J. A., Bird, D. M., and Payne, M. C., Phys. Rev. B 53, 1667 (1996).
+95. Kay, M., Darling, G. R., Holloway, S., White, J. A., and Bird, D. M., Chem. Phys. Lett.
+245, 311 (1995).
+96. Gsell, M., Jakob, P., and Menzel, D., Science 280, 717 (1998).
+97. Rodriguez, J. A., and Goodman, D. W., Science 257, 897 (1992).
+98. Madey, T. E., Nien, C.-H., Pelhos, K., Kolodziej, J. J., Abdelrehim, I. M., and Tao,
+H.-S., Surf. Sci. 438, 191 (1999).
+99. Bautier de Mongeot, F., Scherer, M., Gleich, B., Kopatzki, E., and Behm, R. J., Surf.
+Sci. 411, 249 (1998).
+100. Kampshoff, E., Hahn, E., and Kern, K., Phys. Rev. Lett. 73, 704 (1994).
+101. Larsen, J. H., and Chorkendorff, I., Surf. Sci. 405, 62 (1998).
+102. Pedersen, M. Ø., Helveg, S., Ruban, A., Stensgaard, I., Lægsgaard, E., Nørskov, J. K.,
+and Besenbacher, F., Surf. Sci. 426, 395 (1999).
+103. Zambelli, T., Wintterlin, J., and Ertl, G., to be published.
+104. Logadottir, A., to be published.
+105. Clausen, B. S., and Nørskov, J. K., Topics Catal., in press (1999).
+106. Klimenkov, M., Nepijko, S., Kuhlenbeck, H., Baumer, M., Schlo
+¨gl, R., and Freund,
+H.-J., Surf. Sci. 391, 27 (1997); Nepijko, S., Klimenkov, M., Kuhlenbeck, H., Zemlyanov,
+D., Herein, D., Schlo
+¨gl, R., and Freund, H.-J., Surf. Sci. 412/413, 192 (1998).
+107. Giorgio, S., Chapon, C., Henry, C. R., Nihoul, G., and Penisson, J. M., Phil. Mag. A 64,
+87 (1991).
+108. Hammer, B., Nielsen, O. H., and Nørskov, J. K., Catal. Lett. 46, 31 (1997).
+109. Kratzer, P., Hammer, B., and Nørskov, J. K., Surf. Sci. 359, 45 (1996).
+110. Hammer, B., Surf. Sci., in press (2000).
+111. Feibelman, P. J., Esch, S., and Michely, T., Phys. Rev. Lett. 77, 2257 (1996).
+112. Tripa, C. E., Zubkov, T. S., Yates, J. T., Mavrikakis, M., and Nørskov, J. K., J. Chem.
+Phys. 111, 8651 (1999).
+113. Bengaard, H. S., Rostrup-Nielsen, J. R., and Nørskov, J. K., to be published.
+114. Ramsier, R. D., Gao, Q., Neergaard Waltenburg, H., and Yates, J. T., Jr., J. Chem. Phys.
+100, 6837 (1994).
+115. Kose, R., Brown, W. A., and King, D. A., J. Am. Chem. Soc. 121, 4845 (1999).
+116. Zambelli, T., Wintterlin, J., Trost, J., and Ertl, G., Science 273, 1688 (1996).
+117. Dietrich, H., Geng, P., Jacobi, K., and Ertl, G., J. Chem. Phys. 104, 375 (1996).
+118. Taylor, H. S., Proc. R. Soc. London A 108, 105 (1925).
+119. Boudart, M., Adv. Catal. Relat. Subj. 20, 153 (1969).
+120. Shekhar, R., and Barteau, M. A., Catal. Lett. 31, 221 (1995).
+121. Hammer, B., and Schefﬂer, M., Phys. Rev. Lett. 74, 3487 (1995).
+122. Besenbacher, F., Chorkendorff, I., Clausen, B. S., Hammer, B., Molenbroek, A., Nørskov,
+J. K., and Stensgaard, I., Science 279, 1913 (1998).
+123. Holmblad, P. M., Hvolbæk Larsen, J., Chorkendorff, I., Nielsen, L. P., Besenbacher, F.,
+Stensgaard, I., Lægsgaard, E., Kratzer, P., Hammer, B., and Nørskov, J. K., Catal. Lett.
+40, 131 (1996).
+THEORETICAL SURFACE SCIENCE AND CATALYSIS
+129
+124. Rostrup-Nielsen, J., J. Catal. 85, 31 (1994); Andersen, N. T., Topsøe, F., Alstrup, I., and
+Rostrup-Nielsen, J., J. Catal. 104, 454 (1987).
+125. Delbecq, F., and Sautet, P., Chem. Phys. Lett. 302, 91 (1999).
+126. Delbecq, F., and Sautet, P., Phys. Rev. B 59, 5142 (1999).
+127. Pallassana, V., Neurock, M., Hansen, L. B., Hammer, B., and Nørskov, J. K., Phys. Rev.
+B 60, 6146 (1999); Pallassana, V., Neurock, M., Hansen, L. B., and Nørskov, J. K., to
+be published.
+128. Ruban, A., Hammer, B., Stoltze, P., Skriver, H. L., and Nørskov, J. K., J. Mol. Catal.
+A 115, 421 (1997).
+129. Weinert, M., and Watson, R. E. Phys. Rev. B 51, 17168 (1995).
+130. Hennig, D., Ganduglia-Pirovano, M. V., and Schefﬂer, M., Phys. Rev. B 53, 10344 (1996).
+131. Ganduglia-Pirovano, M. V., Natoli, V., Cohen, M. H., Kudrnovsky, J., and Turek, I.,
+Phys. Rev. B 54, 8892 (1996).
+132. Christensen, A., Ruban, A. V., Stoltze, P., Jacobsen, K. W., Skriver, H. L., Nørskov,
+J. K., and Besenbacher, F., Phys. Rev. B 56, 5822 (1997); Ruban, A. V., Skriver, H. L.,
+and Nørskov, J. K., Phys. Rev. B, 59, 15900 (1999).
+133. Bertolini, J. C., Tardy, B., Abon, M., Billy, J., Delichere, P., and Massardier J. Surf. Sci.
+135, 117 (1983).
+134. Nieuwenhuys, B. E., Surf. Rev. Lett. 3, 1869 (1996).
+135. Linke, R., Schneider, U., Busse, H., Becker, C., Schro
+¨der, U., Castro, G. R., and Wandelt,
+K., Surf. Sci. 307–309, 4074 (1994).
+136. Sinfelt, J. H., ‘‘Bimetallic Catalysts: Discoveries, Concepts, and Applications.’’ Wiley,
+New York, 1983; Ponec, V., Adv. Catal. 32, 149 (1983).
+137. Cong, P., Doolen, R. D., Fan, Q., Giaquinta, D. M., Guan, S., McFarland, E. W., Poojary,
+D. M., Selt, K., Turner, H. W., and Weinberg, W. H., Angew. Chem., Int. Ed. Engl., 38,
+484 (1999).
+138. Jennings, J. R. (Ed.), ‘‘Catalytic Ammonia Synthesis.’’ Plenum, New York, 1991; H.
+Topsøe, H. Boudart, and J. K. Nørskov (Eds.), Topics Catal. 1, 185–415 (1994).
+139. Ertl, G., Lee, S. B., and Weiss, M., Surf. Sci. 111, L711 (1981); Ertl, G., Catal. Rev.—Sci.
+Eng. 21, 201 (1980).
+140. Spencer, N. D., Schoonmaker, R. C., and Somorjai, G. A., J. Catal. 74, 129 (1982).
+141. Mortensen, J. J., Hammer, B., and Nørskov, J. K., Phys. Rev. Lett. 80, 4333 (1998);
+Mortensen, J. J., Hammer, B., and Nørskov, J. K., Surf. Sci. 414, 315 (1998).
+142. Jacobsen, K. W., Nørskov, J. K., and Puska, M. J., Phys. Rev. B 35, 7423 (1987).
+143. Nørskov, J. K., Holloway, S., and Lang, N. D., Surf. Sci. 137, 65 (1984); Nørskov, J. K.,
+in ‘‘Physics and Chemistry of Alkali Metal Adsorption’’ (H. P. Bonzel, A. M. Bradshaw,
+and G. Ertl, Eds.), p. 253. Elsevier, Amsterdam, 1989.
+144. Wilke, S., and Schefﬂer, M., Phys. Rev. Lett. 76, 3380 (1996).
+145. Wilke, S., and Cohen, M. H., Surf. Sci. 380, 1441 (1997).
+146. Byskov, L., Clausen, B. S., Topsøe, H., and Nørskov, J. K., J. Catal. 187, 109 (1999).
