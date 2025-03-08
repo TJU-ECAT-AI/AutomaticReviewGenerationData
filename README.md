@@ -4,6 +4,26 @@
 
 This repository contains the implementation and evaluation of an automated system for generating literature reviews in the field of catalysis, specifically demonstrated through a case study on propane dehydrogenation catalysis.
 
+## 支持信息 | Supporting Information
+
+### Appendix1.pdf
+
+附录1，包含有生成的综述文件、输出图表、人工验证部分等细节介绍，以及该程序用到的prompt。请查看此附录以全面了解我们的方法和结果。
+
+This is Appendix 1, which contains essential supplementary materials for review, including the complete generated review document, all output charts and visualizations, detailed documentation of the manual verification process, and the full set of prompts used in our program. Please examine this appendix for a comprehensive understanding of our methodology and results.
+
+### Appendix2.xlsx
+
+附录2，包含有文章中用到的数据表格等。请参考此附录以获取支持我们在正文中提出的发现和分析的完整数据集。
+
+This is Appendix 2, which contains all data tables referenced in the article. Please refer to this appendix for the complete datasets that support our findings and analyses presented in the main text.
+
+### SI.pdf
+
+论文的Supplementary Information。包含有论文的支持信息，请查阅文件以获取支持我们在正文中提出的发现和分析的完整背景信息。
+
+Contains Supplementary information for the paper. Please refer to the document for complete background information that supports our findings and analyses presented in the main text.
+
 ##  仓库结构 | Repository Structure
 
 ```
@@ -44,7 +64,8 @@ This repository contains the implementation and evaluation of an automated syste
 ├── Appendix1.pdf
 ├── Appendix2.xlsx
 ├── LICENSE
-└── Readme.md
+├── README.md
+└── SI.pdf
 ```
 
 ## 内容 | Contents
