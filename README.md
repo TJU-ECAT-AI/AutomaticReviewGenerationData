@@ -126,3 +126,9 @@ Please refer to the LICENSE file for terms of use.
 要访问本工作中引用的原始论文，请使用文件夹名称中提供的DOI（将下划线替换为正斜杠）通过学术数据库或出版商网站查找。
 
 To access the original papers referenced in this work, use the DOI provided in the folder names (replace underscores with forward slashes) to locate them through academic databases or publisher websites.
+
+## 代码库访问| Code Access
+
+本工作所指向代码库地址：https://github.com/TJU-ECAT-AI/AutomaticReviewGeneration
+
+The code repository address for this work is: https://github.com/TJU-ECAT-AI/AutomaticReviewGeneration
